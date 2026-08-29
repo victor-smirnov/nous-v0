@@ -84,6 +84,16 @@ core is identical, only the prompt container changes.
 6. Keep from v2: mandatory intention enum, reification, `is a cause of` ban (now enforced by
    Gellish 1922 roles), figurative rows.
 
+## 4b. Spec v3.1 backlog (from the article run, 2026-08-29)
+
+- Internal cross-references: a row type or residual category for "(Section 4.2)" / document links — C lost all of them.
+- Reconcile "≤ 5 consecutive source words" with quoted definitions: quotes allowed only in `is defined as` and residual `quote`.
+- Decoder without shell: render the intention column as register (hedge/hypothesis/prediction) — C hardened 78 rows'
+  commitments; add a rows-vs-prose inversion probe that needs no source (self-check before returning).
+- Encoders write unicode comment markers («, ＃) and occasionally truncate the first row — assembler now normalises; spec
+  should say ASCII `#` only.
+- Enrichment output is for review, not for decoding; document in decoding.md (done) and in enrich --for-review default.
+
 ## 5. Article v2 — the first run (work lives in `experiments/article/`, git-ignored; moves to Synthea later)
 
 1. Chunk `docs/what_is_it_like_to_be_a_language_model.md` by section (≈ the 9 chunks used before, but section-aligned).
@@ -104,7 +114,7 @@ core is identical, only the prompt container changes.
 | M1 | extract repo, package, CLI, golden tests, Soufflé check | done 2026-08-29 |
 | M2 | hybrid format, spec v3, phrase list generator, skill (encode/check/decode) | done 2026-08-29 |
 | M3 | enrich export (top-cut, definitions, provenance column), diff, decode spec | done 2026-08-29 |
-| M4 | article run: encode → check → repair → enrich → decode → judge | 1–2 days, mostly model time |
+| M4 | article run: encode → check → repair → enrich → decode → judge | done 2026-08-29 (A/B/C decodes; report in experiments/article/REPORT.md) |
 | M5 | Codex port | ½ day |
 
 ## 7. Decisions to confirm
