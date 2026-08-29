@@ -113,6 +113,7 @@ part_rel(U) :- rel_sub(U, "4662").
 part_rel(U) :- rel_sub(U, "5623").
 part_rel(U) :- rel_sub(U, "5519").
 part_rel(U) :- sem(U, "part_of").
+part_rel(U) :- sem(U, "has_part").
 
 .decl rel_label(rel:symbol, name:symbol)
 rel_label(cat("g:", U), P) :- d_relname(U, P).
@@ -265,7 +266,8 @@ subtype(X, Y, Lv) :- holds(X, U, Y, Lv), spec_rel(U).
 instance(X, K, Lv) :- holds(X, U, K, Lv), class_rel(U).
 instance(X, K2, min(L1, L2)) :- instance(X, K, L1), subtype(K, K2, L2).          // Gellish inheritance rule
 .decl part_of(x:symbol, y:symbol, lv:number)
-part_of(X, Y, Lv) :- holds(X, U, Y, Lv), part_rel(U).
+part_of(X, Y, Lv) :- holds(X, U, Y, Lv), part_rel(U), !sem(U, "has_part").
+part_of(Y, X, Lv) :- holds(X, U, Y, Lv), sem(U, "has_part").        // "A is constituted by B": B is part of A
 part_of(X, Z, min(L1, L2)) :- part_of(X, Y, L1), part_of(Y, Z, L2), X != Z.
 
 .decl subtype_best(x:symbol, y:symbol, lv:number)
@@ -361,13 +363,17 @@ contradiction("polarity", F1, F2, X, 4) :- fact(F1, X, _, _, Y, _, _, _, _, U), 
                                           fact(F2, X, _, _, Y, _, _, _, _, U), commit(F2, _, -1).
 // algebraic properties from the dictionary
 contradiction("antisymmetric", X, Y, N, min(L1, L2)) :- holds_best(X, U, Y, L1), holds_best(Y, U, X, L2), X != Y, !same(X, Y),
-                                                        rel_prop(U, "antisymmetric"), rel_label(cat("g:", U), N), ord(X) < ord(Y).
-contradiction("irreflexive", X, X, N, Lv) :- holds_best(X, U, X, Lv), rel_prop(U, "irreflexive"), rel_label(cat("g:", U), N).
+                                                        rel_prop(U, "antisymmetric"), d_relname(U, N), ord(X) < ord(Y).
+contradiction("irreflexive", X, X, N, Lv) :- holds_best(X, U, X, Lv), rel_prop(U, "irreflexive"), d_relname(U, N).
+// (1225 classification is intransitive in Gellish, but documents use "is classified as a" between kinds too — excluded)
 contradiction("intransitive", X, Z, N, min(L1, L2)) :- holds_best(X, U, Y, L1), holds_best(Y, U, Z, L2), holds_best(X, U, Z, _),
-                                                        X != Y, Y != Z, X != Z, !same(X, Y), !same(Y, Z), !same(X, Z),
-                                                        rel_prop(U, "intransitive"), rel_label(cat("g:", U), N).
+                                                        X != Y, Y != Z, X != Z, !same(X, Y), !same(Y, Z), !same(X, Z), U != "1225",
+                                                        rel_prop(U, "intransitive"), d_relname(U, N).
 // the document both identifies two things and puts one under the other: identity wins, taxonomy is reported
-contradiction("identity-vs-taxonomy", X, Y, F, Lv) :- same(X, Y), fact(F, X, _, _, Y, _, _, _, _, U), (class_rel(U) ; spec_rel(U)), usable(F, Lv).
+contradiction("identity-vs-taxonomy", X, Y, F, Lv) :- same(X, Y), fact(F, X, _, _, Y, _, _, _, _, U), (class_rel(U) ; spec_rel(U) ; part_rel(U)), usable(F, Lv).
+.decl ivt(x:symbol)
+ivt(X) :- same(X, Y), fact(_, X, _, _, Y, _, _, _, _, U), (class_rel(U) ; spec_rel(U) ; part_rel(U)).
+ivt(Y) :- same(X, Y), fact(_, X, _, _, Y, _, _, _, _, U), (class_rel(U) ; spec_rel(U) ; part_rel(U)).
 // relation types declared mutually exclusive (ext/disjoint_rel.facts), checked on the closure
 contradiction("disjoint-relations", X, Y, cat(N1, " / ", N2), min(L1, L2)) :- disjoint_rel(U1, U2), holds_best(X, U1, Y, L1), holds_best(X, U2, Y, L2),
                                                                              X != Y, fact(_, X, _, _, Y, _, _, _, _, U1),
@@ -376,7 +382,7 @@ contradiction("disjoint-relations", X, Y, cat(N1, " / ", N2), min(L1, L2)) :- di
                                                                              X != Y, fact(_, X, _, _, Y, _, _, _, _, U1),
                                                                              rel_prop(U2, "symmetric"), rel_label(cat("g:", U1), N1), rel_label(cat("g:", U2), N2).
 contradiction("taxonomy-cycle", X, X, "", Lv) :- subtype_best(X, X, Lv).
-contradiction("mereology-cycle", X, X, "", Lv) :- part_of_best(X, X, Lv).
+contradiction("mereology-cycle", X, X, "", Lv) :- part_of_best(X, X, Lv), !ivt(X).
 .decl disjoint(k1:symbol, k2:symbol)
 disjoint(A, B) :- disjoint_in(A, B).
 disjoint(B, A) :- disjoint_in(A, B).
@@ -418,9 +424,9 @@ violation("dangling-fact-ref", F, X)          :- dangling(X, F).
 violation("dangling-residual-anchor", A, T)   :- dangling_residual(A, T).
 violation("unknown-intention", F, I)          :- bad_intent(F, I).
 violation("bare-copula", F, P)                :- fact(F, _, "other", P, _, _, _, _, _, _), (P = "is" ; P = "is not" ; P = "are" ; P = "are not").
+// provenance/stance (is asserted/endorsed/rejected by) is legitimate on positions and theories too; only these need a fact
 violation("second-order-on-non-fact", F, T)   :- rf(F, X, T, _), !ref(X),
-                                                  (T = "offered_as" ; T = "asserted_by" ; T = "endorsed_by" ; T = "rejected_by" ;
-                                                   T = "raised_to_rebut" ; T = "conceded_by" ; T = "has_commitment").
+                                                  (T = "offered_as" ; T = "raised_to_rebut" ; T = "conceded_by" ; T = "has_commitment").
 violation("fact-ref-in-taxonomy", F, R)       :- fact(F, X, R, _, Y, _, _, _, _, U), (ref(X) ; ref(Y)), (spec_rel(U) ; class_rel(U) ; part_rel(U)).
 violation("fact-thing-identity", F, R)        :- rf(F, X, "identical_to", Y), (ref(X), !ref(Y) ; !ref(X), ref(Y)), fact(F, _, R, _, _, _, _, _, _, _).
 violation("question-with-consequences", F, "") :- fact(F, _, _, _, _, _, "question", _, _, _), entails(F, _, _, _).

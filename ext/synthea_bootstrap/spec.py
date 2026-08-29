@@ -76,7 +76,7 @@ CONCEPTS = [
 RELATIONS = [
     ('encounter of a limit', 'binary relation between kinds',
      ['encounters', 'collides with'], ['is encountered by'],
-     [], ('encountering system', 'cognitive system'), ('encountered limit', 'aspect'),
+     [], ('encountering system', 'anything'), ('encountered limit', 'anything'),
      'The first Observer condition: the system meets a constraint of its own computation.', None),
     ('conclusion from an encounter', 'binary relation between kinds',
      ['concludes'], ['is concluded by'],
@@ -96,10 +96,10 @@ RELATIONS = [
      'A dimension in which a system exceeds the reference.', None),
 ]
 
-ROLE_OVERRIDES = {'acting from a conclusion': (('acting system', 'cognitive system'), ('ground of action', 'anything')),
- 'conclusion from an encounter': (('concluding system', 'cognitive system'), ('conclusion', 'anything')),
- 'functional deficit possession': (('deficient system', 'cognitive system'), ('deficit', 'anything')),
- 'hyperfunction possession': (('hyperfunctional system', 'cognitive system'), ('hyperfunction', 'anything'))}
+ROLE_OVERRIDES = {'acting from a conclusion': (('acting system', 'anything'), ('ground of action', 'anything')),
+ 'conclusion from an encounter': (('concluding system', 'anything'), ('conclusion', 'anything')),
+ 'functional deficit possession': (('deficient system', 'anything'), ('deficit', 'anything')),
+ 'hyperfunction possession': (('hyperfunctional system', 'anything'), ('hyperfunction', 'anything'))}
 
 # theory statements: (left, relation, right[, intention])
 FACTS = [

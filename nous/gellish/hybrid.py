@@ -57,10 +57,20 @@ def inject(doc, tables, out=None):
         fence = [f"```{key[0]} {key[1]}", *body, "```"]
         pos = None
         if heading:
+            def is_heading(idx):
+                return re.match(r"^#{1,6}\s+", result[idx]) is not None
+            in_fence = False
             for j, l in enumerate(result):
-                if re.match(r"^#{1,6}\s+", l) and l.lstrip("# ").strip().lower() == heading.lower():
+                if l.startswith("```"):
+                    in_fence = not in_fence; continue
+                if not in_fence and is_heading(j) and l.lstrip("# ").strip().lower() == heading.lower():
                     pos = j + 1
-                    while pos < len(result) and not re.match(r"^#{1,6}\s+", result[pos]):
+                    inside = False
+                    while pos < len(result):
+                        if result[pos].startswith("```"):
+                            inside = not inside
+                        elif not inside and is_heading(pos):
+                            break
                         pos += 1
                     break
         if pos is None:

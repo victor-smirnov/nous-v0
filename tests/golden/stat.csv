@@ -23,7 +23,7 @@ facts figurative	72
 holds closed	34512
 subtype closed	1287
 instance closed	1467
-part_of closed	260
+part_of closed	238
 identity pairs	142
 entailment stated	192
 entailment closed	202
@@ -31,7 +31,7 @@ entailment truncated	0
 kb size	4459
 kb from dictionary	2162
 contradictions	6
-role tensions	13
+role tensions	8
 commitment tensions	7
 cap tensions	1
-violations	147
+violations	126
