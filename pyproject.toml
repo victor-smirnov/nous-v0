@@ -1,0 +1,21 @@
+[project]
+name = "nous"
+version = "0.1.0"
+description = "Nous v0 — Gellish ontological reasoner (Soufflé) and the Synthea bootstrap as dictionaries"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+nous = "nous.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["nous", "nous.gellish", "nous.gellish.ext"]
+
+[tool.setuptools.package-data]
+"nous.gellish" = ["reasoner.dl"]

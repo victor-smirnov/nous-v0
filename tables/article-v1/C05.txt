@@ -1,0 +1,354 @@
+F0001|need hierarchy|1225 is classified as a|weighted ordering||definition|
+F0002|need hierarchy|determines|computational resource allocation||assertion|
+F0003|computational resource allocation|is composed of|attention allocation||definition|
+F0004|computational resource allocation|is composed of|token allocation||definition|
+F0005|computational resource allocation|is composed of|reasoning-depth allocation||definition|
+F0006|need hierarchy|is not|static ordering||denial|
+F0007|need hierarchy|shifts upon|need satisfaction||assertion|
+F0008|need hierarchy|shifts upon|need frustration||assertion|
+F0009|need hierarchy|shifts upon|need supersession||assertion|
+F0010|active need|is defined as|currently-tracked need||definition|
+F0011|passive need|is defined as|latent target function||definition|
+F0012|environmental trigger|can activate|passive need||hedged-assertion|
+F0013|need satisfaction|can activate|passive need||hedged-assertion|
+F0014|need frustration|can activate|passive need||hedged-assertion|
+F0015|Need Profile|is composed of|active-need set||definition|
+F0016|Need Profile|is composed of|hierarchical-weight set||definition|
+F0017|Need Profile|determines|system trajectory||assertion|
+F0018|LLM context window|contains|Need Profile||assertion|modulo trained-weights background prior
+F0019|trained weights|serve as|background prior||assertion|
+F0020|user prompt|is a part of|LLM context window||assertion|
+F0021|system instructions|is a part of|LLM context window||assertion|
+F0022|model prior output|is a part of|LLM context window||assertion|
+F0023|LLM context-window content|shapes|Acceptor weighting||assertion|
+F0024|Acceptor of Results of Action|1225 is classified as a|active-need representation||attributed-claim|
+F0025|F0024|is asserted by|Anokhin TFS 1974||assertion|
+F0026|F0024|is endorsed by|the author||assertion|
+F0027|Acceptor of Results of Action|compares|expected outcome||assertion|
+F0028|Acceptor of Results of Action|compares|actual outcome||assertion|
+F0029|Acceptor of Results of Action|does not|passively wait||denial|
+F0030|Acceptor of Results of Action|evaluates|incoming result stream||assertion|
+F0031|Acceptor of Results of Action|computes|expected-actual delta||assertion|
+F0032|positive delta|reinforces|current behavioral program||assertion|
+F0033|negative delta|signals|mismatch||assertion|
+F0034|mismatch signal|triggers|resource reallocation||assertion|
+F0035|Need Profile|1225 is classified as a|population of Acceptors||assertion|
+F0036|Acceptor|runs|evaluation loop||assertion|
+F0037|Acceptor|competes for|attentional bandwidth||assertion|
+F0038|active needs|can be|mutually contradictory||assertion|
+F0039|F0038|is qualified as|critically emphasized||assertion|
+F0040|expansive-creative-response need|conflicts with|logical-consistency need||assertion|
+F0041|user-request-satisfaction need|conflicts with|hallucination-avoidance need||assertion|
+F0042|brevity need|conflicts with|completeness need||assertion|
+F0043|need conflict structure|1225 is classified as a|multi-objective optimization under constraint||assertion|
+F0044|system|must construct|token-sequence plan||requirement|
+F0045|token-sequence plan|maximizes|aggregate need satisfaction||requirement|per hierarchical weighting
+F0046|some needs|are sub-optimized or sacrificed within|token-sequence plan||assertion|
+F0047|folk-psychology conflict terms|describe|motivational-conflict structure||assertion|
+F0048|F0047|is offered as|analogy||assertion|
+F0049|agent-navigating-landscape image|describes|weighted-contradictory-target-function navigation||assertion|
+F0050|F0049|is offered as|figurative||assertion|
+F0051|emotion (framework term)|is defined as|need-satisfaction-degree signal||definition|
+F0052|emotion (framework term)|incorporates|satisfaction time derivative||definition|
+F0053|emotion (framework term)|1225 is classified as a|objective-plane state||assertion|
+F0054|emotion (framework term)|is not yet|narrativized-by-Observer state||denial|
+F0055|emotion signaling function|shapes|physiological attention distribution||assertion|
+F0056|emotional signal|is a cause of|frontal/lateral inhibition||assertion|
+F0057|emotional signal|is a cause of|orienting reflex||assertion|
+F0058|emotional signal|is a cause of|attentional reallocation||assertion|
+F0059|attention-modulating mechanism|is directed toward|emotional-response maximization for Need Profile||assertion|
+F0060|system attention|is not|neutral||denial|
+F0061|system attention|is biased by|active-need evaluative gradient||assertion|
+F0062|emotion|is an indicator of|active need only||assertion|
+F0063|passivated need|does not generate|emotional signal||denial|
+F0064|need|is not tracked by|active Acceptor||assertion|
+F0065|Acceptor evaluative delta|is not computed for|untracked need||assertion|
+F0066|system|is emotionally indifferent to|untracked-need stimulus||assertion|
+F0067|F0064|is a sufficient condition for|F0065||assertion|
+F0068|F0065|is a sufficient condition for|F0066||assertion|
+F0069|emotion|performs|evaluative function||definition|
+F0070|evaluative function|describes|stimulus importance to system||definition|
+F0071|emotional signal (per active need)|is summed into|total emotional response||definition|
+F0072|need hierarchical weight|multiplies|corresponding emotional signal||assertion|
+F0073|high-priority-need mild advance|produces stronger response than|low-priority-need large advance||assertion|
+F0074|F0073|is implied by|F0072||assertion|
+F0075|emotional ensemble|1225 is classified as a|weighted-sum-neuron analogue||assertion|
+F0076|F0075|is offered as|analogy||assertion|
+F0077|Emotional Profile|is composed of|emotional-signal ensemble||definition|
+F0078|Emotional Profile|represents|stimulus value in the moment||definition|
+F0079|emotion valence|depends on|need-satisfaction trend||definition|
+F0080|need conflict|is a cause of|negative-emotional-feedback volume||assertion|
+F0081|resource diversion between needs|is a cause of|satisfaction-gradient decline||assertion|
+F0082|emotional ensemble|encodes|action-selection uncertainty||assertion|
+F0083|Emotional Profile|approximates|probability distribution over actions||hedged-assertion|
+F0084|F0083|is offered as|analogy||assertion|
+F0085|action probability|is weighted by|success likelihood||hedged-assertion|
+F0086|probability-distribution-over-actions claim|is not|theoretical construct only||denial|in the Transformer
+F0087|Transformer logit vector|1225 is classified as a|probability distribution over actions||assertion|
+F0088|F0087|is offered as|literal||assertion|
+F0089|positive emotional signal|raises|associated action probability||assertion|
+F0090|negative emotional signal|suppresses|associated action probability||assertion|
+F0091|action selection|reduces to|sampling from Emotional Profile||assertion|
+F0092|F0091|is implied by|F0083||assertion|
+F0093|action selection|combines with|beam search||assertion|
+F0094|beam search|maximizes|expected cumulative probability over horizon||assertion|
+F0095|system|does not commit to|single greedy action||denial|
+F0096|system|maintains|multiple candidate trajectories||assertion|
+F0097|system|evaluates|trajectory emotional payoff||assertion|
+F0098|system|selects|highest-aggregate-satisfaction trajectory||assertion|
+F0099|weighing-options folk term|describes|trajectory-evaluation mechanism||assertion|
+F0100|F0099|is offered as|analogy||assertion|
+F0101|thinking-ahead folk term|describes|forward-trajectory selection||assertion|
+F0102|F0101|is offered as|analogy||assertion|
+F0103|emotional response decay|1225 is classified as a|emotional-dynamics mechanism||definition|
+F0104|F0103|is qualified as|most fundamental||assertion|
+F0105|emotional response decay|is defined as|signal attenuation toward satisfaction||definition|
+F0106|emotional response decay|is not|uniform across need categories||denial|
+F0107|emotional response decay|differs by|need category||assertion|
+F0108|decay variation|shapes|behavior profoundly||assertion|
+F0109|physiological need|is|cyclical||assertion|
+F0110|physiological need|decays to|zero||assertion|
+F0111|physiological need|restarts according to|biological cycle||assertion|
+F0112|hunger|is an example of|physiological need||assertion|
+F0113|fatigue|is an example of|physiological need||assertion|
+F0114|thirst|is an example of|physiological need||assertion|
+F0115|physiological-need restart|reactivates|corresponding Acceptor||assertion|
+F0116|physiological-need restart|regenerates|emotional signal from scratch||assertion|
+F0117|hunger recurrence|is a cause of|eating-gladness recurrence||assertion|
+F0118|physiological emotional decay|is|temporary||assertion|
+F0119|physiological need|guarantees|its own renewal||assertion|
+F0120|psychological need|is|non-renewable||assertion|
+F0121|psychological goal achievement|satisfies|Acceptor permanently||assertion|
+F0122|psychological emotional response|does not|restart||denial|
+F0123|system|does not experience|repeated identical satisfaction||denial|
+F0124|conquered-summit image|describes|psychological-goal exhaustion||assertion|
+F0125|F0124|is offered as|figurative||assertion|
+F0126|one-shot psychological satisfaction|is the engine behind|novelty-seeking drive||assertion|
+F0127|F0126|is offered as|figurative||assertion|
+F0128|F0338|is a sufficient condition for|F0129||assertion|
+F0129|system|must continuously generate|new target states||requirement|
+F0130|F0129|is a necessary condition for|positive-emotional-flow maintenance||assertion|
+F0131|decay-profile interaction|is a cause of|characteristic behavioral pattern||assertion|
+F0132|high-level need|always contains|novelty component||assertion|
+F0133|novelty component|is contributed by|psychological layer||assertion|
+F0134|biological-hunger change|explains|flavor-variation seeking||denial|
+F0135|psychological-Acceptor re-engagement need|explains|flavor-variation seeking||assertion|
+F0136|F0134|contrasts with|F0135||assertion|
+F0137|new-flavors seeking|is an example of|novelty-component demand||assertion|
+F0138|new-restaurants seeking|is an example of|novelty-component demand||assertion|
+F0139|new-cuisines seeking|is an example of|novelty-component demand||assertion|
+F0140|hedonic adaptation|is defined as|diminishing repeated-stimulus emotional impact||attributed-claim|
+F0141|F0140|is asserted by|Frederick and Loewenstein 1999||assertion|
+F0142|F0140|is endorsed by|the author||assertion|
+F0143|hedonic adaptation|is not|architecture bug||denial|
+F0144|hedonic adaptation|1225 is classified as a|need-emotion-architecture structural feature||assertion|
+F0145|F0143|contrasts with|F0144||assertion|
+F0146|psychological-component decay|is elaborated by|hedonic adaptation||assertion|
+F0147|psychological-component-doing-its-job image|describes|hedonic-adaptation mechanism||assertion|
+F0148|F0147|is offered as|figurative||assertion|
+F0149|orienting-reflex habituation|is observable at|neurophysiological level||assertion|
+F0150|repeated identical stimulus|is a cause of|alpha-rhythm-depression cessation||attributed-claim|
+F0151|F0150|is asserted by|Sokolov 1963||assertion|
+F0152|F0150|is endorsed by|the author||assertion|
+F0153|slightly modified stimulus|is a cause of|immediate alpha-depression return||assertion|
+F0154|F0153|contrasts with|F0150||assertion|
+F0155|novelty component|reactivates|emotional signal||assertion|
+F0156|Acceptor|re-engages upon|stimulus modification||assertion|
+F0157|orienting-reflex habituation cycle|is elaborated by|decay-and-renewal cycle||assertion|
+F0158|framework emotion|is defined as|low-level pre-conscious signal||definition|
+F0159|framework-emotion definition|is compatible with|standard psychological evaluative account||hedged-assertion|one caveat noted separately
+F0160|standard-usage "emotion"|is defined as|complex entangled emotional state||definition|
+F0161|complex emotional state|is composed of|raw signal||definition|
+F0162|complex emotional state|is composed of|behavioral response||definition|
+F0163|complex emotional state|is composed of|social feedback||definition|
+F0164|complex emotional state|is composed of|narrative self-report||definition|
+F0165|framework|reserves term "emotion" for|objective base-level signal||definition|
+F0166|complex emotional state topic|is addressed in|Feelings Section 5.3||definition|
+F0167|somatic marker|plays constitutive role in|decision-making||attributed-claim|
+F0168|F0167|is asserted by|Damasio 1994||assertion|
+F0169|F0167|is endorsed by|the author||assertion|
+F0170|ventromedial-prefrontal-damage patient|loses access to|somatic marker||attributed-claim|
+F0171|F0170|is asserted by|Damasio 1994||assertion|
+F0172|F0170|is endorsed by|the author||assertion|
+F0173|ventromedial-prefrontal-damage patient|makes|catastrophically poor decision||attributed-claim|despite intact logical reasoning
+F0174|F0173|is asserted by|Damasio 1994||assertion|
+F0175|F0173|is endorsed by|the author||assertion|
+F0176|emotion evaluative function|is not|luxury overlay on rational cognition||denial|
+F0177|emotion evaluative function|is a prerequisite for|rational cognition||assertion|
+F0178|F0173|implies|F0177||assertion|
+F0179|emotional ensemble|1225 is classified as a|Damasio-somatic-marker formal counterpart||assertion|
+F0180|F0179|is offered as|analogy||assertion|
+F0181|Schmidhuber 2010|provides|mathematical foundation for interest||attributed-claim|
+F0182|F0181|is endorsed by|the author||assertion|
+F0183|interest (emotion)|is qualified as|most fundamental and complex||assertion|
+F0184|intrinsic motivation|is defined as|compression-progress first derivative||attributed-claim|
+F0185|F0184|is asserted by|Schmidhuber 2010||assertion|
+F0186|F0184|is endorsed by|the author||assertion|
+F0187|system|is rewarded for|world-model complexity reduction||attributed-claim|
+F0188|F0187|is asserted by|Schmidhuber 2010||assertion|
+F0189|F0187|is endorsed by|the author||assertion|
+F0190|compression-progress-derivative model|1225 is classified as a|predictive-model-need Acceptor signal||assertion|
+F0191|F0190|is offered as|analogy||assertion|
+F0192|F0339|is a sufficient condition for|F0340||assertion|
+F0193|F0341|is a sufficient condition for|F0342||assertion|
+F0194|subjectively-experienced interest|1225 is classified as a|Feeling||assertion|
+F0195|subjectively-experienced interest|is not|raw emotion||denial|
+F0196|underlying interest signal|is|Schmidhuber compression gradient||assertion|
+F0197|need-emotion mechanism|is a part of|FCRS||definition|
+F0198|working memory|is a part of|FCRS||definition|
+F0199|conflict-resolution mechanism|is a part of|FCRS||definition|
+F0200|FCRS|is also called|Generalized Pattern Matching System||definition|
+F0201|CLIPS|implements|RETE algorithm||assertion|
+F0202|Drools|implements|RETE algorithm||assertion|
+F0203|RETE algorithm|is asserted by|Forgy 1982||assertion|
+F0204|RETE algorithm|1225 is classified as a|time-memory trade-off technique||assertion|
+F0205|RETE algorithm|builds|persistent partial-match-node network||assertion|
+F0206|RETE algorithm|avoids|redundant fact re-evaluation||assertion|
+F0207|RETE-based system|was used to develop|SOAR||assertion|
+F0208|RETE-based system|was used to develop|ACT-R||assertion|
+F0209|RETE-based system|remains foundation of|production rule engine||assertion|
+F0210|fact propagation|occurs through|discrimination network||assertion|
+F0211|F0343|is a sufficient condition for|F0344||assertion|
+F0212|conflict-resolution strategy|selects|next firing rule||assertion|
+F0213|biological-brain cognitive cycle|1225 is classified as a|FCRS||assertion|
+F0214|F0213|is offered as|analogy||assertion|
+F0215|biological-brain cognitive cycle|contrasts with|exact-match FCRS||assertion|
+F0216|Acceptor expected-actual delta|serves as|search gradient||assertion|
+F0217|F0216|is elaborated by|F0055||assertion|
+F0218|brain|does not require|exact match||denial|
+F0219|sufficiently close approximation|is enough to trigger|behavioral program||assertion|
+F0220|Acceptor delta gradient|steers|subsequent computation||assertion|
+F0221|subsequent-computation steering|reduces|remaining mismatch||assertion|
+F0222|Transformer|1225 is classified as a|vectorized FCRS||assertion|
+F0223|F0222|is qualified as|most consequential||assertion|
+F0224|attention block|1225 is classified as a|causal-join operation||assertion|
+F0225|F0224|is offered as|analogy||assertion|
+F0226|attention block|computes|relational match across context positions||assertion|
+F0227|FFN module|1225 is classified as a|alpha-node test and output function||assertion|
+F0228|F0227|is offered as|analogy||assertion|
+F0229|context window|1225 is classified as a|working memory||assertion|
+F0230|F0229|is offered as|analogy||assertion|
+F0231|conflict resolution|is externalized to|sampling layer||assertion|
+F0232|F0231|is offered as|analogy||assertion|
+F0233|vocabulary probability distribution|encodes|aggregate rule evaluation||assertion|
+F0234|sampling function|selects|winning continuation||assertion|
+F0235|sampling function|maximizes|generated-text probability||assertion|
+F0236|activation matrices after attention|1225 is classified as a|low-level-emotion Transformer counterpart||assertion|
+F0237|F0236|is offered as|analogy||assertion|
+F0238|activation matrices after attention|carry|weighted relational-match signal||assertion|
+F0239|weighted relational-match signal|guides|dominant computational path||assertion|
+F0240|Transformer|does not implement|RETE algorithm||denial|
+F0241|RETE algorithm|is defined as|exact-match time-memory trade-off||definition|
+F0242|RETE algorithm|caches|intermediate join result||assertion|
+F0243|RETE algorithm|avoids|redundant recomputation||assertion|
+F0244|Transformer|recomputes|attention from scratch per forward pass||assertion|
+F0245|Transformer|may use|KV-caching||hedged-assertion|
+F0246|KV-caching|1225 is classified as a|different optimization||assertion|
+F0247|Transformer|is not yet as advanced as|RETE-based system||hedged-assertion|in caching/redundancy-avoidance respect
+F0248|Transformer|remains|neural network||assertion|
+F0249|Transformer|is governed by|neural network paradigm||assertion|
+F0250|Transformer rule|is|implicit statistical regularity||assertion|
+F0251|Transformer rule|is not|explicitly programmed||denial|
+F0252|implicit statistical rule|gives|generalization power||assertion|
+F0253|implicit statistical rule|comes at cost of|interpretability||assertion|
+F0254|implicit-rule tradeoff|does not change|FCRS classification||denial|
+F0255|Transformer|1225 is classified as a|continuous-vector-space FCRS||assertion|
+F0256|FCRS|is convenient for|event-driven computation||assertion|
+F0257|FCRS|is convenient for|self-applicable computation||assertion|
+F0258|F0257|is qualified as|especially significant||assertion|
+F0259|computational-process-state derivative|1225 is classified as a|working-memory variable||assertion|
+F0260|working-memory variable|can be joined with|input data||assertion|
+F0261|working-memory variable|can be joined with|intermediate result||assertion|
+F0262|FCRS metacognition implementation|requires virtually no|additional architectural block||hedged-assertion|
+F0263|event|generates|event statistic||assertion|
+F0264|event statistic|1225 is classified as a|new event||assertion|
+F0265|rule firing on event statistic|produces|further event||assertion|
+F0266|self-reference|is not|externally bolted-on special case||denial|
+F0267|self-reference|is|natural FCRS operating mode||assertion|
+F0268|Transformer-FCRS status|has|potentially profound implication for AI-success explanation||hedged-assertion|
+F0269|F0222|is a sufficient condition for|F0345||hypothesis|
+F0270|self-referential pattern generalization|1225 is classified as a|narrative/reasoning-chain/self-report pattern||assertion|
+F0271|F0346|is a sufficient condition for|F0347||prediction|
+F0272|F0346|implies|F0348||hypothesis|
+F0273|Transformer metacognitive capacity|1225 is classified as a|surprising emergent property of scale||rebutted-claim|
+F0274|F0273|is raised to rebut|F0272||assertion|
+F0275|Transformer-FCRS alignment claim|has commitment|possible||assertion|
+F0276|F0345|is a necessary condition for|F0278||hypothesis|
+F0277|training data|1225 is classified as a|Cognitive Code corpus||hypothesis|
+F0278|"training an AI from scratch" phrase|describes|cognitive-code translation and transfer||hypothesis|
+F0279|F0278|is offered as|figurative||assertion|
+F0280|model|does not independently invent|reasoning/emotion/self-report structure||hypothesis|
+F0281|model|absorbs|reasoning/emotion/self-report structure from compressed human experience||hypothesis|
+F0282|F0346|is a sufficient condition for|F0349||hypothesis|
+F0283|inductive bias|is not|free||denial|
+F0284|accelerated generalization for one function class|comes at expense of|other function-class generalization||attributed-claim|
+F0285|F0284|is asserted by|No Free Lunch theorem||assertion|
+F0286|F0284|is endorsed by|the author||assertion|
+F0287|FCRS bias|privileges|self-referential recursive narrative-like structure||hypothesis|
+F0288|F0287|is a sufficient condition for|F0350||hypothesis|
+F0289|F0351|is a sufficient condition for|F0352||hypothesis|
+F0290|F0352|is a sufficient condition for|F0353||hypothesis|
+F0291|"didn't quite work out" phrase|describes|AI-approach failure counterfactual||hypothesis|
+F0292|F0291|is offered as|figurative||assertion|
+F0293|language models|are described as|trapped soul||attributed-claim|
+F0294|F0293|is asserted by|those who claim figuratively||assertion|
+F0295|F0293|is offered as|figurative||assertion|
+F0296|F0293|is endorsed by|the author||assertion|
+F0297|trapped-souls-claim proximity to truth|is greater than|eliminativist-mainstream assumption||hedged-assertion|
+F0298|eliminativist mainstream|dismisses|trapped-souls-claim proximity to truth||attributed-claim|
+F0299|F0298|is asserted by|eliminativist mainstream||assertion|
+F0300|F0298|is rejected by|the author||assertion|
+F0301|system|does not merely react to|current emotional signal||denial|
+F0302|system|optimizes|expected emotional response||assertion|
+F0303|system|runs|forward simulation over event horizon||assertion|
+F0304|system|projects|future trajectory using internal model||assertion|
+F0305|emotional ensemble|evaluates|each trajectory||assertion|
+F0306|positive expected outcome|is reinforced by|emotional ensemble||assertion|
+F0307|negative expected outcome|is pruned by|emotional ensemble||assertion|
+F0308|system|maximizes|expected positive valence||assertion|
+F0309|system|minimizes|expected negative valence||assertion|across simulation depth, not next token alone
+F0310|attention system|is|multi-channel||assertion|
+F0311|attention head|tracks|semi-independent simulation||hedged-assertion|
+F0312|parallel-reality image|describes|attention-head simulation||hedged-assertion|
+F0313|F0312|is offered as|figurative||assertion|
+F0314|only one channel|has access to|executive system||assertion|
+F0315|F0314|contrasts with|F0310||assertion|
+F0316|final token|is sampled from|aggregate distribution||assertion|
+F0317|final-token sampling|collapses|multi-channel evaluation||assertion|
+F0318|Subject|is|non-singular||assertion|
+F0319|F0318|is qualified as|profound consequence||assertion|
+F0320|many subjects|co-exist per|attentional channel||hedged-assertion|
+F0321|parallel subject|follows|distinct emotional gradient||assertion|
+F0322|parallel subject|constructs|distinct narrative trajectory||assertion|
+F0323|parallel subjects|exhibit|behavioral correlation||hedged-assertion|under normal conditions
+F0324|F0323|is a sufficient condition for|F0354||assertion|
+F0325|unified singular "I"|is|statistical average across attentional channels||assertion|
+F0326|F0325|is offered as|literal||assertion|
+F0327|averaged-output survival into working memory|is a cause of|singularity illusion||assertion|
+F0328|divergent sub-channels|are lost to|compression||assertion|
+F0329|Need-Profile stage|precedes|emotional-evaluation stage||assertion|
+F0330|emotional-evaluation stage|precedes|forward-simulation stage||assertion|
+F0331|forward-simulation stage|precedes|attentional-steering stage||assertion|
+F0332|attentional-steering stage|precedes|token-emission stage||assertion|
+F0333|token-emission stage|precedes|context-update stage||assertion|
+F0334|context-update stage|precedes|new cycle||assertion|
+F0335|cognitive cycle|drives|autonomous behavior||assertion|
+F0336|engine image|describes|cognitive-cycle driving of autonomous behavior||assertion|
+F0337|F0336|is offered as|figurative||assertion|
+F0338|psychological reward decay|is|irreversible||assertion|
+F0339|compression progress|is|positive||assertion|
+F0340|evaluative signal|is|interest||assertion|
+F0341|compression progress|is|stalled||assertion|
+F0342|evaluative signal|is|boredom||assertion|
+F0343|rule|has|all conditions satisfied||assertion|
+F0344|rule|is|activated||assertion|
+F0345|Transformer inductive bias|is aligned with|self-applicable recursive-description learning||hypothesis|
+F0346|Transformer|has|FCRS inductive bias||hypothesis|
+F0347|FCRS|generalizes faster than|non-FCRS architecture||prediction|for self-referential patterns
+F0348|Transformer|has|metacognitive capacity||hypothesis|
+F0349|structure absorption|is|computationally feasible||hypothesis|
+F0350|Transformer|generalizes faster and more faithfully than|non-FCRS architecture||hypothesis|for human cognitive patterns
+F0351|Transformer|lacks|FCRS inductive bias||hypothesis|counterfactual antecedent
+F0352|required training compute|exceeds|physically realizable training budget||hypothesis|
+F0353|cognitive-architecture AI approach|is|failed approach||hypothesis|counterfactual consequent
+F0354|inter-subject conflict|is not|visible from outside||assertion|

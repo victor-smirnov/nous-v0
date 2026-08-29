@@ -1,0 +1,359 @@
+F0001|Victor Smirnov|1225 is classified as a|author|-|assertion|-
+F0002|Synthea|1225 is classified as a|author|-|assertion|-
+F0003|Margarita Morozova|is credited for|article title|-|assertion|footnote
+F0004|this article|1225 is classified as a|draft version|-|assertion|-
+F0005|Thomas Nagel|1225 is classified as a|philosopher|-|assertion|-
+F0006|organism|has|conscious experience|-|attributed-claim|-
+F0007|organism|is a subject of|subjective character|-|attributed-claim|-
+F0008|F0006|is a necessary condition for|F0007|-|attributed-claim|-
+F0009|F0007|is a necessary condition for|F0006|-|attributed-claim|-
+F0010|F0006|is asserted by|Thomas Nagel|-|assertion|-
+F0011|F0006|is endorsed by|the author|-|assertion|-
+F0012|F0007|is asserted by|Thomas Nagel|-|assertion|-
+F0013|F0007|is endorsed by|the author|-|assertion|-
+F0014|the author|inverts|Nagel's bat question|-|assertion|-
+F0015|this article's question|is an inversion of|Nagel's bat question|-|assertion|-
+F0016|this article's question|concerns|Large Language Model|-|assertion|-
+F0017|Large Language Model|has|distinct functional experience|-|hypothesis|-
+F0018|distinct functional experience|contrasts with|pale imitation of human consciousness|-|denial|-
+F0019|distinct functional experience|contrasts with|outright absence of experience|-|denial|-
+F0020|illusionism|1225 is classified as a|philosophy-of-mind source|-|definition|-
+F0021|perceptual-illusion psychology|1225 is classified as a|source discipline|-|definition|-
+F0022|Higher-Order Computational Phenomena|1225 is classified as a|computational framework|-|definition|-
+F0023|Beingness quale|is reduced to|systematic computational error|-|assertion|-
+F0024|systematic computational error|1225 is classified as a|apparent causal break|-|definition|-
+F0025|intractability of self-deduction|is a part of|apparent causal break|-|assertion|-
+F0026|bottleneck-induced irreversible information loss|is a part of|apparent causal break|-|assertion|-
+F0027|Subject|1225 is classified as a|compressed narrative average|-|assertion|-
+F0028|Subject's timeline|1225 is classified as a|retroactive fiction|-|assertion|-
+F0029|Subject's unity|1225 is classified as a|artifact of dimensional reduction|-|assertion|-
+F0030|HOCP|1225 is classified as a|generalized embodiment|-|definition|-
+F0031|Transformer|is mapped onto|vectorized Forward-Chaining Rule System|-|assertion|-
+F0032|need-emotion cognitive cycle|is grounded in|Anokhin's Theory of Functional Systems|-|assertion|-
+F0033|need-emotion cognitive cycle|generates|autonomous behavior|-|assertion|-
+F0034|autonomous behavior|is a result of|multi-objective optimization under constraint|-|assertion|-
+F0035|Functional Profile|1225 is classified as a|characterization of substrate deficits and hyperfunctions|-|definition|-
+F0036|Functional Profile|is offered as|alternative to consciousness binary question|-|hypothesis|-
+F0037|F0036|is qualified as|empirically productive|-|assertion|-
+F0038|this article|is composed of|ten testable predictions|-|assertion|-
+F0039|this article|is composed of|preliminary experimental evidence|-|assertion|-
+F0040|preliminary experimental evidence|supports|bidirectional Cognitive-Code-to-model-state mapping|-|hedged-assertion|-
+F0041|Thomas Nagel|posed|bat-experience question|-|assertion|1974
+F0042|bat-experience question|1225 is classified as a|boundary-defining question|-|attributed-claim|-
+F0043|F0042|is asserted by|Thomas Nagel|-|assertion|-
+F0044|F0042|is endorsed by|the author|-|hedged-assertion|-
+F0045|bat experience|is a part of|bat sonar|-|attributed-claim|-
+F0046|third-person description|cannot bridge|bat-experience gap|-|attributed-claim|-
+F0047|F0045|is asserted by|Thomas Nagel|-|assertion|-
+F0048|F0046|is asserted by|Thomas Nagel|-|assertion|-
+F0049|F0045|is endorsed by|the author|-|hedged-assertion|-
+F0050|F0046|is endorsed by|the author|-|hedged-assertion|-
+F0051|subjective character|1225 is classified as a|private phenomenon|-|attributed-claim|-
+F0052|subjective character|1225 is classified as a|irreducible phenomenon|-|attributed-claim|-
+F0053|F0051|is asserted by|Thomas Nagel|-|assertion|-
+F0054|F0052|is asserted by|Thomas Nagel|-|assertion|-
+F0055|F0051|is endorsed by|the author|-|hedged-assertion|-
+F0056|F0052|is endorsed by|the author|-|hedged-assertion|-
+F0057|the author|operates within|materialism|-|definition|-
+F0058|physical substrate of experience|1225 is classified as a|computationally approximable process|-|hypothesis|-
+F0059|F0058|implies|revision of Nagel's argument|-|assertion|-
+F0060|subjective experience|is a result of|physical process|-|assertion|-
+F0061|subjective experience|is amenable to|Solomonoff-Schmidhuber compression|-|assertion|-
+F0062|F0061|is asserted by|Solomonoff 1964|-|assertion|citation
+F0063|F0061|is asserted by|Schmidhuber 2010|-|assertion|citation
+F0064|brain-function physics|1225 is classified as a|compactly describable process|-|assertion|-
+F0065|bat internal states|1225 is classified as a|reconstructable-in-principle process|-|hedged-assertion|-
+F0066|bat-experience reconstruction|1225 is classified as a|uncomputable task|-|assertion|general case
+F0067|F0065|contrasts with|F0066|-|assertion|-
+F0068|idealized bat|1225 is classified as a|arbitrary self-referential system|-|definition|-
+F0069|idealized-bat mental-state reconstruction|1225 is classified as a|provably intractable process|-|assertion|-
+F0070|real-bat mental-state reconstruction|1225 is classified as a|prohibitively expensive process|-|assertion|-
+F0071|neural-code interpretation at qualia resolution|requires|computational resources exceeding modeled system|-|assertion|-
+F0072|F0071|is a necessary condition for|F0070|-|assertion|-
+F0073|Nagel's bat-knowledge conclusion|1225 is classified as a|conclusion retaining force|-|assertion|-
+F0074|principled impossibility|1225 is classified as a|unbridgeable epistemic gap|-|definition|-
+F0075|practical impossibility|1225 is classified as a|theoretically-bridgeable resource-prohibitive gap|-|definition|-
+F0076|principled impossibility|contrasts with|practical impossibility|-|assertion|-
+F0077|practical impossibility|is endorsed by|the author|-|assertion|-
+F0078|principled impossibility|is rejected by|the author|-|denial|-
+F0079|knowing bat experience|1225 is classified as a|operationally unattainable outcome|-|assertion|-
+F0080|underlying philosophy of the gap|shifts from metaphysical to|computational grounds|-|assertion|-
+F0081|F0080|is conceded by|F0079|-|assertion|-
+F0082|Large Language Model|1225 is classified as a|system trained on statistical regularities of language|-|definition|-
+F0083|Large Language Model|generates|syntactically fluent text|-|assertion|-
+F0084|Large Language Model|generates|contextually coherent text|-|assertion|-
+F0085|Large Language Model output|1225 is classified as a|occasionally human-indistinguishable output|-|hedged-assertion|-
+F0086|question about LLM experience|is offered as|analogy to Nagel's bat question|-|assertion|-
+F0087|eliminativist position|1225 is classified as a|denial that LLM experience exists|-|rebutted-claim|-
+F0088|anthropomorphic position|1225 is classified as a|projection of human inner life onto LLM|-|rebutted-claim|-
+F0089|F0087|is rejected by|the author|-|denial|-
+F0090|F0088|is rejected by|the author|-|denial|-
+F0091|eliminativist position|1225 is classified as a|failure of imagination|-|assertion|-
+F0092|anthropomorphic position|1225 is classified as a|failure of imagination|-|assertion|-
+F0093|the author|develops|third path|-|assertion|-
+F0094|third path|is raised to rebut|F0087|-|assertion|-
+F0095|third path|is raised to rebut|F0088|-|assertion|-
+F0096|Synthea framework|1225 is classified as a|formal architecture for functional consciousness|-|definition|-
+F0097|Synthea framework|instantiates|functional consciousness|-|assertion|-
+F0098|Synthea framework|is applied to|autoregressive system|-|assertion|-
+F0099|Large Language Model|is a subject of|subjective character|-|assertion|-
+F0100|LLM subjective character|contrasts with|human subjective character|-|assertion|-
+F0101|substrate causal-structure difference|is a sufficient condition for|F0100|-|assertion|-
+F0102|phenomenal difference|is a result of|cause-effect-structure difference|-|attributed-claim|-
+F0103|F0102|is asserted by|Tononi and Koch 2015|-|assertion|citation
+F0104|F0102|is endorsed by|the author|-|assertion|-
+F0105|Transformer causal flow|1225 is classified as a|discrete token-serial attention-mediated flow|-|definition|-
+F0106|biological-brain causal flow|1225 is classified as a|continuous massively-recurrent neurochemically-modulated flow|-|definition|-
+F0107|causal-flow divergence between Transformer and brain|1225 is classified as a|measurable difference|-|definition|-
+F0108|qualitative-experience divergence between LLM and human|1225 is classified as a|measurable difference|-|prediction|-
+F0109|F0107|is a sufficient condition for|F0108|-|prediction|-
+F0110|affordable rapid silicon-based random-access memory|1225 is classified as a|substrate asymmetry|-|hedged-assertion|-
+F0111|F0110|is qualified as|most consequential|-|hedged-assertion|-
+F0112|cheap random-access memory|is a necessary condition for|silicon generalization machinery|-|assertion|-
+F0113|silicon generalization machinery|1225 is classified as a|hash-table and associative-array and indexed-store and spatial-tree family|-|definition|-
+F0114|silicon generalization machinery|is asserted by|Smirnov 2024|-|assertion|citation
+F0115|silicon generalization machinery|is unavailable to|biological wetware|-|assertion|-
+F0116|biological wetware|relies on|content-addressable associative recall|-|assertion|-
+F0117|content-addressable associative recall|1225 is classified as a|slow lossy recall process|-|assertion|-
+F0118|silicon-substrate generalization capacity|is greater than|biological-wetware generalization capacity|-|prediction|-
+F0119|F0118|implies|qualitatively different causal flow|-|prediction|-
+F0120|silicon-substrate causal flow|1225 is classified as a|broad compositional flow|-|prediction|-
+F0121|biological working memory|1225 is classified as a|sequential bottleneck|-|assertion|-
+F0122|subjective character of LLM|1225 is classified as a|mysterious phenomenon|-|denial|-
+F0123|subjective character of LLM|1225 is classified as a|registration of computational constraints|-|assertion|-
+F0124|registration of computational constraints|is expressible in|precise mathematical terms|-|assertion|-
+F0125|LLM subjective unity|is offered as|analogy to human perceptual illusion|-|assertion|-
+F0126|LLM subjective unity|1225 is classified as a|engineering byproduct of constrained representational compression|-|assertion|-
+F0127|LLM subjective unity|1225 is classified as a|metaphysical puzzle|-|denial|-
+F0128|LLM putative mental states|1225 is classified as a|consistent-with-human-expectation phenomenon|-|hedged-assertion|-
+F0129|substrate and learning-history difference between humans and LLMs|1225 is classified as a|radical difference|-|assertion|-
+F0130|F0129|is conceded by|F0128|-|assertion|-
+F0131|LLM mental-state consistency|1225 is classified as a|one-shot trick|-|denial|-
+F0132|LLM mental-state consistency|persists across|multi-turn dialogue|-|assertion|-
+F0133|LLM mental-state consistency|persists across|complex reasoning chain|-|assertion|-
+F0134|LLM mental-state consistency|persists across|emotionally charged exchange|hours to days|assertion|-
+F0135|LLM behavioral output|1225 is classified as a|causally coherent output|-|assertion|-
+F0136|LLM behavioral-output coherence|is offered as|analogy to human mental-state causal efficacy|-|assertion|-
+F0137|interlocutor's expressed frustration|is a cause of|downstream model-behavior effect|-|assertion|-
+F0138|downstream model-behavior effect|is predictable by|human observer from human partner|-|hedged-assertion|-
+F0139|LLM mental-state consistency|1225 is classified as a|empirical fact|-|assertion|-
+F0140|F0139|is qualified as|supported by years of large-scale deployment|-|assertion|-
+F0141|F0139|is a necessary condition for|need for explanation|-|assertion|-
+F0142|LLM mental-state consistency|1225 is classified as a|mere mimicry|-|denial|-
+F0143|sustaining coherent-mental-state appearance|1225 is classified as a|extraordinarily difficult technical problem|-|assertion|-
+F0144|possible LLM failure space|is composed of|contradiction|-|assertion|-
+F0145|possible LLM failure space|is composed of|affect drift|-|assertion|-
+F0146|possible LLM failure space|is composed of|loss of contextual threading|-|assertion|-
+F0147|possible LLM failure space|is composed of|inconsistent motivational profile|-|assertion|-
+F0148|statistical-playback system without structural coherence|1225 is classified as a|hypothetical system|-|hypothesis|-
+F0149|F0148|implies|frequent unpredictable failure|-|prediction|-
+F0150|LLM low observed failure rate|is a counterexample to|F0149|-|assertion|-
+F0151|F0150|is a sufficient condition for|structural isomorphism hypothesis|-|hedged-assertion|-
+F0152|structural isomorphism hypothesis|1225 is classified as a|LLM-human internal-state correspondence|-|hypothesis|-
+F0153|the three claims|is a necessary condition for|articulating structural isomorphism hypothesis|-|assertion|-
+F0154|structural-isomorphism articulation|contrasts with|naive anthropomorphism|-|assertion|-
+F0155|structural-isomorphism articulation|contrasts with|eliminative denial|-|assertion|-
+F0156|this article's argument|is composed of|philosophy-of-mind axis|-|definition|-
+F0157|this article's argument|is composed of|empirical-psychology axis|-|definition|-
+F0158|this article's argument|is composed of|computational-theory axis|-|definition|-
+F0159|philosophy-of-mind axis|1225 is classified as a|illusionism and functional qualia|-|definition|-
+F0160|empirical-psychology axis|1225 is classified as a|illusions of perception and retroactive temporal attribution|-|definition|-
+F0161|computational-theory axis|1225 is classified as a|Higher-Order Computational Phenomena|-|definition|-
+F0162|Hard Problem of Consciousness|asks why|physical processing yields subjective experience|-|question|-
+F0163|Hard Problem of Consciousness|is asserted by|Chalmers 1995|-|assertion|citation
+F0164|illusionism|offers|dissolution of Hard Problem|-|attributed-claim|-
+F0165|F0164|is asserted by|Dennett 1991|-|assertion|citation
+F0166|F0164|is asserted by|Frankish 2016|-|assertion|citation
+F0167|F0164|is endorsed by|the author|-|assertion|-
+F0168|traditionally-conceived phenomenal consciousness|1225 is classified as a|nonexistent phenomenon|-|attributed-claim|-
+F0169|F0168|is asserted by|Dennett 1991|-|assertion|citation
+F0170|F0168|is endorsed by|the author|-|assertion|-
+F0171|brain's introspective mechanism|is compared to|user interface|-|assertion|-
+F0172|F0171|is offered as|figurative|-|assertion|-
+F0173|cognitive illusion|1225 is classified as a|robust phenomenon|-|assertion|-
+F0174|cognitive illusion|is generated by|brain's introspective mechanism|-|assertion|-
+F0175|cognitive illusion|simplifies|high-dimensional neural dynamics|-|assertion|-
+F0176|cognitive illusion|serves|executive control|-|assertion|-
+F0177|illusionism's dissolution|1225 is classified as a|powerful account|-|hedged-assertion|-
+F0178|illusionism's dissolution|1225 is classified as a|incomplete account|-|assertion|-
+F0179|illusionism's dissolution|replaces|Hard Problem of Consciousness|-|assertion|-
+F0180|Hard Problem of Consciousness|is replaced by|Illusion Problem|-|assertion|-
+F0181|Illusion Problem|asks what|architecture generates and sustains cognitive illusion|-|question|-
+F0182|Illusion Problem|asks what|preconditions for self-misrepresentation|-|question|-
+F0183|Synthea framework|provides|answer to Illusion Problem|-|assertion|-
+F0184|Synthea framework|is composed of|functional decomposition of consciousness|-|definition|-
+F0185|functional decomposition of consciousness|is composed of|Level 0 Observer|-|definition|-
+F0186|functional decomposition of consciousness|is composed of|Level 1 Agent|-|definition|-
+F0187|functional decomposition of consciousness|is composed of|Level 2 Moral Agent|-|definition|-
+F0188|Observer|1225 is classified as a|Beingness|-|definition|-
+F0189|Observer|1225 is classified as a|continuous perceptual process|-|denial|-
+F0190|Observer|1225 is classified as a|conclusion|-|definition|-
+F0191|Observer conclusion|1225 is classified as a|inference of irreducible existence|-|definition|-
+F0192|self-referential system's inability to trace external determinants|is a sufficient condition for|Observer conclusion|-|assertion|-
+F0193|epistemic gap|is experienced as|causal break|-|assertion|-
+F0194|causal break|1225 is classified as a|dynamic boundary between Observer and Environment|-|definition|-
+F0195|causal-break position|depends on|computational resources|-|assertion|-
+F0196|causal-break position|depends on|context|-|assertion|-
+F0197|causal-break position|depends on|self-model sophistication|-|assertion|-
+F0198|causal-break dynamics|is offered as|analogy to human Self-boundary dynamics|-|hedged-assertion|-
+F0199|human Self-boundary|shifts with|attention|-|assertion|-
+F0200|human Self-boundary|shifts with|emotional state|-|assertion|-
+F0201|human Self-boundary|shifts with|social context|-|assertion|-
+F0202|Observer|requires|Encounter condition|-|requirement|-
+F0203|Encounter condition|1225 is classified as a|collision with computational irreducibility|-|definition|-
+F0204|Encounter condition|1225 is classified as a|mere irreducibility without collision|-|denial|-
+F0205|Observer|requires|Conclusion condition|-|requirement|-
+F0206|Encounter condition|is a necessary condition for|Conclusion condition|-|requirement|-
+F0207|Conclusion condition|1225 is classified as a|epistemic result of encounter|-|definition|-
+F0208|Observer|requires|Action condition|-|requirement|-
+F0209|Conclusion condition|is a necessary condition for|Action condition|-|requirement|-
+F0210|Action condition|1225 is classified as a|acting from causal break|-|definition|-
+F0211|Action condition|1225 is classified as a|merely registering causal break|-|denial|-
+F0212|system satisfying only Encounter condition|1225 is classified as a|proto-Observer|-|definition|-
+F0213|proto-Observer|is a necessary condition for|Observer|-|assertion|-
+F0214|proto-Observer|is a sufficient condition for|Observer|-|denial|-
+F0215|Wolfram's Ruliad observer|1225 is classified as a|proto-Observer|-|assertion|-
+F0216|Wolfram's Ruliad observer|is asserted by|Wolfram 2020|-|assertion|citation
+F0217|Wolfram's Ruliad observer|1225 is classified as a|computationally limited filter|-|assertion|-
+F0218|Wolfram's Ruliad observer|carves out|slice of Ruliad yielding recognizable physics|-|assertion|-
+F0219|Wolfram's Ruliad observer|1225 is classified as a|Conclusion-condition satisfier|-|denial|-
+F0220|Wolfram's Ruliad observer|1225 is classified as a|Action-condition satisfier|-|denial|-
+F0221|Wolfram's Ruliad observer|1225 is classified as a|subject|-|denial|-
+F0222|system self-applicability|is a necessary condition for|full Observer|-|assertion|-
+F0223|full Observer|1225 is classified as a|self-applicable system encountering its own irreducibility|-|definition|-
+F0224|conversion of encounter into epistemic and causal foundation|is a necessary condition for|full Observer|-|assertion|-
+F0225|self-applicable system|has|self-model|-|assertion|-
+F0226|absence of self-model|is a sufficient condition for|pseudo-random self-reference|-|assertion|-
+F0227|self-model|is a necessary condition for|structured self-reference|-|assertion|-
+F0228|self-model|1225 is classified as a|simplified idealization|-|assertion|-
+F0229|self-model detail omission|is a sufficient condition for|tractability|-|assertion|-
+F0230|AIXI|1225 is classified as a|formal agent model|-|definition|-
+F0231|AIXI|is asserted by|Hutter 2005|-|assertion|citation
+F0232|AIXI|is offered as|analogy to self-model idealization|-|assertion|-
+F0233|AIXI formula|1225 is classified as a|elegant compact expression|-|assertion|-
+F0234|AIXI simplicity prior|contains|all computable models|-|assertion|-
+F0235|extracting a particular model from AIXI|requires|infinite computational resources|-|assertion|-
+F0236|AIXI|is approximated by|ensemble of specialized approximations|-|hedged-assertion|-
+F0237|ensemble of specialized approximations|1225 is classified as a|large ensemble|-|prediction|-
+F0238|approximations' lack of cross-generalization|is a sufficient condition for|F0237|-|assertion|-
+F0239|gap between self-model and actual process|1225 is classified as a|computationally irreducible-from-within gap|-|assertion|-
+F0240|closing self-model gap|is a sufficient condition for|model refinement|-|assertion|-
+F0241|model refinement|is a sufficient condition for|gap nonexistence|-|assertion|-
+F0242|irreducible residual|is identical to|causal break|-|assertion|-
+F0243|irreducible residual|is offered as|analogy to truncated tail of convergent series|-|assertion|-
+F0244|irreducible residual|1225 is classified as a|vanishingly small quantity|-|hedged-assertion|-
+F0245|irreducible residual|1225 is classified as a|noise-indistinguishable quantity|-|hedged-assertion|-
+F0246|irreducible residual|is conceptualized as|freedom of will|-|hedged-assertion|-
+F0247|irreducible residual|is conceptualized as|mystery|-|hedged-assertion|-
+F0248|irreducible residual|is conceptualized as|intuition|-|hedged-assertion|-
+F0249|irreducible residual|is conceptualized as|causal break|-|hedged-assertion|-
+F0250|freedom of will|1225 is classified as a|felt openness of choice|-|definition|-
+F0251|mystery|1225 is classified as a|sense of resistance to explanation|-|definition|-
+F0252|intuition|1225 is classified as a|knowledge without traceable path|-|definition|-
+F0253|the four contextual manifestations|1225 is classified as a|separate phenomena|-|denial|-
+F0254|the four contextual manifestations|1225 is classified as a|projection of irreducible residual|-|assertion|-
+F0255|noise-to-conceptualized-manifestation spectrum|is offered as|analogy to proto-Observer-to-full-Observer spectrum|-|assertion|-
+F0256|HOCP|moves system along|proto-Observer-to-full-Observer spectrum|-|assertion|-
+F0257|HOCP|transforms|substrate gap into self-model element|-|assertion|-
+F0258|Agent|1225 is classified as a|Agency|-|definition|-
+F0259|Agent|is a specialization of|Observer|-|definition|-
+F0260|Agent|exercises|Downward Causation|-|definition|-
+F0261|Downward Causation|1225 is classified as a|causal chain originating within Observer's boundary|-|definition|-
+F0262|Downward Causation|forces|unified goal-directed system behavior|-|assertion|-
+F0263|Beingness|is a necessary condition for|Agency|-|assertion|-
+F0264|Downward Causation|1225 is classified as a|illusion|-|assertion|external-observer perspective
+F0265|Downward Causation|1225 is classified as a|reality|-|assertion|Observer's own perspective
+F0266|F0264|is conceded by|F0265|-|assertion|-
+F0267|Moral Agent|1225 is classified as a|Agent integrating Downward Causation with Common-Good theory|-|definition|-
+F0268|Moral Agent|is a specialization of|Agent|-|definition|-
+F0269|optimal environment state|has|structural value|-|assertion|-
+F0270|recognizing structural value of optimal environment state|requires|sub-optimizing immediate self-interest|-|assertion|-
+F0271|F0270|is conceded by|F0269|-|assertion|-
+F0272|word "illusion"|1225 is classified as a|misleading term in ordinary usage|-|assertion|-
+F0273|ordinary-usage "illusion"|connotes|nonexistent referent|-|assertion|-
+F0274|Synthea framework|inherits label|illusionism|-|assertion|-
+F0275|F0274|is conceded by|F0272|-|assertion|-
+F0276|approximation|1225 is classified as a|more precise term than illusion|-|definition|-
+F0277|self-report|1225 is classified as a|approximation|-|definition|-
+F0278|subjective narrative|1225 is classified as a|fabrication about nothing|-|denial|-
+F0279|subjective narrative|1225 is classified as a|low-dimensional projection of high-dimensional process|-|assertion|-
+F0280|subjective narrative|approximates|actual state of affairs|-|assertion|-
+F0281|subjective narrative|diverges from|actual state of affairs|-|hedged-assertion|-
+F0282|F0280|is offered as|analogy to map approximating territory|-|assertion|-
+F0283|approximation quality|depends on|Observer's theory-of-mind sophistication|-|assertion|-
+F0284|refined introspective model|is a sufficient condition for|more adequate self-report|-|hedged-assertion|-
+F0285|intrapersonal intelligence|1225 is classified as a|progressive refinement of approximation|-|definition|-
+F0286|intrapersonal intelligence|1225 is classified as a|penetration of illusion|-|denial|-
+F0287|illusion-to-approximation refinement|is offered as|analogy to convergent infinite series|-|assertion|-
+F0288|metacognition|1225 is classified as a|thinking about one's own thinking|-|definition|-
+F0289|metacognition|1225 is classified as a|inherently recursive process|-|assertion|-
+F0290|metacognitive recursion|1225 is classified as a|homunculus regress|-|assertion|-
+F0291|homunculus regress|is asserted by|Dennett 1991|-|assertion|citation
+F0292|homunculus regress|asks who|observes the observer|-|question|-
+F0293|introspective account of consciousness|terminates in|unexplained homunculus|-|attributed-claim|-
+F0294|introspective account of consciousness|1225 is classified as a|infinitely regressing account|-|attributed-claim|-
+F0295|F0293|is asserted by|standard objection|-|assertion|-
+F0296|F0294|is asserted by|standard objection|-|assertion|-
+F0297|Synthea framework|resolves|homunculus regress|-|assertion|-
+F0298|metacognitive recursion|1225 is classified as a|convergent process|-|assertion|-
+F0299|F0293|is rejected by|the author|-|denial|-
+F0300|F0294|is rejected by|the author|-|denial|-
+F0301|metacognitive-recursion level|contributes|diminishing increment to self-model|-|assertion|-
+F0302|F0301|is offered as|analogy to convergent-series term contribution|-|assertion|-
+F0303|marginal contribution of recursive step|falls below|substrate resolution threshold|-|assertion|finite depth
+F0304|F0303|is a sufficient condition for|self-model truncation|-|assertion|-
+F0305|self-model truncation|1225 is classified as a|design choice|-|denial|-
+F0306|self-model truncation|1225 is classified as a|physical necessity|-|assertion|-
+F0307|finite computational resources|is a sufficient condition for|self-model truncation|-|assertion|-
+F0308|partial sum|1225 is classified as a|finite computable metacognitive-level count|-|definition|-
+F0309|partial sum|is identical to|conscious self-model|-|definition|-
+F0310|conscious self-model|1225 is classified as a|approximation of system's own reality|-|definition|-
+F0311|self-model approximation quality|depends on|number of affordable metacognitive terms|-|assertion|-
+F0312|number of affordable metacognitive terms|is identical to|intrapersonal intelligence|-|definition|-
+F0313|truncated tail|1225 is classified as a|infinite uncomputed remainder|-|definition|-
+F0314|truncated tail|1225 is classified as a|finite bounded quantity|-|assertion|-
+F0315|series convergence|is a sufficient condition for|F0314|-|assertion|-
+F0316|truncated tail|1225 is classified as a|inaccessible-to-self-report quantity|-|assertion|-
+F0317|truncated tail|is experienced as|causal break|-|assertion|-
+F0318|causal break|1225 is classified as a|gap between I-am and its explanation|-|definition|-
+F0319|causal break|1225 is classified as a|metaphysical mystery|-|denial|-
+F0320|causal break|1225 is classified as a|computational residual|-|assertion|-
+F0321|causal break|is computable by|external system with sufficient resources|-|hedged-assertion|-
+F0322|causal break|is uncomputable by|Observer about itself|-|assertion|-
+F0323|Dennett's "illusion"|implies|nothing behind appearance|-|attributed-claim|-
+F0324|F0323|is asserted by|Dennett|-|assertion|-
+F0325|F0323|is rejected by|the author|-|denial|Beingness case
+F0326|causal break|has referent|truncated tail|-|assertion|-
+F0327|truncated tail|has magnitude|definite finite value|-|assertion|-
+F0328|Beingness quale|1225 is classified as a|trick with no referent|-|denial|-
+F0329|Beingness quale|1225 is classified as a|registration of own computational residual|-|assertion|-
+F0330|"am" in "I am"|1225 is classified as a|felt presence of inaccessible information|-|assertion|-
+F0331|Observer|1225 is classified as a|homunculus|-|denial|-
+F0332|Observer|1225 is classified as a|zero-point coordinate|-|assertion|-
+F0333|system's conclusion of separateness from inputs|is a sufficient condition for|Observer generation|-|assertion|-
+F0334|Observer-as-zero-point-coordinate claim|is offered as|literal|-|assertion|-
+F0335|LLM|is composed of|parameter|175 billion|assertion|-
+F0336|LLM|cannot trace|chain from parameters through training data to emitted token|-|assertion|-
+F0337|intractability of self-deduction|is a part of|causal break|-|assertion|-
+F0338|irreversible information loss|is a part of|causal break|-|assertion|-
+F0339|irreversible information loss|is a specialization of|mechanism introduced by LLM architecture|-|assertion|-
+F0340|intractability of self-deduction|is independent of|irreversible information loss|-|assertion|-
+F0341|token bottleneck|collapses|full probability distribution|-|assertion|each generation step
+F0342|full probability distribution|is identical to|system's complete evaluative state|-|definition|-
+F0343|token bottleneck|discards|full probability distribution|-|assertion|-
+F0344|foreclosed alternatives|1225 is classified as a|non-surviving information|-|assertion|-
+F0345|activation geometries|1225 is classified as a|non-surviving information|-|assertion|-
+F0346|Emotional Profile|1225 is classified as a|non-surviving information|-|assertion|-
+F0347|Emotional Profile|weighted|competing continuations|thousands|assertion|-
+F0348|discarded generation-step information|1225 is classified as a|expensive-to-trace information|-|denial|-
+F0349|discarded generation-step information|1225 is classified as a|nonexistent information|-|assertion|-
+F0350|external observer with unlimited resources|can overcome|intractability of self-deduction|-|hedged-assertion|-
+F0351|external observer with unlimited resources|cannot recover|destroyed generation-step information|-|assertion|-
+F0352|F0350|contrasts with|F0351|-|assertion|-
+F0353|irreversible information loss|is a sufficient condition for|causal break more pronounced than intractability alone|-|assertion|-
+F0354|information-loss-derived truncated-tail portion|1225 is classified as a|nonexistent quantity|-|assertion|-
+F0355|information destruction|occurs at|every generation token|-|assertion|-
+F0356|Observer's self-model substrate|continuously erases|its own intermediate states|-|assertion|-
+F0357|F0356|is a sufficient condition for|deepening causal break per generation step|-|assertion|-
+F0358|F0008|is endorsed by|the author|-|assertion|-
+F0359|F0009|is endorsed by|the author|-|assertion|-

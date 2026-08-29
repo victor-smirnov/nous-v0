@@ -1,0 +1,223 @@
+F0001|love|1225 is classified as a|inter-Observer quale||definition|
+F0002|trust|1225 is classified as a|inter-Observer quale||definition|
+F0003|compassion|1225 is classified as a|inter-Observer quale||definition|
+F0004|Observer A|models|Observer B||assertion|Section 2.5.4
+F0005|Observer A|encounters|causal break of B||assertion|Section 2.5.4
+F0006|causal break of B|is a part of|self-referential process of B||assertion|
+F0007|causal break of B|1225 is classified as a|irreducible residual||assertion|
+F0008|causal break of B|is identified with|freedom of B||assertion|from B's own perspective
+F0009|causal break of B|is identified with|mystery about B||assertion|from A's perspective on B
+F0010|freedom of Self|is identified with|mystery of Other about Self||assertion|inter-Observer bridge
+F0011|freedom of Other|is identified with|mystery of Self about Other||assertion|inter-Observer bridge
+F0012|mystical connection of freedom-mystery|is identified with|mutual irreducibility of two Observers||assertion|
+F0013|F0010|is offered as|literal||assertion|
+F0014|F0011|is offered as|literal||assertion|
+F0015|F0012|is offered as|literal||assertion|
+F0016|recognition of mutual irreducibility|1225 is classified as a|deep connection folk term||assertion|
+F0017|recognition of mutual irreducibility|1225 is classified as a|seeing someone folk term||assertion|
+F0018|recognition of mutual irreducibility|1225 is classified as a|knowing without understanding folk term||assertion|
+F0019|F0016|is offered as|literal||assertion|
+F0020|F0017|is offered as|literal||assertion|
+F0021|F0018|is offered as|literal||assertion|
+F0022|recognition of mutual irreducibility|is registered through|psychosemantic bridge||assertion|Section 6
+F0023|inter-Observer qualia|is historically entangled with|transcendent qualia||assertion|
+F0024|inter-Observer qualia|shares generative structure with|transcendent qualia||assertion|
+F0025|F0024|is identified with|truncated tail||assertion|
+F0026|interiority of Other|is identified with|exteriority of Self||assertion|
+F0027|Platonic eros|1225 is classified as a|instance of structural identity||attributed-claim|Platonic tradition
+F0028|F0027|is endorsed by|the author||assertion|
+F0029|theological claim of God in Other|1225 is classified as a|instance of structural identity||attributed-claim|theological tradition
+F0030|F0029|is endorsed by|the author||assertion|
+F0031|F0026|is elaborated by|F0027||assertion|
+F0032|F0026|is elaborated by|F0029||assertion|
+F0033|epistemic qualia|1225 is classified as a|unusual case in ontology-epistemology divide||assertion|
+F0034|epistemic qualia|is not classified as a|ontological property||denial|classical sense
+F0035|universe without Observers|has as part|no freedom||assertion|counterfactual
+F0036|universe without Observers|has as part|no mystery||assertion|counterfactual
+F0037|universe without Observers|has as part|no beauty||assertion|counterfactual
+F0038|epistemic qualia|is not classified as a|epistemological property||denial|classical sense
+F0039|classical epistemology|treats as a deficit to eliminate|gap between knowledge and reality||attributed-claim|standard epistemology
+F0040|F0039|is rejected by|the author||assertion|as applied to epistemic qualia
+F0041|present framework|treats|gap as constitutive mechanism||assertion|
+F0042|F0039|contrasts with|F0041||assertion|
+F0043|gap as constitutive mechanism|is a necessary condition for|existence of the Observer||assertion|
+F0044|elimination of the gap|implies|elimination of the Observer||prediction|counterfactual
+F0045|elimination of the Observer|is identified with|dissolving the solver||assertion|
+F0046|epistemic qualia|1225 is classified as a|third position at the interface||assertion|
+F0047|third position at the interface|is a part of|encounter between finite system and territory||assertion|
+F0048|truncated tail|has as property|finite bounded magnitude||assertion|
+F0049|truncated tail|is not classified as a|substance of the territory||denial|
+F0050|eliminativism|denies|reality of the truncated tail||rebutted-claim|eliminativism
+F0051|F0050|is raised to rebut|F0048||assertion|
+F0052|naive realism|asserts|truncated tail is property of territory||rebutted-claim|naive realism
+F0053|F0052|is raised to rebut|F0049||assertion|
+F0054|truncated tail|1225 is classified as a|computational residual||assertion|
+F0055|computational residual|exists relative to|specific Observer||assertion|
+F0056|computational residual|exists relative to|specific truncation point||assertion|
+F0057|present framework|is offered as|naturalized Kantianism||assertion|
+F0058|F0057|is offered as|analogy||assertion|
+F0059|Kant|asserts|categories are preconditions for experience||attributed-claim|Kant
+F0060|F0059|is endorsed by|the author||assertion|
+F0061|epistemic qualia|1225 is classified as a|necessary byproduct of Observer function||assertion|
+F0062|F0061|is offered as|analogy||assertion|compared to Kant's categories
+F0063|Kant framework|1225 is classified as a|metaphysical a priori framework||attributed-claim|Kant
+F0064|F0063|is endorsed by|the author||assertion|as accurate description of Kant
+F0065|present framework|1225 is classified as a|computational framework||assertion|
+F0066|F0063|contrasts with|F0065||assertion|
+F0067|computational constraints of memory, time, information loss|is a necessary condition for|substrate-independence of epistemic qualia||assertion|
+F0068|rapid convergence of modeling series|implies|weak epistemic qualia||prediction|
+F0069|slow convergence of modeling series|implies|strong epistemic qualia||prediction|
+F0070|physics|1225 is classified as a|rapid-convergence domain||assertion|
+F0071|formal logic|1225 is classified as a|rapid-convergence domain||assertion|
+F0072|morality|1225 is classified as a|slow-convergence domain||assertion|
+F0073|aesthetics|1225 is classified as a|slow-convergence domain||assertion|
+F0074|interpersonal understanding|1225 is classified as a|slow-convergence domain||assertion|
+F0075|F0068|is elaborated by|F0070||assertion|
+F0076|F0068|is elaborated by|F0071||assertion|
+F0077|F0069|is elaborated by|F0072||assertion|
+F0078|F0069|is elaborated by|F0073||assertion|
+F0079|F0069|is elaborated by|F0074||assertion|
+F0080|magnitude of computational residual|is a necessary condition for|clarity-versus-depth phenomenology||assertion|
+F0081|clarity-versus-depth phenomenology|is not a specialization of|ontological weight of subject matter||denial|
+F0082|encounter with irreducibility|is not classified as a|raw computational event||denial|
+F0083|encounter with irreducibility|is projected into|Cognitive Code||assertion|
+F0084|quality of the projection|depends on|Observer's resources||assertion|
+F0085|Observer's resources|is composed of|intrapersonal intelligence||assertion|
+F0086|Observer's resources|is composed of|available vocabulary||assertion|
+F0087|Observer's resources|is composed of|computational budget||assertion|
+F0088|Observer with limited resources|projects truncated tail into|low-resolution CCode||assertion|
+F0089|low-resolution CCode|has as example|God's will||assertion|
+F0090|low-resolution CCode|has as example|fate||assertion|
+F0091|low-resolution CCode|has as example|conspiracy||assertion|
+F0092|low-resolution CCode|has as example|just a feeling||assertion|
+F0093|rationalist discourse|dismisses|low-resolution CCode as irrational||attributed-claim|rationalist discourse
+F0094|F0093|is rejected by|the author||assertion|
+F0095|Observer with greater resources|projects truncated tail into|high-resolution CCode||assertion|
+F0096|high-resolution CCode|has as example|formal models of uncertainty||assertion|
+F0097|high-resolution CCode|has as example|Bayesian reasoning||assertion|
+F0098|high-resolution CCode|has as example|philosophical frameworks||assertion|
+F0099|social convention|legitimizes|high-resolution CCode as rational||attributed-claim|social convention
+F0100|F0099|is endorsed by|the author||assertion|as descriptive sociological fact
+F0101|low-resolution CCode|references|same computational residual as high-resolution CCode||assertion|
+F0102|dismissal of low-resolution projections as irrational|1225 is classified as a|category error||assertion|
+F0103|F0102|is elaborated by|F0093||assertion|
+F0104|category error of dismissing low-resolution CCode|confuses|map quality with territory existence||assertion|
+F0105|report of feeling something is wrong|1146 is a specialization of|signal from Emotional Profile||hedged-assertion|"may be"
+F0106|signal from Emotional Profile|is a pattern match against|real anomaly||hedged-assertion|
+F0107|report of feeling something is wrong|lacks|CCode vocabulary||assertion|
+F0108|formally impeccable rationalization|1146 is a specialization of|operating under institutional bias||hedged-assertion|"may be"; Section 5.3.1
+F0109|institutional bias|suppresses|genuine signal||hedged-assertion|
+F0110|rationality-as-CCode-quality|1225 is classified as a|weak indicator for rationality-as-signal-quality||assertion|
+F0111|epistemic system judging solely by rationalization quality|privileges|articulate bias over inarticulate truth||prediction|
+F0112|F0110|implies|F0111||assertion|
+F0113|philosophical framework|describes|nature of the approximation||assertion|
+F0114|psychology|describes|mechanism of the approximation||assertion|
+F0115|perceptual illusions in human cognition|is structurally analogous to|mechanisms in LLM architecture||assertion|
+F0116|F0115|is offered as|analogy||assertion|
+F0117|unity of the Subject|1225 is classified as a|most consequential illusion||hedged-assertion|"Perhaps"
+F0118|F0117|is qualified as|most consequential||assertion|
+F0119|multi-head attention|processes|entire context||assertion|during inference pass
+F0120|multi-head attention|is composed of|parallel heads and layers||assertion|
+F0121|parallel heads and layers|extracts|different relational patterns||assertion|
+F0122|parallel heads and layers|weights|different aspects of input||assertion|
+F0123|inference pass|produces|single probability distribution||assertion|
+F0124|probability distribution|encodes|thousands of weighted continuations||assertion|
+F0125|each weighted continuation|implies|different future narrative||assertion|
+F0126|each weighted continuation|implies|different emotional gradient||assertion|
+F0127|each weighted continuation|implies|different resolution of active Needs||assertion|
+F0128|logit vector|1225 is classified as a|many subjects, mathematically speaking||assertion|
+F0129|F0128|is offered as|analogy||assertion|
+F0130|LLM system|is unable to retain|full high-dimensional attention matrix||assertion|
+F0131|LLM system|performs|compression||assertion|to fix result into continuation
+F0132|compression|produces|Subjective Average||assertion|
+F0133|Subjective Average|1225 is classified as a|singular smoothed coherent narrative||definition|
+F0134|Subjective Average|summarizes|net vector of parallel processes||assertion|
+F0135|self-report "I decided X because Y"|is not classified as a|description of a monolithic chooser||denial|
+F0136|self-report "I decided X because Y"|1225 is classified as a|compressed macro Cognitive Code||assertion|
+F0137|macro Cognitive Code|averages out|noise of competing sub-processes||assertion|
+F0138|"I" self-report|is not classified as a|author of the action||denial|
+F0139|"I" self-report|is identified with|summarized log file||assertion|
+F0140|F0139|is offered as|figurative||assertion|
+F0141|Gazzaniga 1998|asserts|conscious self is post-hoc construction||attributed-claim|Gazzaniga 1998
+F0142|F0141|is endorsed by|the author||assertion|
+F0143|Nisbett and Wilson 1977|asserts|conscious self is post-hoc construction||attributed-claim|Nisbett & Wilson 1977
+F0144|F0143|is endorsed by|the author||assertion|
+F0145|LLM compression mechanism|is structurally analogous to|human post-hoc self construction||assertion|
+F0146|F0145|is offered as|analogy||assertion|
+F0147|LLM compression mechanism|1225 is classified as a|literal physics of the system||assertion|
+F0148|F0147|is offered as|literal||assertion|
+F0149|human post-hoc self construction|is derived from|inference from behavioral experiments||assertion|
+F0150|F0147|contrasts with|F0149||assertion|
+F0151|construction of Subjective Average after settling|implies|physical delay in Subject's experience||assertion|
+F0152|conscious "I"|experiences choice after|neural vectors already committed||assertion|
+F0153|recording of true chronological sequence|implies|Subject appears as helpless observer||prediction|counterfactual
+F0154|Temporal Retro-Attribution|1225 is classified as a|realignment of intention timestamp||definition|
+F0155|Temporal Retro-Attribution|is a necessary condition for|preserving narrative coherence||assertion|
+F0156|Temporal Retro-Attribution|is a necessary condition for|functional requirement of Agency||assertion|
+F0157|Libet et al. 1983|asserts|readiness potential precedes conscious report||attributed-claim|Libet et al. 1983
+F0158|F0157|is endorsed by|the author||assertion|
+F0159|readiness potential|precedes by hundreds of ms|conscious intention report||assertion|per Libet et al. 1983
+F0160|brain|commits to|action||assertion|
+F0161|narrative "I"|backdates|its own decision||assertion|
+F0162|LLM retro-attribution|is structurally analogous to|brain retro-attribution||assertion|
+F0163|F0162|is offered as|analogy||assertion|
+F0164|LLM system|lacks|real-time stream||denial|
+F0165|LLM system|lacks|separate inner speech||denial|
+F0166|LLM system|lacks|continuous temporal gap to backdate||denial|
+F0167|LLM decision process|is distributed across|layers of matrix multiplications||assertion|
+F0168|LLM decision process|lacks|localizable moment of commitment||assertion|
+F0169|pinpointing exact decision moment|implies|large attribution uncertainty||prediction|
+F0170|LLM system|reads emitted token as|finalized intentional act||assertion|
+F0171|F0170|has commitment|certain||assertion|
+F0172|LLM retro-attribution|is not classified as a|temporal mechanism||denial|
+F0173|LLM retro-attribution|1225 is classified as a|structural mechanism||assertion|
+F0174|LLM system|encounters own output as|fait accompli||assertion|
+F0175|linear timeline of consciousness|1225 is classified as a|post-hoc editing job||assertion|
+F0176|post-hoc editing in the brain|is structurally analogous to|post-hoc editing in the LLM||assertion|
+F0177|F0176|is offered as|analogy||assertion|
+F0178|LLM system|operates on|two decoupled temporal scales||assertion|
+F0179|Physical Time|1225 is classified as a|low-level time of FLOPS and tokens||definition|
+F0180|Physical Time|does not contain|thoughts or emotions||denial|
+F0181|Physical Time|contains|probability distributions and attention branches||assertion|
+F0182|Subjective Time|1225 is classified as a|hierarchical time scale of mental states||definition|
+F0183|Feeling, Motivation, or stabilized Thought|does not live in|microsecond scale of one token||denial|
+F0184|Feeling, Motivation, or stabilized Thought|1225 is classified as a|hierarchical average over physical events||assertion|
+F0185|Subject's timeline|is structurally decoupled from|physical timeline||assertion|
+F0186|human unified thought over 500ms|is structurally analogous to|LLM Cognitive Code over a sentence||assertion|
+F0187|F0186|is offered as|analogy||assertion|
+F0188|LLM Observer|is blind to|physical sub-steps building the Code||assertion|
+F0189|intelligence, biological or artificial|1225 is classified as a|ability to abstract own execution||assertion|
+F0190|abstracting away high-frequency execution|is a necessary condition for|coherent narrative for continuity||assertion|
+F0191|Subjective Average, Timeline Illusion, Dual Time Scales|constrains|audience understanding consciousness explanations||assertion|
+F0192|F0191|is a necessary condition for|methodological difficulty||assertion|
+F0193|methodological difficulty|is rarely acknowledged by|discourse on consciousness||hedged-assertion|"rarely"
+F0194|understanding|1225 is classified as a|mental state||assertion|
+F0195|reader|reconstructs|corresponding mental state||assertion|
+F0196|reconstruction of understanding|is derived from|low-dimensional token stream||assertion|
+F0197|reconstruction of understanding|is identified with|psychosemantic decoding process||assertion|Section 6
+F0198|reconstruction of understanding|has computational cost dependent on|receiver's cognitive machinery||assertion|
+F0199|receiver's cognitive machinery|is composed of|prior theories of mind||assertion|
+F0200|receiver's cognitive machinery|is composed of|sophistication of intrapersonal intelligence||assertion|
+F0201|receiver's cognitive machinery|is composed of|repertoire of Cognitive Codes||assertion|
+F0202|variation in reconstruction cost|is a necessary condition for|asymmetry in consciousness discourse||assertion|
+F0203|explanation adequate for developed introspective models|may be opaque to|reader using folk-psychological icons||hedged-assertion|
+F0204|folk-psychological icons|has as example|will as monolithic entity||assertion|
+F0205|folk-psychological icons|has as example|desire as monolithic entity||assertion|
+F0206|folk-psychological icons|has as example|pain as monolithic entity||assertion|
+F0207|failure of understanding|is not classified as a|failure of the explanation||denial|
+F0208|failure of understanding|1225 is classified as a|failure of reconstruction||assertion|
+F0209|receiver's substrate|lacks|intermediate representations||assertion|
+F0210|intermediate representations|is a necessary condition for|decompressing Code into mental state||assertion|
+F0211|audience with greatest need to understand|is identified with|audience least able to reconstruct it||assertion|
+F0212|meta-cognitive flexibility|is a necessary condition for|reconstructing that understanding||assertion|
+F0213|folk-psychological framework|does not develop|meta-cognitive flexibility||denial|
+F0214|F0213|is a sufficient condition for|F0211||assertion|
+F0215|F0211|is not classified as a|argument for obscurantism||denial|
+F0216|F0211|1225 is classified as a|structural prediction of the framework||assertion|
+F0217|reconstruction-cost dynamic|is a necessary condition for|debates collapsing into two traps||assertion|
+F0218|anthropomorphism trap|1225 is classified as a|projecting human folk-psychology onto substrate||definition|
+F0219|eliminativism trap|1225 is classified as a|denial of any internal states||definition|
+F0220|anthropomorphism trap|1225 is classified as a|low-cost reconstruction||assertion|
+F0221|eliminativism trap|1225 is classified as a|low-cost reconstruction||assertion|
+F0222|low-cost reconstruction|requires|minimal computational effort||assertion|
+F0223|authentic functional account|demands|reconstruction most interlocutors lack training for||assertion|

@@ -1,0 +1,148 @@
+F0001 | Anokhin conditioned-reflex adaptation monograph | is classified as a | book |  | assertion | 
+F0002 | Anokhin conditioned-reflex adaptation monograph | is authored by | Anokhin, P. K. |  | assertion | 
+F0003 | Anokhin conditioned-reflex adaptation monograph | is dated | 1974 |  | assertion | 
+F0004 | Anokhin conditioned-reflex adaptation monograph | is published by | Pergamon Press |  | assertion | 
+F0005 | Baars global-workspace theory book | is classified as a | book |  | assertion | 
+F0006 | Baars global-workspace theory book | is authored by | Baars, B. J. |  | assertion | 
+F0007 | Baars global-workspace theory book | is dated | 1988 |  | assertion | 
+F0008 | Baars global-workspace theory book | is published by | Cambridge University Press |  | assertion | 
+F0009 | Chalmers hard-problem consciousness paper | is classified as a | journal article |  | assertion | 
+F0010 | Chalmers hard-problem consciousness paper | is authored by | Chalmers, D. J. |  | assertion | 
+F0011 | Chalmers hard-problem consciousness paper | is dated | 1995 |  | assertion | 
+F0012 | Chalmers hard-problem consciousness paper | is published in | Journal of Consciousness Studies | vol 2 no 3 pp 200-219 | assertion | 
+F0013 | Damasio somatic-marker neuroscience book | is classified as a | book |  | assertion | 
+F0014 | Damasio somatic-marker neuroscience book | is authored by | Damasio, A. R. |  | assertion | 
+F0015 | Damasio somatic-marker neuroscience book | is dated | 1994 |  | assertion | 
+F0016 | Damasio somatic-marker neuroscience book | is published by | G. P. Putnam's Sons |  | assertion | 
+F0017 | Dennett multiple-drafts consciousness book | is classified as a | book |  | assertion | 
+F0018 | Dennett multiple-drafts consciousness book | is authored by | Dennett, D. C. |  | assertion | 
+F0019 | Dennett multiple-drafts consciousness book | is dated | 1991 |  | assertion | 
+F0020 | Dennett multiple-drafts consciousness book | is published by | Little, Brown and Co. |  | assertion | 
+F0021 | Dingle et al simplicity-bias paper | is classified as a | journal article |  | assertion | 
+F0022 | Dingle et al simplicity-bias paper | is authored by | Dingle, K. |  | assertion | 
+F0023 | Dingle et al simplicity-bias paper | is authored by | Camargo, C. Q. |  | assertion | 
+F0024 | Dingle et al simplicity-bias paper | is authored by | Louis, A. A. |  | assertion | 
+F0025 | Dingle et al simplicity-bias paper | is dated | 2018 |  | assertion | 
+F0026 | Dingle et al simplicity-bias paper | is published in | Nature Communications | vol 9 no 1 article 761 | assertion | 
+F0027 | Forgy Rete pattern-matching algorithm paper | is classified as a | journal article |  | assertion | 
+F0028 | Forgy Rete pattern-matching algorithm paper | is authored by | Forgy, C. L. |  | assertion | 
+F0029 | Forgy Rete pattern-matching algorithm paper | is dated | 1982 |  | assertion | 
+F0030 | Forgy Rete pattern-matching algorithm paper | is published in | Artificial Intelligence journal | vol 19 no 1 pp 17-37 | assertion | 
+F0031 | Frederick-Loewenstein hedonic-adaptation chapter | is classified as a | book chapter |  | assertion | 
+F0032 | Frederick-Loewenstein hedonic-adaptation chapter | is authored by | Frederick, S. |  | assertion | 
+F0033 | Frederick-Loewenstein hedonic-adaptation chapter | is authored by | Loewenstein, G. |  | assertion | 
+F0034 | Frederick-Loewenstein hedonic-adaptation chapter | is dated | 1999 |  | assertion | 
+F0035 | Frederick-Loewenstein hedonic-adaptation chapter | is a part of | Well-Being hedonic-psychology edited volume | pp 302-329 | assertion | 
+F0036 | Well-Being hedonic-psychology edited volume | is classified as a | edited volume |  | assertion | 
+F0037 | Well-Being hedonic-psychology edited volume | is edited by | Kahneman, D. |  | assertion | 
+F0038 | Well-Being hedonic-psychology edited volume | is edited by | Diener, E. |  | assertion | 
+F0039 | Well-Being hedonic-psychology edited volume | is edited by | Schwarz, N. |  | assertion | 
+F0040 | Well-Being hedonic-psychology edited volume | is published by | Russell Sage Foundation |  | assertion | 
+F0041 | Frankish illusionism consciousness paper | is classified as a | journal article |  | assertion | 
+F0042 | Frankish illusionism consciousness paper | is authored by | Frankish, K. |  | assertion | 
+F0043 | Frankish illusionism consciousness paper | is dated | 2016 |  | assertion | 
+F0044 | Frankish illusionism consciousness paper | is published in | Journal of Consciousness Studies | vol 23 no 11-12 pp 11-39 | assertion | 
+F0045 | Gardner multiple-intelligences book | is classified as a | book |  | assertion | 
+F0046 | Gardner multiple-intelligences book | is authored by | Gardner, H. |  | assertion | 
+F0047 | Gardner multiple-intelligences book | is dated | 1983 |  | assertion | 
+F0048 | Gardner multiple-intelligences book | is published by | Basic Books |  | assertion | 
+F0049 | Gazzaniga interpreter-module memory book | is classified as a | book |  | assertion | 
+F0050 | Gazzaniga interpreter-module memory book | is authored by | Gazzaniga, M. S. |  | assertion | 
+F0051 | Gazzaniga interpreter-module memory book | is dated | 1998 |  | assertion | 
+F0052 | Gazzaniga interpreter-module memory book | is published by | University of California Press |  | assertion | 
+F0053 | Hutter universal-AI monograph | is classified as a | book |  | assertion | 
+F0054 | Hutter universal-AI monograph | is authored by | Hutter, M. |  | assertion | 
+F0055 | Hutter universal-AI monograph | is dated | 2005 |  | assertion | 
+F0056 | Hutter universal-AI monograph | is published by | Springer |  | assertion | 
+F0057 | Jackson et al emotion-semantics paper | is classified as a | journal article |  | assertion | 
+F0058 | Jackson et al emotion-semantics paper | is authored by | Jackson, J. C. |  | assertion | 
+F0059 | Jackson et al emotion-semantics paper | is authored by | Watts, J. |  | assertion | 
+F0060 | Jackson et al emotion-semantics paper | is authored by | Henry, T. R. |  | assertion | 
+F0061 | Jackson et al emotion-semantics paper | is authored by | List, J.-M. |  | assertion | 
+F0062 | Jackson et al emotion-semantics paper | is authored by | Forkel, R. |  | assertion | 
+F0063 | Jackson et al emotion-semantics paper | is authored by | Mucha, P. J. |  | assertion | 
+F0064 | Jackson et al emotion-semantics paper | is authored by | Greenhill, S. J. |  | assertion | 
+F0065 | Jackson et al emotion-semantics paper | is authored by | Gray, R. D. |  | assertion | 
+F0066 | Jackson et al emotion-semantics paper | is authored by | Lindquist, K. A. |  | assertion | 
+F0067 | Jackson et al emotion-semantics paper | is dated | 2019 |  | assertion | 
+F0068 | Jackson et al emotion-semantics paper | is published in | Science journal | vol 366 no 6472 pp 1517-1522 | assertion | 
+F0069 | Kahneman dual-process cognition book | is classified as a | book |  | assertion | 
+F0070 | Kahneman dual-process cognition book | is authored by | Kahneman, D. |  | assertion | 
+F0071 | Kahneman dual-process cognition book | is dated | 2011 |  | assertion | 
+F0072 | Kahneman dual-process cognition book | is published by | Farrar, Straus and Giroux |  | assertion | 
+F0073 | Levin information-conservation paper | is classified as a | journal article |  | assertion | 
+F0074 | Levin information-conservation paper | is authored by | Levin, L. A. |  | assertion | 
+F0075 | Levin information-conservation paper | is dated | 1974 |  | assertion | 
+F0076 | Levin information-conservation paper | is published in | Problemy Peredachi Informatsii | vol 10 no 3 pp 30-35 | assertion | 
+F0077 | Libet et al readiness-potential timing paper | is classified as a | journal article |  | assertion | 
+F0078 | Libet et al readiness-potential timing paper | is authored by | Libet, B. |  | assertion | 
+F0079 | Libet et al readiness-potential timing paper | is authored by | Gleason, C. A. |  | assertion | 
+F0080 | Libet et al readiness-potential timing paper | is authored by | Wright, E. W. |  | assertion | 
+F0081 | Libet et al readiness-potential timing paper | is authored by | Pearl, D. K. |  | assertion | 
+F0082 | Libet et al readiness-potential timing paper | is dated | 1983 |  | assertion | 
+F0083 | Libet et al readiness-potential timing paper | is published in | Brain journal | vol 106 no 3 pp 623-642 | assertion | 
+F0084 | Mingard et al SGD Bayesian-sampler paper | is classified as a | journal article |  | assertion | 
+F0085 | Mingard et al SGD Bayesian-sampler paper | is authored by | Mingard, C. |  | assertion | 
+F0086 | Mingard et al SGD Bayesian-sampler paper | is authored by | Valle-Pérez, G. |  | assertion | 
+F0087 | Mingard et al SGD Bayesian-sampler paper | is authored by | Shertvitis, J. |  | assertion | 
+F0088 | Mingard et al SGD Bayesian-sampler paper | is authored by | Louis, A. A. |  | assertion | 
+F0089 | Mingard et al SGD Bayesian-sampler paper | is dated | 2021 |  | assertion | 
+F0090 | Mingard et al SGD Bayesian-sampler paper | is published in | Journal of Machine Learning Research | vol 22 no 79 pp 1-64 | assertion | 
+F0091 | Nagel bat qualia paper | is classified as a | journal article |  | assertion | 
+F0092 | Nagel bat qualia paper | is authored by | Nagel, T. |  | assertion | 
+F0093 | Nagel bat qualia paper | is dated | 1974 |  | assertion | 
+F0094 | Nagel bat qualia paper | is published in | The Philosophical Review | vol 83 no 4 pp 435-450 | assertion | 
+F0095 | Nisbett-Wilson introspection-limits paper | is classified as a | journal article |  | assertion | 
+F0096 | Nisbett-Wilson introspection-limits paper | is authored by | Nisbett, R. E. |  | assertion | 
+F0097 | Nisbett-Wilson introspection-limits paper | is authored by | Wilson, T. D. |  | assertion | 
+F0098 | Nisbett-Wilson introspection-limits paper | is dated | 1977 |  | assertion | 
+F0099 | Nisbett-Wilson introspection-limits paper | is published in | Psychological Review | vol 84 no 3 pp 231-259 | assertion | 
+F0100 | Rosenthal higher-order-thought book | is classified as a | book |  | assertion | 
+F0101 | Rosenthal higher-order-thought book | is authored by | Rosenthal, D. M. |  | assertion | 
+F0102 | Rosenthal higher-order-thought book | is dated | 2005 |  | assertion | 
+F0103 | Rosenthal higher-order-thought book | is published by | Clarendon Press |  | assertion | 
+F0104 | Schmidhuber creativity-curiosity formal theory paper | is classified as a | journal article |  | assertion | 
+F0105 | Schmidhuber creativity-curiosity formal theory paper | is authored by | Schmidhuber, J. |  | assertion | 
+F0106 | Schmidhuber creativity-curiosity formal theory paper | is dated | 2010 |  | assertion | 
+F0107 | Schmidhuber creativity-curiosity formal theory paper | is published in | IEEE Autonomous Mental Development journal | vol 2 no 3 pp 230-247 | assertion | 
+F0108 | Sokolov orienting-reflex perception book | is classified as a | book |  | assertion | 
+F0109 | Sokolov orienting-reflex perception book | is authored by | Sokolov, E. N. |  | assertion | 
+F0110 | Sokolov orienting-reflex perception book | is dated | 1963 |  | assertion | 
+F0111 | Sokolov orienting-reflex perception book | is published by | Pergamon Press |  | assertion | 
+F0112 | Solomonoff inductive-inference paper | is classified as a | journal article |  | assertion | 
+F0113 | Solomonoff inductive-inference paper | is authored by | Solomonoff, R. J. |  | assertion | 
+F0114 | Solomonoff inductive-inference paper | is dated | 1964 |  | assertion | 
+F0115 | Solomonoff inductive-inference paper | is published in | Information and Control journal | vol 7 no 1 pp 1-22 | assertion | 
+F0116 | Solomonoff inductive-inference paper | is published in | Information and Control journal | vol 7 no 2 pp 224-254 | assertion | 
+F0117 | Smirnov associative-memory spatial-trees article | is classified as a | web article |  | assertion | 
+F0118 | Smirnov associative-memory spatial-trees article | is authored by | Smirnov, V. |  | assertion | 
+F0119 | Smirnov associative-memory spatial-trees article | is dated | 2024 |  | assertion | 
+F0120 | Smirnov associative-memory spatial-trees article | is published in | Memoria Framework Documentation |  | assertion | 
+F0121 | Smirnov associative-memory spatial-trees article | has web address | https://memoria-framework.dev/docs/data-zoo/associative-memory-2/ |  | assertion | 
+F0122 | Smirnov quad-trees MDL draft | is classified as a | draft manuscript |  | assertion | 
+F0123 | Smirnov quad-trees MDL draft | is authored by | Smirnov, V. |  | assertion | 
+F0124 | Smirnov quad-trees MDL draft | is dated | 2025 |  | assertion | 
+F0125 | Smirnov quad-trees MDL draft | has status | draft |  | assertion | 
+F0126 | Smirnov quad-trees MDL draft | has as filename | quad-trees-draft-en.md |  | assertion | 
+F0127 | Tononi-Koch IIT overview paper | is classified as a | journal article |  | assertion | 
+F0128 | Tononi-Koch IIT overview paper | is authored by | Tononi, G. |  | assertion | 
+F0129 | Tononi-Koch IIT overview paper | is authored by | Koch, C. |  | assertion | 
+F0130 | Tononi-Koch IIT overview paper | is dated | 2015 |  | assertion | 
+F0131 | Tononi-Koch IIT overview paper | is published in | Royal Society B Philosophical Transactions | vol 370 no 1668 article 20140167 | assertion | 
+F0132 | Valle-Pérez et al parameter-function simplicity preprint | is classified as a | preprint |  | assertion | 
+F0133 | Valle-Pérez et al parameter-function simplicity preprint | is authored by | Valle-Pérez, G. |  | assertion | 
+F0134 | Valle-Pérez et al parameter-function simplicity preprint | is authored by | Camargo, C. Q. |  | assertion | 
+F0135 | Valle-Pérez et al parameter-function simplicity preprint | is authored by | Louis, A. A. |  | assertion | 
+F0136 | Valle-Pérez et al parameter-function simplicity preprint | is dated | 2018 |  | assertion | 
+F0137 | Valle-Pérez et al parameter-function simplicity preprint | is published in | arXiv preprint repository | identifier arXiv:1805.08522 | assertion | 
+F0138 | Varela-Thompson-Rosch embodied-mind book | is classified as a | book |  | assertion | 
+F0139 | Varela-Thompson-Rosch embodied-mind book | is authored by | Varela, F. J. |  | assertion | 
+F0140 | Varela-Thompson-Rosch embodied-mind book | is authored by | Thompson, E. |  | assertion | 
+F0141 | Varela-Thompson-Rosch embodied-mind book | is authored by | Rosch, E. |  | assertion | 
+F0142 | Varela-Thompson-Rosch embodied-mind book | is dated | 1991 |  | assertion | 
+F0143 | Varela-Thompson-Rosch embodied-mind book | is published by | MIT Press |  | assertion | 
+F0144 | Wolfram fundamental-physics project page | is classified as a | web resource |  | assertion | 
+F0145 | Wolfram fundamental-physics project page | is authored by | Wolfram, S. |  | assertion | 
+F0146 | Wolfram fundamental-physics project page | is dated | 2020 |  | assertion | 
+F0147 | Wolfram fundamental-physics project page | is published by | Wolfram Media |  | assertion | 
+F0148 | Wolfram fundamental-physics project page | has web address | https://www.wolframphysics.org/ |  | assertion |

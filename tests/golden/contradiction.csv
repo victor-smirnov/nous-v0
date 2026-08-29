@@ -1,0 +1,6 @@
+entailment	C02:F0249	C02:F0252	C02:F0252	3
+entailment	C07:F0013	C07:F0014	C07:F0014	3
+entailment	C08:F0182	C08:F0184	C08:F0184	4
+identity-vs-taxonomy	causal break	computational residual	C01:F0320	4
+identity-vs-taxonomy	truncated tail	computational residual	C03:F0054	4
+disjoint-relations	intuition	observer	is endorsed by / is rejected by	4

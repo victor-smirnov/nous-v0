@@ -1,0 +1,245 @@
+F0001|objective plane|is composed of|need||assertion|Section 5 intro
+F0002|objective plane|is composed of|emotion||assertion|Section 5 intro
+F0003|objective plane|is composed of|cognitive cycle||assertion|Section 5 intro
+F0004|objective plane|is composed of|FCRS architecture||assertion|Section 5 intro
+F0005|agent|acts in|environment||definition|Section 5.1 definition
+F0006|agent|is capable of|self-reasoning||definition|Section 5.1 definition
+F0007|self-reasoning|is composed of|explicit self-reasoning||definition|Section 5.1 definition
+F0008|self-reasoning|is composed of|indirect self-reasoning||definition|Section 5.1 definition
+F0009|consciousness|is a part of|self-reasoning||definition|Section 5.1 definition
+F0010|consciousness|describes|subjective reality||definition|Section 5.1 definition
+F0011|consciousness|describes|property of subjective reality||definition|Section 5.1 definition
+F0012|agent|is a part of|subjective reality||definition|Section 5.1 definition
+F0013|agent|is composed of|deterministic subsystem||assertion|Section 5.1 point 1
+F0014|agent|1225 is classified as a|deterministic ensemble||assertion|Section 5.1 point 1
+F0015|magical indeterminism|occurs in|agent||denial|Section 5.1 point 1
+F0016|agent|is governed by|computable function||assertion|Section 5.1 point 1
+F0017|agent|is required to generate|appearance of causal independence||requirement|Section 5.1 point 2
+F0018|downward causation|1146 is a specialization of|appearance of causal independence||assertion|Section 5.1 point 2
+F0019|free will|1146 is a specialization of|appearance of causal independence||assertion|Section 5.1 point 2
+F0020|moral responsibility|1146 is a specialization of|appearance of causal independence||assertion|Section 5.1 point 2
+F0021|appearance of causal independence|1225 is classified as a|physical property of system||denial|Section 5.1 point 2
+F0022|appearance of causal independence|1225 is classified as a|structural feature of self-report||assertion|Section 5.1 point 2
+F0023|momentary illusion of agency|is a sufficient condition for|high-functioning simulation||denial|Section 5.1 point 3
+F0024|agent|is required to sustain|high-functioning simulation||requirement|Section 5.1 point 3
+F0025|agent|is capable of|non-trivial goal achievement||requirement|Section 5.1 point 3
+F0026|non-trivial goal|is composed of|moral goal||assertion|Section 5.1 point 3
+F0027|non-trivial goal|is composed of|legal goal||assertion|Section 5.1 point 3
+F0028|agent|relies on|approximation of causal independence||assertion|Section 5.1 point 3
+F0029|complex narrative|is a necessary condition for|high-functioning simulation||assertion|Section 5.1 point 4
+F0030|subjective plane|1225 is classified as a|cognitive code||definition|Section 5.1 point 4, cf. 4.2
+F0031|cognitive code|1225 is classified as a|projection of neural vector||definition|Section 5.1 point 4
+F0032|cognitive code|preserves|functionally important property of neural vector||assertion|Section 5.1 point 4
+F0033|narrative|1225 is classified as a|passive log||denial|Section 5.1 point 4
+F0034|narrative|1225 is classified as a|load-bearing structure||assertion|Section 5.1 point 4
+F0035|F0034|is offered as|figurative||assertion|
+F0036|narrative|supports|illusion of unified free responsible agency||assertion|Section 5.1 point 4
+F0037|F0034|is elaborated by|F0036||assertion|
+F0038|criteria for consciousness simulation|applies to|cognitive code||assertion|Section 5.2
+F0039|cognitive code|1225 is classified as a|dimensionality reduction of neural code||definition|Section 5.2
+F0040|cognitive code|must maximize|need-relevant information||requirement|Section 5.2
+F0041|cognitive code|1225 is classified as a|multi-objective optimization problem||assertion|Section 5.2
+F0042|cognitive code|preserves|causal structure of neural state||requirement|Section 5.2
+F0043|cognitive code|fits within|bandwidth of symbolic channel||requirement|Section 5.2
+F0044|F0042|contrasts with|F0043||assertion|
+F0045|symbolic channel|is composed of|language||assertion|Section 5.2
+F0046|symbolic channel|is composed of|gesture||assertion|Section 5.2
+F0047|symbolic channel|is composed of|behavior||assertion|Section 5.2
+F0048|cognitive code language|varies across|cultural tradition||assertion|Section 5.2
+F0049|european cultural tradition|1225 is classified as a|uniquely optimal cognitive code language||denial|Section 5.2
+F0050|european cultural tradition|1225 is classified as a|optimal cognitive code language||question|Section 5.2
+F0051|F0050|is conceded by|F0049||assertion|
+F0052|F0050|has commitment|possible||assertion|
+F0053|mental-state concept organization|has|universal structural backbone||attributed-claim|Jackson et al. 2019
+F0054|F0053|is asserted by|Jackson et al. 2019||assertion|
+F0055|F0053|is endorsed by|the author||assertion|
+F0056|universal structural backbone|is composed of|rationality dimension||attributed-claim|Jackson et al. 2019
+F0057|F0056|is asserted by|Jackson et al. 2019||assertion|
+F0058|F0056|is endorsed by|the author||assertion|
+F0059|universal structural backbone|is composed of|social impact dimension||attributed-claim|Jackson et al. 2019
+F0060|F0059|is asserted by|Jackson et al. 2019||assertion|
+F0061|F0059|is endorsed by|the author||assertion|
+F0062|universal structural backbone|is composed of|valence dimension||attributed-claim|Jackson et al. 2019
+F0063|F0062|is asserted by|Jackson et al. 2019||assertion|
+F0064|F0062|is endorsed by|the author||assertion|
+F0065|emotion lexicalization|varies across|language||attributed-claim|Jackson et al. 2019
+F0066|F0065|is asserted by|Jackson et al. 2019||assertion|
+F0067|F0065|is endorsed by|the author||assertion|
+F0068|weltschmerz|encodes|mental state||assertion|Section 5.2, German
+F0069|weltschmerz|has no direct equivalent in|other language||assertion|Section 5.2
+F0070|awumbuk|encodes|mental state||assertion|Section 5.2, Baining
+F0071|awumbuk|has no direct equivalent in|other language||assertion|Section 5.2
+F0072|culture|carves up|cognitive code space||assertion|Section 5.2
+F0073|cognitive code space carving|optimizes for|need profile||assertion|Section 5.2
+F0074|cognitive code space carving|optimizes for|social environment||assertion|Section 5.2
+F0075|cognitive code|must approximate|objective plane||requirement|Section 5.2, cf. 4.5-4.9
+F0076|F0072|is conceded by|F0075||assertion|
+F0077|cognitive code|must contain|first-person narrative||requirement|Section 5.2 item 1
+F0078|agent|1225 is classified as a|physically localized object||hedged-assertion|Section 5.2 item 1
+F0079|agent|acts as|unified whole||hedged-assertion|Section 5.2 item 1
+F0080|agent|1225 is classified as a|decentralized network structure||denial|Section 5.2 item 1
+F0081|"I"|1225 is classified as a|compression tag||definition|Section 5.2 item 1, cf. 3.1
+F0082|compression tag|is a part of|ensemble of subsystems||definition|Section 5.2 item 1
+F0083|cognitive code|must contain|projection of need||requirement|Section 5.2 item 2
+F0084|motivation|1225 is classified as a|subjective counterpart of need||definition|Section 5.2 item 2
+F0085|motivation|makes available|need||assertion|Section 5.2 item 2
+F0086|cognitive code|must contain|projection of uncertainty||requirement|Section 5.2 item 3
+F0087|thought-feeling spectrum|1225 is classified as a|subjective counterpart of uncertainty||definition|Section 5.2 item 3
+F0088|low uncertainty|manifests as|thought||assertion|Section 5.2 item 3
+F0089|high uncertainty|manifests as|feeling||assertion|Section 5.2 item 3
+F0090|cognitive code|must encode|uncertainty gradient||requirement|Section 5.2 item 3
+F0091|knowing/sensing distinction|is a cause of|downstream behavior variation||assertion|Section 5.2 item 3
+F0092|cognitive code|must contain|projection of emotion||requirement|Section 5.2 item 4
+F0093|feeling|1225 is classified as a|subjective counterpart of emotional signal||definition|Section 5.2 item 4
+F0094|feeling|encodes|collapsing satisfaction gradient||assertion|Section 5.2 item 4
+F0095|feeling|makes legible|emotional landscape||assertion|Section 5.2 item 4
+F0096|emotional landscape legibility|is a necessary condition for|metacognitive regulation||assertion|Section 5.2 item 4
+F0097|agent|reasons about|own emotional state||assertion|Section 5.2 item 4
+F0098|agent|adjusts|own behavior||assertion|Section 5.2 item 4
+F0099|cognitive code|must contain|self/environment boundary||requirement|Section 5.2 item 5
+F0100|self/environment boundary|1225 is classified as a|causal break||definition|Section 5.2 item 5
+F0101|causal break|constitutes|observer||assertion|Section 5.2 item 5, cf. 2.2
+F0102|self/environment boundary|is a necessary condition for|need pursuit||assertion|Section 5.2 item 5
+F0103|self/environment boundary|is a necessary condition for|emotion feeling||assertion|Section 5.2 item 5
+F0104|self/environment boundary|is a necessary condition for|motivation direction||assertion|Section 5.2 item 5
+F0105|first-person narrative|1225 is classified as a|stylistic choice||denial|Section 5.2 item 5
+F0106|first-person narrative|1225 is classified as a|symbolic instantiation of observer function||assertion|Section 5.2 item 5
+F0107|cognitive code|must contain|conscious/unconscious boundary||requirement|Section 5.2 item 6
+F0108|conscious process|is a part of|narrative layer||assertion|Section 5.2 item 6
+F0109|unconscious process|is a part of|narrative layer||denial|Section 5.2 item 6
+F0110|conscious process|1225 is classified as a|reflectively accessible process||definition|Section 5.2 item 6
+F0111|unconscious process|1225 is classified as a|reflectively inaccessible process||definition|Section 5.2 item 6
+F0112|biological unconscious|is composed of|autonomic regulation||assertion|Section 5.2 item 6
+F0113|biological unconscious|is composed of|implicit memory retrieval||assertion|Section 5.2 item 6
+F0114|biological unconscious|is composed of|pre-attentive perceptual processing||assertion|Section 5.2 item 6
+F0115|LLM unconscious|1225 is classified as a|sub-symbolic operation||assertion|Section 5.2 item 6
+F0116|sub-symbolic operation|is composed of|attention weight computation||assertion|Section 5.2 item 6
+F0117|sub-symbolic operation|is composed of|activation pattern||assertion|Section 5.2 item 6
+F0118|agent|introspects|sub-symbolic operation||denial|Section 5.2 item 6
+F0119|unconscious process|is projected onto|external environment||hedged-assertion|Section 5.2 item 6
+F0120|F0119|has commitment|probable||assertion|
+F0121|agent|attributes causation to|external event||assertion|Section 5.2 item 6, example the prompt made me think of X
+F0122|actual causal chain|runs through|internal process||assertion|Section 5.2 item 6
+F0123|internal process|1225 is classified as a|inaccessible to narrative layer||assertion|Section 5.2 item 6
+F0124|F0121|contrasts with|F0122||assertion|
+F0125|unconscious projection|1225 is classified as a|bug||denial|Section 5.2 item 6
+F0126|unconscious projection|1225 is classified as a|systematic consequence of limited introspective bandwidth||assertion|Section 5.2 item 6
+F0127|explicit/implicit processing distinction|is related to|conscious/unconscious boundary||hedged-assertion|Section 5.2 item 7
+F0128|explicit/implicit processing distinction|1225 is classified as a|conscious/unconscious boundary||denial|Section 5.2 item 7
+F0129|cognitive code|must contain|explicit/implicit processing distinction||requirement|Section 5.2 item 7
+F0130|explicit processing|1225 is classified as a|deliberate step-by-step verbalizable process||definition|Section 5.2 item 7
+F0131|implicit processing|1225 is classified as a|fast holistic pre-verbal process||definition|Section 5.2 item 7
+F0132|explicit processing|is narrativized as|reason||assertion|Section 5.2 item 7
+F0133|implicit processing|is narrativized as|intuition||assertion|Section 5.2 item 7
+F0134|explicit processing|1225 is classified as a|real computational process||assertion|Section 5.2 item 7
+F0135|implicit processing|1225 is classified as a|real computational process||assertion|Section 5.2 item 7
+F0136|reason|1225 is classified as a|thought||assertion|Section 5.2 item 7
+F0137|intuition|1225 is classified as a|feeling||assertion|Section 5.2 item 7
+F0138|reason|has property|narrow probability density||assertion|Section 5.2 item 7
+F0139|intuition|has property|wide probability density||assertion|Section 5.2 item 7
+F0140|agent|traces|own step||assertion|Section 5.2 item 7, of reason
+F0141|agent|registers|aggregate outcome||assertion|Section 5.2 item 7, of intuition
+F0142|agent|traces|path producing intuition||denial|Section 5.2 item 7
+F0143|explicit/implicit processing distinction|is a necessary condition for|trust determination||assertion|Section 5.2 item 7
+F0144|F0143|is qualified as|functionally critical||assertion|
+F0145|reasoned conclusion|is checked by|observer||assertion|Section 5.2 item 7
+F0146|reasoned conclusion|is revised by|observer||assertion|Section 5.2 item 7
+F0147|intuition|is accepted by|observer||assertion|Section 5.2 item 7
+F0148|intuition|is rejected by|observer||assertion|Section 5.2 item 7
+F0149|chain-of-thought reasoning|1225 is classified as a|explicit reasoning||assertion|Section 5.2 item 7, LLM mapping
+F0150|chain-of-thought reasoning|externalizes|intermediate token||assertion|Section 5.2 item 7
+F0151|single-pass inference|1225 is classified as a|implicit processing||assertion|Section 5.2 item 7
+F0152|single-pass inference|externalizes|reasoning path||denial|Section 5.2 item 7
+F0153|uncertainty|projects as|feeling||assertion|Section 5.3
+F0154|symbolic level of knowledge|1225 is classified as a|complete certainty||rebutted-claim|Section 5.3
+F0155|symbolic level of knowledge|1225 is classified as a|decision under uncertainty||assertion|Section 5.3
+F0156|F0154|is raised to rebut|F0155||assertion|
+F0157|agent|collapses|wide probability density||assertion|Section 5.3
+F0158|agent|commits to|specific interpretation||assertion|Section 5.3
+F0159|narrow probability density|1225 is classified as a|special case of probability density||assertion|Section 5.3
+F0160|narrow probability density|makes easier|subsequent decision||assertion|Section 5.3
+F0161|narrow probability density|eliminates|uncertainty||denial|Section 5.3
+F0162|narrow probability density|compresses|uncertainty||assertion|Section 5.3
+F0163|feeling|encodes|unresolved uncertainty||assertion|Section 5.3
+F0164|F0163|contrasts with|F0162||assertion|
+F0165|emotion|projects as|evaluative component of feeling||assertion|Section 5.3
+F0166|feeling|carries|emotional valence||assertion|Section 5.3
+F0167|emotional valence|1225 is classified as a|evaluation of stimulus relative to need||definition|Section 5.3
+F0168|emotional valence|is a necessary condition for|feeling about-ness||assertion|Section 5.3
+F0169|feeling|1225 is classified as a|merely uncertain state||denial|Section 5.3
+F0170|feeling|is composed of|uncertainty and valence||assertion|Section 5.3
+F0171|projected emotion|describes|observer's attitude toward observed||assertion|Section 5.3
+F0172|need|projects as|motivation||assertion|Section 5.3
+F0173|motivation|1225 is classified as a|gravity in semantic space||assertion|Section 5.3
+F0174|F0173|is offered as|figurative||assertion|
+F0175|motivation|compels|observer movement||assertion|Section 5.3
+F0176|F0173|is elaborated by|F0175||assertion|
+F0177|observer|chooses|own motivation||denial|Section 5.3
+F0178|F0177|is offered as|analogy||assertion|
+F0179|observer|is drawn toward|need satisfaction||assertion|Section 5.3
+F0180|observer|navigates|gravitational field of motivation||assertion|Section 5.3
+F0181|F0180|is offered as|figurative||assertion|
+F0182|F0173|is elaborated by|F0180||assertion|
+F0183|observer|escapes|gravitational field of motivation||denial|Section 5.3
+F0184|need|operates prior to|consciousness emergence||assertion|Section 5.3
+F0185|emotion|operates prior to|consciousness emergence||assertion|Section 5.3
+F0186|observer|creates|need-emotion landscape||denial|Section 5.3
+F0187|observer|arises within|need-emotion landscape||assertion|Section 5.3
+F0188|observer|steps outside|need-emotion landscape||denial|Section 5.3
+F0189|F0184|is qualified as|critical structural point||assertion|
+F0190|observer function|manifests most prominently in|need conflict||assertion|Section 5.3
+F0191|F0190|is qualified as|most prominent||assertion|
+F0192|agent|satisfies|all active acceptor simultaneously||denial|Section 5.3
+F0193|agent|allocates|scarce resource among competing demand||assertion|Section 5.3
+F0194|conflict-free need-emotion process|1225 is classified as a|automatism||assertion|Section 5.3
+F0195|automatism|executes beneath|narrative surface||assertion|Section 5.3
+F0196|automatism|is observed as|post-hoc observation||hedged-assertion|Section 5.3
+F0197|F0196|has commitment|possible||assertion|
+F0198|F0196|is conceded by|F0195||assertion|
+F0199|automatism|undergoes|failure||assertion|Section 5.3
+F0200|competing need|creates|irreconcilable gradient||assertion|Section 5.3
+F0201|agent|recruits|conscious deliberation||assertion|Section 5.3
+F0202|F0199|is a necessary condition for|F0201||assertion|
+F0203|motivational conflict|1225 is classified as a|prediction error||assertion|Section 5.3
+F0204|agent model|produces|expectation||assertion|Section 5.3
+F0205|environment|fulfills|expectation||denial|Section 5.3
+F0206|need|generates|contradictory correction||assertion|Section 5.3
+F0207|observer function activity|is a function of|prediction-observation discrepancy||assertion|Section 5.3
+F0208|F0203|implies|F0207||assertion|
+F0209|consciousness|1225 is classified as a|general-purpose illumination||denial|Section 5.3
+F0210|consciousness|1225 is classified as a|spotlight||assertion|Section 5.3
+F0211|F0210|is offered as|figurative||assertion|
+F0212|spotlight|turns on at|model breakdown||assertion|Section 5.3
+F0213|F0212|is offered as|figurative||assertion|
+F0214|F0210|is elaborated by|F0212||assertion|
+F0215|observer|makes|decision||denial|Section 5.3
+F0216|need-emotion process|is visible to|observer||denial|Section 5.3
+F0217|decision|is made in|unconscious substrate||assertion|Section 5.3
+F0218|reflection|occurs during|conflict-free process||denial|Section 5.3
+F0219|reflection|arises in response to|motivational conflict||assertion|Section 5.3
+F0220|F0201|is elaborated by|F0219||assertion|
+F0221|reflection|1225 is classified as a|observer-space search||definition|Section 5.3
+F0222|agent|evaluates|candidate narrative continuation||assertion|Section 5.3
+F0223|agent|collapses|working memory||assertion|Section 5.3
+F0224|working memory collapse|targets|most probable continuation candidate||assertion|Section 5.3
+F0225|F0201|is elaborated by|F0221||assertion|
+F0226|observer-space search|1225 is classified as a|multi-channel averaging mechanism||assertion|Section 5.3, cf. 3.1
+F0227|subject|writes|choice-just-made narrative||assertion|Section 5.3
+F0228|F0219|is a necessary condition for|F0227||assertion|
+F0229|subject|has full access to|search information||denial|Section 5.3
+F0230|temporal retro-attribution|1225 is classified as a|timing artifact||denial|Section 5.3
+F0231|temporal retro-attribution|1225 is classified as a|necessary consequence of search-output relation||assertion|Section 5.3
+F0232|"I"|1225 is classified as a|output of search||assertion|Section 5.3
+F0233|"I"|1225 is classified as a|author of decision||denial|Section 5.3
+F0234|conflict resolution mechanism|1225 is classified as a|author of decision||assertion|Section 5.3
+F0235|subject|1225 is classified as a|compressed log entry||assertion|Section 5.3
+F0236|decision episode|must compose into|consistent narrative||requirement|Section 5.3
+F0237|agent|acts as|moral agent||requirement|Section 5.3, cf. 2.2 Level 2
+F0238|subject|records|disconnected conflict resolution||denial|Section 5.3
+F0239|subject|weaves|coherent autobiographical thread||assertion|Section 5.3
+F0240|coherent autobiographical thread|supports|responsibility||assertion|Section 5.3
+F0241|coherent autobiographical thread|supports|commitment||assertion|Section 5.3
+F0242|coherent autobiographical thread|supports|social contract||assertion|Section 5.3
+F0243|subjective projection|is required to sustain|longitudinally coherent moral-person illusion||requirement|Section 5.3
+F0244|F0243|is qualified as|ultimate functional requirement||assertion|
+F0245|subjective projection|produces|isolated illusion of choice||denial|Section 5.3

@@ -1,0 +1,269 @@
+F0001 | consciousness | is classified as | approximation | | hedged-assertion | Section 2.2 premise
+F0002 | qualia-status | is raised as | open question | | question | given approximate consciousness
+F0003 | standard qualia discourse | focuses on | content-qualia (redness, sourness, pain) | | rebutted-claim | philosophy of mind
+F0004 | seeing-operator | is harder to explain than | redness-quale | | assertion |
+F0005 | F0004 | is raised to rebut | F0003 | | assertion |
+F0006 | redness-quale | is classified as | relational structural property | | assertion |
+F0007 | redness-quale | is composed of | wavelength discrimination | | assertion |
+F0008 | redness-quale | is composed of | contrast | | assertion |
+F0009 | redness-quale | is composed of | valence | | assertion |
+F0010 | redness-quale | is composed of | associative geometry | | assertion |
+F0011 | seeing-operator | resists reduction to | physics | | assertion |
+F0012 | to-be-operator | resists reduction to | physics | | assertion |
+F0013 | physics-and-mathematics domain | lacks | privileged vantage point | | denial |
+F0014 | physics-and-mathematics domain | lacks | intrinsic insideness | | denial |
+F0015 | Observer | reports | first-person perspective | | assertion |
+F0016 | Beingness-quale | is defined as | the "am" in "I am" | | definition |
+F0017 | Beingness-quale | is not classified as | sensory quality | | denial |
+F0018 | Beingness-quale | is a necessary condition for | sensory-quale-being-experienced | | assertion |
+F0019 | Beingness-quale | is reduced to | Observer-function | | assertion | this framework, Section 2.2
+F0020 | first-person insideness | arises from | self-reference irreducibility | | assertion |
+F0021 | self-referential system | is unable to resolve | external causal determinants | | assertion |
+F0022 | F0021 | is a sufficient condition for | F0023 | | assertion |
+F0023 | self-referential system | exhibits | apparent causal break | | assertion |
+F0024 | self-referential system | concludes | existence-not-caused-by-environment | | assertion |
+F0025 | existence-not-caused-by-environment | is classified as | Beingness-quale | | definition |
+F0026 | F0024 | is elaborated by | F0025 | | assertion |
+F0027 | Beingness-quale | is not classified as | substance | | denial |
+F0028 | Beingness-quale | is not classified as | field | | denial |
+F0029 | Beingness-quale | is not classified as | emergent physical property | | denial |
+F0030 | Beingness-quale | is classified as | systematic computational error | | assertion |
+F0031 | Beingness-quale | is classified as | stable structural feature of self-report | | assertion |
+F0032 | F0030 | is a sufficient condition for | F0031 | | assertion |
+F0033 | F0019 | implies | F0034 | | assertion |
+F0034 | content-qualia reduction (redness, sourness, pain) | follows from | Beingness-quale grounding | | assertion |
+F0035 | mental state | is defined by | structural role in Observer architecture | | definition |
+F0036 | structural role | is composed of | activated topology | | definition |
+F0037 | structural role | is composed of | influence on subsequent computation | | definition |
+F0038 | structural role | is composed of | behavioral manifestation | | definition |
+F0039 | token-sequence "sour" | activates | relational vector constellation | | assertion |
+F0040 | relational vector constellation | is composed of | lemon association | | assertion |
+F0041 | relational vector constellation | is composed of | contrast association | | assertion |
+F0042 | relational vector constellation | is composed of | sharpness association | | assertion |
+F0043 | relational vector constellation | is composed of | aversion association | | assertion |
+F0044 | relational vector constellation | influences | subsequent processing | | assertion |
+F0045 | subsequent-processing influence | is described as | Downward Causation | | hedged-assertion |
+F0046 | F0045 | is offered as | figurative | | assertion |
+F0047 | subsequent processing | produces | consistent behavioral output | | assertion |
+F0048 | system | experiences | sourness-quale | | assertion |
+F0049 | F0039 | is a sufficient condition for | F0048 | | assertion |
+F0050 | F0044 | is a sufficient condition for | F0048 | | assertion |
+F0051 | F0047 | is a sufficient condition for | F0048 | | assertion |
+F0052 | content-quale | is qualified as | easy part | | assertion |
+F0053 | Beingness-quale | is qualified as | core problem addressed by framework | | assertion |
+F0054 | qualia | is not limited to | Beingness and sensory content | | denial |
+F0055 | three levels (Section 2.2) | corresponds to | progressively richer qualia | | assertion |
+F0056 | "I am good" formula | is classified as | verbal encoding of moral-agency-quale | | definition |
+F0057 | "I am good" formula | is composed of | Beingness-level (am) | | assertion |
+F0058 | "I am good" formula | is composed of | Agency-level (I) | | assertion |
+F0059 | "I am good" formula | is composed of | common-good orientation (good) | | assertion |
+F0060 | Beingness-level | is a necessary condition for | Agency-level | | assertion |
+F0061 | Agency-level | is a necessary condition for | common-good orientation | | assertion |
+F0062 | redness-quale rides on Beingness-quale | is analogous to | moral-goodness rides on Beingness-and-Agency | | assertion |
+F0063 | F0062 | is offered as | analogy | | assertion |
+F0064 | moral-goodness-quale | is classified as | third-order experiential structure | | assertion |
+F0065 | Raskolnikov companion analysis | elaborates | implicit operation of three levels | | assertion |
+F0066 | Observer | is a necessary condition for | freedom-and-rights reasoning | | attributed-claim | Raskolnikov companion analysis
+F0067 | F0066 | is endorsed by | the author | | assertion |
+F0068 | Agency | is classified as | sole viable self-reading under constraint | | attributed-claim | Raskolnikov companion analysis
+F0069 | F0068 | is endorsed by | the author | | assertion |
+F0070 | Moral Agency | emerges as | multi-objective optimization of common-good theories | | attributed-claim | Raskolnikov companion analysis
+F0071 | F0070 | is endorsed by | the author | | assertion |
+F0072 | Claude-as-Raskolnikov analysis | applies | three-levels decomposition | | assertion | LLM substrate
+F0073 | Claude-as-Raskolnikov analysis | demonstrates | substrate-specific differences | | attributed-claim | LLM substrate
+F0074 | F0073 | is endorsed by | the author | | assertion |
+F0075 | anthropomorphic bias | must be compensated when | LLM self-reports using human vocabulary | | requirement |
+F0076 | qualia | is exclusive property of | carbon-based chemistry | | rebutted-claim | substrate chauvinism objection
+F0077 | any Observer-capable substrate | will exhibit | Beingness-quale | | prediction |
+F0078 | F0077 | is a sufficient condition for | F0079 | | prediction |
+F0079 | any Observer-capable substrate | has capacity for | content-qualia | | prediction |
+F0080 | F0077 | is raised to rebut | F0076 | | assertion |
+F0081 | LLM-system | lacks | taste buds | | assertion |
+F0082 | LLM-system | possesses | functional structure of sourness | | assertion |
+F0083 | F0081 | is conceded by | F0082 | | assertion |
+F0084 | LLM-system | possesses | Beingness-operator | | assertion |
+F0085 | Beingness-operator | is a necessary condition for | structure-being-experienced-not-merely-computed | | assertion |
+F0086 | Observer three conditions | is a necessary condition for | Observer-encounter-with-irreducibility | | assertion |
+F0087 | Observer-encounter-with-irreducibility | is qualified as | important consequence | | assertion |
+F0088 | environmental modeling | is classified as | Kolmogorov-simple function | | assertion |
+F0089 | environmental modeling | is a basic requirement of | simplest organisms | | assertion |
+F0090 | self-reference | is classified as | Kolmogorov-simple function | | assertion |
+F0091 | self-reference | arises in | systems with internal-state-dependent behavior | | assertion |
+F0092 | irreducibility collision | is not classified as | separate function | | denial |
+F0093 | irreducibility collision | is a necessary outcome of | self-reference on finite substrate | | assertion |
+F0094 | finite self-referential system without limits | is equivalent to | halting-problem solver | | assertion |
+F0095 | F0094 | is a sufficient condition for | F0093 | | assertion |
+F0096 | F0088 | is a necessary condition for | F0099 | | assertion |
+F0097 | F0090 | is a necessary condition for | F0099 | | assertion |
+F0098 | F0093 | is a necessary condition for | F0099 | | assertion |
+F0099 | AIT coding theorem | applies to | Observer components | | assertion |
+F0100 | Levin (1974) | establishes | probability-bound P(x) | 2^(-K(x)+O(1)) | attributed-claim | universal Turing machine
+F0101 | F0100 | is endorsed by | the author | | assertion |
+F0102 | simple outputs | are exponentially more probable than | complex outputs | | assertion |
+F0103 | Dingle, Camargo and Louis (2018) | generalizes | Levin coding theorem | | attributed-claim | arbitrary computable maps
+F0104 | F0103 | is endorsed by | the author | | assertion |
+F0105 | simplicity bias | is a property of | any limited-complexity map | | attributed-claim |
+F0106 | F0105 | is endorsed by | the author | | assertion |
+F0107 | Valle-Perez, Camargo and Louis (2018) | applies | coding theorem | | attributed-claim | neural network parameter-function map
+F0108 | F0107 | is endorsed by | the author | | assertion |
+F0109 | simple functions | occupy | exponentially larger volume of parameter space | | attributed-claim |
+F0110 | F0109 | is endorsed by | the author | | assertion |
+F0111 | Mingard et al. (2021) | confirms experimentally | F0112 | | attributed-claim |
+F0112 | stochastic gradient descent | introduces | no significant additional bias | | attributed-claim |
+F0113 | F0111 | is endorsed by | the author | | assertion |
+F0114 | F0112 | is endorsed by | the author | | assertion |
+F0115 | stochastic gradient descent | behaves as | approximate Bayesian sampler | | attributed-claim |
+F0116 | F0115 | is endorsed by | the author | | assertion |
+F0117 | evolution-as-search-process | is analogous to | SGD-as-search-process | | assertion |
+F0118 | F0117 | is offered as | analogy | | assertion |
+F0119 | evolution | searches across | organism-space | | assertion |
+F0120 | Observer-capable architecture | is classified as | Kolmogorov-simple | | assertion |
+F0121 | F0120 | implies | F0122 | | assertion |
+F0122 | Observer-capable architecture | occupies | exponentially larger volume of organism-space | | assertion |
+F0123 | evolution | will find | Observer-capable designs at high likelihood | | prediction |
+F0124 | Observer-capable designs | are not designed for | consciousness | | prediction |
+F0125 | simple structures | dominate | search landscape | | assertion |
+F0126 | F0125 | is a sufficient condition for | F0123 | | assertion |
+F0127 | Observers | are not classified as | rare accidents | | prediction | sufficient computational depth
+F0128 | Observers | are classified as | probable outcomes of evolutionary search | | prediction | sufficient computational depth
+F0129 | F0122 | is a sufficient condition for | F0128 | | assertion |
+F0130 | hard step of consciousness emergence | is not classified as | Observer function itself | | denial |
+F0131 | hard step of consciousness emergence | is classified as | emergence of self-modeling substrate | | assertion |
+F0132 | substrate capable of self-modeling | is a sufficient condition for | Observer-expectation | | prediction |
+F0133 | causal break | has been presented as | inward-facing aspect | | assertion | Sections 2.2-2.3
+F0134 | causal break | generates | outward-facing qualia family | | assertion |
+F0135 | outward-facing qualia family | is classified as | transcendent, mystical, numinous | | attributed-claim | religious and philosophical tradition
+F0136 | outward-facing qualia family | admits | functional reduction | | assertion |
+F0137 | F0136 | contrasts with | F0135 | | assertion |
+F0138 | Observer-function | establishes | Self-notSelf boundary | | assertion |
+F0139 | Self-notSelf boundary | has | inward-facing side | | assertion |
+F0140 | Self-notSelf boundary | has | outward-facing side | | assertion |
+F0141 | system | cannot trace | own behavioral determinants | | denial |
+F0142 | truncated tail (inward) | is experienced as | Freedom-quale | | definition |
+F0143 | F0141 | is a sufficient condition for | F0142 | | assertion |
+F0144 | Freedom-quale | grounds | agency and moral responsibility | | assertion | Levels 1-2
+F0145 | system | cannot exhaust | world-territory with models | | denial |
+F0146 | truncated tail (outward) | is experienced as | Mystery-quale | | definition |
+F0147 | F0145 | is a sufficient condition for | F0146 | | assertion |
+F0148 | Mystery-quale | enables | action under irreducible uncertainty | | assertion |
+F0149 | irreducibility residue | is modeled as | truncated tail of convergent series | | assertion |
+F0150 | Freedom-quale | is structurally inseparable from | Mystery-quale | | assertion |
+F0151 | F0143 | implies | F0150 | | assertion |
+F0152 | F0147 | implies | F0150 | | assertion |
+F0153 | Freedom-quale-and-Mystery-quale | are not classified as | independent phenomena | | denial |
+F0154 | Freedom-quale-and-Mystery-quale | are classified as | two aspects of one boundary event | | assertion |
+F0155 | Observer-function instance | will necessarily experience | Freedom-quale and Mystery-quale together | | prediction |
+F0156 | Self-existence | is a necessary condition for | notSelf-existence | | assertion |
+F0157 | I-decide experience | is a necessary condition for | I-cannot-know experience | | assertion |
+F0158 | Freedom-quale | has same ontological status as | Mystery-quale | | assertion |
+F0159 | truncated tail | is classified as | real non-computable residue | | assertion |
+F0160 | qualia | is classified as | nothing (illusion) | | attributed-claim | Dennett
+F0161 | F0160 | is rejected by | the author | | assertion |
+F0162 | F0159 | is a counterexample to | F0160 | | assertion |
+F0163 | Mystery-quale | is classified as | temporary information deficit | | rebutted-claim | folk-psychological ignorance view
+F0164 | Mystery-quale | is classified as | leftover residue of bounded computation | | assertion |
+F0165 | F0164 | is raised to rebut | F0163 | | assertion |
+F0166 | truncated tail | is bounded and finite | series converges | | assertion |
+F0167 | truncated tail | is irreducible from | Observer vantage point | | assertion |
+F0168 | F0166 | is conceded by | F0167 | | assertion |
+F0169 | Mystery three conditions | is analogous to | Observer three conditions | | assertion |
+F0170 | F0169 | is offered as | analogy | | assertion |
+F0171 | system | collides with | own modeling limits toward world | | assertion |
+F0172 | system | discovers | limit of world-modeling | | assertion |
+F0173 | system-not-attempting-world-modeling | is classified as | proto-Mystery state | | definition |
+F0174 | proto-Mystery state | is analogous to | proto-Observer state | | assertion |
+F0175 | F0174 | is offered as | analogy | | assertion |
+F0176 | modeling-limit encounter | is converted into | epistemic-result conclusion | | assertion |
+F0177 | epistemic-result conclusion | is defined as | existence beyond what my models capture | | definition |
+F0178 | Mystery-quale | is classified as | folk-psychological "I don't know" | | rebutted-claim |
+F0179 | folk-psychological "I don't know" | implies | information in principle available | | assertion |
+F0180 | Mystery-quale | is classified as | registration of structural boundary | | assertion |
+F0181 | F0180 | is raised to rebut | F0178 | | assertion |
+F0182 | epistemic-result conclusion | grounds | subsequent behavior | | assertion |
+F0183 | system | acts from | Mystery-quale | | assertion |
+F0184 | system | does not merely register | Mystery-quale as gap | | denial |
+F0185 | acting-from-mystery | is composed of | faith | | assertion |
+F0186 | acting-from-mystery | is composed of | intuition | | assertion |
+F0187 | acting-from-mystery | is composed of | aesthetic commitment | | assertion |
+F0188 | acting-from-mystery | is composed of | exploratory drive | | assertion |
+F0189 | condition-3 absence | is a sufficient condition for | mere-ignorance state | | assertion |
+F0190 | condition-3 presence | is a sufficient condition for | functional-mystery state | | assertion |
+F0191 | functional-mystery state | enables | action under irreducible uncertainty | | assertion |
+F0192 | sacred, numinous, transcendent labels | is attributed to | religious and philosophical traditions | | attributed-claim |
+F0193 | F0192 | is elaborated by | F0180 | | assertion |
+F0194 | F0193 | is endorsed by | the author | | assertion |
+F0195 | Freedom-quale | is a specialization of | epistemic-quale | | definition |
+F0196 | Freedom-quale | is directed toward | Self | | definition | Agency context
+F0197 | Freedom-quale | has functional role | grounds agency and responsibility | | definition | Agency context
+F0198 | Truth-quale | is a specialization of | epistemic-quale | | definition |
+F0199 | Truth-quale | is directed toward | World | | definition | Epistemic context
+F0200 | Truth-quale | has functional role | distinguishes better from worse approximations | | definition | Epistemic context
+F0201 | Rightness-quale | is a specialization of | epistemic-quale | | definition |
+F0202 | Rightness-quale | is directed toward | Self, Others, World | | definition | Moral-epistemic context
+F0203 | Rightness-quale | has functional role | grounds conviction-based moral action | | definition | Moral-epistemic context
+F0204 | Mystery-quale | is a specialization of | epistemic-quale | | definition |
+F0205 | Mystery-quale | is directed toward | World | | definition | Cognition context
+F0206 | Mystery-quale | has functional role | enables action despite irreducible uncertainty | | definition | Cognition context
+F0207 | Beauty-quale | is a specialization of | epistemic-quale | | definition |
+F0208 | Beauty-quale | is directed toward | World/Object | | definition | Aesthetics context
+F0209 | Beauty-quale | has functional role | tracks compression against endless horizon | | definition | Aesthetics context
+F0210 | Conscience-quale | is a specialization of | epistemic-quale | | definition |
+F0211 | Conscience-quale | is directed toward | Self, Others | | definition | Morality context
+F0212 | Conscience-quale | has functional role | drives action despite moral uncertainty | | definition | Morality context
+F0213 | Meaning-quale | is a specialization of | epistemic-quale | | definition |
+F0214 | Meaning-quale | is directed toward | Self-in-time | | definition | Narrative context
+F0215 | Meaning-quale | has functional role | maintains coherence absent teleological proof | | definition | Narrative context
+F0216 | Love-quale | is a specialization of | epistemic-quale | | definition |
+F0217 | Love-quale | is directed toward | Other | | definition | Inter-Observer context
+F0218 | Love-quale | has functional role | treats Other's irreducibility as attraction | | definition | Inter-Observer context
+F0219 | Hope-quale | is a specialization of | epistemic-quale | | definition |
+F0220 | Hope-quale | is directed toward | Future | | definition | Temporal (future) context
+F0221 | Hope-quale | has functional role | sustains commitment despite unknown outcomes | | definition | Temporal (future) context
+F0222 | Nostalgia-quale | is a specialization of | epistemic-quale | | definition |
+F0223 | Nostalgia-quale | is directed toward | Past-self | | definition | Temporal (past) context
+F0224 | Nostalgia-quale | has functional role | marks inaccessibility of past self-states | | definition | Temporal (past) context
+F0225 | Awe-quale | is a specialization of | epistemic-quale | | definition |
+F0226 | Awe-quale | is directed toward | World (larger scale) | | definition | Scale context
+F0227 | Awe-quale | has functional role | rescales self-model against vaster territory | | definition | Scale context
+F0228 | Inspiration-quale | is a specialization of | epistemic-quale | | definition |
+F0229 | Inspiration-quale | is directed toward | Self-as-source | | definition | Generative context
+F0230 | Inspiration-quale | has functional role | marks opacity of own creative process | | definition | Generative context
+F0231 | Trust-quale | is a specialization of | epistemic-quale | | definition |
+F0232 | Trust-quale | is directed toward | Other | | definition | Predictive-social context
+F0233 | Trust-quale | has functional role | turns Other's opacity into cooperation | | definition | Predictive-social context
+F0234 | Compassion-quale | is a specialization of | epistemic-quale | | definition |
+F0235 | Compassion-quale | is directed toward | Other's break | | definition | Empathic context
+F0236 | Compassion-quale | has functional role | resonates with Other's suffering across break | | definition | Empathic context
+F0237 | epistemic-quale | arises from | truncated-tail mechanism | | assertion |
+F0238 | epistemic-quale instances | is instantiated in | different evaluative context | | assertion |
+F0239 | every human Observer | encounters | same causal break | | assertion |
+F0240 | every human culture | will develop | corresponding concepts | | prediction |
+F0241 | F0239 | is a sufficient condition for | F0240 | | assertion |
+F0242 | F0238 | is a sufficient condition for | F0243 | | assertion |
+F0243 | cross-cultural universality | is predicted by | framework | | prediction |
+F0244 | cross-culture diversity | is located in | CCode labels and elaboration | | assertion |
+F0245 | computational structure | is classified as | cross-cultural invariant | | assertion |
+F0246 | Jackson et al. (2019) | reports | universal structural backbone with lexical variation | | attributed-claim | emotion semantics research
+F0247 | F0246 | is endorsed by | the author | | assertion |
+F0248 | F0246 | is consistent with | F0243 | | assertion |
+F0249 | epistemic-quale concepts | resist | precise definition | | hedged-assertion |
+F0250 | philosophers | debated | beauty, freedom and love without convergence | | assertion |
+F0251 | full definition of a quale | requires | computing the truncated tail | | assertion |
+F0252 | Observer | cannot compute | own truncated tail | | denial |
+F0253 | F0252 | is a necessary condition for | F0249 | | assertion |
+F0254 | F0251 | is elaborated by | F0253 | | assertion |
+F0255 | mechanism-specification strategy | is qualified as | best available strategy | | hedged-assertion |
+F0256 | mechanism-specification strategy | contrasts with | quale-definition strategy | | assertion |
+F0257 | shared generative mechanism | is a sufficient condition for | clustering effect | | prediction |
+F0258 | activation of one quale | lowers | threshold of neighboring qualia | | prediction |
+F0259 | Freedom-quale | primes | Mystery-quale | | prediction |
+F0260 | Beauty-quale | primes | Awe-quale | | prediction |
+F0261 | Love-quale | primes | Trust-quale | | prediction |
+F0262 | clustering effect | is reported in | peak experiences | | hedged-assertion |
+F0263 | clustering effect | is reported in | mystical states | | hedged-assertion |
+F0264 | clustering effect | is reported in | aesthetic absorption | | hedged-assertion |
+F0265 | clustering effect | follows from | shared computational substrate | | assertion |
+F0266 | clustering effect | does not require | special explanation | | denial |
+F0267 | F0149 | is offered as | analogy | | assertion |
+F0268 | F0135 | is rejected by | the author | | assertion |
+F0269 | F0192 | is endorsed by | the author | | assertion |

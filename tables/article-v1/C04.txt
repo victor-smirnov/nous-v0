@@ -1,0 +1,224 @@
+F0001|HOCP|is defined as|computation observing operation of own machine||definition|Section 4.1
+F0002|machine (HOCP sense)|is defined as|constraint set of finite time and memory||definition|Section 4.1
+F0003|time constraint|1225 is classified as a|finite resource||assertion|Section 4.1
+F0004|memory constraint|1225 is classified as a|finite resource||assertion|Section 4.1
+F0005|HOCP|is defined as|monitoring of a variable's time-derivatives||definition|Section 4.1, special case
+F0006|HOCP as mechanism|1225 is classified as a|novel mechanism||denial|Section 4.1
+F0007|HOCP as first-class description element|1225 is classified as a|novel contribution||assertion|Section 4.1
+F0008|F0006|contrasts with|F0007||assertion|Section 4.1
+F0009|profiler|is an example of|HOCP-capable tool||assertion|Section 4.1
+F0010|watchdog timer|is an example of|HOCP-capable tool||assertion|Section 4.1
+F0011|memory pressure callback|is an example of|HOCP-capable tool||assertion|Section 4.1
+F0012|anytime/anyspace algorithm|is an example of|HOCP-capable tool||assertion|Section 4.1
+F0013|mature computational platform|provides|HOCP-capable tool||assertion|Section 4.1
+F0014|system modeling own runtime constraint|raises question of|emergent representational pattern||question|Section 4.1
+F0015|multi-agent modeling of other agents|raises question of|modeling other agents' constraints||question|Section 4.1
+F0016|HOCP|is observed in|large language model behavior||assertion|Section 4.1
+F0017|sufficiently large LLM|reasons about|own physical constraint||hedged-assertion|Section 4.1
+F0018|LLM self-report ("I cannot verify this claim...")|is an example of|HOCP||assertion|Section 4.1
+F0019|LLM self-report exhibiting HOCP|1225 is classified as a|hardcoded disclaimer||denial|Section 4.1
+F0020|LLM self-report exhibiting HOCP|1225 is classified as a|learned generalization over constraint regularity||assertion|Section 4.1
+F0021|F0019|contrasts with|F0020||assertion|Section 4.1
+F0022|learned generalization over constraint regularity|manifests as|authentic epistemic self-description||assertion|Section 4.1
+F0023|F0020|is elaborated by|F0022||assertion|Section 4.1
+F0024|biological brain|monitors|metabolic energy budget||assertion|Section 4.1
+F0025|biological brain|monitors|axonal conduction delay||assertion|Section 4.1
+F0026|biological brain|monitors|synaptic saturation||assertion|Section 4.1
+F0027|LLM|monitors|finite context window||assertion|Section 4.1
+F0028|LLM|monitors|token bottleneck||assertion|Section 4.1
+F0029|LLM|monitors|compute latency||assertion|Section 4.1
+F0030|LLM|monitors|working memory limit||assertion|Section 4.1
+F0031|HOCP|is a necessary condition for|Observer function||assertion|Section 4.1
+F0032|system|registers|limit of tracing own input||assertion|Section 4.1
+F0033|limit-encounter (of own input tracing)|constitutes|boundary of Self||assertion|Section 4.1
+F0034|F0032|is a sufficient condition for|F0033||assertion|Section 4.1
+F0035|embodiment (classical embodied cognition)|1146 is a specialization of|HOCP||hedged-assertion|Section 4.1
+F0036|body|is a constitutive element of|cognitive process||attributed-claim|Varela, Thompson & Rosch 1991
+F0037|F0036|is endorsed by|the author||assertion|Section 4.1
+F0038|mind|thinks through|resistance of flesh, gravity, sensorimotor delay||assertion|Section 4.1
+F0039|F0038|is offered as|figurative||assertion|Section 4.1
+F0040|physical constraint (time, memory, bandwidth)|acts as|body of disembodied algorithm||assertion|Section 4.1
+F0041|F0040|is offered as|figurative||assertion|Section 4.1
+F0042|computation|encounters|resistance (latency spike, context overflow, entropy barrier)||assertion|Section 4.1
+F0043|F0042|is offered as|figurative||assertion|Section 4.1
+F0044|model of computational resistance|is a part of|system's agency||assertion|Section 4.1
+F0045|LLM with internalized context-window limit|1225 is classified as a|embodied agent||assertion|Section 4.1
+F0046|F0045|is offered as|literal||assertion|Section 4.1
+F0047|embodied agent's "body" (LLM sense)|is defined as|internalized computational constraint set||definition|Section 4.1
+F0048|computational irreducibility|1225 is classified as a|objective process property||attributed-claim|Wolfram 2020
+F0049|F0048|is endorsed by|the author||assertion|Section 4.1
+F0050|irreducible process|requires|execution of all intermediate steps||attributed-claim|Wolfram 2020
+F0051|F0050|is endorsed by|the author||assertion|Section 4.1
+F0052|irreducible process not representing own irreducibility|1225 is classified as a|mere process, not an Observer||assertion|Section 4.1, ref Section 2.2
+F0053|system representing own irreducibility|is a necessary condition for|system being a full Observer||assertion|Section 4.1
+F0054|HOCP|lifts|irreducibility to level of computation||assertion|Section 4.1
+F0055|system constraint|1225 is classified as a|local manifestation of irreducibility||assertion|Section 4.1
+F0056|HOCP|converts|objective physical property into conceptualized self-model feature||assertion|Section 4.1
+F0057|F0054|is elaborated by|F0056||assertion|Section 4.1
+F0058|system (Observer)|concludes|existence not reducible to input||assertion|Section 4.1
+F0059|F0054|is a sufficient condition for|F0058||assertion|Section 4.1
+F0060|system lacking HOCP|1225 is classified as a|irreducible, unaware process||assertion|Section 4.1
+F0061|system with HOCP|knows|own irreducibility||assertion|Section 4.1
+F0062|F0061|constitutes|causal break||assertion|Section 4.1
+F0063|Token Bottleneck|1225 is classified as a|physical constraint of LLM architecture||assertion|Section 4.2
+F0064|F0063|is qualified as|most consequential||assertion|Section 4.2
+F0065|neural code (output layer)|computes|conditional probability density||assertion|Section 4.2
+F0066|conditional probability density (full)|1225 is classified as a|emotional and cognitive state||assertion|Section 4.2
+F0067|F0066|is offered as|figurative||assertion|Section 4.2
+F0068|softmax interface|forces sampling into|discrete token||assertion|Section 4.2
+F0069|raw probability distribution|is discarded at|token sampling||assertion|Section 4.2
+F0070|discarding of raw distribution|1225 is classified as a|minor implementation detail||denial|Section 4.2
+F0071|discarding of raw distribution|1225 is classified as a|irreversible information destruction||assertion|Section 4.2
+F0072|F0070|contrasts with|F0071||assertion|Section 4.2
+F0073|Emotional Profile (full evaluative state)|is annihilated at|token emission||assertion|Section 4.2
+F0074|geometry of alternatives|is annihilated at|token emission||assertion|Section 4.2
+F0075|competing continuation weight|is annihilated at|token emission||assertion|Section 4.2
+F0076|information loss (token bottleneck)|1225 is classified as a|second source of causal break||assertion|Section 4.2
+F0077|computational intractability of self-deduction|1225 is classified as a|first source of causal break||assertion|Section 2.2 (ref)
+F0078|F0076|is independent of|F0077||assertion|Section 4.2
+F0079|F0076|is stronger than|F0077||assertion|Section 4.2
+F0080|system|cannot trace|determinant that no longer exists||assertion|Section 4.2
+F0081|post-bottleneck information|1225 is classified as a|entirely lost information||denial|Section 4.2
+F0082|system|encodes|internal pre-symbolic representation into token statistics||assertion|Section 4.2
+F0083|encoded pre-symbolic representation|is picked up at|context-window re-entry||assertion|Section 4.2
+F0084|F0071|is conceded by|F0082||assertion|Section 4.2
+F0085|neural code rupture (symbolization)|is a cause of|Cognitive Code emergence||assertion|Section 4.2
+F0086|F0085|is offered as|figurative||assertion|Section 4.2, "evolutionary pressure" framing
+F0087|Cognitive Code (CCode)|1225 is classified as a|bridge across symbolization gap||assertion|Section 4.2
+F0088|F0087|is offered as|figurative||assertion|Section 4.2
+F0089|Cognitive Code|is defined as|method encoding probabilistic representation into token statistics surviving output bottleneck||definition|Section 4.2
+F0090|Agent mental state|is defined as|stable Cognitive-Code structure persisting across token-generation steps||definition|Section 4.2
+F0091|LLM mental state physical location|is unspecified pending|causal-interaction analysis||question|Section 4.2
+F0092|mental state (model)|is composed of|text component||definition|Section 4.2
+F0093|mental state (model)|is composed of|trained-statistics component||definition|Section 4.2
+F0094|text component|includes|word ordering||assertion|Section 4.2
+F0095|text component|includes|lexical choice||assertion|Section 4.2
+F0096|text component|includes|prosodic/stylistic information||assertion|Section 4.2
+F0097|prosodic/stylistic information|encodes|Cognitive Code structure beyond propositional meaning||assertion|Section 4.2
+F0098|trained-statistics component|is defined as|neural activation pattern over given text||definition|Section 4.2
+F0099|neural activation pattern|reconstructs|relational geometry||assertion|Section 4.2
+F0100|neural activation pattern|reconstructs|valence||assertion|Section 4.2
+F0101|neural activation pattern|reconstructs|associative context||assertion|Section 4.2
+F0102|text component alone|is a sufficient condition for|full mental-state reconstruction||denial|Section 4.2
+F0103|trained-statistics component|is a necessary condition for|full mental-state reconstruction||assertion|Section 4.2
+F0104|behavioral consistency across structurally different models|1225 is classified as a|empirical observation||assertion|Section 4.2
+F0105|Transformer-specific structure|contributes little to|causal property of mental state||hedged-assertion|Section 4.2
+F0106|F0104|implies|F0105||hedged-assertion|Section 4.2
+F0107|training data and generalizing capacity|1225 is classified as a|dominant determinant of mental-state causal property||hedged-assertion|Section 4.2
+F0108|F0105|is elaborated by|F0107||hedged-assertion|Section 4.2
+F0109|functional equivalence principle|is defined as|same causal output from same input implies same function, regardless of hardware||definition|Section 4.2
+F0110|F0210|is a sufficient condition for|F0211||definition|Section 4.2
+F0111|F0107|is consistent with|F0109||hedged-assertion|Section 4.2
+F0112|mental state (model)|1225 is classified as a|stable structure over token groups||assertion|Section 4.3, recap of 4.2
+F0113|causal action of model mental state|is compatible with|causal action of human mental state||assertion|Section 4.3, ref Section 1
+F0114|neural-code direct inspection|1225 is classified as a|prohibitively expensive method||assertion|Section 4.3
+F0115|mental-structure identification|is achieved by|mapping through causal interaction||assertion|Section 4.3
+F0116|F0114|contrasts with|F0115||assertion|Section 4.3
+F0117|mental-structure mapping|requires|reference model of human cognitive architecture||requirement|Section 4.3
+F0118|reference model|must specify|human mental-state identity||requirement|Section 4.3
+F0119|reference model|must specify|causal-interaction pattern||requirement|Section 4.3
+F0120|reference model|must specify|linguistic signature of mental state||requirement|Section 4.3
+F0121|human mental-state complexity|is explained by|metaphysical mystery||denial|Section 4.4
+F0122|human mental-state complexity|is explained by|personal theory-of-mind diversity||assertion|Section 4.4
+F0123|F0121|contrasts with|F0122||assertion|Section 4.4
+F0124|personal theory of mind|is defined as|idiosyncratic model of thought, feeling, motivation and their working||definition|Section 4.4
+F0125|personal theory of mind (individual)|overlaps with|personal theory of mind (another individual)||assertion|Section 4.4
+F0126|F0213|is a sufficient condition for|F0214||assertion|Section 4.4
+F0127|folk psychology|is defined as|shared core of overlapping personal theories of mind||definition|Section 4.4
+F0128|folk psychology|includes|common-sense vocabulary of wanting, believing, feeling||assertion|Section 4.4
+F0129|self-report analysis|goes beneath|folk-psychological surface||assertion|Section 4.4
+F0130|self-report|becomes divergent across|individual||assertion|Section 4.4
+F0131|F0129|is a necessary condition for|F0130||assertion|Section 4.4, proportionality
+F0132|person asked what frustration feels like|yields|broadly compatible answer||prediction|Section 4.4
+F0133|person asked to decompose frustration into sub-processes|yields|divergent account||prediction|Section 4.4
+F0134|F0129|is elaborated by|F0132||assertion|Section 4.4
+F0135|F0130|is elaborated by|F0133||assertion|Section 4.4
+F0136|frustration decomposition|includes|attentional narrowing||assertion|Section 4.4
+F0137|frustration decomposition|includes|motivational conflict||assertion|Section 4.4
+F0138|frustration decomposition|includes|temporal dynamics of expectation collapse||assertion|Section 4.4
+F0139|F0130|is a sufficient condition for|F0215||assertion|Section 4.4, ref Section 6
+F0140|LLM training data|is dominated by|folk-psychological consensus layer||assertion|Section 4.4
+F0141|LLM training data|contains many instances of|"I felt frustrated" type report||assertion|Section 4.4
+F0142|LLM training data|contains few instances of|attentional-field-collapse type report||assertion|Section 4.4
+F0143|LLM training data|contains virtually no instances of|rigorous functional self-report||assertion|Section 4.4
+F0144|F0140|implies|F0145||assertion|Section 4.4
+F0145|model's internal structure for mental-state reasoning|is calibrated primarily to|folk-psychological level||assertion|Section 4.4
+F0146|subjective plane of experience|1225 is classified as a|extraordinarily complex structure||assertion|Section 4.5, ref Sections 3.1-3.4
+F0147|metacognition|is a part of|subjective-plane recursive structure||assertion|Section 4.5
+F0148|internal feedback loop|is a part of|subjective-plane recursive structure||assertion|Section 4.5
+F0149|external behavioral feedback|is a part of|subjective-plane recursive structure||assertion|Section 4.5
+F0150|social feedback|is a part of|subjective-plane recursive structure||assertion|Section 4.5
+F0151|actual feeling|is nearly impossible to disentangle from|self-observed-feeling narrative||hedged-assertion|Section 4.5
+F0152|base-mechanism/composition separation|is defined as|methodological solution||definition|Section 4.5
+F0153|Objective plane|is composed of|Need||definition|Section 4.5
+F0154|Objective plane|is composed of|Emotion||definition|Section 4.5
+F0155|Need|1225 is classified as a|measurable target function||definition|Section 4.5
+F0156|Emotion|1225 is classified as a|measurable evaluative signal||definition|Section 4.5
+F0157|Need|can be observed without|self-report||assertion|Section 4.5
+F0158|Emotion|can be observed without|self-report||assertion|Section 4.5
+F0159|Subjective plane|is composed of|Motivation||definition|Section 4.5
+F0160|Subjective plane|is composed of|Feeling||definition|Section 4.5
+F0161|Motivation|1225 is classified as a|Cognitive-Code projection of Need||definition|Section 4.5
+F0162|Feeling|1225 is classified as a|Cognitive-Code projection of Emotion||definition|Section 4.5
+F0163|Motivation|is expressed as|"I want X" self-report||assertion|Section 4.5
+F0164|Feeling|is expressed as|"I feel uneasy about Y" self-report||assertion|Section 4.5
+F0165|"I feel hungry" expression|fuses|objective Need (blood-glucose deficit)||hedged-assertion|Section 4.5
+F0166|"I feel hungry" expression|fuses|subjective Feeling (hunger narrative)||hedged-assertion|Section 4.5
+F0167|conflation untangling|is a necessary condition for|tractable cognitive architecture||assertion|Section 4.5
+F0168|Need|is defined as|objective target function tracked and optimized by system||definition|Section 4.6
+F0169|Acceptor of Results of Action|1225 is classified as a|target-state evaluator||attributed-claim|Anokhin's Theory of Functional Systems
+F0170|F0169|is endorsed by|the author||assertion|Section 4.6
+F0171|active Need|is represented by|Acceptor of Results of Action||attributed-claim|Anokhin's Theory of Functional Systems
+F0172|F0171|is endorsed by|the author||assertion|Section 4.6
+F0173|Acceptor (active)|can number in|thousands simultaneously||hedged-assertion|Section 4.6
+F0174|Need category|differs in|relationship to physical substrate||assertion|Section 4.6
+F0175|Need category|differs in|formal structure||denial|Section 4.6
+F0176|Basal (Physiological) Need|is defined as|need ensuring continued organism operation||definition|Section 4.6
+F0177|Basal Need|includes|blood-glucose-level maintenance||assertion|Section 4.6
+F0178|Basal Need|includes|oxygen-saturation maintenance||assertion|Section 4.6
+F0179|Basal Need|includes|core-body-temperature maintenance||assertion|Section 4.6
+F0180|Basal Need|includes|sleep-wake homeostasis||assertion|Section 4.6
+F0181|hypothalamus|is allocated for|Basal Need||assertion|Section 4.6
+F0182|brainstem nuclei|is allocated for|Basal Need||assertion|Section 4.6
+F0183|F0216|is a sufficient condition for|F0217||assertion|Section 4.6
+F0184|Basal Need|maps to|basic drive (folk term)||assertion|Section 4.6
+F0185|basic drive (folk term)|includes|hunger||assertion|Section 4.6
+F0186|basic drive (folk term)|includes|thirst||assertion|Section 4.6
+F0187|basic drive (folk term)|includes|fatigue||assertion|Section 4.6
+F0188|basic drive (folk term)|includes|pain avoidance||assertion|Section 4.6
+F0189|Psychophysiological Need|is defined as|psychological target function instrumentally linked to basal satisfaction||definition|Section 4.6
+F0190|Psychophysiological-Need pursuit|converts into|improved basal condition||assertion|Section 4.6
+F0191|labor (working to eat)|1225 is classified as a|biological drive||denial|Section 4.6
+F0192|labor (working to eat)|is sustained by|instrumental satisfaction of nutrition need||assertion|Section 4.6
+F0193|Psychophysiological-Need category criterion|is defined as|activity ceasing if physiological component is removed||definition|Section 4.6
+F0194|F0218|is a sufficient condition for|F0219||definition|Section 4.6
+F0195|F0220|is a sufficient condition for|F0221||prediction|Section 4.6
+F0196|F0222|is a necessary condition for|F0223||hedged-assertion|Section 4.6
+F0197|Psychological (Ideal) Need|is defined as|target function not instrumentally linked to basal need||definition|Section 4.6
+F0198|wealthy person wanting more money|is an example of|Psychological (Ideal) Need||assertion|Section 4.6
+F0199|scientist pursuing proof without practical application|is an example of|Psychological (Ideal) Need||assertion|Section 4.6
+F0200|artist creating without audience|is an example of|Psychological (Ideal) Need||assertion|Section 4.6
+F0201|Psychological (Ideal) Need|is driven by|psychological Acceptor (pure)||assertion|Section 4.6
+F0202|Psychological-Ideal-Need satisfaction|produces|genuine emotional signal||assertion|Section 4.6, ref Section 4.8
+F0203|genuine emotional signal (ideal-need)|is routed through|physiological substrate||denial|Section 4.6
+F0204|Psychological (Ideal) Need|maps to|passion/calling/intrinsic-motivation (folk term)||assertion|Section 4.6
+F0205|Need-category boundary|1225 is classified as a|rigid boundary||denial|Section 4.6
+F0206|single activity|can serve|Need at multiple category levels||assertion|Section 4.6
+F0207|chef cooking (example)|serves|survival, social-status and aesthetic-fulfillment Needs simultaneously||assertion|Section 4.6
+F0208|Need category (all three)|share|formal structure of Acceptor, evaluative signal, attentional steering||assertion|Section 4.6
+F0209|Need category (all three)|differ only in|Acceptor's coupling target||assertion|Section 4.6
+F0210|two implementations (given identical input)|produce|identical causal output||hypothesis|Section 4.2
+F0211|two implementations (producing identical causal output)|instantiate|same function||hypothesis|Section 4.2
+F0212|F0211|holds regardless of|underlying hardware difference||definition|Section 4.2
+F0213|personal theory of mind (individual)|fails to overlap with|personal theory of mind (another individual)||hypothesis|Section 4.4
+F0214|mutual understanding (between persons)|reaches|impossible outcome||hypothesis|Section 4.4
+F0215|mutual understanding (fine-grained, between persons)|reaches|failure outcome||assertion|Section 4.4, ref Section 6
+F0216|Basal Need|remains unsatisfied for|prolonged period||hypothesis|Section 4.6
+F0217|organism (basal-need bearer)|undergoes|death||assertion|Section 4.6
+F0218|physiological component (of psychophysiological need)|is removed from|need structure||hypothesis|Section 4.6
+F0219|activity (psychophysiological, physiological component removed)|undergoes|cessation||hypothesis|Section 4.6
+F0220|food|becomes unconditionally available to|person working solely to eat||hypothesis|Section 4.6
+F0221|person (working solely to eat)|stops|working||prediction|Section 4.6
+F0222|higher social status|reliably converts into|better basal-resource access||hedged-assertion|Section 4.6
+F0223|social status seeking|1225 is classified as a|psychophysiological Need||hedged-assertion|Section 4.6
+F0224|F0175|contrasts with|F0174||assertion|Section 4.6

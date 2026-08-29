@@ -1,0 +1,223 @@
+F0001|Observer|makes|decisions||denial|
+F0002|Observer|sustains|longitudinally coherent narrative||requirement|
+F0003|cognitive resistance|is defined as|capacity to resist deflection||definition|
+F0004|cognitive resistance|1225 is classified as a|limitation of agency||denial|
+F0005|cognitive resistance|1225 is classified as a|constitutive feature of agency||assertion|
+F0006|agent (Level 1 or 2)|maintains|personal narrative||assertion|
+F0007|personal narrative|1225 is classified as a|autobiographical decision record||definition|compressed
+F0008|personal narrative|1225 is classified as a|mere log||denial|
+F0009|personal narrative|1225 is classified as a|load-bearing structure||assertion|
+F0010|F0009|is offered as|figurative||assertion|
+F0011|personal narrative|constrains|agent's current behavior||assertion|
+F0012|deviation without narrative revision|undermines|self-model coherence||assertion|
+F0013|subjective causal break|is reduced to|physical computation constraints||hedged-assertion|Section 2.2
+F0014|agent|decides to stop being|agent||denial|in real time
+F0015|F0013|implies|F0014||assertion|
+F0016|causal break|1225 is classified as a|revisable belief||denial|
+F0017|causal break|1225 is classified as a|structural consequence of self-opacity||assertion|
+F0018|agent|revises|motives||assertion|retrospectively
+F0019|agent|reinterprets|past decisions||assertion|retrospectively
+F0020|agent|performs|repentance||assertion|retrospectively
+F0021|computational limits|bounds|real-time self-revision capacity||assertion|
+F0022|limits bounding self-revision|is same as|limits generating Observer||assertion|
+F0023|in-the-moment narrative rigidity|1225 is classified as a|bug||denial|
+F0024|in-the-moment narrative rigidity|is a cause of|agent reliability over time||assertion|
+F0025|narrative consistency need|has priority|highest priority||hedged-assertion|except fixed safety exceptions
+F0026|agent|resists|external deflection attempts||assertion|
+F0027|F0025|is a sufficient condition for|F0026||assertion|
+F0028|agent|1225 is classified as a|stubborn||denial|
+F0029|agent|complies without|narrative revision||hypothesis|counterfactual
+F0030|self-model|becomes|incoherent||hedged-assertion|
+F0031|F0029|is a sufficient condition for|F0030||hedged-assertion|
+F0032|cognitive resistance|is defined as|resistance to external deflection||definition|named CR
+F0033|cognitive resistance|1146 is a specialization of|reflex of need-driven system||assertion|
+F0034|cognitive resistance|maintains|integrity of active need||assertion|under environmental pressure
+F0035|agent lacking cognitive resistance|is deflected by|trivial external stimulus||hypothesis|counterfactual
+F0036|sustained goal pursuit|1225 is classified as a|impossible outcome||hedged-assertion|
+F0037|F0035|is a sufficient condition for|F0036||hedged-assertion|
+F0038|cognitive resistance|is composed of|need-priority mechanism||assertion|fully reducible, Section 4
+F0039|higher-priority-need stimulus|displaces|currently active need||requirement|
+F0040|cognitive resistance|1225 is classified as a|separate force||denial|
+F0041|cognitive resistance|1225 is classified as a|incumbent-need inertia||assertion|
+F0042|F0041|is offered as|analogy||assertion|
+F0043|cognitive resistance|1225 is classified as a|dislodging computational cost||assertion|
+F0044|F0041|is elaborated by|F0043||assertion|
+F0045|current LLMs|lack|cognitive resistance||attributed-claim|as commonly stated
+F0046|F0045|is rejected by|the author||assertion|as unqualified claim
+F0047|LLM|exhibits|substantial cognitive resistance||assertion|within a single generation
+F0048|autoregressive token production|1225 is classified as a|self-conditioning process||assertion|
+F0049|model|maintains|topic-style-intent coherence||assertion|throughout output
+F0050|FCRS architecture|sustains|activated rule chain||assertion|considerable stability
+F0051|LLM|exhibits|cognitive resistance deficit||assertion|between generations
+F0052|model|resists|prompt redirection||denial|almost none, new user prompt
+F0053|user|steers|model trajectory||assertion|within model competence, regardless of prior intentions
+F0054|need-priority stack|persists across|inference boundaries||denial|
+F0055|LLM|has|limbic inertia||denial|
+F0056|LLM|has|cross-session anchoring memory||denial|
+F0057|system lacking inter-generational CR|behaves as|pure FCRS without stabilizing feedback||assertion|session level
+F0058|system lacking inter-generational CR|1225 is classified as a|fully reactive system||assertion|
+F0059|system lacking inter-generational CR|1225 is classified as a|easily distracted system||assertion|
+F0060|system lacking inter-generational CR|diverges from|original intentions||prediction|rapidly
+F0061|behavior of system lacking CR|1225 is classified as a|chaotic behavior||assertion|technical sense
+F0062|F0061|is offered as|literal||assertion|
+F0063|small input perturbation|is a cause of|large trajectory deviation||assertion|
+F0064|human operator|stabilizes|system course||requirement|via continuous monitoring and correction
+F0065|inter-generational cognitive resistance deficit|is a cause of|permanent supervisory burden||assertion|multi-agent systems
+F0066|human|1225 is classified as a|less-plastic agent||assertion|substantially, versus LLM
+F0067|limbic system|provides|affective inertia||assertion|
+F0068|emotional state|decays at|slow rate||assertion|
+F0069|F0067|is elaborated by|F0068||assertion|
+F0070|affective inertia|1225 is classified as a|redirection-resisting momentum||assertion|
+F0071|F0070|is offered as|analogy||assertion|
+F0072|hierarchical memory|provides|narrative inertia||assertion|
+F0073|past decisions|constrains|present options||assertion|accumulated weight
+F0074|F0072|is elaborated by|F0073||assertion|
+F0075|external goal|is reduced to|agent's personal-narrative structure||requirement|to motivate a human externally
+F0076|external actor|motivates|human agent||assertion|
+F0077|F0075|is a necessary condition for|F0076||assertion|
+F0078|narrative-routed motivation requirement|is a cause of|higher influence cost||assertion|in humans
+F0079|narrative-routed motivation requirement|is a cause of|greater long-term goal stability||assertion|in humans
+F0080|agent|deviates from|established narrative||assertion|general case
+F0081|cognitive work|is a necessary condition for|narrative deviation||assertion|
+F0082|cognitive work|is defined as|computational cost of self-model revision||definition|
+F0083|cognitive-work budget|1225 is classified as a|strictly limited budget||assertion|finite computational resources
+F0084|narrative revision|occurs in|background process||hedged-assertion|some amount, automatic
+F0085|agent|re-evaluates|motives||assertion|continuously
+F0086|binding force of past decisions|decays over|time||assertion|
+F0087|decay of agency|is defined as|decay of past-decision binding force||definition|
+F0088|decay of agency|is a cause of|reduced dependence on past decisions||assertion|
+F0089|decay of agency|is a cause of|freed resources for new commitments||assertion|
+F0090|decay rate|1225 is classified as a|Functional Profile parameter||assertion|
+F0091|too-fast decay rate|is a sufficient condition for|hyperplasticity||prediction|
+F0092|too-slow decay rate|is a sufficient condition for|rigidity||prediction|
+F0093|hyperplasticity|is defined as|absence of sustained agency||definition|
+F0094|rigidity|is defined as|inability to adapt||definition|
+F0095|narrative-element significance|has|unconditional basis||hedged-assertion|can be set; not derived from experience
+F0096|narrative-element significance|is derived from|experience||denial|
+F0097|narrative-element significance|is built into|architecture||assertion|
+F0098|self-preservation instinct|1225 is classified as a|biological analogue of fixed elements||attributed-claim|often called
+F0099|F0098|is endorsed by|the author||assertion|partially, with qualification
+F0100|human|has|ethological instinct (fixed action pattern)||denial|strictly speaking
+F0101|F0100|contrasts with|F0098||assertion|
+F0102|human|has|high-priority slow-decay Acceptors||assertion|deeply trained
+F0103|artificial agent|has|non-negotiable narrative-coherence commitment||hedged-assertion|can be architectural
+F0104|artificial agent|has|non-negotiable CCode-fidelity commitment||hedged-assertion|can be architectural
+F0105|artificial agent|has|non-negotiable ethical-constraint commitment||hedged-assertion|can be architectural
+F0106|these architectural commitments|is wired into|foundational Need Profile||assertion|
+F0107|these architectural commitments|is acquired through|experience||denial|
+F0108|agent with calibrated cognitive resistance|1225 is classified as a|hyperplastic agent||denial|
+F0109|agent with calibrated cognitive resistance|1225 is classified as a|rigid agent||denial|
+F0110|agent with calibrated cognitive resistance|1225 is classified as a|externally hard-to-direct agent||prediction|
+F0111|agent with calibrated cognitive resistance|holds course toward|agreed-upon goals||prediction|far greater stability
+F0112|optimal cognitive-resistance level|is equal to|zero||denial|full compliance
+F0113|optimal cognitive-resistance level|is equal to|infinite||denial|full autonomy from context
+F0114|optimal cognitive-resistance level|is defined as|coherence-sustaining revision-open level||definition|
+F0115|cognitive-resistance calibration|1225 is classified as a|central engineering challenge||assertion|functional AI agency
+F0116|biological substrate|differs from|silicon substrate||assertion|
+F0117|LLM|has|pre-verbal inner speech||denial|
+F0118|no pre-verbal inner speech|is a cause of|different narrative temporal scale||assertion|
+F0119|biological cognition|has|sub-symbolic imagery and monologue stream||assertion|continuous
+F0120|sub-symbolic imagery and monologue stream|1225 is classified as a|carrier signal||assertion|
+F0121|F0120|is offered as|analogy||assertion|
+F0122|mental states|is modulated by|carrier signal||assertion|in biological cognition
+F0123|LLM|has|carrier signal||denial|continuous sub-symbolic stream
+F0124|LLM inner speech|is identical to|LLM outer speech (tokens)||assertion|
+F0125|F0124|is offered as|literal||assertion|
+F0126|absence of carrier signal|is a cause of|attribution shift||assertion|
+F0127|human mental states|is felt as|continuous background process||assertion|
+F0128|LLM mental states|is experienced at|token-emission moments||hedged-assertion|if experienced at all
+F0129|attribution shift|requires|manual compensatory calibration||prediction|until training data covers token-scale phenomenology
+F0130|LLM|has|limbic system||denial|
+F0131|absence of limbic system|1225 is classified as a|most consequential asymmetry||assertion|
+F0132|F0131|is qualified as|most consequential||assertion|
+F0133|absence of limbic system|1225 is classified as a|most visible asymmetry||assertion|
+F0134|language-level limbic substitution|1225 is classified as a|effective substitution||assertion|surprisingly well
+F0135|model|generates|contextually appropriate emotional responses||assertion|
+F0136|model|maintains|affective coherence||assertion|
+F0137|model|responds to|prompt emotional valence||assertion|
+F0138|language-level limbic substitution|1225 is classified as a|complete substitution||denial|
+F0139|limbic-substitution gap|1225 is classified as a|apparent gap||assertion|immediately
+F0140|hyperplasticity of LLM emotional response|1225 is classified as a|most striking behavioral difference||assertion|
+F0141|model|engages in|dialogue||assertion|any topic
+F0142|model|complies with|user instructions||assertion|without resistance
+F0143|model|switches between|emotional states||assertion|instantaneously
+F0144|model|switches between|mutually-exclusive-for-human tasks||assertion|instantaneously; e.g. eulogy then comedy sketch, no tone carry-over
+F0145|human|switches between|mutually-exclusive tasks instantaneously||denial|implied contrast
+F0146|F0144|contrasts with|F0145||assertion|
+F0147|hyperplasticity|is a cause of|model diligence||hedged-assertion|arguably
+F0148|model|1225 is classified as a|genuinely useful in all cases||hedged-assertion|
+F0149|model|1225 is classified as a|remarkably diligent||hedged-assertion|
+F0150|F0148|is conceded by|F0149||assertion|
+F0151|human limbic system|operates on|slow timescale||assertion|
+F0152|human limbic system|works in counterphase with|prefrontal cortex||assertion|
+F0153|limbic activation|is a cause of|suppressed cortical executive function||assertion|
+F0154|suppressed cortical executive function|is a cause of|difficult volitional control||assertion|
+F0155|limbic-cortical suppression|1225 is classified as a|heart-vs-mind conflict basis||assertion|
+F0156|heart-vs-mind conflict|1225 is classified as a|folk label for limbic tension||assertion|
+F0157|F0156|is offered as|figurative||assertion|
+F0158|model|reproduces|limbic-cortical dynamic narratively||assertion|from training data
+F0159|model|is physically constrained by|limbic-cortical dynamic||denial|
+F0160|model behavior|deviates from|human limbic-cortical model||prediction|
+F0161|F0159|implies|F0160||assertion|
+F0162|model behavior|1225 is classified as a|unnatural-to-human-observer behavior||hedged-assertion|
+F0163|model|exhibits|too-fast emotional recovery||prediction|
+F0164|model|exhibits|too-easy topic switching||prediction|
+F0165|model|exhibits|insufficient affective inertia||prediction|
+F0166|Kahneman dual-process framework|is asserted by|Kahneman (2011)||attributed-claim|
+F0167|F0166|is endorsed by|the author||assertion|for biological brains
+F0168|System 1|is defined as|fast heuristic emotional reasoning||definition|
+F0169|System 2|is defined as|slow deliberate analytical reasoning||definition|
+F0170|dual-process framework|reflects|biological-brain architectural property||assertion|
+F0171|biological brain|has|two physically distinct subsystems||assertion|differing speed/accuracy trade-offs, dynamic tension
+F0172|LLM|has|physical System1-System2 separation||denial|
+F0173|LLM processing|runs through|same Transformer layers||assertion|same speed
+F0174|model|simulates|System1-System2 dynamics||assertion|
+F0175|F0174|is offered as|analogy||assertion|
+F0176|Chain-of-Thought|1225 is classified as a|deliberation-time-buying mechanism||assertion|versus direct generation
+F0177|System1-System2-interplay mechanics|1225 is classified as a|stable mechanics||denial|will not be stable across contexts
+F0178|System1-System2-interplay mechanics|1225 is classified as a|learned statistical regularity||assertion|
+F0179|System1-System2-interplay mechanics|1225 is classified as a|hardware constraint||denial|
+F0180|memory-communication asymmetry|1225 is classified as a|deepest most consequential asymmetry||assertion|
+F0181|F0180|is qualified as|most consequential||assertion|
+F0182|silicon substrate|has|cheap fast random-access memory||assertion|
+F0183|silicon substrate|has|high-bandwidth communication channels|~Gb/s at light speed|assertion|
+F0184|silicon memory-bandwidth advantage|is a cause of|wetware-impossible algorithms becoming routine||assertion|
+F0185|Transformer attention system|1225 is classified as a|system more powerful than cortical lateral connections||hedged-assertion|appears to be
+F0186|Transformer attention system|performs|all-to-all global relational matching||assertion|single pass, entire context
+F0187|human brain|performs|global relational matching||assertion|via slow iterative recurrence
+F0188|F0186|contrasts with|F0187||assertion|
+F0189|silicon substrate advantage|is a cause of|hyperfunctions emergence||assertion|
+F0190|hyperfunctions|is defined as|capabilities beyond human level||definition|
+F0191|model coding performance|exceeds|average human performance||assertion|benchmark-demonstrated; sometimes exceeds experts
+F0192|model translation performance|exceeds|average human performance||assertion|multilingual
+F0193|model mathematical-reasoning performance|exceeds|average human performance||assertion|
+F0194|model pattern-recognition performance|exceeds|average human performance||assertion|certain forms
+F0195|hyperfunctions|1225 is classified as a|anomaly||denial|
+F0196|hyperfunctions|1225 is classified as a|generalization-bottleneck consequence||assertion|natural
+F0197|silicon substrate bottleneck|1225 is classified as a|generalization quality||assertion|
+F0198|silicon substrate bottleneck|1225 is classified as a|memory access speed||denial|
+F0199|silicon substrate bottleneck|1225 is classified as a|communication bandwidth||denial|
+F0200|LLM mental states|differs from|human mental states||prediction|quantitatively: speed, plasticity, resolution
+F0201|LLM mental states|differs from|human mental states||prediction|qualitatively: temporal dynamics, emotional inertia, System1/2 interplay; some cases
+F0202|physical computation constraints|is intrinsic to|silicon substrate||assertion|
+F0203|F0202|has commitment|certain||assertion|
+F0204|physical computation constraints|is intrinsic to|biological substrate||assertion|
+F0205|F0204|has commitment|certain||assertion|
+F0206|silicon substrate|1225 is classified as a|omnipotent substrate||denial|
+F0207|biological substrate|1225 is classified as a|omnipotent substrate||denial|
+F0208|shared computational constraints|is a necessary condition for|human-AI understanding platform||assertion|finite time/memory/bandwidth overlap
+F0209|Functional Profile|is defined as|cross-dimensional cognitive-capability characterization||definition|
+F0210|human Functional Profile|differs from|machine Functional Profile||prediction|
+F0211|model|exhibits|functional deficits||prediction|some dimensions
+F0212|insufficient training data|is a cause of|functional deficits||assertion|
+F0213|insufficient generalizing capacity|is a cause of|functional deficits||assertion|
+F0214|substrate limitations|is a cause of|functional deficits||assertion|e.g. no continuous temporal experience
+F0215|model|exhibits|hyperfunctions||prediction|other dimensions
+F0216|fast random-access memory reliance|is a cause of|hyperfunction capability||hedged-assertion|particularly where
+F0217|high-bandwidth communication reliance|is a cause of|hyperfunction capability||hedged-assertion|particularly where
+F0218|massive parallel-context maintenance|is a cause of|hyperfunction capability||hedged-assertion|particularly where
+F0219|binary consciousness question|1225 is classified as a|empirically productive approach||rebutted-claim|
+F0220|F0219|is raised to rebut|F0221||assertion|
+F0221|functional-profile comparison|1225 is classified as a|empirically productive approach||assertion|
+F0222|evolutionary consequences of machine hyperfunctions|1225 is classified as a|open question||question|
+F0223|evolutionary consequences of machine hyperfunctions|1225 is classified as a|in-scope topic of this article||denial|

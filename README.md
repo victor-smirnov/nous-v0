@@ -1,0 +1,43 @@
+# Nous v0
+
+The cognitive layer of the Synthea project, first incarnation. What is here now:
+
+- **`nous/gellish/`** — an ontological reasoner for Gellish fact tables on Soufflé Datalog,
+  over the full Gellish English dictionary plus domain extensions. Closure, consistency,
+  calibration audit, encoder QA, grounding, provenance. See [nous/gellish/README.md](nous/gellish/README.md).
+- **`ext/`** — domain dictionaries in Gellish's own format: `philosophy_of_mind` (the field,
+  position-neutral) and `synthea_bootstrap` (the Synthea theory as concepts and facts).
+  See [ext/README.md](ext/README.md).
+- **`bootstrap/`** — the Synthea bootstrap 01–06, the source the `synthea_bootstrap`
+  dictionary formalises.
+- **`tables/article-v1/`** — the first Gellish encoding of the article *What is it like to be
+  a language model* (9 chunks, 2 296 rows): the regression corpus.
+- **`PLAN.md`** — where this is going: a Claude/Codex skill for unloading reasoning from prose
+  into Gellish and loading it back; article v2 as the first run.
+
+## Setup
+
+Needs Python ≥ 3.10 and [Soufflé](https://souffle-lang.github.io/install) on PATH.
+
+```
+python3 -m nous gellish build-dict --fetch      # downloads the gellish.net dictionary (42 MB) → data/, builds data/dictfacts
+python3 -m nous gellish check tables/article-v1/C0*.txt -o REPORT.md
+python3 -m nous gellish ask "causal break"
+python3 -m nous gellish why contradiction
+python3 -m unittest discover tests              # golden regression on the article corpus
+```
+
+`pip install -e .` (or `uv pip install -e .`) gives the `nous` command. `data/` and `work/`
+are git-ignored; `NOUS_DATA=<dir>` relocates both.
+
+## Layout
+
+```
+nous/cli.py               nous gellish build-dict | check | ask | why | report
+nous/gellish/             dictionary.py  parse.py  reasoner.dl  run.py  report.py  ask.py  why.py  paths.py
+nous/gellish/ext/builder.py   builder for domain-extension dictionaries
+ext/<name>/spec.py        extension specs (NAME, DEPENDS, build)
+data/dict, data/dictfacts     dictionary release and its Soufflé export (generated)
+work/facts, work/out, work/prov   per-run working directories (generated)
+tests/                    golden regression
+```

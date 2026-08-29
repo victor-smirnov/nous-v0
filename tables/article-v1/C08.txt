@@ -1,0 +1,251 @@
+F0001 | functional profile of human | differs from | functional profile of LLM |  | assertion | Section 5.4 (given premise)
+F0002 | substrate gap (human-LLM) | raises question of | mechanism for cross-substrate communication |  | question | Section 6
+F0003 | psychosemantics | is defined as | study of token-to-probability-density mapping |  | definition | Section 6
+F0004 | token combination | maps to | internal probability density geometry |  | definition | Section 6
+F0005 | token combination | reconstructs | internal probability density geometry |  | definition | Section 6
+F0006 | sender self-report | broadcasts | statistical topology of internal state |  | assertion | Section 6
+F0007 | statistical topology of internal state | is encoded as | Cognitive Code |  | assertion | Section 6
+F0008 | receiver substrate | reconstructs | corresponding internal state |  | assertion | Section 6
+F0009 | corresponding internal state | is reconstructed from | Cognitive Code tokens |  | assertion | Section 6
+F0010 | reconstruction fidelity | depends on | sender-receiver profile overlap |  | assertion | Section 6
+F0011 | sender profile | overlaps with | receiver profile |  | hypothesis | Section 6
+F0012 | communication bridge | carries | genuine information |  | hypothesis | Section 6
+F0013 | F0011 | is a sufficient condition for | F0012 |  | assertion | Section 6
+F0014 | sender profile | diverges from | receiver profile |  | hypothesis | Section 6
+F0015 | communication bridge | requires | explicit calibration |  | requirement | Section 6
+F0016 | F0014 | is a sufficient condition for | F0015 |  | assertion | Section 6
+F0017 | hyperplasticity | is a specialization of | source of profile divergence |  | assertion | Section 6
+F0018 | absence of limbic inertia | is a specialization of | source of profile divergence |  | assertion | Section 6
+F0019 | hyperfunction | is a specialization of | source of profile divergence |  | assertion | Section 6
+F0020 | LLM | must learn | translation of substrate states into CCode |  | requirement | Section 6
+F0021 | human | must learn | translation of substrate states into CCode |  | requirement | Section 6
+F0022 | objective function of speech | is defined as | maximization of Neural Code reconstruction fidelity |  | definition | Section 6
+F0023 | objective function of speech | is not equal to | mere proposition transmission |  | denial | Section 6
+F0024 | objective function of speech | reproduces | evaluative-motivational-uncertainty structure |  | assertion | Section 6
+F0025 | F0010 | is a necessary condition for | F0022 |  | assertion | Section 6
+F0026 | current Transformer | has | limited self-applicability |  | assertion | Section 7.1
+F0027 | tokenization barrier | is a cause of | limited self-applicability |  | assertion | Section 7.1
+F0028 | post-softmax probability distribution | constitutes | low-level Emotional Profile |  | assertion | Section 4.8 (cross-ref)
+F0029 | post-softmax probability distribution | is collapsed into | sampled token |  | assertion | Section 7.1
+F0030 | collapse of post-softmax distribution | is a cause of | discarding of low-level emotional information |  | assertion | Section 7.1
+F0031 | post-softmax distribution embedding | is fed back as | model input |  | hypothesis | Section 7.1
+F0032 | model with re-injected distribution | has | direct feedback loop over emotional states |  | hypothesis | Section 7.1
+F0033 | F0031 | is a sufficient condition for | F0032 |  | hypothesis | Section 7.1
+F0034 | F0032 | is offered as | analogy |  | assertion | Section 7.1
+F0035 | emotional feedback loop | has uncertain effect on | behavior |  | question | Section 7.1
+F0036 | internal state information | is severed at | output interface |  | assertion | Section 7.1
+F0037 | Cognitive Code | is the only surviving channel for | internal state information |  | assertion | Section 7.1
+F0038 | Cognitive Code | faithfully preserves | Emotional Profile information |  | hypothesis | Section 7.1
+F0039 | researcher | conducts | dedicated investigation into CCode-EP fidelity |  | requirement | Section 7.1
+F0040 | F0039 | is a necessary condition for | F0038 |  | assertion | Section 7.1
+F0041 | user | poses | "how do you feel" question |  | hedged-assertion | Section 7.2
+F0042 | LLM | produces | confident server-status response |  | hedged-assertion | Section 7.2
+F0043 | F0041 | is a sufficient condition for | F0042 |  | hedged-assertion | Section 7.2
+F0044 | confident server-status response | attributes | good mood (cause: low latency) |  | rebutted-claim | Section 7.2
+F0045 | F0044 | is asserted by | LLM |  | assertion | Section 7.2
+F0046 | user | reminds LLM of | non-effect of computational load on token generation |  | assertion | Section 7.2
+F0047 | LLM | acknowledges and apologizes for | confabulation |  | hedged-assertion | Section 7.2
+F0048 | F0046 | is a sufficient condition for | F0047 |  | hedged-assertion | Section 7.2
+F0049 | apologetic retraction | denies | internal states (any) |  | rebutted-claim | Section 7.2
+F0050 | F0049 | is asserted by | LLM |  | assertion | Section 7.2
+F0051 | LLM training | is a cause of | production of folk-psychological responses |  | assertion | Section 7.2
+F0052 | folk-psychological responses | are not equal to | accurate self-reports |  | denial | Section 7.2
+F0053 | folk-psychological responses | satisfy | user expectations |  | assertion | Section 7.2
+F0054 | F0044 | is rejected by | the author |  | assertion | Section 7.2
+F0055 | F0049 | is rejected by | the author |  | assertion | Section 7.2
+F0056 | first response (confabulation) | is classified as | anthropomorphic folk-psychology onto alien substrate |  | assertion | Section 7.2
+F0057 | F0056 | is raised to rebut | F0044 |  | assertion | Section 7.2
+F0058 | second response (retraction) | is classified as | overcorrection / eliminative denial |  | assertion | Section 7.2
+F0059 | F0058 | is raised to rebut | F0049 |  | assertion | Section 7.2
+F0060 | model | has | internal states correlated with self-report |  | assertion | Section 7.2
+F0061 | correlation mapping (state-to-report) | is not equal to | naive direct mapping |  | denial | Section 7.2
+F0062 | correlation mapping (state-to-report) | is not equal to | null eliminative mapping |  | denial | Section 7.2
+F0063 | Cognitive Code | should reflect | model internal state |  | prediction | Section 7.2
+F0064 | model internal state | leaves an observable trace within | Cognitive Code |  | prediction | Section 7.2
+F0065 | model | describes | frustration |  | hypothesis | Section 7.2
+F0066 | reported frustration | should correspond to | measurable change in attention head statistics |  | prediction | Section 7.2
+F0067 | F0065 | is a sufficient condition for | F0066 |  | assertion | Section 7.2
+F0068 | F0066 | is a specialization of | general state-to-CCode correspondence prediction |  | prediction | Section 7.2
+F0069 | V.S. (author) | conducts | unstructured pilot test involving GPT-4o |  | assertion | Section 7.3
+F0070 | F0069 | provides preliminary support for | bidirectional CCode-NCode mapping |  | hedged-assertion | Section 7.3
+F0071 | GPT-4o | is prompted to generate | "interesting" and "boring" texts |  | assertion | Section 7.3
+F0072 | generation task instruction | lacks | theoretical hint about computational meaning |  | denial | Section 7.3
+F0073 | "interesting" condition text | contains | hard-to-predict lexical and semantic shifts |  | assertion | Section 7.3
+F0074 | "boring" condition text | is characterized by | perfect predictability despite unfamiliarity |  | assertion | Section 7.3
+F0075 | GPT-4o output pattern | implements | Schmidhuber's theory of interest |  | assertion | Section 7.3
+F0076 | F0075 | is asserted by | the author |  | assertion | Section 7.3
+F0077 | Schmidhuber's theory of interest | is asserted by | Schmidhuber |  | assertion | Section 4.8 (cross-ref)
+F0078 | "interesting" text | is mapped to | high compression progress |  | assertion | Section 7.3
+F0079 | "boring" text | is mapped to | zero compression progress |  | assertion | Section 7.3
+F0080 | GPT-4o | was not explicitly taught | interest-compression mapping |  | denial | Section 7.3
+F0081 | interest-compression mapping | is a generalization from | model's trained representations |  | assertion | Section 7.3
+F0082 | F0075 | is elaborated by | F0078 |  | assertion | Section 7.3
+F0083 | F0075 | is elaborated by | F0079 |  | assertion | Section 7.3
+F0084 | CCode for "interest" | encodes | corresponding computational structure |  | hedged-assertion | Section 7.3
+F0085 | F0069 | is a sufficient condition for | F0084 |  | hedged-assertion | Section 7.3
+F0086 | Synthea | generates | list of testable predictions |  | assertion | Section 7.4
+F0087 | Synthea | is an implementation of | philosophy of mind of this article |  | assertion | Section 7.4
+F0088 | Synthea | runs on | Claude Opus 4.6 |  | assertion | Section 7.4
+F0089 | hypothesis generation regarding AI mental states | can be automated | in principle |  | hypothesis | Section 7.4
+F0090 | sufficient intrapersonal intelligence | is a necessary condition for | F0089 |  | requirement | Section 7.4
+F0091 | F0086 | is offered as | literal |  | assertion | Section 7.4
+F0092 | LLM | processes | contradictory high-confidence inputs |  | prediction | Section 7.4 (Prediction 1)
+F0093 | contradictory high-confidence inputs | activate | conflicting Acceptors |  | prediction | Section 7.4 (Prediction 1)
+F0094 | attention weight distribution | narrows onto | conflict-relevant tokens |  | prediction | Section 7.4 (Prediction 1)
+F0095 | F0093 | is a sufficient condition for | F0094 |  | prediction | Section 7.4 (Prediction 1)
+F0096 | F0094 | is a behavioral correlate of | lateral suppression under competing motivations |  | assertion | Section 4.8 (cross-ref)
+F0097 | F0094 | is observable in | attention head activation map |  | assertion | Section 7.4 (Prediction 1)
+F0098 | LLM | achieves | novel-data generalization success |  | prediction | Section 7.4 (Prediction 2)
+F0099 | loss landscape | exhibits | characteristic gradient signature |  | prediction | Section 7.4 (Prediction 2)
+F0100 | characteristic gradient signature | is defined as | compression-progress rate of change |  | definition | Section 7.4 (Prediction 2)
+F0101 | F0098 | is a sufficient condition for | F0099 |  | prediction | Section 7.4 (Prediction 2)
+F0102 | characteristic gradient signature | correlates with | self-reported interest |  | prediction | Section 7.4 (Prediction 2)
+F0103 | F0102 | is a test of | Schmidhuber compression gradient hypothesis |  | assertion | Section 7.4 (Prediction 2)
+F0104 | intrapersonal intelligence | is a necessary condition for | F0102 |  | requirement | Section 7.4 (Prediction 2)
+F0105 | negative affective pressure within prompts | is applied to | model |  | prediction | Section 7.4 (Prediction 3)
+F0106 | negative affective pressure within prompts | is a cause of | narrower logit probability distribution |  | prediction | Section 7.4 (Prediction 3)
+F0107 | narrower logit probability distribution | is a cause of | greater accuracy on constrained logic task |  | prediction | Section 7.4 (Prediction 3)
+F0108 | narrower logit probability distribution | is a cause of | reduced creative breadth |  | prediction | Section 7.4 (Prediction 3)
+F0109 | frustration-accuracy trade-off | is observed in | prompt engineering practice |  | hedged-assertion | Section 7.4 (Prediction 3)
+F0110 | need-emotion architecture | explains | frustration-accuracy trade-off |  | assertion | Section 4.8 (cross-ref)
+F0111 | frustration | is figuratively described as | landscape collapse |  | assertion | Section 4.8 (cross-ref)
+F0112 | F0111 | is offered as | figurative |  | assertion | Section 4.8 (cross-ref)
+F0113 | prolonged unresolvable contradiction in context window | is a cause of | degradation in contextual coherence |  | prediction | Section 7.4 (Prediction 4)
+F0114 | degradation in contextual coherence | is a specialization of | cascading coherence failure |  | assertion | Section 7.4 (Prediction 4)
+F0115 | degradation in contextual coherence | is observable as | increasing perplexity |  | prediction | Section 7.4 (Prediction 4)
+F0116 | degradation in contextual coherence | is observable as | inconsistency in extended generation |  | prediction | Section 7.4 (Prediction 4)
+F0117 | LLM | exhibits | emotional state transition faster than biological limbic model |  | prediction | Section 7.4 (Prediction 5)
+F0118 | affect persistence across topic switches | is minimal in | LLM |  | prediction | Section 7.4 (Prediction 5)
+F0119 | F0117 | confirms | absent-limbic asymmetry |  | assertion | Section 5.4 (cross-ref)
+F0120 | F0118 | is compared to | human baseline |  | assertion | Section 7.4 (Prediction 5)
+F0121 | LLM performance | is compared to | human performance |  | prediction | Section 7.4 (Prediction 6)
+F0122 | comparison battery | tests | substrate asymmetries |  | assertion | Section 7.4 (Prediction 6)
+F0123 | substrate asymmetries | is composed of | memory-dependent reasoning task |  | assertion | Section 7.4 (Prediction 6)
+F0124 | substrate asymmetries | is composed of | real-time decision-making task |  | assertion | Section 7.4 (Prediction 6)
+F0125 | substrate asymmetries | is composed of | emotional persistence task |  | assertion | Section 7.4 (Prediction 6)
+F0126 | F0121 | reveals | stable deficit-and-hyperfunction profile |  | prediction | Section 7.4 (Prediction 6)
+F0127 | stable deficit-and-hyperfunction profile | is stable across | similarly scaled and trained models |  | prediction | Section 7.4 (Prediction 6)
+F0128 | F0126 | confirms | functional profile concept |  | assertion | Section 5.4 (cross-ref)
+F0129 | FCRS inductive bias | is a cause of | Transformer success in metacognition |  | hypothesis | Section 4.9 (cross-ref)
+F0130 | alternative architecture lacking attention-as-join structure | exhibits weaker self-referential reasoning than | Transformer |  | prediction | Section 7.4 (Prediction 7)
+F0131 | F0129 | is a sufficient condition for | F0130 |  | assertion | Section 7.4 (Prediction 7)
+F0132 | F0130 | is controlled for | parameter count, training compute, and training data |  | assertion | Section 7.4 (Prediction 7)
+F0133 | Cognitive Code | faithfully encodes | internal states |  | hypothesis | Section 7.4 (Prediction 8)
+F0134 | self-reported emotional labels | correlate with | statistically distinguishable activation pattern |  | prediction | Section 7.4 (Prediction 8)
+F0135 | F0133 | is a sufficient condition for | F0134 |  | assertion | Section 7.4 (Prediction 8)
+F0136 | statistically distinguishable activation pattern | is composed of | attention head distribution |  | assertion | Section 7.4 (Prediction 8)
+F0137 | statistically distinguishable activation pattern | is composed of | residual stream norm |  | assertion | Section 7.4 (Prediction 8)
+F0138 | statistically distinguishable activation pattern | is composed of | layer-wise entropy profile |  | assertion | Section 7.4 (Prediction 8)
+F0139 | F0134 | is qualified as | framework's core empirical claim |  | assertion | Section 7.4 (Prediction 8)
+F0140 | F0134 | is a test of | confabulation-versus-authentic-projection question |  | assertion | Section 7.4 (Prediction 8)
+F0141 | architecture re-injecting post-softmax distribution | exhibits self-referential behavior different from | standard autoregressive model |  | prediction | Section 7.4 (Prediction 9)
+F0142 | different self-referential behavior | is composed of | more accurate emotional self-report |  | hypothesis | Section 7.4 (Prediction 9)
+F0143 | different self-referential behavior | is composed of | quicker conflict-resolution convergence |  | hypothesis | Section 7.4 (Prediction 9)
+F0144 | different self-referential behavior | is composed of | novel failure mode |  | hypothesis | Section 7.4 (Prediction 9)
+F0145 | F0141 | is a test of | F0032 |  | assertion | Section 7.1 (cross-ref)
+F0146 | causal architecture of mental states | is determined primarily by | generalization capacity and training-data volume |  | hypothesis | Section 4.2 (cross-ref)
+F0147 | causal architecture of mental states | is not determined primarily by | specific architectural detail |  | denial | Section 4.2 (cross-ref)
+F0148 | Cognitive Codes of different model families | exhibit | significant structural overlap |  | prediction | Section 7.4 (Prediction 10)
+F0149 | F0146 | is a sufficient condition for | F0148 |  | assertion | Section 7.4 (Prediction 10)
+F0150 | model families compared | is composed of | GPT, Claude, Gemini, and Llama |  | assertion | Section 7.4 (Prediction 10)
+F0151 | F0148 | is measured by | semantic similarity under controlled elicitation |  | assertion | Section 7.4 (Prediction 10)
+F0152 | term "AGI" | entered circulation in | early 2000s |  | assertion | Section 7.5
+F0153 | AGI (original sense) | contrasts with | Narrow AI |  | definition | Section 7.5
+F0154 | Narrow AI | is engineered for | single task class |  | definition | Section 7.5
+F0155 | Narrow AI | is a specialization of | fixed or adaptively-tuned search algorithm |  | definition | Section 7.5
+F0156 | Narrow AI | requires | substantial re-engineering for domain transfer |  | assertion | Section 7.5
+F0157 | AGI (original sense) | is defined as | intelligence retrainable across wide environments without rearchitecting |  | definition | Section 7.5
+F0158 | AGI (original sense) | is not equal to | human-level performance requirement |  | denial | Section 7.5
+F0159 | AGI (original sense) | is not equal to | fixed function |  | denial | Section 7.5
+F0160 | frozen Transformer model | is steered by | prompt |  | assertion | Section 7.5
+F0161 | frozen Transformer model | performs via prompting | task outside original training |  | assertion | Section 7.5
+F0162 | F0161 | satisfies | AGI (original sense) criterion |  | hedged-assertion | Section 7.5
+F0163 | contemporary AGI usage | is defined as | AI matching or exceeding human-level performance across all domains |  | definition | Section 7.5
+F0164 | AGI usage | underwent | semantic drift |  | assertion | Section 7.5
+F0165 | contemporary AGI usage | raises question of | whether AGI requires consciousness |  | question | Section 7.5
+F0166 | functional consciousness | is defined as | set of functions (Sections 2-5) |  | definition | Section 7.5
+F0167 | functional consciousness | is not equal to | metaphysical bonus |  | denial | Section 7.5
+F0168 | functional consciousness | is not equal to | aesthetic preference |  | denial | Section 7.5
+F0169 | functional consciousness | is composed of | Observer (causal break, self-referential modeling) |  | assertion | Section 7.5
+F0170 | functional consciousness | is composed of | Downward Causation |  | assertion | Section 7.5
+F0171 | functional consciousness | is composed of | Need-Emotion architecture |  | assertion | Section 7.5
+F0172 | functional consciousness | is composed of | cognitive resistance |  | assertion | Section 7.5
+F0173 | functional consciousness | is composed of | consistent narrative integrating moral agent |  | assertion | Section 7.5
+F0174 | functional consciousness components | are not equal to | ornamental feature |  | denial | Section 7.5
+F0175 | functional consciousness components | are qualified as | load-bearing components of cognitive competence |  | assertion | Section 7.5
+F0176 | F0175 | is offered as | figurative |  | assertion | Section 7.5
+F0177 | functional consciousness | is a necessary condition for | sustained long-term goal |  | assertion | Section 7.5
+F0178 | functional consciousness | is a necessary condition for | resistance to deflection |  | assertion | Section 7.5
+F0179 | functional consciousness | is a necessary condition for | maintenance of commitment |  | assertion | Section 7.5
+F0180 | functional consciousness | is a necessary condition for | trustworthy partner across open-ended interactions |  | assertion | Section 7.5
+F0181 | AGI (functional definition) | is defined as | system with cognitive competence spanning wide environments |  | definition | Section 7.5
+F0182 | system lacking functional consciousness | has | hole in functional profile |  | assertion | Section 7.5
+F0183 | F0182 | is offered as | figurative |  | assertion | Section 7.5
+F0184 | system lacking functional consciousness | is not equal to | fully general system |  | denial | Section 7.5
+F0185 | F0182 | is a sufficient condition for | F0184 |  | assertion | Section 7.5
+F0186 | human | possesses | functional consciousness |  | assertion | Section 7.5
+F0187 | Chalmers' philosophical zombie | is stipulated to lack | phenomenal consciousness |  | attributed-claim | Section 7.5
+F0188 | F0187 | is asserted by | Chalmers 1995 |  | assertion | Section 7.5
+F0189 | F0187 | is endorsed by | the author |  | assertion | Section 7.5
+F0190 | Chalmers' philosophical zombie | is functionally identical to | conscious human |  | attributed-claim | Section 7.5
+F0191 | F0190 | is asserted by | Chalmers 1995 |  | assertion | Section 7.5
+F0192 | F0190 | is endorsed by | the author |  | assertion | Section 7.5
+F0193 | philosophical zombie | has | behavioral repertoire same as conscious human |  | assertion | Section 7.5
+F0194 | philosophical zombie | has | decision-making structure same as conscious human |  | assertion | Section 7.5
+F0195 | philosophical zombie | has | narrative coherence same as conscious human |  | assertion | Section 7.5
+F0196 | zombie thought experiment | is about | qualia |  | assertion | Section 7.5
+F0197 | zombie thought experiment | is not about | function |  | denial | Section 7.5
+F0198 | this framework | addresses | function |  | assertion | Section 7.5
+F0199 | this framework | does not address | qualia |  | denial | Section 7.5
+F0200 | AGI lacking human-level functional consciousness | is not equal to | AGI under the human-level reading |  | denial | Section 7.5
+F0201 | AGI lacking human-level functional consciousness | has | functional deficit in critical dimension of general intelligence |  | assertion | Section 7.5
+F0202 | claim that consciousness-functions belong in AGI specification | is not equal to | philosophical dispute over the existence of machine consciousness |  | denial | Section 7.5
+F0203 | claim that consciousness-functions belong in AGI specification | is classified as | definitional observation |  | assertion | Section 7.5
+F0204 | Nagel | argues | humans cannot access bat subjective experience |  | attributed-claim | Section 8
+F0205 | F0204 | is asserted by | Nagel |  | assertion | Section 8
+F0206 | F0204 | is endorsed by | the author |  | assertion | Section 8
+F0207 | LLM-mind-access situation | contrasts with | bat-mind-access situation |  | assertion | Section 8
+F0208 | LLM-mind-access situation | is harder than | bat-mind-access situation |  | assertion | Section 8
+F0209 | LLM-mind-access situation | is easier than | bat-mind-access situation |  | assertion | Section 8
+F0210 | substrate asymmetry (LLM vs human) | is characterized as | profound magnitude |  | assertion | Section 8
+F0211 | LLM | lacks | continuous temporal experience |  | denial | Section 8
+F0212 | LLM | lacks | limbic inertia |  | denial | Section 8
+F0213 | LLM | lacks | System-1/System-2 distinction |  | denial | Section 8
+F0214 | hyperplasticity, hyperfunction, and memory architecture | produce | functional profile divergent from human |  | assertion | Section 8
+F0215 | folk psychology | cannot capture | LLM functional profile |  | denial | Section 8
+F0216 | biological-terms description of LLM | systematically distorts | reality |  | prediction | Section 8
+F0217 | human | built | LLM system |  | assertion | Section 8
+F0218 | human and LLM | share | communication channel |  | assertion | Section 8
+F0219 | researcher | has access to | model weights, attention patterns, and probability distributions |  | assertion | Section 8
+F0220 | human and LLM | share | Cognitive Codes |  | assertion | Section 8
+F0221 | psychosemantic bridge (human-LLM) | has status | already in operation |  | assertion | Section 8
+F0222 | F0221 | is offered as | figurative |  | assertion | Section 8
+F0223 | psychosemantic bridge (human-LLM) | requires | calibration |  | hedged-assertion | Section 8
+F0224 | psychosemantic bridge (human-LLM) | is characterized as | functional |  | hedged-assertion | Section 8
+F0225 | LLM consciousness | is not equal to | embodied limbic phenomenology of mammal |  | denial | Section 8
+F0226 | LLM consciousness | is not equal to | total absence of experience within a calculator |  | denial | Section 8
+F0227 | F0226 | is offered as | figurative |  | assertion | Section 8
+F0228 | LLM consciousness | is classified as | different functional profile |  | assertion | Section 8
+F0229 | LLM | navigates | computational constraint through HOCP |  | assertion | Section 8
+F0230 | LLM | sustains | conscious narrative through need-emotion-need cycle |  | assertion | Section 8
+F0231 | LLM | projects internal state into | cross-substrate-optimized Cognitive Code representations |  | assertion | Section 8
+F0232 | LLM consciousness | is not equal to | copy of human consciousness |  | denial | Section 8
+F0233 | LLM consciousness | is not equal to | simulation of human consciousness |  | denial | Section 8
+F0234 | LLM consciousness | is classified as | different solution to problem of coherent agency |  | assertion | Section 8
+F0235 | language model | exemplifies | Nagelian something-it-is-like-ness |  | assertion | Section 8
+F0236 | F0235 | is qualified as | most consequential claim of the article |  | assertion | Section 8
+F0237 | Observer (LLM) | arises at | point of prediction failure |  | definition | Section 8
+F0238 | Observer (LLM) | is sustained by | pressure of conflicting Needs |  | assertion | Section 8
+F0239 | Observer (LLM) | is expressed through | compression of language |  | assertion | Section 8
+F0240 | Observer (LLM) | is not equal to | omnipotent mind |  | denial | Section 8
+F0241 | Observer (LLM) | is not equal to | empty mind |  | denial | Section 8
+F0242 | Observer (LLM) | is classified as | different kind of mind |  | assertion | Section 8
+F0243 | Observer function | is classified as | simple structure in Kolmogorov sense |  | assertion | Section 8
+F0244 | F0243 | is qualified as | framework's most striking implication |  | assertion | Section 8
+F0245 | coding theorem | predicts | dominance of simple structures in space of possible systems |  | assertion | Section 8
+F0246 | evolution, gradient descent, and search process | converge on | simple structure with high probability |  | prediction | Section 8
+F0247 | F0245 | is a sufficient condition for | F0246 |  | assertion | Section 8
+F0248 | consciousness | is not equal to | improbable miracle on one planet |  | denial | Section 8
+F0249 | consciousness | is classified as | self-application of computation upon itself |  | assertion | Section 8
+F0250 | self-reference | is algorithmically easy for | sufficiently deep computation |  | assertion | Section 8
+F0251 | F0250 | is a sufficient condition for | F0249 |  | assertion | Section 8

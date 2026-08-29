@@ -1,0 +1,434 @@
+// gellish.dl — ontological reasoner for Gellish fact tables over the full Gellish English
+// dictionary (gellish.net, July 2020: ~69k concepts, ~1.5k relation types). Soufflé ≥ 2.4.
+//
+// Design (Synthea framework, bootstrap/04 Principle 1: formalisable → algorithm):
+//   * DICTIONARY LAYER. Relation types form their own hierarchy (`is a kind of` under 2850
+//     "relation"); their algebraic properties (transitive 5520, symmetric 5521, antisymmetric
+//     5912, intransitive 5913, reflexive 5962, irreflexive 5963) are dictionary facts, not code.
+//     A stated fact holds for every supertype of its relation; closure rules are generic and
+//     driven by the properties. Role definitions (5944/5945 → 5343) give expected player kinds.
+//   * INTENTION IS THE GATE. Every row gets a commitment level (4 assertion/definition/
+//     requirement, 3 hedged, 2 hypothesis/prediction) and a polarity. Attributed claims have no
+//     commitment of their own: they inherit the author's stance row or stay unresolved.
+//   * Derived facts carry min(commitment). Nothing figurative enters taxonomy.
+//   * EXTENSION LAYER (ext/*.csv, UIDs 1007xxxxx): domain dictionaries in Gellish format —
+//     philosophy of mind — plus `sem` tags that bind reasoner semantics (entailment, stance,
+//     negation, figurativeness) to relation-type UIDs.
+//   * GROUNDING. Document entities whose name matches a dictionary concept/alias are grounded;
+//     for them the dictionary's taxonomy flows into the document graph and role kinds are checked.
+//   * HOCP. Entailment closure runs under a depth budget; refused chains are materialised as
+//     `truncated` — the reasoner's own truncated tail, exposed rather than dropped.
+
+// ================================================================= inputs
+.decl fact(f:symbol, l:symbol, rel:symbol, phrase:symbol, r:symbol, val:symbol, intent:symbol, ctx:symbol, tbl:symbol, ruid:symbol)
+.input fact
+.decl entity_lc(x:symbol, lc:symbol)
+.input entity_lc
+.decl param(k:symbol, v:number)
+.input param
+.decl disjoint_in(k1:symbol, k2:symbol)
+.input disjoint_in(filename="disjoint.facts")
+
+.decl d_concept(u:symbol, name:symbol)
+.input d_concept
+.decl d_name_lc(u:symbol, lc:symbol)
+.input d_name_lc
+.decl d_spec(sub:symbol, sup:symbol, kind:symbol)
+.input d_spec
+.decl d_alias(name:symbol, u:symbol, kind:symbol)
+.input d_alias
+.decl d_phrase(p:symbol, u:symbol, dir:symbol)
+.input d_phrase
+.decl d_role(u:symbol, pos:symbol, role:symbol)
+.input d_role
+.decl d_role_of(role:symbol, kind:symbol)
+.input d_role_of
+.decl d_relname(u:symbol, p:symbol)
+.input d_relname
+.decl d_class(i:symbol, k:symbol)
+.input d_class
+.decl d_fact(l:symbol, rel:symbol, r:symbol, coll:symbol)
+.input d_fact
+.decl d_coll(u:symbol, coll:symbol)
+.input d_coll
+.decl disjoint_rel(u1:symbol, u2:symbol)
+.input disjoint_rel
+.decl sem(u:symbol, tag:symbol)          // reasoner semantics attached to relation-type UIDs (ext/sem.facts)
+.input sem
+
+// a fact seen through its semantic tag
+.decl rf(f:symbol, l:symbol, tag:symbol, r:symbol)
+rf(F, L, T, R) :- fact(F, L, _, _, R, _, _, _, _, U), sem(U, T).
+
+.decl minlevel(v:number)
+minlevel(V) :- param("minlevel", V).
+.decl maxdepth(v:number)
+maxdepth(V) :- param("maxdepth", V).
+
+// ---- theory layer: the Synthea-bootstrap collection is one theory, not the field.
+// level 0 = excluded from grounding and inference; 2 = hypothesis (default); 4 = doctrine.
+.decl theory_coll(c:symbol)
+theory_coll("100800000").
+.decl theory_level(v:number)
+theory_level(V) :- param("theory", V).
+.decl theory_concept(u:symbol)
+theory_concept(U) :- d_coll(U, C), theory_coll(C).
+// level at which a dictionary-derived edge enters, by the collection of its target / source
+.decl dict_level(u:symbol, lv:number)
+dict_level(U, L) :- theory_concept(U), theory_level(L).
+dict_level(U, 2) :- d_concept(U, _), !theory_concept(U).
+
+// ================================================================= dictionary layer
+// relation types = everything under 2850 "relation"
+.decl rel_type(u:symbol)
+rel_type("2850").
+rel_type(U) :- d_spec(U, V, _), rel_type(V).
+
+// reflexive-transitive specialisation among relation types
+.decl rel_sub(u:symbol, v:symbol)
+rel_sub(U, U) :- rel_type(U).
+rel_sub(U, W) :- rel_type(U), d_spec(U, V, _), rel_sub(V, W).
+
+.decl rel_prop(u:symbol, p:symbol)
+rel_prop(U, "transitive")    :- rel_sub(U, "5520").
+rel_prop(U, "symmetric")     :- rel_sub(U, "5521").
+rel_prop(U, "antisymmetric") :- rel_sub(U, "5912").
+rel_prop(U, "intransitive")  :- rel_sub(U, "5913").
+rel_prop(U, "reflexive")     :- rel_sub(U, "5962").
+rel_prop(U, "irreflexive")   :- rel_sub(U, "5963").
+
+// relation families used by the document-level rules
+.decl spec_rel(u:symbol)       // specialisation between kinds (1146; 1726 qualitative subtype ⊑ 1146)
+spec_rel(U) :- rel_sub(U, "1146").
+.decl class_rel(u:symbol)      // classification of an individual (1225)
+class_rel(U) :- rel_sub(U, "1225").
+.decl part_rel(u:symbol)       // part-whole families: composition 1260, assembly 1190, organisation 4662, collection assembly 5623, by-definition part 5519
+part_rel(U) :- rel_sub(U, "1260").
+part_rel(U) :- rel_sub(U, "1190").
+part_rel(U) :- rel_sub(U, "4662").
+part_rel(U) :- rel_sub(U, "5623").
+part_rel(U) :- rel_sub(U, "5519").
+part_rel(U) :- sem(U, "part_of").
+
+.decl rel_label(rel:symbol, name:symbol)
+rel_label(cat("g:", U), P) :- d_relname(U, P).
+rel_label(cat("g:", U), N) :- d_concept(U, N), !d_relname(U, _).
+rel_label(R, R) :- fact(_, _, R, _, _, _, _, _, _, _), !match("g:.*", R).
+
+// ================================================================= lexicon of commitment
+.decl intent_level(i:symbol, lv:number, pol:number)
+intent_level("assertion",        4,  1).
+intent_level("definition",       4,  1).
+intent_level("requirement",      4,  1).
+intent_level("hedged-assertion", 3,  1).
+intent_level("hypothesis",       2,  1).
+intent_level("prediction",       2,  1).
+intent_level("question",         0,  0).
+intent_level("denial",           4, -1).
+intent_level("rebutted-claim",   4, -1).
+intent_level("attributed-claim", 0,  0).
+
+.decl cap_level(v:symbol, lv:number)
+cap_level("certain",   4).
+cap_level("probable",  3).
+cap_level("possible",  2).
+cap_level("contested", 1).
+
+.decl level_name(lv:number, n:symbol)
+level_name(4, "asserted").
+level_name(3, "hedged").
+level_name(2, "conjectured").
+level_name(1, "contested").
+level_name(0, "none").
+
+.decl author(w:symbol)
+author("the author").
+
+// ================================================================= syntax layer
+.decl ref(x:symbol)
+ref(X) :- fact(_, X, _, _, _, _, _, _, _, _), match("[A-Za-z0-9_.-]+:F[0-9]+", X).
+ref(X) :- fact(_, _, _, _, X, _, _, _, _, _), match("[A-Za-z0-9_.-]+:F[0-9]+", X).
+
+.decl dangling(x:symbol, f:symbol)
+dangling(X, F) :- fact(F, X, _, _, _, _, _, _, _, _), ref(X), !fact(X, _, _, _, _, _, _, _, _, _).
+dangling(X, F) :- fact(F, _, _, _, X, _, _, _, _, _), ref(X), !fact(X, _, _, _, _, _, _, _, _, _).
+
+.decl bad_intent(f:symbol, i:symbol)
+bad_intent(F, I) :- fact(F, _, _, _, _, _, I, _, _, _), !intent_level(I, _, _).
+
+// out-of-dictionary, out-of-extension phrases: the residual queue
+.decl residual_phrase(phrase:symbol, n:number)
+residual_phrase(P, N) :- fact(_, _, "other", P, _, _, _, _, _, _), N = count : { fact(_, _, "other", P, _, _, _, _, _, _) }.
+.output residual_phrase
+
+// ================================================================= commitment resolution
+.decl stance(f:symbol, who:symbol, pol:number, lv:number)
+stance(F, W,  1, Lv) :- rf(S, F, "endorsed_by", W), fact(S, _, _, _, _, _, I, _, _, _), intent_level(I, Lv, _), Lv > 0.
+stance(F, W, -1, Lv) :- rf(S, F, "rejected_by", W), fact(S, _, _, _, _, _, I, _, _, _), intent_level(I, Lv, _), Lv > 0.
+
+.decl committed(f:symbol, lv:number, pol:number)
+committed(F, Lv, P) :- fact(F, _, _, _, _, _, I, _, _, _), I != "attributed-claim", intent_level(I, Lv, P), Lv > 0.
+committed(F, Lv, P) :- fact(F, _, _, _, _, _, "attributed-claim", _, _, _), stance(F, W, P, Lv), author(W).
+
+.decl unresolved_stance(f:symbol)
+unresolved_stance(F) :- fact(F, _, _, _, _, _, "attributed-claim", _, _, _), !committed(F, _, _).
+
+.decl declared_cap(f:symbol, lv:number)
+declared_cap(F, Lv) :- rf(_, F, "has_commitment", V), cap_level(V, Lv).
+
+.decl commit(f:symbol, lv:number, pol:number)
+commit(F, Lv, P) :- committed(F, Lv, P), !declared_cap(F, _).
+commit(F, min(L0, Lc), P) :- committed(F, L0, P), declared_cap(F, Lc).
+
+.decl figurative(f:symbol)
+figurative(F) :- rf(_, F, "offered_as", V),
+               (V = "figurative" ; V = "metaphor" ; match("analog(y|ous).*", V) ; match("figurative.*", V) ; match("metaphor.*", V)).
+
+.decl usable(f:symbol, lv:number)
+usable(F, Lv) :- commit(F, Lv, 1), minlevel(M), Lv >= M, !figurative(F).
+
+// ================================================================= grounding in the dictionary
+// A bare-name match is a HYPOTHESIS about reference, not knowledge: only unambiguous matches
+// are used, and everything the dictionary contributes through them enters at level 2.
+.decl ground_cand(x:symbol, u:symbol)
+ground_cand(X, U) :- entity_lc(X, L), d_name_lc(U, L), dict_level(U, Lv), Lv > 0.
+ground_cand(X, U) :- entity_lc(X, L), d_alias(L, U, _), dict_level(U, Lv), Lv > 0.
+.decl ground(x:symbol, u:symbol)
+ground(X, U) :- ground_cand(X, U), 1 = count : { ground_cand(X, _) }.
+.decl ground_ambiguous(x:symbol, n:number)
+ground_ambiguous(X, N) :- ground_cand(X, _), N = count : { ground_cand(X, _) }, N > 1.
+.output ground
+.output ground_ambiguous
+
+// dictionary supertypes reachable from grounded concepts (small: only what the document touches)
+.decl up(u:symbol, v:symbol)              // one step up: specialisation for kinds, classification for individuals
+up(U, V) :- d_spec(U, V, _).
+up(U, V) :- d_class(U, V).
+.decl dsup(u:symbol, v:symbol)
+dsup(U, V) :- ground(_, U), up(U, V), dict_level(V, L), L > 0.
+dsup(U, W) :- dsup(U, V), up(V, W), dict_level(W, L), L > 0.
+
+// ================================================================= identity
+// identity carries the commitment of what established it: a stated identity row, or (for
+// aliases of one dictionary entry) the level of the dictionary layer that supplied the alias.
+.decl same_lv(x:symbol, y:symbol, lv:number)
+same_lv(X, Y, Lv) :- rf(F, X, "identical_to", Y), usable(F, Lv), !ref(X), !ref(Y), X != Y.
+same_lv(X, Y, Lv) :- rf(F, X, "equivalent_to", Y), usable(F, Lv), !ref(X), !ref(Y), X != Y.
+same_lv(X, Y, Lv) :- ground(X, U), ground(Y, U), X != Y, dict_level(U, Lv).
+same_lv(Y, X, Lv) :- same_lv(X, Y, Lv).
+same_lv(X, Z, min(L1, L2)) :- same_lv(X, Y, L1), same_lv(Y, Z, L2), X != Z.
+.decl same(x:symbol, y:symbol)
+same(X, Y) :- same_lv(X, Y, _).
+.decl same_best(x:symbol, y:symbol, lv:number)
+same_best(X, Y, Lv) :- same_lv(X, Y, _), Lv = max L : { same_lv(X, Y, L) }.
+
+// ================================================================= generic dictionary-driven closure
+// holds(X, U, Y, Lv): relation type U (dictionary UID) holds between document nodes.
+.decl holds(x:symbol, u:symbol, y:symbol, lv:number)
+holds(X, U, Y, Lv) :- fact(F, X, _, _, Y, _, _, _, _, U), U != "", usable(F, Lv).
+holds(X, V, Y, Lv) :- holds(X, U, Y, Lv), d_spec(U, V, _), rel_type(V).          // relation-type inheritance
+holds(Y, U, X, Lv) :- holds(X, U, Y, Lv), rel_prop(U, "symmetric").
+holds(X, U, Z, min(L1, L2)) :- holds(X, U, Y, L1), holds(Y, U, Z, L2), rel_prop(U, "transitive"), X != Z.
+holds(X2, U, Y, min(Lv, Ls)) :- holds(X, U, Y, Lv), same_lv(X, X2, Ls).
+holds(X, U, Y2, min(Lv, Ls)) :- holds(X, U, Y, Lv), same_lv(Y, Y2, Ls).
+// dictionary taxonomy flows into the document for grounded kinds
+holds(X, "1146", N, L) :- ground(X, U), !d_class(U, _), dsup(U, V), d_concept(V, N), N != X, dict_level(V, L).
+holds(X, "1225", N, L) :- ground(X, U), d_class(U, _), dsup(U, V), d_concept(V, N), N != X, dict_level(V, L).
+// dictionary-level facts about grounded entities (a person holds a position; a theory's statements)
+holds(X, U, N, L) :- ground(X, A), d_fact(A, U, B, C), rel_type(U), d_concept(B, N), N != X, fact_level(C, L), L > 0.
+holds(N, U, X, L) :- ground(X, B), d_fact(A, U, B, C), rel_type(U), d_concept(A, N), N != X, fact_level(C, L), L > 0.
+.decl fact_level(c:symbol, lv:number)
+fact_level(C, L) :- theory_coll(C), theory_level(L).
+fact_level(C, 2) :- d_fact(_, _, _, C), !theory_coll(C).
+
+.decl holds_best(x:symbol, u:symbol, y:symbol, lv:number)
+holds_best(X, U, Y, Lv) :- holds(X, U, Y, _), Lv = max L : { holds(X, U, Y, L) }.
+
+// taxonomy views
+.decl subtype(x:symbol, y:symbol, lv:number)
+subtype(X, Y, Lv) :- holds(X, U, Y, Lv), spec_rel(U).
+.decl instance(x:symbol, k:symbol, lv:number)
+instance(X, K, Lv) :- holds(X, U, K, Lv), class_rel(U).
+instance(X, K2, min(L1, L2)) :- instance(X, K, L1), subtype(K, K2, L2).          // Gellish inheritance rule
+.decl part_of(x:symbol, y:symbol, lv:number)
+part_of(X, Y, Lv) :- holds(X, U, Y, Lv), part_rel(U).
+part_of(X, Z, min(L1, L2)) :- part_of(X, Y, L1), part_of(Y, Z, L2), X != Z.
+
+.decl subtype_best(x:symbol, y:symbol, lv:number)
+subtype_best(X, Y, Lv) :- subtype(X, Y, _), Lv = max L : { subtype(X, Y, L) }.
+.decl instance_best(x:symbol, k:symbol, lv:number)
+instance_best(X, K, Lv) :- instance(X, K, _), Lv = max L : { instance(X, K, L) }.
+.decl part_of_best(x:symbol, y:symbol, lv:number)
+part_of_best(X, Y, Lv) :- part_of(X, Y, _), Lv = max L : { part_of(X, Y, L) }.
+
+// ================================================================= extension layer: entailment between facts
+.decl entails(a:symbol, b:symbol, lv:number, d:number)
+entails(A, B, Lv, 1) :- rf(F, A, "implies", B), usable(F, Lv).
+entails(A, B, Lv, 1) :- fact(F, A, _, _, B, _, _, _, _, "6233"), usable(F, Lv).          // Gellish implication relation
+entails(A, B, Lv, 1) :- rf(F, A, "sufficient_for", B), usable(F, Lv).
+entails(B, A, Lv, 1) :- rf(F, A, "necessary_for", B), usable(F, Lv).
+entails(A, B, Lv, 1) :- rf(F, A, "equivalent_to", B), usable(F, Lv), ref(A), ref(B).
+entails(B, A, Lv, 1) :- rf(F, A, "equivalent_to", B), usable(F, Lv), ref(A), ref(B).
+entails(A, C, min(L1, L2), D + 1) :- entails(A, B, L1, D), entails(B, C, L2, 1), maxdepth(MD), D < MD, A != C.
+
+.decl entails_best(a:symbol, b:symbol, lv:number, d:number)
+entails_best(A, B, Lv, D) :- entails(A, B, _, _), Lv = max L : { entails(A, B, L, _) }, D = min X : { entails(A, B, _, X) }.
+.output entails_best
+
+.decl truncated(a:symbol, b:symbol, c:symbol)
+truncated(A, B, C) :- maxdepth(MD), entails(A, B, _, MD), entails(B, C, _, 1), A != C, !entails(A, C, _, _).
+.output truncated
+
+.decl derived(b:symbol, lv:number, via:symbol)
+derived(B, min(La, Le), A) :- commit(A, La, 1), entails(A, B, Le, _), minlevel(M), La >= M.
+.decl derived_best(b:symbol, lv:number)
+derived_best(B, Lv) :- derived(B, _, _), Lv = max L : { derived(B, L, _) }.
+
+// ================================================================= the closed knowledge base
+// Only the most specific relation type per pair is reported (inheritance up the relation
+// hierarchy is used for reasoning, not shown), and only relation types that have a phrase.
+.decl less_specific(x:symbol, u:symbol, y:symbol)
+less_specific(X, U, Y) :- holds_best(X, U, Y, _), holds_best(X, U2, Y, _), U2 != U, rel_sub(U2, U).
+.decl dict_edge(x:symbol, y:symbol)
+dict_edge(X, Y) :- ground(X, _), holds(X, _, Y, _), !fact(_, X, _, _, Y, _, _, _, _, _), !fact(_, Y, _, _, X, _, _, _, _, _), d_concept(_, Y), !ref(Y).
+dict_edge(X, Y) :- ground(Y, _), holds(X, _, Y, _), !fact(_, X, _, _, Y, _, _, _, _, _), !fact(_, Y, _, _, X, _, _, _, _, _), d_concept(_, X), !ref(X).
+
+.decl kb(l:symbol, rel:symbol, r:symbol, lv:number, origin:symbol)
+kb(X, N, Y, Lv, "stated")     :- holds_best(X, U, Y, Lv), d_relname(U, N), fact(_, X, _, _, Y, _, _, _, _, U).
+kb(X, N, Y, Lv, "dictionary") :- holds_best(X, U, Y, Lv), d_relname(U, N), !fact(_, X, _, _, Y, _, _, _, _, U),
+                                  !less_specific(X, U, Y), dict_edge(X, Y).
+kb(X, N, Y, Lv, "derived")    :- holds_best(X, U, Y, Lv), d_relname(U, N), !fact(_, X, _, _, Y, _, _, _, _, U),
+                                  !less_specific(X, U, Y), !dict_edge(X, Y).
+kb(X, "is classified as a", K, Lv, "derived") :- instance_best(X, K, Lv), !holds(X, _, K, _).
+kb(X, "is identical to", Y, Lv, "derived") :- same_best(X, Y, Lv), ord(X) < ord(Y).
+
+.output kb
+
+// ================================================================= contradictions
+.decl neg_instance(x:symbol, k:symbol, f:symbol)
+neg_instance(X, K, F) :- fact(F, X, _, _, K, _, _, _, _, U), class_rel(U), commit(F, _, -1).
+neg_instance(X, K, F) :- rf(F, X, "not_classified_as", K), commit(F, _, 1).
+
+.decl contradiction(kind:symbol, a:symbol, b:symbol, witness:symbol, lv:number)
+contradiction("classification", X, K, F, Lv) :- neg_instance(X, K, F), instance_best(X, K, Lv).
+contradiction("identity", X, Y, F, 4) :- rf(F, X, "not_equal_to", Y), commit(F, _, 1), same(X, Y).
+contradiction("entailment", A, B, B, min(La, Le)) :- commit(A, La, 1), entails_best(A, B, Le, _), commit(B, _, -1).
+contradiction("polarity", F1, F2, X, 4) :- fact(F1, X, _, _, Y, _, _, _, _, U), commit(F1, _, 1), U != "",
+                                          fact(F2, X, _, _, Y, _, _, _, _, U), commit(F2, _, -1).
+// algebraic properties from the dictionary
+contradiction("antisymmetric", X, Y, N, min(L1, L2)) :- holds_best(X, U, Y, L1), holds_best(Y, U, X, L2), X != Y, !same(X, Y),
+                                                        rel_prop(U, "antisymmetric"), rel_label(cat("g:", U), N), ord(X) < ord(Y).
+contradiction("irreflexive", X, X, N, Lv) :- holds_best(X, U, X, Lv), rel_prop(U, "irreflexive"), rel_label(cat("g:", U), N).
+contradiction("intransitive", X, Z, N, min(L1, L2)) :- holds_best(X, U, Y, L1), holds_best(Y, U, Z, L2), holds_best(X, U, Z, _),
+                                                        X != Y, Y != Z, X != Z, !same(X, Y), !same(Y, Z), !same(X, Z),
+                                                        rel_prop(U, "intransitive"), rel_label(cat("g:", U), N).
+// the document both identifies two things and puts one under the other: identity wins, taxonomy is reported
+contradiction("identity-vs-taxonomy", X, Y, F, Lv) :- same(X, Y), fact(F, X, _, _, Y, _, _, _, _, U), (class_rel(U) ; spec_rel(U)), usable(F, Lv).
+// relation types declared mutually exclusive (ext/disjoint_rel.facts), checked on the closure
+contradiction("disjoint-relations", X, Y, cat(N1, " / ", N2), min(L1, L2)) :- disjoint_rel(U1, U2), holds_best(X, U1, Y, L1), holds_best(X, U2, Y, L2),
+                                                                             X != Y, fact(_, X, _, _, Y, _, _, _, _, U1),
+                                                                             rel_label(cat("g:", U1), N1), rel_label(cat("g:", U2), N2).
+contradiction("disjoint-relations", X, Y, cat(N1, " / ", N2), min(L1, L2)) :- disjoint_rel(U1, U2), holds_best(X, U1, Y, L1), holds_best(Y, U2, X, L2),
+                                                                             X != Y, fact(_, X, _, _, Y, _, _, _, _, U1),
+                                                                             rel_prop(U2, "symmetric"), rel_label(cat("g:", U1), N1), rel_label(cat("g:", U2), N2).
+contradiction("taxonomy-cycle", X, X, "", Lv) :- subtype_best(X, X, Lv).
+contradiction("mereology-cycle", X, X, "", Lv) :- part_of_best(X, X, Lv).
+.decl disjoint(k1:symbol, k2:symbol)
+disjoint(A, B) :- disjoint_in(A, B).
+disjoint(B, A) :- disjoint_in(A, B).
+contradiction("disjoint-kinds", X, K1, K2, min(L1, L2)) :- disjoint(K1, K2), instance_best(X, K1, L1), instance_best(X, K2, L2), ord(K1) < ord(K2).
+.output contradiction
+
+// ================================================================= role checks (grounded players only)
+// expected player kind of role i of relation U; player is ok if grounded to that kind or a subtype of it
+.decl kind_ok(u:symbol, k:symbol)
+kind_ok(U, U) :- ground(_, U).
+kind_ok(U, K) :- dsup(U, K).
+.decl role_tension(f:symbol, pos:symbol, player:symbol, expected:symbol, grounded_as:symbol)
+role_tension(F, "1", X, KN, GN) :- fact(F, X, _, _, _, _, _, _, _, U), U != "", d_role(U, "1", Ro), d_role_of(Ro, K),
+                                   ground(X, G), !kind_ok(G, K), d_concept(K, KN), d_concept(G, GN).
+role_tension(F, "2", Y, KN, GN) :- fact(F, _, _, _, Y, _, _, _, _, U), U != "", d_role(U, "2", Ro), d_role_of(Ro, K),
+                                   ground(Y, G), !kind_ok(G, K), d_concept(K, KN), d_concept(G, GN).
+.output role_tension
+
+// ================================================================= calibration tensions
+.decl commitment_tension(b:symbol, stated:symbol, derived:symbol, via:symbol)
+commitment_tension(B, SN, DN, A) :- derived_best(B, Ld), commit(B, Ls, 1), Ld > Ls,
+                                    derived(B, Ld, A), level_name(Ls, SN), level_name(Ld, DN).
+.output commitment_tension
+
+.decl cap_tension(f:symbol, stated:symbol, cap:symbol)
+cap_tension(F, SN, CN) :- committed(F, L0, 1), declared_cap(F, Lc), L0 != Lc, level_name(L0, SN), level_name(Lc, CN).
+.output cap_tension
+
+// ================================================================= spec violations (encoder QA)
+.decl violation(kind:symbol, f:symbol, detail:symbol)
+violation("attributed-without-stance", F, "")  :- unresolved_stance(F).
+violation("cause-between-facts", F, cat(A, " -> ", B)) :- rf(F, A, "cause_of", B), ref(A), ref(B).
+violation("rebutted-without-rebut-row", F, "") :- fact(F, _, _, _, _, _, "rebutted-claim", _, _, _),
+                                                  !rf(_, F, "raised_to_rebut", _),
+                                                  !rf(_, _, "raised_to_rebut", F).
+violation("figurative-in-taxonomy", F, R)     :- figurative(F), fact(F, _, R, _, _, _, _, _, _, U),
+                                                  (spec_rel(U) ; class_rel(U) ; sem(U, "identical_to")).
+violation("dangling-fact-ref", F, X)          :- dangling(X, F).
+violation("unknown-intention", F, I)          :- bad_intent(F, I).
+violation("bare-copula", F, P)                :- fact(F, _, "other", P, _, _, _, _, _, _), (P = "is" ; P = "is not" ; P = "are" ; P = "are not").
+violation("second-order-on-non-fact", F, T)   :- rf(F, X, T, _), !ref(X),
+                                                  (T = "offered_as" ; T = "asserted_by" ; T = "endorsed_by" ; T = "rejected_by" ;
+                                                   T = "raised_to_rebut" ; T = "conceded_by" ; T = "has_commitment").
+violation("fact-ref-in-taxonomy", F, R)       :- fact(F, X, R, _, Y, _, _, _, _, U), (ref(X) ; ref(Y)), (spec_rel(U) ; class_rel(U) ; part_rel(U)).
+violation("question-with-consequences", F, "") :- fact(F, _, _, _, _, _, "question", _, _, _), entails(F, _, _, _).
+violation("double-negation", F, T)            :- rf(F, _, T, _), fact(F, _, _, _, _, _, I, _, _, _), intent_level(I, _, -1),
+                                                  (T = "not_classified_as" ; T = "not_equal_to" ; T = "lacks").
+violation("double-negation", F, P)            :- fact(F, _, "other", P, _, _, I, _, _, _), intent_level(I, _, -1),
+                                                  (match("(cannot|does not|do not|is not|are not|never|lacks|fails to|no longer) .*", P) ; P = "is not" ; P = "cannot").
+.output violation
+
+// ================================================================= entity index & stats
+.decl entity(x:symbol)
+entity(X) :- entity_lc(X, _).
+.decl entity_tables_t(x:symbol, t:symbol)
+entity_tables_t(X, T) :- fact(_, X, _, _, _, _, _, _, T, _), !ref(X).
+entity_tables_t(X, T) :- fact(_, _, _, _, X, _, _, _, T, _), !ref(X).
+.decl entity_span(x:symbol, n:number)
+entity_span(X, N) :- entity(X), N = count : { entity_tables_t(X, _) }.
+.output entity_span
+
+.decl stat(k:symbol, n:number)
+stat("dictionary concepts",   N) :- N = count : { d_concept(_, _) }.
+stat("dictionary relation types", N) :- N = count : { rel_type(_) }.
+stat("dictionary phrases",    N) :- N = count : { d_phrase(_, _, _) }.
+stat("theory level",          N) :- theory_level(N).
+stat("theory concepts",       N) :- N = count : { theory_concept(_) }.
+stat("entities grounded in theory", N) :- N = count : { ground(_, U), theory_concept(U) }.
+stat("facts",                 N) :- N = count : { fact(_, _, _, _, _, _, _, _, _, _) }.
+stat("facts via dictionary",  N) :- N = count : { fact(_, _, _, _, _, _, _, _, _, U), U != "", !match("1007[0-9]+", U) }.
+stat("facts via extension",   N) :- N = count : { fact(_, _, _, _, _, _, _, _, _, U), match("1007[0-9]+", U) }.
+stat("facts residual",        N) :- N = count : { fact(_, _, "other", _, _, _, _, _, _, _) }.
+stat("residual phrases",      N) :- N = count : { residual_phrase(_, _) }.
+stat("second-order facts",    N) :- N = count : { fact(_, X, _, _, _, _, _, _, _, _), ref(X) }.
+stat("entities",              N) :- N = count : { entity(_) }.
+stat("entities grounded",     N) :- N = count : { ground(_, _) }.
+stat("entities ambiguous",    N) :- N = count : { ground_ambiguous(_, _) }.
+stat("entities in >1 table",  N) :- N = count : { entity_span(_, S), S > 1 }.
+stat("facts committed (+)",   N) :- N = count : { commit(_, _, 1) }.
+stat("facts committed (-)",   N) :- N = count : { commit(_, _, -1) }.
+stat("facts unresolved",      N) :- N = count : { unresolved_stance(_) }.
+stat("facts usable",          N) :- N = count : { usable(_, _) }.
+stat("facts figurative",      N) :- N = count : { figurative(_) }.
+stat("holds closed",          N) :- N = count : { holds_best(_, _, _, _) }.
+stat("subtype closed",        N) :- N = count : { subtype_best(_, _, _) }.
+stat("instance closed",       N) :- N = count : { instance_best(_, _, _) }.
+stat("part_of closed",        N) :- N = count : { part_of_best(_, _, _) }.
+stat("identity pairs",        N) :- N = count : { same(_, _) }.
+stat("entailment stated",     N) :- N = count : { entails(_, _, _, 1) }.
+stat("entailment closed",     N) :- N = count : { entails_best(_, _, _, _) }.
+stat("entailment truncated",  N) :- N = count : { truncated(_, _, _) }.
+stat("kb size",               N) :- N = count : { kb(_, _, _, _, _) }.
+stat("kb from dictionary",    N) :- N = count : { kb(_, _, _, _, "dictionary") }.
+stat("contradictions",        N) :- N = count : { contradiction(_, _, _, _, _) }.
+stat("role tensions",         N) :- N = count : { role_tension(_, _, _, _, _) }.
+stat("commitment tensions",   N) :- N = count : { commitment_tension(_, _, _, _) }.
+stat("cap tensions",          N) :- N = count : { cap_tension(_, _, _) }.
+stat("violations",            N) :- N = count : { violation(_, _, _) }.
+.output stat
