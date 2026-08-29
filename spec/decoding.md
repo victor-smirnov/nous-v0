@@ -31,6 +31,24 @@ How a hybrid document's tables become prose again. The block is the source; the 
    table itself declares them (`is identical to`, `is a synonym of`).
 6. **No new claims.** Nothing enters the prose that is not a row, a residual, or shell.
 
+## Hard bans (each was found by blind judges and counted as hallucination)
+
+- Never state the author's stance as a sentence ("and we largely accept this", "the author endorses"). A stance
+  row selects the register of the claim it is about; it is never itself said.
+- Never write meta-commentary about the table, the source or the encoding ("listed twice in the source",
+  "the text nowhere equates", "strictly, the rows say"). If two rows disagree, render the source's sentence.
+- Never narrate definitions ("by X we mean", "X is the position whose core thesis is") where the source simply
+  used the term; render a definition row only where the source defined the term.
+- Never add evaluative or theoretical glosses that are not rows of this section.
+- Never insert a qualifier ("apparent", "computational", "functional") into a term the source uses bare, unless a
+  row of this section states the qualified form and the sentence being rendered uses it.
+- Taxonomy rows (`is a kind of`, `is realized in`) are satisfied by using the term correctly, not by a sentence.
+- Length within ±10 % of the source section; longer means you are narrating rows instead of rendering them.
+- Derived blocks are not decoder input unless the run explicitly asks for review-style rendering.
+
+Measured on the article (38 sections, blind Opus judges): with these bans, fidelity 86.6 → 97.8, hallucination
+20.4 → 4.7, epistemic stance 66.8 → 94.1, inversion mass 8 881 → 1 139, length ×1.22 → ×1.02.
+
 ## Output
 
 The prose for the section replaces the prose above its block; the block stays. A pure-prose

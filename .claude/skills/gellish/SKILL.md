@@ -79,10 +79,13 @@ Soufflé and a built dictionary (`nous gellish build-dict --fetch`, once). Outpu
 
 ## /gellish decode <doc.md> [--out prose.md]
 
-Per section, under `decoding.md`: rewrite the prose above the block from the block's rows at
-their stated commitment, using second-order rows only to set register; keep the shell where
-it carries addressee/modality; never narrate a row; never write a fact UID. Then remove the
-fences for the pure-prose output (`--out`), keeping the hybrid document untouched.
+Per section, under `decoding.md` — including its **hard bans** (no narrated stance, no
+meta-commentary, no narrated definitions, no added qualifiers, ±10 % length): rewrite the prose
+above the block from the block's rows at their stated commitment, using second-order rows only
+to set register; keep the shell verbatim wherever the rows it renders are unchanged; never write
+a fact UID; ignore `gellish-derived` blocks unless asked for a review rendering. Then remove the
+fences for the pure-prose output (`--out`), keeping the hybrid document untouched. Decode from
+the *checked* document, not the enriched one.
 
 ## /gellish ask "<node>" · /gellish why <relation> [filters]
 
