@@ -1,6 +1,6 @@
 ---
 name: gellish
-description: Unload reasoning from prose into Gellish fact tables (hybrid prose+ontology documents), check them with the Nous reasoner (contradictions, calibration, provenance), enrich, and render back to prose. Use for /gellish encode|check|decode|ask|why on any Markdown document, and whenever a text's logical structure must be made explicit and verified.
+description: Unload reasoning from prose into Gellish fact tables (hybrid prose+ontology documents), check them with the Nous reasoner (contradictions, calibration, provenance), enrich, and render back to prose. Use for /gellish encode|check|enrich|decode|ask|why on any Markdown document, and whenever a text's logical structure must be made explicit and verified.
 ---
 
 # Gellish: unload, check, load back
@@ -58,6 +58,21 @@ Soufflé and a built dictionary (`nous gellish build-dict --fetch`, once). Outpu
 5. Re-run until the report is clean or every remaining finding is classified and annotated.
    Report: what changed, what remains and why, the theory-disagreement list, and the
    candidate phrases.
+
+## /gellish enrich <doc.md> [--out doc.enriched.md] [--depth 1] [--theory …]
+
+1. `nous gellish enrich doc.md -o doc.enriched.md` — re-runs the check and writes one
+   ```` ```gellish-derived <id> ```` block per section: rows the closure added about the
+   section's entities, intention by derivation level, context = provenance (`derived:
+   closure`, `theory: Synthea`, `field: depth 1`, `gellish: depth 1`, `…: definition`).
+2. Read the derived blocks as a reviewer, not as an author: drop rows that are true but
+   useless for this document (upper-ontology leftovers the top-cut missed, engineering senses
+   of homonyms such as `Transformer → electrical equipment item`), keep rows that a reader of
+   the section would want stated, and note rows that are *surprising* — those are the
+   enrichment's value and go into the report.
+3. Never edit a derived row into a `gellish` block by hand; if a derived fact should become
+   part of the document's own claims, write it as a new stated row with its own intention.
+4. A decode of an enriched document renders derived rows only per `decoding.md` rule 3.
 
 ## /gellish decode <doc.md> [--out prose.md]
 
