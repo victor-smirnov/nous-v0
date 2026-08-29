@@ -31,8 +31,8 @@ nous-v0/
   bootstrap/             Synthea bootstrap 01–06 (source of synthea_bootstrap)
   data/                  gellish.net release + Soufflé export (git-ignored; build-dict --fetch)
   work/                  per-run facts/out/prov (git-ignored)
-  spec/                  encoding-v3.md, decoding.md, hybrid-format.md   (M2)
-  skill/                 the Claude skill (SKILL.md, references/, scripts/)   (M2)
+  spec/                  hybrid-format.md, encoding-v3.md, decoding.md, phrases.md (generated)
+  .claude/skills/gellish/   the Claude skill (SKILL.md + references → spec/); symlinked into ~/.claude/skills
   tests/                 golden regression on tables/article-v1
 ```
 
@@ -102,7 +102,7 @@ core is identical, only the prompt container changes.
 | milestone | content | effort |
 |---|---|---|
 | M1 | extract repo, package, CLI, golden tests, Soufflé check | done 2026-08-29 |
-| M2 | hybrid format, spec v3, phrase list generator, skill (encode/check) | 1–2 days |
+| M2 | hybrid format, spec v3, phrase list generator, skill (encode/check/decode) | done 2026-08-29 |
 | M3 | enrich export (top-cut, definitions, provenance column), diff, decode spec | 1 day |
 | M4 | article run: encode → check → repair → enrich → decode → judge | 1–2 days, mostly model time |
 | M5 | Codex port | ½ day |
@@ -111,4 +111,4 @@ core is identical, only the prompt container changes.
 
 - ~~Repo name~~ `nous-v0`, package `nous`, MIT. Both dictionaries live here.
 - Encoding model for the article run: Opus (cost study) — unless Fable is preferred for frugality.
-- Hybrid container: ```gellish``` fences in Markdown vs. sidecar `.gellish` files. Fences proposed.
+- ~~Hybrid container~~ fences (done).
