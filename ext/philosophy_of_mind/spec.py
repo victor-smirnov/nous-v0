@@ -60,7 +60,7 @@ CONCEPTS = [
     ('explanatory gap', 'epistemic gap', 'The gap between physical description and phenomenal character (Levine).', []),
     ('computational irreducibility', 'aspect', 'The property of a process that cannot be predicted faster than by running it (Wolfram).', []),
     ('irreversible information loss', 'occurrence', 'Destruction of information at a processing bottleneck.', []),
-    ('token bottleneck', 'mechanism', 'In an autoregressive model, the collapse of the output distribution to one token per step.', ['softmax collapse']),
+    ('token bottleneck', ['mechanism', 'occurrence'], 'In an autoregressive model, the collapse of the output distribution to one token per step.', ['softmax collapse']),
     ('downward causation', 'aspect', 'Causation from a higher level of organisation to its constituents; contested in philosophy of mind.', ['DC']),
     ('computational constraint', 'aspect', 'A finite resource of a machine: time, memory, bandwidth.', ['resource constraint']),
     ('intrapersonal intelligence', 'aspect', "Capacity to model and regulate one's own mental states (Gardner).", []),
@@ -113,7 +113,7 @@ CONCEPTS = [
 RELATIONS = [
     ('projection of a state into a code', 'modeling of an object',
      ['is a projection of', 'is a low-dimensional projection of'], ['is projected as', 'projects to'],
-     [], ('projection', 'information'), ('projected state', 'mental state'),
+     [], ('projection', 'anything'), ('projected state', 'anything'),
      'A code is a dimensionality-reducing image of a state.', None),
     ('approximation of a process', 'modeling of an object',
      ['is an approximation of', 'approximates'], ['is approximated by'],

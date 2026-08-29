@@ -57,7 +57,7 @@ CONCEPTS = [
     ('Encounter condition', 'Observer condition', 'The system collides with computational irreducibility while modelling itself.', ['Encounter']),
     ('Conclusion condition', 'Observer condition', "The encounter is converted into 'something here is not reducible to inputs'.", ['Conclusion']),
     ('Action condition', 'Observer condition', 'The conclusion becomes the causal foundation of behaviour.', ['Action']),
-    ('apparent causal break', 'epistemic gap', "The Observer's inability to trace all determinants of its own decisions; the boundary of Self.", ['causal break']),
+    ('apparent causal break', ['epistemic gap', 'state'], "The Observer's inability to trace all determinants of its own decisions; the boundary of Self.", ['causal break']),
     ('computational residual', 'quantity', 'The truncated tail of the metacognitive series: finite, bounded, inaccessible from within.', ['truncated tail', 'irreducible residual']),
     ('computational intractability', 'aspect', 'Determinants exist in the substrate but tracing them exceeds the budget.', []),
     ('higher-order computational phenomenon', 'occurrence', 'A computation observing the operation of the machine on which it runs.', ['HOCP']),
