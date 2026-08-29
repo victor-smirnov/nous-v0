@@ -45,9 +45,12 @@ F0001 | rhetorical | is raised as a challenge to | "not a process, but a conclus
 
 - One block per heading section is the norm; a long section may have several blocks (`S4a`,
   `S4b`) and a short one may share a block with its neighbour.
-- The prose above a block may be the original text (encode step) or a rendering of the block
-  (decode step). A decode never edits the block; an encode never edits the prose except to
-  insert the block.
+- **The prose is verbatim source until a decode replaces it.** An encode inserts blocks and
+  changes nothing else — no summaries, no paraphrase, no trimming: the shell (addressee,
+  modality, first person, rhetoric) is exactly what the tables cannot carry, and the decoder
+  needs it intact. A decode replaces a section's prose with a rendering of its block and
+  never edits the block. Summaries, if wanted, are separate artifacts, never the prose of a
+  hybrid document.
 - Cross-section references in prose ("as argued in §2.2") stay in prose; cross-section
   references between *facts* use global ids.
 

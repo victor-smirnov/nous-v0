@@ -27,12 +27,15 @@ Soufflé and a built dictionary (`nous gellish build-dict --fetch`, once). Outpu
    `S<n>` in order, or a short slug from the heading number (`S2.2`).
 3. For each section, write the ```` ```gellish <id> ```` block under `encoding-v3.md`,
    using only phrases from `phrases.md`, and the ```` ```gellish-residual <id> ```` block
-   for what would not fit. Work exhaustively: completeness over brevity. Do not paraphrase
-   the prose; insert the blocks after the section's text.
+   for what would not fit. Work exhaustively: completeness over brevity. **The prose stays
+   verbatim** — insert the blocks after the section's text and change nothing else; never
+   summarise or paraphrase the section in its place (a summary is not a shell, and the
+   decoder needs the shell).
 4. Prefer producing the document directly. For very long inputs, write one table per section
    to a directory and assemble with `nous gellish inject <file.md> DIR/*.txt -o doc.md`
    (a table's first line `# heading: <heading text>` places it under that heading).
-5. Run `/gellish check` on the result before reporting.
+5. Verify the prose is untouched (`diff <(nous gellish extract … ) …` is not enough — diff the
+   document against the source with the fences stripped), then run `/gellish check`.
 
 ## /gellish check <doc.md> [--theory off|hypothesis|doctrine]
 
