@@ -6,6 +6,8 @@
   nous gellish why <relation> [filters...]          proof trees (after check)
   nous gellish report                               re-render the last report
   nous gellish phrases [-o spec/phrases.md] [--all]  relation-phrase reference for the encoder
+  nous gellish enrich DOC.md [-o OUT.md] [--depth 1] [--no-defs] [--gellish-facts] [--theory ...]   derived rows → gellish-derived blocks
+  nous gellish diff A.md B.md [--theory ...]        semantic diff of two closures
   nous gellish extract DOC.md -o DIR                fenced tables → DIR/<section>.txt
   nous gellish inject DOC.md TABLE... [-o OUT.md]   tables → fenced blocks in the document
 """
@@ -31,6 +33,11 @@ def main(argv=None):
     p = g.add_parser("ask"); p.add_argument("query"); p.add_argument("--work")
     p = g.add_parser("why"); p.add_argument("target", nargs="+", help="relation [filters...] or a raw atom"); p.add_argument("--work")
     p = g.add_parser("report"); p.add_argument("--work")
+    p = g.add_parser("enrich"); p.add_argument("doc"); p.add_argument("-o", "--out"); p.add_argument("--depth", type=int, default=1)
+    p.add_argument("--no-defs", action="store_true"); p.add_argument("--no-derived", action="store_true"); p.add_argument("--gellish-facts", action="store_true")
+    p.add_argument("--theory", choices=["off", "hypothesis", "doctrine"], default="hypothesis"); p.add_argument("--work")
+    p = g.add_parser("diff"); p.add_argument("a"); p.add_argument("b"); p.add_argument("--stated-only", action="store_true")
+    p.add_argument("--theory", choices=["off", "hypothesis", "doctrine"], default="hypothesis"); p.add_argument("--work")
     p = g.add_parser("phrases"); p.add_argument("-o", "--out"); p.add_argument("--all", action="store_true")
     p = g.add_parser("extract"); p.add_argument("doc"); p.add_argument("-o", "--out", required=True)
     p = g.add_parser("inject"); p.add_argument("doc"); p.add_argument("tables", nargs="+"); p.add_argument("-o", "--out")
@@ -56,6 +63,17 @@ def main(argv=None):
     elif a.gcmd == "report":
         from .gellish import report
         sys.stdout.write(report.render(ws.out, ws.facts))
+    elif a.gcmd == "enrich":
+        from .gellish import enrich, run
+        run.check(ws, [a.doc], theory=a.theory, quiet=True)
+        placed = enrich.plan(a.doc, ws.out, a.depth, not a.no_defs, not a.no_derived, a.gellish_facts)
+        out, n = enrich.write(a.doc, placed, a.out)
+        print(f"{n} derived rows → {out}", file=sys.stderr)
+    elif a.gcmd == "diff":
+        from .gellish import diff, run
+        wa, wb = paths.Workspace(ws.work / "diff-a"), paths.Workspace(ws.work / "diff-b")
+        run.check(wa, [a.a], theory=a.theory, quiet=True); run.check(wb, [a.b], theory=a.theory, quiet=True)
+        sys.stdout.write(diff.render(wa.out, wb.out, a.a, a.b, a.stated_only))
     elif a.gcmd == "phrases":
         from .gellish import phrases
         text = phrases.main(a.out, a.all)

@@ -34,6 +34,9 @@ F0001 | rhetorical | is raised as a challenge to | "not a process, but a conclus
   global) or `-`; `category` ∈ {relation-missing, second-order, modality, quantity, temporal,
   rhetorical, other}; `quote` is the source span, ≤ 12 words. These rows are not reasoned
   over; they are counted, listed in the report, and are the backlog for dictionary revisions.
+- A block with info string `gellish-derived <SECTION-ID>` is written by `nous gellish enrich`:
+  rows the reasoner derived about the section's entities, with provenance in the context
+  column. It is output, never input — the reasoner ignores it, `enrich` replaces it.
 - Everything outside the fences is prose and is ignored by the reasoner.
 - A document may carry YAML front matter with `gellish: {spec: 3, ext: [synthea_bootstrap]}`;
   currently informational.

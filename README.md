@@ -29,6 +29,7 @@ python3 -m nous gellish check tables/article-v1/C0*.txt -o REPORT.md
 python3 -m nous gellish ask "causal break"
 python3 -m nous gellish why contradiction
 python3 -m nous gellish check tables/article-v1.hybrid.md      # the same corpus as a hybrid document
+python3 -m nous gellish enrich tables/article-v1.hybrid.md -o work/enriched.md   # derived rows back into the document
 python3 -m nous gellish phrases -o spec/phrases.md
 python3 -m unittest discover tests              # golden regression on the article corpus
 ```
@@ -39,8 +40,8 @@ are git-ignored; `NOUS_DATA=<dir>` relocates both.
 ## Layout
 
 ```
-nous/cli.py               nous gellish build-dict | check | ask | why | report | phrases | extract | inject
-nous/gellish/             dictionary.py  parse.py  reasoner.dl  run.py  report.py  ask.py  why.py  hybrid.py  phrases.py  paths.py
+nous/cli.py               nous gellish build-dict | check | ask | why | report | phrases | extract | inject | enrich | diff
+nous/gellish/             dictionary.py  parse.py  reasoner.dl  run.py  report.py  ask.py  why.py  hybrid.py  phrases.py  enrich.py  diff.py  paths.py
 nous/gellish/ext/builder.py   builder for domain-extension dictionaries
 ext/<name>/spec.py        extension specs (NAME, DEPENDS, build)
 data/dict, data/dictfacts     dictionary release and its Soufflé export (generated)

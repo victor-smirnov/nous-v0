@@ -53,6 +53,8 @@
 .input d_fact
 .decl d_coll(u:symbol, coll:symbol)
 .input d_coll
+.decl d_def(u:symbol, def:symbol)
+.input d_def
 .decl disjoint_rel(u1:symbol, u2:symbol)
 .input disjoint_rel
 .decl sem(u:symbol, tag:symbol)          // reasoner semantics attached to relation-type UIDs (ext/sem.facts)
@@ -214,6 +216,11 @@ up(U, V) :- d_class(U, V).
 .decl dsup(u:symbol, v:symbol)
 dsup(U, V) :- ground(_, U), up(U, V), dict_level(V, L), L > 0.
 dsup(U, W) :- dsup(U, V), up(V, W), dict_level(W, L), L > 0.
+.decl dsup_d(u:symbol, v:symbol, d:number)                 // shortest distance, for the enrichment top-cut
+dsup_d(U, V, 1) :- ground(_, U), up(U, V), dict_level(V, L), L > 0.
+dsup_d(U, W, D + 1) :- dsup_d(U, V, D), up(V, W), dict_level(W, L), L > 0, D < 12.
+.decl dsup_min(u:symbol, v:symbol, d:number)
+dsup_min(U, V, D) :- dsup_d(U, V, _), D = min X : { dsup_d(U, V, X) }.
 
 // ================================================================= identity
 // identity carries the commitment of what established it: a stated identity row, or (for
@@ -311,6 +318,36 @@ kb(X, "is identical to", Y, Lv, "derived") :- same_best(X, Y, Lv), ord(X) < ord(
 
 .output kb
 
+// ================================================================= enrichment export
+// kb rows that are not stated, with their origin — theory (Synthea collection), field (other
+// extension collections), gellish (standard dictionary), derived (closure over document rows) —
+// and, for dictionary ancestry, how far above the grounded concept the target sits.
+.decl coll_origin(u:symbol, o:symbol)
+coll_origin(U, "theory")  :- theory_concept(U).
+coll_origin(U, "field")   :- d_coll(U, C), !theory_coll(C), match("1[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]", C).
+coll_origin(U, "gellish") :- d_concept(U, _), !d_coll(U, _).
+coll_origin(U, "gellish") :- d_coll(U, C), !theory_coll(C), !match("1[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]", C).
+.decl fact_origin(c:symbol, o:symbol)
+fact_origin(C, "theory")  :- theory_coll(C).
+fact_origin(C, "field")   :- d_fact(_, _, _, C), !theory_coll(C), match("1[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]", C).
+fact_origin(C, "gellish") :- d_fact(_, _, _, C), !theory_coll(C), !match("1[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]", C).
+
+.decl dict_anc(x:symbol, y:symbol)
+dict_anc(X, Y) :- ground(X, U), dsup(U, V), d_concept(V, Y).
+.decl dict_fact_edge(x:symbol, y:symbol, o:symbol)
+dict_fact_edge(X, Y, O) :- ground(X, A), d_fact(A, _, B, C), d_concept(B, Y), fact_origin(C, O).
+dict_fact_edge(X, Y, O) :- ground(Y, B), d_fact(A, _, B, C), d_concept(A, X), fact_origin(C, O).
+
+.decl enrich(l:symbol, rel:symbol, r:symbol, lv:number, origin:symbol, depth:number)
+enrich(X, N, Y, Lv, O, D) :- kb(X, N, Y, Lv, "dictionary"), ground(X, U), dsup_min(U, V, D), d_concept(V, Y), coll_origin(V, O).
+enrich(X, N, Y, Lv, O, 0) :- kb(X, N, Y, Lv, "dictionary"), !dict_anc(X, Y), dict_fact_edge(X, Y, O).
+enrich(X, N, Y, Lv, "derived", 0) :- kb(X, N, Y, Lv, "dictionary"), !dict_anc(X, Y), !dict_fact_edge(X, Y, _).
+enrich(X, N, Y, Lv, "derived", 0) :- kb(X, N, Y, Lv, "derived").
+.output enrich
+.decl enrich_def(x:symbol, def:symbol, origin:symbol)
+enrich_def(X, T, O) :- ground(X, U), d_def(U, T), coll_origin(U, O).
+.output enrich_def
+
 // ================================================================= contradictions
 .decl neg_instance(x:symbol, k:symbol, f:symbol)
 neg_instance(X, K, F) :- fact(F, X, _, _, K, _, _, _, _, U), class_rel(U), commit(F, _, -1).
@@ -385,6 +422,7 @@ violation("second-order-on-non-fact", F, T)   :- rf(F, X, T, _), !ref(X),
                                                   (T = "offered_as" ; T = "asserted_by" ; T = "endorsed_by" ; T = "rejected_by" ;
                                                    T = "raised_to_rebut" ; T = "conceded_by" ; T = "has_commitment").
 violation("fact-ref-in-taxonomy", F, R)       :- fact(F, X, R, _, Y, _, _, _, _, U), (ref(X) ; ref(Y)), (spec_rel(U) ; class_rel(U) ; part_rel(U)).
+violation("fact-thing-identity", F, R)        :- rf(F, X, "identical_to", Y), (ref(X), !ref(Y) ; !ref(X), ref(Y)), fact(F, _, R, _, _, _, _, _, _, _).
 violation("question-with-consequences", F, "") :- fact(F, _, _, _, _, _, "question", _, _, _), entails(F, _, _, _).
 violation("double-negation", F, T)            :- rf(F, _, T, _), fact(F, _, _, _, _, _, I, _, _, _), intent_level(I, _, -1),
                                                   (T = "not_classified_as" ; T = "not_equal_to" ; T = "lacks").

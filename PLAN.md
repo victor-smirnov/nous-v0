@@ -103,7 +103,7 @@ core is identical, only the prompt container changes.
 |---|---|---|
 | M1 | extract repo, package, CLI, golden tests, Soufflé check | done 2026-08-29 |
 | M2 | hybrid format, spec v3, phrase list generator, skill (encode/check/decode) | done 2026-08-29 |
-| M3 | enrich export (top-cut, definitions, provenance column), diff, decode spec | 1 day |
+| M3 | enrich export (top-cut, definitions, provenance column), diff, decode spec | done 2026-08-29 |
 | M4 | article run: encode → check → repair → enrich → decode → judge | 1–2 days, mostly model time |
 | M5 | Codex port | ½ day |
 

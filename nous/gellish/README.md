@@ -15,6 +15,8 @@ nous gellish check tables/article-v1/C0*.txt -o REPORT.md    # parse → souffle
 nous gellish ask "causal break"                       # everything known about a node
 nous gellish why contradiction                        # proof trees (Soufflé provenance) for every contradiction
 nous gellish why kb "freedom of B" "is classified as a" "causal break"   # why a derived edge holds
+nous gellish enrich doc.md -o doc.enriched.md         # derived rows → ```gellish-derived``` blocks with provenance
+nous gellish diff a.md b.md                           # semantic diff of two closures
 nous gellish check --minlevel 4 ...                   # doctrine-only closure
 nous gellish check --maxdepth 3 ...                   # tighter entailment budget
 nous gellish check --theory off ...                   # document-only consistency (Synthea layer excluded)
@@ -94,6 +96,15 @@ tree of any output tuple with the noise removed: leaves are source rows (`row C0
 `dict coll: … 100800000`), nodes are rule applications. Filters are substring matches on the
 output columns (`why contradiction entailment`, `why role_tension "need conflict"`); a
 raw atom is accepted too. ~1 s per call; every call re-evaluates the program.
+
+**Enrichment.** `nous gellish enrich` writes what the closure added back into the document as
+```` ```gellish-derived <id> ```` blocks: one row per derived edge, intention by level, context
+= provenance (`derived: closure`, `theory: Synthea`, `field: depth 1`, `gellish: depth 1`,
+`…: definition`). Top-cut: upper-ontology stop list, ancestry deeper than `--depth` (1),
+standard-Gellish facts off unless `--gellish-facts`; identity classes collapsed to their
+first-mentioned member; rows the document already states are not repeated. On the article:
+563 derived rows for 2 296 stated. **Diff.** `nous gellish diff a.md b.md` closes both and
+lists edges added / removed / re-levelled, plus counts of findings that appeared or vanished.
 
 **HOCP.** Entailment closure runs under a depth budget; refused chains are materialised as
 `truncated(a, b, c)` — the reasoner's own truncated tail, exposed rather than dropped.
