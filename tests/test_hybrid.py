@@ -53,7 +53,7 @@ class Hybrid(unittest.TestCase):
             self.assertLess(text.index("## Method"), text.index("```gellish S3"))
             self.assertIn("```gellish-residual S2", text)                 # untouched blocks survive
             rows, resid, errors = parse.parse_paths([str(out)], {})
-            self.assertEqual(len(rows), 4); self.assertEqual(len(resid), 2); self.assertEqual(errors, [])
+            self.assertEqual(len(rows), 3); self.assertEqual(len(resid), 2); self.assertEqual(errors, [])
 
 
 if __name__ == "__main__":

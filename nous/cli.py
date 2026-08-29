@@ -5,6 +5,7 @@
   nous gellish ask "<node>"                         everything known about a node (after check)
   nous gellish why <relation> [filters...]          proof trees (after check)
   nous gellish report                               re-render the last report
+  nous gellish phrases [-o spec/phrases.md] [--all]  relation-phrase reference for the encoder
   nous gellish extract DOC.md -o DIR                fenced tables → DIR/<section>.txt
   nous gellish inject DOC.md TABLE... [-o OUT.md]   tables → fenced blocks in the document
 """
@@ -30,6 +31,7 @@ def main(argv=None):
     p = g.add_parser("ask"); p.add_argument("query"); p.add_argument("--work")
     p = g.add_parser("why"); p.add_argument("target", nargs="+", help="relation [filters...] or a raw atom"); p.add_argument("--work")
     p = g.add_parser("report"); p.add_argument("--work")
+    p = g.add_parser("phrases"); p.add_argument("-o", "--out"); p.add_argument("--all", action="store_true")
     p = g.add_parser("extract"); p.add_argument("doc"); p.add_argument("-o", "--out", required=True)
     p = g.add_parser("inject"); p.add_argument("doc"); p.add_argument("tables", nargs="+"); p.add_argument("-o", "--out")
     a = ap.parse_args(argv)
@@ -54,6 +56,11 @@ def main(argv=None):
     elif a.gcmd == "report":
         from .gellish import report
         sys.stdout.write(report.render(ws.out, ws.facts))
+    elif a.gcmd == "phrases":
+        from .gellish import phrases
+        text = phrases.main(a.out, a.all)
+        if not a.out:
+            sys.stdout.write(text)
     elif a.gcmd == "extract":
         from .gellish import hybrid
         for f in hybrid.extract(a.doc, a.out):
