@@ -16,6 +16,7 @@
 | facts via extension | 875 |
 | facts residual | 623 |
 | residual phrases | 460 |
+| declared residual rows | 0 |
 | second-order facts | 328 |
 | entities | 2488 |
 | entities grounded | 200 |
@@ -166,6 +167,10 @@
 | is independent of | 2 |
 | resists reduction to | 2 |
 | … 420 more | |
+
+## Declared residual (what the encoder refused to encode)
+
+none
 
 ## Truncated entailment chains (depth budget exhausted)
 

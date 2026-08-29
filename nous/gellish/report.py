@@ -101,6 +101,15 @@ def render(out_dir, facts_dir):
     if len(r) > 40:
         print(f"| … {len(r) - 40} more | |")
 
+    section("Declared residual (what the encoder refused to encode)")
+    dr = sorted(rows("declared_residual"), key=lambda x: -int(x[2]))
+    if not dr:
+        print("none")
+    else:
+        print("| category | needed relation | n |\n|---|---|---:|")
+        for c, need, n in dr[:40]:
+            print(f"| {c} | {need} | {n} |")
+
     section("Truncated entailment chains (depth budget exhausted)")
     tr = rows("truncated")
     if not tr:

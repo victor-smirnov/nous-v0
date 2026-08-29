@@ -24,6 +24,8 @@
 .input fact
 .decl entity_lc(x:symbol, lc:symbol)
 .input entity_lc
+.decl residual(anchor:symbol, category:symbol, need:symbol, quote:symbol, tbl:symbol)   // encoder-declared residual
+.input residual
 .decl param(k:symbol, v:number)
 .input param
 .decl disjoint_in(k1:symbol, k2:symbol)
@@ -160,6 +162,11 @@ bad_intent(F, I) :- fact(F, _, _, _, _, _, I, _, _, _), !intent_level(I, _, _).
 .decl residual_phrase(phrase:symbol, n:number)
 residual_phrase(P, N) :- fact(_, _, "other", P, _, _, _, _, _, _), N = count : { fact(_, _, "other", P, _, _, _, _, _, _) }.
 .output residual_phrase
+.decl declared_residual(category:symbol, need:symbol, n:number)
+declared_residual(C, N, K) :- residual(_, C, N, _, _), K = count : { residual(_, C, N, _, _) }.
+.output declared_residual
+.decl dangling_residual(anchor:symbol, tbl:symbol)
+dangling_residual(A, T) :- residual(A, _, _, _, T), A != "", !fact(A, _, _, _, _, _, _, _, _, _).
 
 // ================================================================= commitment resolution
 .decl stance(f:symbol, who:symbol, pol:number, lv:number)
@@ -371,6 +378,7 @@ violation("rebutted-without-rebut-row", F, "") :- fact(F, _, _, _, _, _, "rebutt
 violation("figurative-in-taxonomy", F, R)     :- figurative(F), fact(F, _, R, _, _, _, _, _, _, U),
                                                   (spec_rel(U) ; class_rel(U) ; sem(U, "identical_to")).
 violation("dangling-fact-ref", F, X)          :- dangling(X, F).
+violation("dangling-residual-anchor", A, T)   :- dangling_residual(A, T).
 violation("unknown-intention", F, I)          :- bad_intent(F, I).
 violation("bare-copula", F, P)                :- fact(F, _, "other", P, _, _, _, _, _, _), (P = "is" ; P = "is not" ; P = "are" ; P = "are not").
 violation("second-order-on-non-fact", F, T)   :- rf(F, X, T, _), !ref(X),
@@ -406,6 +414,7 @@ stat("facts via dictionary",  N) :- N = count : { fact(_, _, _, _, _, _, _, _, _
 stat("facts via extension",   N) :- N = count : { fact(_, _, _, _, _, _, _, _, _, U), match("1007[0-9]+", U) }.
 stat("facts residual",        N) :- N = count : { fact(_, _, "other", _, _, _, _, _, _, _) }.
 stat("residual phrases",      N) :- N = count : { residual_phrase(_, _) }.
+stat("declared residual rows", N) :- N = count : { residual(_, _, _, _, _) }.
 stat("second-order facts",    N) :- N = count : { fact(_, X, _, _, _, _, _, _, _, _), ref(X) }.
 stat("entities",              N) :- N = count : { entity(_) }.
 stat("entities grounded",     N) :- N = count : { ground(_, _) }.

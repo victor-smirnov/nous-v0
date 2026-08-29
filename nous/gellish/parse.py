@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
-"""Gellish v2 fact tables -> Soufflé fact files.
+"""Gellish fact tables (bare .txt or hybrid .md documents) -> Soufflé fact files.
 
-Input : one or more 7-column pipe-separated tables
+Input : 7-column pipe-separated tables
         fact-UID | left | relation phrase | right | value/UoM | intention | context
+        either one table per .txt file (section id = file stem) or fenced ```gellish <id>```
+        blocks inside a Markdown document (see spec/hybrid-format.md); ```gellish-residual```
+        blocks hold the encoder-declared residual (anchor | category | needed relation | quote).
 Output: <facts-dir>/fact.facts   (tab-separated, 10 columns)
         f  left  rel  phrase  right  value  intention  context  table  rel_uid
         <facts-dir>/entity_lc.facts  entity  lowercased-entity   (for dictionary grounding)
@@ -21,6 +24,35 @@ import argparse, collections, pathlib, re, sys
 AUTHOR_ALIASES = {"author", "the author", "the authors", "authors", "this article", "the article",
                   "this paper", "the paper", "we"}
 FACT_REF = re.compile(r"^F\d{3,5}$")
+GLOBAL_REF = re.compile(r"^[A-Za-z0-9_.-]+:F\d{3,5}$")
+FENCE = re.compile(r"^```\s*(gellish|gellish-residual)(?:\s+(\S+))?\s*$")
+
+
+def iter_blocks(path):
+    """Yield (kind, section_id, lines) for a .txt table or every fenced block of a .md document."""
+    path = pathlib.Path(path)
+    text = path.read_text(encoding="utf-8")
+    if path.suffix.lower() != ".md":
+        yield "gellish", path.stem, text.splitlines()
+        return
+    n, kind, sid, buf = 0, None, None, []
+    for line in text.splitlines():
+        if kind is None:
+            m = FENCE.match(line)
+            if m:
+                kind, sid, buf = m.group(1), m.group(2), []
+                if kind == "gellish" and not sid:
+                    n += 1; sid = f"S{n}"
+                elif kind == "gellish-residual" and not sid:
+                    sid = f"S{n}" if n else "S1"
+            continue
+        if line.strip() == "```":
+            yield kind, sid, buf
+            kind = None
+            continue
+        buf.append(line)
+    if kind is not None:
+        yield kind, sid, buf
 
 
 def load_dict_phrases(facts_dir):
@@ -55,6 +87,8 @@ def norm_obj(s, table):
         return ""
     if FACT_REF.match(s):
         return f"{table}:{s}"
+    if GLOBAL_REF.match(s):
+        return s
     if s.lower() in AUTHOR_ALIASES:
         return "the author"
     return s
@@ -67,10 +101,10 @@ def resolve(phrase, dphr):
     return "other", False, ""
 
 
-def parse_file(path, table, dphr, errors):
+def parse_rows(lines, table, dphr, errors):
     rows = []
-    for ln, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
-        if not line.strip():
+    for ln, line in enumerate(lines, 1):
+        if not line.strip() or line.lstrip().startswith("#"):
             continue
         cells = [c.strip() for c in line.split("|")]
         if len(cells) < 6 or not FACT_REF.match(cells[0]):
@@ -91,9 +125,36 @@ def parse_file(path, table, dphr, errors):
     return rows
 
 
+def parse_residual(lines, table, errors):
+    out = []
+    for ln, line in enumerate(lines, 1):
+        if not line.strip() or line.lstrip().startswith("#"):
+            continue
+        cells = [c.strip() for c in line.split("|")]
+        if len(cells) < 3:
+            errors.append((table, ln, "residual: " + line[:100]))
+            continue
+        cells += [""] * (4 - len(cells))
+        anchor, cat, need, quote = cells[:4]
+        out.append((norm_obj(anchor, table) if anchor != "-" else "", cat.lower(), need, quote.strip('"'), table))
+    return out
+
+
+def parse_paths(paths, dphr):
+    """All fact rows and residual rows from a list of .txt / .md paths."""
+    errors, rows, resid = [], [], []
+    for t in paths:
+        for kind, sid, lines in iter_blocks(t):
+            if kind == "gellish":
+                rows += parse_rows(lines, sid, dphr, errors)
+            else:
+                resid += parse_residual(lines, sid, errors)
+    return rows, resid, errors
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser()
-    ap.add_argument("tables", nargs="+", help="Gellish v2 .txt tables")
+    ap.add_argument("tables", nargs="+", help="Gellish .txt tables and/or hybrid .md documents")
     ap.add_argument("-o", "--out", default="facts", help="facts directory (must already hold d_*.facts for dictionary resolution)")
     ap.add_argument("--minlevel", type=int, default=2,
                     help="minimum commitment level admitted into inference (4 assertion, 3 hedged, 2 hypothesis/prediction)")
@@ -106,10 +167,7 @@ def main(argv=None):
     out = pathlib.Path(a.out)
     out.mkdir(parents=True, exist_ok=True)
     dphr, amb = load_dict_phrases(out)
-    errors, rows = [], []
-    for t in a.tables:
-        p = pathlib.Path(t)
-        rows += parse_file(p, p.stem, dphr, errors)
+    rows, resid, errors = parse_paths(a.tables, dphr)
 
     esc = lambda s: s.replace("\t", " ").replace("\n", " ")
     with (out / "fact.facts").open("w") as f:
@@ -119,6 +177,9 @@ def main(argv=None):
     with (out / "entity_lc.facts").open("w") as f:
         for e in sorted(ents):
             f.write(f"{esc(e)}\t{esc(e.lower())}\n")
+    with (out / "residual.facts").open("w") as f:
+        for r in resid:
+            f.write("\t".join(esc(c) for c in r) + "\n")
     with (out / "param.facts").open("w") as f:
         f.write(f"minlevel\t{a.minlevel}\nmaxdepth\t{a.maxdepth}\ntheory\t{ {'off': 0, 'hypothesis': 2, 'doctrine': 4}[a.theory] }\n")
     dj = out / "disjoint.facts"
@@ -126,8 +187,9 @@ def main(argv=None):
 
     kinds = collections.Counter(r[2].split(":")[0] for r in rows)
     used_amb = {r[3] for r in rows if r[3] in amb}
-    print(f"{len(rows)} facts from {len(a.tables)} tables; resolved: {kinds['g']} dictionary+extension, "
-          f"{kinds['other']} residual; {len(errors)} unparseable lines; dictionary phrases known: {len(dphr)}", file=sys.stderr)
+    print(f"{len(rows)} facts from {len(a.tables)} inputs; resolved: {kinds['g']} dictionary+extension, "
+          f"{kinds['other']} residual; {len(resid)} declared-residual rows; {len(errors)} unparseable lines; "
+          f"dictionary phrases known: {len(dphr)}", file=sys.stderr)
     for ph in sorted(used_amb):
         print(f"  ambiguous phrase {ph!r} -> {dphr[ph][0]} (candidates {amb[ph]})", file=sys.stderr)
     for e in errors[:10]:
