@@ -24,7 +24,7 @@ class EnrichDiff(unittest.TestCase):
             placed = enrich.plan(doc, ws.out, depth=1)
             rows = placed["S1"]
             triples = {(r[0], r[1], r[2]) for r in rows}
-            self.assertIn(("Moral Agent", "is a specialization of", "Observer"), triples)   # transitive closure
+            self.assertIn(("Moral Agent", "is a kind of", "Observer"), triples)   # transitive closure (dictionary label for 1146)
             self.assertTrue(any(r[0] == "Dennett" and r[1] == "is asserted by" or r[2] == "Dennett" and "asserted" in r[1] for r in rows)
                             or any("illusionism" in r for r in rows))                       # theory fact via grounding
             self.assertFalse(any(r[2] in ("anything", "concept") for r in rows))            # top-cut
@@ -50,8 +50,8 @@ class EnrichDiff(unittest.TestCase):
             wa, wb = paths.Workspace(d / "wa"), paths.Workspace(d / "wb")
             run.check(wa, [str(a)], quiet=True); run.check(wb, [str(b)], quiet=True)
             text = diff.render(wa.out, wb.out, "a", "b")
-            self.assertIn("Observer —is a specialization of→ role", text)
-            self.assertIn("Agent —is a specialization of→ Observer: asserted → conjectured", text)
+            self.assertIn("Observer —is a kind of→ role", text)
+            self.assertIn("Agent —is a kind of→ Observer: asserted → conjectured", text)
             self.assertIn("## Added", text)
 
 

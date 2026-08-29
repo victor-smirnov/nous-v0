@@ -107,7 +107,7 @@ def plan(doc, out_dir, depth=1, defs=True, include_derived=True, gellish_facts=F
         if r.lower() in STOP or l.lower() in STOP:
             continue
         if origin in ("gellish", "field", "theory"):
-            if d > depth:
+            if d > depth and r not in where:          # a deep ancestor the document itself talks about stays
                 continue
             if origin == "gellish" and d == 0 and not gellish_facts:
                 continue
