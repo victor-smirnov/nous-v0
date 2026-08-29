@@ -1,5 +1,6 @@
 data/
 work/
+experiments/
 __pycache__/
 *.egg-info/
 .prov/

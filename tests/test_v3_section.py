@@ -4,7 +4,7 @@ import csv, pathlib, tempfile, unittest
 
 from nous.gellish import paths, run
 
-DOC = pathlib.Path(__file__).resolve().parent.parent / "tables" / "article-v3" / "S2.2.hybrid.md"
+DOC = pathlib.Path(__file__).resolve().parent.parent / "tests" / "fixtures" / "S2.2.hybrid.md"
 
 
 class V3Section(unittest.TestCase):

@@ -84,7 +84,7 @@ core is identical, only the prompt container changes.
 6. Keep from v2: mandatory intention enum, reification, `is a cause of` ban (now enforced by
    Gellish 1922 roles), figurative rows.
 
-## 5. Article v2 — the first run
+## 5. Article v2 — the first run (work lives in `experiments/article/`, git-ignored; moves to Synthea later)
 
 1. Chunk `docs/what_is_it_like_to_be_a_language_model.md` by section (≈ the 9 chunks used before, but section-aligned).
 2. Encode with the v3 spec, Opus (the cost study found amplified Opus dominant); result: `article.hybrid.md`.
