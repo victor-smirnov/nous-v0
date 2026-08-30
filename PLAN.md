@@ -122,3 +122,28 @@ core is identical, only the prompt container changes.
 - ~~Repo name~~ `nous-v0`, package `nous`, MIT. Both dictionaries live here.
 - Encoding model for the article run: Opus (cost study) — unless Fable is preferred for frugality.
 - ~~Hybrid container~~ fences (done).
+
+## 6. Receiver profiles (direction, 2026-08-29; not detailed yet)
+
+Victor: the difficulty of the hard problem is less how to explain consciousness than how the explanation is
+*understood* — it needs a ready conceptual apparatus; people are unaware of their own limitation and there is no
+fast way to make them aware. So a "philosophy-of-mind ontology" as one academic artifact is the wrong shape: it will
+be a set of partial descriptions built for different levels of intrapersonal intelligence, and the work must start
+from that. Focus on three receivers:
+
+1. modern rational person with a Western humanities education (inclined to intuitionism);
+2. the same with a technical education (aimed at reductionism);
+3. a language model.
+
+Mapping onto the tool:
+- a receiver profile is a *dictionary*: the concepts and relation families the receiver already owns
+  (`ext/receiver_*`); grounding a document against it lists what is OOD for that receiver — for the LLM this is the
+  existing Gellish + field grounding (the article's 221 own concepts are its OOD);
+- comprehensibility is *explanatory path length* from the receiver's known concepts to the document's own ones
+  (the thesis stratum reversed); missing bridges are what a rendering must add;
+- each profile weights bridge kinds: analogy/phenomenology for (1), mechanism/reduction for (2), explicit
+  definitions and both for (3);
+- decode per profile = one checked ontology, three renderings (the "receiver-profile personalization" middle-end
+  of the amplifier plan).
+Judges then measure per profile: first-order fidelity as now, plus a comprehension probe — can a reader with that
+profile reconstruct the hub from the rendering.
