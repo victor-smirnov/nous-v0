@@ -119,8 +119,8 @@ kind of thing may stand left → right. Anything not here goes to the `gellish-r
 |---|---|---|---|---|---|
 | access requirement of a concept (100901004) | is recognised through · is recognized through · requires access along | gives access to | anything → access dimension |  | subject |
 | appearance to a subject (100901005) | appears as · is seen as · shows up as | is how it appears · is the appearance of | anything → anything |  | subject |
-| denial from a point of view (100901002) | does not hold for · does not hold from the point of view of | denies | anything → subject type |  | subject |
-| point of view (100901001) | holds for · holds from the point of view of · is the case for | is the point of view for · sees | anything → subject type |  | subject |
+| denial from a point of view (100901002) | does not hold for · does not hold from the point of view of | denies | anything → anything |  | subject |
+| point of view (100901001) | holds for · holds from the point of view of · is the case for | is the point of view for · sees | anything → anything |  | subject |
 | possession of recognizing capacity (100901003) | has capacity along · has recognizing capacity along | is a capacity dimension of | subject type → access dimension |  | subject |
 | preference for an explanation kind (100901006) | accepts as explanation · is convinced by | is an accepted explanation kind for | subject type → anything |  | subject |
 

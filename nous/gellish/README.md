@@ -116,7 +116,11 @@ dimension it can be reached by, more recognizing capacity than the subject has. 
 least one dimension suffices (alternative access routes: Beingness through trained reflection *or* through the
 residual mechanism). Facts indexed with `holds from the point of view of` hold only for those subjects;
 `perspectival_difference(F, S1, S2)` lists what holds for one and not another while both could see it.
-**Seen as:** `X | appears as | Y` rows indexed to a subject give `view(X, S, "as", Y)` — a status in its own
+A **profiled subject** has capacity rows in the loaded profile table and gets visibility computed; a **standpoint**
+is any position the document indexes a fact to ("an external observer", "the system itself") — no profile, so nothing
+is computed about what it can see, only what holds from it. Two rows that contradict each other but are indexed to
+different standpoints are a `perspectival_pair`, and the polarity check skips them: that is the document's structure,
+not an error. **Seen as:** `X | appears as | Y` rows indexed to a subject give `view(X, S, "as", Y)` — a status in its own
 right (a subject may recognise X and still see it as Y), and `visible_as(F, S, X, Y)` for facts that are
 invisible in their own terms but reachable under the guise. Report section "Subject views". Grades inherit down classification and specialisation.
 

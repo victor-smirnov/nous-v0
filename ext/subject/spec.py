@@ -34,12 +34,13 @@ CONCEPTS = [
 RELATIONS = [
     ("point of view", "binary relation between individual things",
      ["holds from the point of view of", "holds for", "is the case for"], ["is the point of view for", "sees"],
-     [], ("indexed fact", "anything"), ("subject", "subject type"),
-     "A fact indexed by the subject position from which it holds. Absence of any such row means the fact is position-neutral.", "pov"),
+     [], ("indexed fact", "anything"), ("standpoint", "anything"),
+     "A fact indexed by the position from which it holds. The standpoint may be a subject type of this dictionary or, more often, "
+     "whatever the document names ('an external observer', 'the system itself'). Absence of any such row = position-neutral.", "pov"),
     ("denial from a point of view", "binary relation between individual things",
      ["does not hold from the point of view of", "does not hold for"], ["denies"],
-     [], ("indexed fact", "anything"), ("subject", "subject type"),
-     "A fact explicitly not holding from a subject position.", "pov_not"),
+     [], ("indexed fact", "anything"), ("standpoint", "anything"),
+     "A fact explicitly not holding from a position.", "pov_not"),
     ("possession of recognizing capacity", "binary relation between individual things",
      ["has recognizing capacity along", "has capacity along"], ["is a capacity dimension of"],
      [], ("subject", "subject type"), ("dimension", "access dimension"),

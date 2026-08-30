@@ -360,7 +360,8 @@ contradiction("classification", X, K, F, Lv) :- neg_instance(X, K, F), instance_
 contradiction("identity", X, Y, F, 4) :- rf(F, X, "not_equal_to", Y), commit(F, _, 1), same(X, Y).
 contradiction("entailment", A, B, B, min(La, Le)) :- commit(A, La, 1), entails_best(A, B, Le, _), commit(B, _, -1).
 contradiction("polarity", F1, F2, X, 4) :- fact(F1, X, _, _, Y, _, _, _, _, U), commit(F1, _, 1), U != "",
-                                          fact(F2, X, _, _, Y, _, _, _, _, U), commit(F2, _, -1).
+                                          fact(F2, X, _, _, Y, _, _, _, _, U), commit(F2, _, -1),
+                                          !perspectival_pair(F1, _, F2, _, _, _).
 // algebraic properties from the dictionary
 contradiction("antisymmetric", X, Y, N, min(L1, L2)) :- holds_best(X, U, Y, L1), holds_best(Y, U, X, L2), X != Y, !same(X, Y),
                                                         rel_prop(U, "antisymmetric"), d_relname(U, N), ord(X) < ord(Y).
@@ -527,9 +528,16 @@ thesis_stat("novel concepts", N) :- N = count : { novel(_) }.
 // subject's capacity reaches the concept's requirement. A fact is VISIBLE to a subject if every constrained object in
 // it is recognizable; otherwise it is INVISIBLE — a third status beside holds / does not hold. A fact may also be
 // indexed to a point of view; then it holds only for the subjects it is indexed to.
+// A PROFILED SUBJECT has capacities in the loaded profile table — visibility is computed for it.
+// A STANDPOINT is any position the document indexes a fact to ("an external observer", "the Observer itself");
+// it has no profile, so nothing is computed about what it can see — only what holds from it.
 .decl subject(s:symbol)
 subject(S) :- rf(_, S, "has_capacity", _).
-subject(S) :- rf(_, _, "pov", S).
+.decl standpoint(s:symbol)
+standpoint(S) :- rf(_, _, "pov", S).
+standpoint(S) :- rf(_, _, "pov_not", S).
+.decl profiled_standpoint(s:symbol)
+profiled_standpoint(S) :- standpoint(S), subject(S).
 .decl capacity(s:symbol, d:symbol, l:number)
 capacity(S, D, L) :- fact(F, S, _, _, D, V, _, _, _, U), sem(U, "has_capacity"), V != "", L = to_number(V).
 .decl requires(x:symbol, d:symbol, l:number)
@@ -560,6 +568,16 @@ holds_for(F, S) :- usable(F, _), subject(S), !invisible(F, S, _), pov(F, S).
 blind(F, S) :- invisible(F, S, X), !seen_as(X, S, _).
 .decl perspectival_difference(f:symbol, s1:symbol, s2:symbol)                          // holds for S1, not for S2, and both could see it
 perspectival_difference(F, S1, S2) :- holds_for(F, S1), subject(S2), S1 != S2, !holds_for(F, S2), !invisible(F, S2, _).
+// The document's own perspectival pairs: the same triple asserted from one standpoint and denied (or contradicted) from another.
+.decl perspectival_pair(f1:symbol, s1:symbol, f2:symbol, s2:symbol, l:symbol, r:symbol)
+perspectival_pair(F1, S1, F2, S2, L, R) :- fact(F1, L, _, _, R, _, _, _, _, U), fact(F2, L, _, _, R, _, _, _, _, U), U != "",
+                                           commit(F1, _, 1), commit(F2, _, -1), pov(F1, S1), pov(F2, S2), S1 != S2.
+perspectival_pair(F1, S1, F2, S2, L, R) :- fact(F1, L, _, _, R, _, _, _, _, U1), fact(F2, L, _, _, R2, _, _, _, _, U1), U1 != "",
+                                           class_rel(U1), commit(F1, _, 1), commit(F2, _, 1), pov(F1, S1), pov(F2, S2), S1 != S2, R != R2, R = R, disjoint(R, R2).
+.output perspectival_pair
+.decl standpoint_stat(s:symbol, n:number)
+standpoint_stat(S, N) :- standpoint(S), N = count : { pov(_, S) }.
+.output standpoint_stat
 // SEEN-AS: referent X appears to subject S as Y (an `appears as` row indexed to S, or unindexed = for all subjects)
 .decl seen_as(x:symbol, s:symbol, y:symbol)
 seen_as(X, S, Y) :- rf(F, X, "appears_as", Y), usable(F, _), pov(F, S).

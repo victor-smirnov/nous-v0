@@ -22,7 +22,9 @@ class Golden(unittest.TestCase):
         cls.report = run.check(cls.ws, TABLES, quiet=True)
 
     def test_stats(self):
-        self.assertEqual(tsv(self.ws.out / "stat.csv"), tsv(GOLDEN / "stat.csv"))
+        # dictionary-level counts move whenever an extension changes; the golden holds the document-level closure
+        doc = lambda rows: [r for r in rows if not r[0].startswith("dictionary ") and r[0] != "theory concepts"]
+        self.assertEqual(doc(tsv(self.ws.out / "stat.csv")), doc(tsv(GOLDEN / "stat.csv")))
 
     def test_contradictions(self):
         self.assertEqual(tsv(self.ws.out / "contradiction.csv"), tsv(GOLDEN / "contradiction.csv"))

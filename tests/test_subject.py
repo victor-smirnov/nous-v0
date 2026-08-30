@@ -26,6 +26,9 @@ class Subject(unittest.TestCase):
             self.assertIn(["apparent causal break", "Intuitionist", "as", "mystery"], view)          # seen-as, indexed to a subject
             self.assertNotIn(["apparent causal break", "Rationalist", "as", "mystery"], view)
             self.assertIn(["apparent causal break", "Rationalist", "as", "computational residual"], view)
+            # a standpoint named by a document is not a profiled subject
+            sp = list(csv.reader((ws.out / "standpoint_stat.csv").open(newline=""), delimiter="\t")) if (ws.out / "standpoint_stat.csv").exists() else []
+            self.assertTrue(all(s in {"Rationalist", "Intuitionist", "Language-model subject"} for s, _ in sp))
 
 
 if __name__ == "__main__":

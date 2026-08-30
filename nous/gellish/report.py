@@ -122,6 +122,19 @@ def render(out_dir, facts_dir):
             print(f"- {m}: {n} ({d1})")
 
     section("Subject views (subject stratum)")
+    sp = sorted(rows("standpoint_stat"), key=lambda x: -int(x[1]))
+    if sp:
+        print(f"**Standpoints the document indexes facts to** ({len(sp)}): " + ", ".join(f"{s_} ({n})" for s_, n in sp[:14]) + ("…" if len(sp) > 14 else "") + "\n")
+        pp = rows("perspectival_pair")
+        if pp:
+            print(f"**Perspectival pairs** (the same thing asserted from one standpoint, denied from another): {len(pp)}\n")
+            seen_pp = set()
+            for f1, s1, f2, s2, l, r in pp:
+                if (l, r) in seen_pp:
+                    continue
+                seen_pp.add((l, r))
+                print(f"- {l} — {r}: holds for *{s1}*, denied for *{s2}*")
+            print()
     ss = rows("subject_stat")
     if not ss:
         print("no subject profiles loaded (add ext/subject/profiles.txt or a document with subject rows)")
