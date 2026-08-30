@@ -22,6 +22,10 @@ class Subject(unittest.TestCase):
             # with the placeholder matrix the Intuitionist lacks mechanistic access to HOCP; the Rationalist reaches Beingness through the mechanism
             self.assertTrue(any(x == "higher-order computational phenomenon" and s == "Intuitionist" for x, s, *_ in unrec))
             self.assertFalse(any(x == "Beingness quale" and s == "Rationalist" for x, s, *_ in unrec))
+            view = list(csv.reader((ws.out / "view.csv").open(newline=""), delimiter="\t"))
+            self.assertIn(["apparent causal break", "Intuitionist", "as", "mystery"], view)          # seen-as, indexed to a subject
+            self.assertNotIn(["apparent causal break", "Rationalist", "as", "mystery"], view)
+            self.assertIn(["apparent causal break", "Rationalist", "as", "computational residual"], view)
 
 
 if __name__ == "__main__":

@@ -19,7 +19,10 @@ Intuitionist`). Concepts carry *access requirements* along open-ended *access di
 reflexive, mechanistic, verbal); subject types carry *recognizing capacities* along the same dimensions. The
 matrix lives in an ordinary Gellish table, `subject/profiles.txt` (numbers in the value column; PROVISIONAL —
 the real matrix is separate work, and the language model's reflexive access is an open empirical question),
-loaded next to a document: `nous gellish check doc.md ext/subject/profiles.txt`.
+loaded next to a document: `nous gellish check doc.md ext/subject/profiles.txt`. Besides visible / invisible
+there is **seen as**: `X | appears as | Y` indexed to a subject (`F | holds from the point of view of | S`) —
+the same referent under different guises (the residual appears to the Intuitionist as mystery, to the
+Rationalist as computational residual, to the language model as a reported limit of self-tracing).
 
 ## Why two
 

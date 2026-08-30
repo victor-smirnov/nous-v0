@@ -48,6 +48,11 @@ RELATIONS = [
      ["requires access along", "is recognised through", "is recognized through"], ["gives access to"],
      [], ("concept", "anything"), ("dimension", "access dimension"),
      "Concept X is recognisable along dimension D at the level in the value column; several rows = alternative access routes.", "requires_access"),
+    ("appearance to a subject", "projection of a state into a code",
+     ["appears as", "is seen as", "shows up as"], ["is the appearance of", "is how it appears"],
+     [], ("referent", "anything"), ("appearance", "anything"),
+     "Referent X is seen AS Y. Indexed to a subject type by a `holds from the point of view of` row on this fact; unindexed = for every subject. "
+     "Gives the third visibility status: visible as itself / seen as Y / invisible.", "appears_as"),
     ("preference for an explanation kind", "binary relation between individual things",
      ["accepts as explanation", "is convinced by"], ["is an accepted explanation kind for"],
      [], ("subject", "subject type"), ("relation kind", "anything"),

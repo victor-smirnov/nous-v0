@@ -556,15 +556,34 @@ indexed(F) :- pov_not(F, _).
 .decl holds_for(f:symbol, s:symbol)                                                    // usable, visible, and not excluded by point of view
 holds_for(F, S) :- usable(F, _), subject(S), !invisible(F, S, _), !indexed(F).
 holds_for(F, S) :- usable(F, _), subject(S), !invisible(F, S, _), pov(F, S).
+.decl blind(f:symbol, s:symbol)                                                       // invisible with no guise either
+blind(F, S) :- invisible(F, S, X), !seen_as(X, S, _).
 .decl perspectival_difference(f:symbol, s1:symbol, s2:symbol)                          // holds for S1, not for S2, and both could see it
 perspectival_difference(F, S1, S2) :- holds_for(F, S1), subject(S2), S1 != S2, !holds_for(F, S2), !invisible(F, S2, _).
+// SEEN-AS: referent X appears to subject S as Y (an `appears as` row indexed to S, or unindexed = for all subjects)
+.decl seen_as(x:symbol, s:symbol, y:symbol)
+seen_as(X, S, Y) :- rf(F, X, "appears_as", Y), usable(F, _), pov(F, S).
+seen_as(X, S, Y) :- rf(F, X, "appears_as", Y), usable(F, _), !indexed(F), subject(S).
+seen_as(X2, S, Y) :- seen_as(X, S, Y), same(X, X2).
+// visibility status of a referent for a subject: "itself" | "as <Y>" | "invisible"
+.decl view(x:symbol, s:symbol, status:symbol, guise:symbol)
+view(X, S, "itself", X)      :- constrained(X), subject(S), recognizable(X, S).
+view(X, S, "as", Y)          :- seen_as(X, S, Y).                                   // a guise is a status in its own right, not a fallback
+view(X, S, "invisible", "")  :- constrained(X), subject(S), !recognizable(X, S), !seen_as(X, S, _).
+.output view
+// a fact invisible in its own terms but visible under a guise
+.decl visible_as(f:symbol, s:symbol, x:symbol, y:symbol)
+visible_as(F, S, X, Y) :- invisible(F, S, X), seen_as(X, S, Y).
+.output visible_as
 .output invisible
 .output unrecognizable
 .output holds_for
 .output perspectival_difference
 .decl subject_stat(s:symbol, k:symbol, n:number)
 subject_stat(S, "facts visible", N) :- subject(S), N = count : { holds_for(_, S) }.
-subject_stat(S, "facts invisible", N) :- subject(S), N = count : { invisible(_, S, _) }.
+subject_stat(S, "facts invisible", N) :- subject(S), N = count : { blind(_, S) }.
+subject_stat(S, "facts seen under a guise", N) :- subject(S), N = count : { visible_as(_, S, _, _) }.
+subject_stat(S, "referents seen as", N) :- subject(S), N = count : { view(_, S, "as", _) }.
 subject_stat(S, "concepts unrecognizable", N) :- subject(S), N = count : { unrecognizable(_, S, _, _, _) }.
 subject_stat(S, "facts indexed to it", N) :- subject(S), N = count : { pov(_, S) }.
 subject_stat(S, "perspectival differences", N) :- subject(S), N = count : { perspectival_difference(_, S, _) }.

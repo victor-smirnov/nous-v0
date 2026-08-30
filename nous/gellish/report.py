@@ -127,7 +127,7 @@ def render(out_dir, facts_dir):
         print("no subject profiles loaded (add ext/subject/profiles.txt or a document with subject rows)")
     else:
         subs = sorted({s_ for s_, _, _ in ss})
-        keys = ["facts visible", "facts invisible", "concepts unrecognizable", "facts indexed to it", "perspectival differences"]
+        keys = ["facts visible", "facts seen under a guise", "facts invisible", "concepts unrecognizable", "referents seen as", "facts indexed to it", "perspectival differences"]
         vals = {(s_, k): n for s_, k, n in ss}
         print("| | " + " | ".join(subs) + " |\n|---|" + "---:|" * len(subs))
         for k in keys:
@@ -140,6 +140,14 @@ def render(out_dir, facts_dir):
         for s_ in subs:
             if by[s_]:
                 print(f"**Unrecognizable for {s_}:** " + "; ".join(sorted(by[s_])[:12]) + ("…" if len(by[s_]) > 12 else ""))
+        vw = [r for r in rows("view") if r[2] == "as"]
+        if vw:
+            byv = collections.defaultdict(list)
+            for x, s_, st, y in vw:
+                byv[s_].append(f"{x} → {y}")
+            for s_ in subs:
+                if byv[s_]:
+                    print(f"**Seen as, for {s_}:** " + "; ".join(sorted(byv[s_])[:10]))
         pd = rows("perspectival_difference")
         if pd:
             print(f"\n**Perspectival differences** ({len(pd)}): first 10\n")

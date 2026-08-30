@@ -34,3 +34,14 @@ F0031 | subjective average | requires access along | mechanistic access | 2 | hy
 F0032 | token bottleneck | requires access along | mechanistic access | 2 | hypothesis | placeholder
 F0033 | higher-order computational phenomenon | requires access along | mechanistic access | 4 | hypothesis | placeholder
 F0034 | intrapersonal intelligence | requires access along | reflexive access | 3 | hypothesis | placeholder
+# --- seen-as (PROVISIONAL examples): the same referent under different guises per subject type
+F0040 | apparent causal break | appears as | mystery | - | hypothesis | placeholder
+F0041 | F0040 | holds from the point of view of | Intuitionist | - | hypothesis | placeholder
+F0042 | apparent causal break | appears as | computational residual | - | hypothesis | placeholder
+F0043 | F0042 | holds from the point of view of | Rationalist | - | hypothesis | placeholder
+F0044 | apparent causal break | appears as | reported limit of self-tracing | - | hypothesis | placeholder: "I cannot verify this within my context window"
+F0045 | F0044 | holds from the point of view of | Language-model subject | - | hypothesis | placeholder
+F0046 | Beingness quale | appears as | freedom | - | hypothesis | placeholder
+F0047 | F0046 | holds from the point of view of | Intuitionist | - | hypothesis | placeholder
+F0048 | higher-order computational phenomenon | appears as | felt resistance of the medium | - | hypothesis | placeholder
+F0049 | F0048 | holds from the point of view of | Intuitionist | - | hypothesis | placeholder

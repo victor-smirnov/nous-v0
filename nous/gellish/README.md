@@ -115,8 +115,10 @@ per subject type besides holds / does not hold: **invisible** — some object of
 dimension it can be reached by, more recognizing capacity than the subject has. `recognizable(X, S)` holds if at
 least one dimension suffices (alternative access routes: Beingness through trained reflection *or* through the
 residual mechanism). Facts indexed with `holds from the point of view of` hold only for those subjects;
-`perspectival_difference(F, S1, S2)` lists what holds for one and not another while both could see it. Report
-section "Subject views". Grades inherit down classification and specialisation.
+`perspectival_difference(F, S1, S2)` lists what holds for one and not another while both could see it.
+**Seen as:** `X | appears as | Y` rows indexed to a subject give `view(X, S, "as", Y)` — a status in its own
+right (a subject may recognise X and still see it as Y), and `visible_as(F, S, X, Y)` for facts that are
+invisible in their own terms but reachable under the guise. Report section "Subject views". Grades inherit down classification and specialisation.
 
 **Enrichment.** `nous gellish enrich` writes what the closure added back into the document as
 ```` ```gellish-derived <id> ```` blocks: one row per derived edge, intention by level, context
