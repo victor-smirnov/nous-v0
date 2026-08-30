@@ -88,8 +88,8 @@ core is identical, only the prompt container changes.
 
 - Internal cross-references: a row type or residual category for "(Section 4.2)" / document links — C lost all of them.
 - Reconcile "≤ 5 consecutive source words" with quoted definitions: quotes allowed only in `is defined as` and residual `quote`.
-- Decoder without shell: render the intention column as register (hedge/hypothesis/prediction) — C hardened 78 rows'
-  commitments; add a rows-vs-prose inversion probe that needs no source (self-check before returning).
+- (Dropped, Victor 2026-08-29: style/register is a separate channel, its loss through the ontology is expected and
+  desirable. Decode C is the intended behaviour.) A rows-vs-prose *first-order* self-check before returning may still be useful.
 - Encoders write unicode comment markers («, ＃) and occasionally truncate the first row — assembler now normalises; spec
   should say ASCII `#` only.
 - Enrichment output is for review, not for decoding; document in decoding.md (done) and in enrich --for-review default.
