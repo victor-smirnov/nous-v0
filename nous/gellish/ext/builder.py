@@ -59,7 +59,8 @@ class Ext:
         self.rows, self.idea = [], base * 10
         self.sem, self.disjoint = [], []
         self.phrases = {"is the cause of": ("1922", False), "is caused by": ("1922", True), "is a kind of": ("1146", False),
-                        "is classified as a": ("1225", False), "implies": ("6233", False), "is implied by": ("6233", True)}
+                        "is classified as a": ("1225", False), "implies": ("6233", False), "is implied by": ("6233", True),
+                        "is a part of": ("1260", False), "has as part": ("1260", True)}
         self.phrases.update(external_phrases or {})
 
     # --- naming

@@ -73,6 +73,14 @@ tail` = `irreducible residual` = `computational residual`. Under `off` they vani
 the document disagreeing with the theory's vocabulary, not with itself. That distinction is
 the point of the split.
 
+**Problem schema.** `psychophysical problem` with its components as *phenomena* (phenomenal experience,
+quale, hard problem, explanatory gap, unity of consciousness, temporal unity of the self, free will,
+mental causation, other minds, the self) declared with `is a part of`; the relation types that count as
+*explanatory* carry the `sem` tag `explanatory` (projection, approximation, conceptualization, experiential
+projection, manifestation, encoding, realization, supervenience, constitution, reduction, identity,
+explanation, generation, functional equivalence, metaphor, reformulation, and Gellish 1922). This is what
+the reasoner's thesis stratum reads; another field would declare its own problems the same way.
+
 ## Conventions
 
 - UIDs by list position inside each block (concepts `base+1…`, relation types `base+1001…`,

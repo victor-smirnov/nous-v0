@@ -61,7 +61,7 @@ CONCEPTS = [
     ('computational irreducibility', 'aspect', 'The property of a process that cannot be predicted faster than by running it (Wolfram).', []),
     ('irreversible information loss', 'occurrence', 'Destruction of information at a processing bottleneck.', []),
     ('token bottleneck', ['mechanism', 'occurrence'], 'In an autoregressive model, the collapse of the output distribution to one token per step.', ['softmax collapse']),
-    ('downward causation', 'aspect', 'Causation from a higher level of organisation to its constituents; contested in philosophy of mind.', ['DC']),
+    ('downward causation', ['aspect', 'mental causation'], 'Causation from a higher level of organisation to its constituents; contested in philosophy of mind.', ['DC']),
     ('computational constraint', 'aspect', 'A finite resource of a machine: time, memory, bandwidth.', ['resource constraint']),
     ('intrapersonal intelligence', 'aspect', "Capacity to model and regulate one's own mental states (Gardner).", []),
     ('theory', 'information', 'A systematic body of claims with explanatory intent.', []),
@@ -86,8 +86,16 @@ CONCEPTS = [
     ('folk psychology', 'theory', 'The everyday vocabulary of beliefs, desires and feelings.', []),
     ('philosophical argument', 'information', 'A structured set of premises offered for a conclusion.', ['argument']),
     ('thought experiment', 'philosophical argument', 'An argument by imagined scenario.', []),
+    ('psychophysical problem', 'question', 'The problem of how mental phenomena relate to physical processes; the family of questions a theory of mind must answer. Its components are the phenomena to be explained.', ['mind-body problem', 'mind–body problem']),
+    ('phenomenal experience', 'mental state', 'Experience with a qualitative character; that there is something it is like.', ['subjective experience', 'conscious experience', 'what it is like', 'something it is like', 'phenomenal character']),
+    ('unity of consciousness', 'aspect', 'The fact that experience presents as one subject at a time.', ['subjective unity', 'unity of the Subject', 'unity of the self', 'binding']),
+    ('temporal unity of the self', 'aspect', 'The single experienced timeline and felt authorship of decisions in time.', ['timeline of the Subject', 'subjective timeline', 'timeline', 'timeline illusion']),
+    ('free will', 'aspect', 'Felt openness of choice and authorship of action.', ['freedom of will', 'freedom of the will', 'felt freedom', 'freedom', 'agency']),
+    ('mental causation', 'aspect', 'The causal efficacy of mental states in a physically closed world.', ['causal efficacy of mental states', 'exclusion problem']),
+    ('other minds', 'question', 'Whether and how another system has experience, and what it is like for it.', ['problem of other minds', 'bat experience', 'other Observer']),
+    ('the self', 'aspect', 'The subject of experience and its boundary from the environment.', ['self', 'Self', 'subject', 'Subject', 'I', 'boundary of Self', 'Self/Environment boundary', 'self/environment boundary']),
     ('hard problem of consciousness', 'question', 'Why physical processing is accompanied by experience at all (Chalmers).', ['hard problem']),
-    ('bat question', 'question', 'What it is like to be a bat (Nagel).', ["Nagel's bat question"]),
+    ('bat question', ['question', 'other minds'], 'What it is like to be a bat (Nagel).', ["Nagel's bat question"]),
     ('zombie argument', 'thought experiment', 'Conceivability of a functional duplicate without experience.', []),
     ('Chinese room', 'thought experiment', 'Symbol manipulation without understanding (Searle).', []),
     ('knowledge argument', 'thought experiment', 'Mary the colour scientist (Jackson).', []),
@@ -442,6 +450,15 @@ GELLISH_ALIASES = [('6233', 'entails', 'base'),
  ('1727', 'has', 'base'),
  ('1727', 'possesses', 'base'),
  ('5751', 'publishes', 'base')]
+EXPLANATORY = ['projection of a state into a code', 'approximation of a process', 'conceptualization', 'experiential projection',
+               'manifestation', 'encoding', 'realization of a function in a substrate', 'supervenience', 'constitution', 'reduction',
+               'identity', 'explanation', 'generation', 'functional equivalence', 'metaphorical expression', 'reformulation']
+# the psychophysical problem as a whole with its components (phrase, base direction)
+PROBLEM_STRUCTURE = [
+    (c, 'is a part of', 'psychophysical problem') for c in
+    ('phenomenal experience', 'quale', 'hard problem of consciousness', 'explanatory gap', 'unity of consciousness', 'temporal unity of the self',
+     'free will', 'mental causation', 'other minds', 'the self')
+]
 GELLISH_SEM = [('6233', 'implies'), ('1922', 'cause_of'), ('5828', 'identical_to'), ('5831', 'not_equal_to')]
 
 
@@ -453,6 +470,11 @@ def build(here, deps=None):
     e.gellish_aliases(GELLISH_ALIASES)
     e.gellish_sem(GELLISH_SEM)
     e.disjoint_pairs(DISJOINT_RELATIONS)
+    # relation types that count as *explaining* a phenomenon by a mechanism (used by the thesis stratum)
+    for n in EXPLANATORY:
+        e.sem.append((e.ref(n), 'explanatory'))
+    e.sem.append(('1922', 'explanatory'))
+    e.facts(PROBLEM_STRUCTURE)
     n = e.write(here)
     print(f"philosophy_of_mind: {len(CONCEPTS)} concepts, {len(RELATIONS)} relation types, {len(e.role_uid)} role kinds, {len(PEOPLE)} people, {n} rows")
     return e

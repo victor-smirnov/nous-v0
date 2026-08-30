@@ -97,6 +97,19 @@ tree of any output tuple with the noise removed: leaves are source rows (`row C0
 output columns (`why contradiction entailment`, `why role_tension "need conflict"`); a
 raw atom is accepted too. ~1 s per call; every call re-evaluates the program.
 
+**Thesis stratum and structural summary.** If an extension declares a *problem* — a concept with
+components (`X | is a part of | psychophysical problem`) — the reasoner reports which components the
+document *addresses*: a component counts as addressed when an entity grounded to it (or a subtype) is
+linked by ≤ 2 explanatory relations (projection, reduction, constitution, realization, identity,
+explanation, generation, causation, or classification into the document's own concept) to a concept
+that is not in the public dictionaries — the document's own apparatus. The concepts addressing most
+components are its *hubs*. `nous gellish summarize` turns this into a selection of stated rows
+(`gellish-summary` block, budgeted): the explanatory paths component → hub, definitions of the hubs,
+the author's strong salience rows, the foils with their rebuttals, central claims about the hubs. No
+new claims are ever added; the block decodes into an abstract. On the article: 8/10 components of the
+psychophysical problem addressed, hub = apparent causal break / computational residual — the
+"particular but complete solution" that LLM summaries of the article missed.
+
 **Enrichment.** `nous gellish enrich` writes what the closure added back into the document as
 ```` ```gellish-derived <id> ```` blocks: one row per derived edge, intention by level, context
 = provenance (`derived: closure`, `theory: Synthea`, `field: depth 1`, `gellish: depth 1`,

@@ -101,6 +101,26 @@ def render(out_dir, facts_dir):
     if len(r) > 40:
         print(f"| … {len(r) - 40} more | |")
 
+    section("Structural abstract (thesis stratum)")
+    ts = dict(rows("thesis_stat"))
+    cov = rows("coverage"); hubs = sorted(rows("hub"), key=lambda x: (-int(x[1]), -int(x[2])))
+    if not cov:
+        print("no problem schema in the dictionaries (declare `X | is a part of | <problem>` in an extension)")
+    else:
+        probs = {}
+        for p_, pn, c, cn, st, via in cov:
+            probs.setdefault(pn, []).append((cn, st, via))
+        for pn, items in probs.items():
+            done = sum(1 for _, st, _ in items if st == "addressed")
+            print(f"**{pn}** — {done}/{len(items)} components addressed by the document's own concepts\n")
+            print("| component | status | via |\n|---|---|---|")
+            for cn, st, via in sorted(items, key=lambda x: ("addressed", "mentioned", "absent").index(x[1])):
+                print(f"| {cn} | {st} | {via} |")
+            print()
+        print(f"Novel concepts (defined here, unknown outside the document's own theory): {ts.get('novel concepts', '?')}. Hubs — novel concepts by components addressed (at distance 1):\n")
+        for m, n, d1 in hubs[:8]:
+            print(f"- {m}: {n} ({d1})")
+
     section("Declared residual (what the encoder refused to encode)")
     dr = sorted(rows("declared_residual"), key=lambda x: -int(x[2]))
     if not dr:

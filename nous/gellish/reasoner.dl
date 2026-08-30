@@ -436,6 +436,74 @@ violation("double-negation", F, P)            :- fact(F, _, "other", P, _, _, I,
                                                   (match("(cannot|does not|do not|is not|are not|never|lacks|fails to|no longer) .*", P) ; P = "is not" ; P = "cannot").
 .output violation
 
+// ================================================================= thesis stratum: what problem does the document solve, and how completely
+// A "problem" is a dictionary concept with parts (`is a part of`, 1260). A component counts as ADDRESSED when a document
+// entity grounded to it (or to a subtype of it) is linked, by a short chain of explanatory relations (sem "explanatory"),
+// to a concept the document itself introduces (defined in the document, not known outside the document's own theory).
+.decl problem(u:symbol)                                                            // declared in an extension collection only
+problem(U) :- d_fact(_, "1260", U, C), d_concept(U, _), match("100[0-9][0-9][0-9][0-9][0-9][0-9]", C).
+.decl component_of(c:symbol, p:symbol)                                             // declared components only
+component_of(C, P) :- d_fact(C, "1260", P, Coll), problem(P), match("100[0-9][0-9][0-9][0-9][0-9][0-9]", Coll).
+.decl comp_sub(s:symbol, c:symbol)                                                 // a component, its subtypes, and their subtypes
+comp_sub(C, C) :- component_of(C, _).
+comp_sub(S, C) :- d_spec(S, T, _), comp_sub(T, C).
+.decl comp_entity(x:symbol, c:symbol)                                             // document entity standing for declared component C
+comp_entity(X, C) :- ground_cand(X, U), comp_sub(U, C).
+
+.decl known_outside(x:symbol)                                                     // grounded in the standard dictionary or the field
+known_outside(X) :- ground_cand(X, U), !theory_concept(U).
+.decl defined_here(x:symbol)
+defined_here(X) :- fact(_, X, _, _, _, _, "definition", _, _, _), !ref(X).
+.decl novel(x:symbol)                                                              // the document's own concepts
+novel(X) :- defined_here(X), !known_outside(X).
+novel(X) :- entity(X), !known_outside(X), N = count : { fact(_, X, _, _, _, _, _, _, _, _) }, N >= 15.
+
+.decl expl_f(x:symbol, y:symbol, f:symbol)                                         // explanatory link and the row that states it
+expl_f(X, Y, F) :- fact(F, X, _, _, Y, _, _, _, _, U), sem(U, "explanatory"), usable(F, _), !ref(X), !ref(Y).
+expl_f(X, Y, F) :- fact(F, X, _, _, Y, _, _, _, _, U), class_rel(U), usable(F, _), !ref(X), !ref(Y), !known_outside(Y).   // "the timeline is a retroactive fiction"
+.decl expl(x:symbol, y:symbol)                                                     // undirected explanatory link between document entities
+expl(X, Y) :- expl_f(X, Y, _).
+expl(Y, X) :- expl(X, Y).
+expl(X, Y) :- same(X, Y).
+.output expl_f
+.decl expl_path(x:symbol, y:symbol, d:number)
+expl_path(X, Y, 1) :- expl(X, Y).
+expl_path(X, Z, D + 1) :- expl_path(X, Y, D), expl(Y, Z), D < 2, X != Z.
+
+.decl degree(x:symbol, n:number)
+degree(X, N) :- entity(X), N = count : { fact(_, X, _, _, _, _, _, _, _, _) } + count : { fact(_, _, _, _, X, _, _, _, _, _) }.
+.decl own(x:symbol)                                                                 // the document's own apparatus: not in the public dictionaries, and substantive
+own(X) :- entity(X), !known_outside(X), !comp_entity(X, _), defined_here(X).
+own(X) :- entity(X), !known_outside(X), !comp_entity(X, _), degree(X, N), N >= 5.
+.decl addressed(c:symbol, x:symbol, m:symbol, d:number)                            // component C, via document entity X, reaches own concept M
+addressed(C, X, M, D) :- comp_entity(X, C), expl_path(X, M, D), own(M), X != M.
+.decl addressed_best(c:symbol, m:symbol, d:number)
+addressed_best(C, M, D) :- addressed(C, _, M, _), D = min X : { addressed(C, _, M, X) }.
+.decl hub(m:symbol, n:number, direct:number)                                       // novel concepts by how many components they address (and at distance 1)
+hub(M, N, D1) :- addressed_best(_, M, _), N = count : { addressed_best(_, M, _) }, D1 = count : { addressed_best(_, M, 1) }.
+.decl coverage(p:symbol, pname:symbol, c:symbol, cname:symbol, status:symbol, via:symbol)
+// via = the globally strongest hub reachable from the component (rank: components addressed, then direct ones, then name)
+.decl hub_rank(m:symbol, r:number)
+hub_rank(M, N * 100000 + D1 * 1000 + min(Dg, 999)) :- hub(M, N, D1), degree(M, Dg).
+.decl best_via(c:symbol, m:symbol)
+best_via(C, M) :- addressed_best(C, M, _), hub_rank(M, R), R = max Q : { addressed_best(C, M2, _), hub_rank(M2, Q) },
+                  O = min P : { addressed_best(C, M3, _), hub_rank(M3, R), P = ord(M3) }, ord(M) = O.
+coverage(P, PN, C, CN, "addressed", M) :- component_of(C, P), d_concept(P, PN), d_concept(C, CN), best_via(C, M).
+coverage(P, PN, C, CN, "mentioned", "")  :- component_of(C, P), d_concept(P, PN), d_concept(C, CN), comp_entity(_, C), !addressed_best(C, _, _).
+coverage(P, PN, C, CN, "absent", "")     :- component_of(C, P), d_concept(P, PN), d_concept(C, CN), !comp_entity(_, C).
+.output coverage
+.output hub
+.output novel
+.output comp_entity
+.output own
+.decl thesis_stat(k:symbol, n:number)
+thesis_stat("components", N) :- N = count : { component_of(_, _) }.
+thesis_stat("components addressed", N) :- N = count : { coverage(_, _, _, _, "addressed", _) }.
+thesis_stat("components mentioned only", N) :- N = count : { coverage(_, _, _, _, "mentioned", _) }.
+thesis_stat("components absent", N) :- N = count : { coverage(_, _, _, _, "absent", _) }.
+thesis_stat("novel concepts", N) :- N = count : { novel(_) }.
+.output thesis_stat
+
 // ================================================================= entity index & stats
 .decl entity(x:symbol)
 entity(X) :- entity_lc(X, _).
