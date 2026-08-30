@@ -1,14 +1,14 @@
 theory level	2
-dictionary concepts	69426
-dictionary relation types	8134
-dictionary phrases	3325
+dictionary concepts	69436
+dictionary relation types	8137
+dictionary phrases	3340
 theory concepts	67
 entities grounded in theory	31
 facts	2296
-facts via dictionary	798
+facts via dictionary	800
 facts via extension	875
-facts residual	623
-residual phrases	460
+facts residual	621
+residual phrases	458
 declared residual rows	0
 second-order facts	328
 entities	2488
@@ -20,7 +20,7 @@ facts committed (-)	203
 facts unresolved	0
 facts usable	2018
 facts figurative	72
-holds closed	35108
+holds closed	35120
 subtype closed	1326
 instance closed	1506
 part_of closed	252
@@ -28,7 +28,7 @@ identity pairs	150
 entailment stated	192
 entailment closed	202
 entailment truncated	0
-kb size	4556
+kb size	4558
 kb from dictionary	2226
 contradictions	6
 role tensions	9

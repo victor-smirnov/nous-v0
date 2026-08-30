@@ -12,8 +12,9 @@ truth; prose is a rendering.
 
 Specifications (read the one the step needs before acting):
 - `references/hybrid-format.md` — the container: fences, section ids, global fact refs, residual blocks
-- `references/encoding-v3.md` — how prose becomes rows: intention enum, positive-proposition rule, second-order rows, residual
-- `references/phrases.md` — the only relation phrases allowed (96 types; regenerate with `nous gellish phrases -o …`)
+- `references/encoding-v3.md` — how prose becomes rows (v3.1): intention enum, positive-proposition rule, second-order rows,
+  cross-references (R10), point of view and appearance (R11), residual
+- `references/phrases.md` — the only relation phrases allowed (115 types incl. subject and document families; regenerate with `nous gellish phrases -o …`)
 - `references/decoding.md` — how rows become prose: render, don't narrate
 
 Tooling: the `nous` CLI (`python3 -m nous` from the nous-v0 repo if not on PATH). It needs
@@ -99,5 +100,7 @@ questions about a checked document instead of re-reading it.
   `A | is identical to | B` once (it is a stated identity, level 4).
 - When in doubt about intention, hedge; `assertion` is the marked choice.
 - Never put a negative phrase under `denial` (double negation is the most common v2 error).
+- Index a claim to a point of view only where the text marks a standpoint; two indexed rows are a perspectival
+  difference, not a contradiction.
 - Persons are persons (`Dennett`), citations go to `context`.
 - An empty residual block is a claim; make it deliberately.

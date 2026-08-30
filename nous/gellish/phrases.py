@@ -11,7 +11,7 @@ CORE = ["1146", "1225", "1260", "1727", "4798", "4682", "5126", "5751", "1922", 
         "5829", "5023", "5830", "1388", "1385", "5815", "1384", "4872", "6012", "5020", "2044", "1732", "5776",
         "6208", "5452", "5160", "2071", "5396"]
 FAMILY_ORDER = ["taxonomy & identity", "part-whole & constitution", "projection & realization", "causation, conditions & logic",
-                "needs, signals & control", "dialectics & provenance", "bibliographic", "quantities, time & other"]
+                "needs, signals & control", "dialectics & provenance", "subject & point of view", "document structure", "bibliographic", "quantities, time & other"]
 
 
 def load(dictfacts):
@@ -52,30 +52,38 @@ def ancestors(u, spec, limit=40):
 PROPS = {"5520": "transitive", "5521": "symmetric", "5912": "antisymmetric", "5913": "intransitive", "5962": "reflexive", "5963": "irreflexive"}
 
 
-def family(u, anc, name):
+def family(u, anc, name, coll=None):
     n = name.get(u, "").lower()
-    if any(k in n for k in ("quantif", "scale", "boundary", "greater", "less than", "temporal", "sequence", "begin", "during", "dating", "succession")):
-        return FAMILY_ORDER[7] if "dating" not in n else FAMILY_ORDER[6]
-    if u in ("1146", "1225") or "identity" in n or "distinctness" in n or "classification" in n or "equality" in n or "inequality" in n:
-        return FAMILY_ORDER[0]
-    if u in ("1260", "5623", "1190") or "constitution" in n or "composition" in n or "assembly" in n:
-        return FAMILY_ORDER[1]
-    if "5776" in anc or u == "5776" or "realization" in n or "supervenience" in n or "reduction" in n or "encoding" in n or "manifestation" in n or "equivalence" in n or "analogy" in n or "metaphor" in n:
-        return FAMILY_ORDER[2]
-    if u in ("1922", "6233") or "condition" in n or "implication" in n or "explanation" in n or "prediction" in n or "counterexample" in n or "generalization" in n:
-        return FAMILY_ORDER[3]
-    if "6208" in anc or u == "6208" or any(k in n for k in ("signal", "tracking", "evaluation", "monitoring", "steering", "optimization", "minimization", "encounter", "conclusion from", "acting from", "directedness", "persistence", "generation", "reconstruction", "functional", "exhibition", "possession")):
-        return FAMILY_ORDER[4]
-    if any(k in n for k in ("assertion by", "endorsement", "rejection", "offering", "qualification", "commitment", "objection", "rebuttal", "reply", "concession", "contrast", "elaboration", "evidential", "inversion", "reformulation", "exemplification", "description", "authorship")):
-        return FAMILY_ORDER[5]
+    if coll and coll.get(u, "").startswith("1009"):
+        return "subject & point of view"
+    if coll and coll.get(u, "").startswith("1010"):
+        return "document structure"
     if any(k in n for k in ("dating", "publication", "citation", "publisher")):
-        return FAMILY_ORDER[6]
-    return FAMILY_ORDER[7]
+        return "bibliographic"
+    if any(k in n for k in ("quantif", "scale", "boundary", "greater", "less than", "temporal", "sequence", "begin", "during", "succession")):
+        return "quantities, time & other"
+    if u in ("1146", "1225") or any(k in n for k in ("identity", "distinctness", "classification", "equality", "inequality")):
+        return "taxonomy & identity"
+    if u in ("1260", "5623", "1190") or any(k in n for k in ("constitution", "composition", "assembly")):
+        return "part-whole & constitution"
+    if "5776" in anc or u == "5776" or any(k in n for k in ("realization", "supervenience", "reduction", "encoding", "manifestation", "equivalence", "analogy", "metaphor")):
+        return "projection & realization"
+    if u in ("1922", "6233") or any(k in n for k in ("condition", "implication", "explanation", "prediction", "counterexample", "generalization")):
+        return "causation, conditions & logic"
+    if "6208" in anc or u == "6208" or any(k in n for k in ("signal", "tracking", "evaluation", "monitoring", "steering", "optimization", "minimization",
+                                                            "encounter", "conclusion from", "acting from", "directedness", "persistence", "generation",
+                                                            "reconstruction", "functional", "exhibition", "possession")):
+        return "needs, signals & control"
+    if any(k in n for k in ("assertion by", "endorsement", "rejection", "offering", "qualification", "commitment", "objection", "rebuttal", "reply",
+                            "concession", "contrast", "elaboration", "evidential", "inversion", "reformulation", "exemplification", "description", "authorship")):
+        return "dialectics & provenance"
+    return "quantities, time & other"
 
 
 def render(dictfacts, everything=False):
     name, phr, spec, coll, role, role_of, defs = load(dictfacts)
-    rels = [u for u in phr if everything or u in CORE or coll.get(u, "").startswith("1007") or coll.get(u, "").startswith("1008")]
+    ours = lambda u: len(coll.get(u, "")) >= 9                                        # our extension blocks are 9-digit collections
+    rels = [u for u in phr if everything or u in CORE or ours(u)]
     groups = collections.defaultdict(list)
     for u in rels:
         anc = ancestors(u, spec)
@@ -84,8 +92,8 @@ def render(dictfacts, everything=False):
         roles = ""
         if r1 or r2:
             roles = f"{name.get(r1, '?') if r1 else '·'} → {name.get(r2, '?') if r2 else '·'}"
-        src = "Gellish" if not coll.get(u, "").startswith("100") else ("Synthea" if coll[u].startswith("1008") else "field")
-        groups[family(u, anc, name)].append((name.get(u, u), u, phr[u]["base"], phr[u]["inv"], props, roles, src, defs.get(u, "")))
+        src = {"1007": "field", "1008": "Synthea", "1009": "subject", "1010": "document"}.get(coll.get(u, "")[:4], "Gellish") if ours(u) else "Gellish"
+        groups[family(u, anc, name, coll)].append((name.get(u, u), u, phr[u]["base"], phr[u]["inv"], props, roles, src, defs.get(u, "")))
     out = ["# Relation phrases for the encoder", "",
            "Use these phrases in the relation column, exactly as written. A phrase from the *inverse* column",
            "reads right-to-left (`A has as part B` ≡ `B is a part of A`); both are accepted. Roles say what",

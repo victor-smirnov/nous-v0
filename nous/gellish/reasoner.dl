@@ -326,13 +326,13 @@ kb(X, "is identical to", Y, Lv, "derived") :- same_best(X, Y, Lv), ord(X) < ord(
 // and, for dictionary ancestry, how far above the grounded concept the target sits.
 .decl coll_origin(u:symbol, o:symbol)
 coll_origin(U, "theory")  :- theory_concept(U).
-coll_origin(U, "field")   :- d_coll(U, C), !theory_coll(C), match("1[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]", C).
+coll_origin(U, "field")   :- d_coll(U, C), !theory_coll(C), match("[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]", C).
 coll_origin(U, "gellish") :- d_concept(U, _), !d_coll(U, _).
-coll_origin(U, "gellish") :- d_coll(U, C), !theory_coll(C), !match("1[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]", C).
+coll_origin(U, "gellish") :- d_coll(U, C), !theory_coll(C), !match("[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]", C).
 .decl fact_origin(c:symbol, o:symbol)
 fact_origin(C, "theory")  :- theory_coll(C).
-fact_origin(C, "field")   :- d_fact(_, _, _, C), !theory_coll(C), match("1[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]", C).
-fact_origin(C, "gellish") :- d_fact(_, _, _, C), !theory_coll(C), !match("1[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]", C).
+fact_origin(C, "field")   :- d_fact(_, _, _, C), !theory_coll(C), match("[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]", C).
+fact_origin(C, "gellish") :- d_fact(_, _, _, C), !theory_coll(C), !match("[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]", C).
 
 .decl dict_anc(x:symbol, y:symbol)
 dict_anc(X, Y) :- ground(X, U), dsup(U, V), d_concept(V, Y).

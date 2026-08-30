@@ -4,7 +4,7 @@ Use these phrases in the relation column, exactly as written. A phrase from the 
 reads right-to-left (`A has as part B` ≡ `B is a part of A`); both are accepted. Roles say what
 kind of thing may stand left → right. Anything not here goes to the `gellish-residual` block.
 
-96 relation types.
+105 relation types.
 
 ## taxonomy & identity
 
@@ -112,6 +112,25 @@ kind of thing may stand left → right. Anything not here goes to the `gellish-r
 | reformulation (100701051) | is a reformulation of · restates | is reformulated as |  |  | field |
 | rejection (100701054) | is denied by · is disputed by · is rejected by | denies · disputes · rejects | anything → anything |  | field |
 | reply (100701046) | answers · is a reply to · responds to | is answered by |  |  | field |
+
+## subject & point of view
+
+| relation type | phrases | inverse phrases | roles (left → right) | algebra | src |
+|---|---|---|---|---|---|
+| access requirement of a concept (100901004) | is recognised through · is recognized through · requires access along | gives access to | anything → access dimension |  | subject |
+| appearance to a subject (100901005) | appears as · is seen as · shows up as | is how it appears · is the appearance of | anything → anything |  | subject |
+| denial from a point of view (100901002) | does not hold for · does not hold from the point of view of | denies | anything → subject type |  | subject |
+| point of view (100901001) | holds for · holds from the point of view of · is the case for | is the point of view for · sees | anything → subject type |  | subject |
+| possession of recognizing capacity (100901003) | has capacity along · has recognizing capacity along | is a capacity dimension of | subject type → access dimension |  | subject |
+| preference for an explanation kind (100901006) | accepts as explanation · is convinced by | is an accepted explanation kind for | subject type → anything |  | subject |
+
+## document structure
+
+| relation type | phrases | inverse phrases | roles (left → right) | algebra | src |
+|---|---|---|---|---|---|
+| reference to a document element (101001002) | is listed in · is shown in · is stated in | lists · shows | anything → document element |  | document |
+| reference to another document (101001003) | is set out in · refers for detail to | sets out | anything → external document |  | document |
+| treatment in a section (101001001) | is discussed in · is elaborated in · is introduced in · is treated in | discusses · introduces · treats | anything → document section |  | document |
 
 ## bibliographic
 

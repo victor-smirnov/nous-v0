@@ -1,8 +1,10 @@
-# Encoding specification v3
+# Encoding specification v3.1
 
-How prose becomes a Gellish fact table. v3 keeps everything v2 measured as working (fact UIDs,
-mandatory intention, reified second-order rows, the causation ban) and fixes what the reasoner
+How prose becomes a Gellish fact table. v3 kept everything v2 measured as working (fact UIDs,
+mandatory intention, reified second-order rows, the causation ban) and fixed what the reasoner
 found broken in v2 tables: double negation, second-order rows on non-facts, invented phrases.
+**v3.1** adds what the article-scale run showed missing: internal cross-references (R10), the
+subject's point of view (R11), and a quote rule that no longer contradicts itself.
 
 ## Output
 
@@ -115,9 +117,54 @@ F0031  | rhetorical | is raised as a challenge to | "not a process, but a conclu
 other. An empty residual block is a claim that the section was fully encoded — make it
 deliberately.
 
+## R10 — internal cross-references (new)
+
+"as argued in Section 4.2", "the table below", "see the appendix", a link to another document: these are the
+document talking about itself, and they were lost wholesale when the prose was withheld. Encode them:
+
+```
+F0042 | Cognitive Code | is discussed in | Section 4.2 | - | assertion | -
+F0043 | epistemic quale table | is listed in | the unified table | - | assertion | -
+F0044 | functional decomposition | is set out in | functional_decomposition_raskolnikov.md | - | assertion | -
+```
+
+Do not use `cites` / `refers to` for these — that relation is provenance (this document cites another *author's*
+work), while R10 is navigation. A cross-reference is not an argument: never let it carry a claim.
+
+## R11 — point of view and appearance (new)
+
+Ontologies remove the subject; this specification puts it back where the text puts it. Two cases, both optional —
+use them only where the source itself marks a standpoint, never to editorialise:
+
+1. **A claim that holds only from a standpoint.** If the text says a claim is true *for* a kind of subject, or
+   that it looks different from the outside and the inside, index the fact:
+   ```
+   F0031 | downward causation | is classified as a | illusion | - | assertion | -
+   F0032 | F0031 | holds from the point of view of | external observer | - | assertion | -
+   F0033 | downward causation | is classified as a | reality | - | assertion | -
+   F0034 | F0033 | holds from the point of view of | the Observer itself | - | assertion | -
+   ```
+   Two rows that contradict each other flatly are an error; the same two rows *indexed to different standpoints*
+   are the text's own structure, and the reasoner treats them as a perspectival difference, not a contradiction.
+2. **One referent under different guises.** Where the text says the same thing is *experienced as* / *appears as*
+   something else to someone, use `appears as` and index it:
+   ```
+   F0040 | computational residual | appears as | freedom | - | assertion | agency context
+   F0041 | F0040 | holds from the point of view of | the Observer itself | - | assertion | -
+   ```
+   `appears as` is not identity and not classification: it is how a referent shows up for a subject. Use
+   `is experienced as` when the text speaks of experience without naming a subject.
+
+The named subject may be a subject *type* from the dictionary (Rationalist, Intuitionist, Language-model subject)
+or, more often, whatever the text itself names ("an external observer", "the Observer itself", "a reader with a
+folk-psychological vocabulary"). Name it as the text does; do not force it into the three types.
+
 ## Hard constraints
 
 - Output only the fenced blocks for the section; no prose, no commentary.
-- No cell contains more than 5 consecutive words copied from the source.
+- **Quotes.** A verbatim span from the source is allowed in exactly two places: the right object of a row whose
+  relation is `is defined as`, and the `quote` column of a residual row — in both cases wrapped in "double
+  quotes". Everywhere else no cell may contain more than 5 consecutive words copied from the source.
+- Comment lines inside a block start with an ASCII `#` and nothing else. No other markers.
 - Do not assert what the source neither states nor directly entails.
 - Completeness over brevity: the table will be large.
