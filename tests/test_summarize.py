@@ -11,13 +11,13 @@ class Summarize(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             ws = paths.Workspace(d)
             run.check(ws, [str(DOC)], quiet=True)
-            header, hubs, order, why, facts = summarize.build(ws.out, ws.facts, budget=20)
+            header, hubs, order, why, facts, extras = summarize.build(ws.out, ws.facts, budget=20)
             self.assertTrue(header, "problem schema present")
             self.assertTrue(any(st == "addressed" for _, _, st, _ in header))
             self.assertLessEqual(len(order), 20)
             for f in order:
                 self.assertIn(f, facts)
-            text = summarize.render(header, hubs, order, why, facts)
+            text = summarize.render(header, hubs, order, why, facts, extras)
             self.assertIn("```gellish-summary", text)
 
 

@@ -63,7 +63,13 @@ def build(out_dir, facts_dir, budget=80):
         if f in facts and f not in chosen and len(order) < budget:
             chosen.add(f); order.append(f); why[f] = reason
 
+    anchors = tsv(out / "anchor.csv"); aside = tsv(out / "set_aside.csv")
+    cname = {c: cn for _, _, c, cn, _, _ in coverage}
     header = []
+    for c, x, m, f in anchors:
+        take(f, f"anchor: {cname.get(c, c)} ↔ {m}")
+    for c, x, f in aside:
+        take(f, f"set aside: {cname.get(c, c)}")
     for p_, pn, c, cn, st, via in coverage:
         header.append((pn, cn, st, via))
         if st != "addressed":
@@ -94,10 +100,11 @@ def build(out_dir, facts_dir, budget=80):
              if r[6] in ("assertion", "definition") and (r[1] in hub_names or r[4] in hub_names) and not FACT_REF.match(r[1])]
     for _, f in sorted(cands, reverse=True):
         take(f, "central claim about a hub")
-    return header, hubs, order, why, facts
+    extras = {"anchors": sorted({(x, m) for c, x, m, f in anchors}), "set_aside": sorted({x for c, x, f in aside})}
+    return header, hubs, order, why, facts, extras
 
 
-def render(header, hubs, order, why, facts):
+def render(header, hubs, order, why, facts, extras=None):
     lines = ["# Structural summary", ""]
     probs = collections.defaultdict(list)
     for pn, cn, st, via in header:
@@ -110,6 +117,11 @@ def render(header, hubs, order, why, facts):
         if rest:
             lines.append("Not addressed: " + ", ".join(rest) + ".")
     lines.append("**Hubs:** " + ", ".join(f"{m} ({n})" for m, n, d1 in hubs[:5]) + ".")
+    if extras:
+        if extras["anchors"]:
+            lines.append("**Anchor (the phenomenon reduced directly to the hub — the entry point the author chose):** " + "; ".join(f"{c} ↔ {m}" for c, m in extras["anchors"]) + ". The solution is particular to this choice; another anchor would give another argument.")
+        if extras["set_aside"]:
+            lines.append("**Set aside (named only to be rejected as the anchor):** " + ", ".join(extras["set_aside"]) + ".")
     lines += ["", f"```gellish-summary", "# selected {0} rows; reason in the last column".format(len(order))]
     for f in order:
         r = facts[f]
