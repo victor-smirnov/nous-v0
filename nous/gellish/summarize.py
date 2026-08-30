@@ -100,7 +100,9 @@ def build(out_dir, facts_dir, budget=80):
              if r[6] in ("assertion", "definition") and (r[1] in hub_names or r[4] in hub_names) and not FACT_REF.match(r[1])]
     for _, f in sorted(cands, reverse=True):
         take(f, "central claim about a hub")
-    extras = {"anchors": sorted({(x, m) for c, x, m, f in anchors}), "set_aside": sorted({x for c, x, f in aside})}
+    hrank = {m: (int(n), int(d1)) for m, n, d1 in hubs}
+    extras = {"anchors": sorted({(x, m) for c, x, m, f in anchors}, key=lambda p: (-hrank.get(p[1], (0, 0))[0], p)),
+              "set_aside": sorted({x for c, x, f in aside})}
     return header, hubs, order, why, facts, extras
 
 

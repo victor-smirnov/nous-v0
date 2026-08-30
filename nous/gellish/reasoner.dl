@@ -474,8 +474,8 @@ expl_path(X, Z, D + 1) :- expl_path(X, Y, D), expl(Y, Z), D < 2, X != Z.
 .decl degree(x:symbol, n:number)
 degree(X, N) :- entity(X), N = count : { fact(_, X, _, _, _, _, _, _, _, _) } + count : { fact(_, _, _, _, X, _, _, _, _, _) }.
 .decl own(x:symbol)                                                                 // the document's own apparatus: not in the public dictionaries, and substantive
-own(X) :- entity(X), !known_outside(X), !comp_entity(X, _), defined_here(X).
-own(X) :- entity(X), !known_outside(X), !comp_entity(X, _), degree(X, N), N >= 5.
+own(X) :- entity(X), !known_outside(X), !comp_entity(X, _), defined_here(X).           // the document's DEFINED apparatus
+own(X) :- entity(X), !known_outside(X), !comp_entity(X, _), degree(X, N), N >= 25.     // or a term it uses pervasively
 .decl addressed(c:symbol, x:symbol, m:symbol, d:number)                            // component C, via document entity X, reaches own concept M
 addressed(C, X, M, D) :- comp_entity(X, C), expl_path(X, M, D), own(M), X != M.
 .decl addressed_best(c:symbol, m:symbol, d:number)
@@ -486,9 +486,11 @@ hub(M, N, D1) :- addressed_best(_, M, _), N = count : { addressed_best(_, M, _) 
 // via = the globally strongest hub reachable from the component (rank: components addressed, then direct ones, then name)
 .decl hub_rank(m:symbol, r:number)
 hub_rank(M, N * 100000 + D1 * 1000 + min(Dg, 999)) :- hub(M, N, D1), degree(M, Dg).
+// nearest hub first (a hub reached in one explanatory step beats one reached in two), then the globally strongest
 .decl best_via(c:symbol, m:symbol)
-best_via(C, M) :- addressed_best(C, M, _), hub_rank(M, R), R = max Q : { addressed_best(C, M2, _), hub_rank(M2, Q) },
-                  O = min P : { addressed_best(C, M3, _), hub_rank(M3, R), P = ord(M3) }, ord(M) = O.
+best_via(C, M) :- addressed_best(C, M, D), D = min X : { addressed_best(C, _, X) },
+                  hub_rank(M, R), R = max Q : { addressed_best(C, M2, D), hub_rank(M2, Q) },
+                  O = min P : { addressed_best(C, M3, D), hub_rank(M3, R), P = ord(M3) }, ord(M) = O.
 coverage(P, PN, C, CN, "addressed", M) :- component_of(C, P), d_concept(P, PN), d_concept(C, CN), best_via(C, M).
 coverage(P, PN, C, CN, "mentioned", "")  :- component_of(C, P), d_concept(P, PN), d_concept(C, CN), comp_entity(_, C), !addressed_best(C, _, _).
 coverage(P, PN, C, CN, "absent", "")     :- component_of(C, P), d_concept(P, PN), d_concept(C, CN), !comp_entity(_, C).
@@ -501,12 +503,14 @@ top_hub(M) :- hub_rank(M, R), R = max Q : { hub_rank(_, Q) }.
 .decl reduces_rel(u:symbol)
 reduces_rel(U) :- d_relname(U, N), (N = "is reducible to" ; N = "is identical to" ; N = "is constituted by" ; N = "is realized in").
 .decl anchor(c:symbol, x:symbol, m:symbol, f:symbol)
-anchor(C, X, M, F) :- comp_entity(X, C), top_hub(M), fact(F, X, _, _, M2, _, _, _, _, U), reduces_rel(U), usable(F, _), (M2 = M ; same(M, M2)).
-anchor(C, X, M, F) :- comp_entity(X, C), top_hub(M), fact(F, M2, _, _, X, _, _, _, _, U), reduces_rel(U), usable(F, _), (M2 = M ; same(M, M2)).
+anchor(C, X, M, F) :- comp_entity(X, C), hub(M, _, _), fact(F, X, _, _, M, _, _, _, _, U), reduces_rel(U), usable(F, _).
+anchor(C, X, M, F) :- comp_entity(X, C), hub(M, _, _), fact(F, M, _, _, X, _, _, _, _, U), reduces_rel(U), usable(F, _).
 .decl anchor_entity(x:symbol)
 anchor_entity(X) :- anchor(_, X, _, _).
-.decl set_aside(c:symbol, x:symbol, f:symbol)                                      // component entities named only to be rejected
-set_aside(C, X, F) :- comp_entity(X, C), fact(F, X, _, _, _, _, "rebutted-claim", _, _, _), !anchor_entity(X).
+.decl set_aside(c:symbol, x:symbol, f:symbol)                                      // a REDUCTION of this component raised only to be rejected
+set_aside(C, X, F) :- comp_entity(X, C), fact(F, X, _, _, _, _, "rebutted-claim", _, _, U), reduces_rel(U), !anchor_entity(X).
+set_aside(C, X, F) :- comp_entity(X, C), fact(F, X, _, _, _, _, "rebutted-claim", _, _, U), class_rel(U), !anchor_entity(X),
+                      fact(F, _, _, _, Y, _, _, _, _, _), own(Y).
 .output anchor
 .output set_aside
 .output coverage
