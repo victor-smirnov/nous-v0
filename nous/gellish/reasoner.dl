@@ -564,7 +564,7 @@ perspectival_difference(F, S1, S2) :- holds_for(F, S1), subject(S2), S1 != S2, !
 .decl seen_as(x:symbol, s:symbol, y:symbol)
 seen_as(X, S, Y) :- rf(F, X, "appears_as", Y), usable(F, _), pov(F, S).
 seen_as(X, S, Y) :- rf(F, X, "appears_as", Y), usable(F, _), !indexed(F), subject(S).
-seen_as(X2, S, Y) :- seen_as(X, S, Y), same(X, X2).
+seen_as(X2, S, Y) :- seen_as(X, S, Y), same(X, X2), X2 != Y.
 // visibility status of a referent for a subject: "itself" | "as <Y>" | "invisible"
 .decl view(x:symbol, s:symbol, status:symbol, guise:symbol)
 view(X, S, "itself", X)      :- constrained(X), subject(S), recognizable(X, S).
