@@ -33,15 +33,15 @@ kind of thing may stand left → right. Anything not here goes to the `gellish-r
 | modeling of an object (5776) | is a modeling of | is modelled as |  |  | Gellish |
 | realization of a conceptual fact by an individual fact (5452) | is a realization of | is realized by |  |  | Gellish |
 | approximation of a process (100701002) | approximates · is an approximation of | is approximated by | anything → anything |  | field |
-| conceptualization (100701003) | is conceptualised as · is conceptualized as | is a conceptualization of | anything → concept |  | field |
+| conceptualization (100701003) | is conceptualised as · is conceptualized as | is a conceptualization of | anything → anything |  | field |
 | encoding (100701006) | encodes · is an encoding of | is encoded as · is encoded in | anything → anything |  | field |
 | experiential projection (100701004) | is experienced as · is felt as | is the experience of | anything → anything |  | field |
 | functional analogy (100701012) | is a functional analog of · is a functional analogue of · is functionally analogous to | is a functional analogue of |  | symmetric | field |
 | functional equivalence (100701011) | is functionally equivalent to | is functionally equivalent to |  | symmetric, transitive | field |
 | logical equivalence (100701039) | is a biconditional of · is equivalent to · is logically equivalent to | is logically equivalent to |  | symmetric, transitive | field |
 | manifestation (100701005) | is manifested as · manifests as | is a manifestation of |  |  | field |
-| metaphorical expression (100701014) | is a metaphor for · is figuratively expressed as | is expressed by the metaphor | metaphor → anything |  | field |
-| projection of a state into a code (100701001) | is a low-dimensional projection of · is a projection of | is projected as · projects to | information → mental state |  | field |
+| metaphorical expression (100701014) | is a metaphor for · is figuratively expressed as | is expressed by the metaphor | anything → anything |  | field |
+| projection of a state into a code (100701001) | is a low-dimensional projection of · is a projection of | is projected as · projects to | anything → anything |  | field |
 | realization of a function in a substrate (100701007) | is implemented in · is realised in · is realized in · runs on | implements · is a substrate of · realises · realizes | anything → substrate |  | field |
 | reduction (100701010) | is reduced to · is reducible to · reduces to | is a reduction base of |  | transitive | field |
 | structural analogy (100701013) | is an analogy for · is analogous to · is structurally analogous to · parallels · resembles | is analogous to |  | symmetric | field |
@@ -53,10 +53,10 @@ kind of thing may stand left → right. Anything not here goes to the `gellish-r
 |---|---|---|---|---|---|
 | implication relation between relations (6233) | entails · has as implication · implies · logically implies | follows from · is an implication of · is entailed by · is implied by |  |  | Gellish |
 | counterexample (100701048) | is a counterexample to | has as counterexample |  |  | field |
-| explanation (100701033) | accounts for · explains | is accounted for by · is explained by | information → anything |  | field |
+| explanation (100701033) | accounts for · explains | is accounted for by · is explained by | anything → anything |  | field |
 | generalization (100701050) | generalises · generalizes · is a generalization of | is a special case of |  | transitive | field |
 | necessary condition (100701037) | is a necessary condition for · is a necessary condition of · is a precondition for · is a prerequisite for · is necessary for · is presupposed by · is required for | depends on · has as necessary condition · presupposes · requires |  | transitive | field |
-| prediction relation (100701034) | predicts | is predicted by | information → anything |  | field |
+| prediction relation (100701034) | predicts | is predicted by | anything → anything |  | field |
 | sufficient condition (100701038) | guarantees · is a sufficient condition for · is a sufficient condition of · is sufficient for | has as sufficient condition |  | transitive | field |
 
 ## needs, signals & control
@@ -66,28 +66,28 @@ kind of thing may stand left → right. Anything not here goes to the `gellish-r
 | influencing relation (6208) | is influenced by | is influencing |  |  | Gellish |
 | possession of a property (4798) | has as property · has property | is a property of |  |  | Gellish |
 | possession of an aspect by an individual thing (1727) | has · has as aspect · has aspect · is bearer of · possesses | is an aspect of | individual thing → aspect |  | Gellish |
-| acting from a conclusion (100801003) | acts from | is acted from by | cognitive system → anything |  | Synthea |
+| acting from a conclusion (100801003) | acts from | is acted from by | anything → anything |  | Synthea |
 | amplification (100701022) | amplifies | is amplified by |  |  | field |
-| conclusion from an encounter (100801002) | concludes | is concluded by | cognitive system → anything |  | Synthea |
-| directedness (100701027) | is about · is directed at · is directed toward · is directed towards | is the object of | mental state → anything |  | field |
-| encounter of a limit (100801001) | collides with · encounters | is encountered by | cognitive system → aspect |  | Synthea |
+| conclusion from an encounter (100801002) | concludes | is concluded by | anything → anything |  | Synthea |
+| directedness (100701027) | is about · is directed at · is directed toward · is directed towards | is the object of | anything → anything |  | field |
+| encounter of a limit (100801001) | collides with · encounters | is encountered by | anything → anything |  | Synthea |
 | evaluation (100701017) | evaluates | is evaluated by |  |  | field |
 | exhibition of a property (100701032) | displays · exhibits · shows | is exhibited by |  |  | field |
-| functional deficit possession (100801004) | has as functional deficit · lacks | is a functional deficit of · is absent in | cognitive system → anything |  | Synthea |
-| functional role possession (100701031) | has as functional role · has functional role · plays the functional role of | is a functional role of | anything → role |  | field |
+| functional deficit possession (100801004) | has as functional deficit · lacks | is a functional deficit of · is absent in | anything → anything |  | Synthea |
+| functional role possession (100701031) | has as functional role · has functional role · plays the functional role of | is a functional role of | anything → anything |  | field |
 | gating (100701023) | gates | is gated by |  |  | field |
 | generation (100701029) | generates · gives rise to · produces | arises from · is generated by |  |  | field |
-| hyperfunction possession (100801005) | has as hyperfunction | is a hyperfunction of | cognitive system → anything |  | Synthea |
+| hyperfunction possession (100801005) | has as hyperfunction | is a hyperfunction of | anything → anything |  | Synthea |
 | influence (100701018) | acts on · influences | is influenced by |  |  | field |
 | inhibition (100701021) | inhibits · suppresses | is inhibited by · is suppressed by |  |  | field |
 | minimization (100701025) | minimises · minimizes | is minimized by |  |  | field |
 | modulation (100701020) | modulates | is modulated by |  |  | field |
-| monitoring (100701026) | monitors · observes | is monitored by · is observed by | cognitive system → anything |  | field |
+| monitoring (100701026) | monitors · observes | is monitored by · is observed by | anything → anything |  | field |
 | optimization (100701024) | maximizes · optimises · optimizes | is maximized by |  |  | field |
 | persistence across (100701028) | persists across | is spanned by |  |  | field |
-| reconstruction (100701030) | reconstructs | is reconstructed by · is reconstructed from | cognitive system → anything |  | field |
-| signalling of need satisfaction (100701015) | is a signal of · signals | is signaled by · is signalled by | signal → anything |  | field |
-| steering of attention (100701019) | directs · steers | is steered by | signal → anything |  | field |
+| reconstruction (100701030) | reconstructs | is reconstructed by · is reconstructed from | anything → anything |  | field |
+| signalling of need satisfaction (100701015) | is a signal of · signals | is signaled by · is signalled by | anything → anything |  | field |
+| steering of attention (100701019) | directs · steers | is steered by | anything → anything |  | field |
 | tracking (100701016) | is tracked against · tracks | is tracked by | anything → anything |  | field |
 
 ## dialectics & provenance
@@ -118,9 +118,9 @@ kind of thing may stand left → right. Anything not here goes to the `gellish-r
 | relation type | phrases | inverse phrases | roles (left → right) | algebra | src |
 |---|---|---|---|---|---|
 | being publisher of a physical object (5751) | is publisher of · publishes | is published by |  |  | Gellish |
-| citation (100701061) | cites · refers to | is cited by · is referred to by | information → information |  | field |
-| dating (100701059) | is dated · is dated to · was published in the year | is the date of | information → anything |  | field |
-| publication in a venue (100701060) | appears in · is published in · is reported in | contains the publication · publishes | information → anything |  | field |
+| citation (100701061) | cites · refers to | is cited by · is referred to by | anything → anything |  | field |
+| dating (100701059) | is dated · is dated to · was published in the year | is the date of | anything → anything |  | field |
+| publication in a venue (100701060) | appears in · is published in · is reported in | contains the publication · publishes | anything → anything |  | field |
 
 ## quantities, time & other
 

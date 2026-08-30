@@ -110,6 +110,14 @@ new claims are ever added; the block decodes into an abstract. On the article: 8
 psychophysical problem addressed, hub = apparent causal break / computational residual — the
 "particular but complete solution" that LLM summaries of the article missed.
 
+**Subject stratum.** With `ext/subject/profiles.txt` loaded beside a document, every fact gets a third status
+per subject type besides holds / does not hold: **invisible** — some object of the fact needs, along every access
+dimension it can be reached by, more recognizing capacity than the subject has. `recognizable(X, S)` holds if at
+least one dimension suffices (alternative access routes: Beingness through trained reflection *or* through the
+residual mechanism). Facts indexed with `holds from the point of view of` hold only for those subjects;
+`perspectival_difference(F, S1, S2)` lists what holds for one and not another while both could see it. Report
+section "Subject views". Grades inherit down classification and specialisation.
+
 **Enrichment.** `nous gellish enrich` writes what the closure added back into the document as
 ```` ```gellish-derived <id> ```` blocks: one row per derived edge, intention by level, context
 = provenance (`derived: closure`, `theory: Synthea`, `field: depth 1`, `gellish: depth 1`,

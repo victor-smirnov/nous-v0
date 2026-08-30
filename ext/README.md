@@ -8,7 +8,18 @@ Two dictionaries, built by `nous gellish build-dict` from the shared builder
 | `philosophy_of_mind/spec.py` → `philosophy_of_mind.csv` | 100700000 *Philosophy of mind (field)* | 1007xxxxx | the field, position-neutral: 88 concepts, 61 relation types, 54 role kinds, 29 people, 778 rows |
 | `synthea_bootstrap/spec.py` → `synthea_bootstrap.csv` | 100800000 *Synthea bootstrap* | 1008xxxxx | one theory: 52 concepts, 5 relation types, 31 theory facts, 158 rows |
 
+| `subject/spec.py` → `subject.csv` | 100900000 *Subjectivity layer* | 1009xxxxx | the subject put back in, graded: 3 subject types, open-ended access dimensions, point-of-view and capacity relations; 67 rows |
+
 plus `sem.facts` (reasoner tags on relation-type UIDs) and `disjoint_rel.facts`.
+
+**Subjectivity layer.** Ontologies are built to remove the subject; this layer puts it back, graded (Victor,
+2026-08-29). Three idealised *subject types* — Rationalist (reductionist), Intuitionist, Language-model subject
+(hyperplastic) — not persons. Facts can be indexed to a point of view (`F | holds from the point of view of |
+Intuitionist`). Concepts carry *access requirements* along open-ended *access dimensions* (placeholders:
+reflexive, mechanistic, verbal); subject types carry *recognizing capacities* along the same dimensions. The
+matrix lives in an ordinary Gellish table, `subject/profiles.txt` (numbers in the value column; PROVISIONAL —
+the real matrix is separate work, and the language model's reflexive access is an open empirical question),
+loaded next to a document: `nous gellish check doc.md ext/subject/profiles.txt`.
 
 ## Why two
 

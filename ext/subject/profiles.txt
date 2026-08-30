@@ -1,0 +1,36 @@
+# heading: Subject profiles (PROVISIONAL placeholder matrix — the real capacity matrix is separate work)
+# Levels are integers 0–5 in the value column. Dimensions are open-ended concepts of the subject extension.
+# --- capacities of the three subject types
+F0001 | Rationalist | has capacity along | mechanistic access | 4 | hypothesis | placeholder
+F0002 | Rationalist | has capacity along | reflexive access | 2 | hypothesis | placeholder
+F0003 | Rationalist | has capacity along | verbal access | 3 | hypothesis | placeholder
+F0004 | Intuitionist | has capacity along | mechanistic access | 1 | hypothesis | placeholder
+F0005 | Intuitionist | has capacity along | reflexive access | 4 | hypothesis | placeholder
+F0006 | Intuitionist | has capacity along | verbal access | 3 | hypothesis | placeholder
+F0007 | Language-model subject | has capacity along | mechanistic access | 3 | hypothesis | placeholder
+F0008 | Language-model subject | has capacity along | reflexive access | 2 | hypothesis | OPEN QUESTION — needs practical investigation
+F0009 | Language-model subject | has capacity along | verbal access | 5 | hypothesis | placeholder
+# --- what the subjects accept as explanation (weights 0–1)
+F0010 | Rationalist | accepts as explanation | reduction | 1 | hypothesis | placeholder
+F0011 | Rationalist | accepts as explanation | structural analogy | 0.2 | hypothesis | placeholder
+F0012 | Intuitionist | accepts as explanation | structural analogy | 1 | hypothesis | placeholder
+F0013 | Intuitionist | accepts as explanation | experiential projection | 1 | hypothesis | placeholder
+F0014 | Intuitionist | accepts as explanation | reduction | 0.3 | hypothesis | placeholder
+F0015 | Language-model subject | accepts as explanation | reduction | 0.8 | hypothesis | placeholder
+F0016 | Language-model subject | accepts as explanation | structural analogy | 0.8 | hypothesis | placeholder
+# --- access requirements of concepts (several rows = alternative routes)
+F0020 | content quale | requires access along | reflexive access | 1 | hypothesis | placeholder: "redness" is easy to attend to
+F0021 | content quale | requires access along | verbal access | 1 | hypothesis | placeholder
+F0022 | Beingness quale | requires access along | reflexive access | 4 | hypothesis | placeholder: rare in the literature; needs trained reflection
+F0023 | Beingness quale | requires access along | mechanistic access | 3 | hypothesis | placeholder: reachable through the residual mechanism
+F0024 | epistemic quale | requires access along | reflexive access | 3 | hypothesis | placeholder
+F0025 | epistemic quale | requires access along | mechanistic access | 3 | hypothesis | placeholder
+F0026 | computational residual | requires access along | mechanistic access | 3 | hypothesis | placeholder
+F0027 | apparent causal break | requires access along | reflexive access | 3 | hypothesis | placeholder
+F0028 | apparent causal break | requires access along | mechanistic access | 3 | hypothesis | placeholder
+F0029 | freedom | requires access along | reflexive access | 2 | hypothesis | placeholder
+F0030 | mystery | requires access along | reflexive access | 2 | hypothesis | placeholder
+F0031 | subjective average | requires access along | mechanistic access | 2 | hypothesis | placeholder
+F0032 | token bottleneck | requires access along | mechanistic access | 2 | hypothesis | placeholder
+F0033 | higher-order computational phenomenon | requires access along | mechanistic access | 4 | hypothesis | placeholder
+F0034 | intrapersonal intelligence | requires access along | reflexive access | 3 | hypothesis | placeholder

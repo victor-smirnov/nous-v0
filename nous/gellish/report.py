@@ -121,6 +121,31 @@ def render(out_dir, facts_dir):
         for m, n, d1 in hubs[:8]:
             print(f"- {m}: {n} ({d1})")
 
+    section("Subject views (subject stratum)")
+    ss = rows("subject_stat")
+    if not ss:
+        print("no subject profiles loaded (add ext/subject/profiles.txt or a document with subject rows)")
+    else:
+        subs = sorted({s_ for s_, _, _ in ss})
+        keys = ["facts visible", "facts invisible", "concepts unrecognizable", "facts indexed to it", "perspectival differences"]
+        vals = {(s_, k): n for s_, k, n in ss}
+        print("| | " + " | ".join(subs) + " |\n|---|" + "---:|" * len(subs))
+        for k in keys:
+            print(f"| {k} | " + " | ".join(vals.get((s_, k), "0") for s_ in subs) + " |")
+        print()
+        unrec = rows("unrecognizable")
+        by = collections.defaultdict(set)
+        for x, s_, d, need, has in unrec:
+            by[s_].add(f"{x} (needs {d} {need}, has {has})")
+        for s_ in subs:
+            if by[s_]:
+                print(f"**Unrecognizable for {s_}:** " + "; ".join(sorted(by[s_])[:12]) + ("…" if len(by[s_]) > 12 else ""))
+        pd = rows("perspectival_difference")
+        if pd:
+            print(f"\n**Perspectival differences** ({len(pd)}): first 10\n")
+            for f, s1, s2 in pd[:10]:
+                print(f"- {show(f)} — holds for {s1}, not for {s2}")
+
     section("Declared residual (what the encoder refused to encode)")
     dr = sorted(rows("declared_residual"), key=lambda x: -int(x[2]))
     if not dr:

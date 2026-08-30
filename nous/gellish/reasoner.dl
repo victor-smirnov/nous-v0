@@ -521,6 +521,55 @@ thesis_stat("components absent", N) :- N = count : { coverage(_, _, _, _, "absen
 thesis_stat("novel concepts", N) :- N = count : { novel(_) }.
 .output thesis_stat
 
+// ================================================================= subject stratum: the subject put back in, graded
+// Subject types, access dimensions and the capacity matrix come from the subject extension + a profiles table
+// (numbers in the value column). A concept is RECOGNIZABLE by a subject if along at least one access dimension the
+// subject's capacity reaches the concept's requirement. A fact is VISIBLE to a subject if every constrained object in
+// it is recognizable; otherwise it is INVISIBLE — a third status beside holds / does not hold. A fact may also be
+// indexed to a point of view; then it holds only for the subjects it is indexed to.
+.decl subject(s:symbol)
+subject(S) :- rf(_, S, "has_capacity", _).
+subject(S) :- rf(_, _, "pov", S).
+.decl capacity(s:symbol, d:symbol, l:number)
+capacity(S, D, L) :- fact(F, S, _, _, D, V, _, _, _, U), sem(U, "has_capacity"), V != "", L = to_number(V).
+.decl requires(x:symbol, d:symbol, l:number)
+requires(X, D, L) :- fact(F, X, _, _, D, V, _, _, _, U), sem(U, "requires_access"), V != "", L = to_number(V).
+requires(X2, D, L) :- requires(X, D, L), same(X, X2).
+requires(X, D, L) :- requires(K, D, L), instance_best(X, K, _).                        // an instance of a graded kind inherits the grade
+requires(X, D, L) :- requires(K, D, L), subtype_best(X, K, _).
+.decl constrained(x:symbol)
+constrained(X) :- requires(X, _, _).
+.decl recognizable(x:symbol, s:symbol)
+recognizable(X, S) :- requires(X, D, L), capacity(S, D, C), C >= L.
+.decl unrecognizable(x:symbol, s:symbol, d:symbol, need:number, has:number)
+unrecognizable(X, S, D, L, C) :- constrained(X), subject(S), !recognizable(X, S), requires(X, D, L), capacity(S, D, C).
+.decl invisible(f:symbol, s:symbol, x:symbol)
+invisible(F, S, X) :- usable(F, _), subject(S), fact(F, X, _, _, _, _, _, _, _, _), constrained(X), !recognizable(X, S).
+invisible(F, S, X) :- usable(F, _), subject(S), fact(F, _, _, _, X, _, _, _, _, _), constrained(X), !recognizable(X, S).
+.decl pov(f:symbol, s:symbol)
+pov(F, S) :- rf(_, F, "pov", S).
+.decl pov_not(f:symbol, s:symbol)
+pov_not(F, S) :- rf(_, F, "pov_not", S).
+.decl indexed(f:symbol)
+indexed(F) :- pov(F, _).
+indexed(F) :- pov_not(F, _).
+.decl holds_for(f:symbol, s:symbol)                                                    // usable, visible, and not excluded by point of view
+holds_for(F, S) :- usable(F, _), subject(S), !invisible(F, S, _), !indexed(F).
+holds_for(F, S) :- usable(F, _), subject(S), !invisible(F, S, _), pov(F, S).
+.decl perspectival_difference(f:symbol, s1:symbol, s2:symbol)                          // holds for S1, not for S2, and both could see it
+perspectival_difference(F, S1, S2) :- holds_for(F, S1), subject(S2), S1 != S2, !holds_for(F, S2), !invisible(F, S2, _).
+.output invisible
+.output unrecognizable
+.output holds_for
+.output perspectival_difference
+.decl subject_stat(s:symbol, k:symbol, n:number)
+subject_stat(S, "facts visible", N) :- subject(S), N = count : { holds_for(_, S) }.
+subject_stat(S, "facts invisible", N) :- subject(S), N = count : { invisible(_, S, _) }.
+subject_stat(S, "concepts unrecognizable", N) :- subject(S), N = count : { unrecognizable(_, S, _, _, _) }.
+subject_stat(S, "facts indexed to it", N) :- subject(S), N = count : { pov(_, S) }.
+subject_stat(S, "perspectival differences", N) :- subject(S), N = count : { perspectival_difference(_, S, _) }.
+.output subject_stat
+
 // ================================================================= entity index & stats
 .decl entity(x:symbol)
 entity(X) :- entity_lc(X, _).
