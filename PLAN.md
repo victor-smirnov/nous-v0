@@ -107,7 +107,7 @@ core is identical, only the prompt container changes.
    inversion probe is the acceptance metric (target: inversion mass below the v2 experiment's 785).
 7. Keep both: the hybrid doc is the *source of truth* from now on; prose is a rendering.
 
-## 6. Order of work and effort
+## 8. Order of work and effort
 
 | milestone | content | effort |
 |---|---|---|
@@ -115,15 +115,17 @@ core is identical, only the prompt container changes.
 | M2 | hybrid format, spec v3, phrase list generator, skill (encode/check/decode) | done 2026-08-29 |
 | M3 | enrich export (top-cut, definitions, provenance column), diff, decode spec | done 2026-08-29 |
 | M4 | article run: encode → check → repair → enrich → decode → judge | done 2026-08-29 (A/B/C decodes; report in experiments/article/REPORT.md) |
-| M5 | Codex port | ½ day |
+| M5 | thesis stratum + `summarize`; subjectivity layer (subject types, graded capacity, seen-as) | done 2026-08-29 |
+| M6 | spec v3.1 (§4b) + subject rows in the encoder contract; re-encode | ~1 day + model time |
+| M7 | Codex port | ½ day |
 
-## 7. Decisions to confirm
+## 9. Decisions to confirm
 
 - ~~Repo name~~ `nous-v0`, package `nous`, MIT. Both dictionaries live here.
 - Encoding model for the article run: Opus (cost study) — unless Fable is preferred for frugality.
 - ~~Hybrid container~~ fences (done).
 
-## 6. Receiver profiles (direction, 2026-08-29; not detailed yet)
+## 7. Receiver profiles (direction, 2026-08-29; not detailed yet)
 
 Victor: the difficulty of the hard problem is less how to explain consciousness than how the explanation is
 *understood* — it needs a ready conceptual apparatus; people are unaware of their own limitation and there is no
