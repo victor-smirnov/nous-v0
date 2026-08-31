@@ -95,3 +95,30 @@ reasons about another's mental states. The subjectivity layer makes that attribu
 from a standpoint, what a subject cannot recognise, what it sees a referent as — which is the structure of
 theory-of-mind attribution rather than plain description. A library for reasoning about Observer states need not
 itself be an Observer; self-applicability belongs to Nous-as-agent, and to Deem.
+
+## Pseudo-incremental mode (2026-08-31)
+
+Until Logos/Deem exists, rounds are emulated by calling Soufflé in a loop (`nous gellish rounds …`): each round
+publishes its observables — truncated chains, ambiguous groundings, unresolved stances, open contradictions —
+as ordinary facts tagged with the round that will *consume* them, and `rounds.dl` reads them. Self-applicability
+is thereby stratified by round; inside a round everything stays monotone.
+
+**The division of labour that keeps it honest:** the rules decide, the wrapper only executes. `recommend(param,
+value, reason, round)` is derived in Datalog; the loop applies it and can do nothing else. If a decision is not
+derivable, it does not happen. Deem replaces the loop, not the rules.
+
+The three Observer conditions are then *derived* for the reasoner itself and fed to the library like any other
+case: it encounters (the previous round materialised its refusals), concludes (its closure is incomplete), acts
+(it raises its own depth budget). Run on the article at `--maxdepth 1`:
+
+| round | state | level by the library |
+|---|---|---|
+| 0 | nothing to read yet | not even a proto-Observer: missing Encounter |
+| 1–2 | 18 truncated chains → concludes incompleteness → raises the budget | **Agent** (it changes its own operation from within) |
+| 3 | truncation gone; 37 ambiguous groundings and 1 open contradiction remain, and the rules have no move for them | **Observer** — it halts on a derived "no move available" |
+
+Two things this makes visible rather than assumed. First, the loop halts because the *rules* run out of moves,
+not because the wrapper counted iterations. Second, the level tracks what the system can actually do: while it
+can change its own operation it is an Agent; when all that remains is to stop knowingly, it is an Observer; with
+nothing read from a previous round it is not even a proto-Observer. A judgement call is baked into one rule —
+`stop` counts as acting from the conclusion — and it is visible in `rounds.dl` rather than hidden.

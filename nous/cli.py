@@ -6,6 +6,7 @@
   nous gellish why <relation> [filters...]          proof trees (after check)
   nous gellish report                               re-render the last report
   nous gellish phrases [-o spec/phrases.md] [--all]  relation-phrase reference for the encoder
+  nous gellish rounds INPUT... [--rounds 3]            pseudo-incremental mode: the rules decide, the loop executes
   nous gellish state CASE.txt [--theory ...]           the bootstrap library: case description → Observer state
   nous gellish summarize DOC.md [--budget 80] [-o SUMMARY.md] [--theory ...]   thesis stratum → selected rows (gellish-summary)
   nous gellish enrich DOC.md [-o OUT.md] [--depth 1] [--no-defs] [--gellish-facts] [--theory ...]   derived rows → gellish-derived blocks
@@ -35,6 +36,9 @@ def main(argv=None):
     p = g.add_parser("ask"); p.add_argument("query"); p.add_argument("--work")
     p = g.add_parser("why"); p.add_argument("target", nargs="+", help="relation [filters...] or a raw atom"); p.add_argument("--work")
     p = g.add_parser("report"); p.add_argument("--work")
+    p = g.add_parser("rounds"); p.add_argument("inputs", nargs="+"); p.add_argument("--rounds", type=int, default=3)
+    p.add_argument("--maxdepth", type=int, default=8); p.add_argument("--minlevel", type=int, default=2)
+    p.add_argument("--theory", choices=["off", "hypothesis", "doctrine"], default="hypothesis"); p.add_argument("--work")
     p = g.add_parser("state"); p.add_argument("cases", nargs="+"); p.add_argument("--work")
     p.add_argument("--theory", choices=["off", "hypothesis", "doctrine"], default="hypothesis")
     p = g.add_parser("summarize"); p.add_argument("doc"); p.add_argument("-o", "--out"); p.add_argument("--budget", type=int, default=80)
@@ -69,6 +73,10 @@ def main(argv=None):
     elif a.gcmd == "report":
         from .gellish import report
         sys.stdout.write(report.render(ws.out, ws.facts))
+    elif a.gcmd == "rounds":
+        from .gellish import rounds
+        paths.require_souffle(); ws.require_dictfacts()
+        sys.stdout.write(rounds.render(rounds.loop(ws, a.inputs, a.rounds, a.minlevel, a.maxdepth, a.theory)))
     elif a.gcmd == "state":
         from .gellish import run, state
         run.check(ws, a.cases, theory=a.theory, quiet=True)

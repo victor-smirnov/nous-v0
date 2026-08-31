@@ -60,15 +60,21 @@ def build_dict(ws, fetch=False):
 
 
 # ------------------------------------------------------------------ reasoning
-def check(ws, tables, minlevel=2, maxdepth=8, theory="hypothesis", disjoint=None, jobs="auto", quiet=False):
+def check(ws, tables, minlevel=2, maxdepth=8, theory="hypothesis", disjoint=None, jobs="auto", quiet=False, extra_facts=None):
     paths.require_souffle(); ws.require_dictfacts()
     ws.fresh()
     for f in ws.dictfacts.glob("*.facts"):
         shutil.copy(f, ws.facts / f.name)
+    for name, rows in (extra_facts or {}).items():                 # pseudo-incremental mode: last round's observables
+        (ws.facts / f"{name}.facts").write_text("".join("\t".join(r) + "\n" for r in rows))
     argv = [*tables, "-o", str(ws.facts), "--minlevel", str(minlevel), "--maxdepth", str(maxdepth), "--theory", theory]
     if disjoint:
         argv += ["--disjoint", disjoint]
     parse.main(argv)
+    for name in ("round", "prev"):                                  # always present, possibly empty
+        f = ws.facts / f"{name}.facts"
+        if not f.exists():
+            f.write_text("")
     r = subprocess.run(["souffle", "-j", str(jobs), "-F", str(ws.facts), "-D", str(ws.out), str(ws.reasoner)],
                        capture_output=True, text=True)
     if r.returncode != 0:

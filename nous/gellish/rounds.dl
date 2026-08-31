@@ -1,0 +1,70 @@
+// rounds.dl — pseudo-incremental mode: the reasoner's own state, published at a round boundary.
+//
+// Batch Datalog cannot read what it has derived so far (least fixpoint, non-monotonic). It CAN read what a
+// *previous round* derived: the loop publishes the last round's observables as ordinary facts, and the rules
+// below read them. Self-applicability is thereby stratified by round — the design Deem will implement inside
+// the engine, prototyped here by calling Soufflé in a loop.
+//
+// The split that keeps this honest: the RULES decide (recommend), the wrapper only executes. In Deem the engine
+// takes the wrapper's place; the rules do not change.
+
+.decl round(n:number)                                   // current round, injected by the wrapper
+.input round
+.decl prev(kind:symbol, a:symbol, b:symbol, n:number)   // observables of the previous round
+.input prev
+
+// ------------------------------------------------------------------ what the previous round left undone
+.decl unfinished(kind:symbol, detail:symbol, n:number)
+unfinished("entailment truncated", cat(A, cat(" ⇒ … ⇒ ", B)), N) :- prev("truncated", A, B, N).
+unfinished("grounding ambiguous", A, N)                          :- prev("ambiguous", A, _, N).
+unfinished("stance unresolved", A, N)                            :- prev("unresolved", A, _, N).
+unfinished("contradiction open", cat(A, cat(" / ", B)), N)       :- prev("contradiction", A, B, N).
+.output unfinished
+
+.decl unfinished_count(kind:symbol, n:number, k:number)
+unfinished_count(K, N, C) :- unfinished(K, _, N), C = count : { unfinished(K, _, N) }.
+.output unfinished_count
+
+// ------------------------------------------------------------------ the conclusion, drawn by the rules
+// The system does not merely register the limit: it converts it into an epistemic result about itself.
+.decl self_conclusion(content:symbol, n:number)
+self_conclusion("its closure is incomplete at the current depth budget", N) :- unfinished("entailment truncated", _, N).
+self_conclusion("its grounding is ambiguous for some entities", N)          :- unfinished("grounding ambiguous", _, N).
+self_conclusion("it holds an open contradiction it has not resolved", N)    :- unfinished("contradiction open", _, N).
+.output self_conclusion
+
+// ------------------------------------------------------------------ the action: what the next round must do
+// A recommendation is a decision of the program. The wrapper applies it and can do nothing else.
+.decl actionable(n:number, what:symbol)                 // a limit this round for which the rules HAVE a move
+actionable(N, "maxdepth") :- unfinished_count("entailment truncated", N, C), C > 0, maxdepth(D), D < 24.
+
+.decl recommend(param:symbol, value:symbol, reason:symbol, n:number)
+recommend("maxdepth", "+4", cat("entailment truncated: ", to_string(C)), N) :-
+    unfinished_count("entailment truncated", N, C), C > 0, actionable(N, "maxdepth").
+recommend("report", "ambiguous groundings", cat("ambiguous: ", to_string(C)), N) :-
+    unfinished_count("grounding ambiguous", N, C), C > 0.
+recommend("stop", "closure complete", "nothing was left undone", N) :-
+    round(N), N > 0, !unfinished(_, _, N).
+// The honest halt: a limit remains, the system knows it, and has no move for it. By the theory's own criteria
+// it then falls back to proto-Observer — it encounters and concludes, but cannot act from the conclusion.
+recommend("stop", "no move available", cat("unfinished but not actionable: ", K), N) :-
+    unfinished(K, _, N), !actionable(N, _).
+.output recommend
+
+// ------------------------------------------------------------------ feed the bootstrap library with the reasoner's own case
+// The three Observer conditions, derived rather than declared: the reasoner encounters its budget (round N-1
+// materialised the refusals), concludes from that encounter, and acts from the conclusion (it changes the next
+// round's parameters). The library then derives its level exactly as it would for any other case.
+.decl self_case(s:symbol)
+self_case("the reasoner") :- round(_).
+case_system(S, "cognitive system", 4) :- self_case(S), theory_on(_).
+meets_encounter(S, 3) :- self_case(S), unfinished(_, _, _), theory_on(_).
+meets_conclusion(S, 3) :- self_case(S), self_conclusion(_, _), theory_on(_).
+meets_action(S, 3) :- self_case(S), recommend(P, _, _, _), P != "report", theory_on(_).
+exercises_dc(S, 3) :- self_case(S), recommend("maxdepth", _, _, _), theory_on(_).   // it changes its own operation, from within
+
+.decl round_state(n:number, k:symbol, v:symbol)
+round_state(N, "unfinished", cat(K, cat(": ", to_string(C)))) :- unfinished_count(K, N, C).
+round_state(N, "conclusion", C) :- self_conclusion(C, N).
+round_state(N, "action", cat(P, cat(" ", cat(V, cat(" — ", R))))) :- recommend(P, V, R, N).
+.output round_state
