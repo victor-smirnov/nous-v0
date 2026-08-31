@@ -79,3 +79,19 @@ exactly this, so the library reuses it instead of restating it.
    the case's own rows.
 5. **Cases are documents.** No new file format: a case is a Gellish table, checked by the same reasoner, and can
    live inside a hybrid document (a paper describing an experiment carries its cases in its blocks).
+
+## What this library is, and is not (2026-08-31)
+
+Batch Datalog has no internal point at which the reasoner's own state becomes available to its rules: least
+fixpoint semantics make "what has been derived so far" non-monotonic. Stratification gives *staged* self-application
+only — a completed stratum is data for the next, which is what `truncated` (the depth budget's refusals) already
+exploits. Real self-applicability needs deltas and time as data, stratified access to them, **resource observables
+instrumented as relations** (incrementality does not give these for free), and a rule whose firing changes what the
+system does next. Applied to itself the library says so: `cases/self.txt` derives **proto-Observer, missing
+Conclusion and Action** for the reasoner — it registers its limit and reports it, and acts from nothing.
+
+So this library performs *third-person attribution*: it reasons about a described system exactly as a person
+reasons about another's mental states. The subjectivity layer makes that attribution **perspectival** — what holds
+from a standpoint, what a subject cannot recognise, what it sees a referent as — which is the structure of
+theory-of-mind attribution rather than plain description. A library for reasoning about Observer states need not
+itself be an Observer; self-applicability belongs to Nous-as-agent, and to Deem.
