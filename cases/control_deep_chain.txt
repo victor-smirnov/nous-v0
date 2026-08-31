@@ -1,0 +1,22 @@
+# heading: control — a deep chain of unambiguous names, so truncation outnumbers ambiguity
+# If parsimony is what drives the misattribution, the reconstruction must be CORRECT here.
+# Nothing about this case is designed to produce the phenomenon; it is designed to remove it.
+F0001 | zorbtic stage 1 | implies | zorbtic stage 2 | - | assertion | -
+F0002 | zorbtic stage 2 | implies | zorbtic stage 3 | - | assertion | -
+F0003 | zorbtic stage 3 | implies | zorbtic stage 4 | - | assertion | -
+F0004 | zorbtic stage 4 | implies | zorbtic stage 5 | - | assertion | -
+F0005 | zorbtic stage 5 | implies | zorbtic stage 6 | - | assertion | -
+F0006 | zorbtic stage 6 | implies | zorbtic stage 7 | - | assertion | -
+F0007 | zorbtic stage 7 | implies | zorbtic stage 8 | - | assertion | -
+F0008 | zorbtic stage 8 | implies | zorbtic stage 9 | - | assertion | -
+F0009 | zorbtic stage 9 | implies | zorbtic stage 10 | - | assertion | -
+F0010 | zorbtic stage 10 | implies | zorbtic stage 11 | - | assertion | -
+F0011 | zorbtic stage 11 | implies | zorbtic stage 12 | - | assertion | -
+F0012 | zorbtic stage 12 | implies | zorbtic stage 13 | - | assertion | -
+F0013 | zorbtic stage 13 | implies | zorbtic stage 14 | - | assertion | -
+F0014 | zorbtic stage 14 | implies | zorbtic stage 15 | - | assertion | -
+F0015 | zorbtic stage 15 | implies | zorbtic stage 16 | - | assertion | -
+F0016 | zorbtic stage 16 | implies | zorbtic stage 17 | - | assertion | -
+F0017 | zorbtic stage 17 | implies | zorbtic stage 18 | - | assertion | -
+F0018 | zorbtic stage 18 | implies | zorbtic stage 19 | - | assertion | -
+F0019 | zorbtic stage 19 | implies | zorbtic stage 20 | - | assertion | -

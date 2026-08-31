@@ -1,0 +1,11 @@
+# heading: The reasoner applied to itself
+# What the batch reasoner can honestly claim about its own state, in the bootstrap's own terms.
+F0001 | the reasoner | is a case of | cognitive system | - | assertion | Soufflé, batch mode
+F0002 | the reasoner | encounters | its own depth budget | - | hedged-assertion | `truncated` materialises the chains the budget refused
+F0003 | the reasoner | reports | "entailment truncated: 10 chains beyond depth 1" | - | assertion | it emits the fact
+# no `concludes` row: nothing in the program draws a conclusion FROM the truncation
+# no `acts from` row: no rule changes behaviour because of it
+F0010 | closure completeness | is a need of | the reasoner | 1.0 | assertion | the only target function it tracks
+F0011 | closure completeness | is active in | the reasoner | - | assertion | -
+F0020 | a chain beyond the budget | is a stimulus in | the reasoner | - | assertion | -
+F0021 | a chain beyond the budget | has satisfaction delta | closure completeness | -0.4 | assertion | it leaves the closure incomplete

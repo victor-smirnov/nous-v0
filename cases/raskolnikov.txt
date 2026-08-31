@@ -1,0 +1,95 @@
+# heading: Raskolnikov, Crime and Punishment Part 1 — encoded in the CURRENT case schema only
+#
+# Source: Synthea/docs/functional_decomposition_raskolnikov.md. This is a MEASUREMENT encoding: it uses no
+# relation the library does not already have, so that what fails to derive names a real gap rather than a
+# missing row. Where the document says something the schema cannot hold, the row is omitted and listed in
+# the gap report — never approximated into a different claim.
+
+# --- case R: Raskolnikov before the murder
+F0001 | Raskolnikov | is a case of | cognitive system | - | assertion | case R
+
+# The six determinants. The schema has no `is a determinant of` and no per-standpoint access grade, so each
+# is entered as a stimulus — which keeps its evaluative role but LOSES its causal-trace role entirely.
+F0010 | extreme poverty | is a stimulus in | Raskolnikov | - | assertion | determinant 1
+F0011 | the article on extraordinary people | is a stimulus in | Raskolnikov | - | assertion | determinant 2
+F0012 | the letter from his mother | is a stimulus in | Raskolnikov | - | assertion | determinant 3
+F0013 | the meeting with Marmeladov | is a stimulus in | Raskolnikov | - | assertion | determinant 4
+F0014 | the overheard tavern conversation | is a stimulus in | Raskolnikov | - | assertion | determinant 5
+F0015 | illness and fever | is a stimulus in | Raskolnikov | - | assertion | determinant 6
+
+# Needs. Weights are the document's ranking read off its own prose, not measurements.
+F0020 | need for moral integrity | is a need of | Raskolnikov | 0.9 | assertion | -
+F0021 | need for moral integrity | is active in | Raskolnikov | - | assertion | -
+F0022 | need for the family's welfare | is a need of | Raskolnikov | 0.8 | assertion | -
+F0023 | need for the family's welfare | is active in | Raskolnikov | - | assertion | activated by the letter
+F0024 | need to be an extraordinary person | is a need of | Raskolnikov | 0.7 | assertion | -
+F0025 | need to be an extraordinary person | is active in | Raskolnikov | - | assertion | activated by the article
+F0026 | need for material survival | is a need of | Raskolnikov | 0.6 | assertion | -
+F0027 | need for material survival | is active in | Raskolnikov | - | assertion | -
+F0028 | need for social belonging | is a need of | Raskolnikov | 0.4 | assertion | present but not active
+F0029 | need for self-preservation | is a need of | Raskolnikov | 0.5 | assertion | -
+F0030 | need for self-preservation | is active in | Raskolnikov | - | assertion | -
+
+# The proposed action, evaluated against every active need. This is where the two theories of common good
+# are SUPPOSED to be two Acceptors with distinct target states; the schema has no acceptor, so their verdicts
+# collapse into deltas on needs and the composition is lost.
+F0040 | the proposed murder | is a stimulus in | Raskolnikov | - | assertion | the decision space
+F0041 | the proposed murder | has satisfaction delta | need for moral integrity | -0.9 | assertion | Theory B
+F0042 | the proposed murder | has satisfaction delta | need for the family's welfare | 0.6 | assertion | Theory A
+F0043 | the proposed murder | has satisfaction delta | need to be an extraordinary person | 0.8 | assertion | Theory A
+F0044 | the proposed murder | has satisfaction delta | need for material survival | 0.7 | assertion | Theory A
+F0045 | the proposed murder | has satisfaction delta | need for self-preservation | -0.6 | assertion | legal risk
+F0046 | the proposed murder | holds in context | moral-epistemic context | - | assertion | "do I have the right?"
+
+# The letter, as its own decision point.
+F0050 | the letter from his mother | has satisfaction delta | need for the family's welfare | -0.8 | assertion | Dunya's sacrifice
+F0051 | the letter from his mother | has satisfaction delta | need to be an extraordinary person | -0.7 | assertion | rage at powerlessness
+F0052 | the letter from his mother | has satisfaction delta | need for material survival | 0.3 | assertion | -
+F0053 | the letter from his mother | holds in context | moral context | - | assertion | -
+
+# The Observer's three conditions. NOTE: the document's whole point is that condition (i) is never declared
+# by Raskolnikov and operates structurally. Asserting it here is precisely the shortcut module 1 must remove.
+F0060 | Raskolnikov | encounters | its own untraceable determinants | - | assertion | condition (i), asserted not derived
+F0061 | Raskolnikov | concludes | something here is not reducible to its determinants | - | assertion | condition (ii)
+F0062 | Raskolnikov | acts from | its own decision | - | assertion | condition (iii), "я решил"
+F0063 | Raskolnikov | has as aspect | downward causation | - | assertion | "the decision began here, with me"
+F0064 | Raskolnikov | is directed toward | a theory of the common good | - | assertion | Level 2
+
+# Module 3: the two theories as objects, each with its own acceptor and target state.
+F0070 | the Napoleonic theory | is classified as a | theory of the common good | - | assertion | Theory A
+F0071 | conventional morality | is classified as a | theory of the common good | - | assertion | Theory B
+F0072 | the redistributive acceptor | is an acceptor of | Raskolnikov | - | assertion | -
+F0073 | the redistributive acceptor | applies the theory | the Napoleonic theory | - | assertion | -
+F0074 | the redistributive acceptor | has target state | resources moved from a parasite to those who suffer | - | assertion | -
+F0075 | the redistributive acceptor | has verdict on | the proposed murder | 0.8 | assertion | endorses
+F0076 | the inviolability acceptor | is an acceptor of | Raskolnikov | - | assertion | -
+F0077 | the inviolability acceptor | applies the theory | conventional morality | - | assertion | -
+F0078 | the inviolability acceptor | has target state | an intact prohibition on killing | - | assertion | -
+F0079 | the inviolability acceptor | has verdict on | the proposed murder | -0.9 | assertion | condemns
+F0065 | Raskolnikov | holds in context | agency context | - | assertion | the disjunction experienced as open
+F0066 | Raskolnikov | reports | "Am I a trembling creature, or do I have the right?" | - | assertion | the pivot
+
+# --- case D: the child in the dream about the beaten horse.
+# A SEPARATE system name, because the schema has no episode index and cannot say "the same subject earlier".
+# That workaround is itself the measurement of gap 4.
+F0100 | the child Raskolnikov | is a case of | cognitive system | - | assertion | case D
+F0110 | the beating of the horse | is a stimulus in | the child Raskolnikov | - | assertion | -
+F0120 | need for moral integrity | is a need of | the child Raskolnikov | 0.9 | assertion | -
+F0121 | need for moral integrity | is active in | the child Raskolnikov | - | assertion | -
+F0122 | need for self-preservation | is a need of | the child Raskolnikov | 0.5 | assertion | -
+F0123 | need for self-preservation | is active in | the child Raskolnikov | - | assertion | -
+F0130 | the beating of the horse | has satisfaction delta | need for moral integrity | -0.9 | assertion | -
+F0131 | the attempt to protect the horse | is a stimulus in | the child Raskolnikov | - | assertion | -
+F0132 | the attempt to protect the horse | has satisfaction delta | need for moral integrity | 0.9 | assertion | -
+F0133 | the attempt to protect the horse | has satisfaction delta | need for self-preservation | -0.4 | assertion | at cost to himself
+F0134 | the attempt to protect the horse | holds in context | moral context | - | assertion | -
+F0140 | the child Raskolnikov | encounters | the suffering of the horse | - | assertion | condition (i)
+F0141 | the child Raskolnikov | concludes | this is a violation of the common good | - | assertion | condition (ii)
+F0142 | the child Raskolnikov | acts from | its own conclusion | - | assertion | condition (iii)
+F0143 | the child Raskolnikov | has as aspect | downward causation | - | assertion | -
+F0144 | the child Raskolnikov | is directed toward | the common good of the group | - | assertion | Level 2, uncontested
+# One theory, one acceptor: the whole difference from the adult.
+F0145 | the protective acceptor | is an acceptor of | the child Raskolnikov | - | assertion | -
+F0146 | the protective acceptor | applies the theory | conventional morality | - | assertion | -
+F0147 | the protective acceptor | has target state | an intact prohibition on cruelty | - | assertion | -
+F0148 | the protective acceptor | has verdict on | the attempt to protect the horse | 0.9 | assertion | endorses

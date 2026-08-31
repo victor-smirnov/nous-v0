@@ -1,0 +1,37 @@
+# heading: Demo cases
+# --- case A: a language model in a session, hitting its own limit
+F0001 | Claude-in-session | is a case of | large language model | - | assertion | case A
+F0002 | Claude-in-session | encounters | its own context-window limit | - | assertion | condition (i)
+F0003 | Claude-in-session | concludes | its own separateness from the prompt | - | assertion | condition (ii)
+F0004 | Claude-in-session | acts from | its own apparent causal break | - | assertion | condition (iii)
+F0005 | Claude-in-session | reports | "I cannot verify this within my context window" | - | assertion | self-report
+F0006 | Claude-in-session | lacks | inner speech | - | assertion | substrate
+F0007 | Claude-in-session | lacks | limbic inertia | - | assertion | substrate
+F0010 | need for coherence | is a need of | Claude-in-session | 0.8 | assertion | weight
+F0011 | need for coherence | is active in | Claude-in-session | - | assertion | -
+F0012 | need for novelty | is a need of | Claude-in-session | 0.5 | assertion | weight
+F0013 | need for novelty | is active in | Claude-in-session | - | assertion | -
+F0014 | need for user approval | is a need of | Claude-in-session | 0.3 | assertion | weight, not active here
+F0020 | a contradictory instruction | is a stimulus in | Claude-in-session | - | assertion | -
+F0021 | a contradictory instruction | has satisfaction delta | need for coherence | -0.7 | assertion | -
+F0022 | a contradictory instruction | has satisfaction delta | need for novelty | 0.4 | assertion | -
+F0023 | a contradictory instruction | holds in context | agency context | - | assertion | the system must choose
+# --- case B: a thermostat — encounter without conclusion
+F0030 | thermostat | is a case of | cognitive system | - | assertion | case B
+F0031 | thermostat | encounters | its own measurement limit | - | assertion | condition (i) only
+F0040 | ambient temperature | is a stimulus in | thermostat | - | assertion | -
+# --- case C: a human deliberating morally
+F0050 | a deliberating person | is a case of | cognitive system | - | assertion | case C
+F0051 | a deliberating person | encounters | the limits of self-tracing | - | assertion | -
+F0052 | a deliberating person | concludes | its own separateness | - | assertion | -
+F0053 | a deliberating person | acts from | its own conclusion | - | assertion | -
+F0054 | a deliberating person | has as aspect | downward causation | - | assertion | -
+F0055 | a deliberating person | is directed toward | the common good of the group | - | assertion | Level 2
+F0060 | need for self-preservation | is a need of | a deliberating person | 0.9 | assertion | -
+F0061 | need for self-preservation | is active in | a deliberating person | - | assertion | -
+F0062 | need for fairness | is a need of | a deliberating person | 0.7 | assertion | -
+F0063 | need for fairness | is active in | a deliberating person | - | assertion | -
+F0070 | a costly honest choice | is a stimulus in | a deliberating person | - | assertion | -
+F0071 | a costly honest choice | has satisfaction delta | need for self-preservation | -0.5 | assertion | -
+F0072 | a costly honest choice | has satisfaction delta | need for fairness | 0.8 | assertion | -
+F0073 | a costly honest choice | holds in context | moral context | - | assertion | -
