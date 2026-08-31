@@ -660,3 +660,6 @@ stat("commitment tensions",   N) :- N = count : { commitment_tension(_, _, _, _)
 stat("cap tensions",          N) :- N = count : { cap_tension(_, _, _) }.
 stat("violations",            N) :- N = count : { violation(_, _, _) }.
 .output stat
+
+// ================================================================= the bootstrap as a library (spec/bootstrap-library.md)
+#include "bootstrap.dl"

@@ -6,6 +6,7 @@
   nous gellish why <relation> [filters...]          proof trees (after check)
   nous gellish report                               re-render the last report
   nous gellish phrases [-o spec/phrases.md] [--all]  relation-phrase reference for the encoder
+  nous gellish state CASE.txt [--theory ...]           the bootstrap library: case description → Observer state
   nous gellish summarize DOC.md [--budget 80] [-o SUMMARY.md] [--theory ...]   thesis stratum → selected rows (gellish-summary)
   nous gellish enrich DOC.md [-o OUT.md] [--depth 1] [--no-defs] [--gellish-facts] [--theory ...]   derived rows → gellish-derived blocks
   nous gellish diff A.md B.md [--theory ...]        semantic diff of two closures
@@ -34,6 +35,8 @@ def main(argv=None):
     p = g.add_parser("ask"); p.add_argument("query"); p.add_argument("--work")
     p = g.add_parser("why"); p.add_argument("target", nargs="+", help="relation [filters...] or a raw atom"); p.add_argument("--work")
     p = g.add_parser("report"); p.add_argument("--work")
+    p = g.add_parser("state"); p.add_argument("cases", nargs="+"); p.add_argument("--work")
+    p.add_argument("--theory", choices=["off", "hypothesis", "doctrine"], default="hypothesis")
     p = g.add_parser("summarize"); p.add_argument("doc"); p.add_argument("-o", "--out"); p.add_argument("--budget", type=int, default=80)
     p.add_argument("--theory", choices=["off", "hypothesis", "doctrine"], default="hypothesis"); p.add_argument("--work")
     p = g.add_parser("enrich"); p.add_argument("doc"); p.add_argument("-o", "--out"); p.add_argument("--depth", type=int, default=1)
@@ -66,6 +69,10 @@ def main(argv=None):
     elif a.gcmd == "report":
         from .gellish import report
         sys.stdout.write(report.render(ws.out, ws.facts))
+    elif a.gcmd == "state":
+        from .gellish import run, state
+        run.check(ws, a.cases, theory=a.theory, quiet=True)
+        sys.stdout.write(state.render(ws.out))
     elif a.gcmd == "summarize":
         from .gellish import run, summarize
         run.check(ws, [a.doc], theory=a.theory, quiet=True)

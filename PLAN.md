@@ -125,6 +125,19 @@ core is identical, only the prompt container changes.
 - Encoding model for the article run: Opus (cost study) — unless Fable is preferred for frugality.
 - ~~Hybrid container~~ fences (done).
 
+## 6b. The bootstrap as a Datalog library (Victor, 2026-08-31)
+
+The goal is not to record the bootstrap as facts about a theory but to make it **executable**: a library that,
+in batch, reasons about Observer states in a concrete context. Declarative subjectivity (subject types, graded
+capacity, point of view, seen-as) was the first slice; the dynamics are `nous/gellish/bootstrap.dl` — see
+`spec/bootstrap-library.md`. Done in the first slice: the Observer stack with its three conditions and the
+missing-condition diagnosis, emotions as signals of *active* needs with weights and valence, motivational
+conflict and the Observer manifesting on it, the residual's projection into an epistemic quale selected by the
+active context, functional deficits from substrate facts, self-reports of limits recognised as HOCP.
+Still to write: the cognitive cycle's phases, the four-level memory and channel salience with weighted
+injection, forward simulation, cognitive resistance / narrative inertia, the psychosemantic bridge tied to the
+subject layer's capacities, and non-renewable psychological needs driving novelty-seeking.
+
 ## 7. Receiver profiles (direction, 2026-08-29; not detailed yet)
 
 Victor: the difficulty of the hard problem is less how to explain consciousness than how the explanation is

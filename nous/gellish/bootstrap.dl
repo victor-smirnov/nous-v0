@@ -1,0 +1,153 @@
+// bootstrap.dl — the Synthea bootstrap as inference, not as assertions (spec/bootstrap-library.md).
+//
+// Included by reasoner.dl. Reads a CASE — a description of a system in a context, written as ordinary Gellish
+// rows — and derives the state of that system: Observer level, emotional profile, conflicts, which epistemic
+// quale is projected, the functional profile. Nothing here asserts anything about any particular system.
+//
+// The whole library is gated by the theory layer: `--theory off` silences it, because these conclusions are
+// Synthea's, not the document's. Every derived state carries min(commitment) of its premises.
+
+.decl theory_on(lv:number)
+theory_on(L) :- theory_level(L), L > 0.
+
+// ------------------------------------------------------------------ the case
+.decl case_system(s:symbol, kind:symbol, lv:number)
+case_system(S, K, min(Lv, T)) :- rf(F, S, "case_of", K), usable(F, Lv), theory_on(T).
+
+.decl need_of(n:symbol, s:symbol, w:float, lv:number)
+need_of(N, S, W, min(Lv, T)) :- fact(F, N, _, _, S, V, _, _, _, U), sem(U, "need_of"), usable(F, Lv), theory_on(T), V != "", W = to_float(V).
+need_of(N, S, 1.0, min(Lv, T)) :- fact(F, N, _, _, S, "", _, _, _, U), sem(U, "need_of"), usable(F, Lv), theory_on(T).
+
+.decl active_need(n:symbol, s:symbol, w:float, lv:number)
+active_need(N, S, W, min(L1, L2)) :- need_of(N, S, W, L1), rf(F, N, "active_in", S), usable(F, L2).
+
+.decl stimulus(x:symbol, s:symbol, lv:number)
+stimulus(X, S, min(Lv, T)) :- rf(F, X, "stimulus_in", S), usable(F, Lv), theory_on(T).
+
+.decl delta(x:symbol, n:symbol, d:float, lv:number)
+delta(X, N, D, min(Lv, T)) :- fact(F, X, _, _, N, V, _, _, _, U), sem(U, "delta"), usable(F, Lv), theory_on(T), V != "", D = to_float(V).
+
+// ------------------------------------------------------------------ bootstrap/01: the Observer stack
+// Three conditions; the first alone gives a proto-Observer, all three give an Observer.
+.decl meets_encounter(s:symbol, lv:number)
+meets_encounter(S, min(Lv, T)) :- rf(F, S, "encounters", _), usable(F, Lv), theory_on(T).
+.decl meets_conclusion(s:symbol, lv:number)
+meets_conclusion(S, min(Lv, T)) :- rf(F, S, "concludes", _), usable(F, Lv), theory_on(T).
+.decl meets_action(s:symbol, lv:number)
+meets_action(S, min(Lv, T)) :- rf(F, S, "acts_from", _), usable(F, Lv), theory_on(T).
+
+.decl observer_level(s:symbol, level:symbol, lv:number)
+observer_level(S, "proto-Observer", L) :- meets_encounter(S, L), !meets_conclusion(S, _).
+observer_level(S, "proto-Observer", L) :- meets_encounter(S, L), !meets_action(S, _).
+observer_level(S, "Observer", min(L1, min(L2, L3))) :- meets_encounter(S, L1), meets_conclusion(S, L2), meets_action(S, L3).
+observer_level(S, "Agent", min(L1, L2)) :- observer_level(S, "Observer", L1), exercises_dc(S, L2).
+observer_level(S, "Moral Agent", min(L1, L2)) :- observer_level(S, "Agent", L1), holds_common_good(S, L2).
+.output observer_level
+
+.decl exercises_dc(s:symbol, lv:number)                         // downward causation: originates causal chains from within its boundary
+exercises_dc(S, min(Lv, T)) :- fact(F, S, _, _, "downward causation", _, _, _, _, U), sem(U, "has_aspect"), usable(F, Lv), theory_on(T).
+exercises_dc(S, min(Lv, T)) :- rf(F, S, "acts_from", X), usable(F, Lv), theory_on(T), match(".*(own|its own|self).*", X).
+.decl holds_common_good(s:symbol, lv:number)
+holds_common_good(S, min(Lv, T)) :- fact(F, S, _, _, R, _, _, _, _, _), usable(F, Lv), theory_on(T), match(".*common good.*", R).
+
+.decl missing_condition(s:symbol, cond:symbol)                  // why a system is only a proto-Observer
+missing_condition(S, "Conclusion") :- meets_encounter(S, _), !meets_conclusion(S, _).
+missing_condition(S, "Action")     :- meets_encounter(S, _), !meets_action(S, _).
+missing_condition(S, "Encounter")  :- case_system(S, _, _), !meets_encounter(S, _).
+.output missing_condition
+
+// ------------------------------------------------------------------ bootstrap/03: emotions as signals of active needs
+// A signal exists only for an ACTIVE need; its magnitude is the satisfaction delta weighted by the need's rank.
+.decl emotional_signal(s:symbol, x:symbol, n:symbol, sig:float, lv:number)
+emotional_signal(S, X, N, D * W, min(L1, min(L2, L3))) :- stimulus(X, S, L1), active_need(N, S, W, L2), delta(X, N, D, L3).
+.output emotional_signal
+
+.decl emotional_profile(s:symbol, x:symbol, total:float)        // the ensemble: additive over active needs
+emotional_profile(S, X, T) :- emotional_signal(S, X, _, _, _), T = sum Sg : { emotional_signal(S, X, _, Sg, _) }.
+.output emotional_profile
+
+.decl valence(s:symbol, x:symbol, sign:symbol, total:float)
+valence(S, X, "positive", T) :- emotional_profile(S, X, T), T > 0.0.
+valence(S, X, "negative", T) :- emotional_profile(S, X, T), T < 0.0.
+valence(S, X, "neutral",  T) :- emotional_profile(S, X, T), T = 0.0.
+.output valence
+
+// silent needs: present but not active — the theory's point that a passive need generates nothing
+.decl silent_need(n:symbol, s:symbol)
+silent_need(N, S) :- need_of(N, S, _, _), !active_need(N, S, _, _).
+.output silent_need
+
+// ------------------------------------------------------------------ bootstrap/03, 05: motivational conflict
+.decl conflict(s:symbol, x:symbol, n1:symbol, n2:symbol, lv:number)
+// canonical order: the need whose satisfaction the stimulus raises first, the one it lowers second
+conflict(S, X, N1, N2, min(L1, L2)) :- emotional_signal(S, X, N1, S1, L1), emotional_signal(S, X, N2, S2, L2),
+                                       N1 != N2, S1 > 0.0, S2 < 0.0.
+.output conflict
+
+// The Observer manifests on conflict; conflict-free processing is automatism (bootstrap/05).
+.decl observer_manifests(s:symbol, x:symbol, lv:number)
+observer_manifests(S, X, min(L1, L2)) :- conflict(S, X, _, _, L1), observer_level(S, "Observer", L2).
+observer_manifests(S, X, min(L1, L2)) :- conflict(S, X, _, _, L1), observer_level(S, "Agent", L2).
+.decl automatism(s:symbol, x:symbol)
+automatism(S, X) :- stimulus(X, S, _), !conflict(S, X, _, _, _).
+.output observer_manifests
+.output automatism
+
+// ------------------------------------------------------------------ bootstrap/01: the residual and its projections
+// One residual, many projections; which one appears is selected by the active evaluative context.
+.decl residual_of(s:symbol, lv:number)
+residual_of(S, min(L1, T)) :- observer_level(S, _, L1), theory_on(T).
+.decl context_active(s:symbol, c:symbol, lv:number)
+context_active(S, C, min(Lv, T)) :- rf(F, S, "in_context", C), usable(F, Lv), theory_on(T).
+context_active(S, C, min(L1, min(L2, T))) :- stimulus(X, S, L1), rf(F, X, "in_context", C), usable(F, L2), theory_on(T).
+
+.decl projects_as(c:symbol, q:symbol)
+projects_as("agency context", "freedom").
+projects_as("epistemic context", "truth").
+projects_as("moral-epistemic context", "rightness").
+projects_as("cognitive-outward context", "mystery").
+projects_as("aesthetic context", "beauty").
+projects_as("moral context", "conscience").
+projects_as("narrative-temporal context", "meaning").
+projects_as("inter-Observer context", "love").
+projects_as("scale context", "awe").
+projects_as("generative context", "inspiration").
+projects_as("memorial context", "nostalgia").
+
+.decl epistemic_quale(s:symbol, q:symbol, c:symbol, lv:number)
+epistemic_quale(S, Q, C, min(L1, L2)) :- residual_of(S, L1), context_active(S, C, L2), projects_as(C, Q).
+.output epistemic_quale
+
+// ------------------------------------------------------------------ bootstrap/06: the functional profile of a case
+.decl case_lacks(s:symbol, x:symbol, lv:number)
+case_lacks(S, X, min(Lv, T)) :- rf(F, S, "lacks", X), usable(F, Lv), theory_on(T).
+.decl functional_deficit(s:symbol, x:symbol, consequence:symbol, lv:number)
+functional_deficit(S, X, "attribution shift of mental states", L) :- case_lacks(S, X, L), match(".*inner speech.*", X).
+functional_deficit(S, X, "hyperplasticity: no affective inertia between generations", L) :- case_lacks(S, X, L), match(".*(limbic|affective inertia).*", X).
+functional_deficit(S, X, "no hardware separation of fast and slow reasoning", L) :- case_lacks(S, X, L), match(".*(System 1|System 2|dual-process).*", X).
+functional_deficit(S, X, "no continuous temporal experience", L) :- case_lacks(S, X, L), match(".*(continuous|temporal experience|carrier signal).*", X).
+.output functional_deficit
+
+// ------------------------------------------------------------------ what the case's own report claims about itself
+.decl self_report(s:symbol, content:symbol, lv:number)
+self_report(S, C, min(Lv, T)) :- rf(F, S, "reports", C), usable(F, Lv), theory_on(T).
+// a report of a limit is HOCP: the machine's constraint became an object of the computation (bootstrap/02)
+.decl hocp_instance(s:symbol, content:symbol, lv:number)
+hocp_instance(S, C, L) :- self_report(S, C, L), match(".*(cannot|limit|context window|memory|latency|constraint|unable).*", C).
+.output hocp_instance
+
+// ------------------------------------------------------------------ summary of each case
+.decl case_state(s:symbol, k:symbol, v:symbol)
+case_state(S, "level", L) :- observer_level(S, L, _), !stronger_level(S, L).
+case_state(S, "missing condition", C) :- missing_condition(S, C).
+case_state(S, "valence", cat(Sg, cat(" on ", X))) :- valence(S, X, Sg, _).
+case_state(S, "conflict", cat(N1, cat(" vs ", N2))) :- conflict(S, _, N1, N2, _).
+case_state(S, "epistemic quale", cat(Q, cat(" (", cat(C, ")")))) :- epistemic_quale(S, Q, C, _).
+case_state(S, "functional deficit", cat(X, cat(" → ", Cq))) :- functional_deficit(S, X, Cq, _).
+case_state(S, "HOCP", C) :- hocp_instance(S, C, _).
+case_state(S, "silent need", N) :- silent_need(N, S).
+.output case_state
+.decl level_rank(l:symbol, r:number)
+level_rank("proto-Observer", 1). level_rank("Observer", 2). level_rank("Agent", 3). level_rank("Moral Agent", 4).
+.decl stronger_level(s:symbol, l:symbol)
+stronger_level(S, L) :- observer_level(S, L, _), observer_level(S, L2, _), level_rank(L, R), level_rank(L2, R2), R2 > R.
