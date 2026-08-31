@@ -93,6 +93,79 @@ automatism(S, X) :- stimulus(X, S, _), !conflict(S, X, _, _, _).
 .output observer_manifests
 .output automatism
 
+// ================================================================== module 3: acceptors and theories of the
+// common good as objects (spec/bootstrap-library.md, "composition").
+//
+// Why this exists: `conflict` above is between two NEEDS, and needs conflict pairwise, so a decision with p
+// positive and n negative signals yields p*n unranked rows. The theory says something stronger and smaller —
+// a moral struggle is two ACCEPTORS evaluating the same action against different target states, each taking
+// its target from a theory of the common good. Without acceptors as objects, one theory and two theories in
+// collision are indistinguishable, and the level label "Moral Agent" cannot separate a pure moral stack from
+// a fractured one. This block makes that composition derivable.
+.decl acceptor_of(a:symbol, s:symbol, lv:number)
+acceptor_of(A, S, min(Lv, T)) :- rf(F, A, "acceptor_of", S), usable(F, Lv), theory_on(T).
+
+.decl applies_theory(a:symbol, t:symbol, lv:number)
+applies_theory(A, T, min(Lv, Th)) :- rf(F, A, "applies_theory", T), usable(F, Lv), theory_on(Th).
+
+.decl target_state(a:symbol, g:symbol, lv:number)
+target_state(A, G, min(Lv, T)) :- rf(F, A, "target_state", G), usable(F, Lv), theory_on(T).
+
+.decl verdict(a:symbol, x:symbol, v:float, lv:number)
+verdict(A, X, V, min(Lv, T)) :- fact(F, A, _, _, X, Val, _, _, _, U), sem(U, "verdict"), usable(F, Lv),
+                                theory_on(T), Val != "", V = to_float(Val).
+.output verdict
+
+// A system holds a theory outright, or by maintaining an acceptor that applies it.
+.decl holds_theory(s:symbol, t:symbol, lv:number)
+holds_theory(S, T, min(Lv, Th)) :- rf(F, S, "holds_theory", T), usable(F, Lv), theory_on(Th).
+holds_theory(S, T, min(L1, L2)) :- acceptor_of(A, S, L1), applies_theory(A, T, L2).
+.output holds_theory
+
+// Level 2, now derived from an object rather than matched on a phrase. The old regex rule stays for cases
+// written before this module existed; a theory classified under "theory of the common good" is the real test.
+holds_common_good(S, min(L1, L2)) :- holds_theory(S, T, L1), instance_best(T, "theory of the common good", L2).
+
+// --- the conflict the theory actually claims: same action, two acceptors, opposite verdicts.
+// Canonical order as everywhere else: the acceptor that endorses first, the one that condemns second.
+.decl acceptor_conflict(s:symbol, x:symbol, a1:symbol, a2:symbol, lv:number)
+acceptor_conflict(S, X, A1, A2, min(L1, L2)) :- verdict(A1, X, V1, L1), verdict(A2, X, V2, L2),
+                                                acceptor_of(A1, S, _), acceptor_of(A2, S, _),
+                                                A1 != A2, V1 > 0.0, V2 < 0.0.
+.output acceptor_conflict
+
+// Two acceptors applying DIFFERENT theories: this is moral conflict proper. Two acceptors under one theory
+// disagreeing about the same action is a conflict of means, not of goods — a distinction the need-level
+// `conflict` relation cannot express at all.
+.decl theory_conflict(s:symbol, x:symbol, t1:symbol, t2:symbol, lv:number)
+theory_conflict(S, X, T1, T2, min(L1, min(L2, L3))) :- acceptor_conflict(S, X, A1, A2, L1),
+                                                       applies_theory(A1, T1, L2), applies_theory(A2, T2, L3), T1 != T2.
+.output theory_conflict
+
+.decl means_conflict(s:symbol, x:symbol, t:symbol, lv:number)
+means_conflict(S, X, T, min(L1, min(L2, L3))) :- acceptor_conflict(S, X, A1, A2, L1),
+                                                 applies_theory(A1, T, L2), applies_theory(A2, T, L3).
+.output means_conflict
+
+// The composition this module exists for: the SHAPE of the moral stack, not merely its level.
+.decl moral_stack(s:symbol, shape:symbol, lv:number)
+moral_stack(S, "contested", L) :- theory_conflict(S, _, _, _, L).
+moral_stack(S, "uncontested", L) :- observer_level(S, "Moral Agent", L), !theory_conflict(S, _, _, _, _).
+.output moral_stack
+
+// ------------------------------------------------------------------ anguish is the opposition, not the sum
+// `valence` reports the NET of the emotional ensemble — a decision signal: which way the system goes. The
+// phenomenal claim is different: the torment IS the conflict. So measure the mass of signal that cancels,
+// min(Σ positive, Σ|negative|): the part of the ensemble that is in genuine opposition rather than net.
+// A stimulus can therefore be positive in valence and high in anguish at once, which is the whole point.
+.decl pos_mass(s:symbol, x:symbol, m:float)
+pos_mass(S, X, M) :- emotional_signal(S, X, _, _, _), M = sum Sg : { emotional_signal(S, X, _, Sg, _), Sg > 0.0 }.
+.decl neg_mass(s:symbol, x:symbol, m:float)
+neg_mass(S, X, M) :- emotional_signal(S, X, _, _, _), M = sum Sg : { emotional_signal(S, X, _, Sg, _), Sg < 0.0 }.
+.decl anguish(s:symbol, x:symbol, m:float)
+anguish(S, X, M) :- pos_mass(S, X, P), neg_mass(S, X, N), P > 0.0, N < 0.0, M = min(P, -N).
+.output anguish
+
 // ------------------------------------------------------------------ bootstrap/01: the residual and its projections
 // One residual, many projections; which one appears is selected by the active evaluative context.
 .decl residual_of(s:symbol, lv:number)
@@ -141,7 +214,11 @@ hocp_instance(S, C, L) :- self_report(S, C, L), match(".*(cannot|limit|context w
 case_state(S, "level", L) :- observer_level(S, L, _), !stronger_level(S, L).
 case_state(S, "missing condition", C) :- missing_condition(S, C).
 case_state(S, "valence", cat(Sg, cat(" on ", X))) :- valence(S, X, Sg, _).
-case_state(S, "conflict", cat(N1, cat(" vs ", N2))) :- conflict(S, _, N1, N2, _).
+case_state(S, "conflict", cat(N1, cat(" vs ", cat(N2, cat(" on ", X))))) :- conflict(S, X, N1, N2, _).
+case_state(S, "moral stack", Sh) :- moral_stack(S, Sh, _).
+case_state(S, "theory conflict", cat(T1, cat(" vs ", cat(T2, cat(" on ", X))))) :- theory_conflict(S, X, T1, T2, _).
+case_state(S, "means conflict", cat(T, cat(" on ", X))) :- means_conflict(S, X, T, _).
+case_state(S, "anguish", cat(to_string(M), cat(" on ", X))) :- anguish(S, X, M).
 case_state(S, "epistemic quale", cat(Q, cat(" (", cat(C, ")")))) :- epistemic_quale(S, Q, C, _).
 case_state(S, "functional deficit", cat(X, cat(" → ", Cq))) :- functional_deficit(S, X, Cq, _).
 case_state(S, "HOCP", C) :- hocp_instance(S, C, _).

@@ -88,7 +88,9 @@ def main(argv=None):
     elif a.gcmd == "rounds":
         from .gellish import rounds
         paths.require_souffle(); ws.require_dictfacts()
-        sys.stdout.write(rounds.render(rounds.loop(ws, a.inputs, a.rounds, a.minlevel, a.maxdepth, a.theory)))
+        log = rounds.loop(ws, a.inputs, a.rounds, a.minlevel, a.maxdepth, a.theory)
+        sys.stdout.write(rounds.render(log))
+        sys.stdout.write("\n" + rounds.render_confabulation(rounds.confabulation(log)))
     elif a.gcmd == "state":
         from .gellish import run, state
         run.check(ws, a.cases, theory=a.theory, quiet=True)

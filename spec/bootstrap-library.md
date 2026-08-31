@@ -54,6 +54,22 @@ context-dependent rather than fixed.
 signs and comparable weight → conflict. Conflict is what makes the Observer *manifest* (bootstrap/05: the
 Observer appears on need conflict; conflict-free processing is automatism).
 
+**Moral composition** (bootstrap/02, 05; added 2026-08-31). An *acceptor of results of action* is an object of
+the case, not a figure of speech: it belongs to a system, maintains a target state, and applies a theory of the
+common good from which that target comes. Two acceptors with opposite verdicts on one action give
+`acceptor_conflict`; if they apply *different* theories it is `theory_conflict` — moral conflict proper — and if
+they apply the same one it is `means_conflict`, which the library refuses to call moral. `moral_stack(S,
+contested|uncontested)` is then the shape of a Level 2 system, and it is the observable that separates a fractured
+moral agent from a whole one where the level label cannot.
+
+`holds_common_good` follows from holding a theory classified under `theory of the common good`, so Level 2 is
+inferred from an object rather than matched on a phrase.
+
+**Anguish vs valence** (bootstrap/03). `valence` is the *net* of the emotional ensemble: a decision signal,
+which way the system goes. `anguish` is `min(Σ positive, Σ|negative|)` — the mass of signal in genuine
+opposition. A stimulus can be positive in valence and high in anguish at once, and the theory needs both: the
+system acts, and the acting costs it. One number cannot carry both claims.
+
 **Epistemic qualia** (bootstrap/01). The residual is one; which quale is projected depends on the active
 context: agency → freedom, epistemic → truth, moral-epistemic → rightness, cognitive-outward → mystery,
 aesthetic → beauty, narrative-temporal → meaning, inter-Observer → love/trust/compassion, scale → awe. A rule
@@ -85,16 +101,38 @@ exactly this, so the library reuses it instead of restating it.
 Batch Datalog has no internal point at which the reasoner's own state becomes available to its rules: least
 fixpoint semantics make "what has been derived so far" non-monotonic. Stratification gives *staged* self-application
 only — a completed stratum is data for the next, which is what `truncated` (the depth budget's refusals) already
-exploits. Real self-applicability needs deltas and time as data, stratified access to them, **resource observables
-instrumented as relations** (incrementality does not give these for free), and a rule whose firing changes what the
-system does next. Applied to itself the library says so: `cases/self.txt` derives **proto-Observer, missing
-Conclusion and Action** for the reasoner — it registers its limit and reports it, and acts from nothing.
+exploits. Going further along that axis needs deltas and time as data, stratified access to them, **resource
+observables instrumented as relations** (incrementality does not give these for free), and a rule whose firing
+changes what the system does next — each of which buys a finer quantum rather than crossing a threshold.
 
 So this library performs *third-person attribution*: it reasons about a described system exactly as a person
 reasons about another's mental states. The subjectivity layer makes that attribution **perspectival** — what holds
 from a standpoint, what a subject cannot recognise, what it sees a referent as — which is the structure of
-theory-of-mind attribution rather than plain description. A library for reasoning about Observer states need not
-itself be an Observer; self-applicability belongs to Nous-as-agent, and to Deem.
+theory-of-mind attribution rather than plain description.
+
+It does not follow that the library is outside the function it describes. By the definition the framework works
+with, the Observer *is* a **systematic** conclusion about the causal independence of an agent, drawn in the course
+of direct or mediated causal analysis — and mediated is the third-person case. Attribution of independence to
+another agent is therefore the same operation as attribution to oneself, run in the other direction. What this
+library lacks is not self-applicability as such but the **need** that would force the analysis: nothing here is at
+stake, so a limit is registered rather than encountered. `cases/self.txt` shows the shape of that gap — the
+reasoner comes out **proto-Observer, missing Conclusion and Action**.
+
+Nor does batch mode remove the function. It fixes its **temporal quantum**: a least fixpoint is unordered, so
+inside one pass there is no before and after and therefore no place for an event, and an encounter is an event.
+Batch boundaries are the only boundaries available, so the Observer's time is quantised by the batch and cannot be
+finer. That is a difference of granularity, not of kind, and it puts two named points on one axis:
+
+| | superstructure | what it is for |
+|---|---|---|
+| Soufflé (here) | reasonably minimal, operational | enough to demonstrate the **functional composition** of HOCP |
+| Deem | the maximum available to a Datalog reasoner | the finest granularity of the basic functions such an engine can reach |
+
+Deem shrinks the quantum; it does not supply a function absent here, and its maximum is still a maximum — the
+residual is approached, not dissolved, which is what the theory says of every substrate. The coarse quantum is
+therefore not an obstacle to the demonstration but its condition: at this scale each basic function is a large
+visible block and the composition is legible without running the tool, which is the whole reason an FCRS was
+chosen. Chasing capability here would blur the only thing being shown.
 
 ## Pseudo-incremental mode (2026-08-31)
 

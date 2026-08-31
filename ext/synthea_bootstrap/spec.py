@@ -83,6 +83,8 @@ CONCEPTS = [
     ('scale context', 'evaluative context', 'Self-model against an order-of-magnitude larger territory; the residual projects as awe.', []),
     ('generative context', 'evaluative context', "Irreducibility of one's own creative process; the residual projects as inspiration.", []),
     ('memorial context', 'evaluative context', 'Inaccessibility of prior Observer states; the residual projects as nostalgia.', []),
+    ('theory of the common good', 'theory', 'A theory of which environmental states are to be optimized, and at what cost, on behalf of a group rather than the agent alone. Level 2 requires holding one; holding two that disagree on the same action is what moral conflict is.', ['moral theory']),
+    ('target state', 'state', 'The environmental state an acceptor maintains as its criterion of success, and against which it evaluates a proposed action.', ['criterion state']),
 ]
 
 RELATIONS = [
@@ -142,6 +144,26 @@ RELATIONS = [
      ['reports'], ['is reported by'],
      [], ('system', 'anything'), ('content', 'anything'),
      'A self-report: a cognitive code the system emits about its own state.', 'reports'),
+    ('acceptor of a system', 'binary relation between individual things',
+     ['is an acceptor of'], ['has as acceptor'],
+     [], ('maintaining acceptor', 'anything'), ('acceptor holder', 'anything'),
+     'An acceptor of results of action maintained by this system. A system may hold several at once, and they may disagree.', 'acceptor_of'),
+    ('target of an acceptor', 'binary relation between individual things',
+     ['has target state'], ['is the target state of'],
+     [], ('targeting acceptor', 'anything'), ('maintained target', 'anything'),
+     'The environmental state this acceptor is trying to bring about; what makes two acceptors distinct rather than redundant.', 'target_state'),
+    ('theory applied by an acceptor', 'binary relation between individual things',
+     ['applies the theory'], ['is applied by'],
+     [], ('applying acceptor', 'anything'), ('applied theory', 'anything'),
+     'The theory of the common good from which this acceptor takes its target state. Two acceptors applying the same theory cannot generate moral conflict, only competing means.', 'applies_theory'),
+    ('verdict on an action', 'binary relation between individual things',
+     ['has verdict on'], ['is evaluated by'],
+     [], ('evaluating acceptor', 'anything'), ('evaluated action', 'anything'),
+     'The acceptor evaluates the proposed action against its target state; the value column carries a signed number.', 'verdict'),
+    ('holding of a theory', 'binary relation between individual things',
+     ['holds theory'], ['is held by'],
+     [], ('theory holder', 'anything'), ('held theory', 'anything'),
+     'The system holds this theory. Holding a theory of the common good is the Level 2 condition; holding two that collide is what moral anguish is made of.', 'holds_theory'),
 ]
 
 ROLE_OVERRIDES = {'acting from a conclusion': (('acting system', 'anything'), ('ground of action', 'anything')),

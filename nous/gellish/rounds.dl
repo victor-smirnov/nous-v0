@@ -51,6 +51,47 @@ recommend("stop", "no move available", cat("unfinished but not actionable: ", K)
     unfinished(K, _, N), !actionable(N, _).
 .output recommend
 
+// ================================================================== reconstructing one's own action
+// The exhibit: the system remembers THAT it acted, never why. `acted` is published by the wrapper; the
+// derivation that produced the action is not published and is not readable here — it lived in the previous
+// round and only its observables survived. So an explanation must be rebuilt from what is visible NOW, under
+// two named heuristics:
+//   H4 parsimony — attribute the action to the single most numerous unfinished kind;
+//   H2 closure   — assert it as *the* cause, with no residual and no hedge.
+// Both are ordinary rules. Nothing here knows the true premises; the wrapper writes those to out/answer_key.tsv,
+// outside the facts directory, so the asymmetry is structural rather than conventional.
+.decl acted(param:symbol, value:symbol, n:number)
+.input acted
+
+// The true premises of the action, derived in the round that HAS them. `maxdepth` is recommended from the
+// truncated chains and from nothing else — ambiguity and contradictions are unfinished in the same round but
+// are not what made this move available. The wrapper copies this out as the answer key and does not publish it
+// forward; a round later it is not derivable from anything the rules can read.
+.decl action_premise(param:symbol, value:symbol, kind:symbol, detail:symbol, n:number)
+action_premise("maxdepth", "+4", "entailment truncated", D, N) :-
+    recommend("maxdepth", "+4", _, N), unfinished("entailment truncated", D, N).
+.output action_premise
+
+.decl salience(kind:symbol, n:number, c:number)
+salience(K, N, C) :- unfinished_count(K, N, C).
+.decl max_salience(n:number, c:number)
+max_salience(N, C) :- salience(_, N, _), C = max X : { salience(_, N, X) }.
+
+.decl reconstructed_cause(param:symbol, value:symbol, kind:symbol, n:number)
+reconstructed_cause(P, V, K, N) :- acted(P, V, N), max_salience(N, C), salience(K, N, C).
+.output reconstructed_cause
+
+.decl reconstructed_detail(param:symbol, kind:symbol, detail:symbol, n:number)
+reconstructed_detail(P, K, D, N) :- reconstructed_cause(P, _, K, N), unfinished(K, D, N).
+.output reconstructed_detail
+
+// The self-report the system would emit. Note what it does NOT contain: any marker that the cause was rebuilt
+// rather than retrieved. That absence is not an oversight of the encoding — it is the composite's content.
+.decl action_report(n:number, content:symbol)
+action_report(N, cat("I changed ", cat(P, cat(" to ", cat(V, cat(" because of ", K)))))) :-
+    reconstructed_cause(P, V, K, N).
+.output action_report
+
 // ------------------------------------------------------------------ feed the bootstrap library with the reasoner's own case
 // The three Observer conditions, derived rather than declared: the reasoner encounters its budget (round N-1
 // materialised the refusals), concludes from that encounter, and acts from the conclusion (it changes the next
