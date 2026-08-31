@@ -45,8 +45,8 @@ are git-ignored; `NOUS_DATA=<dir>` relocates both.
 ## Layout
 
 ```
-nous/cli.py               nous gellish build-dict | check | ask | why | report | phrases | extract | inject | enrich | diff | summarize | state | rounds
-nous/gellish/             dictionary.py  parse.py  reasoner.dl  run.py  report.py  ask.py  why.py  hybrid.py  phrases.py  enrich.py  diff.py  summarize.py  state.py  rounds.py  bootstrap.dl  rounds.dl  paths.py
+nous/cli.py               nous gellish build-dict | check | ask | why | report | phrases | extract | inject | enrich | diff | summarize | state | rounds | align
+nous/gellish/             dictionary.py  parse.py  reasoner.dl  run.py  report.py  ask.py  why.py  hybrid.py  phrases.py  enrich.py  diff.py  summarize.py  state.py  rounds.py  align.py  bootstrap.dl  rounds.dl  paths.py
 nous/gellish/ext/builder.py   builder for domain-extension dictionaries
 ext/<name>/spec.py        extension specs (NAME, DEPENDS, build)
 data/dict, data/dictfacts     dictionary release and its Soufflé export (generated)

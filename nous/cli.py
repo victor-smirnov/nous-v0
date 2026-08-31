@@ -6,6 +6,7 @@
   nous gellish why <relation> [filters...]          proof trees (after check)
   nous gellish report                               re-render the last report
   nous gellish phrases [-o spec/phrases.md] [--all]  relation-phrase reference for the encoder
+  nous gellish align A.md B.md [-o align.tsv]         entity alignment across two independently encoded documents
   nous gellish rounds INPUT... [--rounds 3]            pseudo-incremental mode: the rules decide, the loop executes
   nous gellish state CASE.txt [--theory ...]           the bootstrap library: case description → Observer state
   nous gellish summarize DOC.md [--budget 80] [-o SUMMARY.md] [--theory ...]   thesis stratum → selected rows (gellish-summary)
@@ -36,6 +37,8 @@ def main(argv=None):
     p = g.add_parser("ask"); p.add_argument("query"); p.add_argument("--work")
     p = g.add_parser("why"); p.add_argument("target", nargs="+", help="relation [filters...] or a raw atom"); p.add_argument("--work")
     p = g.add_parser("report"); p.add_argument("--work")
+    p = g.add_parser("align"); p.add_argument("a"); p.add_argument("b"); p.add_argument("-o", "--out")
+    p.add_argument("--certain", type=float, default=0.85); p.add_argument("--uncertain", type=float, default=0.42)
     p = g.add_parser("rounds"); p.add_argument("inputs", nargs="+"); p.add_argument("--rounds", type=int, default=3)
     p.add_argument("--maxdepth", type=int, default=8); p.add_argument("--minlevel", type=int, default=2)
     p.add_argument("--theory", choices=["off", "hypothesis", "doctrine"], default="hypothesis"); p.add_argument("--work")
@@ -73,6 +76,15 @@ def main(argv=None):
     elif a.gcmd == "report":
         from .gellish import report
         sys.stdout.write(report.render(ws.out, ws.facts))
+    elif a.gcmd == "align":
+        import tempfile
+        from .gellish import align
+        with tempfile.TemporaryDirectory() as t1, tempfile.TemporaryDirectory() as t2:
+            res = align.align(a.a, a.b, t1, t2, a.certain, a.uncertain)
+        if a.out:
+            f1, f2 = align.write(res, a.out)
+            print(f"{len(res['accepted'])} aligned → {f1}; {len(res['uncertain'])} uncertain → {f2}", file=sys.stderr)
+        sys.stdout.write(align.report(res, a.a, a.b))
     elif a.gcmd == "rounds":
         from .gellish import rounds
         paths.require_souffle(); ws.require_dictfacts()
