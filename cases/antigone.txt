@@ -1,0 +1,59 @@
+# heading: Antigone — one action, two subjects, stacks of different shape
+# Sophocles, first movement. Encoded in the existing schema only; no rule was added for this case.
+# See PREREGISTRATION.md for what was predicted before this file was run.
+
+# --- the two theories, as objects
+F0001 | the law of the gods | is classified as a | theory of the common good | - | assertion | kinship, burial rites, the dead
+F0002 | the law of the city | is classified as a | theory of the common good | - | assertion | the polis, order after civil war
+
+# --- Antigone: two theories, in collision over one act
+F0010 | Antigone | is a case of | cognitive system | - | assertion | -
+F0011 | Antigone | encounters | the edict against burying her brother | - | assertion | condition (i)
+F0012 | Antigone | concludes | that the unwritten laws are not the city's to annul | - | assertion | condition (ii)
+F0013 | Antigone | acts from | its own conclusion | - | assertion | condition (iii)
+F0014 | Antigone | has as aspect | downward causation | - | assertion | she originates the act
+F0015 | Antigone | reports | "I shall lie with him whom I love, having done what is holy" | - | assertion | -
+
+F0020 | duty to the dead of one's blood | is a need of | Antigone | 0.9 | assertion | -
+F0021 | duty to the dead of one's blood | is active in | Antigone | - | assertion | -
+F0022 | standing within the city | is a need of | Antigone | 0.5 | assertion | -
+F0023 | standing within the city | is active in | Antigone | - | assertion | -
+F0024 | self-preservation | is a need of | Antigone | 0.6 | assertion | -
+F0025 | self-preservation | is active in | Antigone | - | assertion | -
+
+F0030 | the burial of Polynices | is a stimulus in | Antigone | - | assertion | the act at issue
+F0031 | the burial of Polynices | has satisfaction delta | duty to the dead of one's blood | 0.9 | assertion | -
+F0032 | the burial of Polynices | has satisfaction delta | standing within the city | -0.7 | assertion | -
+F0033 | the burial of Polynices | has satisfaction delta | self-preservation | -0.9 | assertion | the penalty is death
+F0034 | the burial of Polynices | holds in context | moral context | - | assertion | -
+
+F0040 | the acceptor of rites owed to the dead | is an acceptor of | Antigone | - | assertion | -
+F0041 | the acceptor of rites owed to the dead | applies the theory | the law of the gods | - | assertion | -
+F0042 | the acceptor of rites owed to the dead | has target state | the dead of one's blood are buried | - | assertion | -
+F0043 | the acceptor of rites owed to the dead | has verdict on | the burial of Polynices | 0.9 | assertion | endorses
+F0044 | the acceptor of civic order | is an acceptor of | Antigone | - | assertion | she does not deny the city's claim
+F0045 | the acceptor of civic order | applies the theory | the law of the city | - | assertion | -
+F0046 | the acceptor of civic order | has target state | the edicts of the city are obeyed | - | assertion | -
+F0047 | the acceptor of civic order | has verdict on | the burial of Polynices | -0.6 | assertion | condemns
+
+# --- Creon, first movement: the internal control. One theory, same act.
+F0100 | Creon in the first movement | is a case of | cognitive system | - | assertion | control
+F0101 | Creon in the first movement | encounters | the defiance of his edict | - | assertion | condition (i)
+F0102 | Creon in the first movement | concludes | that the city's order rests on the edict holding | - | assertion | condition (ii)
+F0103 | Creon in the first movement | acts from | its own conclusion | - | assertion | condition (iii)
+F0104 | Creon in the first movement | has as aspect | downward causation | - | assertion | -
+
+F0110 | the order of the city | is a need of | Creon in the first movement | 0.9 | assertion | -
+F0111 | the order of the city | is active in | Creon in the first movement | - | assertion | -
+F0112 | authority of the ruler | is a need of | Creon in the first movement | 0.7 | assertion | -
+F0113 | authority of the ruler | is active in | Creon in the first movement | - | assertion | -
+
+F0120 | the burial of Polynices | is a stimulus in | Creon in the first movement | - | assertion | the same act
+F0121 | the burial of Polynices | has satisfaction delta | the order of the city | -0.8 | assertion | -
+F0122 | the burial of Polynices | has satisfaction delta | authority of the ruler | -0.9 | assertion | -
+F0123 | the burial of Polynices | holds in context | moral context | - | assertion | -
+
+F0130 | the acceptor of the edict | is an acceptor of | Creon in the first movement | - | assertion | -
+F0131 | the acceptor of the edict | applies the theory | the law of the city | - | assertion | the only theory he holds here
+F0132 | the acceptor of the edict | has target state | the edicts of the city are obeyed | - | assertion | -
+F0133 | the acceptor of the edict | has verdict on | the burial of Polynices | -0.9 | assertion | condemns

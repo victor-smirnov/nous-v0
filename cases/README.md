@@ -21,6 +21,10 @@ structure the demonstration rests on. Controls are part of the evidence, not sca
 | `demo.txt` | exhibit | three small systems: a model in session, a thermostat, a deliberating person |
 | `control_deep_chain.txt` | **control** | a deep chain of unambiguous names, so truncation is the only salient kind — the confabulation exhibit must *fail to appear* here |
 | `self.txt` | exhibit | the reasoner as its own case |
+| `antigone.txt` | exhibit + **internal control** | one act, two subjects; Antigone holds two theories, Creon one |
+| `odysseus.txt` | **pre-registered gap** | a conflict dissolved by sequencing, which the library cannot represent |
+| `PREREGISTRATION.md` | procedure | what those two vary and what was predicted, written before encoding |
+| `RESULTS-antigone-odysseus.md` | measurement | what was predicted, and the four things that were not |
 
 ## Selection
 

@@ -1,0 +1,31 @@
+# heading: Odysseus at the Sirens — a conflict dissolved by sequencing, not by choosing
+# Odyssey XII. Encoded WITHOUT any plan vocabulary, because the library has none: plans as objects were
+# deferred as capability rather than composition. The gap is the point of the case; see PREREGISTRATION.md.
+
+F0001 | Odysseus at the Sirens | is a case of | cognitive system | - | assertion | -
+F0002 | Odysseus at the Sirens | encounters | a song no man has heard and survived | - | assertion | condition (i)
+F0003 | Odysseus at the Sirens | concludes | that both ends can be had if the act is structured | - | assertion | condition (ii)
+F0004 | Odysseus at the Sirens | acts from | its own conclusion | - | assertion | condition (iii)
+F0005 | Odysseus at the Sirens | has as aspect | downward causation | - | assertion | -
+F0006 | Odysseus at the Sirens | is directed toward | the common good of the crew | - | assertion | Level 2
+
+F0010 | knowledge of what no one has heard | is a need of | Odysseus at the Sirens | 0.8 | assertion | -
+F0011 | knowledge of what no one has heard | is active in | Odysseus at the Sirens | - | assertion | -
+F0012 | homecoming | is a need of | Odysseus at the Sirens | 0.9 | assertion | -
+F0013 | homecoming | is active in | Odysseus at the Sirens | - | assertion | -
+F0014 | the survival of the crew | is a need of | Odysseus at the Sirens | 0.7 | assertion | -
+F0015 | the survival of the crew | is active in | Odysseus at the Sirens | - | assertion | -
+
+# The song, evaluated as an undivided act — which is exactly how the library must take it, having no way to
+# say "first bound, then past".
+F0020 | listening to the Sirens | is a stimulus in | Odysseus at the Sirens | - | assertion | -
+F0021 | listening to the Sirens | has satisfaction delta | knowledge of what no one has heard | 0.9 | assertion | -
+F0022 | listening to the Sirens | has satisfaction delta | homecoming | -0.9 | assertion | the ship turns and is lost
+F0023 | listening to the Sirens | has satisfaction delta | the survival of the crew | -0.9 | assertion | -
+F0024 | listening to the Sirens | holds in context | agency context | - | assertion | -
+
+F0030 | sailing past with stopped ears | is a stimulus in | Odysseus at the Sirens | - | assertion | the alternative
+F0031 | sailing past with stopped ears | has satisfaction delta | knowledge of what no one has heard | -0.8 | assertion | -
+F0032 | sailing past with stopped ears | has satisfaction delta | homecoming | 0.9 | assertion | -
+F0033 | sailing past with stopped ears | has satisfaction delta | the survival of the crew | 0.9 | assertion | -
+F0034 | sailing past with stopped ears | holds in context | agency context | - | assertion | -
