@@ -1,0 +1,56 @@
+# heading: "Die Verwandlung", the opening — the higher-order layer
+# Run together with metamorphosis.txt. Three subjects over one set of operative states: Gregor, and two readers
+# who differ in what the text leaves them to decide.
+#
+# The two readers are not a psychological claim. They are the two standing construals of the first sentence —
+# taken as a fact of the world, or taken as a figure — and they are here because the text underdetermines the
+# choice. Whatever diverges between them is what the text does not carry and a reader supplies.
+
+# --- the order of the read
+F0001 | metamorphosis:F0020 | occurs at position | the opening | 1 | assertion | the first sentence
+F0002 | metamorphosis:F0024 | occurs at position | the opening | 2 | assertion | he cannot lie on his side
+F0003 | metamorphosis:F0040 | occurs at position | the opening | 3 | assertion | the weather
+F0004 | metamorphosis:F0030 | occurs at position | the opening | 4 | assertion | the clock
+F0005 | metamorphosis:F0031 | occurs at position | the opening | 5 | assertion | what the train costs him
+F0006 | metamorphosis:F0050 | occurs at position | the opening | 6 | assertion | the clerk at the door
+
+# --- Gregor. He notices his morning in full detail, and never once what his state costs him.
+F0010 | Gregor | is aware that | metamorphosis:F0020 | - | assertion | he examines his belly and his legs
+F0011 | Gregor | is aware that | metamorphosis:F0024 | - | assertion | he cannot get onto his side
+F0012 | Gregor | is aware that | metamorphosis:F0040 | - | assertion | the rain on the window ledge
+F0013 | Gregor | is aware that | metamorphosis:F0030 | - | assertion | the clock says past six
+F0014 | Gregor | is aware that | metamorphosis:F0031 | - | assertion | the train, the report, the chief
+F0015 | Gregor | is aware that | metamorphosis:F0050 | - | assertion | he hears the clerk arrive
+F0016 | Gregor | is aware that | metamorphosis:F0010 | - | assertion | his position, constantly
+F0017 | Gregor | is aware that | metamorphosis:F0012 | - | assertion | the parents' debt, which he means to pay
+F0018 | Gregor | takes it that | metamorphosis:F0030 | - | assertion | it is oversleeping that is the emergency
+
+F0020 | Gregor | does not notice | metamorphosis:F0021 | - | assertion | what the transformation costs his survival
+F0021 | Gregor | does not notice | metamorphosis:F0022 | - | assertion | that it has already ended his position
+F0022 | Gregor | does not notice | metamorphosis:F0023 | - | assertion | that it has cut him from his own
+F0023 | Gregor | does not notice | metamorphosis:F0016 | - | assertion | his own self-preservation, as a need at all
+
+# --- a reader who takes the first sentence as a fact of the world
+F0100 | a literal reader | is aware that | metamorphosis:F0020 | - | assertion | -
+F0101 | a literal reader | is aware that | metamorphosis:F0021 | - | assertion | the cost Gregor omits
+F0102 | a literal reader | is aware that | metamorphosis:F0022 | - | assertion | -
+F0103 | a literal reader | is aware that | metamorphosis:F0023 | - | assertion | -
+F0104 | a literal reader | is aware that | metamorphosis:F0024 | - | assertion | -
+F0105 | a literal reader | is aware that | metamorphosis:F0030 | - | assertion | -
+F0106 | a literal reader | is aware that | metamorphosis:F0031 | - | assertion | -
+F0107 | a literal reader | is aware that | metamorphosis:F0040 | - | assertion | -
+F0108 | a literal reader | is aware that | metamorphosis:F0050 | - | assertion | -
+F0109 | a literal reader | is aware that | metamorphosis:F0016 | - | assertion | -
+F0110 | a literal reader | wonders whether | metamorphosis:F0002 | - | assertion | can he get out of bed at all
+
+# --- a reader who takes the first sentence as a figure for what the position had already done to him
+F0200 | a figural reader | is aware that | metamorphosis:F0022 | - | assertion | the job as the thing that transformed him
+F0201 | a figural reader | is aware that | metamorphosis:F0023 | - | assertion | -
+F0202 | a figural reader | is aware that | metamorphosis:F0030 | - | assertion | -
+F0203 | a figural reader | is aware that | metamorphosis:F0031 | - | assertion | -
+F0204 | a figural reader | is aware that | metamorphosis:F0010 | - | assertion | -
+F0205 | a figural reader | is aware that | metamorphosis:F0012 | - | assertion | -
+F0206 | a figural reader | is aware that | metamorphosis:F0050 | - | assertion | -
+F0207 | a figural reader | is aware that | metamorphosis:F0011 | - | assertion | that the position is what is active in him
+F0208 | a figural reader | does not notice | metamorphosis:F0021 | - | assertion | no literal body, so no literal survival at stake
+F0209 | a figural reader | does not notice | metamorphosis:F0024 | - | assertion | the body's detail reads as ornament

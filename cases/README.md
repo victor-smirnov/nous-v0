@@ -30,6 +30,8 @@ structure the demonstration rests on. Controls are part of the evidence, not sca
 | `RESULTS-akaky-oedipus.md` | measurement | including the row that settles the ladder-indexing question from data |
 | `raskolnikov-hot.txt` | **higher-order layer** | run with `raskolnikov.txt`; which states each subject has a higher-order representation of |
 | `RESULTS-hot-raskolnikov.md` | measurement | reader 12/12 against Raskolnikov 5/12, and three blind spots the text does not name |
+| `metamorphosis.txt` + `-hot.txt` | **HOT analysis of a text** | Kafka's opening; Gregor and two readers who construe the first sentence differently |
+| `RESULTS-hot-metamorphosis.md` | measurement | entity level 7/9 against fact level 6/18, and the 28% the text leaves to the reader |
 
 ## Selection
 

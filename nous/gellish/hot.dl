@@ -55,6 +55,32 @@ unconscious_determinant(S, E, K) :- low_state(S, E, K), !represented(S, E).
 blind_without_state(S, E) :- noticed_absent(S, E), !low_state(S, E, _).
 .output blind_without_state
 
+// ------------------------------------------------------------------ awareness is per fact, not per entity
+// Forced by the material rather than designed: a subject can be aware that a thing is present and not aware of
+// what it costs him. Those are two facts about one entity, so entity-level coverage above cannot tell them
+// apart — it reports the entity as represented on the strength of either. The relations below keep the
+// distinction the text makes.
+.decl represented_fact(s:symbol, f:symbol)
+represented_fact(S, T) :- hot_edge(S, _, T, _), ref(T).
+.decl unnoticed_fact_edge(s:symbol, f:symbol)
+unnoticed_fact_edge(S, T) :- hot_blind_edge(S, T, _), ref(T).
+
+.decl low_fact(s:symbol, f:symbol, kind:symbol)          // the facts that state an operative low-level relation
+low_fact(S, F, "stimulus")    :- rf(F, _, "stimulus_in", S), usable(F, _).
+low_fact(S, F, "active need") :- rf(F, _, "active_in", S), usable(F, _).
+low_fact(S, F, "what it costs") :- fact(F, X, _, _, _, _, _, _, _, U), sem(U, "delta"), usable(F, _), stimulus(X, S, _).
+.output low_fact
+
+.decl unconscious_fact(s:symbol, f:symbol, kind:symbol)
+unconscious_fact(S, F, K) :- low_fact(S, F, K), !represented_fact(S, F).
+.output unconscious_fact
+
+.decl fact_asymmetry(observer:symbol, subject:symbol, covered:number, total:number)
+fact_asymmetry(O, S, C, T) :- hot_edge(O, _, _, _), low_fact(S, _, _),
+                              C = count : { low_fact(S, F, _), represented_fact(O, F) },
+                              T = count : { low_fact(S, _, _) }.
+.output fact_asymmetry
+
 // ------------------------------------------------------------------ whose edges reach whose states
 // The point of the exercise: two subjects, one set of operative states. An external reader has higher-order
 // representations of determinants the subject inside the system has none of. Same states, different coverage —

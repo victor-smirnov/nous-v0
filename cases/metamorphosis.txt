@@ -1,0 +1,43 @@
+# heading: Kafka, "Die Verwandlung", the opening — low-level states
+# The first pages, up to the chief clerk's arrival. This file holds only what is operative in Gregor;
+# metamorphosis-hot.txt holds the higher-order layer for him and for two readers.
+#
+# Chosen because the failure here is not Raskolnikov's. Raskolnikov cannot trace what determines him. Gregor
+# traces his morning perfectly well; what he has no higher-order representation of is what his own state costs.
+
+F0001 | Gregor | is a case of | cognitive system | - | assertion | -
+F0002 | Gregor | encounters | a body he cannot get out of bed | - | assertion | condition (i)
+F0003 | Gregor | concludes | that he must catch the next train regardless | - | assertion | condition (ii)
+F0004 | Gregor | acts from | its own conclusion | - | assertion | condition (iii)
+F0005 | Gregor | has as aspect | downward causation | - | assertion | he plans and reorganises around the goal
+
+# --- needs
+F0010 | keeping his position | is a need of | Gregor | 0.9 | assertion | the family's debt runs through it
+F0011 | keeping his position | is active in | Gregor | - | assertion | -
+F0012 | the family's solvency | is a need of | Gregor | 0.9 | assertion | -
+F0013 | the family's solvency | is active in | Gregor | - | assertion | -
+F0014 | bodily comfort | is a need of | Gregor | 0.4 | assertion | -
+F0015 | bodily comfort | is active in | Gregor | - | assertion | -
+F0016 | self-preservation | is a need of | Gregor | 0.9 | assertion | -
+F0017 | self-preservation | is active in | Gregor | - | assertion | -
+F0018 | being at ease among his own | is a need of | Gregor | 0.7 | assertion | -
+F0019 | being at ease among his own | is active in | Gregor | - | assertion | -
+
+# --- what is happening to him, and what each of it costs
+F0020 | the transformation | is a stimulus in | Gregor | - | assertion | -
+F0021 | the transformation | has satisfaction delta | self-preservation | -0.9 | assertion | the cost he never states
+F0022 | the transformation | has satisfaction delta | keeping his position | -0.9 | assertion | -
+F0023 | the transformation | has satisfaction delta | being at ease among his own | -0.9 | assertion | -
+F0024 | the transformation | has satisfaction delta | bodily comfort | -0.5 | assertion | he cannot lie on his side
+
+F0030 | having overslept the train | is a stimulus in | Gregor | - | assertion | -
+F0031 | having overslept the train | has satisfaction delta | keeping his position | -0.8 | assertion | -
+F0032 | having overslept the train | has satisfaction delta | the family's solvency | -0.6 | assertion | -
+
+F0040 | the dreary weather at the window | is a stimulus in | Gregor | - | assertion | -
+F0041 | the dreary weather at the window | has satisfaction delta | bodily comfort | -0.3 | assertion | -
+
+F0050 | the chief clerk coming to the flat | is a stimulus in | Gregor | - | assertion | -
+F0051 | the chief clerk coming to the flat | has satisfaction delta | keeping his position | -0.7 | assertion | -
+F0052 | the chief clerk coming to the flat | has satisfaction delta | being at ease among his own | -0.4 | assertion | -
+F0053 | the chief clerk coming to the flat | holds in context | agency context | - | assertion | -
