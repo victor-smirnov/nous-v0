@@ -51,6 +51,13 @@ Controls carry a matching weight: a composite that appears unconditionally has n
 anything. `control_deep_chain.txt` is the current example — same rules, same shape, distractor removed, and the
 misattribution disappears.
 
+## Sources
+
+**No case without its source passage** (`sources/`). The five literary cases were first encoded from
+recollection, with no text present, which left the central claim — that the complexity arrives from the
+environment rather than from us — unsupported for exactly the cases meant to demonstrate it. Their results are
+marked **unverified** until re-encoded against the text. See `sources/README.md`.
+
 ## Procedure
 
 Before encoding, record what dimension the case varies and what the framework predicts. Encode. Run against the
