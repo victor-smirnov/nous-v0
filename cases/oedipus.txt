@@ -1,0 +1,47 @@
+# heading: Oedipus — the same determinants, before and after they become reachable
+# Sophocles. Nothing in the causal chain changes between the two stages; only what he can trace does.
+# Encoded with no determinant-access vocabulary, because the library has none. See PREREGISTRATION.md.
+
+# --- before the revelation
+F0001 | Oedipus before the revelation | is a case of | cognitive system | - | assertion | -
+F0002 | Oedipus before the revelation | encounters | a plague whose cause is hidden from him | - | assertion | condition (i)
+F0003 | Oedipus before the revelation | concludes | that the killer can be found and cast out | - | assertion | condition (ii)
+F0004 | Oedipus before the revelation | acts from | its own conclusion | - | assertion | condition (iii)
+F0005 | Oedipus before the revelation | has as aspect | downward causation | - | assertion | he binds himself by his own decree
+F0006 | Oedipus before the revelation | is directed toward | the common good of the city | - | assertion | Level 2
+
+F0010 | deliverance of the city | is a need of | Oedipus before the revelation | 0.9 | assertion | -
+F0011 | deliverance of the city | is active in | Oedipus before the revelation | - | assertion | -
+F0012 | knowing who he is | is a need of | Oedipus before the revelation | 0.8 | assertion | -
+F0013 | knowing who he is | is active in | Oedipus before the revelation | - | assertion | -
+F0014 | standing as the city's saviour | is a need of | Oedipus before the revelation | 0.7 | assertion | -
+F0015 | standing as the city's saviour | is active in | Oedipus before the revelation | - | assertion | -
+
+F0020 | pressing the inquiry to the end | is a stimulus in | Oedipus before the revelation | - | assertion | -
+F0021 | pressing the inquiry to the end | has satisfaction delta | deliverance of the city | 0.9 | assertion | -
+F0022 | pressing the inquiry to the end | has satisfaction delta | knowing who he is | 0.9 | assertion | -
+F0023 | pressing the inquiry to the end | has satisfaction delta | standing as the city's saviour | -0.4 | assertion | Teiresias warns him off
+F0024 | pressing the inquiry to the end | holds in context | epistemic context | - | assertion | he demands to know
+
+# --- after: the same chain, now traceable
+F0100 | Oedipus after the revelation | is a case of | cognitive system | - | assertion | -
+F0101 | Oedipus after the revelation | encounters | the whole chain that led to his own acts | - | assertion | condition (i)
+F0102 | Oedipus after the revelation | concludes | that he did it, and did not know | - | assertion | condition (ii)
+F0103 | Oedipus after the revelation | acts from | its own conclusion | - | assertion | condition (iii)
+F0104 | Oedipus after the revelation | has as aspect | downward causation | - | assertion | the blinding is his own
+F0105 | Oedipus after the revelation | is directed toward | the common good of the city | - | assertion | Level 2
+F0106 | Oedipus after the revelation | reports | "I was unable to see what was before me" | - | assertion | -
+
+F0110 | deliverance of the city | is a need of | Oedipus after the revelation | 0.9 | assertion | unchanged
+F0111 | deliverance of the city | is active in | Oedipus after the revelation | - | assertion | -
+F0112 | knowing who he is | is a need of | Oedipus after the revelation | 0.8 | assertion | unchanged, and now met
+F0113 | standing as the city's saviour | is a need of | Oedipus after the revelation | 0.7 | assertion | unchanged
+F0114 | standing as the city's saviour | is active in | Oedipus after the revelation | - | assertion | -
+F0115 | bearing what he has done | is a need of | Oedipus after the revelation | 0.9 | assertion | -
+F0116 | bearing what he has done | is active in | Oedipus after the revelation | - | assertion | -
+
+F0120 | putting out his own eyes | is a stimulus in | Oedipus after the revelation | - | assertion | -
+F0121 | putting out his own eyes | has satisfaction delta | bearing what he has done | 0.8 | assertion | -
+F0122 | putting out his own eyes | has satisfaction delta | standing as the city's saviour | -0.9 | assertion | -
+F0123 | putting out his own eyes | has satisfaction delta | deliverance of the city | 0.6 | assertion | the pollution is cast out
+F0124 | putting out his own eyes | holds in context | moral context | - | assertion | -

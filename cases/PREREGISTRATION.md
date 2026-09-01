@@ -36,3 +36,44 @@ is doing work we did not think it was doing.
 
 **What this case is for:** naming the boundary in a form that can be handed to someone else. If the composite
 "conflict dissolved by sequencing" is to be exhibited later, this file is where the requirement is recorded.
+
+---
+
+# Pre-registration: Akaky and Oedipus
+
+Same procedure. Written before encoding; both run against the unmodified library.
+
+## akaky.txt
+
+**Dimension varied:** whether a Subject is enacted at all, within one character. Gogol gives the ablation for
+free — the same man before and after the overcoat becomes a need.
+
+**A concession recorded in advance.** The clean version would change exactly one thing, the added need. It is
+not available without misreading the text: Akaky at his desk does not encounter, conclude or act, and giving him
+those conditions to tidy the experiment would be encoding a different man. So **two things change** — a need is
+added and the three Observer conditions become satisfiable — and any finding must be read against that. Fidelity
+over experimental tidiness, stated here rather than discovered later.
+
+**Predicted:**
+- before — no conflict, `automatism` on the copying, `missing_condition` Encounter, no level;
+- after — conflict between standing and subsistence, anguish, an Observer that manifests.
+
+**Would count against us:** conflict before the coat, or automatism after it.
+
+## oedipus.txt
+
+**Dimension varied:** access to one's own determinants, before and after the revelation. The determinants
+themselves do not change — only what he can reach.
+
+**Predicted — a gap, pre-registered as one.** The library has no representation of determinant access: it was
+folded into the module that derives the Observer from compression under a prediction requirement, which is not
+built. So the **ladder should fail to discriminate the two stages**, and that failure is the point of the case:
+it is the sharpest available statement of what module 1 is for, since the play changes nothing except access.
+
+**Also predicted, and this one is a real derivation:** the epistemic quale should differ between the stages,
+because the projection is selected by the active context and the context does change — he demands to know, and
+then he knows. Same residual, different projection, no new rule.
+
+**Would count against us:** identical qualia across the two stages, which would mean the projection is not
+tracking context; or the ladder discriminating them, which would mean something is representing access that we
+did not think was.

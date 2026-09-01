@@ -24,7 +24,10 @@ structure the demonstration rests on. Controls are part of the evidence, not sca
 | `antigone.txt` | exhibit + **internal control** | one act, two subjects; Antigone holds two theories, Creon one |
 | `odysseus.txt` | **pre-registered gap** | a conflict dissolved by sequencing, which the library cannot represent |
 | `PREREGISTRATION.md` | procedure | what those two vary and what was predicted, written before encoding |
+| `akaky.txt` | exhibit + **within-text ablation** | the same man before and after a need; one stimulus stays automatic in both |
+| `oedipus.txt` | **pre-registered gap** | the same determinants, before and after they become reachable |
 | `RESULTS-antigone-odysseus.md` | measurement | what was predicted, and the four things that were not |
+| `RESULTS-akaky-oedipus.md` | measurement | including the row that settles the ladder-indexing question from data |
 
 ## Selection
 

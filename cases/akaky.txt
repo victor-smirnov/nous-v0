@@ -1,0 +1,33 @@
+# heading: Akaky Akakievich — the same man before and after a need
+# Gogol, "The Overcoat". The ablation is in the text: one need is added and a Subject is enacted where none was.
+# Two things change, not one; see PREREGISTRATION.md, where the concession is recorded.
+
+# --- before: the desk. No encounter, no conclusion, no action. Copying is the whole of it.
+F0001 | Akaky at his desk | is a case of | cognitive system | - | assertion | before
+F0010 | orderly copying | is a need of | Akaky at his desk | 0.9 | assertion | the letters themselves, loved
+F0011 | orderly copying | is active in | Akaky at his desk | - | assertion | -
+F0012 | subsistence | is a need of | Akaky at his desk | 0.5 | assertion | -
+F0013 | subsistence | is active in | Akaky at his desk | - | assertion | -
+F0020 | a document to be copied | is a stimulus in | Akaky at his desk | - | assertion | -
+F0021 | a document to be copied | has satisfaction delta | orderly copying | 0.9 | assertion | -
+
+# --- after: the overcoat has become a need, and everything follows from that one addition.
+F0100 | Akaky saving for the overcoat | is a case of | cognitive system | - | assertion | after
+F0101 | Akaky saving for the overcoat | encounters | that he is not seen as a man without one | - | assertion | condition (i)
+F0102 | Akaky saving for the overcoat | concludes | that the coat must be had, whatever it costs | - | assertion | condition (ii)
+F0103 | Akaky saving for the overcoat | acts from | its own conclusion | - | assertion | condition (iii)
+F0104 | Akaky saving for the overcoat | has as aspect | downward causation | - | assertion | he reorganises his life around it
+
+F0110 | orderly copying | is a need of | Akaky saving for the overcoat | 0.9 | assertion | unchanged
+F0111 | orderly copying | is active in | Akaky saving for the overcoat | - | assertion | -
+F0112 | subsistence | is a need of | Akaky saving for the overcoat | 0.5 | assertion | unchanged
+F0113 | subsistence | is active in | Akaky saving for the overcoat | - | assertion | -
+F0114 | standing among people | is a need of | Akaky saving for the overcoat | 0.8 | assertion | the addition
+F0115 | standing among people | is active in | Akaky saving for the overcoat | - | assertion | -
+
+F0120 | going without supper to save | is a stimulus in | Akaky saving for the overcoat | - | assertion | -
+F0121 | going without supper to save | has satisfaction delta | standing among people | 0.8 | assertion | -
+F0122 | going without supper to save | has satisfaction delta | subsistence | -0.8 | assertion | he starves for it
+F0123 | going without supper to save | holds in context | agency context | - | assertion | -
+F0130 | a document to be copied | is a stimulus in | Akaky saving for the overcoat | - | assertion | the same stimulus as before
+F0131 | a document to be copied | has satisfaction delta | orderly copying | 0.9 | assertion | unchanged
