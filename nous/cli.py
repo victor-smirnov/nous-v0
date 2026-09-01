@@ -96,6 +96,9 @@ def main(argv=None):
             r = rounds.anchoring(paths.Workspace(pathlib.Path(td) / "w0"), a.inputs, td,
                                  rounds=a.rounds, minlevel=a.minlevel, maxdepth=a.maxdepth, theory=a.theory)
         sys.stdout.write("\n" + rounds.render_anchoring(r))
+        strict_open = len(rounds.tsv(ws.out / "ground_ambiguous.csv"))
+        sys.stdout.write("\n" + rounds.render_self_deception(
+            rounds.self_deception(r, rounds.confabulation(log), strict_open)))
     elif a.gcmd == "state":
         from .gellish import run, state
         run.check(ws, a.cases, theory=a.theory, quiet=True)

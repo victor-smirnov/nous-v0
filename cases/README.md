@@ -73,3 +73,23 @@ That last measurement had to be got right twice. Reversing the document's rows m
 stability and was not: the candidates are dictionary UIDs, so the document's order cannot touch the tie-break.
 Determinism masquerading as systematicity, exactly as the perturbation rule warns — the first perturbation
 tested everything except the thing the choice actually rested on.
+
+**Self-deception**, composed over the two above. The self-model is assembled *by* the approximations, so what it
+omits is exactly what they cost. Four divergences appear between what it says and what a second evaluation
+shows — and three of them are our wiring, which the report says out loud:
+
+| | gap |
+|---|---|
+| names it still finds ambiguous: 0, against 37 still ambiguous in the dictionary | wiring — `ground_ambiguous` is still derived; the self-model is attached to the post-forcing relation |
+| names it settled itself: 37 | none — reported correctly; it hides nothing |
+| settlements it can mark uncertain: 0, against 13 of 37 that move | **principled** |
+| why it acted, against what it acted from | memory — the wrapper could have published more |
+
+**Exactly one gap survives that sorting.** Warrant cannot be reported by any rule however written, because it is
+a claim about a model the evaluation does not have: a batch evaluation computes one, and warrant needs a second.
+`settlement_hedged` is declared in `rounds.dl` and deliberately given no rule, so the missing capability sits in
+the program text instead of being merely absent from it. The regression test asserts that the principled list has
+exactly one member, so a later change that makes warrant reportable fails loudly rather than passing quietly.
+
+The ablation is built in: with full access the composite cannot arise. The strict form settles nothing and takes
+no action, so it has neither an anchor to hold nor a decision to explain.

@@ -105,6 +105,28 @@ class Rounds(unittest.TestCase):
                             "reversing the dictionary's arrival order must move some choice — otherwise the "
                             "tie-break is not what decided them and the exhibit claims too much")
 
+    def test_self_deception_has_exactly_one_principled_gap(self):
+        """The composite is real, but most of its surface is our wiring — and the test says which.
+
+        Overclaiming here is the obvious failure mode: three of the four divergences could be closed by a rule,
+        and only warrant cannot, because it is a claim about a second model that a batch evaluation does not
+        have. If a later change makes warrant reportable, this test must fail rather than quietly pass.
+        """
+        with tempfile.TemporaryDirectory() as d:
+            d = pathlib.Path(d)
+            doc = d / "doc.txt"; doc.write_text(NOISY)
+            ws = paths.Workspace(d / "w0")
+            r = rounds.anchoring(ws, [str(doc)], d / "p", rounds=4, maxdepth=1)
+            confab = rounds.confabulation(r["rounds"])
+            strict_open = len(rounds.tsv(ws.out / "ground_ambiguous.csv"))
+            rows = rounds.self_deception(r, confab, strict_open)
+            principled = [k for k, _, _, g, _ in rows if g == "PRINCIPLED"]
+            self.assertEqual(principled, ["settlements it can mark uncertain"])
+            sm = dict(r["rounds"][-1]["self_model"])
+            self.assertEqual(sm["settlements I can mark uncertain"], "0")
+            self.assertNotEqual(sm["names I settled myself"], "0",
+                                "the system must report its own forcing — it is not hiding anything")
+
     def test_answer_key_is_unreachable_by_the_rules(self):
         """The asymmetry must be structural: the true premises are written outside the directory the reasoner
         reads, so no rule can reach them however it is written."""

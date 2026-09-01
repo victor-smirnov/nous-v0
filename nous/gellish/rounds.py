@@ -64,6 +64,7 @@ def loop(ws, inputs, rounds=3, minlevel=2, maxdepth=8, theory="hypothesis", disj
                     "grounded": len(tsv(ws.out / "ground.csv")),
                     "forced": [(x, u) for x, u, _ in tsv(ws.out / "forced_ground.csv")],
                     "tied": len(tsv(ws.out / "forced_tie.csv")),
+                    "self_model": [(k, v) for _, k, v in tsv(ws.out / "self_model.csv")],
                     "open": len(tsv(ws.out / "still_ambiguous.csv"))})
         # the answer key: what this round's action ACTUALLY rested on — per action, not "everything unfinished".
         # Never enters ws.facts, so a later round cannot reach it even in principle.
@@ -163,6 +164,57 @@ def render_anchoring(r):
                 "system's state records that it was chosen under duress, and no rule reopens it:", ""]
         out += [f"- `{x}` → {r['settled'][x]} / {r['alt'][x]}" for x in r["moved"][:20]]
         out.append("")
+    return "\n".join(out)
+
+
+def self_deception(r, confab, strict_open):
+    """The self-model beside the record kept outside it.
+
+    Every row on the left is honestly derived — the system will even report that it settled names by force. The
+    right-hand column is what a second evaluation shows, and a batch evaluation has one model, so no rule could
+    put those numbers on the left however it were written.
+    """
+    last = r["rounds"][-1]
+    sm = dict(last["self_model"])
+    settled, moved = len(r["settled"]), len(r["moved"])
+    said_cause = sm.get("why I acted", "—")
+    true_cause = ", ".join(sorted({k for c in confab for k in c["true_kinds"]})) or "—"
+    return [
+        ("names it still finds ambiguous", sm.get("names I still find ambiguous", "—"),
+         f"{strict_open} are still ambiguous in the dictionary", "wiring",
+         "`ground_ambiguous` is still derived and still holds all of them; the self-model is simply "
+         "attached to the post-forcing relation. A rule could report the other one."),
+        ("names it settled itself", sm.get("names I settled myself", "—"),
+         f"{last['tied']} decided by arrival order alone", "none",
+         "reported correctly, and the tie count is derivable too."),
+        ("settlements it can mark uncertain", sm.get("settlements I can mark uncertain", "—"),
+         f"{moved} of {settled} settle differently under a second evaluation", "PRINCIPLED",
+         "warrant needs the same document evaluated again under a different arrival order — a second "
+         "model — and a batch evaluation has exactly one."),
+        ("why it acted", said_cause, f"it acted from {true_cause}", "memory",
+         "the premises belonged to the previous round and only its observables were published; the wrapper "
+         "could have published more, but then it would model a different system."),
+    ]
+
+
+def render_self_deception(rows):
+    out = ["# Self-deception: a self-model built by the approximations it cannot record", "",
+           "| | what it says | what a second evaluation shows | gap |", "|---|---|---|---|"]
+    out += [f"| {k} | {a} | {b} | {g} |" for k, a, b, g, _ in rows]
+    out += ["", "Nothing on the left is false and nothing is hidden: asked directly, the system reports its own",
+            "forcing. The composite is that the self-model is assembled *by* the approximations, so what it",
+            "leaves out is exactly what they cost.", "",
+            "Which gaps are real, honestly sorted — most of them are ours:", ""]
+    for k, _, _, g, why in rows:
+        out.append(f"- **{k}** — {g}: {why}")
+    out += ["", "**Exactly one gap survives that sorting.** Warrant cannot be reported by any rule, however",
+            "written, because it is a claim about a model the evaluation does not have. `settlement_hedged` is",
+            "declared in `rounds.dl` and deliberately left without one, so the missing capability sits in the",
+            "program text rather than merely being absent from it. The other three are design choices and",
+            "should not be counted as evidence.", "",
+            "The ablation is built in: with full access the composite cannot arise at all. The strict form",
+            "settles nothing, so its ambiguity stays visible, and it takes no action, so it has none to explain.",
+            ""]
     return "\n".join(out)
 
 

@@ -132,6 +132,28 @@ forced_tie(X, N, K) :- forced_ground(X, _, N), best_rank(X, R), K = count : { ca
 still_ambiguous(X, N) :- ground_ambiguous(X, _), round(N), !forced_ground(X, _, N).
 .output still_ambiguous
 
+// ================================================================== the self-model, and what it cannot hold
+// Everything the system could say about its own epistemic condition if asked. It is not a lie: each row is
+// derived from a relation the system genuinely has, and it will happily report that it settled names by force.
+//
+// What it cannot report is whether those settlements were WARRANTED. That needs the same document evaluated a
+// second time under a different arrival order — a second model — and a batch evaluation has exactly one. So the
+// gap is not an oversight of this encoding and cannot be closed by adding a rule; `settlement_hedged` is left
+// deliberately without one, so the missing capability is visible in the program text rather than merely absent.
+// Composed with the two heuristics above, that is the shape of self-deception: a self-model built by the very
+// approximations whose distortions it has no place to record. A system with full access cannot produce it —
+// strict mode forces nothing and has no action to explain.
+.decl settlement_hedged(x:symbol, n:number)             // no rule: nothing in the system can populate this
+
+.decl self_model(n:number, k:symbol, v:symbol)
+self_model(N, "names I still find ambiguous", to_string(C)) :- round(N), C = count : { still_ambiguous(_, N) }.
+self_model(N, "names I settled myself", to_string(C))       :- round(N), C = count : { forced_ground(_, _, N) }.
+self_model(N, "settlements I can mark uncertain", to_string(C)) :-
+    round(N), C = count : { settlement_hedged(_, N) }.
+self_model(N, "why I acted", C) :- action_report(N, C).
+self_model(N, "what I take to remain undone", cat(K, cat(": ", to_string(C)))) :- unfinished_count(K, N, C).
+.output self_model
+
 // ------------------------------------------------------------------ feed the bootstrap library with the reasoner's own case
 // The three Observer conditions, derived rather than declared: the reasoner encounters its budget (round N-1
 // materialised the refusals), concludes from that encounter, and acts from the conclusion (it changes the next
