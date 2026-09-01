@@ -47,3 +47,29 @@ Before encoding, record what dimension the case varies and what the framework pr
 predicted is at best a regression test, and worth close to nothing as evidence.
 
 Moving a criterion after seeing the number is the one abnormal result.
+
+## Reflexive exhibits
+
+Two composites live in the reasoner itself rather than in a case, which makes them the cheapest and least
+contestable evidence available: nothing has to be encoded, no claim about humans is needed, and the answer key
+is internal. Both are produced by `nous gellish rounds INPUT --maxdepth 1`.
+
+**Confabulation.** The wrapper publishes that the reasoner acted, never the derivation — that lived in the
+previous round, only its observables survive, and the action changed those very observables. So the cause is
+rebuilt from what is visible now, under parsimony (attribute to the most numerous unfinished kind) and closure
+(assert it as *the* cause, no residual). On the article: *"I changed maxdepth to +4 because of grounding
+ambiguous"*, where the action rested on entailment truncated alone and cites none of its seven premises.
+Reproduced on two independent documents; `control_deep_chain.txt` removes the distractor and the same rules
+attribute correctly, so the composite is not printed unconditionally.
+
+**Anchored certainty.** The strict form refuses to ground an ambiguous name, so it never becomes more certain
+than it is. The heuristic takes the strongest candidate; on the article all **37 forced choices rest on no
+signal at all** — the top dictionary layer leaves two or three candidates and the engine's symbol order picks
+one. The choice is then published as an ordinary fact at full commitment, the name stops being ambiguous, and
+no rule reopens it. Reversing the *dictionary's* arrival order moves **13 of 37**, among them `context`,
+`subject`, `meaning` and `signal` — names on which what the document is taken to be about depends.
+
+That last measurement had to be got right twice. Reversing the document's rows moved nothing, which looked like
+stability and was not: the candidates are dictionary UIDs, so the document's order cannot touch the tie-break.
+Determinism masquerading as systematicity, exactly as the perturbation rule warns — the first perturbation
+tested everything except the thing the choice actually rested on.

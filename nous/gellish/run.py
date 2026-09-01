@@ -71,7 +71,7 @@ def check(ws, tables, minlevel=2, maxdepth=8, theory="hypothesis", disjoint=None
     if disjoint:
         argv += ["--disjoint", disjoint]
     parse.main(argv)
-    for name in ("round", "prev", "acted"):                         # always present, possibly empty
+    for name in ("round", "prev", "acted", "settled"):              # always present, possibly empty
         f = ws.facts / f"{name}.facts"
         if not f.exists():
             f.write_text("")

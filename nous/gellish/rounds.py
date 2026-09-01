@@ -42,7 +42,7 @@ def loop(ws, inputs, rounds=3, minlevel=2, maxdepth=8, theory="hypothesis", disj
     reach its own answer key even in principle. That asymmetry is the exhibit.
     """
     log, params = [], {"maxdepth": maxdepth}
-    prev_rows, acted_rows, key = [], [], []
+    prev_rows, acted_rows, key, settled_rows = [], [], [], []
     for n in range(rounds):
         ws.fresh_round = n
         ws.facts.mkdir(parents=True, exist_ok=True)
@@ -50,7 +50,8 @@ def loop(ws, inputs, rounds=3, minlevel=2, maxdepth=8, theory="hypothesis", disj
         with contextlib.redirect_stderr(buf if quiet else None) if quiet else contextlib.nullcontext():
             run.check(ws, inputs, minlevel=minlevel, maxdepth=params["maxdepth"], theory=theory,
                       disjoint=disjoint, quiet=quiet,
-                      extra_facts={"round": [(str(n),)], "prev": prev_rows, "acted": acted_rows})
+                      extra_facts={"round": [(str(n),)], "prev": prev_rows, "acted": acted_rows,
+                                   "settled": settled_rows})
         obs = observables(ws.out, n)
         rec = tsv(ws.out / "recommend.csv")
         state = tsv(ws.out / "round_state.csv")
@@ -59,7 +60,11 @@ def loop(ws, inputs, rounds=3, minlevel=2, maxdepth=8, theory="hypothesis", disj
                     "recommend": rec, "state": state, "self": level,
                     "reconstructed": tsv(ws.out / "reconstructed_cause.csv"),
                     "report": [r[1] for r in tsv(ws.out / "action_report.csv")],
-                    "cited": tsv(ws.out / "reconstructed_detail.csv")})
+                    "cited": tsv(ws.out / "reconstructed_detail.csv"),
+                    "grounded": len(tsv(ws.out / "ground.csv")),
+                    "forced": [(x, u) for x, u, _ in tsv(ws.out / "forced_ground.csv")],
+                    "tied": len(tsv(ws.out / "forced_tie.csv")),
+                    "open": len(tsv(ws.out / "still_ambiguous.csv"))})
         # the answer key: what this round's action ACTUALLY rested on — per action, not "everything unfinished".
         # Never enters ws.facts, so a later round cannot reach it even in principle.
         true_premises = [(p_, v_, k, d) for p_, v_, k, d, rn in tsv(ws.out / "action_premise.csv") if rn == str(n)]
@@ -73,11 +78,92 @@ def loop(ws, inputs, rounds=3, minlevel=2, maxdepth=8, theory="hypothesis", disj
                 log[-1]["stop"] = reason
         log[-1]["applied"] = applied
         key += [(str(n), p_, v_, k, d) for p_, v_, k, d in true_premises]
+        # a forced choice is held: published as an ordinary fact for the next round, never as a hedged one
+        settled_rows = [(x, u, str(n + 1)) for x, u in log[-1]["forced"]]
         if log[-1].get("stop"):
             break
         prev_rows = obs
     (ws.out / "answer_key.tsv").write_text("".join("\t".join(r) + "\n" for r in key))
     return log
+
+
+FENCE = "```"
+
+
+def perturb(src, dst):
+    """Reverse the row order inside each gellish block, writing the result to dst.
+
+    Facts carry explicit ids and the parser keys on them, so the content is identical — only the order in which
+    the engine meets the symbols changes, and with it `ord`. This is the perturbation the anchoring exhibit is
+    measured under: anything that moves was resting on the tie-break rather than on the document.
+    """
+    src, dst = pathlib.Path(src), pathlib.Path(dst)
+    out, block, inside = [], [], False
+    for line in src.read_text(encoding="utf-8").splitlines():
+        if line.startswith(FENCE):
+            if inside:
+                out += list(reversed(block)); block = []
+            out.append(line); inside = not inside if line.strip() != FENCE or inside else True
+            continue
+        (block if inside else out).append(line)
+    if src.suffix != ".md":                      # a plain case table: the whole file is one block
+        rows = [l for l in out if l.strip() and not l.lstrip().startswith("#")]
+        head = [l for l in out if l not in rows]
+        out = head + list(reversed(rows))
+    elif block:
+        out += list(reversed(block))
+    dst.write_text("\n".join(out) + "\n", encoding="utf-8")
+    return dst
+
+
+def anchoring(ws, inputs, tmp, **kw):
+    """Confidence against warrant: how much the reasoner settles, and how much of that survives perturbation.
+
+    The strict form refuses to ground an ambiguous name, so it never becomes more certain than it is. The
+    heuristic settles, publishes the choice as a plain fact, and the name stops being ambiguous — after which
+    nothing reopens it. So the count of settled names can only rise. Whether those choices were *warranted* is
+    measured by re-running on a perturbed copy: a choice that moves was resting on the arrival order.
+    """
+    from . import paths
+    base = loop(ws, inputs, **kw)
+    tmp = pathlib.Path(tmp); tmp.mkdir(parents=True, exist_ok=True)
+    perturbed = [str(perturb(p, tmp / f"{i}_{pathlib.Path(p).name}")) for i, p in enumerate(inputs)]
+    alt_ws = paths.Workspace(tmp / "w")
+    # The tie-break runs on `ord`, which follows the order symbols arrive — and the candidates are dictionary
+    # UIDs, so reversing the document's rows cannot touch it. Reverse the dictionary facts as well, or the
+    # perturbation tests everything except the thing the choice actually rests on.
+    alt_ws.dictfacts = tmp / "dictfacts"; alt_ws.dictfacts.mkdir(exist_ok=True)
+    for f in ws.dictfacts.glob("*.facts"):
+        (alt_ws.dictfacts / f.name).write_text(
+            "\n".join(reversed(f.read_text(encoding="utf-8").splitlines())) + "\n", encoding="utf-8")
+    alt = loop(alt_ws, perturbed, **kw)
+    a, b = dict(base[-1]["forced"]), dict(alt[-1]["forced"])
+    shared = set(a) & set(b)
+    moved = sorted(x for x in shared if a[x] != b[x])
+    return {"rounds": base, "settled": a, "alt": b, "shared": len(shared), "moved": moved}
+
+
+def render_anchoring(r):
+    base = r["rounds"]
+    out = ["# Anchored certainty: forcing a choice the strict form refuses", "",
+           "| round | grounded (strict) | settled (forced) | of those, decided by tie-break | still open |",
+           "|---:|---:|---:|---:|---:|"]
+    for x in base:
+        out.append(f"| {x['round']} | {x['grounded']} | {len(x['forced'])} | {x['tied']} | {x['open']} |")
+    n_moved, n_shared = len(r["moved"]), r["shared"]
+    tied = base[0]["tied"] if base else 0
+    out += ["", f"- names settled by the heuristic: **{len(r['settled'])}**, of which "
+                f"**{tied} rest on no signal at all** — the top dictionary layer leaves several candidates and "
+                f"`ord` picks one",
+            f"- also settled in the perturbed run: {n_shared}",
+            f"- **settled differently under perturbation: {n_moved}/{n_shared}**"
+            + (f" ({100 * n_moved / n_shared:.0f}%)" if n_shared else ""), ""]
+    if r["moved"]:
+        out += ["Each of these is held at the same commitment as any other fact. Nothing anywhere in the",
+                "system's state records that it was chosen under duress, and no rule reopens it:", ""]
+        out += [f"- `{x}` → {r['settled'][x]} / {r['alt'][x]}" for x in r["moved"][:20]]
+        out.append("")
+    return "\n".join(out)
 
 
 def confabulation(log):

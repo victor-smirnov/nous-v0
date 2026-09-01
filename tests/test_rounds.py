@@ -81,6 +81,30 @@ class Rounds(unittest.TestCase):
                         "without a distractor the same rules must attribute the action correctly")
         self.assertGreater(control[0]["overlap"], 0)
 
+    def test_anchoring_manufactures_certainty(self):
+        """Forcing a choice where the strict form refuses one, and holding it.
+
+        The point is not that the heuristic sometimes picks wrong — it is that the choice rests on the order
+        symbols arrived, is then published as an ordinary fact at full commitment, and is never reopened. So the
+        count of settled names cannot fall, and nothing in the system's state distinguishes a settled name from
+        one that was unambiguous all along.
+        """
+        with tempfile.TemporaryDirectory() as d:
+            d = pathlib.Path(d)
+            doc = d / "doc.txt"; doc.write_text(NOISY)
+            ws = paths.Workspace(d / "w0")
+            r = rounds.anchoring(ws, [str(doc)], d / "p", rounds=4, maxdepth=1)
+            base = r["rounds"]
+            self.assertTrue(r["settled"], "the heuristic must settle names the strict form leaves open")
+            self.assertEqual(base[-1]["tied"], len(base[-1]["forced"]),
+                             "every forced choice here should rest on a tie, i.e. on no signal at all")
+            self.assertEqual(base[-1]["open"], 0, "forcing must destroy the ambiguity, not carry it")
+            settled = [len(x["forced"]) for x in base]
+            self.assertEqual(settled, sorted(settled), "a settled choice is never reopened, so the count cannot fall")
+            self.assertTrue(r["moved"],
+                            "reversing the dictionary's arrival order must move some choice — otherwise the "
+                            "tie-break is not what decided them and the exhibit claims too much")
+
     def test_answer_key_is_unreachable_by_the_rules(self):
         """The asymmetry must be structural: the true premises are written outside the directory the reasoner
         reads, so no rule can reach them however it is written."""

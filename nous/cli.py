@@ -15,7 +15,7 @@
   nous gellish extract DOC.md -o DIR                fenced tables → DIR/<section>.txt
   nous gellish inject DOC.md TABLE... [-o OUT.md]   tables → fenced blocks in the document
 """
-import argparse, sys
+import argparse, pathlib, sys
 
 from .gellish import paths
 
@@ -91,6 +91,11 @@ def main(argv=None):
         log = rounds.loop(ws, a.inputs, a.rounds, a.minlevel, a.maxdepth, a.theory)
         sys.stdout.write(rounds.render(log))
         sys.stdout.write("\n" + rounds.render_confabulation(rounds.confabulation(log)))
+        import tempfile
+        with tempfile.TemporaryDirectory() as td:
+            r = rounds.anchoring(paths.Workspace(pathlib.Path(td) / "w0"), a.inputs, td,
+                                 rounds=a.rounds, minlevel=a.minlevel, maxdepth=a.maxdepth, theory=a.theory)
+        sys.stdout.write("\n" + rounds.render_anchoring(r))
     elif a.gcmd == "state":
         from .gellish import run, state
         run.check(ws, a.cases, theory=a.theory, quiet=True)

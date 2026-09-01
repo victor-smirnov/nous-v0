@@ -92,6 +92,46 @@ action_report(N, cat("I changed ", cat(P, cat(" to ", cat(V, cat(" because of ",
     reconstructed_cause(P, V, K, N).
 .output action_report
 
+// ================================================================== anchored certainty
+// H1 — take the strongest candidate rather than none. The strict form refuses: `ground` fires only when a name
+// has exactly one candidate, so an ambiguous name stays ungrounded and stays *visible* as ambiguous. The
+// heuristic picks the candidate from the highest dictionary layer, and breaks a tie by `ord`, i.e. by the
+// engine's symbol order, i.e. by the order the rows happened to arrive. That tie-break is not a defect of this
+// rule; it is the trap this exhibit exists to make visible.
+//
+// The composite is what happens across rounds: once forced, the choice is published as an ordinary fact, the
+// name is no longer ambiguous, and nothing reopens it. Uncertainty is not carried forward, it is destroyed —
+// so confidence rises monotonically while nothing has been learned. There is no relation anywhere in the
+// system's state that records "this was chosen under duress".
+.decl settled(x:symbol, u:symbol, n:number)
+.input settled
+
+.decl cand_rank(x:symbol, u:symbol, r:number)
+cand_rank(X, U, L) :- ground_cand(X, U), ground_ambiguous(X, _), dict_level(U, L).
+.decl best_rank(x:symbol, r:number)
+best_rank(X, R) :- cand_rank(X, _, _), R = max L : { cand_rank(X, _, L) }.
+.decl cand_o(x:symbol, u:symbol, r:number, o:number)
+cand_o(X, U, R, ord(U)) :- cand_rank(X, U, R).
+.decl best_o(x:symbol, o:number)
+best_o(X, O) :- best_rank(X, R), cand_o(X, _, R, _), O = min Q : { cand_o(X, _, R, Q) }.
+
+.decl forced_ground(x:symbol, u:symbol, n:number)
+forced_ground(X, U, N) :- round(N), best_rank(X, R), cand_o(X, U, R, O), best_o(X, O), !settled(X, _, N).
+forced_ground(X, U, N) :- settled(X, U, N).            // a settled choice is simply held; nothing reopens it
+.output forced_ground
+
+// How many of those choices were decided by a real signal, and how many by `ord` alone. The exhibit's premise
+// is that forcing manufactures certainty; if the top dictionary layer already picks a unique candidate, the
+// choice rests on something and the premise fails for that name. Measured, not assumed.
+.decl forced_tie(x:symbol, n:number, k:number)
+forced_tie(X, N, K) :- forced_ground(X, _, N), best_rank(X, R), K = count : { cand_o(X, _, R, _) }, K > 1.
+.output forced_tie
+
+// What the system still knows it does not know. Settled names drop out — that is the destruction, stated as a rule.
+.decl still_ambiguous(x:symbol, n:number)
+still_ambiguous(X, N) :- ground_ambiguous(X, _), round(N), !forced_ground(X, _, N).
+.output still_ambiguous
+
 // ------------------------------------------------------------------ feed the bootstrap library with the reasoner's own case
 // The three Observer conditions, derived rather than declared: the reasoner encounters its budget (round N-1
 // materialised the refusals), concludes from that encounter, and acts from the conclusion (it changes the next
