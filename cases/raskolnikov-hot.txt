@@ -1,0 +1,50 @@
+# heading: Raskolnikov — the higher-order layer over the low-level case
+# Run together with raskolnikov.txt, whose facts this file references by their global ids.
+#
+# The low-level case says which states are operative. This says which of them each subject has a higher-order
+# representation of. Both subjects face ONE set of states; the access column of
+# Synthea/docs/functional_decomposition_raskolnikov.md is what is transcribed here, nothing more.
+
+# --- positions: the text lends the batch an order it does not have of itself
+F0001 | raskolnikov:F0010 | occurs at position | the first part | 1 | assertion | poverty
+F0002 | raskolnikov:F0011 | occurs at position | the first part | 2 | assertion | the article
+F0003 | raskolnikov:F0012 | occurs at position | the first part | 3 | assertion | the letter
+F0004 | raskolnikov:F0013 | occurs at position | the first part | 4 | assertion | Marmeladov
+F0005 | raskolnikov:F0014 | occurs at position | the first part | 5 | assertion | the tavern
+F0006 | raskolnikov:F0015 | occurs at position | the first part | 6 | assertion | illness
+F0007 | raskolnikov:F0040 | occurs at position | the first part | 7 | assertion | the proposed murder
+
+# --- Raskolnikov's own higher-order layer
+# Poverty is the one determinant he partly has: he knows he is poor. What he cannot trace is how it deformed
+# his reasoning, and the vocabulary has one relation for the determinant role, so this row grants him the
+# generous reading rather than the convenient one.
+F0010 | Raskolnikov | is aware that | raskolnikov:F0010 | - | assertion | he knows he is poor
+F0011 | Raskolnikov | is aware that | raskolnikov:F0061 | - | assertion | his own conclusion
+F0012 | Raskolnikov | is aware that | raskolnikov:F0062 | - | assertion | "I decided"
+F0013 | Raskolnikov | wonders whether | raskolnikov:F0066 | - | assertion | am I a trembling creature
+F0014 | Raskolnikov | is aware that | raskolnikov:F0020 | - | assertion | his need for moral integrity
+F0015 | Raskolnikov | is aware that | raskolnikov:F0024 | - | assertion | his wish to be extraordinary
+F0016 | Raskolnikov | is aware that | raskolnikov:F0040 | - | assertion | the act itself, which he plans deliberately
+
+# What operates in him with no higher-order representation, per the source's access column.
+F0020 | Raskolnikov | does not notice | raskolnikov:F0011 | - | assertion | the article as a determinant, not as content
+F0021 | Raskolnikov | does not notice | raskolnikov:F0012 | - | assertion | the letter's causal role, vivid as feeling
+F0022 | Raskolnikov | does not notice | raskolnikov:F0013 | - | assertion | Marmeladov as someone else's story
+F0023 | Raskolnikov | does not notice | raskolnikov:F0014 | - | assertion | the tavern taken for coincidence
+F0024 | Raskolnikov | does not notice | raskolnikov:F0015 | - | assertion | illness, almost entirely invisible
+F0025 | Raskolnikov | takes it that | raskolnikov:F0014 | - | assertion | it was fate, not social determination
+
+# --- the reader: the same states, from outside
+F0100 | the reader | is aware that | raskolnikov:F0010 | - | assertion | -
+F0101 | the reader | is aware that | raskolnikov:F0011 | - | assertion | -
+F0102 | the reader | is aware that | raskolnikov:F0012 | - | assertion | -
+F0103 | the reader | is aware that | raskolnikov:F0013 | - | assertion | -
+F0104 | the reader | is aware that | raskolnikov:F0014 | - | assertion | -
+F0105 | the reader | is aware that | raskolnikov:F0015 | - | assertion | -
+F0106 | the reader | is aware that | raskolnikov:F0040 | - | assertion | the act itself
+F0107 | the reader | is aware that | raskolnikov:F0020 | - | assertion | his need for moral integrity
+F0108 | the reader | is aware that | raskolnikov:F0022 | - | assertion | his need for the family's welfare
+F0109 | the reader | is aware that | raskolnikov:F0024 | - | assertion | his wish to be extraordinary
+F0110 | the reader | is aware that | raskolnikov:F0026 | - | assertion | his need for material survival
+F0111 | the reader | is aware that | raskolnikov:F0029 | - | assertion | his need for self-preservation
+F0112 | the reader | is aware that | raskolnikov:F0050 | - | assertion | the letter's cost to him

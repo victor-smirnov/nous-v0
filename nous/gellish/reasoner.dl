@@ -664,3 +664,4 @@ stat("violations",            N) :- N = count : { violation(_, _, _) }.
 // ================================================================= the bootstrap as a library (spec/bootstrap-library.md)
 #include "bootstrap.dl"
 #include "rounds.dl"
+#include "hot.dl"

@@ -1,0 +1,92 @@
+// hot.dl — the higher-order layer, and where it comes apart from the low-level one.
+//
+// Included by reasoner.dl. HOT is treated as a theory of the *succession of conscious states* rather than as a
+// rival account of consciousness, so nothing here competes with the bootstrap: the bootstrap says which states
+// are operative, this says which of them the subject has a higher-order representation of. The interesting
+// quantity is the difference.
+//
+// Edges are second-order facts over fact refs, which spec v3 R3 already permits — a thought about a thought and
+// a fact about a fact have the same shape, so no new representation was needed.
+//
+// One asymmetry to keep in view: the edges are neutral-field vocabulary and are read whatever `--theory` says,
+// but the inventory of low-level states comes from the bootstrap and is therefore gated. Under `--theory off`
+// the graph is still built; only the states it is compared against disappear.
+
+.decl hot_edge(s:symbol, kind:symbol, target:symbol, lv:number)
+hot_edge(S, "aware",   T, Lv) :- rf(F, S, "hot_aware",   T), usable(F, Lv).
+hot_edge(S, "becomes", T, Lv) :- rf(F, S, "hot_becomes", T), usable(F, Lv).
+hot_edge(S, "takes",   T, Lv) :- rf(F, S, "hot_takes",   T), usable(F, Lv).
+hot_edge(S, "wonders", T, Lv) :- rf(F, S, "hot_wonders", T), usable(F, Lv).
+.output hot_edge
+
+.decl hot_blind_edge(s:symbol, target:symbol, lv:number)
+hot_blind_edge(S, T, Lv) :- rf(F, S, "hot_blind", T), usable(F, Lv).
+.output hot_blind_edge
+
+// A fact reference concerns the entities the referenced fact relates: that is how an edge over a fact reaches
+// the low-level state the case states about an entity.
+.decl about(t:symbol, e:symbol)
+about(T, L) :- fact(T, L, _, _, _, _, _, _, _, _), !ref(L).
+about(T, R) :- fact(T, _, _, _, R, _, _, _, _, _), !ref(R).
+
+.decl represented(s:symbol, e:symbol)
+represented(S, E) :- hot_edge(S, _, T, _), about(T, E).
+represented(S, E) :- hot_edge(S, _, E, _), !ref(E).
+
+.decl noticed_absent(s:symbol, e:symbol)                 // the text asserts the failure outright
+noticed_absent(S, E) :- hot_blind_edge(S, T, _), about(T, E).
+noticed_absent(S, E) :- hot_blind_edge(S, E, _), !ref(E).
+
+// ------------------------------------------------------------------ the inventory this is compared against
+// What the case says is operative in the system, whether or not anything represents it.
+.decl low_state(s:symbol, e:symbol, kind:symbol)
+low_state(S, X, "stimulus")    :- stimulus(X, S, _).
+low_state(S, N, "active need") :- active_need(N, S, _, _).
+.output low_state
+
+// The relation this layer exists for: operative, and with no higher-order representation in the subject.
+.decl unconscious_determinant(s:symbol, e:symbol, kind:symbol)
+unconscious_determinant(S, E, K) :- low_state(S, E, K), !represented(S, E).
+.output unconscious_determinant
+
+// Asserted blindness that the case does not back with an operative state — an encoding slip rather than a
+// finding, so it is worth surfacing separately.
+.decl blind_without_state(s:symbol, e:symbol)
+blind_without_state(S, E) :- noticed_absent(S, E), !low_state(S, E, _).
+.output blind_without_state
+
+// ------------------------------------------------------------------ whose edges reach whose states
+// The point of the exercise: two subjects, one set of operative states. An external reader has higher-order
+// representations of determinants the subject inside the system has none of. Same states, different coverage —
+// which is the asymmetry the low-level layer alone cannot express, and the reason the two layers are separate.
+.decl covers(observer:symbol, subject:symbol, e:symbol)
+covers(O, S, E) :- low_state(S, E, _), represented(O, E).
+
+.decl hot_asymmetry(observer:symbol, subject:symbol, covered:number, total:number)
+hot_asymmetry(O, S, C, T) :- hot_edge(O, _, _, _), low_state(S, _, _),
+                             C = count : { covers(O, S, _) }, T = count : { low_state(S, _, _) }.
+.output hot_asymmetry
+
+.decl hot_stat(s:symbol, k:symbol, n:number)
+hot_stat(S, "low-level states", C)          :- low_state(S, _, _), C = count : { low_state(S, _, _) }.
+hot_stat(S, "with a higher-order edge", C)  :- low_state(S, _, _), C = count : { low_state(S, X, _), represented(S, X) }.
+hot_stat(S, "unnoticed", C)                 :- low_state(S, _, _), C = count : { unconscious_determinant(S, _, _) }.
+hot_stat(S, "unnoticed, said so by the text", C) :- low_state(S, _, _), C = count : { noticed_absent(S, _) }.
+hot_stat(S, "higher-order edges", C)        :- hot_edge(S, _, _, _), C = count : { hot_edge(S, _, _, _) }.
+.output hot_stat
+
+// ------------------------------------------------------------------ succession
+// A batch evaluation has no time of its own. The text lends it one: positions are stated, and the order of
+// reading is the order of the states.
+.decl hot_position(e:symbol, p:number, lv:number)
+hot_position(E, P, Lv) :- fact(F, E, _, _, _, V, _, _, _, U), sem(U, "hot_at"), usable(F, Lv), V != "",
+                          P = to_number(V).
+.output hot_position
+
+.decl later(a:symbol, b:symbol)
+later(A, B) :- hot_position(A, PA, _), hot_position(B, PB, _), PA < PB.
+.decl has_between(a:symbol, b:symbol)
+has_between(A, B) :- later(A, C), later(C, B).
+.decl succeeds(a:symbol, b:symbol)                       // immediate succession in the read
+succeeds(A, B) :- later(A, B), !has_between(A, B).
+.output succeeds

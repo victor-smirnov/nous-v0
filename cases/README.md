@@ -28,6 +28,8 @@ structure the demonstration rests on. Controls are part of the evidence, not sca
 | `oedipus.txt` | **pre-registered gap** | the same determinants, before and after they become reachable |
 | `RESULTS-antigone-odysseus.md` | measurement | what was predicted, and the four things that were not |
 | `RESULTS-akaky-oedipus.md` | measurement | including the row that settles the ladder-indexing question from data |
+| `raskolnikov-hot.txt` | **higher-order layer** | run with `raskolnikov.txt`; which states each subject has a higher-order representation of |
+| `RESULTS-hot-raskolnikov.md` | measurement | reader 12/12 against Raskolnikov 5/12, and three blind spots the text does not name |
 
 ## Selection
 
