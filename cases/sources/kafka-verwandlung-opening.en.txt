@@ -1,0 +1,215 @@
+Franz Kafka, Die Verwandlung (1915), opening — English working translation.
+
+Translated for this repository from cases/sources/kafka-verwandlung-opening.txt (Project Gutenberg
+eBook #22367, German original, public domain). The Gutenberg English text (#5200, tr. Wyllie) carries a
+Project Gutenberg licence and is not public domain, so it is not used here.
+
+STATUS. The German is the source of record. This translation is a working aid, and it exists to make a
+step visible that was happening anyway: the encoding in cases/metamorphosis.txt is written in English,
+so a translation was already taking place — silently, inside the encoding, where nobody could inspect
+it. Put here, it can be disputed separately from the encoding it feeds. It is a model's output and
+should be treated as one.
+
+TWO CHOICES WORTH FLAGGING.
+  "ungeheueres Ungeziefer" is rendered "monstrous vermin". Ungeziefer is a word for household pests in
+  general, with an older sense of an animal unfit for sacrifice; it names no species. Kafka instructed
+  his publisher that the creature must not be drawn. "Insect", "beetle" and "cockroach" all decide what
+  the German declines to decide, and the case encoding turns on what Gregor does and does not represent
+  about his own state — so a translation that fixes the species would prejudge the material.
+  "Prokurist" is rendered "chief clerk". He is a senior employee holding formal power of procuration,
+  with authority the family cannot refuse at the door; "manager" loses the legal edge, "clerk" alone
+  loses the rank.
+
+------------------------------------------------------------------------------
+
+When Gregor Samsa woke one morning from troubled dreams, he found himself transformed in his bed into a
+monstrous vermin. He lay on his back, which was hard as armour, and when he lifted his head a little he
+saw his belly, domed and brown and divided into segments by arching ridges, on the summit of which the
+bedspread, ready to slide off altogether, could barely keep its place. His many legs, pitifully thin
+compared with the bulk of the rest of him, flickered helplessly before his eyes.
+
+"What has happened to me?" he thought. It was no dream. His room, a proper room for a human being, only
+a little too small, lay quiet between its four familiar walls. Above the table, on which an unpacked
+sample case of cloth goods was spread out — Samsa was a travelling salesman — hung the picture he had
+lately cut out of an illustrated magazine and put into a pretty gilt frame. It showed a lady got up in a
+fur hat and a fur boa, sitting upright and holding out to the viewer a heavy fur muff into which her
+whole forearm had vanished.
+
+Gregor's eyes turned then to the window, and the dreary weather — one could hear raindrops striking the
+metal of the window ledge — made him quite melancholy. "How would it be if I slept a little longer and
+forgot all this foolishness," he thought; but that was entirely impracticable, for he was used to
+sleeping on his right side, and in his present condition he could not get himself into that position.
+However hard he threw himself onto his right side, he rocked back onto his back every time. He tried it
+a hundred times, shut his eyes so as not to have to see the writhing legs, and gave up only when he
+began to feel in his side a faint, dull ache he had never felt before.
+
+"O God," he thought, "what a punishing profession I have chosen! Day in, day out on the road. The strain
+of business is far greater than in the office at home, and on top of that I am saddled with this plague
+of travelling, the worry about train connections, the irregular bad meals, and human dealings that are
+always changing, never lasting, never growing warm. The devil take it all!" He felt a slight itch high
+on his belly; pushed himself slowly on his back towards the bedpost so as to lift his head more easily;
+found the itching place, which was covered with small white spots he could not make anything of; and
+made to touch the spot with one leg, but drew it back at once, for at the contact cold shivers ran
+through him.
+
+He slid back into his former position. "This getting up early," he thought, "makes an idiot of a man. A
+man must have his sleep. Other travellers live like harem women. When I go back to the inn during the
+morning to write up the orders I have taken, these gentlemen are only just sitting down to breakfast.
+Let me try that with my chief; I should be thrown out on the spot. Though who knows whether that mightn't
+be very good for me. If I did not hold back for my parents' sake, I should have given notice long ago; I
+should have stepped up to the chief and told him what I think from the bottom of my heart. He would have
+fallen off his desk! It is a queer way of doing things, too, to sit up on the desk and talk down from
+that height to the employee, who has moreover to come right up close because the chief is hard of
+hearing. Well, hope is not entirely given up: once I have the money together to pay off my parents' debt
+to him — it should take another five or six years — I shall do the thing without fail. Then the great cut
+will be made. For the present, though, I must get up, because my train leaves at five."
+
+And he looked over at the alarm clock ticking on the chest. "Heavenly Father!" he thought. It was half
+past six, and the hands were going quietly forward; it was even past the half, it was getting on for the
+quarter to. Could the alarm not have rung? One could see from the bed that it had been set correctly for
+four; certainly it had rung. Yes, but was it possible to sleep calmly through that furniture-shaking
+ring? Well, he had not slept calmly, but probably all the more soundly for that. But what should he do
+now? The next train went at seven; to catch it he would have had to hurry insanely, and the sample case
+was not packed, and he himself did not feel at all particularly fresh or agile. And even if he caught
+the train, a thunderstorm from the chief was not to be avoided, for the firm's porter had waited at the
+five o'clock train and had long since reported his failure to appear. He was a creature of the chief's,
+spineless and stupid. What if he reported sick? But that would be extremely awkward and suspicious, for
+in five years of service Gregor had not once been ill. The chief would be sure to come with the
+sick-fund doctor, would reproach the parents for their idle son and cut off every objection by referring
+them to the sick-fund doctor, for whom there exist only perfectly healthy people who are shy of work.
+And would he, in this case, be so very wrong? Gregor in fact felt quite well, apart from a drowsiness
+that was really superfluous after so long a sleep, and he even had a particularly strong appetite.
+
+As he was turning all this over in the greatest haste, without being able to bring himself to leave the
+bed — the alarm clock was just striking a quarter to seven — there came a cautious knock at the door by
+the head of his bed. "Gregor," a voice called — it was his mother's — "it is a quarter to seven. Didn't
+you want to catch your train?" That gentle voice! Gregor took fright when he heard his own voice
+answering: unmistakably his old voice, and yet mixed into it, as if from below, an irrepressible,
+painful squeaking, which left the words their clarity only for the first instant and then so destroyed
+them in the echo that one did not know whether one had heard rightly. Gregor had meant to answer at
+length and explain everything, but in the circumstances confined himself to saying: "Yes, yes, thank
+you, Mother, I am getting up now." Because of the wooden door the change in Gregor's voice was probably
+not noticeable outside, for his mother was satisfied with this explanation and shuffled away. But the
+little exchange had drawn the other members of the family's attention to the fact that Gregor was still
+at home, contrary to expectation, and already his father was knocking at one of the side doors —
+feebly, but with his fist. "Gregor, Gregor," he called, "what is the matter?" And after a little while
+he urged again in a deeper voice: "Gregor! Gregor!" At the other side door his sister lamented softly:
+"Gregor? Aren't you well? Do you need anything?" To both sides Gregor answered: "I am quite ready," and
+took pains, by the most careful enunciation and by inserting long pauses between the single words, to
+take everything striking out of his voice. His father did go back to his breakfast, but his sister
+whispered: "Gregor, open the door, I beg you." But Gregor had no thought of opening; he congratulated
+himself instead on the habit, acquired from travelling, of locking all doors at night even at home.
+
+First he meant to get up quietly and undisturbed, dress, and above all have breakfast, and only then
+consider what to do next; for he was well aware that in bed his thinking would come to no sensible
+conclusion. He remembered having often felt in bed some slight pain, produced perhaps by lying
+awkwardly, which on getting up turned out to be pure imagination, and he was curious to see how today's
+notions would gradually dissolve. That the change in his voice was nothing other than the herald of a
+good chill, an occupational disease of travellers, he did not doubt in the least.
+
+Throwing off the bedspread was quite simple; he needed only to inflate himself a little and it fell of
+its own accord. But after that it became difficult, particularly because he was so uncommonly broad. He
+would have needed arms and hands to raise himself; instead he had only the many little legs, which were
+incessantly in the most various motion and which he could not control besides. If he meant to bend one
+of them, it was the first thing to stretch itself out; and if he at last succeeded in doing with that
+leg what he wanted, all the others meanwhile worked away as if set free, in the highest and most painful
+agitation. "Only don't stay uselessly in bed," Gregor said to himself.
+
+First he wanted to get out of bed with the lower part of his body, but this lower part — which he had
+not yet seen and of which he could form no clear idea — proved too hard to move; it went so slowly; and
+when at last, almost wild, he thrust himself forward with all his gathered strength and without regard,
+he had chosen the direction wrongly, struck hard against the lower bedpost, and the burning pain he felt
+taught him that just this lower part of his body was at present perhaps the most sensitive.
+
+He tried therefore to get the upper part of his body out first, and turned his head cautiously towards
+the edge of the bed. This succeeded easily enough, and in spite of its breadth and weight the mass of
+his body at last followed the turning of his head slowly. But when at last he held his head outside the
+bed in the open air, he grew afraid to go on advancing in this way, for if he finally let himself fall
+like that, it would take an outright miracle for his head not to be injured. And he must not lose
+consciousness now of all times, at any price; he would rather stay in bed.
+
+But when, after the same labour, he lay sighing as before and again saw his little legs fighting one
+another if anything worse than ever, and found no way of bringing calm and order into that
+arbitrariness, he told himself again that he could not possibly stay in bed and that the most sensible
+thing was to sacrifice everything if there were even the smallest hope of freeing himself from the bed
+by it. At the same time, however, he did not forget to remind himself now and then that calm — the
+calmest possible — reflection is far better than desperate resolutions. At such moments he fixed his
+eyes as sharply as he could on the window, but unfortunately there was little confidence or cheer to be
+got from the sight of the morning fog, which veiled even the other side of the narrow street. "Seven
+o'clock already," he said to himself as the alarm clock struck again, "seven o'clock already and still
+such a fog." And for a little while he lay quiet, breathing faintly, as if perhaps expecting from the
+complete stillness the return of real and ordinary conditions.
+
+But then he said to himself: "Before it strikes a quarter past seven I must without fail be completely
+out of bed. Besides, by then someone from the firm will have come to ask after me, for the office opens
+before seven." And he now set about rocking his body, at its whole length and quite evenly, out of the
+bed. If he let himself fall out of the bed in this way, his head, which he meant to lift sharply as he
+fell, would presumably remain uninjured. His back seemed to be hard; nothing would likely happen to it
+in the fall onto the carpet. His greatest misgiving was over the loud crash there would have to be,
+which behind all the doors would probably provoke, if not terror, at least alarm. But it had to be
+risked.
+
+When Gregor was already half out of the bed — the new method was more a game than an exertion, he had
+only to rock in jerks — it occurred to him how simple everything would be if someone came to his help.
+Two strong people — he thought of his father and the maid — would have been entirely enough; they would
+have had only to push their arms under his domed back, peel him out of the bed that way, bend down with
+the load, and then merely wait patiently while he completed the swing over onto the floor, where the
+little legs would, he hoped, acquire some sense. Well, quite apart from the doors being locked, ought he
+really to have called for help? For all his distress, he could not suppress a smile at the thought.
+
+He was already so far along that with a stronger rock he could barely keep his balance, and very soon he
+would have to decide once and for all, for in five minutes it would be a quarter past seven — when the
+doorbell of the flat rang. "That is someone from the firm," he said to himself, and almost froze, while
+his little legs only danced the more hurriedly. For a moment everything stayed quiet. "They are not
+opening," Gregor said to himself, caught up in some senseless hope. But then of course, as always, the
+maid went to the door with her firm step and opened it. Gregor needed only to hear the visitor's first
+word of greeting and he knew already who it was — the chief clerk himself. Why was Gregor alone
+condemned to serve a firm where the slightest lapse at once aroused the gravest suspicion? Were all
+employees without exception scoundrels? Was there among them no loyal, devoted man who, if he had failed
+to use even a couple of morning hours for the firm, went mad with remorse and was simply not in a
+condition to leave his bed? Was it really not enough to send an apprentice to enquire — if this
+enquiring was necessary at all — must the chief clerk come himself, and must the whole innocent family
+be shown thereby that the investigation of this suspicious business could be entrusted only to the chief
+clerk's understanding? And more as a result of the agitation into which these reflections put him than
+of any proper decision, he swung himself with all his might out of the bed. There was a loud thump, but
+not an actual crash. The carpet softened the fall a little, and his back was more elastic than Gregor
+had thought, which accounted for the not very noticeable dull sound. Only he had not held his head
+carefully enough and had knocked it; he turned it and rubbed it on the carpet in vexation and pain.
+
+"Something fell in there," said the chief clerk in the room on the left. Gregor tried to imagine whether
+something similar to what had happened to him today might not one day happen to the chief clerk; one
+really had to admit the possibility. But as if in brutal answer to the question, the chief clerk now
+took a few decided steps in the next room and made his patent-leather boots creak. From the room on the
+right his sister whispered, to let Gregor know: "Gregor, the chief clerk is here." "I know," Gregor said
+to himself; but he did not dare raise his voice loud enough for his sister to hear.
+
+"Gregor," his father now said from the room on the left, "the chief clerk has come and wishes to know
+why you did not leave by the early train. We do not know what to tell him. Besides, he wants to speak to
+you personally. So please open the door. He will be good enough to excuse the untidiness of the room."
+"Good morning, Herr Samsa," the chief clerk called in amiably. "He is not well," said his mother to the
+chief clerk while his father was still talking at the door, "he is not well, believe me, Herr Prokurist.
+How else would Gregor miss a train! The boy has nothing in his head but the business. It almost annoys
+me that he never goes out in the evening; he has been in town a whole week now, and he was at home every
+evening. He sits there with us at the table reading the paper quietly or studying timetables. It is
+quite a diversion for him to do a little fretwork. He carved a small frame, for instance, in the course
+of two or three evenings; you will be amazed how pretty it is; it hangs inside the room; you will see it
+at once when Gregor opens up. I am glad, by the way, that you are here, Herr Prokurist; on our own we
+should never have got Gregor to open the door; he is so stubborn; and he is certainly not well, though
+he denied it this morning." "I am coming at once," said Gregor slowly and deliberately, and did not
+stir, so as not to miss a word of the conversation. "I cannot explain it to myself any other way,
+madam," said the chief clerk; "I hope it is nothing serious. Though on the other hand I must say that we
+businessmen — luckily or unluckily, as you please — very often simply have to overcome a slight
+indisposition out of regard for business." "So can the chief clerk come in to you now?" asked his
+impatient father, knocking at the door again. "No," said Gregor. In the room on the left an awkward
+silence fell; in the room on the right his sister began to sob.
+
+Why did his sister not go to the others? She had probably only just got out of bed and had not yet begun
+to dress. And why was she crying? Because he was not getting up and not letting the chief clerk in,
+because he was in danger of losing his post, and because the chief would then pursue his parents again
+with the old claims? Those were surely, for the time being, needless worries. Gregor was still here and
+had not the slightest thought of abandoning his family. At the moment he was lying there on the carpet,
+to be sure, and no one who knew his condition would have seriously demanded that he let the chief clerk
+in. But for this small discourtesy, for which a suitable excuse could easily be found later, Gregor
+could hardly be dismissed on the spot. And it seemed to Gregor that it would be far more sensible to
+leave him in peace now than to disturb him with weeping and entreaty. But it was just the uncertainty
+that pressed upon the others and excused their behaviour.

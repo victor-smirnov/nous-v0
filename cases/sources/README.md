@@ -6,6 +6,7 @@ each file's header.
 | file | work | edition | words |
 |---|---|---|---:|
 | `kafka-verwandlung-opening.txt` | Die Verwandlung, opening | PG #22367, German original (1915) | 2,936 |
+| `kafka-verwandlung-opening.en.txt` | the same, English | **translated for this repository** | 3,244 |
 | `dostoevsky-crime-part-one.txt` | Crime and Punishment, Part I | PG #2554, tr. Constance Garnett (1914) | 35,349 |
 | `sophocles-antigone.txt` | Antigone | PG #31, tr. Francis Storr (1912) | 10,306 |
 | `sophocles-oedipus-the-king.txt` | Oedipus the King | PG #31, tr. Francis Storr (1912) | 12,558 |
@@ -15,6 +16,15 @@ each file's header.
 Kafka is here in the German original rather than in English because the Gutenberg translation (#5200, Wyllie)
 carries a Project Gutenberg licence and is not public domain. The original is, and it is also what the encoding
 should answer to.
+
+The English beside it was translated for this repository. Its point is not convenience: the encoding in
+`cases/metamorphosis.txt` is written in English, so a translation was happening anyway — silently, inside the
+encoding, where nobody could inspect it. Written out, it becomes a step that can be disputed separately from the
+encoding it feeds, and it is labelled as what it is, a model's output. Two decisions are flagged in its header
+because the case turns on them: `Ungeziefer` is left unspecific ("monstrous vermin"), since "insect" or "beetle"
+would decide what the German declines to decide and the encoding is about what Gregor does and does not
+represent of his own state; and `Prokurist` is "chief clerk", keeping the rank and the authority the family
+cannot refuse at the door.
 
 ## Why this directory exists
 
