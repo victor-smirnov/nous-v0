@@ -1,0 +1,32 @@
+# ledger, step 1
+# chunk: "He woke and found that his right arm would not move." (11 words)
+# prior Field: empty. memory: empty.
+#
+# candidates
+# item                        | source                          | cost (words) | C
+# the sleeper                 | sensory ("He")                  | 1            | 0.10 (floor)
+# waking                      | sensory ("He woke")             | 2            | 0.10 (floor)
+# a limb that will not move   | sensory ("his right arm would not move") | 6   | 0.63 (|-0.7| x 0.9)
+# associative: no cue in the table fires on any sensory candidate; memory empty; nothing added.
+#
+# fill, budget B = 12
+# 0.63 a limb that will not move  6  -> running 6
+# 0.10 the sleeper                1  -> running 7   (tie with waking; earlier-mentioned)
+# 0.10 waking                     2  -> running 9
+# all admitted, 3 words unused; no evictions.
+#
+# tail: the only operative cost signal is the limb's, and it is in the Field; tail empty.
+# memory: three Field items written at C; nothing to decay.
+# new paths: the chunk installs no cost relation the profile lacked.
+
+# state after step 1
+F0001 | a limb that will not move | is in the field of | R | 0.63 | assertion | sensory
+F0002 | the sleeper | is in the field of | R | 0.10 | assertion | sensory
+F0003 | waking | is in the field of | R | 0.10 | assertion | sensory
+F0020 | R | has tail statistic | intensity | 0 | assertion | -
+F0021 | R | has tail statistic | valence | 0 | assertion | -
+F0022 | R | has tail statistic | count | 0 | assertion | -
+F0023 | R | has tail statistic | spread | 0 | assertion | empty tail
+F0030 | a limb that will not move | is in memory of | R | 0.63 | assertion | -
+F0031 | the sleeper | is in memory of | R | 0.10 | assertion | -
+F0032 | waking | is in memory of | R | 0.10 | assertion | -

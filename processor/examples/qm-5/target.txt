@@ -1,0 +1,35 @@
+# heading: qm-5 — the target state: superposition and measurement, for a reader of five
+# What must end up in memory, in what order it may be named, and what must never be named but must be felt.
+
+# --- the concepts that must reach memory, and the C each must reach
+F0001 | tiny things | must reach | 0.3 | - | assertion | particles: things too small to see
+F0002 | looking at it | must reach | 0.3 | - | assertion | measurement, at the level of the act
+F0003 | both at once until you look | must reach | 0.3 | - | assertion | superposition, as a child can hold it
+F0004 | you cannot know which until you look | must reach | 0.3 | - | assertion | irreducible chance
+F0005 | looking changes it | must reach | 0.3 | - | assertion | disturbance by measurement
+F0006 | the pattern from many tries | must reach | 0.3 | - | assertion | probability as what repetition shows
+
+# --- prerequisites: a concept may be named only when these are in the Field or in memory at C >= k
+F0010 | both at once until you look | requires | tiny things | - | assertion | -
+F0011 | both at once until you look | requires | looking at it | - | assertion | -
+F0012 | you cannot know which until you look | requires | both at once until you look | - | assertion | -
+F0013 | looking changes it | requires | looking at it | - | assertion | -
+F0014 | looking changes it | requires | both at once until you look | - | assertion | -
+F0015 | the pattern from many tries | requires | you cannot know which until you look | - | assertion | -
+
+# --- what must never be named for this reader: the formalism
+F0020 | wavefunction | must not be named | - | - | assertion | -
+F0021 | probability amplitude | must not be named | - | - | assertion | -
+F0022 | Hilbert space | must not be named | - | - | assertion | -
+F0023 | operator | must not be named | - | - | assertion | -
+F0024 | collapse | must not be named | - | - | assertion | the word, not the idea
+
+# --- and what must nevertheless be felt: mass induced through proxies, without a name
+F0030 | wavefunction | is induced by | both at once until you look | 0.6 | assertion | -
+F0031 | wavefunction | is induced by | a spinning coin | 0.3 | assertion | the analogy carries part of it
+F0032 | probability amplitude | is induced by | the pattern from many tries | 0.5 | assertion | -
+F0033 | probability amplitude | is induced by | you cannot know which until you look | 0.3 | assertion | -
+F0034 | collapse | is induced by | looking changes it | 0.7 | assertion | -
+F0040 | wavefunction | must feel | 0.2 | - | assertion | induced mass the final memory must carry
+F0041 | probability amplitude | must feel | 0.2 | - | assertion | -
+F0042 | collapse | must feel | 0.2 | - | assertion | -

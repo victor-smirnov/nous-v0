@@ -1,0 +1,11 @@
+PASS  reach tiny things: 0.36 (needs 0.3)
+PASS  reach looking at it: 0.36 (needs 0.3)
+PASS  reach both at once until you look: 0.36 (needs 0.3)
+PASS  reach you cannot know which until you look: 0.36 (needs 0.3)
+PASS  reach looking changes it: 0.36 (needs 0.3)
+PASS  reach the pattern from many tries: 0.36 (needs 0.3)
+PASS  feel wavefunction: 0.22 (needs 0.2)
+PASS  feel probability amplitude: 0.29 (needs 0.2)
+PASS  feel collapse: 0.25 (needs 0.2)
+PASS  never named: clean
+PASS  in order: clean

@@ -1,0 +1,11 @@
+PASS  reach tiny things: 0.36 (needs 0.3)
+FAIL  reach looking at it: 0.20 (needs 0.3)
+PASS  reach both at once until you look: 0.36 (needs 0.3)
+FAIL  reach you cannot know which until you look: 0.00 (needs 0.3)
+FAIL  reach looking changes it: 0.00 (needs 0.3)
+FAIL  reach the pattern from many tries: 0.25 (needs 0.3)
+FAIL  feel wavefunction: 0.22 (needs 0.3)
+FAIL  feel probability amplitude: 0.13 (needs 0.2)
+FAIL  feel collapse: 0.00 (needs 0.3)
+PASS  never named: clean
+PASS  in order: clean

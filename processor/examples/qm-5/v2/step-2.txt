@@ -1,0 +1,23 @@
+# state after step 2   (field 17 words)
+F0001 | tiny things | is in the field of | child | 0.36 | assertion | sensory; cost 2
+F0002 | both at once until you look | is in the field of | child | 0.36 | assertion | sensory; cost 6
+F0003 | looking at it | is in the field of | child | 0.22 | assertion | carried; cost 7
+F0004 | heads or tails | is in the field of | child | 0.20 | assertion | sensory; cost 2
+F0005 | child | has tail statistic | intensity | 0.18 | assertion | -
+F0006 | child | has tail statistic | valence | 0.18 | assertion | -
+F0007 | child | has tail statistic | count | 1.00 | assertion | -
+F0008 | child | has tail statistic | spread | 0.00 | assertion | -
+F0009 | tiny things | is in memory of | child | 0.36 | assertion | cost 2
+F0010 | both at once until you look | is in memory of | child | 0.36 | assertion | cost 6
+F0011 | looking at it | is in memory of | child | 0.22 | assertion | cost 7
+F0012 | heads or tails | is in memory of | child | 0.20 | assertion | cost 2
+
+# trace — the analyst's view, not the reader's
+#   evicted a spinning coin (0.18): below k
+#   evicted ants (0.16): below k
+#   evicted you cannot tell yet (0.14): below k
+#   understood: tiny things
+#   understood: both at once until you look
+#   felt wavefunction: 0.22
+#   felt probability amplitude: 0.00
+#   felt collapse: 0.00

@@ -1,0 +1,21 @@
+# state after step 2   (field 16 words)
+F0001 | hide and seek | is in the field of | child | 0.30 | assertion | sensory; cost 3
+F0002 | tiny things | is in the field of | child | 0.29 | assertion | carried; cost 6
+F0003 | looking at it | is in the field of | child | 0.27 | assertion | sensory; cost 7
+F0004 | child | has tail statistic | intensity | 0.30 | assertion | -
+F0005 | child | has tail statistic | valence | 0.30 | assertion | -
+F0006 | child | has tail statistic | count | 1.00 | assertion | -
+F0007 | child | has tail statistic | spread | 0.00 | assertion | -
+F0008 | hide and seek | is in memory of | child | 0.30 | assertion | cost 3
+F0009 | tiny things | is in memory of | child | 0.29 | assertion | cost 6
+F0010 | looking at it | is in memory of | child | 0.27 | assertion | cost 7
+F0011 | a game | is in memory of | child | 0.21 | assertion | cost 4
+F0012 | looking at it | has satisfaction delta | understanding | 0.3 | assertion | established by the chunk
+
+# trace — the analyst's view, not the reader's
+#   evicted a game (0.24): displaced by looking at it
+#   evicted peeking (0.20): displaced by looking at it
+#   evicted ants (0.16): below k
+#   felt wavefunction: 0.00
+#   felt probability amplitude: 0.00
+#   felt collapse: 0.00

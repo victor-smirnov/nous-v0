@@ -1,0 +1,39 @@
+# heading: qm-5 — a reader of five
+# A small Field, a high threshold, a bucket full of games and objects, and three needs.
+
+# --- parameters
+F0001 | child | has parameter | budget | 18 | assertion | words the Field holds; a short sentence and a bit
+F0002 | child | has parameter | k | 0.2 | assertion | -
+F0003 | child | has parameter | persistence | 0.8 | assertion | -
+F0004 | child | has parameter | decay | 0.7 | assertion | memory holds for a few steps, not many
+F0005 | child | has parameter | floor | 0.2 | assertion | a named thing sits at k; the budget decides
+F0006 | child | has parameter | default cost | 2 | assertion | -
+F0007 | child | has parameter | confusion | 0.5 | assertion | delta to understanding when a concept is named with a prerequisite missing, per missing one
+F0008 | child | has parameter | comprehension | 0.4 | assertion | delta to understanding a concept gains once named on its ground; what makes it stick
+
+# --- needs
+F0010 | understanding | is a need of | child | 0.9 | assertion | not being lost
+F0011 | understanding | is active in | child | - | assertion | -
+F0012 | fun | is a need of | child | 0.6 | assertion | -
+F0013 | fun | is active in | child | - | assertion | -
+F0014 | safety | is a need of | child | 0.7 | assertion | not being scared
+F0015 | safety | is active in | child | - | assertion | -
+
+# --- what the child already knows things cost
+F0020 | something scary | has satisfaction delta | safety | -0.6 | assertion | -
+F0021 | a game | has satisfaction delta | fun | 0.5 | assertion | -
+F0022 | a long boring bit | has satisfaction delta | fun | -0.4 | assertion | -
+F0023 | a spinning coin | has satisfaction delta | fun | 0.3 | assertion | -
+F0024 | hide and seek | has satisfaction delta | fun | 0.5 | assertion | -
+
+# --- the bucket
+F0030 | a coin | is associated with | heads or tails | 0.8 | assertion | -
+F0031 | a spinning coin | is associated with | you cannot tell yet | 0.7 | assertion | -
+F0032 | a spinning coin | is associated with | heads or tails | 0.6 | assertion | -
+F0033 | peeking | is associated with | hide and seek | 0.6 | assertion | -
+F0034 | hide and seek | is associated with | a game | 0.7 | assertion | -
+F0035 | the dark | is associated with | something scary | 0.6 | assertion | -
+F0036 | a ball | is associated with | throwing | 0.5 | assertion | -
+F0037 | a box | is associated with | a present | 0.5 | assertion | -
+F0038 | a present | is associated with | a game | 0.4 | assertion | -
+F0039 | tiny things | is associated with | ants | 0.5 | assertion | -

@@ -1,0 +1,27 @@
+# state after step 4   (field 13 words)
+F0001 | looking at it | is in the field of | child | 0.36 | assertion | sensory; cost 1
+F0002 | looking changes it | is in the field of | child | 0.36 | assertion | sensory; cost 7
+F0003 | both at once until you look | is in the field of | child | 0.36 | assertion | sensory; cost 5
+F0004 | child | has tail statistic | intensity | 0.00 | assertion | -
+F0005 | child | has tail statistic | valence | 0.00 | assertion | -
+F0006 | child | has tail statistic | count | 0.00 | assertion | -
+F0007 | child | has tail statistic | spread | 0.00 | assertion | -
+F0008 | looking at it | is in memory of | child | 0.36 | assertion | cost 1
+F0009 | looking changes it | is in memory of | child | 0.36 | assertion | cost 7
+F0010 | both at once until you look | is in memory of | child | 0.36 | assertion | cost 5
+F0011 | you cannot know which until you look | is in memory of | child | 0.25 | assertion | cost 7
+F0012 | tiny things | is in memory of | child | 0.20 | assertion | cost 2
+
+# trace — the analyst's view, not the reader's
+#   evicted you cannot know which until you look (0.29): displaced by both at once until you look
+#   evicted tiny things (0.23): displaced by both at once until you look
+#   evicted peeking (0.20): displaced by both at once until you look
+#   evicted heads or tails (0.20): displaced by both at once until you look
+#   evicted hide and seek (0.18): below k
+#   evicted ants (0.10): below k
+#   understood: looking at it
+#   understood: looking changes it
+#   understood: both at once until you look
+#   felt wavefunction: 0.22
+#   felt probability amplitude: 0.08
+#   felt collapse: 0.25

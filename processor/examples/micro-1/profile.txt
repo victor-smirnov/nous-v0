@@ -1,0 +1,29 @@
+# heading: micro-1 — a reader profile
+# One reader, three needs, a small association table, and the parameters of the Field.
+
+# --- parameters
+F0001 | R | has parameter | budget | 12 | assertion | words the Field can hold
+F0002 | R | has parameter | k | 0.2 | assertion | below this an item has no name
+F0003 | R | has parameter | persistence | 0.8 | assertion | C kept by an item carried over in the Field
+F0004 | R | has parameter | decay | 0.6 | assertion | C kept per step by an item in memory but not in the Field
+F0005 | R | has parameter | floor | 0.2 | assertion | C of a named entity with no cost signal; at k, so it can be named but only the budget decides
+F0006 | R | has parameter | default cost | 2 | assertion | words an associative item costs if never priced
+
+# --- needs
+F0010 | self-preservation | is a need of | R | 0.9 | assertion | -
+F0011 | self-preservation | is active in | R | - | assertion | -
+F0012 | standing at work | is a need of | R | 0.8 | assertion | -
+F0013 | standing at work | is active in | R | - | assertion | -
+F0014 | bodily comfort | is a need of | R | 0.4 | assertion | -
+F0015 | bodily comfort | is active in | R | - | assertion | -
+
+# --- what the reader already knows things cost
+F0020 | a limb that will not move | has satisfaction delta | self-preservation | -0.7 | assertion | -
+F0021 | being late | has satisfaction delta | standing at work | -0.6 | assertion | -
+F0022 | the boss | has satisfaction delta | standing at work | -0.5 | assertion | -
+F0023 | rain | has satisfaction delta | bodily comfort | -0.2 | assertion | -
+
+# --- the bucket
+F0030 | the alarm clock | is associated with | being late | 0.8 | assertion | -
+F0031 | being late | is associated with | the boss | 0.7 | assertion | -
+F0032 | rain | is associated with | staying in bed | 0.5 | assertion | -

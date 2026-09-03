@@ -1,0 +1,22 @@
+# state after step 5   (field 15 words)
+F0001 | you cannot know which until you look | is in the field of | child | 0.36 | assertion | sensory; cost 7
+F0002 | looking at it | is in the field of | child | 0.29 | assertion | carried; cost 1
+F0003 | looking changes it | is in the field of | child | 0.29 | assertion | carried; cost 7
+F0004 | child | has tail statistic | intensity | 0.18 | assertion | -
+F0005 | child | has tail statistic | valence | 0.18 | assertion | -
+F0006 | child | has tail statistic | count | 1.00 | assertion | -
+F0007 | child | has tail statistic | spread | 0.00 | assertion | -
+F0008 | you cannot know which until you look | is in memory of | child | 0.36 | assertion | cost 7
+F0009 | looking at it | is in memory of | child | 0.29 | assertion | cost 1
+F0010 | looking changes it | is in memory of | child | 0.29 | assertion | cost 7
+F0011 | both at once until you look | is in memory of | child | 0.25 | assertion | cost 5
+
+# trace — the analyst's view, not the reader's
+#   evicted both at once until you look (0.29): displaced by looking changes it
+#   evicted a spinning coin (0.18): below k
+#   evicted you cannot tell yet (0.14): below k
+#   evicted heads or tails (0.12): below k
+#   understood: you cannot know which until you look
+#   felt wavefunction: 0.15
+#   felt probability amplitude: 0.11
+#   felt collapse: 0.20

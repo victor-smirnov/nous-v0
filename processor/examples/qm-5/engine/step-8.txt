@@ -1,0 +1,29 @@
+# state after step 8   (field 17 words)
+F0001 | tiny things | is in the field of | child | 0.36 | assertion | sensory; cost 2
+F0002 | both at once until you look | is in the field of | child | 0.36 | assertion | sensory; cost 3
+F0003 | looking at it | is in the field of | child | 0.36 | assertion | sensory; cost 3
+F0004 | looking changes it | is in the field of | child | 0.36 | assertion | sensory; cost 3
+F0005 | you cannot know which until you look | is in the field of | child | 0.36 | assertion | sensory; cost 3
+F0006 | the pattern from many tries | is in the field of | child | 0.36 | assertion | sensory; cost 3
+F0007 | child | has tail statistic | intensity | 0.00 | assertion | -
+F0008 | child | has tail statistic | valence | 0.00 | assertion | -
+F0009 | child | has tail statistic | count | 0.00 | assertion | -
+F0010 | child | has tail statistic | spread | 0.00 | assertion | -
+F0011 | tiny things | is in memory of | child | 0.36 | assertion | cost 2
+F0012 | both at once until you look | is in memory of | child | 0.36 | assertion | cost 3
+F0013 | looking at it | is in memory of | child | 0.36 | assertion | cost 3
+F0014 | looking changes it | is in memory of | child | 0.36 | assertion | cost 3
+F0015 | you cannot know which until you look | is in memory of | child | 0.36 | assertion | cost 3
+F0016 | the pattern from many tries | is in memory of | child | 0.36 | assertion | cost 3
+
+# trace — the analyst's view, not the reader's
+#   evicted ants (0.10): below k
+#   understood: tiny things
+#   understood: both at once until you look
+#   understood: looking at it
+#   understood: looking changes it
+#   understood: you cannot know which until you look
+#   understood: the pattern from many tries
+#   felt wavefunction: 0.22
+#   felt probability amplitude: 0.29
+#   felt collapse: 0.25

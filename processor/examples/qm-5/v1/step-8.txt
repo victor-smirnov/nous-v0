@@ -1,0 +1,26 @@
+# state after step 8   (field 11 words)
+F0001 | tiny things | is in the field of | child | 0.36 | assertion | sensory; cost 2
+F0002 | both at once until you look | is in the field of | child | 0.36 | assertion | sensory; cost 6
+F0003 | a game | is in the field of | child | 0.30 | assertion | sensory; cost 3
+F0004 | child | has tail statistic | intensity | 0.18 | assertion | -
+F0005 | child | has tail statistic | valence | 0.18 | assertion | -
+F0006 | child | has tail statistic | count | 1.00 | assertion | -
+F0007 | child | has tail statistic | spread | 0.00 | assertion | -
+F0008 | tiny things | is in memory of | child | 0.36 | assertion | cost 2
+F0009 | both at once until you look | is in memory of | child | 0.36 | assertion | cost 6
+F0010 | a game | is in memory of | child | 0.30 | assertion | cost 3
+F0011 | the pattern from many tries | is in memory of | child | 0.25 | assertion | cost 11
+F0012 | looking at it | is in memory of | child | 0.20 | assertion | cost 2
+
+# trace — the analyst's view, not the reader's
+#   evicted the pattern from many tries (0.29): displaced by a game
+#   evicted looking at it (0.23): displaced by a game
+#   evicted a spinning coin (0.18): below k
+#   evicted you cannot tell yet (0.14): below k
+#   evicted heads or tails (0.12): below k
+#   evicted ants (0.10): below k
+#   understood: tiny things
+#   understood: both at once until you look
+#   felt wavefunction: 0.22
+#   felt probability amplitude: 0.13
+#   felt collapse: 0.00

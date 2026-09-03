@@ -1,0 +1,17 @@
+# state after step 2   (field 11 words)
+F0001 | a limb that will not move | is in the field of | R | 0.50 | assertion | carried; cost 6
+F0002 | being late | is in the field of | R | 0.38 | assertion | associative via the alarm clock; cost 2
+F0003 | the alarm clock | is in the field of | R | 0.20 | assertion | sensory; cost 3
+F0004 | R | has tail statistic | intensity | 0.00 | assertion | -
+F0005 | R | has tail statistic | valence | 0.00 | assertion | -
+F0006 | R | has tail statistic | count | 0.00 | assertion | -
+F0007 | R | has tail statistic | spread | 0.00 | assertion | -
+F0008 | a limb that will not move | is in memory of | R | 0.50 | assertion | cost 6
+F0009 | being late | is in memory of | R | 0.38 | assertion | cost 2
+F0010 | the alarm clock | is in memory of | R | 0.20 | assertion | cost 3
+
+# trace — the analyst's view, not the reader's
+#   evicted the chair (0.20): displaced by the alarm clock
+#   evicted a quarter to seven (0.20): displaced by the alarm clock
+#   evicted the sleeper (0.16): below k
+#   evicted waking (0.16): below k

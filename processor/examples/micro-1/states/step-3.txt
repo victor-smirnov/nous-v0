@@ -1,0 +1,47 @@
+# ledger, step 3
+# chunk: "Outside, it was raining against the window." (7 words)
+# prior Field: a limb that will not move 0.50, being late 0.38, the alarm clock 0.10. memory: the same three.
+#
+# candidates
+# item                        | source                                   | cost (words) | C
+# a limb that will not move   | carried over from prior Field            | 6            | 0.40 (0.50 x 0.8)
+# being late                  | carried over (0.38 x 0.8 = 0.30), re-cued by the alarm clock in the prior Field (0.8): higher taken | 2 | 0.38 (|-0.6| x 0.8 x 0.8)
+# the boss                    | associative via being late (0.7)         | 2 (default)  | 0.28 (|-0.5| x 0.8 x 0.7)
+# outside                     | sensory ("Outside")                      | 1            | 0.10 (floor)
+# the window                  | sensory ("the window")                   | 2            | 0.10 (floor)
+# rain                        | sensory ("it was raining")               | 3            | 0.08 (|-0.2| x 0.4)
+# the alarm clock             | carried over from prior Field            | 3            | 0.08 (0.10 x 0.8)
+# staying in bed              | associative via rain (0.5)               | 2 (default)  | 0.05 (floor 0.10 x 0.5)
+# associative: being late (prior Field) cues the boss; rain (sensory) cues staying in bed; the alarm clock (prior Field) cues being late.
+# the boss -> nothing further; staying in bed has no entry. one hop each.
+#
+# fill, budget B = 12
+# 0.40 a limb that will not move  6  -> running 6
+# 0.38 being late                 2  -> running 8
+# 0.28 the boss                   2  -> running 10
+# 0.10 outside                    1  -> running 11  (tie at 0.10: both sensory, "Outside" mentioned first)
+# 0.10 the window                 2  -> 13 > 12: evicted, and everything after it
+#      evicted: the window, rain, the alarm clock, staying in bed (displaced by outside)
+#
+# tail: operative cost signals are the limb's, being late's, the boss's (stimuli in the Field) and rain's (stimulus in the chunk).
+# only rain's is outside the Field: intensity 0.08, valence -0.08, count 1, spread 1 - 1^2 = 0.
+# memory: four Field items written at C; the alarm clock decays 0.10 x 0.6 = 0.06 < k, dropped.
+# new paths: the chunk installs no cost relation the profile lacked.
+
+# state after step 3
+F0001 | a limb that will not move | is in the field of | R | 0.40 | assertion | sensory
+F0002 | being late | is in the field of | R | 0.38 | assertion | associative via the alarm clock
+F0003 | the boss | is in the field of | R | 0.28 | assertion | associative via being late
+F0004 | outside | is in the field of | R | 0.10 | assertion | sensory
+F0010 | the window | was evicted from the field of | R | 0.10 | assertion | displaced by outside
+F0011 | rain | was evicted from the field of | R | 0.08 | assertion | displaced by outside
+F0012 | the alarm clock | was evicted from the field of | R | 0.08 | assertion | displaced by outside
+F0013 | staying in bed | was evicted from the field of | R | 0.05 | assertion | displaced by outside
+F0020 | R | has tail statistic | intensity | 0.08 | assertion | -
+F0021 | R | has tail statistic | valence | -0.08 | assertion | -
+F0022 | R | has tail statistic | count | 1 | assertion | unnamed: bodily comfort cost, stimulus in the chunk but not in the Field
+F0023 | R | has tail statistic | spread | 0 | assertion | single member
+F0030 | a limb that will not move | is in memory of | R | 0.40 | assertion | -
+F0031 | being late | is in memory of | R | 0.38 | assertion | -
+F0032 | the boss | is in memory of | R | 0.28 | assertion | -
+F0033 | outside | is in memory of | R | 0.10 | assertion | -

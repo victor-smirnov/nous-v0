@@ -1,0 +1,42 @@
+# ledger, step 2
+# chunk: "The alarm clock on the chair showed a quarter to seven." (11 words)
+# prior Field: a limb that will not move 0.63, the sleeper 0.10, waking 0.10. memory: the same three.
+#
+# candidates
+# item                        | source                                   | cost (words) | C
+# a limb that will not move   | carried over from prior Field            | 6            | 0.50 (0.63 x 0.8)
+# being late                  | associative via the alarm clock (0.8)    | 2 (default)  | 0.38 (|-0.6| x 0.8 x 0.8)
+# the alarm clock             | sensory ("The alarm clock")              | 3            | 0.10 (floor)
+# the chair                   | sensory ("the chair")                    | 2            | 0.10 (floor)
+# a quarter to seven          | sensory ("showed a quarter to seven")    | 5            | 0.10 (floor)
+# the sleeper                 | carried over from prior Field            | 1            | 0.08 (0.10 x 0.8)
+# waking                      | carried over from prior Field            | 2            | 0.08 (0.10 x 0.8)
+# associative: the alarm clock cues being late; being late -> the boss is a second hop, not taken this step.
+# no prior-Field or memory item has an entry in the table.
+#
+# fill, budget B = 12
+# 0.50 a limb that will not move  6  -> running 6
+# 0.38 being late                 2  -> running 8
+# 0.10 the alarm clock            3  -> running 11  (tie at 0.10: sensory, earliest-mentioned)
+# 0.10 the chair                  2  -> 13 > 12: evicted, and everything after it
+#      evicted: the chair, a quarter to seven, the sleeper, waking (displaced by the alarm clock)
+#
+# tail: operative cost signals are the limb's and being late's; both stimuli are in the Field. tail empty.
+# memory: three Field items written at C; the sleeper and waking decay 0.10 x 0.6 = 0.06 < k, dropped.
+# new paths: the chunk installs no cost relation the profile lacked.
+
+# state after step 2
+F0001 | a limb that will not move | is in the field of | R | 0.50 | assertion | sensory
+F0002 | being late | is in the field of | R | 0.38 | assertion | associative via the alarm clock
+F0003 | the alarm clock | is in the field of | R | 0.10 | assertion | sensory
+F0010 | the chair | was evicted from the field of | R | 0.10 | assertion | displaced by the alarm clock
+F0011 | a quarter to seven | was evicted from the field of | R | 0.10 | assertion | displaced by the alarm clock
+F0012 | the sleeper | was evicted from the field of | R | 0.08 | assertion | displaced by the alarm clock
+F0013 | waking | was evicted from the field of | R | 0.08 | assertion | displaced by the alarm clock
+F0020 | R | has tail statistic | intensity | 0 | assertion | -
+F0021 | R | has tail statistic | valence | 0 | assertion | -
+F0022 | R | has tail statistic | count | 0 | assertion | -
+F0023 | R | has tail statistic | spread | 0 | assertion | empty tail
+F0030 | a limb that will not move | is in memory of | R | 0.50 | assertion | -
+F0031 | being late | is in memory of | R | 0.38 | assertion | -
+F0032 | the alarm clock | is in memory of | R | 0.10 | assertion | -

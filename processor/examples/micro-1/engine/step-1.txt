@@ -1,0 +1,13 @@
+# state after step 1   (field 9 words)
+F0001 | a limb that will not move | is in the field of | R | 0.63 | assertion | sensory; cost 6
+F0002 | the sleeper | is in the field of | R | 0.20 | assertion | sensory; cost 1
+F0003 | waking | is in the field of | R | 0.20 | assertion | sensory; cost 2
+F0004 | R | has tail statistic | intensity | 0.00 | assertion | -
+F0005 | R | has tail statistic | valence | 0.00 | assertion | -
+F0006 | R | has tail statistic | count | 0.00 | assertion | -
+F0007 | R | has tail statistic | spread | 0.00 | assertion | -
+F0008 | a limb that will not move | is in memory of | R | 0.63 | assertion | cost 6
+F0009 | the sleeper | is in memory of | R | 0.20 | assertion | cost 1
+F0010 | waking | is in memory of | R | 0.20 | assertion | cost 2
+
+# trace — the analyst's view, not the reader's

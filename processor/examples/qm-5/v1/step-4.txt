@@ -1,0 +1,24 @@
+# state after step 4   (field 14 words)
+F0001 | looking at it | is in the field of | child | 0.36 | assertion | sensory; cost 5
+F0002 | you cannot know which until you look | is in the field of | child | 0.36 | assertion | sensory; cost 7
+F0003 | tiny things | is in the field of | child | 0.29 | assertion | carried; cost 2
+F0004 | child | has tail statistic | intensity | 0.30 | assertion | -
+F0005 | child | has tail statistic | valence | 0.30 | assertion | -
+F0006 | child | has tail statistic | count | 1.00 | assertion | -
+F0007 | child | has tail statistic | spread | 0.00 | assertion | -
+F0008 | looking at it | is in memory of | child | 0.36 | assertion | cost 5
+F0009 | you cannot know which until you look | is in memory of | child | 0.36 | assertion | cost 7
+F0010 | tiny things | is in memory of | child | 0.29 | assertion | cost 2
+F0011 | both at once until you look | is in memory of | child | 0.25 | assertion | cost 6
+
+# trace — the analyst's view, not the reader's
+#   evicted both at once until you look (0.29): displaced by tiny things
+#   evicted a game (0.21): displaced by tiny things
+#   evicted heads or tails (0.20): displaced by tiny things
+#   evicted hide and seek (0.19): below k
+#   evicted ants (0.10): below k
+#   understood: looking at it
+#   understood: you cannot know which until you look
+#   felt wavefunction: 0.15
+#   felt probability amplitude: 0.11
+#   felt collapse: 0.00

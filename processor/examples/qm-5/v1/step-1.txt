@@ -1,0 +1,17 @@
+# state after step 1   (field 13 words)
+F0001 | tiny things | is in the field of | child | 0.36 | assertion | sensory; cost 6
+F0002 | a game | is in the field of | child | 0.30 | assertion | sensory; cost 4
+F0003 | ants | is in the field of | child | 0.20 | assertion | sensory; cost 3
+F0004 | child | has tail statistic | intensity | 0.00 | assertion | -
+F0005 | child | has tail statistic | valence | 0.00 | assertion | -
+F0006 | child | has tail statistic | count | 0.00 | assertion | -
+F0007 | child | has tail statistic | spread | 0.00 | assertion | -
+F0008 | tiny things | is in memory of | child | 0.36 | assertion | cost 6
+F0009 | a game | is in memory of | child | 0.30 | assertion | cost 4
+F0010 | ants | is in memory of | child | 0.20 | assertion | cost 3
+
+# trace — the analyst's view, not the reader's
+#   understood: tiny things
+#   felt wavefunction: 0.00
+#   felt probability amplitude: 0.00
+#   felt collapse: 0.00

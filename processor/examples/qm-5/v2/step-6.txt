@@ -1,0 +1,20 @@
+# state after step 6   (field 18 words)
+F0001 | the pattern from many tries | is in the field of | child | 0.36 | assertion | sensory; cost 10
+F0002 | you cannot know which until you look | is in the field of | child | 0.29 | assertion | carried; cost 7
+F0003 | looking at it | is in the field of | child | 0.23 | assertion | carried; cost 1
+F0004 | child | has tail statistic | intensity | 0.00 | assertion | -
+F0005 | child | has tail statistic | valence | 0.00 | assertion | -
+F0006 | child | has tail statistic | count | 0.00 | assertion | -
+F0007 | child | has tail statistic | spread | 0.00 | assertion | -
+F0008 | the pattern from many tries | is in memory of | child | 0.36 | assertion | cost 10
+F0009 | you cannot know which until you look | is in memory of | child | 0.29 | assertion | cost 7
+F0010 | looking at it | is in memory of | child | 0.23 | assertion | cost 1
+F0011 | looking changes it | is in memory of | child | 0.20 | assertion | cost 7
+
+# trace — the analyst's view, not the reader's
+#   evicted looking changes it (0.23): displaced by looking at it
+#   evicted heads or tails (0.20): displaced by looking at it
+#   understood: the pattern from many tries
+#   felt wavefunction: 0.00
+#   felt probability amplitude: 0.27
+#   felt collapse: 0.14

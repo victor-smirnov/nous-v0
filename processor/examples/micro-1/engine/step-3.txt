@@ -1,0 +1,19 @@
+# state after step 3   (field 11 words)
+F0001 | a limb that will not move | is in the field of | R | 0.40 | assertion | carried; cost 6
+F0002 | being late | is in the field of | R | 0.38 | assertion | associative via the alarm clock; cost 2
+F0003 | the boss | is in the field of | R | 0.28 | assertion | associative via being late; cost 2
+F0004 | outside | is in the field of | R | 0.20 | assertion | sensory; cost 1
+F0005 | R | has tail statistic | intensity | 0.08 | assertion | -
+F0006 | R | has tail statistic | valence | -0.08 | assertion | -
+F0007 | R | has tail statistic | count | 1.00 | assertion | -
+F0008 | R | has tail statistic | spread | 0.00 | assertion | -
+F0009 | a limb that will not move | is in memory of | R | 0.40 | assertion | cost 6
+F0010 | being late | is in memory of | R | 0.38 | assertion | cost 2
+F0011 | the boss | is in memory of | R | 0.28 | assertion | cost 2
+F0012 | outside | is in memory of | R | 0.20 | assertion | cost 1
+
+# trace — the analyst's view, not the reader's
+#   evicted the window (0.20): displaced by outside
+#   evicted the alarm clock (0.16): below k
+#   evicted staying in bed (0.10): below k
+#   evicted rain (0.08): below k
