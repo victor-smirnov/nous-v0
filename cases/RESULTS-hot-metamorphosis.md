@@ -47,3 +47,43 @@ be expected to differ, and is therefore what a benchmark would have to measure.
 necessary — a text could easily give a character private access the reader lacks — so it is a fact about this
 opening rather than about the method, and it is the kind of row that would go the other way in a first-person
 narration.
+
+## The protopathic layer: what reaches an observer only as mass
+
+Added after the run above, on one design decision: in a language where everything is explicit, "unconscious"
+cannot mean "not represented". It can only mean *nameless* — a quantity whose contributors were summed over
+and whose keys never reached the head of a rule. So the signals (stimulus × need pairs, where
+`emotional_signal` lives) split into a **frame** (the observer has an edge to the signal's own cost fact) and a
+**tail** (everything else), and the observer gets the tail only through aggregates keyed by observer and
+subject: intensity, valence, spread, count. Head's three marks of the protopathic, as three statistics that
+survive the projection. Nothing in that stratum joins the tail on a signal's key.
+
+Over Gregor's nine signals, weighted by need:
+
+| observer | frame | tail | nameless share | tail valence | tail spread | displacement |
+|---|---:|---:|---:|---:|---:|:---:|
+| **Gregor** | 2 | 7 | **0.81** | −3.82 | 0.83 | **yes** |
+| figural reader | 3 | 6 | 0.54 | −2.58 | 0.78 | no |
+| literal reader | 5 | 4 | 0.33 | −1.57 | 0.68 | no |
+
+**Displacement** is the composite this layer was built to reach: the heaviest signal in the subject has no name
+for the observer, *and* the tail outweighs the frame per signal. Gregor's frame is not empty — he represents
+what the transformation costs his comfort and what oversleeping costs his position — it is *full of the light
+signals*. The three heaviest (survival, position, his own; −0.81 each) are all in the tail. Under a fixed
+budget, the detail of the morning is not incidental to the omission; it is what the budget was spent on. That is
+the reading of the opening the low-level layer could not state and the entity-level HOT layer got backwards.
+
+Both readers are controls on the same signals: each names at least one of the heaviest, and for each the frame
+outweighs the tail per signal. The finding does not follow from how many edges an observer has (the figural
+reader has three, Gregor two, the literal reader five) but from where they fall.
+
+The ordering of the readers is itself a result: under the literal construal two thirds of the operative weight
+has a name, under the figural construal half, in Gregor a fifth. The construal a reader brings decides how much
+of the subject's mass they can say anything about.
+
+`tests/test_hot.py` fixes the discrimination on a synthetic pair (same signals, one observer names the heavy
+signal, the other the light ones) and the perturbation: swap who names what, and displacement moves with the
+split, not with the name.
+
+What the analyst has that the observer has not: the tail relation itself. The content of the protopathic
+component is recoverable here and unrecoverable for the subject, and the difference is a number.

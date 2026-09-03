@@ -101,6 +101,73 @@ hot_stat(S, "unnoticed, said so by the text", C) :- low_state(S, _, _), C = coun
 hot_stat(S, "higher-order edges", C)        :- hot_edge(S, _, _, _), C = count : { hot_edge(S, _, _, _) }.
 .output hot_stat
 
+// ------------------------------------------------------------------ the protopathic layer
+// Awareness is graded and the boundary is blurred, but in a language where everything is explicit "hidden"
+// cannot mean "not represented". It can only mean *nameless*: a quantity whose contributors were summed over
+// and whose keys never reached the head of the rule. That is a lossy projection, irreversible by construction,
+// and it is what "behind the tokens" amounts to in a black box — except that here both sides are visible.
+//
+// So the split is: the signals an observer has a higher-order representation of keep their key (the frame);
+// the rest enter only through aggregates keyed by observer and subject alone (the tail). Head's three marks of
+// the protopathic — intensity, crude valence, poor localisation — are three statistics that survive the
+// projection: total weight, sign balance, spread. Nothing in this stratum joins the tail on the signal's key.
+//
+// The signal space is the stimulus × need pairs, where emotional_signal lives; a signal is represented only if
+// its own cost fact is. Being aware that a stimulus is present says nothing about what it costs.
+.decl signal_fact(s:symbol, f:symbol, m:float)
+signal_fact(S, F, M) :- fact(F, X, _, _, N, _, _, _, _, U), sem(U, "delta"), usable(F, _),
+                        emotional_signal(S, X, N, M, _).
+
+.decl frame(o:symbol, s:symbol, f:symbol, m:float)          // keyed: the observer can say which
+frame(O, S, F, M) :- signal_fact(S, F, M), represented_fact(O, F).
+.decl tail(o:symbol, s:symbol, f:symbol, m:float)           // the analyst sees this; the observer sees only proto
+tail(O, S, F, M) :- signal_fact(S, F, M), hot_edge(O, _, _, _), !represented_fact(O, F).
+.output frame
+.output tail
+
+.decl tail_abs(o:symbol, s:symbol, f:symbol, a:float)
+tail_abs(O, S, F, A) :- tail(O, S, F, M), A = max(M, 0.0 - M).
+.decl frame_abs(o:symbol, s:symbol, f:symbol, a:float)
+frame_abs(O, S, F, A) :- frame(O, S, F, M), A = max(M, 0.0 - M).
+
+.decl tail_intensity(o:symbol, s:symbol, i:float)
+tail_intensity(O, S, I) :- tail(O, S, _, _), I = sum A : { tail_abs(O, S, _, A) }.
+.decl tail_share_sq(o:symbol, s:symbol, f:symbol, q:float)
+tail_share_sq(O, S, F, Q) :- tail_abs(O, S, F, A), tail_intensity(O, S, I), P = A / I, Q = P * P.
+
+.decl proto(o:symbol, s:symbol, k:symbol, v:float)          // what the observer has of the tail: no keys
+proto(O, S, "intensity", V)      :- tail_intensity(O, S, V).
+proto(O, S, "valence", V)        :- tail(O, S, _, _), V = sum M : { tail(O, S, _, M) }.
+proto(O, S, "count", V)          :- tail(O, S, _, _), C = count : { tail(O, S, _, _) }, V = to_float(C).
+proto(O, S, "mean weight", V)    :- tail_intensity(O, S, I), proto(O, S, "count", C), V = I / C.
+proto(O, S, "spread", V)         :- tail_intensity(O, S, _), Q = sum X : { tail_share_sq(O, S, _, X) }, V = 1.0 - Q.
+.output proto
+
+.decl frame_stat(o:symbol, s:symbol, k:symbol, v:float)
+frame_stat(O, S, "intensity", V)   :- frame(O, S, _, _), V = sum A : { frame_abs(O, S, _, A) }.
+frame_stat(O, S, "count", V)       :- frame(O, S, _, _), C = count : { frame(O, S, _, _) }, V = to_float(C).
+frame_stat(O, S, "mean weight", V) :- frame_stat(O, S, "intensity", I), frame_stat(O, S, "count", C), V = I / C.
+frame_stat(O, S, "mean weight", 0.0) :- tail(O, S, _, _), !frame(O, S, _, _).
+.output frame_stat
+
+// The share of the subject's operative weight that reaches the observer only as mass, never as a name.
+.decl nameless_share(o:symbol, s:symbol, v:float)
+nameless_share(O, S, V) :- proto(O, S, "intensity", T), frame_stat(O, S, "intensity", F), V = T / (T + F).
+nameless_share(O, S, 1.0) :- proto(O, S, "intensity", _), !frame(O, S, _, _).
+.output nameless_share
+
+// Displacement. A full frame is not the same as a well-placed one: the budget can be spent on the light
+// signals while the heavy ones stay in the tail. Two conditions, so that neither alone carries it — the
+// heaviest signal in the subject has no name for this observer, and the tail outweighs the frame per signal.
+.decl signal_abs(s:symbol, f:symbol, a:float)
+signal_abs(S, F, A) :- signal_fact(S, F, M), A = max(M, 0.0 - M).
+.decl heaviest(s:symbol, f:symbol)
+heaviest(S, F) :- signal_abs(S, F, A), A = max X : { signal_abs(S, _, X) }.
+.decl displacement(o:symbol, s:symbol)
+displacement(O, S) :- heaviest(S, F), tail(O, S, F, _),
+                      proto(O, S, "mean weight", T), frame_stat(O, S, "mean weight", W), T > W.
+.output displacement
+
 // ------------------------------------------------------------------ succession
 // A batch evaluation has no time of its own. The text lends it one: positions are stated, and the order of
 // reading is the order of the states.
