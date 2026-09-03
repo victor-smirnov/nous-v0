@@ -1,23 +1,25 @@
-# state after step 6   (field 14 words)
+# state after step 6   (field 17 words)
 F0001 | the pattern from many tries | is in the field of | child | 0.36 | assertion | sensory; cost 9
 F0002 | tiny things | is in the field of | child | 0.36 | assertion | sensory; cost 2
 F0003 | looking at it | is in the field of | child | 0.36 | assertion | sensory; cost 3
-F0004 | child | has tail statistic | intensity | 0.00 | assertion | -
-F0005 | child | has tail statistic | valence | 0.00 | assertion | -
-F0006 | child | has tail statistic | count | 0.00 | assertion | -
-F0007 | child | has tail statistic | spread | 0.00 | assertion | -
-F0008 | the pattern from many tries | is in memory of | child | 0.36 | assertion | cost 9
-F0009 | tiny things | is in memory of | child | 0.36 | assertion | cost 2
-F0010 | looking at it | is in memory of | child | 0.36 | assertion | cost 3
-F0011 | you cannot know which until you look | is in memory of | child | 0.25 | assertion | cost 7
+F0004 | both at once until you look | is in the field of | child | 0.23 | assertion | carried; cost 3
+F0005 | child | has tail statistic | intensity | 0.00 | assertion | -
+F0006 | child | has tail statistic | valence | 0.00 | assertion | -
+F0007 | child | has tail statistic | count | 0.00 | assertion | -
+F0008 | child | has tail statistic | spread | 0.00 | assertion | -
+F0009 | the pattern from many tries | is in memory of | child | 0.36 | assertion | cost 9
+F0010 | tiny things | is in memory of | child | 0.36 | assertion | cost 2
+F0011 | looking at it | is in memory of | child | 0.36 | assertion | cost 3
+F0012 | both at once until you look | is in memory of | child | 0.23 | assertion | cost 3
+F0013 | you cannot know which until you look | is in memory of | child | 0.25 | assertion | cost 7
 
 # trace — the analyst's view, not the reader's
-#   evicted you cannot know which until you look (0.29): displaced by looking at it
-#   evicted heads or tails (0.20): displaced by looking at it
+#   evicted you cannot know which until you look (0.29): no room: 7 words, 4.0 left
+#   evicted heads or tails (0.20): no room: 4 words, 1.0 left
 #   evicted ants (0.10): below k
 #   understood: the pattern from many tries
 #   understood: tiny things
 #   understood: looking at it
-#   felt wavefunction: 0.00
+#   felt wavefunction: 0.14
 #   felt probability amplitude: 0.26
 #   felt collapse: 0.00

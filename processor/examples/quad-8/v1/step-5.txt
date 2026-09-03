@@ -1,0 +1,33 @@
+# state after step 5   (field 38 words)
+F0001 | the unknown x | is in the field of | student | 0.43 | assertion | carried; cost 1
+F0002 | the sign of the discriminant tells how many roots | is in the field of | student | 0.36 | assertion | sensory; cost 20
+F0003 | the discriminant | is in the field of | student | 0.36 | assertion | sensory; cost 2
+F0004 | two roots, one root, or none | is in the field of | student | 0.36 | assertion | sensory; cost 5
+F0005 | the square root | is in the field of | student | 0.34 | assertion | carried; cost 7
+F0006 | a quadratic equation | is in the field of | student | 0.31 | assertion | carried; cost 3
+F0007 | student | has tail statistic | intensity | 0.12 | assertion | -
+F0008 | student | has tail statistic | valence | 0.12 | assertion | -
+F0009 | student | has tail statistic | count | 1.00 | assertion | -
+F0010 | student | has tail statistic | spread | 0.00 | assertion | -
+F0011 | the unknown x | is in memory of | student | 0.43 | assertion | cost 1
+F0012 | the sign of the discriminant tells how many roots | is in memory of | student | 0.36 | assertion | cost 20
+F0013 | the discriminant | is in memory of | student | 0.36 | assertion | cost 2
+F0014 | two roots, one root, or none | is in memory of | student | 0.36 | assertion | cost 5
+F0015 | the square root | is in memory of | student | 0.34 | assertion | cost 7
+F0016 | a quadratic equation | is in memory of | student | 0.31 | assertion | cost 3
+F0017 | a linear equation | is in memory of | student | 0.50 | assertion | cost 3
+F0018 | expanding brackets | is in memory of | student | 0.40 | assertion | cost 13
+F0019 | a root of the equation | is in memory of | student | 0.23 | assertion | cost 6
+F0020 | the area of a square | is in memory of | student | 0.30 | assertion | cost 4
+F0021 | a door for later, not a wall | has satisfaction delta | interest | 0.3 | assertion | established by the chunk
+
+# trace — the analyst's view, not the reader's
+#   evicted a linear equation (0.26): no room: 3 words, 2.0 left
+#   evicted numbers beyond the ones you know (0.20): no room: 8 words, 2.0 left
+#   evicted a door for later, not a wall (0.12): below k
+#   understood: the sign of the discriminant tells how many roots
+#   understood: the discriminant
+#   understood: two roots, one root, or none
+#   felt complex numbers: 0.29
+#   felt the fundamental theorem of algebra: 0.14
+#   felt Vieta's theorem: 0.07

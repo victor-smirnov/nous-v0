@@ -1,22 +1,23 @@
-# state after step 4   (field 14 words)
+# state after step 4   (field 18 words)
 F0001 | looking changes it | is in the field of | child | 0.36 | assertion | sensory; cost 11
 F0002 | both at once until you look | is in the field of | child | 0.36 | assertion | sensory; cost 3
-F0003 | child | has tail statistic | intensity | 0.00 | assertion | -
-F0004 | child | has tail statistic | valence | 0.00 | assertion | -
-F0005 | child | has tail statistic | count | 0.00 | assertion | -
-F0006 | child | has tail statistic | spread | 0.00 | assertion | -
-F0007 | looking changes it | is in memory of | child | 0.36 | assertion | cost 11
-F0008 | both at once until you look | is in memory of | child | 0.36 | assertion | cost 3
-F0009 | you cannot know which until you look | is in memory of | child | 0.25 | assertion | cost 7
-F0010 | looking at it | is in memory of | child | 0.25 | assertion | cost 3
-F0011 | tiny things | is in memory of | child | 0.20 | assertion | cost 2
+F0003 | looking at it | is in the field of | child | 0.29 | assertion | carried; cost 3
+F0004 | peeking | is in the field of | child | 0.20 | assertion | sensory; cost 1
+F0005 | child | has tail statistic | intensity | 0.00 | assertion | -
+F0006 | child | has tail statistic | valence | 0.00 | assertion | -
+F0007 | child | has tail statistic | count | 0.00 | assertion | -
+F0008 | child | has tail statistic | spread | 0.00 | assertion | -
+F0009 | looking changes it | is in memory of | child | 0.36 | assertion | cost 11
+F0010 | both at once until you look | is in memory of | child | 0.36 | assertion | cost 3
+F0011 | looking at it | is in memory of | child | 0.29 | assertion | cost 3
+F0012 | peeking | is in memory of | child | 0.20 | assertion | cost 1
+F0013 | you cannot know which until you look | is in memory of | child | 0.25 | assertion | cost 7
+F0014 | tiny things | is in memory of | child | 0.20 | assertion | cost 2
 
 # trace — the analyst's view, not the reader's
-#   evicted you cannot know which until you look (0.29): displaced by both at once until you look
-#   evicted looking at it (0.29): displaced by both at once until you look
-#   evicted tiny things (0.23): displaced by both at once until you look
-#   evicted peeking (0.20): displaced by both at once until you look
-#   evicted heads or tails (0.20): displaced by both at once until you look
+#   evicted you cannot know which until you look (0.29): no room: 7 words, 4.0 left
+#   evicted tiny things (0.23): no room: 2 words, 1.0 left
+#   evicted heads or tails (0.20): no room: 1 words, 0.0 left
 #   evicted hide and seek (0.18): below k
 #   evicted ants (0.10): below k
 #   understood: looking changes it

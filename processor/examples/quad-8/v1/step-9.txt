@@ -1,0 +1,50 @@
+# state after step 9   (field 39 words)
+F0001 | a quadratic equation | is in the field of | student | 0.36 | assertion | sensory; cost 3
+F0002 | a root of the equation | is in the field of | student | 0.36 | assertion | sensory; cost 2
+F0003 | checking a root by substitution | is in the field of | student | 0.36 | assertion | sensory; cost 3
+F0004 | two roots, one root, or none | is in the field of | student | 0.36 | assertion | sensory; cost 6
+F0005 | the discriminant | is in the field of | student | 0.36 | assertion | sensory; cost 2
+F0006 | the sign of the discriminant tells how many roots | is in the field of | student | 0.36 | assertion | sensory; cost 11
+F0007 | the quadratic formula | is in the field of | student | 0.36 | assertion | sensory; cost 3
+F0008 | why the formula works | is in the field of | student | 0.36 | assertion | sensory; cost 4
+F0009 | the unknown x | is in the field of | student | 0.26 | assertion | carried; cost 2
+F0010 | the square root | is in the field of | student | 0.21 | assertion | carried; cost 1
+F0011 | a formula | is in the field of | student | 0.20 | assertion | sensory; cost 1
+F0012 | why | is in the field of | student | 0.20 | assertion | sensory; cost 1
+F0013 | student | has tail statistic | intensity | 0.00 | assertion | -
+F0014 | student | has tail statistic | valence | 0.00 | assertion | -
+F0015 | student | has tail statistic | count | 0.00 | assertion | -
+F0016 | student | has tail statistic | spread | 0.00 | assertion | -
+F0017 | a quadratic equation | is in memory of | student | 0.36 | assertion | cost 3
+F0018 | a root of the equation | is in memory of | student | 0.36 | assertion | cost 2
+F0019 | checking a root by substitution | is in memory of | student | 0.36 | assertion | cost 3
+F0020 | two roots, one root, or none | is in memory of | student | 0.36 | assertion | cost 6
+F0021 | the discriminant | is in memory of | student | 0.36 | assertion | cost 2
+F0022 | the sign of the discriminant tells how many roots | is in memory of | student | 0.36 | assertion | cost 11
+F0023 | the quadratic formula | is in memory of | student | 0.36 | assertion | cost 3
+F0024 | why the formula works | is in memory of | student | 0.36 | assertion | cost 4
+F0025 | the unknown x | is in memory of | student | 0.26 | assertion | cost 2
+F0026 | the square root | is in memory of | student | 0.21 | assertion | cost 1
+F0027 | a formula | is in memory of | student | 0.20 | assertion | cost 1
+F0028 | why | is in memory of | student | 0.20 | assertion | cost 1
+F0029 | expanding brackets | is in memory of | student | 0.40 | assertion | cost 11
+F0030 | a linear equation | is in memory of | student | 0.50 | assertion | cost 3
+F0031 | the area of a square | is in memory of | student | 0.30 | assertion | cost 4
+
+# trace — the analyst's view, not the reader's
+#   evicted expanding brackets (0.29): no room: 11 words, 6.0 left
+#   evicted a formula to memorise (0.15): below k
+#   evicted a linear equation (0.10): below k
+#   evicted a test (0.07): below k
+#   evicted a long derivation (0.04): below k
+#   understood: a quadratic equation
+#   understood: a root of the equation
+#   understood: checking a root by substitution
+#   understood: two roots, one root, or none
+#   understood: the discriminant
+#   understood: the sign of the discriminant tells how many roots
+#   understood: the quadratic formula
+#   understood: why the formula works
+#   felt complex numbers: 0.29
+#   felt the fundamental theorem of algebra: 0.25
+#   felt Vieta's theorem: 0.25

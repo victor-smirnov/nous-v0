@@ -1,22 +1,22 @@
-# state after step 7   (field 12 words)
+# state after step 7   (field 17 words)
 F0001 | both at once until you look | is in the field of | child | 0.36 | assertion | sensory; cost 6
 F0002 | you cannot know which until you look | is in the field of | child | 0.36 | assertion | sensory; cost 3
 F0003 | looking changes it | is in the field of | child | 0.36 | assertion | sensory; cost 3
-F0004 | child | has tail statistic | intensity | 0.18 | assertion | -
-F0005 | child | has tail statistic | valence | 0.18 | assertion | -
-F0006 | child | has tail statistic | count | 1.00 | assertion | -
-F0007 | child | has tail statistic | spread | 0.00 | assertion | -
-F0008 | both at once until you look | is in memory of | child | 0.36 | assertion | cost 6
-F0009 | you cannot know which until you look | is in memory of | child | 0.36 | assertion | cost 3
-F0010 | looking changes it | is in memory of | child | 0.36 | assertion | cost 3
-F0011 | the pattern from many tries | is in memory of | child | 0.25 | assertion | cost 9
-F0012 | tiny things | is in memory of | child | 0.25 | assertion | cost 2
-F0013 | looking at it | is in memory of | child | 0.25 | assertion | cost 3
+F0004 | tiny things | is in the field of | child | 0.29 | assertion | carried; cost 2
+F0005 | looking at it | is in the field of | child | 0.29 | assertion | carried; cost 3
+F0006 | child | has tail statistic | intensity | 0.18 | assertion | -
+F0007 | child | has tail statistic | valence | 0.18 | assertion | -
+F0008 | child | has tail statistic | count | 1.00 | assertion | -
+F0009 | child | has tail statistic | spread | 0.00 | assertion | -
+F0010 | both at once until you look | is in memory of | child | 0.36 | assertion | cost 6
+F0011 | you cannot know which until you look | is in memory of | child | 0.36 | assertion | cost 3
+F0012 | looking changes it | is in memory of | child | 0.36 | assertion | cost 3
+F0013 | tiny things | is in memory of | child | 0.29 | assertion | cost 2
+F0014 | looking at it | is in memory of | child | 0.29 | assertion | cost 3
+F0015 | the pattern from many tries | is in memory of | child | 0.25 | assertion | cost 9
 
 # trace — the analyst's view, not the reader's
-#   evicted the pattern from many tries (0.29): displaced by looking changes it
-#   evicted tiny things (0.29): displaced by looking changes it
-#   evicted looking at it (0.29): displaced by looking changes it
+#   evicted the pattern from many tries (0.29): no room: 9 words, 6.0 left
 #   evicted a spinning coin (0.18): below k
 #   evicted you cannot tell yet (0.14): below k
 #   evicted heads or tails (0.12): below k

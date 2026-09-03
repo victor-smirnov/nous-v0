@@ -1,0 +1,38 @@
+# state after step 6   (field 40 words)
+F0001 | the unknown x | is in the field of | student | 0.43 | assertion | sensory; cost 2
+F0002 | the quadratic formula | is in the field of | student | 0.36 | assertion | sensory; cost 20
+F0003 | the discriminant | is in the field of | student | 0.36 | assertion | sensory; cost 3
+F0004 | a root of the equation | is in the field of | student | 0.36 | assertion | sensory; cost 9
+F0005 | the square root | is in the field of | student | 0.34 | assertion | sensory; cost 1
+F0006 | two roots, one root, or none | is in the field of | student | 0.31 | assertion | carried; cost 5
+F0007 | student | has tail statistic | intensity | 0.00 | assertion | -
+F0008 | student | has tail statistic | valence | 0.00 | assertion | -
+F0009 | student | has tail statistic | count | 0.00 | assertion | -
+F0010 | student | has tail statistic | spread | 0.00 | assertion | -
+F0011 | the unknown x | is in memory of | student | 0.43 | assertion | cost 2
+F0012 | the quadratic formula | is in memory of | student | 0.36 | assertion | cost 20
+F0013 | the discriminant | is in memory of | student | 0.36 | assertion | cost 3
+F0014 | a root of the equation | is in memory of | student | 0.36 | assertion | cost 9
+F0015 | the square root | is in memory of | student | 0.34 | assertion | cost 1
+F0016 | two roots, one root, or none | is in memory of | student | 0.31 | assertion | cost 5
+F0017 | the sign of the discriminant tells how many roots | is in memory of | student | 0.29 | assertion | cost 20
+F0018 | a quadratic equation | is in memory of | student | 0.25 | assertion | cost 3
+F0019 | a linear equation | is in memory of | student | 0.50 | assertion | cost 3
+F0020 | expanding brackets | is in memory of | student | 0.40 | assertion | cost 13
+F0021 | the area of a square | is in memory of | student | 0.30 | assertion | cost 4
+
+# trace — the analyst's view, not the reader's
+#   evicted the sign of the discriminant tells how many roots (0.31): no room: 20 words, 5.0 left
+#   evicted a quadratic equation (0.26): no room: 3 words, 0.0 left
+#   evicted a shortcut (0.20): no room: 2 words, 0.0 left
+#   evicted a formula (0.20): no room: 1 words, 0.0 left
+#   evicted a formula to memorise (0.15): below k
+#   evicted a trick (0.11): below k
+#   evicted a linear equation (0.10): below k
+#   evicted a test (0.07): below k
+#   understood: the quadratic formula
+#   understood: the discriminant
+#   understood: a root of the equation
+#   felt complex numbers: 0.24
+#   felt the fundamental theorem of algebra: 0.23
+#   felt Vieta's theorem: 0.11

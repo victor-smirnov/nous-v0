@@ -1,0 +1,30 @@
+# state after step 2   (field 39 words)
+F0001 | the unknown x | is in the field of | student | 0.60 | assertion | sensory; cost 2
+F0002 | a linear equation | is in the field of | student | 0.42 | assertion | carried; cost 3
+F0003 | a root of the equation | is in the field of | student | 0.36 | assertion | sensory; cost 15
+F0004 | a quadratic equation | is in the field of | student | 0.31 | assertion | carried; cost 17
+F0005 | a worked example | is in the field of | student | 0.28 | assertion | associative via an example; cost 2
+F0006 | student | has tail statistic | intensity | 0.36 | assertion | -
+F0007 | student | has tail statistic | valence | 0.36 | assertion | -
+F0008 | student | has tail statistic | count | 1.00 | assertion | -
+F0009 | student | has tail statistic | spread | 0.00 | assertion | -
+F0010 | the unknown x | is in memory of | student | 0.60 | assertion | cost 2
+F0011 | a linear equation | is in memory of | student | 0.42 | assertion | cost 3
+F0012 | a root of the equation | is in memory of | student | 0.36 | assertion | cost 15
+F0013 | a quadratic equation | is in memory of | student | 0.31 | assertion | cost 17
+F0014 | a worked example | is in memory of | student | 0.28 | assertion | cost 2
+F0015 | the square root | is in memory of | student | 0.40 | assertion | cost 3
+F0016 | expanding brackets | is in memory of | student | 0.40 | assertion | cost 2
+F0017 | the area of a square | is in memory of | student | 0.30 | assertion | cost 4
+
+# trace — the analyst's view, not the reader's
+#   evicted checking a root by substitution (0.36): no room: 22 words, 20.0 left
+#   evicted the example equation (0.20): no room: 5 words, 1.0 left
+#   evicted x squared (0.17): below k
+#   evicted an example (0.17): below k
+#   evicted the area of a square (0.08): below k
+#   understood: a root of the equation
+#   understood: checking a root by substitution
+#   felt complex numbers: 0.00
+#   felt the fundamental theorem of algebra: 0.00
+#   felt Vieta's theorem: 0.11

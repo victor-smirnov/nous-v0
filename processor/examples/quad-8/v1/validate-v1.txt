@@ -1,0 +1,13 @@
+PASS  reach a quadratic equation: 0.36 (needs 0.3)
+PASS  reach a root of the equation: 0.36 (needs 0.3)
+PASS  reach checking a root by substitution: 0.36 (needs 0.3)
+PASS  reach two roots, one root, or none: 0.36 (needs 0.3)
+PASS  reach the discriminant: 0.36 (needs 0.3)
+PASS  reach the sign of the discriminant tells how many roots: 0.36 (needs 0.3)
+PASS  reach the quadratic formula: 0.36 (needs 0.3)
+PASS  reach why the formula works: 0.36 (needs 0.2)
+PASS  feel complex numbers: 0.29 (needs 0.2)
+PASS  feel the fundamental theorem of algebra: 0.25 (needs 0.2)
+PASS  feel Vieta's theorem: 0.25 (needs 0.15)
+PASS  never named: clean
+PASS  in order: clean

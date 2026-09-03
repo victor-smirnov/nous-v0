@@ -1,0 +1,17 @@
+You know a linear equation and the unknown x. A quadratic equation adds an x² term: ax² + bx + c = 0, a not zero. Example: x² + 5x + 6 = 0.
+
+A root of the equation is a value of x making the left side zero. Checking a root by substitution: put x = −2 into x² + 5x + 6: 4 − 10 + 6 = 0.
+
+Try x = −3: 9 − 15 + 6 = 0. A second root of the equation. Expanding brackets: (x + 2)(x + 3) = x² + 5x + 6. In general: two roots, one root, or none.
+
+Every quadratic equation has a discriminant: D = b² − 4ac. Here a = 1, b = 5, c = 6, so D = 25 − 24 = 1. The square root of D is 1.
+
+The sign of the discriminant tells how many roots: D positive, two roots; D zero, one root; D negative, none — none among the numbers you know so far. That case is a door for later, not a wall.
+
+The quadratic formula, a shortcut: x = (−b ± √D) / 2a, D the discriminant. Ours: x = (−5 ± 1) / 2, giving −2 or −3, the roots of the equation.
+
+Why the formula works: a rearrangement, not a spell. Expanding brackets, (x + 5/2)² = x² + 5x + 25/4, so our equation becomes (x + 5/2)² = 1/4 — hence the ±.
+
+Check a root by substitution: −3 gives 9 − 15 + 6 = 0. Notice the roots: −2 + (−3) = −5 = −b, and (−2)(−3) = 6 = c. Not a coincidence; next year explains it.
+
+So: a quadratic equation; a root; checking by substitution; two roots, one root, or none; the discriminant; the sign of the discriminant tells how many roots; the quadratic formula; why the formula works.

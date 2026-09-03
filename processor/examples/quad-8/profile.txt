@@ -1,0 +1,52 @@
+# heading: quad-8 — a student in the eighth grade
+# A larger Field than the child's, a longer memory, prior knowledge already in it, and needs that include
+# getting the answer right and not feeling stupid.
+
+# --- parameters
+F0001 | student | has parameter | budget | 40 | assertion | words the Field holds: two or three sentences
+F0002 | student | has parameter | k | 0.2 | assertion | -
+F0003 | student | has parameter | persistence | 0.85 | assertion | -
+F0004 | student | has parameter | decay | 0.8 | assertion | memory holds for four or five steps
+F0005 | student | has parameter | floor | 0.2 | assertion | -
+F0006 | student | has parameter | default cost | 2 | assertion | -
+F0007 | student | has parameter | confusion | 0.5 | assertion | per missing prerequisite
+F0008 | student | has parameter | comprehension | 0.45 | assertion | a concept named on its ground
+
+# --- needs
+F0010 | understanding | is a need of | student | 0.8 | assertion | -
+F0011 | understanding | is active in | student | - | assertion | -
+F0012 | getting the answer right | is a need of | student | 0.7 | assertion | competence, as the student feels it
+F0013 | getting the answer right | is active in | student | - | assertion | -
+F0014 | not feeling stupid | is a need of | student | 0.6 | assertion | -
+F0015 | not feeling stupid | is active in | student | - | assertion | -
+F0016 | interest | is a need of | student | 0.4 | assertion | -
+F0017 | interest | is active in | student | - | assertion | -
+
+# --- prior knowledge: already in memory when the explanation starts
+F0020 | a linear equation | is in memory of | student | 0.5 | assertion | cost 3
+F0021 | the unknown x | is in memory of | student | 0.6 | assertion | cost 2
+F0022 | the square root | is in memory of | student | 0.4 | assertion | cost 3
+F0023 | expanding brackets | is in memory of | student | 0.4 | assertion | cost 2
+F0024 | the area of a square | is in memory of | student | 0.3 | assertion | cost 4
+
+# --- what the student already knows things cost
+F0030 | a formula to memorise | has satisfaction delta | interest | -0.4 | assertion | -
+F0031 | a formula to memorise | has satisfaction delta | getting the answer right | 0.3 | assertion | it does get the answer
+F0032 | a worked example | has satisfaction delta | getting the answer right | 0.5 | assertion | -
+F0033 | a worked example | has satisfaction delta | understanding | 0.3 | assertion | -
+F0034 | "obviously" | has satisfaction delta | not feeling stupid | -0.5 | assertion | -
+F0035 | a test | has satisfaction delta | not feeling stupid | -0.3 | assertion | -
+F0036 | a trick | has satisfaction delta | interest | 0.4 | assertion | -
+F0037 | a long derivation | has satisfaction delta | interest | -0.3 | assertion | -
+
+# --- the bucket
+F0040 | a formula | is associated with | a formula to memorise | 0.7 | assertion | -
+F0041 | a formula | is associated with | a test | 0.4 | assertion | -
+F0042 | a square | is associated with | the area of a square | 0.5 | assertion | -
+F0043 | x squared | is associated with | the area of a square | 0.4 | assertion | -
+F0044 | an example | is associated with | a worked example | 0.8 | assertion | -
+F0045 | proof | is associated with | a long derivation | 0.6 | assertion | -
+F0046 | why | is associated with | a long derivation | 0.3 | assertion | -
+F0047 | a shortcut | is associated with | a trick | 0.7 | assertion | -
+F0048 | solving | is associated with | getting the answer right | 0.5 | assertion | -
+F0049 | the unknown x | is associated with | a linear equation | 0.5 | assertion | -

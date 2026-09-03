@@ -33,7 +33,9 @@ For each candidate compute C:
 - a plain entity scores the strongest cost signal it is the stimulus of (|delta| × the need's weight), or the
   profile's floor if it is the stimulus of none;
 - an associative candidate scores its own C, as above, × the association weight;
-- a carried candidate scores its prior C × the profile's persistence.
+- a carried candidate scores its prior C × the profile's persistence;
+- a sensory candidate that memory already holds scores no less than its memory C: naming what is known
+  re-activates it, it does not reset it.
 
 If one item is reached more than one way, it takes the highest C and the source that gave it. Clamp to
 [0, 1). Never write 1.
@@ -42,8 +44,8 @@ If one item is reached more than one way, it takes the highest C and the source 
 
 A candidate with C below k has no name and is never admitted, whatever the budget. Sort the rest by C,
 descending; ties break toward sensory, then carried, then associative, then toward the earlier-mentioned. Take
-them in that order while the running word cost stays within B. The first candidate that does not fit is
-**evicted**, and so is everything after it.
+them in that order; a candidate that does not fit in the words left is **evicted** and the next is still
+tried. Attention takes what fits.
 
 ## Stage 5 — the tail
 
@@ -74,7 +76,9 @@ An explanation has what a story has not: a target file (`must reach`, `requires`
 ## Stage 6 — memory
 
 Every item in the new Field is written to memory at its C, with its word cost. Every item already in memory
-and not in the new Field is decayed: C × the profile's decay. Items whose decayed C falls below k are dropped.
+and not in the new Field is decayed: C × the profile's decay, but never below what the reader brought — the
+profile's `is in memory of` rows are consolidated knowledge and are a floor under their own decay. Items whose
+decayed C falls below k are dropped.
 
 ## Stage 7 — new paths
 

@@ -10,7 +10,8 @@ Usage:
     python -m processor.engine validate <target.txt> <state-1.txt> ... <state-N.txt>
 
 candidates.tsv — one line per sensory candidate: item<TAB>cost in words[<TAB>stimulus<TAB>need<TAB>delta]
-    (the optional trailing three columns install a path, stage 7).
+    (the optional trailing three columns install a path, stage 7), or item<TAB>cost<TAB>short for a short form
+    that re-names a concept the reader already holds; if memory does not hold it, it is an unknown token.
 """
 import re, sys, pathlib
 
@@ -25,9 +26,12 @@ def rows(path):
 
 
 def load_profile(path):
-    p = {"params": {}, "needs": {}, "paths": {}, "assoc": {}}
-    for _, l, rel, r, v, _, _ in rows(path):
-        if rel == "has parameter":
+    p = {"params": {}, "needs": {}, "paths": {}, "assoc": {}, "memory": {}}
+    for _, l, rel, r, v, _, note in rows(path):
+        if rel == "is in memory of":                                # what the reader brings: prior knowledge
+            m = re.search(r"cost (\d+)", note)
+            p["memory"][l] = (float(v), int(m.group(1)) if m else 2)
+        elif rel == "has parameter":
             p["params"][r] = float(v); p["reader"] = l
         elif rel == "is a need of":
             p["needs"][l] = float(v)
@@ -104,7 +108,8 @@ def step(p, prior_field, memory, sensory, new_paths, t=None):
     cand = {}
     order = 0
     for item, cost in sensory:                                     # stage 1 (given)
-        cand[item] = (min(own_c(item, p), 0.999), cost, "sensory", order); order += 1
+        c = max(own_c(item, p), memory[item][0] if item in memory else 0.0)
+        cand[item] = (min(c, 0.999), cost, "sensory", order); order += 1
     for item, (c, cost) in prior_field.items():                    # carried over
         cc = min(c * P["persistence"], 0.999)
         if item not in cand or cc > cand[item][0]:
@@ -121,16 +126,14 @@ def step(p, prior_field, memory, sensory, new_paths, t=None):
     rank = {"sensory": 0, "carried": 1}
     ordered = sorted(cand.items(), key=lambda kv: (-kv[1][0], rank.get(kv[1][2], 2), kv[1][3]))
 
-    field, evicted, spent, blocker = {}, [], 0, None            # stage 4
+    field, evicted, spent = {}, [], 0                           # stage 4
     for item, (c, cost, src, _) in ordered:
         if c < k:
             evicted.append((item, c, "below k")); continue
-        if blocker is None and spent + cost <= B:
+        if spent + cost <= B:
             field[item] = (c, cost, src); spent += cost
         else:
-            if blocker is None:
-                blocker = next(reversed(field), None)
-            evicted.append((item, c, f"displaced by {blocker}"))
+            evicted.append((item, c, f"no room: {cost} words, {B - spent} left"))
 
     present = set(field) | set(memory) | {i for i, _ in sensory}   # stage 5
     tail = [abs(d) * p["needs"].get(n, 0.0) * (1 if d > 0 else -1)
@@ -141,9 +144,13 @@ def step(p, prior_field, memory, sensory, new_paths, t=None):
              "spread": 1.0 - sum((abs(x) / intensity) ** 2 for x in tail) if intensity else 0.0}
 
     new_memory = {i: (c, cost) for i, (c, cost, _) in field.items()}   # stage 6
+    stable = p.get("stable", {})
     for item, (c, cost) in memory.items():
-        if item not in field and c * P["decay"] >= k:
-            new_memory[item] = (c * P["decay"], cost)
+        if item in field:
+            continue
+        cc = max(c * P["decay"], stable.get(item, 0.0))
+        if cc >= k:
+            new_memory[item] = (cc, cost)
     for fb, proxies in t["induced"].items():                        # felt without a name
         v = sum(new_memory[q][0] * w for q, w in proxies if q in new_memory)
         notes.append(f"felt {fb}: {v:.2f}")
@@ -217,23 +224,31 @@ def main(argv):
     profile, candidates, out, *priors = argv
     p = load_profile(profile)
     t = load_target(target)
-    field, memory = {}, {}
+    field, memory = {}, dict(p["memory"])
+    p["stable"] = {i: c for i, (c, _) in p["memory"].items()}     # consolidated: never decays below this
     for prior in priors:
         field, memory = load_state(prior, p)
-    sensory, new_paths = [], []
+    sensory, new_paths, short_dropped = [], [], []
     for line in pathlib.Path(candidates).read_text().splitlines():
         if not line.strip() or line.startswith("#"):
             continue
-        cols = line.split("\t")
-        sensory.append((cols[0].strip(), int(cols[1])))
+        cols = [c.strip() for c in line.split("\t")]
+        if len(cols) >= 3 and cols[2] == "short":                  # a short form re-names only what memory holds
+            if cols[0] in memory or cols[0] in field:
+                sensory.append((cols[0], int(cols[1])))
+            else:
+                short_dropped.append(cols[0])
+            continue
+        sensory.append((cols[0], int(cols[1])))
         if len(cols) >= 5:
-            new_paths.append(((cols[2].strip(), cols[3].strip()), float(cols[4])))
+            new_paths.append(((cols[2], cols[3]), float(cols[4])))
     n = 1
     if priors:
         import re as _re
         m = _re.search(r"# state after step (\d+)", pathlib.Path(priors[-1]).read_text())
         n = int(m.group(1)) + 1 if m else len(priors) + 1
     f, e, s, m, spent, notes = step(p, field, memory, sensory, new_paths, t)
+    notes += [f"short form of {x} with {x} not in memory: an unknown token, ignored" for x in short_dropped]
     pathlib.Path(out).write_text(render(p["reader"], n, f, e, s, m, spent, new_paths, notes))
     print(pathlib.Path(out).read_text())
 

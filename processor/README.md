@@ -87,6 +87,11 @@ the truth of every intermediate state, not only the last, so the evaluator no lo
 to 6 of 6, and every rule the run forced (comprehension as the need concepts satisfy, a chunk as one batch, a
 ceiling report for infeasible targets) went into the engine, not into the example. See its README.
 
+`examples/quad-8/` adds prior knowledge: the reader arrives with concepts in memory, and the target's
+prerequisites point at them. Its first run failed on the engine, not the text — consolidated memory was
+decaying like working memory, a mention was resetting a known concept to the floor, and one large item was
+blocking small ones that had room — and the three fixes are checked against qm-5, whose verdicts did not move.
+
 ## Layout
 
 ```
@@ -97,6 +102,7 @@ processor/
   EVALUATOR.md       the instructions the evaluating sub-agent runs
   engine.py          stages 2–6 as a program
   examples/
+    quad-8/          quadratic equations for the eighth grade: prior knowledge in memory, README.md
     qm-5/            target.txt, profile.txt, text.txt, v1/ v2/ v3/, README.md
     micro-1/         profile.txt, text.txt
       states/        the model's end-to-end states, one per step

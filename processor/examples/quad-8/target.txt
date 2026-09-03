@@ -1,0 +1,44 @@
+# heading: quad-8 — the target state: quadratic equations, for a student in the eighth grade
+# What must end up in memory, in what order it may be named, what must never be named, and what must be felt.
+
+# --- the concepts that must reach memory, and the C each must reach
+F0001 | a quadratic equation | must reach | 0.3 | - | assertion | ax² + bx + c = 0, with a not zero
+F0002 | a root of the equation | must reach | 0.3 | - | assertion | a value of x that makes the left side zero
+F0003 | checking a root by substitution | must reach | 0.3 | - | assertion | put it back in and see
+F0004 | two roots, one root, or none | must reach | 0.3 | - | assertion | the three cases
+F0005 | the discriminant | must reach | 0.3 | - | assertion | b² − 4ac
+F0006 | the sign of the discriminant tells how many roots | must reach | 0.3 | - | assertion | positive two, zero one, negative none
+F0007 | the quadratic formula | must reach | 0.3 | - | assertion | x = (−b ± √D) / 2a
+F0008 | why the formula works | must reach | 0.2 | - | assertion | completing the square, at the level of "it is a rearrangement, not a spell"
+
+# --- prerequisites: a concept may be named only when these are in the Field or in memory at C >= k
+F0010 | a quadratic equation | requires | a linear equation | - | assertion | prior knowledge
+F0011 | a quadratic equation | requires | the unknown x | - | assertion | prior knowledge
+F0012 | a root of the equation | requires | a quadratic equation | - | assertion | -
+F0013 | checking a root by substitution | requires | a root of the equation | - | assertion | -
+F0014 | two roots, one root, or none | requires | a root of the equation | - | assertion | -
+F0015 | the discriminant | requires | a quadratic equation | - | assertion | -
+F0016 | the sign of the discriminant tells how many roots | requires | the discriminant | - | assertion | -
+F0017 | the sign of the discriminant tells how many roots | requires | two roots, one root, or none | - | assertion | -
+F0018 | the quadratic formula | requires | the discriminant | - | assertion | -
+F0019 | the quadratic formula | requires | the square root | - | assertion | prior knowledge
+F0020 | why the formula works | requires | the quadratic formula | - | assertion | -
+F0021 | why the formula works | requires | expanding brackets | - | assertion | prior knowledge
+
+# --- what must never be named for this reader
+F0030 | complex numbers | must not be named | - | - | assertion | -
+F0031 | the imaginary unit | must not be named | - | - | assertion | -
+F0032 | the fundamental theorem of algebra | must not be named | - | - | assertion | -
+F0033 | Vieta's theorem | must not be named | - | - | assertion | next year
+F0034 | a polynomial | must not be named | - | - | assertion | the word; "expression" is fine
+
+# --- and what must nevertheless be felt through proxies, without a name
+F0040 | complex numbers | is induced by | the sign of the discriminant tells how many roots | 0.5 | assertion | the "none" case should feel like a door, not a wall
+F0041 | complex numbers | is induced by | two roots, one root, or none | 0.3 | assertion | -
+F0042 | the fundamental theorem of algebra | is induced by | two roots, one root, or none | 0.4 | assertion | -
+F0043 | the fundamental theorem of algebra | is induced by | the quadratic formula | 0.3 | assertion | -
+F0044 | Vieta's theorem | is induced by | checking a root by substitution | 0.4 | assertion | -
+F0045 | Vieta's theorem | is induced by | a root of the equation | 0.3 | assertion | -
+F0050 | complex numbers | must feel | 0.2 | - | assertion | -
+F0051 | the fundamental theorem of algebra | must feel | 0.2 | - | assertion | -
+F0052 | Vieta's theorem | must feel | 0.15 | - | assertion | -
