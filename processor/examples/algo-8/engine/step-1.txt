@@ -1,0 +1,38 @@
+# state after step 1   (field 5 words)
+
+# --- field of consciousness: what the reader can report
+F0001 | steps done one after another | is in the field of | child | 0.36 | assertion | sensory; cost 5
+F0002 | child | has consciousness components | understanding 1 | - | assertion | items by the need each answers to; more than one is a split
+F0003 | child | has tail statistic | intensity | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0004 | child | has tail statistic | valence | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0005 | child | has tail statistic | count | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0006 | child | has tail statistic | spread | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+
+# --- motor field: the one continuation
+F0007 | child | does | reads on | - | assertion | the program that has the channel
+F0008 | child | attends to | reality | 0.36 | assertion | the interface in use; value = reality yield so far; fantasy yield 0.00
+
+# --- long-term memory
+F0009 | steps done one after another | is in memory of | child | 0.36 | assertion | cost 5
+F0010 | following instructions | is in memory of | child | 0.40 | assertion | cost 2
+F0011 | a recipe | is in memory of | child | 0.40 | assertion | cost 2
+F0012 | the rules of a game | is in memory of | child | 0.50 | assertion | cost 4
+F0013 | a robot | is in memory of | child | 0.40 | assertion | cost 2
+F0014 | a computer | is in memory of | child | 0.40 | assertion | cost 2
+F0015 | brushing your teeth | is in memory of | child | 0.50 | assertion | cost 3
+F0016 | making a sandwich | is in memory of | child | 0.40 | assertion | cost 3
+
+# --- need portrait
+F0017 | steps done one after another | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0018 | child | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
+F0019 | child | has conflict level | 0.00 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
+
+# --- field of mind (blackboard): represented, not conscious — the analyst's view, not the reader's
+
+# --- trace
+#   understood: steps done one after another
+#   need mass in the Field: understanding 0.36
+#   mode reality: reality yield 0.36, fantasy yield 0.00
+#   felt a Turing machine: 0.00
+#   felt the halting problem: 0.00
+#   felt formal semantics: 0.00

@@ -1,0 +1,17 @@
+When you brush your teeth, you do things in order: wet the brush, add paste, brush, rinse. Steps, one after another.
+
+Now tell a robot: make a sandwich. It stares. You must say every step exactly: take bread, spread butter, add cheese.
+
+Say "a bit of butter" and the silly robot smears the whole tub. Exact steps, same steps: same result every time.
+
+Steps one after another must also end. "Spread butter, spread butter, spread butter" forever? No lunch, ever. There has to be a last step.
+
+Best part: if every step is exact, anyone can follow it without knowing why. Your little brother could make it. Even the robot.
+
+Exact steps, one after another, that come to an end, have a name: an algorithm. Your sandwich steps are an algorithm!
+
+A computer is like that robot: it follows without knowing why. It only follows algorithms, exactly what the steps say, nothing more.
+
+If one step in the algorithm is missing or mixed up, same steps, same result every time, the silly one. That's a bug.
+
+You try it: pick something you do. Steps one after another, every step exact, and it comes to an end. Your own algorithm.

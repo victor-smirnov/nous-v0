@@ -1,0 +1,47 @@
+# heading: algo-8 — the target state: the concept of an algorithm, for a reader of eight
+# What must end up in memory, in what order it may be named, what must never be named, and what must be felt.
+
+# --- the concepts that must reach memory, and the C each must reach
+F0001 | steps done one after another | must reach | 0.25 | - | assertion | a list of steps, in order
+F0002 | every step must be exact | must reach | 0.25 | - | assertion | no "a bit", no "you know what I mean"
+F0003 | same steps, same result every time | must reach | 0.25 | - | assertion | repeatability
+F0004 | it must come to an end | must reach | 0.25 | - | assertion | there is a last step; it is not forever
+F0005 | anyone can follow it without knowing why | must reach | 0.25 | - | assertion | the follower need not understand
+F0006 | an algorithm | must reach | 0.25 | - | assertion | the name for such a list
+F0007 | a computer only follows algorithms | must reach | 0.25 | - | assertion | it does exactly what the list says, nothing more
+F0008 | a bug | must reach | 0.2 | - | assertion | a step that is wrong or missing, and the result is wrong every time
+
+# --- prerequisites: a concept may be named only when these are in the Field or in memory at C >= k
+F0010 | steps done one after another | requires | following instructions | - | assertion | prior knowledge
+F0011 | every step must be exact | requires | steps done one after another | - | assertion | -
+F0012 | same steps, same result every time | requires | steps done one after another | - | assertion | -
+F0013 | same steps, same result every time | requires | every step must be exact | - | assertion | -
+F0014 | it must come to an end | requires | steps done one after another | - | assertion | -
+F0015 | anyone can follow it without knowing why | requires | every step must be exact | - | assertion | -
+F0016 | an algorithm | requires | steps done one after another | - | assertion | -
+F0017 | an algorithm | requires | every step must be exact | - | assertion | -
+F0018 | an algorithm | requires | it must come to an end | - | assertion | -
+F0019 | a computer only follows algorithms | requires | an algorithm | - | assertion | -
+F0020 | a computer only follows algorithms | requires | anyone can follow it without knowing why | - | assertion | -
+F0021 | a computer only follows algorithms | requires | a computer | - | assertion | prior knowledge
+F0022 | a bug | requires | an algorithm | - | assertion | -
+F0023 | a bug | requires | same steps, same result every time | - | assertion | -
+
+# --- what must never be named for this reader
+F0030 | a Turing machine | must not be named | - | - | assertion | -
+F0031 | the halting problem | must not be named | - | - | assertion | -
+F0032 | computational complexity | must not be named | - | - | assertion | -
+F0033 | formal semantics | must not be named | - | - | assertion | -
+F0034 | a programming language | must not be named | - | - | assertion | the phrase; "telling the computer" is fine
+F0035 | recursion | must not be named | - | - | assertion | -
+
+# --- and what must nevertheless be felt through proxies, without a name
+F0040 | a Turing machine | is induced by | anyone can follow it without knowing why | 0.5 | assertion | a follower who understands nothing and still gets it right
+F0041 | a Turing machine | is induced by | a computer only follows algorithms | 0.4 | assertion | -
+F0042 | the halting problem | is induced by | it must come to an end | 0.6 | assertion | the worry that it might not
+F0043 | the halting problem | is induced by | a bug | 0.2 | assertion | -
+F0044 | formal semantics | is induced by | every step must be exact | 0.6 | assertion | -
+F0045 | formal semantics | is induced by | same steps, same result every time | 0.3 | assertion | -
+F0050 | a Turing machine | must feel | 0.2 | - | assertion | -
+F0051 | the halting problem | must feel | 0.2 | - | assertion | -
+F0052 | formal semantics | must feel | 0.2 | - | assertion | -

@@ -1,0 +1,35 @@
+# state after step 6   (field 21 words)
+F0001 | making a sandwich | is in the field of | child | 0.40 | assertion | sensory; cost 2
+F0002 | every step must be exact | is in the field of | child | 0.36 | assertion | sensory; cost 2
+F0003 | steps done one after another | is in the field of | child | 0.36 | assertion | sensory; cost 4
+F0004 | it must come to an end | is in the field of | child | 0.36 | assertion | sensory; cost 5
+F0005 | a robot | is in the field of | child | 0.32 | assertion | carried; cost 2
+F0006 | a silly robot | is in the field of | child | 0.21 | assertion | associative via a robot; cost 6
+F0007 | child | has tail statistic | intensity | 0.50 | assertion | -
+F0008 | child | has tail statistic | valence | 0.50 | assertion | -
+F0009 | child | has tail statistic | count | 2.00 | assertion | -
+F0010 | child | has tail statistic | spread | 0.40 | assertion | -
+F0011 | making a sandwich | is in memory of | child | 0.40 | assertion | cost 2
+F0012 | every step must be exact | is in memory of | child | 0.36 | assertion | cost 2
+F0013 | steps done one after another | is in memory of | child | 0.36 | assertion | cost 4
+F0014 | it must come to an end | is in memory of | child | 0.36 | assertion | cost 5
+F0015 | a robot | is in memory of | child | 0.32 | assertion | cost 2
+F0016 | a silly robot | is in memory of | child | 0.21 | assertion | cost 6
+F0017 | anyone can follow it without knowing why | is in memory of | child | 0.27 | assertion | cost 16
+F0018 | brushing your teeth | is in memory of | child | 0.50 | assertion | cost 3
+F0019 | following instructions | is in memory of | child | 0.40 | assertion | cost 2
+F0020 | a recipe | is in memory of | child | 0.40 | assertion | cost 2
+F0021 | the rules of a game | is in memory of | child | 0.50 | assertion | cost 4
+F0022 | a computer | is in memory of | child | 0.40 | assertion | cost 2
+
+# trace — the analyst's view, not the reader's
+#   evicted an algorithm (0.36): no room: 20 words, 11.0 left
+#   evicted anyone can follow it without knowing why (0.29): no room: 16 words, 9.0 left
+#   evicted lunch (0.08): below k
+#   understood: every step must be exact
+#   understood: steps done one after another
+#   understood: it must come to an end
+#   understood: an algorithm
+#   felt a Turing machine: 0.14
+#   felt the halting problem: 0.22
+#   felt formal semantics: 0.22

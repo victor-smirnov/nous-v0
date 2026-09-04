@@ -1,0 +1,32 @@
+# state after step 6   (field 23 words)
+F0001 | an algorithm | is in the field of | child | 0.36 | assertion | sensory; cost 2
+F0002 | every step must be exact | is in the field of | child | 0.36 | assertion | sensory; cost 2
+F0003 | steps done one after another | is in the field of | child | 0.36 | assertion | sensory; cost 4
+F0004 | it must come to an end | is in the field of | child | 0.36 | assertion | sensory; cost 6
+F0005 | anyone can follow it without knowing why | is in the field of | child | 0.29 | assertion | carried; cost 7
+F0006 | following instructions | is in the field of | child | 0.21 | assertion | carried; cost 2
+F0007 | child | has tail statistic | intensity | 0.00 | assertion | -
+F0008 | child | has tail statistic | valence | 0.00 | assertion | -
+F0009 | child | has tail statistic | count | 0.00 | assertion | -
+F0010 | child | has tail statistic | spread | 0.00 | assertion | -
+F0011 | an algorithm | is in memory of | child | 0.36 | assertion | cost 2
+F0012 | every step must be exact | is in memory of | child | 0.36 | assertion | cost 2
+F0013 | steps done one after another | is in memory of | child | 0.36 | assertion | cost 4
+F0014 | it must come to an end | is in memory of | child | 0.36 | assertion | cost 6
+F0015 | anyone can follow it without knowing why | is in memory of | child | 0.29 | assertion | cost 7
+F0016 | following instructions | is in memory of | child | 0.21 | assertion | cost 2
+F0017 | a recipe | is in memory of | child | 0.40 | assertion | cost 2
+F0018 | the rules of a game | is in memory of | child | 0.50 | assertion | cost 4
+F0019 | a robot | is in memory of | child | 0.40 | assertion | cost 2
+F0020 | a computer | is in memory of | child | 0.40 | assertion | cost 2
+F0021 | brushing your teeth | is in memory of | child | 0.50 | assertion | cost 3
+F0022 | making a sandwich | is in memory of | child | 0.40 | assertion | cost 3
+
+# trace — the analyst's view, not the reader's
+#   understood: an algorithm
+#   understood: every step must be exact
+#   understood: steps done one after another
+#   understood: it must come to an end
+#   felt a Turing machine: 0.14
+#   felt the halting problem: 0.22
+#   felt formal semantics: 0.22

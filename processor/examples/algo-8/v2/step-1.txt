@@ -1,0 +1,20 @@
+# state after step 1   (field 5 words)
+F0001 | steps done one after another | is in the field of | child | 0.36 | assertion | sensory; cost 5
+F0002 | child | has tail statistic | intensity | 0.00 | assertion | -
+F0003 | child | has tail statistic | valence | 0.00 | assertion | -
+F0004 | child | has tail statistic | count | 0.00 | assertion | -
+F0005 | child | has tail statistic | spread | 0.00 | assertion | -
+F0006 | steps done one after another | is in memory of | child | 0.36 | assertion | cost 5
+F0007 | following instructions | is in memory of | child | 0.40 | assertion | cost 2
+F0008 | a recipe | is in memory of | child | 0.40 | assertion | cost 2
+F0009 | the rules of a game | is in memory of | child | 0.50 | assertion | cost 4
+F0010 | a robot | is in memory of | child | 0.40 | assertion | cost 2
+F0011 | a computer | is in memory of | child | 0.40 | assertion | cost 2
+F0012 | brushing your teeth | is in memory of | child | 0.50 | assertion | cost 3
+F0013 | making a sandwich | is in memory of | child | 0.40 | assertion | cost 3
+
+# trace — the analyst's view, not the reader's
+#   understood: steps done one after another
+#   felt a Turing machine: 0.00
+#   felt the halting problem: 0.00
+#   felt formal semantics: 0.00

@@ -1,0 +1,22 @@
+# state after step 2   (field 10 words)
+F0001 | every step must be exact | is in the field of | child | 0.36 | assertion | sensory; cost 5
+F0002 | steps done one after another | is in the field of | child | 0.29 | assertion | carried; cost 5
+F0003 | child | has tail statistic | intensity | 0.00 | assertion | -
+F0004 | child | has tail statistic | valence | 0.00 | assertion | -
+F0005 | child | has tail statistic | count | 0.00 | assertion | -
+F0006 | child | has tail statistic | spread | 0.00 | assertion | -
+F0007 | every step must be exact | is in memory of | child | 0.36 | assertion | cost 5
+F0008 | steps done one after another | is in memory of | child | 0.29 | assertion | cost 5
+F0009 | following instructions | is in memory of | child | 0.40 | assertion | cost 2
+F0010 | a recipe | is in memory of | child | 0.40 | assertion | cost 2
+F0011 | the rules of a game | is in memory of | child | 0.50 | assertion | cost 4
+F0012 | a robot | is in memory of | child | 0.40 | assertion | cost 2
+F0013 | a computer | is in memory of | child | 0.40 | assertion | cost 2
+F0014 | brushing your teeth | is in memory of | child | 0.50 | assertion | cost 3
+F0015 | making a sandwich | is in memory of | child | 0.40 | assertion | cost 3
+
+# trace — the analyst's view, not the reader's
+#   understood: every step must be exact
+#   felt a Turing machine: 0.00
+#   felt the halting problem: 0.00
+#   felt formal semantics: 0.22

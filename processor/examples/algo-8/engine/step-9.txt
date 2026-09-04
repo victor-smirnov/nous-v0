@@ -1,0 +1,60 @@
+# state after step 9   (field 24 words)
+
+# --- field of consciousness: what the reader can report
+F0001 | an algorithm | is in the field of | child | 0.36 | assertion | sensory; cost 2
+F0002 | steps done one after another | is in the field of | child | 0.36 | assertion | sensory; cost 4
+F0003 | every step must be exact | is in the field of | child | 0.36 | assertion | sensory; cost 2
+F0004 | it must come to an end | is in the field of | child | 0.36 | assertion | sensory; cost 6
+F0005 | same steps, same result every time | is in the field of | child | 0.36 | assertion | sensory; cost 6
+F0006 | a bug | is in the field of | child | 0.29 | assertion | carried; cost 2
+F0007 | a computer | is in the field of | child | 0.26 | assertion | carried; cost 2
+F0008 | child | has consciousness components | understanding 6, none 1 | - | assertion | items by the need each answers to; more than one is a split
+F0009 | child | has tail statistic | intensity | 0.72 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0010 | child | has tail statistic | valence | 0.72 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0011 | child | has tail statistic | count | 2.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0012 | child | has tail statistic | spread | 0.50 | assertion | the field of mind, as it reaches consciousness: mass, no names
+
+# --- motor field: the one continuation
+F0013 | child | does | reads on | - | assertion | the program that has the channel
+F0014 | child | attends to | reality | 0.36 | assertion | the interface in use; value = reality yield so far; fantasy yield 0.21
+
+# --- long-term memory
+F0015 | an algorithm | is in memory of | child | 0.36 | assertion | cost 2
+F0016 | steps done one after another | is in memory of | child | 0.36 | assertion | cost 4
+F0017 | every step must be exact | is in memory of | child | 0.36 | assertion | cost 2
+F0018 | it must come to an end | is in memory of | child | 0.36 | assertion | cost 6
+F0019 | same steps, same result every time | is in memory of | child | 0.36 | assertion | cost 6
+F0020 | a bug | is in memory of | child | 0.29 | assertion | cost 2
+F0021 | a computer | is in memory of | child | 0.26 | assertion | cost 2
+F0022 | a computer only follows algorithms | is in memory of | child | 0.22 | assertion | cost 5
+F0023 | anyone can follow it without knowing why | is in memory of | child | 0.22 | assertion | cost 6
+F0024 | following instructions | is in memory of | child | 0.40 | assertion | cost 2
+F0025 | a recipe | is in memory of | child | 0.40 | assertion | cost 2
+F0026 | the rules of a game | is in memory of | child | 0.50 | assertion | cost 4
+F0027 | a robot | is in memory of | child | 0.40 | assertion | cost 2
+F0028 | brushing your teeth | is in memory of | child | 0.50 | assertion | cost 3
+F0029 | making a sandwich | is in memory of | child | 0.40 | assertion | cost 3
+
+# --- need portrait
+F0030 | steps done one after another | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0031 | every step must be exact | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0032 | same steps, same result every time | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0033 | it must come to an end | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0034 | anyone can follow it without knowing why | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0035 | an algorithm | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0036 | a computer only follows algorithms | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0037 | a bug | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0038 | child | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
+F0039 | child | has conflict level | 0.00 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
+
+# --- field of mind (blackboard): represented, not conscious — the analyst's view, not the reader's
+#   a computer only follows algorithms (0.23): no room: 5 words, 0.0 left
+#   anyone can follow it without knowing why (0.23): no room: 6 words, 0.0 left
+#   a game (0.21): no room: 2 words, 0.0 left
+
+# --- trace
+#   need mass in the Field: understanding 2.16
+#   mode reality: reality yield 0.36, fantasy yield 0.21
+#   felt a Turing machine: 0.20
+#   felt the halting problem: 0.27
+#   felt formal semantics: 0.32

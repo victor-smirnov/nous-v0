@@ -1,0 +1,53 @@
+# heading: algo-8 — a reader of eight
+# A Field of a sentence and a half, memory that holds for three or four steps, prior knowledge of instructions,
+# games and machines, and needs in which fun and doing it myself weigh nearly as much as understanding.
+
+# --- parameters
+F0001 | child | has parameter | budget | 24 | assertion | words the Field holds
+F0002 | child | has parameter | k | 0.2 | assertion | -
+F0003 | child | has parameter | persistence | 0.8 | assertion | -
+F0004 | child | has parameter | decay | 0.75 | assertion | -
+F0005 | child | has parameter | floor | 0.2 | assertion | -
+F0006 | child | has parameter | default cost | 2 | assertion | -
+F0007 | child | has parameter | confusion | 0.5 | assertion | per missing prerequisite
+F0008 | child | has parameter | comprehension | 0.4 | assertion | a concept named on its ground
+
+# --- needs
+F0010 | understanding | is a need of | child | 0.9 | assertion | -
+F0011 | understanding | is active in | child | - | assertion | -
+F0012 | fun | is a need of | child | 0.7 | assertion | -
+F0013 | fun | is active in | child | - | assertion | -
+F0014 | doing it myself | is a need of | child | 0.6 | assertion | competence, as an eight-year-old feels it
+F0015 | doing it myself | is active in | child | - | assertion | -
+F0016 | safety | is a need of | child | 0.5 | assertion | -
+F0017 | safety | is active in | child | - | assertion | -
+
+# --- prior knowledge: already in memory when the explanation starts
+F0020 | following instructions | is in memory of | child | 0.4 | assertion | cost 2
+F0021 | a recipe | is in memory of | child | 0.4 | assertion | cost 2
+F0022 | the rules of a game | is in memory of | child | 0.5 | assertion | cost 4
+F0023 | a robot | is in memory of | child | 0.4 | assertion | cost 2
+F0024 | a computer | is in memory of | child | 0.4 | assertion | cost 2
+F0025 | brushing your teeth | is in memory of | child | 0.5 | assertion | cost 3
+F0026 | making a sandwich | is in memory of | child | 0.4 | assertion | cost 3
+
+# --- what the child already knows things cost
+F0030 | a game | has satisfaction delta | fun | 0.5 | assertion | -
+F0031 | a silly robot | has satisfaction delta | fun | 0.6 | assertion | a robot doing it wrong is funny
+F0032 | homework | has satisfaction delta | fun | -0.5 | assertion | -
+F0033 | a mistake | has satisfaction delta | doing it myself | -0.4 | assertion | -
+F0034 | doing it yourself | has satisfaction delta | doing it myself | 0.5 | assertion | -
+F0035 | a cake | has satisfaction delta | fun | 0.3 | assertion | -
+F0036 | a long list | has satisfaction delta | fun | -0.3 | assertion | -
+
+# --- the bucket
+F0040 | a recipe | is associated with | a cake | 0.6 | assertion | -
+F0041 | instructions | is associated with | homework | 0.4 | assertion | the drag to avoid
+F0042 | the rules of a game | is associated with | a game | 0.8 | assertion | -
+F0043 | a robot | is associated with | a silly robot | 0.5 | assertion | -
+F0044 | a computer | is associated with | a game | 0.6 | assertion | -
+F0045 | wrong | is associated with | a mistake | 0.5 | assertion | -
+F0046 | steps | is associated with | stairs | 0.3 | assertion | -
+F0047 | making a sandwich | is associated with | lunch | 0.4 | assertion | -
+F0048 | you try it | is associated with | doing it yourself | 0.7 | assertion | -
+F0049 | a list | is associated with | a long list | 0.3 | assertion | -

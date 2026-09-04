@@ -23,6 +23,23 @@ Two things fill the Field at every step, and they compete for the same budget:
 
 The budget is measured in words for now (bits later). The text pays for cues; the bucket delivers the rest.
 
+## The architecture
+
+The state is written in six parts, one per component of the cognitive architecture:
+
+| component | in the engine |
+|---|---|
+| sensory field (receptors) | the stage-1 candidates: what the chunk names, at what cost in words |
+| motor field (effectors) | the one continuation: the leading program's action; a chunk arriving while the motor field is elsewhere is not received |
+| field of mind (blackboard) | every candidate of the step — sensory, carried, associative — with a name, not conscious |
+| field of consciousness | the cut of the field of mind by k and by budget; non-unitary: its components are the items grouped by the need each answers to |
+| long-term memory | what persists, decaying, with consolidated prior knowledge as a floor |
+| need portrait | needs with class, priority, satisfaction level; the active subset; the program; the conflict level |
+| model of the environment | the paths, associations and prerequisites, run instead of the text: the second set of interfaces. The channel attends to reality or to the model by reinforcement — which pays better now |
+
+The model — a language model, or the engine — computes the dynamics by the rules. The content of the field of
+consciousness is never written; it is derived from the state of the whole.
+
 ## The contract
 
 Input, per step:
@@ -92,6 +109,19 @@ prerequisites point at them. Its first run failed on the engine, not the text �
 decaying like working memory, a mention was resetting a known concept to the floor, and one large item was
 blocking small ones that had room — and the three fixes are checked against qm-5, whose verdicts did not move.
 
+`examples/algo-8/` (the concept of an algorithm, for a reader of eight) forced two more: an understood concept
+is held in the Field at the size of its name, not of the words that introduced it, and `ceiling` bounds what
+any final chunk can leave. It also produced the first divergence between model and reader: told that familiar
+examples outbid a new concept, the explainer removed every analogy, and the model scored the result higher
+while a child would do worse. The engine has no rule by which an example grounds a concept, only the rule by
+which it competes for the Field. That gap is recorded, not patched.
+
+The **need portrait** (classes, priorities, satisfaction levels with dynamics) is in the engine and tried on
+algo-8 with a fed and a hungry child: the hungry one does worse on the text built on a sandwich and the same
+on the text without food. Under the portrait no text passes the thresholds that were set against a static
+ceiling, which is the open question it leaves: with dynamic weights, absolute thresholds on C are the wrong
+instrument. See algo-8's README.
+
 ## Layout
 
 ```
@@ -102,6 +132,7 @@ processor/
   EVALUATOR.md       the instructions the evaluating sub-agent runs
   engine.py          stages 2–6 as a program
   examples/
+    algo-8/          an algorithm for a reader of eight: v1 with analogies, v2 without, README.md
     quad-8/          quadratic equations for the eighth grade: prior knowledge in memory, README.md
     qm-5/            target.txt, profile.txt, text.txt, v1/ v2/ v3/, README.md
     micro-1/         profile.txt, text.txt

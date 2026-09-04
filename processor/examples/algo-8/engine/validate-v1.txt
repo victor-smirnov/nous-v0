@@ -1,0 +1,13 @@
+PASS  reach steps done one after another: 0.36 (needs 0.3)
+PASS  reach every step must be exact: 0.36 (needs 0.3)
+FAIL  reach same steps, same result every time: 0.00 (needs 0.3)
+PASS  reach it must come to an end: 0.36 (needs 0.3)
+FAIL  reach anyone can follow it without knowing why: 0.22 (needs 0.3)
+FAIL  reach an algorithm: 0.00 (needs 0.3)
+FAIL  reach a computer only follows algorithms: 0.00 (needs 0.3)
+FAIL  reach a bug: 0.00 (needs 0.2)
+FAIL  feel a Turing machine: 0.11 (needs 0.2)
+PASS  feel the halting problem: 0.22 (needs 0.2)
+PASS  feel formal semantics: 0.22 (needs 0.2)
+PASS  never named: clean
+FAIL  in order: a computer only follows algorithms needs an algorithm; a bug needs an algorithm; a bug needs same steps, same result every time

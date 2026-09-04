@@ -1,33 +1,60 @@
-# state after step 5   (field 38 words)
+# state after step 5   (field 40 words)
+
+# --- field of consciousness: what the reader can report
 F0001 | the unknown x | is in the field of | student | 0.43 | assertion | carried; cost 1
-F0002 | the sign of the discriminant tells how many roots | is in the field of | student | 0.36 | assertion | sensory; cost 20
+F0002 | the sign of the discriminant tells how many roots | is in the field of | student | 0.36 | assertion | sensory; cost 9
 F0003 | the discriminant | is in the field of | student | 0.36 | assertion | sensory; cost 2
 F0004 | two roots, one root, or none | is in the field of | student | 0.36 | assertion | sensory; cost 5
-F0005 | the square root | is in the field of | student | 0.34 | assertion | carried; cost 7
+F0005 | the square root | is in the field of | student | 0.34 | assertion | carried; cost 3
 F0006 | a quadratic equation | is in the field of | student | 0.31 | assertion | carried; cost 3
-F0007 | student | has tail statistic | intensity | 0.12 | assertion | -
-F0008 | student | has tail statistic | valence | 0.12 | assertion | -
-F0009 | student | has tail statistic | count | 1.00 | assertion | -
-F0010 | student | has tail statistic | spread | 0.00 | assertion | -
-F0011 | the unknown x | is in memory of | student | 0.43 | assertion | cost 1
-F0012 | the sign of the discriminant tells how many roots | is in memory of | student | 0.36 | assertion | cost 20
-F0013 | the discriminant | is in memory of | student | 0.36 | assertion | cost 2
-F0014 | two roots, one root, or none | is in memory of | student | 0.36 | assertion | cost 5
-F0015 | the square root | is in memory of | student | 0.34 | assertion | cost 7
-F0016 | a quadratic equation | is in memory of | student | 0.31 | assertion | cost 3
-F0017 | a linear equation | is in memory of | student | 0.50 | assertion | cost 3
-F0018 | expanding brackets | is in memory of | student | 0.40 | assertion | cost 13
-F0019 | a root of the equation | is in memory of | student | 0.23 | assertion | cost 6
-F0020 | the area of a square | is in memory of | student | 0.30 | assertion | cost 4
-F0021 | a door for later, not a wall | has satisfaction delta | interest | 0.3 | assertion | established by the chunk
+F0007 | expanding brackets | is in the field of | student | 0.29 | assertion | carried; cost 2
+F0008 | a worked example | is in the field of | student | 0.29 | assertion | carried; cost 2
+F0009 | checking a root by substitution | is in the field of | student | 0.26 | assertion | carried; cost 5
+F0010 | a root of the equation | is in the field of | student | 0.26 | assertion | carried; cost 5
+F0011 | a linear equation | is in the field of | student | 0.26 | assertion | carried; cost 3
+F0012 | student | has consciousness components | understanding 6, none 4, getting the answer right 1 | - | assertion | items by the need each answers to; more than one is a split
+F0013 | student | has tail statistic | intensity | 0.12 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0014 | student | has tail statistic | valence | 0.12 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0015 | student | has tail statistic | count | 1.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0016 | student | has tail statistic | spread | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
 
-# trace — the analyst's view, not the reader's
-#   evicted a linear equation (0.26): no room: 3 words, 2.0 left
-#   evicted numbers beyond the ones you know (0.20): no room: 8 words, 2.0 left
-#   evicted a door for later, not a wall (0.12): below k
+# --- motor field: the one continuation
+F0017 | student | does | reads on | - | assertion | the program that has the channel
+F0018 | student | attends to | reality | 0.36 | assertion | the interface in use; value = reality yield so far; fantasy yield 0.00
+
+# --- long-term memory
+F0019 | the unknown x | is in memory of | student | 0.43 | assertion | cost 1
+F0020 | the sign of the discriminant tells how many roots | is in memory of | student | 0.36 | assertion | cost 9
+F0021 | the discriminant | is in memory of | student | 0.36 | assertion | cost 2
+F0022 | two roots, one root, or none | is in memory of | student | 0.36 | assertion | cost 5
+F0023 | the square root | is in memory of | student | 0.34 | assertion | cost 3
+F0024 | a quadratic equation | is in memory of | student | 0.31 | assertion | cost 3
+F0025 | expanding brackets | is in memory of | student | 0.29 | assertion | cost 2
+F0026 | a worked example | is in memory of | student | 0.29 | assertion | cost 2
+F0027 | checking a root by substitution | is in memory of | student | 0.26 | assertion | cost 5
+F0028 | a root of the equation | is in memory of | student | 0.26 | assertion | cost 5
+F0029 | a linear equation | is in memory of | student | 0.26 | assertion | cost 3
+F0030 | the area of a square | is in memory of | student | 0.30 | assertion | cost 4
+
+# --- need portrait
+F0031 | a door for later, not a wall | has satisfaction delta | interest | 0.3 | assertion | established by the chunk
+F0032 | a quadratic equation | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0033 | a root of the equation | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0034 | checking a root by substitution | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0035 | two roots, one root, or none | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0036 | the discriminant | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0037 | the sign of the discriminant tells how many roots | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0038 | student | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
+F0039 | student | has conflict level | 0.15 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
+
+# --- field of mind (blackboard): represented, not conscious — the analyst's view, not the reader's
+#   numbers beyond the ones you know (0.20): no room: 8 words, 0.0 left
+#   a door for later, not a wall (0.12): below k
+
+# --- trace
 #   understood: the sign of the discriminant tells how many roots
-#   understood: the discriminant
-#   understood: two roots, one root, or none
+#   need mass in the Field: understanding 2.40, getting the answer right 0.35
+#   mode reality: reality yield 0.36, fantasy yield 0.00
 #   felt complex numbers: 0.29
 #   felt the fundamental theorem of algebra: 0.14
-#   felt Vieta's theorem: 0.07
+#   felt Vieta's theorem: 0.18

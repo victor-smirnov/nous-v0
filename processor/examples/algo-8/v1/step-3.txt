@@ -1,0 +1,30 @@
+# state after step 3   (field 22 words)
+F0001 | a silly robot | is in the field of | child | 0.42 | assertion | sensory; cost 6
+F0002 | a robot | is in the field of | child | 0.40 | assertion | sensory; cost 3
+F0003 | every step must be exact | is in the field of | child | 0.36 | assertion | sensory; cost 7
+F0004 | same steps, same result every time | is in the field of | child | 0.36 | assertion | sensory; cost 6
+F0005 | child | has tail statistic | intensity | 0.00 | assertion | -
+F0006 | child | has tail statistic | valence | 0.00 | assertion | -
+F0007 | child | has tail statistic | count | 0.00 | assertion | -
+F0008 | child | has tail statistic | spread | 0.00 | assertion | -
+F0009 | a silly robot | is in memory of | child | 0.42 | assertion | cost 6
+F0010 | a robot | is in memory of | child | 0.40 | assertion | cost 3
+F0011 | every step must be exact | is in memory of | child | 0.36 | assertion | cost 7
+F0012 | same steps, same result every time | is in memory of | child | 0.36 | assertion | cost 6
+F0013 | making a sandwich | is in memory of | child | 0.40 | assertion | cost 3
+F0014 | brushing your teeth | is in memory of | child | 0.50 | assertion | cost 3
+F0015 | steps done one after another | is in memory of | child | 0.20 | assertion | cost 16
+F0016 | following instructions | is in memory of | child | 0.40 | assertion | cost 2
+F0017 | a recipe | is in memory of | child | 0.40 | assertion | cost 2
+F0018 | the rules of a game | is in memory of | child | 0.50 | assertion | cost 4
+F0019 | a computer | is in memory of | child | 0.40 | assertion | cost 2
+
+# trace — the analyst's view, not the reader's
+#   evicted making a sandwich (0.32): no room: 3 words, 2.0 left
+#   evicted brushing your teeth (0.32): no room: 3 words, 2.0 left
+#   evicted lunch (0.08): below k
+#   understood: every step must be exact
+#   understood: same steps, same result every time
+#   felt a Turing machine: 0.00
+#   felt the halting problem: 0.00
+#   felt formal semantics: 0.32

@@ -1,0 +1,46 @@
+# state after step 3   (field 16 words)
+
+# --- field of consciousness: what the reader can report
+F0001 | same steps, same result every time | is in the field of | child | 0.46 | assertion | sensory; cost 6
+F0002 | following instructions | is in the field of | child | 0.40 | assertion | sensory; cost 2
+F0003 | every step must be exact | is in the field of | child | 0.36 | assertion | sensory; cost 3
+F0004 | steps done one after another | is in the field of | child | 0.23 | assertion | carried; cost 5
+F0005 | child | has consciousness components | understanding 3, none 1 | - | assertion | items by the need each answers to; more than one is a split
+F0006 | child | has tail statistic | intensity | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0007 | child | has tail statistic | valence | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0008 | child | has tail statistic | count | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0009 | child | has tail statistic | spread | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+
+# --- motor field: the one continuation
+F0010 | child | does | reads on | - | assertion | the program that has the channel
+F0011 | child | attends to | reality | 0.38 | assertion | the interface in use; value = reality yield so far; fantasy yield 0.00
+
+# --- long-term memory
+F0012 | same steps, same result every time | is in memory of | child | 0.46 | assertion | cost 6
+F0013 | following instructions | is in memory of | child | 0.40 | assertion | cost 2
+F0014 | every step must be exact | is in memory of | child | 0.36 | assertion | cost 3
+F0015 | steps done one after another | is in memory of | child | 0.23 | assertion | cost 5
+F0016 | a recipe | is in memory of | child | 0.40 | assertion | cost 2
+F0017 | the rules of a game | is in memory of | child | 0.50 | assertion | cost 4
+F0018 | a robot | is in memory of | child | 0.40 | assertion | cost 2
+F0019 | a computer | is in memory of | child | 0.40 | assertion | cost 2
+F0020 | brushing your teeth | is in memory of | child | 0.50 | assertion | cost 3
+F0021 | making a sandwich | is in memory of | child | 0.40 | assertion | cost 3
+
+# --- need portrait
+F0022 | same steps, same result every time | has satisfaction delta | safety | 0.2 | assertion | established by the chunk
+F0023 | steps done one after another | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0024 | every step must be exact | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0025 | same steps, same result every time | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0026 | child | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
+F0027 | child | has conflict level | 0.09 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
+
+# --- field of mind (blackboard): represented, not conscious — the analyst's view, not the reader's
+
+# --- trace
+#   understood: same steps, same result every time
+#   need mass in the Field: understanding 1.08, safety 0.10
+#   mode reality: reality yield 0.38, fantasy yield 0.00
+#   felt a Turing machine: 0.00
+#   felt the halting problem: 0.00
+#   felt formal semantics: 0.35

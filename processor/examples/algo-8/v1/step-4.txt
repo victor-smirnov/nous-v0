@@ -1,0 +1,31 @@
+# state after step 4   (field 23 words)
+F0001 | steps done one after another | is in the field of | child | 0.36 | assertion | sensory; cost 4
+F0002 | it must come to an end | is in the field of | child | 0.36 | assertion | sensory; cost 19
+F0003 | child | has tail statistic | intensity | 0.42 | assertion | -
+F0004 | child | has tail statistic | valence | 0.42 | assertion | -
+F0005 | child | has tail statistic | count | 1.00 | assertion | -
+F0006 | child | has tail statistic | spread | 0.00 | assertion | -
+F0007 | steps done one after another | is in memory of | child | 0.36 | assertion | cost 4
+F0008 | it must come to an end | is in memory of | child | 0.36 | assertion | cost 19
+F0009 | a silly robot | is in memory of | child | 0.32 | assertion | cost 6
+F0010 | a robot | is in memory of | child | 0.40 | assertion | cost 3
+F0011 | every step must be exact | is in memory of | child | 0.27 | assertion | cost 7
+F0012 | same steps, same result every time | is in memory of | child | 0.27 | assertion | cost 6
+F0013 | making a sandwich | is in memory of | child | 0.40 | assertion | cost 3
+F0014 | brushing your teeth | is in memory of | child | 0.50 | assertion | cost 3
+F0015 | following instructions | is in memory of | child | 0.40 | assertion | cost 2
+F0016 | a recipe | is in memory of | child | 0.40 | assertion | cost 2
+F0017 | the rules of a game | is in memory of | child | 0.50 | assertion | cost 4
+F0018 | a computer | is in memory of | child | 0.40 | assertion | cost 2
+
+# trace — the analyst's view, not the reader's
+#   evicted a silly robot (0.34): no room: 6 words, 1.0 left
+#   evicted a robot (0.32): no room: 3 words, 1.0 left
+#   evicted every step must be exact (0.29): no room: 7 words, 1.0 left
+#   evicted same steps, same result every time (0.29): no room: 6 words, 1.0 left
+#   evicted lunch (0.20): no room: 3 words, 1.0 left
+#   understood: steps done one after another
+#   understood: it must come to an end
+#   felt a Turing machine: 0.00
+#   felt the halting problem: 0.22
+#   felt formal semantics: 0.24

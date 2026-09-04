@@ -1,29 +1,49 @@
 # state after step 7   (field 17 words)
-F0001 | both at once until you look | is in the field of | child | 0.36 | assertion | sensory; cost 6
+
+# --- field of consciousness: what the reader can report
+F0001 | both at once until you look | is in the field of | child | 0.36 | assertion | sensory; cost 3
 F0002 | you cannot know which until you look | is in the field of | child | 0.36 | assertion | sensory; cost 3
 F0003 | looking changes it | is in the field of | child | 0.36 | assertion | sensory; cost 3
-F0004 | tiny things | is in the field of | child | 0.29 | assertion | carried; cost 2
-F0005 | looking at it | is in the field of | child | 0.29 | assertion | carried; cost 3
-F0006 | child | has tail statistic | intensity | 0.18 | assertion | -
-F0007 | child | has tail statistic | valence | 0.18 | assertion | -
-F0008 | child | has tail statistic | count | 1.00 | assertion | -
-F0009 | child | has tail statistic | spread | 0.00 | assertion | -
-F0010 | both at once until you look | is in memory of | child | 0.36 | assertion | cost 6
-F0011 | you cannot know which until you look | is in memory of | child | 0.36 | assertion | cost 3
-F0012 | looking changes it | is in memory of | child | 0.36 | assertion | cost 3
-F0013 | tiny things | is in memory of | child | 0.29 | assertion | cost 2
-F0014 | looking at it | is in memory of | child | 0.29 | assertion | cost 3
-F0015 | the pattern from many tries | is in memory of | child | 0.25 | assertion | cost 9
+F0004 | the pattern from many tries | is in the field of | child | 0.29 | assertion | carried; cost 3
+F0005 | tiny things | is in the field of | child | 0.29 | assertion | carried; cost 2
+F0006 | looking at it | is in the field of | child | 0.29 | assertion | carried; cost 3
+F0007 | child | has consciousness components | understanding 6 | - | assertion | items by the need each answers to; more than one is a split
+F0008 | child | has tail statistic | intensity | 0.18 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0009 | child | has tail statistic | valence | 0.18 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0010 | child | has tail statistic | count | 1.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0011 | child | has tail statistic | spread | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
 
-# trace — the analyst's view, not the reader's
-#   evicted the pattern from many tries (0.29): no room: 9 words, 6.0 left
-#   evicted a spinning coin (0.18): below k
-#   evicted you cannot tell yet (0.14): below k
-#   evicted heads or tails (0.12): below k
-#   evicted ants (0.10): below k
-#   understood: both at once until you look
-#   understood: you cannot know which until you look
-#   understood: looking changes it
+# --- motor field: the one continuation
+F0012 | child | does | reads on | - | assertion | the program that has the channel
+F0013 | child | attends to | reality | 0.35 | assertion | the interface in use; value = reality yield so far; fantasy yield 0.10
+
+# --- long-term memory
+F0014 | both at once until you look | is in memory of | child | 0.36 | assertion | cost 3
+F0015 | you cannot know which until you look | is in memory of | child | 0.36 | assertion | cost 3
+F0016 | looking changes it | is in memory of | child | 0.36 | assertion | cost 3
+F0017 | the pattern from many tries | is in memory of | child | 0.29 | assertion | cost 3
+F0018 | tiny things | is in memory of | child | 0.29 | assertion | cost 2
+F0019 | looking at it | is in memory of | child | 0.29 | assertion | cost 3
+
+# --- need portrait
+F0020 | tiny things | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0021 | looking at it | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0022 | both at once until you look | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0023 | you cannot know which until you look | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0024 | looking changes it | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0025 | the pattern from many tries | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0026 | child | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
+F0027 | child | has conflict level | 0.00 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
+
+# --- field of mind (blackboard): represented, not conscious — the analyst's view, not the reader's
+#   a spinning coin (0.18): below k
+#   you cannot tell yet (0.14): below k
+#   heads or tails (0.12): below k
+#   ants (0.10): below k
+
+# --- trace
+#   need mass in the Field: understanding 2.16
+#   mode reality: reality yield 0.35, fantasy yield 0.10
 #   felt wavefunction: 0.22
-#   felt probability amplitude: 0.23
+#   felt probability amplitude: 0.25
 #   felt collapse: 0.25

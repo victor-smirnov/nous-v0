@@ -1,0 +1,19 @@
+Some things you do in steps, one after another: first this, then that, then the next thing. Steps done one after another, in order.
+
+Every step must be exact. Not "a bit", not "you know what I mean". Say exactly what to do, so nobody has to guess.
+
+Same steps, same result every time. Follow the exact steps today, follow them tomorrow: what comes out is the same. No surprises.
+
+Steps one after another must come to an end. There is a last step. Not on and on forever; you stop, and it's done.
+
+If every step is exact, anyone can follow it without knowing why. They don't need to understand. They do each step, and it works.
+
+This has a name: an algorithm. An algorithm is exact steps, one after another, all the way to the last one. Al-go-rithm.
+
+A computer only follows algorithms. Anyone can follow without knowing why; a computer knows nothing at all. It does exactly what the algorithm says.
+
+Same steps, same result every time. If one step in the algorithm is missing, the silly result comes out every time. That's a bug.
+
+So an algorithm is steps one after another, every step exact, and it must come to an end. Same steps, same result every time.
+
+You try it: write an algorithm. Anyone can follow it without knowing why; a computer only follows algorithms. One step missing? A bug.

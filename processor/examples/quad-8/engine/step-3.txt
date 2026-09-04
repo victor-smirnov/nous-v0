@@ -1,30 +1,52 @@
-# state after step 3   (field 33 words)
-F0001 | the unknown x | is in the field of | student | 0.60 | assertion | sensory; cost 1
-F0002 | expanding brackets | is in the field of | student | 0.40 | assertion | sensory; cost 13
-F0003 | a root of the equation | is in the field of | student | 0.36 | assertion | sensory; cost 6
-F0004 | two roots, one root, or none | is in the field of | student | 0.36 | assertion | sensory; cost 8
-F0005 | a linear equation | is in the field of | student | 0.36 | assertion | carried; cost 3
-F0006 | a worked example | is in the field of | student | 0.24 | assertion | carried; cost 2
-F0007 | student | has tail statistic | intensity | 0.00 | assertion | -
-F0008 | student | has tail statistic | valence | 0.00 | assertion | -
-F0009 | student | has tail statistic | count | 0.00 | assertion | -
-F0010 | student | has tail statistic | spread | 0.00 | assertion | -
-F0011 | the unknown x | is in memory of | student | 0.60 | assertion | cost 1
-F0012 | expanding brackets | is in memory of | student | 0.40 | assertion | cost 13
-F0013 | a root of the equation | is in memory of | student | 0.36 | assertion | cost 6
-F0014 | two roots, one root, or none | is in memory of | student | 0.36 | assertion | cost 8
-F0015 | a linear equation | is in memory of | student | 0.36 | assertion | cost 3
-F0016 | a worked example | is in memory of | student | 0.24 | assertion | cost 2
-F0017 | a quadratic equation | is in memory of | student | 0.25 | assertion | cost 17
-F0018 | the square root | is in memory of | student | 0.40 | assertion | cost 3
-F0019 | the area of a square | is in memory of | student | 0.30 | assertion | cost 4
+# state after step 3   (field 32 words)
 
-# trace — the analyst's view, not the reader's
-#   evicted a quadratic equation (0.26): no room: 17 words, 9.0 left
-#   understood: a root of the equation
+# --- field of consciousness: what the reader can report
+F0001 | the unknown x | is in the field of | student | 0.60 | assertion | sensory; cost 1
+F0002 | expanding brackets | is in the field of | student | 0.40 | assertion | sensory; cost 2
+F0003 | a worked example | is in the field of | student | 0.40 | assertion | carried; cost 2
+F0004 | checking a root by substitution | is in the field of | student | 0.36 | assertion | sensory; cost 5
+F0005 | a root of the equation | is in the field of | student | 0.36 | assertion | sensory; cost 5
+F0006 | two roots, one root, or none | is in the field of | student | 0.36 | assertion | sensory; cost 6
+F0007 | a linear equation | is in the field of | student | 0.36 | assertion | carried; cost 3
+F0008 | a quadratic equation | is in the field of | student | 0.26 | assertion | carried; cost 3
+F0009 | the example equation | is in the field of | student | 0.20 | assertion | sensory; cost 5
+F0010 | student | has consciousness components | none 4, understanding 4, getting the answer right 1 | - | assertion | items by the need each answers to; more than one is a split
+F0011 | student | has tail statistic | intensity | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0012 | student | has tail statistic | valence | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0013 | student | has tail statistic | count | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0014 | student | has tail statistic | spread | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+
+# --- motor field: the one continuation
+F0015 | student | does | reads on | - | assertion | the program that has the channel
+F0016 | student | attends to | reality | 0.37 | assertion | the interface in use; value = reality yield so far; fantasy yield 0.00
+
+# --- long-term memory
+F0017 | the unknown x | is in memory of | student | 0.60 | assertion | cost 1
+F0018 | expanding brackets | is in memory of | student | 0.40 | assertion | cost 2
+F0019 | a worked example | is in memory of | student | 0.40 | assertion | cost 2
+F0020 | checking a root by substitution | is in memory of | student | 0.36 | assertion | cost 5
+F0021 | a root of the equation | is in memory of | student | 0.36 | assertion | cost 5
+F0022 | two roots, one root, or none | is in memory of | student | 0.36 | assertion | cost 6
+F0023 | a linear equation | is in memory of | student | 0.36 | assertion | cost 3
+F0024 | a quadratic equation | is in memory of | student | 0.26 | assertion | cost 3
+F0025 | the example equation | is in memory of | student | 0.20 | assertion | cost 5
+F0026 | the square root | is in memory of | student | 0.40 | assertion | cost 3
+F0027 | the area of a square | is in memory of | student | 0.30 | assertion | cost 4
+
+# --- need portrait
+F0028 | a quadratic equation | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0029 | a root of the equation | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0030 | checking a root by substitution | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0031 | two roots, one root, or none | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0032 | student | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
+F0033 | student | has conflict level | 0.21 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
+
+# --- field of mind (blackboard): represented, not conscious — the analyst's view, not the reader's
+
+# --- trace
 #   understood: two roots, one root, or none
+#   need mass in the Field: understanding 1.68, getting the answer right 0.35
+#   mode reality: reality yield 0.37, fantasy yield 0.00
 #   felt complex numbers: 0.11
 #   felt the fundamental theorem of algebra: 0.14
-#   felt Vieta's theorem: 0.11
-#   short form of checking a root by substitution with checking a root by substitution not in memory: an unknown token, ignored
-#   short form of the example equation with the example equation not in memory: an unknown token, ignored
+#   felt Vieta's theorem: 0.25

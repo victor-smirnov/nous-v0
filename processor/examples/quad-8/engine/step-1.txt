@@ -1,29 +1,47 @@
-# state after step 1   (field 35 words)
-F0001 | the unknown x | is in the field of | student | 0.60 | assertion | sensory; cost 3
+# state after step 1   (field 20 words)
+
+# --- field of consciousness: what the reader can report
+F0001 | the unknown x | is in the field of | student | 0.60 | assertion | sensory; cost 2
 F0002 | a linear equation | is in the field of | student | 0.50 | assertion | sensory; cost 3
-F0003 | a quadratic equation | is in the field of | student | 0.36 | assertion | sensory; cost 17
-F0004 | a worked example | is in the field of | student | 0.28 | assertion | associative via an example; cost 2
+F0003 | a worked example | is in the field of | student | 0.47 | assertion | associative via an example; cost 2
+F0004 | a quadratic equation | is in the field of | student | 0.36 | assertion | sensory; cost 3
 F0005 | x squared | is in the field of | student | 0.20 | assertion | sensory; cost 2
 F0006 | an example | is in the field of | student | 0.20 | assertion | sensory; cost 1
 F0007 | the example equation | is in the field of | student | 0.20 | assertion | sensory; cost 7
-F0008 | student | has tail statistic | intensity | 0.00 | assertion | -
-F0009 | student | has tail statistic | valence | 0.00 | assertion | -
-F0010 | student | has tail statistic | count | 0.00 | assertion | -
-F0011 | student | has tail statistic | spread | 0.00 | assertion | -
-F0012 | the unknown x | is in memory of | student | 0.60 | assertion | cost 3
-F0013 | a linear equation | is in memory of | student | 0.50 | assertion | cost 3
-F0014 | a quadratic equation | is in memory of | student | 0.36 | assertion | cost 17
-F0015 | a worked example | is in memory of | student | 0.28 | assertion | cost 2
-F0016 | x squared | is in memory of | student | 0.20 | assertion | cost 2
-F0017 | an example | is in memory of | student | 0.20 | assertion | cost 1
-F0018 | the example equation | is in memory of | student | 0.20 | assertion | cost 7
-F0019 | the square root | is in memory of | student | 0.40 | assertion | cost 3
-F0020 | expanding brackets | is in memory of | student | 0.40 | assertion | cost 2
-F0021 | the area of a square | is in memory of | student | 0.30 | assertion | cost 4
+F0008 | student | has consciousness components | none 5, getting the answer right 1, understanding 1 | - | assertion | items by the need each answers to; more than one is a split
+F0009 | student | has tail statistic | intensity | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0010 | student | has tail statistic | valence | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0011 | student | has tail statistic | count | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0012 | student | has tail statistic | spread | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
 
-# trace — the analyst's view, not the reader's
-#   evicted the area of a square (0.08): below k
+# --- motor field: the one continuation
+F0013 | student | does | reads on | - | assertion | the program that has the channel
+F0014 | student | attends to | reality | 0.34 | assertion | the interface in use; value = reality yield so far; fantasy yield 0.08
+
+# --- long-term memory
+F0015 | the unknown x | is in memory of | student | 0.60 | assertion | cost 2
+F0016 | a linear equation | is in memory of | student | 0.50 | assertion | cost 3
+F0017 | a worked example | is in memory of | student | 0.47 | assertion | cost 2
+F0018 | a quadratic equation | is in memory of | student | 0.36 | assertion | cost 3
+F0019 | x squared | is in memory of | student | 0.20 | assertion | cost 2
+F0020 | an example | is in memory of | student | 0.20 | assertion | cost 1
+F0021 | the example equation | is in memory of | student | 0.20 | assertion | cost 7
+F0022 | the square root | is in memory of | student | 0.40 | assertion | cost 3
+F0023 | expanding brackets | is in memory of | student | 0.40 | assertion | cost 2
+F0024 | the area of a square | is in memory of | student | 0.30 | assertion | cost 4
+
+# --- need portrait
+F0025 | a quadratic equation | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0026 | student | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
+F0027 | student | has conflict level | 0.58 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
+
+# --- field of mind (blackboard): represented, not conscious — the analyst's view, not the reader's
+#   the area of a square (0.08): below k
+
+# --- trace
 #   understood: a quadratic equation
+#   need mass in the Field: understanding 0.60, getting the answer right 0.35
+#   mode reality: reality yield 0.34, fantasy yield 0.08
 #   felt complex numbers: 0.00
 #   felt the fundamental theorem of algebra: 0.00
 #   felt Vieta's theorem: 0.00

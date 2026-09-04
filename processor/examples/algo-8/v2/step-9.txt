@@ -1,0 +1,40 @@
+# state after step 9   (field 24 words)
+F0001 | an algorithm | is in the field of | child | 0.36 | assertion | sensory; cost 2
+F0002 | steps done one after another | is in the field of | child | 0.36 | assertion | sensory; cost 4
+F0003 | every step must be exact | is in the field of | child | 0.36 | assertion | sensory; cost 2
+F0004 | it must come to an end | is in the field of | child | 0.36 | assertion | sensory; cost 6
+F0005 | same steps, same result every time | is in the field of | child | 0.36 | assertion | sensory; cost 6
+F0006 | a bug | is in the field of | child | 0.29 | assertion | carried; cost 2
+F0007 | a computer | is in the field of | child | 0.26 | assertion | carried; cost 2
+F0008 | child | has tail statistic | intensity | 0.00 | assertion | -
+F0009 | child | has tail statistic | valence | 0.00 | assertion | -
+F0010 | child | has tail statistic | count | 0.00 | assertion | -
+F0011 | child | has tail statistic | spread | 0.00 | assertion | -
+F0012 | an algorithm | is in memory of | child | 0.36 | assertion | cost 2
+F0013 | steps done one after another | is in memory of | child | 0.36 | assertion | cost 4
+F0014 | every step must be exact | is in memory of | child | 0.36 | assertion | cost 2
+F0015 | it must come to an end | is in memory of | child | 0.36 | assertion | cost 6
+F0016 | same steps, same result every time | is in memory of | child | 0.36 | assertion | cost 6
+F0017 | a bug | is in memory of | child | 0.29 | assertion | cost 2
+F0018 | a computer | is in memory of | child | 0.26 | assertion | cost 2
+F0019 | a computer only follows algorithms | is in memory of | child | 0.22 | assertion | cost 5
+F0020 | anyone can follow it without knowing why | is in memory of | child | 0.22 | assertion | cost 6
+F0021 | following instructions | is in memory of | child | 0.40 | assertion | cost 2
+F0022 | a recipe | is in memory of | child | 0.40 | assertion | cost 2
+F0023 | the rules of a game | is in memory of | child | 0.50 | assertion | cost 4
+F0024 | a robot | is in memory of | child | 0.40 | assertion | cost 2
+F0025 | brushing your teeth | is in memory of | child | 0.50 | assertion | cost 3
+F0026 | making a sandwich | is in memory of | child | 0.40 | assertion | cost 3
+
+# trace — the analyst's view, not the reader's
+#   evicted a computer only follows algorithms (0.23): no room: 5 words, 0.0 left
+#   evicted anyone can follow it without knowing why (0.23): no room: 6 words, 0.0 left
+#   evicted a game (0.21): no room: 2 words, 0.0 left
+#   understood: an algorithm
+#   understood: steps done one after another
+#   understood: every step must be exact
+#   understood: it must come to an end
+#   understood: same steps, same result every time
+#   felt a Turing machine: 0.20
+#   felt the halting problem: 0.27
+#   felt formal semantics: 0.32

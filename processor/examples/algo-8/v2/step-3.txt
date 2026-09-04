@@ -1,0 +1,27 @@
+# state after step 3   (field 16 words)
+F0001 | following instructions | is in the field of | child | 0.40 | assertion | sensory; cost 2
+F0002 | same steps, same result every time | is in the field of | child | 0.36 | assertion | sensory; cost 6
+F0003 | every step must be exact | is in the field of | child | 0.36 | assertion | sensory; cost 3
+F0004 | steps done one after another | is in the field of | child | 0.23 | assertion | carried; cost 5
+F0005 | child | has tail statistic | intensity | 0.00 | assertion | -
+F0006 | child | has tail statistic | valence | 0.00 | assertion | -
+F0007 | child | has tail statistic | count | 0.00 | assertion | -
+F0008 | child | has tail statistic | spread | 0.00 | assertion | -
+F0009 | following instructions | is in memory of | child | 0.40 | assertion | cost 2
+F0010 | same steps, same result every time | is in memory of | child | 0.36 | assertion | cost 6
+F0011 | every step must be exact | is in memory of | child | 0.36 | assertion | cost 3
+F0012 | steps done one after another | is in memory of | child | 0.23 | assertion | cost 5
+F0013 | a recipe | is in memory of | child | 0.40 | assertion | cost 2
+F0014 | the rules of a game | is in memory of | child | 0.50 | assertion | cost 4
+F0015 | a robot | is in memory of | child | 0.40 | assertion | cost 2
+F0016 | a computer | is in memory of | child | 0.40 | assertion | cost 2
+F0017 | brushing your teeth | is in memory of | child | 0.50 | assertion | cost 3
+F0018 | making a sandwich | is in memory of | child | 0.40 | assertion | cost 3
+F0019 | same steps, same result every time | has satisfaction delta | safety | 0.2 | assertion | established by the chunk
+
+# trace — the analyst's view, not the reader's
+#   understood: same steps, same result every time
+#   understood: every step must be exact
+#   felt a Turing machine: 0.00
+#   felt the halting problem: 0.00
+#   felt formal semantics: 0.32

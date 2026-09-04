@@ -40,6 +40,30 @@ For each candidate compute C:
 If one item is reached more than one way, it takes the highest C and the source that gave it. Clamp to
 [0, 1). Never write 1.
 
+## Stage 3 (bis) — the need portrait
+
+When the profile gives its needs a class (`is classified as a` basal | psychophysiological | psychological) and
+a satisfaction level (`has satisfaction level`, baseline in the value column), a need's weight is its class
+priority × its deficit (1 − level), not the static weight. A candidate's C is then its emotional response, the
+sum of |delta| × weight over its signals. After the Field is filled, what is **new** in it moves the levels by
+the profile's `satiation` × delta (holding a thought does not feed twice; a grasped concept feeds understanding
+once), and every level drifts toward its baseline by `homeostasis`. Levels are reader state and travel in the
+state file. Without a portrait everything behaves as before.
+
+The portrait is the whole space of goals; only **active** needs weigh — those whose deficit is at least the
+profile's `necessity`, or that something present (Field, memory, chunk) has a path to. The **program** is the
+need whose responses hold most of the Field; it is written to the state as an aggregate (`has dominant need`,
+with the count of switches so far). A change of program brought about by a sensory item outside the target
+graph is a distraction and is named in the trace; by an item inside it, a branch of the scenario. Only one
+program can have the motor channel, so the **conflict level** (`has conflict level`) is the runner-up
+program's mass over the leader's — the margin, not the switch.
+
+## Stage 3a — what an item costs to hold
+
+Words buy cues; the Field holds items. A candidate's size in the Field is: what memory recorded for it, if
+memory holds it; the length of its name, if it is a target concept the reader has understood — comprehension is
+compression, however many words introduced it; otherwise the words the chunk spent on it.
+
 ## Stage 4 — fill the Field
 
 A candidate with C below k has no name and is never admitted, whatever the budget. Sort the rest by C,
@@ -86,12 +110,25 @@ If the chunk establishes a cost relation the profile did not have — it tells t
 opposed to leaving the reader to infer it — write `X | has satisfaction delta | N | value`. This is how an
 early chunk installs what a later chunk will use.
 
-## Output: the state, then the trace
+## Stage 4a — the motor field
 
-Two blocks. The **state** is the reader's: what has a name, what the tail weighs, what memory holds. The
-**trace** is the analyst's: candidates, arithmetic, evictions. The rule that the tail's members are never
-named applies to the state block. The trace may name anything, because the analyst sees both sides — that
-asymmetry is the point of building the thing.
+Only one program has the motor channel. The reader's continuation is the leading program's: `reads on` while
+the scenario's need (the profile's `scenario need`, understanding by default) leads, `acts on <need>` otherwise.
+There are two sets of interfaces: the environment (the chunk) and the reader's model of it (paths,
+associations, prerequisites). The channel attends to the model — the chunk is not received, the Field is fed
+by association and decays — only when another program leads **and** running the model pays better: the best
+response one more association could deliver (`fantasy yield`) is at least the running estimate of what chunks
+have been delivering (`reality yield`). Otherwise reality is attended to whatever program leads. Both yields
+and the mode are state (`attends to`). The field of consciousness is also reported in **components**, its items grouped
+by the need each answers to most; more than one component is a split.
+
+## Output: the state by component, then the trace
+
+The state is written in the six parts of the architecture — field of consciousness (what the reader can
+report), motor field, long-term memory, need portrait, then the field of mind (the blackboard: represented, not
+conscious) — followed by the **trace**, the analyst's arithmetic. The rule that the tail's members are never
+named applies to the field of consciousness. The field of mind and the trace may name anything, because the
+analyst sees both sides — that asymmetry is the point of building the thing.
 
 ```
 # state after step <n>   (field <spent> words)
