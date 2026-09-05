@@ -183,6 +183,7 @@ processor/
   EVALUATOR.md       the instructions the evaluating sub-agent runs
   engine.py          stages 2–6 as a program
   examples/
+    red/             a person reasoning about the look of red: an open branch the text never closes, README.md
     algo-8/          an algorithm for a reader of eight: v1 with analogies, v2 without, README.md
     quad-8/          quadratic equations for the eighth grade: prior knowledge in memory, README.md
     qm-5/            target.txt, profile.txt, text.txt, v1/ v2/ v3/, README.md

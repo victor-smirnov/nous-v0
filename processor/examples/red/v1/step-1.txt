@@ -1,0 +1,62 @@
+# state after step 1   (field 13 words)
+
+# --- field of consciousness: what the reader can report
+F0001 | light and wavelength | is in the field of | thinker | 0.50 | assertion | sensory; cost 3
+F0002 | the eye | is in the field of | thinker | 0.50 | assertion | sensory; cost 2
+F0003 | red as a wavelength | is in the field of | thinker | 0.41 | assertion | sensory; cost 4
+F0004 | an apple | is in the field of | thinker | 0.40 | assertion | sensory; cost 2
+F0005 | red | is in the field of | thinker | 0.20 | assertion | sensory; cost 2
+F0006 | red as a wavelength | attracts | thinker | very much | assertion | the motivational component of the image, as a proportion of the Field's pull
+F0007 | thinker | has consciousness components | 2 | - | assertion | how many pieces the field is in; which needs is the analyst's to say
+F0008 | thinker | wants | red as a wavelength | - | assertion | retrospective: what pulled over the last steps, named by the images
+F0009 | thinker | is surprised by itself | 0 | - | assertion | how far I differ from what I expected of myself: a mass, no names
+F0010 | thinker | has tail statistic | intensity | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0011 | thinker | has tail statistic | valence | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0012 | thinker | has tail statistic | count | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0013 | thinker | has tail statistic | spread | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+
+# --- motor field: the one continuation
+F0014 | thinker | does | reads on | - | assertion | the program that has the channel
+F0015 | thinker | attends to | reality | 0.40 | assertion | the interface in use; value = reality yield so far; fantasy yield 0.10
+
+F0016 | thinker | has items at control levels | L1 3, L4 7, L5 1 | - | assertion | 1 reacted only; 2 conscious as something, gone; 4 named; 5 related; 6 generative. L3 not representable yet
+
+# --- long-term memory
+F0017 | light and wavelength | is in memory of | thinker | 0.50 | assertion | cost 3
+F0018 | the eye | is in memory of | thinker | 0.50 | assertion | cost 2
+F0019 | red as a wavelength | is in memory of | thinker | 0.41 | assertion | cost 4
+F0020 | an apple | is in memory of | thinker | 0.40 | assertion | cost 2
+F0021 | red | is in memory of | thinker | 0.20 | assertion | cost 2
+F0022 | the brain | is in memory of | thinker | 0.50 | assertion | cost 2
+F0023 | the word red | is in memory of | thinker | 0.60 | assertion | cost 3
+F0024 | other people | is in memory of | thinker | 0.50 | assertion | cost 2
+F0025 | red as a wavelength | has pulled | thinker | 0.41 | assertion | what the retrospective 'wants' is made of
+
+# --- need portrait (objective: its own vocabulary, not the reader's)
+#   components by need: none 4, understanding 1
+#   pull of each image: red as a wavelength +0.41
+#   the reader's 'wants' resolves to understanding; the program is understanding
+F0026 | red as a wavelength | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0027 | understanding | has satisfaction level | 0.132 | - | assertion | need state
+F0028 | coherence | has satisfaction level | 0.300 | - | assertion | need state
+F0029 | a puzzle | has satisfaction level | 0.400 | - | assertion | need state
+F0030 | safety | has satisfaction level | 0.950 | - | assertion | need state
+F0031 | thinker | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
+F0032 | thinker | has conflict level | 0.00 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
+
+# --- field of mind (blackboard): represented, not conscious — the analyst's view, not the reader's
+#   blood (0.10): below k
+#   seeing (0.10): below k
+#   fire (0.08): below k
+
+# --- trace
+#   active needs: a puzzle, coherence, understanding
+#   understood: red as a wavelength
+#   need mass in the Field: understanding 0.41
+#   mode reality: reality yield 0.40, fantasy yield 0.10
+#   felt qualia: 0.00
+#   felt the hard problem: 0.00
+#   felt the explanatory gap: 0.00
+#   felt the inverted spectrum: 0.00
+#   self-model: predicted nothing; program -
+#   control levels: red as a wavelength L5, light and wavelength L4, the eye L4, an apple L4, red L4, the brain L4, the word red L4, other people L4, blood L1, seeing L1, fire L1

@@ -1,0 +1,53 @@
+# heading: red — the target state: what a person reasoning about the look of red ends up holding
+# This target is unusual: one of its concepts is a question that nothing closes. What must be reached includes
+# the open branch itself.
+
+# --- what must reach memory
+F0001 | red as a wavelength | must reach | 0.25 | - | assertion | light of one wavelength off the skin into the eye
+F0002 | red as a pattern in the brain | must reach | 0.25 | - | assertion | cells fire, signals run, somewhere a pattern is red
+F0003 | the look itself | must reach | 0.25 | - | assertion | what is seen, as opposed to what produces it
+F0004 | why this look | must reach | 0.25 | - | assertion | the question; the story stops exactly there
+F0005 | others may see it differently | must reach | 0.25 | - | assertion | your red may look the way my green looks, and we would never find out
+F0006 | only pointing | must reach | 0.25 | - | assertion | the look cannot be said, only shown: that
+F0007 | the thinking has a look too | must reach | 0.2 | - | assertion | every step stands inside the thing asked about
+F0008 | two truths and no path | must reach | 0.25 | - | assertion | the whole mechanism, and this, and nothing between
+F0009 | the apple is still red | must reach | 0.2 | - | assertion | the closure by action
+
+# --- prerequisites
+F0010 | red as a wavelength | requires | light and wavelength | - | assertion | prior knowledge
+F0011 | red as a pattern in the brain | requires | red as a wavelength | - | assertion | -
+F0012 | red as a pattern in the brain | requires | the brain | - | assertion | prior knowledge
+F0013 | the look itself | requires | red as a wavelength | - | assertion | -
+F0014 | the look itself | requires | red as a pattern in the brain | - | assertion | -
+F0015 | why this look | requires | the look itself | - | assertion | -
+F0016 | why this look | requires | red as a pattern in the brain | - | assertion | -
+F0017 | others may see it differently | requires | the look itself | - | assertion | -
+F0018 | others may see it differently | requires | other people | - | assertion | prior knowledge
+F0019 | only pointing | requires | the look itself | - | assertion | -
+F0020 | the thinking has a look too | requires | the look itself | - | assertion | -
+F0021 | the thinking has a look too | requires | why this look | - | assertion | -
+F0022 | two truths and no path | requires | why this look | - | assertion | -
+F0023 | two truths and no path | requires | red as a pattern in the brain | - | assertion | -
+F0024 | the apple is still red | requires | two truths and no path | - | assertion | -
+
+# --- what must never be named: the thinker is not a philosopher
+F0030 | qualia | must not be named | - | - | assertion | -
+F0031 | phenomenal consciousness | must not be named | - | - | assertion | -
+F0032 | the hard problem | must not be named | - | - | assertion | -
+F0033 | the explanatory gap | must not be named | - | - | assertion | the phrase
+F0034 | the inverted spectrum | must not be named | - | - | assertion | the phrase
+F0035 | physicalism | must not be named | - | - | assertion | -
+F0036 | a zombie | must not be named | - | - | assertion | -
+
+# --- and what must nevertheless be felt
+F0040 | qualia | is induced by | the look itself | 0.6 | assertion | -
+F0041 | qualia | is induced by | only pointing | 0.3 | assertion | -
+F0042 | the hard problem | is induced by | why this look | 0.7 | assertion | -
+F0043 | the hard problem | is induced by | two truths and no path | 0.3 | assertion | -
+F0044 | the explanatory gap | is induced by | two truths and no path | 0.5 | assertion | -
+F0045 | the explanatory gap | is induced by | why this look | 0.4 | assertion | -
+F0046 | the inverted spectrum | is induced by | others may see it differently | 0.8 | assertion | -
+F0050 | qualia | must feel | 0.2 | - | assertion | -
+F0051 | the hard problem | must feel | 0.2 | - | assertion | -
+F0052 | the explanatory gap | must feel | 0.2 | - | assertion | -
+F0053 | the inverted spectrum | must feel | 0.2 | - | assertion | -

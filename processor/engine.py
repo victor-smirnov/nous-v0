@@ -144,7 +144,8 @@ def step(p, prior_field, memory, sensory, new_paths, t=None):
     for item, _ in sensory:
         if item in t["forbidden"]:
             notes.append(f"forbidden named: {item}")
-        missing = [q for q in t["requires"].get(item, [])
+        grasped_already = p["paths"].get((item, "understanding")) == P.get("comprehension", 0.0)
+        missing = [] if grasped_already else [q for q in t["requires"].get(item, [])
                    if q not in prior_field and q not in memory and q not in named_so_far]
         for q in missing:
             notes.append(f"prerequisite missing: {item} needs {q}")
@@ -164,7 +165,7 @@ def step(p, prior_field, memory, sensory, new_paths, t=None):
         c = max(own_c(item, p), memory[item][0] if item in memory else 0.0)
         if item in memory:
             cost = min(cost, memory[item][1])
-        elif (item, "understanding") in p["paths"]:
+        elif p["paths"].get((item, "understanding")) == P.get("comprehension", 0.0) and item in t["reach"]:
             cost = min(cost, len(item.split()))
         cand[item] = (min(c, 0.999), cost, "sensory", order); order += 1
     for item, (c, cost) in prior_field.items():                    # carried over
@@ -289,7 +290,7 @@ def step(p, prior_field, memory, sensory, new_paths, t=None):
     return field, evicted, stats, new_memory, spent, notes
 
 
-def render(reader, n, field, evicted, stats, memory, spent, new_paths, notes=(), levels=None, grasped=(), comprehension=0.0, program="-", switches=0, conflict=0.0, motor="reads on", components=None, received=True, mode="reality", ry=0.0, fy=0.0, pull=None, wants="-", wants_need=None, recent=None, self_surprise=0, self_names=(), self_kinds=None, levels_summary=None):
+def render(reader, n, field, evicted, stats, memory, spent, installed, notes=(), levels=None, grasped=(), comprehension=0.0, program="-", switches=0, conflict=0.0, motor="reads on", components=None, received=True, mode="reality", ry=0.0, fy=0.0, pull=None, wants="-", wants_need=None, recent=None, self_surprise=0, self_names=(), self_kinds=None, levels_summary=None):
     levels = levels or {}; components = components or {}; pull = pull or {}; recent = recent or {}; self_kinds = self_kinds or {}; levels_summary = levels_summary or {}
     out = [f"# state after step {n}   (field {spent} words)", "",
            "# --- field of consciousness: what the reader can report" + ("" if received else "   [chunk not received: the motor field was elsewhere]")]
@@ -338,8 +339,8 @@ def render(reader, n, field, evicted, stats, memory, spent, new_paths, notes=(),
         out.append("#   pull of each image: " + ", ".join(f"{x} {v:+.2f}" for x, v in sorted(pull.items(), key=lambda kv: -abs(kv[1])) if abs(v) >= 0.05))
     if wants_need:
         out.append(f"#   the reader's 'wants' resolves to {wants_need}; the program is {program}" + ("" if wants_need == program else "  <- self-opacity: the report and the drive differ"))
-    for (x, nd), d in new_paths:
-        out.append(f"F{i:04d} | {x} | has satisfaction delta | {nd} | {d} | assertion | established by the chunk"); i += 1
+    for (x, nd), d in installed:
+        out.append(f"F{i:04d} | {x} | has satisfaction delta | {nd} | {d} | assertion | established by the text; carried"); i += 1
     for x in grasped:
         out.append(f"F{i:04d} | {x} | has satisfaction delta | understanding | {comprehension} | assertion | understood"); i += 1
     for n, lv in levels.items():
@@ -418,6 +419,7 @@ def main(argv):
     profile, candidates, out, *priors = argv
     p = load_profile(profile)
     t = load_target(target)
+    profile_paths = set(p["paths"])
     field, memory = {}, dict(p["memory"])
     p["stable"] = {i: c for i, (c, _) in p["memory"].items()}     # consolidated: never decays below this
     for prior in priors:
@@ -470,7 +472,7 @@ def main(argv):
     for x, c, why in e:
         level[x] = 1 if why == "below k" else 2                         # reacted only / conscious as "something", gone
     for x, (c, cost, src) in f.items():
-        level[x] = 5 if (x, "understanding") in p["paths"] and x in t["reach"] else 4
+        level[x] = 5 if p["paths"].get((x, "understanding")) == p["params"].get("comprehension", 0.0) and x in t["reach"] else 4
     for x in m:
         if x not in f and x not in level:
             level[x] = 4                                                # recallable and named; level 3 (recall without a name) is not representable yet
@@ -479,8 +481,12 @@ def main(argv):
     p["levels"] = level
     notes.append("control levels: " + ", ".join(f"{x} L{l}" for x, l in sorted(level.items(), key=lambda kv: -kv[1])))
     notes += [f"short form of {x} with {x} not in memory: an unknown token, ignored" for x in short_dropped]
-    grasped = [x for (x, nd) in p["paths"] if nd == "understanding" and x in t["reach"]]
-    pathlib.Path(out).write_text(render(p["reader"], n, f, e, s, m, spent, new_paths, notes, p["level"],
+    comp_v = p["params"].get("comprehension", 0.0)
+    grasped = [x for (x, nd), d in p["paths"].items() if nd == "understanding" and x in t["reach"] and d == comp_v]
+    comp_v = p["params"].get("comprehension", 0.0)
+    installed = [((x, nd), d) for (x, nd), d in p["paths"].items()
+                 if (x, nd) not in profile_paths and not (nd == "understanding" and d == comp_v and x in t["reach"])]
+    pathlib.Path(out).write_text(render(p["reader"], n, f, e, s, m, spent, installed, notes, p["level"],
                                         grasped, p["params"].get("comprehension", 0.0), p.get("program", "-"), p.get("switches", 0), p.get("conflict", 0.0),
                                         p.get("motor", "reads on"), p.get("components"), p.get("received", True), p.get("mode", "reality"), p.get("reality yield", 0.0), p.get("fantasy yield", 0.0),
                                         p.get("pull"), p.get("wants", "-"), p.get("wants need"), p.get("recent pull", {}),

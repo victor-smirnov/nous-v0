@@ -16,13 +16,13 @@ F0012 | steps done one after another | attracts | child | somewhat | assertion |
 F0013 | a game | attracts | child | somewhat | assertion | the motivational component of the image, as a proportion of the Field's pull
 F0014 | child | wants more | a computer only follows algorithms than anyone can follow it without knowing why | somewhat | assertion | the comparison the reader can actually make
 F0015 | child | has consciousness components | 3 | - | assertion | how many pieces the field is in; which needs is the analyst's to say
-F0016 | child | wants | steps done one after another, same steps, same result every time, every step must be exact | - | assertion | retrospective: what pulled over the last steps, named by the images
+F0016 | child | wants | same steps, same result every time, steps done one after another, every step must be exact | - | assertion | retrospective: what pulled over the last steps, named by the images
 F0017 | child | is surprised by itself | 2 | - | assertion | how far I differ from what I expected of myself: a mass, no names
 F0018 | child | notices about itself | forgot | - | assertion | a kind of self-surprise seen more than once has become a name
-F0019 | child | has tail statistic | intensity | 0.72 | assertion | the field of mind, as it reaches consciousness: mass, no names
-F0020 | child | has tail statistic | valence | 0.72 | assertion | the field of mind, as it reaches consciousness: mass, no names
-F0021 | child | has tail statistic | count | 2.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
-F0022 | child | has tail statistic | spread | 0.50 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0019 | child | has tail statistic | intensity | 0.82 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0020 | child | has tail statistic | valence | 0.82 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0021 | child | has tail statistic | count | 3.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0022 | child | has tail statistic | spread | 0.60 | assertion | the field of mind, as it reaches consciousness: mass, no names
 
 # --- motor field: the one continuation
 F0023 | child | does | reads on | - | assertion | the program that has the channel
@@ -49,7 +49,7 @@ F0040 | brushing your teeth | is in memory of | child | 0.50 | assertion | cost 
 F0041 | making a sandwich | is in memory of | child | 0.40 | assertion | cost 3
 F0042 | steps done one after another | has pulled | child | 0.72 | assertion | what the retrospective 'wants' is made of
 F0043 | every step must be exact | has pulled | child | 0.71 | assertion | what the retrospective 'wants' is made of
-F0044 | same steps, same result every time | has pulled | child | 0.71 | assertion | what the retrospective 'wants' is made of
+F0044 | same steps, same result every time | has pulled | child | 0.81 | assertion | what the retrospective 'wants' is made of
 F0045 | it must come to an end | has pulled | child | 0.54 | assertion | what the retrospective 'wants' is made of
 F0046 | anyone can follow it without knowing why | has pulled | child | 0.63 | assertion | what the retrospective 'wants' is made of
 F0047 | an algorithm | has pulled | child | 0.54 | assertion | what the retrospective 'wants' is made of
@@ -60,15 +60,16 @@ F0049 | a game | has pulled | child | 0.35 | assertion | what the retrospective 
 #   components by need: understanding 5, none 1, fun 1
 #   pull of each image: a computer only follows algorithms +0.36, anyone can follow it without knowing why +0.36, an algorithm +0.36, every step must be exact +0.36, steps done one after another +0.36, a game +0.35
 #   the reader's 'wants' resolves to understanding; the program is understanding
-F0050 | steps done one after another | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0051 | every step must be exact | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0052 | same steps, same result every time | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0053 | it must come to an end | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0054 | anyone can follow it without knowing why | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0055 | an algorithm | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0056 | a computer only follows algorithms | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0057 | child | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
-F0058 | child | has conflict level | 0.19 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
+F0050 | same steps, same result every time | has satisfaction delta | safety | 0.2 | assertion | established by the text; carried
+F0051 | steps done one after another | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0052 | every step must be exact | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0053 | same steps, same result every time | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0054 | it must come to an end | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0055 | anyone can follow it without knowing why | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0056 | an algorithm | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0057 | a computer only follows algorithms | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0058 | child | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
+F0059 | child | has conflict level | 0.19 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
 
 # --- field of mind (blackboard): represented, not conscious — the analyst's view, not the reader's
 #   it must come to an end (0.29): no room: 6 words, 3.0 left

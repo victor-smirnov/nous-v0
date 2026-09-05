@@ -1,0 +1,85 @@
+# state after step 7   (field 21 words)
+
+# --- field of consciousness: what the reader can report
+F0001 | why this look | is in the field of | thinker | 0.51 | assertion | sensory; cost 6
+F0002 | the word red | is in the field of | thinker | 0.43 | assertion | carried; cost 3
+F0003 | the look itself | is in the field of | thinker | 0.39 | assertion | sensory; cost 2
+F0004 | the thinking has a look too | is in the field of | thinker | 0.38 | assertion | sensory; cost 6
+F0005 | other people | is in the field of | thinker | 0.36 | assertion | carried; cost 2
+F0006 | only pointing | is in the field of | thinker | 0.33 | assertion | carried; cost 2
+F0007 | why this look | repels | thinker | much | assertion | the motivational component of the image, as a proportion of the Field's pull
+F0008 | the look itself | attracts | thinker | somewhat | assertion | the motivational component of the image, as a proportion of the Field's pull
+F0009 | the thinking has a look too | attracts | thinker | somewhat | assertion | the motivational component of the image, as a proportion of the Field's pull
+F0010 | only pointing | attracts | thinker | somewhat | assertion | the motivational component of the image, as a proportion of the Field's pull
+F0011 | thinker | has consciousness components | 2 | - | assertion | how many pieces the field is in; which needs is the analyst's to say
+F0012 | thinker | wants | the look itself, red as a wavelength, red as a pattern in the brain | - | assertion | retrospective: what pulled over the last steps, named by the images
+F0013 | thinker | is surprised by itself | 0 | - | assertion | how far I differ from what I expected of myself: a mass, no names
+F0014 | thinker | notices about itself | forgot | - | assertion | a kind of self-surprise seen more than once has become a name
+F0015 | thinker | has tail statistic | intensity | 0.93 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0016 | thinker | has tail statistic | valence | 0.43 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0017 | thinker | has tail statistic | count | 3.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0018 | thinker | has tail statistic | spread | 0.66 | assertion | the field of mind, as it reaches consciousness: mass, no names
+
+# --- motor field: the one continuation
+F0019 | thinker | does | reads on | - | assertion | the program that has the channel
+F0020 | thinker | attends to | reality | 0.40 | assertion | the interface in use; value = reality yield so far; fantasy yield 0.08
+
+F0021 | thinker | has met self-surprise | forgot | 3 | assertion | objective: how often this kind has occurred
+F0022 | thinker | has met self-surprise | came to mind | 1 | assertion | objective: how often this kind has occurred
+F0023 | thinker | has items at control levels | L1 5, L4 6, L5 3, L6 1 | - | assertion | 1 reacted only; 2 conscious as something, gone; 4 named; 5 related; 6 generative. L3 not representable yet
+
+# --- long-term memory
+F0024 | why this look | is in memory of | thinker | 0.51 | assertion | cost 6
+F0025 | the word red | is in memory of | thinker | 0.43 | assertion | cost 3
+F0026 | the look itself | is in memory of | thinker | 0.39 | assertion | cost 2
+F0027 | the thinking has a look too | is in memory of | thinker | 0.38 | assertion | cost 6
+F0028 | other people | is in memory of | thinker | 0.36 | assertion | cost 2
+F0029 | only pointing | is in memory of | thinker | 0.33 | assertion | cost 2
+F0030 | the eye | is in memory of | thinker | 0.50 | assertion | cost 2
+F0031 | the brain | is in memory of | thinker | 0.50 | assertion | cost 2
+F0032 | light and wavelength | is in memory of | thinker | 0.50 | assertion | cost 1
+F0033 | an apple | is in memory of | thinker | 0.40 | assertion | cost 2
+F0034 | red as a wavelength | has pulled | thinker | 0.68 | assertion | what the retrospective 'wants' is made of
+F0035 | red as a pattern in the brain | has pulled | thinker | 0.66 | assertion | what the retrospective 'wants' is made of
+F0036 | the look itself | has pulled | thinker | 0.72 | assertion | what the retrospective 'wants' is made of
+F0037 | why this look | has pulled | thinker | -0.89 | assertion | what the retrospective 'wants' is made of
+F0038 | a mystery | has pulled | thinker | 0.05 | assertion | what the retrospective 'wants' is made of
+F0039 | only pointing | has pulled | thinker | 0.58 | assertion | what the retrospective 'wants' is made of
+F0040 | the thinking has a look too | has pulled | thinker | 0.38 | assertion | what the retrospective 'wants' is made of
+
+# --- need portrait (objective: its own vocabulary, not the reader's)
+#   components by need: understanding 4, none 2
+#   pull of each image: why this look -0.51, the look itself +0.38, the thinking has a look too +0.38, only pointing +0.38
+#   the reader's 'wants' resolves to understanding; the program is understanding
+F0041 | why this look | has satisfaction delta | understanding | -0.6 | assertion | established by the text; carried
+F0042 | red as a wavelength | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0043 | red as a pattern in the brain | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0044 | the look itself | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0045 | others may see it differently | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0046 | only pointing | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0047 | the thinking has a look too | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0048 | understanding | has satisfaction level | 0.170 | - | assertion | need state
+F0049 | coherence | has satisfaction level | 0.300 | - | assertion | need state
+F0050 | a puzzle | has satisfaction level | 0.400 | - | assertion | need state
+F0051 | safety | has satisfaction level | 0.950 | - | assertion | need state
+F0052 | thinker | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
+F0053 | thinker | has conflict level | 0.00 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
+
+# --- field of mind (blackboard): represented, not conscious — the analyst's view, not the reader's
+#   red (0.17): below k
+#   blood (0.10): below k
+#   an apple (0.10): below k
+#   a friend (0.08): below k
+#   fire (0.08): below k
+
+# --- trace
+#   active needs: a puzzle, coherence, understanding
+#   understood: the thinking has a look too
+#   need mass in the Field: understanding 1.65
+#   mode reality: reality yield 0.40, fantasy yield 0.08
+#   felt qualia: 0.33
+#   felt the hard problem: 0.35
+#   felt the explanatory gap: 0.20
+#   felt the inverted spectrum: 0.00
+#   self-model: predicted the word red, other people, only pointing, the look itself; program understanding
+#   control levels: [forgot] L6, the look itself L5, the thinking has a look too L5, only pointing L5, why this look L4, the word red L4, other people L4, the eye L4, the brain L4, light and wavelength L4, red L1, blood L1, an apple L1, a friend L1, fire L1

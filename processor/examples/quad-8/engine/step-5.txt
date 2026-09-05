@@ -60,7 +60,7 @@ F0049 | the sign of the discriminant tells how many roots | has pulled | student
 #   components by need: understanding 6, none 4, getting the answer right 1
 #   pull of each image: a worked example +0.59, the sign of the discriminant tells how many roots +0.36, the discriminant +0.36, two roots, one root, or none +0.36, a quadratic equation +0.36, checking a root by substitution +0.36, a root of the equation +0.36
 #   the reader's 'wants' resolves to understanding; the program is understanding
-F0050 | a door for later, not a wall | has satisfaction delta | interest | 0.3 | assertion | established by the chunk
+F0050 | a door for later, not a wall | has satisfaction delta | interest | 0.3 | assertion | established by the text; carried
 F0051 | a quadratic equation | has satisfaction delta | understanding | 0.45 | assertion | understood
 F0052 | a root of the equation | has satisfaction delta | understanding | 0.45 | assertion | understood
 F0053 | checking a root by substitution | has satisfaction delta | understanding | 0.45 | assertion | understood

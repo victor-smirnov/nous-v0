@@ -1,0 +1,75 @@
+# state after step 3   (field 21 words)
+
+# --- field of consciousness: what the reader can report
+F0001 | the eye | is in the field of | thinker | 0.42 | assertion | carried; cost 2
+F0002 | the brain | is in the field of | thinker | 0.42 | assertion | carried; cost 2
+F0003 | light and wavelength | is in the field of | thinker | 0.42 | assertion | sensory; cost 1
+F0004 | the look itself | is in the field of | thinker | 0.38 | assertion | sensory; cost 3
+F0005 | red as a wavelength | is in the field of | thinker | 0.38 | assertion | sensory; cost 2
+F0006 | red as a pattern in the brain | is in the field of | thinker | 0.33 | assertion | carried; cost 7
+F0007 | an apple | is in the field of | thinker | 0.29 | assertion | carried; cost 2
+F0008 | seeing | is in the field of | thinker | 0.20 | assertion | sensory; cost 2
+F0009 | the look itself | attracts | thinker | much | assertion | the motivational component of the image, as a proportion of the Field's pull
+F0010 | red as a wavelength | attracts | thinker | much | assertion | the motivational component of the image, as a proportion of the Field's pull
+F0011 | red as a pattern in the brain | attracts | thinker | much | assertion | the motivational component of the image, as a proportion of the Field's pull
+F0012 | thinker | wants more | the look itself than red as a wavelength | somewhat | assertion | the comparison the reader can actually make
+F0013 | thinker | has consciousness components | 2 | - | assertion | how many pieces the field is in; which needs is the analyst's to say
+F0014 | thinker | wants | red as a wavelength, red as a pattern in the brain, the look itself | - | assertion | retrospective: what pulled over the last steps, named by the images
+F0015 | thinker | is surprised by itself | 0 | - | assertion | how far I differ from what I expected of myself: a mass, no names
+F0016 | thinker | has tail statistic | intensity | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0017 | thinker | has tail statistic | valence | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0018 | thinker | has tail statistic | count | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0019 | thinker | has tail statistic | spread | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+
+# --- motor field: the one continuation
+F0020 | thinker | does | reads on | - | assertion | the program that has the channel
+F0021 | thinker | attends to | reality | 0.37 | assertion | the interface in use; value = reality yield so far; fantasy yield 0.10
+
+F0022 | thinker | has items at control levels | L1 4, L4 7, L5 3 | - | assertion | 1 reacted only; 2 conscious as something, gone; 4 named; 5 related; 6 generative. L3 not representable yet
+
+# --- long-term memory
+F0023 | the eye | is in memory of | thinker | 0.42 | assertion | cost 2
+F0024 | the brain | is in memory of | thinker | 0.42 | assertion | cost 2
+F0025 | light and wavelength | is in memory of | thinker | 0.42 | assertion | cost 1
+F0026 | the look itself | is in memory of | thinker | 0.38 | assertion | cost 3
+F0027 | red as a wavelength | is in memory of | thinker | 0.38 | assertion | cost 2
+F0028 | red as a pattern in the brain | is in memory of | thinker | 0.33 | assertion | cost 7
+F0029 | an apple | is in memory of | thinker | 0.29 | assertion | cost 2
+F0030 | seeing | is in memory of | thinker | 0.20 | assertion | cost 2
+F0031 | the word red | is in memory of | thinker | 0.60 | assertion | cost 3
+F0032 | other people | is in memory of | thinker | 0.50 | assertion | cost 2
+F0033 | red as a wavelength | has pulled | thinker | 0.68 | assertion | what the retrospective 'wants' is made of
+F0034 | red as a pattern in the brain | has pulled | thinker | 0.58 | assertion | what the retrospective 'wants' is made of
+F0035 | the look itself | has pulled | thinker | 0.38 | assertion | what the retrospective 'wants' is made of
+
+# --- need portrait (objective: its own vocabulary, not the reader's)
+#   components by need: none 5, understanding 3
+#   pull of each image: the look itself +0.38, red as a wavelength +0.38, red as a pattern in the brain +0.38
+#   the reader's 'wants' resolves to understanding; the program is understanding
+F0036 | red as a wavelength | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0037 | red as a pattern in the brain | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0038 | the look itself | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0039 | understanding | has satisfaction level | 0.169 | - | assertion | need state
+F0040 | coherence | has satisfaction level | 0.300 | - | assertion | need state
+F0041 | a puzzle | has satisfaction level | 0.400 | - | assertion | need state
+F0042 | safety | has satisfaction level | 0.950 | - | assertion | need state
+F0043 | thinker | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
+F0044 | thinker | has conflict level | 0.00 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
+
+# --- field of mind (blackboard): represented, not conscious — the analyst's view, not the reader's
+#   red (0.17): below k
+#   neurons (0.10): below k
+#   blood (0.10): below k
+#   fire (0.08): below k
+
+# --- trace
+#   active needs: a puzzle, coherence, understanding
+#   understood: the look itself
+#   need mass in the Field: understanding 1.14
+#   mode reality: reality yield 0.37, fantasy yield 0.10
+#   felt qualia: 0.23
+#   felt the hard problem: 0.00
+#   felt the explanatory gap: 0.00
+#   felt the inverted spectrum: 0.00
+#   self-model: predicted the eye, the brain, light and wavelength, red as a pattern in the brain, red as a wavelength, an apple; program understanding
+#   control levels: the look itself L5, red as a wavelength L5, red as a pattern in the brain L5, the eye L4, the brain L4, light and wavelength L4, an apple L4, seeing L4, the word red L4, other people L4, red L1, neurons L1, blood L1, fire L1

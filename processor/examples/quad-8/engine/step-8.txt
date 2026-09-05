@@ -65,16 +65,17 @@ F0054 | why the formula works | has pulled | student | 0.54 | assertion | what t
 #   components by need: understanding 7, none 3, getting the answer right 1
 #   pull of each image: checking a root by substitution +0.36, a root of the equation +0.36, why the formula works +0.36, the quadratic formula +0.36, the discriminant +0.36, the sign of the discriminant tells how many roots +0.36, two roots, one root, or none +0.36
 #   the reader's 'wants' resolves to understanding; the program is understanding
-F0055 | a quadratic equation | has satisfaction delta | understanding | 0.45 | assertion | understood
-F0056 | a root of the equation | has satisfaction delta | understanding | 0.45 | assertion | understood
-F0057 | checking a root by substitution | has satisfaction delta | understanding | 0.45 | assertion | understood
-F0058 | two roots, one root, or none | has satisfaction delta | understanding | 0.45 | assertion | understood
-F0059 | the discriminant | has satisfaction delta | understanding | 0.45 | assertion | understood
-F0060 | the sign of the discriminant tells how many roots | has satisfaction delta | understanding | 0.45 | assertion | understood
-F0061 | the quadratic formula | has satisfaction delta | understanding | 0.45 | assertion | understood
-F0062 | why the formula works | has satisfaction delta | understanding | 0.45 | assertion | understood
-F0063 | student | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
-F0064 | student | has conflict level | 0.08 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
+F0055 | a door for later, not a wall | has satisfaction delta | interest | 0.3 | assertion | established by the text; carried
+F0056 | a quadratic equation | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0057 | a root of the equation | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0058 | checking a root by substitution | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0059 | two roots, one root, or none | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0060 | the discriminant | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0061 | the sign of the discriminant tells how many roots | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0062 | the quadratic formula | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0063 | why the formula works | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0064 | student | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
+F0065 | student | has conflict level | 0.08 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
 
 # --- field of mind (blackboard): represented, not conscious — the analyst's view, not the reader's
 #   the sum and product of the roots (0.20): no room: 23 words, 3.0 left

@@ -1,0 +1,15 @@
+FAIL  reach red as a wavelength: 0.00 (needs 0.25)
+FAIL  reach red as a pattern in the brain: 0.00 (needs 0.25)
+PASS  reach the look itself: 0.33 (needs 0.25)
+PASS  reach why this look: 0.37 (needs 0.25)
+FAIL  reach others may see it differently: 0.00 (needs 0.25)
+FAIL  reach only pointing: 0.24 (needs 0.25)
+PASS  reach the thinking has a look too: 0.27 (needs 0.2)
+FAIL  reach two truths and no path: 0.00 (needs 0.25)
+FAIL  reach the apple is still red: 0.00 (needs 0.2)
+PASS  feel qualia: 0.27 (needs 0.2)
+PASS  feel the hard problem: 0.26 (needs 0.2)
+FAIL  feel the explanatory gap: 0.15 (needs 0.2)
+FAIL  feel the inverted spectrum: 0.00 (needs 0.2)
+PASS  never named: clean
+FAIL  in order: two truths and no path needs red as a pattern in the brain; the apple is still red needs two truths and no path

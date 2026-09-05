@@ -54,3 +54,7 @@ The cases were written before these files existed, so none has yet been checked 
 is, its results stand as **unverified**. Re-encoding against the text is worth doing for its own sake as well:
 the difference between the recalled encoding and the sourced one measures what an encoder adds when no source
 is present, which is a control on the error that produced this directory.
+
+- `locke-essay-II-xxxii-14-16.txt` — Locke, *Essay Concerning Human Understanding* II.xxxii.14–16 (PG #10615): the
+  inverted spectrum. Source for the `red` case: a canonical reasoning about the look of a colour, in which the
+  look is held to be unknowable across minds and of "little use" to examine — the closure Locke chooses.

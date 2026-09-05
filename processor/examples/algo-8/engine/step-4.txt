@@ -46,12 +46,13 @@ F0035 | it must come to an end | has pulled | child | 0.36 | assertion | what th
 #   components by need: understanding 4, none 1
 #   pull of each image: same steps, same result every time +0.46, steps done one after another +0.36, it must come to an end +0.36, every step must be exact +0.36
 #   the reader's 'wants' resolves to understanding; the program is understanding
-F0036 | steps done one after another | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0037 | every step must be exact | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0038 | same steps, same result every time | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0039 | it must come to an end | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0040 | child | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
-F0041 | child | has conflict level | 0.07 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
+F0036 | same steps, same result every time | has satisfaction delta | safety | 0.2 | assertion | established by the text; carried
+F0037 | steps done one after another | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0038 | every step must be exact | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0039 | same steps, same result every time | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0040 | it must come to an end | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0041 | child | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
+F0042 | child | has conflict level | 0.07 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
 
 # --- field of mind (blackboard): represented, not conscious — the analyst's view, not the reader's
 

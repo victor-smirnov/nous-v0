@@ -42,7 +42,7 @@ F0031 | same steps, same result every time | has pulled | child | 0.46 | asserti
 #   components by need: understanding 3, none 1
 #   pull of each image: same steps, same result every time +0.46, every step must be exact +0.36, steps done one after another +0.36
 #   the reader's 'wants' resolves to understanding; the program is understanding
-F0032 | same steps, same result every time | has satisfaction delta | safety | 0.2 | assertion | established by the chunk
+F0032 | same steps, same result every time | has satisfaction delta | safety | 0.2 | assertion | established by the text; carried
 F0033 | steps done one after another | has satisfaction delta | understanding | 0.4 | assertion | understood
 F0034 | every step must be exact | has satisfaction delta | understanding | 0.4 | assertion | understood
 F0035 | same steps, same result every time | has satisfaction delta | understanding | 0.4 | assertion | understood

@@ -1,0 +1,64 @@
+# heading: red — a reflective adult, not a philosopher
+# Knows how seeing works in outline, has never been asked what the look of a colour is. A need portrait with
+# understanding dominant, coherence close behind, and a taste for a puzzle.
+
+# --- parameters
+F0001 | thinker | has parameter | budget | 30 | assertion | words the Field holds
+F0002 | thinker | has parameter | k | 0.2 | assertion | -
+F0003 | thinker | has parameter | persistence | 0.85 | assertion | -
+F0004 | thinker | has parameter | decay | 0.8 | assertion | -
+F0005 | thinker | has parameter | floor | 0.2 | assertion | -
+F0006 | thinker | has parameter | default cost | 2 | assertion | -
+F0007 | thinker | has parameter | confusion | 0.5 | assertion | -
+F0008 | thinker | has parameter | comprehension | 0.45 | assertion | -
+F0009 | thinker | has parameter | basal | 1.0 | assertion | class priority
+F0010 | thinker | has parameter | psychophysiological | 0.7 | assertion | class priority
+F0011 | thinker | has parameter | psychological | 1.0 | assertion | class priority
+F0012 | thinker | has parameter | satiation | 0.1 | assertion | -
+F0013 | thinker | has parameter | homeostasis | 0.3 | assertion | -
+
+# --- the need portrait
+F0020 | understanding | is a need of | thinker | 0.9 | assertion | -
+F0021 | understanding | is active in | thinker | - | assertion | -
+F0022 | understanding | is classified as a | psychological | - | assertion | -
+F0023 | understanding | has satisfaction level | 0.1 | 0.1 | assertion | -
+F0024 | coherence | is a need of | thinker | 0.6 | assertion | not holding two things that cannot both be true
+F0025 | coherence | is active in | thinker | - | assertion | -
+F0026 | coherence | is classified as a | psychological | - | assertion | -
+F0027 | coherence | has satisfaction level | 0.3 | 0.3 | assertion | -
+F0028 | a puzzle | is a need of | thinker | 0.5 | assertion | novelty, as a thinker feels it
+F0029 | a puzzle | is active in | thinker | - | assertion | -
+F0030 | a puzzle | is classified as a | psychological | - | assertion | -
+F0031 | a puzzle | has satisfaction level | 0.4 | 0.4 | assertion | -
+F0032 | safety | is a need of | thinker | 0.5 | assertion | -
+F0033 | safety | is active in | thinker | - | assertion | -
+F0034 | safety | is classified as a | basal | - | assertion | -
+F0035 | safety | has satisfaction level | 0.95 | 0.95 | assertion | at the kitchen table
+
+# --- prior knowledge
+F0040 | light and wavelength | is in memory of | thinker | 0.5 | assertion | cost 3
+F0041 | the eye | is in memory of | thinker | 0.5 | assertion | cost 2
+F0042 | the brain | is in memory of | thinker | 0.5 | assertion | cost 2
+F0043 | the word red | is in memory of | thinker | 0.6 | assertion | cost 3
+F0044 | an apple | is in memory of | thinker | 0.4 | assertion | cost 2
+F0045 | other people | is in memory of | thinker | 0.5 | assertion | cost 2
+
+# --- what the thinker already knows things cost
+F0050 | a contradiction | has satisfaction delta | coherence | -0.5 | assertion | -
+F0051 | a mystery | has satisfaction delta | a puzzle | 0.5 | assertion | -
+F0052 | a mystery | has satisfaction delta | understanding | -0.3 | assertion | -
+F0053 | a tidy explanation | has satisfaction delta | understanding | 0.4 | assertion | -
+F0054 | a tidy explanation | has satisfaction delta | coherence | 0.3 | assertion | -
+F0055 | picking up the apple | has satisfaction delta | coherence | 0.3 | assertion | the world goes on; Locke's closure
+F0056 | blood | has satisfaction delta | safety | -0.2 | assertion | -
+
+# --- the bucket
+F0060 | red | is associated with | blood | 0.5 | assertion | -
+F0061 | red | is associated with | fire | 0.4 | assertion | -
+F0062 | red | is associated with | an apple | 0.5 | assertion | -
+F0063 | the eye | is associated with | seeing | 0.5 | assertion | -
+F0064 | the brain | is associated with | neurons | 0.5 | assertion | -
+F0065 | other people | is associated with | a friend | 0.4 | assertion | -
+F0066 | the story stops | is associated with | a mystery | 0.7 | assertion | -
+F0067 | no path from one to the other | is associated with | a contradiction | 0.5 | assertion | -
+F0068 | the mechanism | is associated with | a tidy explanation | 0.6 | assertion | -
