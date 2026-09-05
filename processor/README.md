@@ -34,11 +34,32 @@ The state is written in six parts, one per component of the cognitive architectu
 | field of mind (blackboard) | every candidate of the step — sensory, carried, associative — with a name, not conscious |
 | field of consciousness | the cut of the field of mind by k and by budget; non-unitary: its components are the items grouped by the need each answers to |
 | long-term memory | what persists, decaying, with consolidated prior knowledge as a floor |
-| need portrait | needs with class, priority, satisfaction level; the active subset; the program; the conflict level |
+| need portrait | objective, in its own vocabulary: needs with class, priority, satisfaction level; the active subset; the program; the conflict level. Reaches the reader only as the pull of images and a retrospective `wants` |
 | model of the environment | the paths, associations and prerequisites, run instead of the text: the second set of interfaces. The channel attends to reality or to the model by reinforcement — which pays better now |
+| model of the self | the reader's prediction of its own next state, and the difference from what happened, sorted by kind; recurring kinds become the reader's names for itself |
 
 The model — a language model, or the engine — computes the dynamics by the rules. The content of the field of
 consciousness is never written; it is derived from the state of the whole.
+
+None of what the engine does is absent from language; deficits, satiation, the pull of images, the lag of the
+retrospective report are all in the statistics a language model has learned, dispersed. What the engine adds is
+not a mechanism the model lacks but a form in which those dispersed elements are gathered into one context and
+become continuable — and, once unloaded into rules, stay gathered without depending on where attention happens
+to fall. Knowledge is not what is scarce here; attention is.
+
+## Two levels, for now
+
+"Mass without a name" is a two-level case of a multiscale representation: an item is held either as its name
+(the leaf) or as its contribution to the tail's aggregates (the root), and nothing in between. The general form
+would hold each item at some level of the generality hierarchy (`is a specialization of`, which the Gellish
+dictionary already has), with the cost of holding growing with resolution — bits to tell the item from its
+alternatives in the current context — and the response aggregating upward, so that the tail statistics are
+simply the response at the root. Filling the Field would then coarsen and merge rather than evict, and the
+resolution required would be set by what the leading program has to decide.
+
+There is no effective formula yet for the cost of a representation at a given detail, so the engine stays at
+two levels. Two properties are kept so the levels can be added without rebuilding: the cost of holding is a
+column of its own, separate from what the text spent in words; and the response aggregates upward by sum.
 
 ## The contract
 

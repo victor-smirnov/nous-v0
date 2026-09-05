@@ -5,29 +5,44 @@ F0001 | both at once until you look | is in the field of | child | 0.36 | assert
 F0002 | you cannot know which until you look | is in the field of | child | 0.36 | assertion | sensory; cost 7
 F0003 | looking at it | is in the field of | child | 0.36 | assertion | sensory; cost 3
 F0004 | tiny things | is in the field of | child | 0.29 | assertion | carried; cost 2
-F0005 | child | has consciousness components | understanding 4 | - | assertion | items by the need each answers to; more than one is a split
-F0006 | child | has tail statistic | intensity | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
-F0007 | child | has tail statistic | valence | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
-F0008 | child | has tail statistic | count | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
-F0009 | child | has tail statistic | spread | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0005 | both at once until you look | attracts | child | much | assertion | the motivational component of the image, as a proportion of the Field's pull
+F0006 | you cannot know which until you look | attracts | child | much | assertion | the motivational component of the image, as a proportion of the Field's pull
+F0007 | looking at it | attracts | child | much | assertion | the motivational component of the image, as a proportion of the Field's pull
+F0008 | tiny things | attracts | child | much | assertion | the motivational component of the image, as a proportion of the Field's pull
+F0009 | child | wants more | both at once until you look than you cannot know which until you look | somewhat | assertion | the comparison the reader can actually make
+F0010 | child | has consciousness components | 1 | - | assertion | how many pieces the field is in; which needs is the analyst's to say
+F0011 | child | wants | tiny things, looking at it, both at once until you look | - | assertion | retrospective: what pulled over the last steps, named by the images
+F0012 | child | is surprised by itself | 0 | - | assertion | how far I differ from what I expected of myself: a mass, no names
+F0013 | child | has tail statistic | intensity | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0014 | child | has tail statistic | valence | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0015 | child | has tail statistic | count | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0016 | child | has tail statistic | spread | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
 
 # --- motor field: the one continuation
-F0010 | child | does | reads on | - | assertion | the program that has the channel
-F0011 | child | attends to | reality | 0.34 | assertion | the interface in use; value = reality yield so far; fantasy yield 0.10
+F0017 | child | does | reads on | - | assertion | the program that has the channel
+F0018 | child | attends to | reality | 0.34 | assertion | the interface in use; value = reality yield so far; fantasy yield 0.10
+
 
 # --- long-term memory
-F0012 | both at once until you look | is in memory of | child | 0.36 | assertion | cost 3
-F0013 | you cannot know which until you look | is in memory of | child | 0.36 | assertion | cost 7
-F0014 | looking at it | is in memory of | child | 0.36 | assertion | cost 3
-F0015 | tiny things | is in memory of | child | 0.29 | assertion | cost 2
+F0019 | both at once until you look | is in memory of | child | 0.36 | assertion | cost 3
+F0020 | you cannot know which until you look | is in memory of | child | 0.36 | assertion | cost 7
+F0021 | looking at it | is in memory of | child | 0.36 | assertion | cost 3
+F0022 | tiny things | is in memory of | child | 0.29 | assertion | cost 2
+F0023 | tiny things | has pulled | child | 0.63 | assertion | what the retrospective 'wants' is made of
+F0024 | looking at it | has pulled | child | 0.63 | assertion | what the retrospective 'wants' is made of
+F0025 | both at once until you look | has pulled | child | 0.54 | assertion | what the retrospective 'wants' is made of
+F0026 | you cannot know which until you look | has pulled | child | 0.36 | assertion | what the retrospective 'wants' is made of
 
-# --- need portrait
-F0016 | tiny things | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0017 | looking at it | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0018 | both at once until you look | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0019 | you cannot know which until you look | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0020 | child | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
-F0021 | child | has conflict level | 0.00 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
+# --- need portrait (objective: its own vocabulary, not the reader's)
+#   components by need: understanding 4
+#   pull of each image: both at once until you look +0.36, you cannot know which until you look +0.36, looking at it +0.36, tiny things +0.36
+#   the reader's 'wants' resolves to understanding; the program is understanding
+F0027 | tiny things | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0028 | looking at it | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0029 | both at once until you look | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0030 | you cannot know which until you look | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0031 | child | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
+F0032 | child | has conflict level | 0.00 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
 
 # --- field of mind (blackboard): represented, not conscious — the analyst's view, not the reader's
 #   heads or tails (0.16): below k
@@ -40,3 +55,4 @@ F0021 | child | has conflict level | 0.00 | - | assertion | runner-up program's 
 #   felt wavefunction: 0.22
 #   felt probability amplitude: 0.11
 #   felt collapse: 0.00
+#   self-model: predicted tiny things, both at once until you look, looking at it; program understanding

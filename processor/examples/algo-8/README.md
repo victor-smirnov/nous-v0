@@ -216,3 +216,59 @@ ten entries has nothing to daydream with; a richer model of the environment is w
 The mode and both yields are state (`attends to`, with the yields in the value and the note). The critic — the
 gap between what the model predicted a chunk would deliver and what it did — is the next quantity to write; it
 is what should move the reality yield, rather than the running average that stands in for it now.
+
+## The portrait is objective; "I want" is retrospective
+
+Needs have no name in the reader's block. What the reader has is each image's pull (`attracts` / `repels`),
+the number of pieces the Field is in, and a retrospective `wants`: the images that pulled most over the last
+steps, named as images — "making a sandwich, lunch", never "hunger". Which need that resolves to, and whether
+it matches the program, is the analyst's to say.
+
+Starving child, v1, the retrospective against the drive:
+
+| chunk | the reader's `wants` | resolves to | program |
+|---|---|---|---|
+| 1 | steps done one after another | understanding | understanding |
+| 2–3 | making a sandwich, lunch | hunger | hunger |
+| **4** | making a sandwich, lunch | hunger | **understanding** |
+| 5–9 | the concepts | understanding | understanding |
+
+At chunk 4 the drive has already returned to the text and the reader's account still says food. The report is
+a lag of the thing it reports, by construction: it is made of what pulled, and what pulled is a step old.
+That is self-opacity as a measured event, the smallest one the machine can show, and it is the same shape as
+the confabulation exhibit in the reasoner's rounds — a retrospective attribution built from salience, right
+most of the time and wrong at the turn.
+
+## The self-model: a vocabulary about oneself, grown from the difference
+
+The reader models not only the environment but itself. Before each chunk it predicts its own next state — the
+same step with nothing coming in: what I will be thinking if nothing arrives — and the actual step differs. The
+difference is sorted by kind, and the kinds are the beginnings of a vocabulary about oneself:
+
+| kind | what it is in the engine |
+|---|---|
+| forgot | predicted in the Field, gone |
+| came to mind | in the Field, not predicted, not from the chunk |
+| was pulled elsewhere | the program is not the one predicted |
+| did not follow | a concept named without its ground |
+
+To the reader this is first a **mass** — `is surprised by itself`, a count with no names — and a kind that
+recurs becomes a **name**: `notices about itself | forgot`. The mechanism of the curvature is in none of the
+steps; its manifestations, compared against the reader's own prediction of itself, become content.
+
+Starving child, v1:
+
+| chunk | self-surprise | names the reader has for itself |
+|---|---:|---|
+| 1 | 0 | – |
+| 2 | 3 | – (lunch and the silly robot came to mind; pulled to hunger) |
+| 3 | 1 | – |
+| 4 | 3 | forgot, was pulled elsewhere |
+| 7 | 3 | + came to mind |
+| 9 | 4 | + did not follow |
+
+Nine chunks in, the reader has four words about itself, none of which it had at the start, and none of which
+name a need, a level or a program. The vocabulary is made of the *shape* of the errors, not of their causes:
+which is exactly where the causal gap sits. "Forgot" is a fair name for what the engine measures only in part —
+it fires as well when a concept is displaced by the chunk as when it decays — and the next refinement is to let
+the kinds split as they recur, the way the reader's own would.

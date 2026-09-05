@@ -13,7 +13,7 @@ candidates.tsv — one line per sensory candidate: item<TAB>cost in words[<TAB>s
     (the optional trailing three columns install a path, stage 7), or item<TAB>cost<TAB>short for a short form
     that re-names a concept the reader already holds; if memory does not hold it, it is an unknown token.
 """
-import re, sys, pathlib
+import re, sys, pathlib, copy
 
 ROW = re.compile(r"^(F\d+)\s*\|\s*(.*?)\s*\|\s*(.*?)\s*\|\s*(.*?)\s*\|\s*(.*?)\s*\|\s*(.*?)\s*\|\s*(.*)$")
 
@@ -63,6 +63,10 @@ def load_state(path, p):
             p["level"][l] = float(r)
         elif rel == "has dominant need":
             p["program"] = r; p["switches"] = int(v) if v not in ("", "-") else 0
+        elif rel == "has met self-surprise":
+            p.setdefault("self kinds", {})[r] = int(v)
+        elif rel == "has pulled":
+            p.setdefault("recent pull", {})[l] = float(v)
         elif rel == "attends to":
             p["reality yield"] = float(v) if v not in ("", "-") else None
             m = re.search(r"fantasy yield ([\d.]+)", note)
@@ -213,6 +217,10 @@ def step(p, prior_field, memory, sensory, new_paths, t=None):
     program = max(mass, key=mass.get) if mass else "-"
     # conflict: only one program can have the motor channel, so the felt quantity is not the switch but how
     # nearly the runner-up matches the leader — 0 is one program alone, 1 is the channel contested every step
+    pull = {}                                                       # what each image does to the reader: attraction or repulsion
+    for x in field:
+        pull[x] = sum(d * weight(n, p) for (y, n), d in p["paths"].items() if y == x)
+    p["pull"] = pull
     comp = {}
     for x in field:
         best = max(((abs(d) * weight(n, p), n) for (y, n), d in p["paths"].items() if y == x), default=(0.0, "none"))
@@ -231,6 +239,21 @@ def step(p, prior_field, memory, sensory, new_paths, t=None):
         notes.append(f"program {prior_program} -> {program}" + (f": distraction by {', '.join(culprit)}" if culprit else ""))
     p["motor"] = "reads on" if program in ("-", scenario) else f"acts on {program}"
     p["program"] = program
+    recent = dict(p.get("recent pull", {}))
+    for x, v in pull.items():
+        recent[x] = 0.5 * recent.get(x, 0.0) + v
+    p["recent pull"] = {x: v for x, v in recent.items() if abs(v) >= 0.05}
+    by_need = {}
+    for x, v in p["recent pull"].items():
+        best = max(((abs(d) * weight(n, p), n) for (y, n), d in p["paths"].items() if y == x), default=(0.0, None))
+        if best[1] and v > 0:
+            by_need.setdefault(best[1], []).append((v, x))
+    if by_need:
+        want_need, imgs = max(by_need.items(), key=lambda kv: sum(v for v, _ in kv[1]))
+        p["wants"] = ", ".join(x for _, x in sorted(imgs, reverse=True)[:3])
+        p["wants need"] = want_need
+    else:
+        p["wants"] = "-"; p["wants need"] = None
     # two interfaces: the environment, and the model of it. Reality's yield is the response the received chunk
     # delivered (a running estimate of what the next one will); fantasy's is the best response the model can
     # produce from the Field by one more association. The mode is where the channel is; the yields are what a
@@ -266,15 +289,30 @@ def step(p, prior_field, memory, sensory, new_paths, t=None):
     return field, evicted, stats, new_memory, spent, notes
 
 
-def render(reader, n, field, evicted, stats, memory, spent, new_paths, notes=(), levels=None, grasped=(), comprehension=0.0, program="-", switches=0, conflict=0.0, motor="reads on", components=None, received=True, mode="reality", ry=0.0, fy=0.0):
-    levels = levels or {}; components = components or {}
+def render(reader, n, field, evicted, stats, memory, spent, new_paths, notes=(), levels=None, grasped=(), comprehension=0.0, program="-", switches=0, conflict=0.0, motor="reads on", components=None, received=True, mode="reality", ry=0.0, fy=0.0, pull=None, wants="-", wants_need=None, recent=None, self_surprise=0, self_names=(), self_kinds=None):
+    levels = levels or {}; components = components or {}; pull = pull or {}; recent = recent or {}; self_kinds = self_kinds or {}
     out = [f"# state after step {n}   (field {spent} words)", "",
            "# --- field of consciousness: what the reader can report" + ("" if received else "   [chunk not received: the motor field was elsewhere]")]
     i = 1
     for item, (c, cost, src) in field.items():
         out.append(f"F{i:04d} | {item} | is in the field of | {reader} | {c:.2f} | assertion | {src}; cost {cost}"); i += 1
+    # the reader has no numbers, only an order and a proportion: how much of the Field's total pull an image
+    # holds decides the degree word, and the top two are stated as a comparison
+    total = sum(abs(v) for v in pull.values()) or 1.0
+    ranked = sorted(((v, x) for x, v in pull.items() if abs(v) >= 0.05), key=lambda t: -abs(t[0]))
+    def degree(share):
+        return "very much" if share >= 0.45 else "much" if share >= 0.25 else "somewhat" if share >= 0.12 else "a little"
+    for v, x in ranked:
+        out.append(f"F{i:04d} | {x} | {'attracts' if v > 0 else 'repels'} | {reader} | {degree(abs(v) / total)} | assertion | the motivational component of the image, as a proportion of the Field's pull"); i += 1
+    if len(ranked) >= 2 and ranked[0][0] > 0:
+        out.append(f"F{i:04d} | {reader} | wants more | {ranked[0][1]} than {ranked[1][1]} | {'far' if abs(ranked[0][0]) >= 1.6 * abs(ranked[1][0]) else 'somewhat'} | assertion | the comparison the reader can actually make"); i += 1
     if components:
-        out.append(f"F{i:04d} | {reader} | has consciousness components | " + ", ".join(f"{k} {v}" for k, v in sorted(components.items(), key=lambda kv: -kv[1])) + " | - | assertion | items by the need each answers to; more than one is a split"); i += 1
+        out.append(f"F{i:04d} | {reader} | has consciousness components | {len(components)} | - | assertion | how many pieces the field is in; which needs is the analyst's to say"); i += 1
+    if wants and wants != "-":
+        out.append(f"F{i:04d} | {reader} | wants | {wants} | - | assertion | retrospective: what pulled over the last steps, named by the images"); i += 1
+    out.append(f"F{i:04d} | {reader} | is surprised by itself | {self_surprise} | - | assertion | how far I differ from what I expected of myself: a mass, no names"); i += 1
+    for k in self_names:
+        out.append(f"F{i:04d} | {reader} | notices about itself | {k} | - | assertion | a kind of self-surprise seen more than once has become a name"); i += 1
     for key in ("intensity", "valence", "count", "spread"):
         out.append(f"F{i:04d} | {reader} | has tail statistic | {key} | {stats[key]:.2f} | assertion | the field of mind, as it reaches consciousness: mass, no names"); i += 1
     out.append("")
@@ -282,11 +320,22 @@ def render(reader, n, field, evicted, stats, memory, spent, new_paths, notes=(),
     out.append(f"F{i:04d} | {reader} | does | {motor} | - | assertion | the program that has the channel"); i += 1
     out.append(f"F{i:04d} | {reader} | attends to | {mode} | {ry:.2f} | assertion | the interface in use; value = reality yield so far; fantasy yield {fy:.2f}"); i += 1
     out.append("")
+    for k, c in self_kinds.items():
+        out.append(f"F{i:04d} | {reader} | has met self-surprise | {k} | {c} | assertion | objective: how often this kind has occurred"); i += 1
+    out.append("")
     out.append("# --- long-term memory")
     for item, (c, cost) in memory.items():
         out.append(f"F{i:04d} | {item} | is in memory of | {reader} | {c:.2f} | assertion | cost {cost}"); i += 1
+    for x, v in recent.items():
+        out.append(f"F{i:04d} | {x} | has pulled | {reader} | {v:.2f} | assertion | what the retrospective 'wants' is made of"); i += 1
     out.append("")
-    out.append("# --- need portrait")
+    out.append("# --- need portrait (objective: its own vocabulary, not the reader's)")
+    if components:
+        out.append(f"#   components by need: " + ", ".join(f"{k} {v}" for k, v in sorted(components.items(), key=lambda kv: -kv[1])))
+    if pull:
+        out.append("#   pull of each image: " + ", ".join(f"{x} {v:+.2f}" for x, v in sorted(pull.items(), key=lambda kv: -abs(kv[1])) if abs(v) >= 0.05))
+    if wants_need:
+        out.append(f"#   the reader's 'wants' resolves to {wants_need}; the program is {program}" + ("" if wants_need == program else "  <- self-opacity: the report and the drive differ"))
     for (x, nd), d in new_paths:
         out.append(f"F{i:04d} | {x} | has satisfaction delta | {nd} | {d} | assertion | established by the chunk"); i += 1
     for x in grasped:
@@ -390,12 +439,37 @@ def main(argv):
         import re as _re
         m = _re.search(r"# state after step (\d+)", pathlib.Path(priors[-1]).read_text())
         n = int(m.group(1)) + 1 if m else len(priors) + 1
+    # the self-model: what I will be thinking if nothing comes — the reader's prediction of its own next state
+    q = copy.deepcopy(p)
+    pf, _, _, _, _, _ = step(q, dict(field), dict(memory), [], [], t)
+    predicted_program = q.get("program", "-")
     f, e, s, m, spent, notes = step(p, field, memory, sensory, new_paths, t)
+    # the difference, by kind: the raw material of a vocabulary about oneself
+    kinds = {}
+    lost = [x for x in pf if x not in f]
+    came = [x for x, (_, _, src) in f.items() if x not in pf and src != "sensory"]
+    if lost: kinds["forgot"] = lost
+    if came: kinds["came to mind"] = came
+    if p.get("program", "-") != predicted_program and predicted_program != "-":
+        kinds["was pulled elsewhere"] = [p.get("program", "-")]
+    missed = [ln.split(": ", 1)[1].split(" needs ")[0] for ln in notes if ln.startswith("prerequisite missing")]
+    if missed: kinds["did not follow"] = sorted(set(missed))
+    seen = p.get("self kinds", {})
+    for k in kinds:
+        seen[k] = seen.get(k, 0) + 1
+    p["self kinds"] = seen
+    notes.append("self-model: predicted " + (", ".join(pf) if pf else "nothing") + f"; program {predicted_program}")
+    for k, xs in kinds.items():
+        notes.append(f"self-surprise {k}: " + ", ".join(xs))
+    p["self surprise"] = sum(len(xs) for xs in kinds.values())
+    p["self names"] = sorted(k for k, c in seen.items() if c >= 2)      # a kind seen twice has a name
     notes += [f"short form of {x} with {x} not in memory: an unknown token, ignored" for x in short_dropped]
     grasped = [x for (x, nd) in p["paths"] if nd == "understanding" and x in t["reach"]]
     pathlib.Path(out).write_text(render(p["reader"], n, f, e, s, m, spent, new_paths, notes, p["level"],
                                         grasped, p["params"].get("comprehension", 0.0), p.get("program", "-"), p.get("switches", 0), p.get("conflict", 0.0),
-                                        p.get("motor", "reads on"), p.get("components"), p.get("received", True), p.get("mode", "reality"), p.get("reality yield", 0.0), p.get("fantasy yield", 0.0)))
+                                        p.get("motor", "reads on"), p.get("components"), p.get("received", True), p.get("mode", "reality"), p.get("reality yield", 0.0), p.get("fantasy yield", 0.0),
+                                        p.get("pull"), p.get("wants", "-"), p.get("wants need"), p.get("recent pull", {}),
+                                        p.get("self surprise", 0), p.get("self names", []), p.get("self kinds", {})))
     print(pathlib.Path(out).read_text())
 
 

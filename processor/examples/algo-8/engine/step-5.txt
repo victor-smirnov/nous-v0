@@ -6,38 +6,55 @@ F0002 | anyone can follow it without knowing why | is in the field of | child | 
 F0003 | same steps, same result every time | is in the field of | child | 0.30 | assertion | carried; cost 6
 F0004 | steps done one after another | is in the field of | child | 0.29 | assertion | carried; cost 4
 F0005 | following instructions | is in the field of | child | 0.26 | assertion | carried; cost 2
-F0006 | child | has consciousness components | understanding 4, none 1 | - | assertion | items by the need each answers to; more than one is a split
-F0007 | child | has tail statistic | intensity | 0.36 | assertion | the field of mind, as it reaches consciousness: mass, no names
-F0008 | child | has tail statistic | valence | 0.36 | assertion | the field of mind, as it reaches consciousness: mass, no names
-F0009 | child | has tail statistic | count | 1.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
-F0010 | child | has tail statistic | spread | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0006 | every step must be exact | attracts | child | much | assertion | the motivational component of the image, as a proportion of the Field's pull
+F0007 | anyone can follow it without knowing why | attracts | child | much | assertion | the motivational component of the image, as a proportion of the Field's pull
+F0008 | same steps, same result every time | attracts | child | much | assertion | the motivational component of the image, as a proportion of the Field's pull
+F0009 | steps done one after another | attracts | child | much | assertion | the motivational component of the image, as a proportion of the Field's pull
+F0010 | child | wants more | every step must be exact than anyone can follow it without knowing why | somewhat | assertion | the comparison the reader can actually make
+F0011 | child | has consciousness components | 2 | - | assertion | how many pieces the field is in; which needs is the analyst's to say
+F0012 | child | wants | same steps, same result every time, steps done one after another, every step must be exact | - | assertion | retrospective: what pulled over the last steps, named by the images
+F0013 | child | is surprised by itself | 1 | - | assertion | how far I differ from what I expected of myself: a mass, no names
+F0014 | child | has tail statistic | intensity | 0.36 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0015 | child | has tail statistic | valence | 0.36 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0016 | child | has tail statistic | count | 1.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0017 | child | has tail statistic | spread | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
 
 # --- motor field: the one continuation
-F0011 | child | does | reads on | - | assertion | the program that has the channel
-F0012 | child | attends to | reality | 0.36 | assertion | the interface in use; value = reality yield so far; fantasy yield 0.00
+F0018 | child | does | reads on | - | assertion | the program that has the channel
+F0019 | child | attends to | reality | 0.36 | assertion | the interface in use; value = reality yield so far; fantasy yield 0.00
+
+F0020 | child | has met self-surprise | forgot | 1 | assertion | objective: how often this kind has occurred
 
 # --- long-term memory
-F0013 | every step must be exact | is in memory of | child | 0.36 | assertion | cost 3
-F0014 | anyone can follow it without knowing why | is in memory of | child | 0.36 | assertion | cost 7
-F0015 | same steps, same result every time | is in memory of | child | 0.30 | assertion | cost 6
-F0016 | steps done one after another | is in memory of | child | 0.29 | assertion | cost 4
-F0017 | following instructions | is in memory of | child | 0.26 | assertion | cost 2
-F0018 | it must come to an end | is in memory of | child | 0.27 | assertion | cost 6
-F0019 | a recipe | is in memory of | child | 0.40 | assertion | cost 2
-F0020 | the rules of a game | is in memory of | child | 0.50 | assertion | cost 4
-F0021 | a robot | is in memory of | child | 0.40 | assertion | cost 2
-F0022 | a computer | is in memory of | child | 0.40 | assertion | cost 2
-F0023 | brushing your teeth | is in memory of | child | 0.50 | assertion | cost 3
-F0024 | making a sandwich | is in memory of | child | 0.40 | assertion | cost 3
+F0021 | every step must be exact | is in memory of | child | 0.36 | assertion | cost 3
+F0022 | anyone can follow it without knowing why | is in memory of | child | 0.36 | assertion | cost 7
+F0023 | same steps, same result every time | is in memory of | child | 0.30 | assertion | cost 6
+F0024 | steps done one after another | is in memory of | child | 0.29 | assertion | cost 4
+F0025 | following instructions | is in memory of | child | 0.26 | assertion | cost 2
+F0026 | it must come to an end | is in memory of | child | 0.27 | assertion | cost 6
+F0027 | a recipe | is in memory of | child | 0.40 | assertion | cost 2
+F0028 | the rules of a game | is in memory of | child | 0.50 | assertion | cost 4
+F0029 | a robot | is in memory of | child | 0.40 | assertion | cost 2
+F0030 | a computer | is in memory of | child | 0.40 | assertion | cost 2
+F0031 | brushing your teeth | is in memory of | child | 0.50 | assertion | cost 3
+F0032 | making a sandwich | is in memory of | child | 0.40 | assertion | cost 3
+F0033 | steps done one after another | has pulled | child | 0.70 | assertion | what the retrospective 'wants' is made of
+F0034 | every step must be exact | has pulled | child | 0.68 | assertion | what the retrospective 'wants' is made of
+F0035 | same steps, same result every time | has pulled | child | 0.71 | assertion | what the retrospective 'wants' is made of
+F0036 | it must come to an end | has pulled | child | 0.36 | assertion | what the retrospective 'wants' is made of
+F0037 | anyone can follow it without knowing why | has pulled | child | 0.36 | assertion | what the retrospective 'wants' is made of
 
-# --- need portrait
-F0025 | steps done one after another | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0026 | every step must be exact | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0027 | same steps, same result every time | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0028 | it must come to an end | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0029 | anyone can follow it without knowing why | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0030 | child | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
-F0031 | child | has conflict level | 0.00 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
+# --- need portrait (objective: its own vocabulary, not the reader's)
+#   components by need: understanding 4, none 1
+#   pull of each image: every step must be exact +0.36, anyone can follow it without knowing why +0.36, same steps, same result every time +0.36, steps done one after another +0.36
+#   the reader's 'wants' resolves to understanding; the program is understanding
+F0038 | steps done one after another | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0039 | every step must be exact | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0040 | same steps, same result every time | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0041 | it must come to an end | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0042 | anyone can follow it without knowing why | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0043 | child | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
+F0044 | child | has conflict level | 0.00 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
 
 # --- field of mind (blackboard): represented, not conscious — the analyst's view, not the reader's
 #   it must come to an end (0.29): no room: 6 words, 4.0 left
@@ -49,3 +66,5 @@ F0031 | child | has conflict level | 0.00 | - | assertion | runner-up program's 
 #   felt a Turing machine: 0.18
 #   felt the halting problem: 0.16
 #   felt formal semantics: 0.30
+#   self-model: predicted same steps, same result every time, steps done one after another, it must come to an end, following instructions, every step must be exact; program understanding
+#   self-surprise forgot: it must come to an end

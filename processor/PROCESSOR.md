@@ -122,11 +122,35 @@ have been delivering (`reality yield`). Otherwise reality is attended to whateve
 and the mode are state (`attends to`). The field of consciousness is also reported in **components**, its items grouped
 by the need each answers to most; more than one component is a split.
 
+## The portrait is objective; motivation is what reaches the reader
+
+Needs are stated in their own vocabulary and have no name in the field of consciousness. What the reader has
+is the **motivational component of each image**: `attracts` / `repels`, the way jam is always tasty — and not as
+a number. The reader has an order and a proportion: the degree word (very much, much, somewhat, a little) is the
+image's share of the Field's total pull, and the top two are stated as the comparison the reader can actually
+make, `wants more | X than Y`. The numbers stay in the analyst's block. Which need an image answers to, the program, the conflict by mass, the levels — all that is the
+analyst's block. The reader's own account of what drives them is **retrospective**: `wants`, the images that
+pulled most over the last steps, named as images. It can lag or miss the actual program; when it does, the
+trace says so (self-opacity).
+
+## Stage 4b — the self-model
+
+Before the chunk, the reader predicts its own next state: the same step with nothing coming in. After the
+chunk, the actual state differs, and the difference is sorted by kind — `forgot` (predicted present, gone),
+`came to mind` (present, not predicted, not from the chunk), `was pulled elsewhere` (the program is not the one
+predicted), `did not follow` (a concept named without its ground). The reader gets the difference first as a
+mass (`is surprised by itself`, a count) and, for any kind that has recurred, as a name (`notices about
+itself`). The counts per kind are objective and travel in the state. This is where the vocabulary of
+consciousness comes from in this model: names for the recurring shapes of one's own prediction errors, with the
+mechanism that produced them absent from every one of them.
+
 ## Output: the state by component, then the trace
 
 The state is written in the six parts of the architecture — field of consciousness (what the reader can
-report), motor field, long-term memory, need portrait, then the field of mind (the blackboard: represented, not
-conscious) — followed by the **trace**, the analyst's arithmetic. The rule that the tail's members are never
+report: images with their pull, how many pieces the field is in, the retrospective `wants`, the tail's four
+numbers), motor field, long-term memory, need portrait (objective: need names, levels, program, conflict), then
+the field of mind (the blackboard: represented, not conscious) — followed by the **trace**, the analyst's
+arithmetic. The rule that the tail's members are never
 named applies to the field of consciousness. The field of mind and the trace may name anything, because the
 analyst sees both sides — that asymmetry is the point of building the thing.
 

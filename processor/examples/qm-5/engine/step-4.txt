@@ -6,31 +6,48 @@ F0002 | both at once until you look | is in the field of | child | 0.36 | assert
 F0003 | you cannot know which until you look | is in the field of | child | 0.29 | assertion | carried; cost 7
 F0004 | looking at it | is in the field of | child | 0.29 | assertion | carried; cost 3
 F0005 | tiny things | is in the field of | child | 0.23 | assertion | carried; cost 2
-F0006 | child | has consciousness components | understanding 5 | - | assertion | items by the need each answers to; more than one is a split
-F0007 | child | has tail statistic | intensity | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
-F0008 | child | has tail statistic | valence | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
-F0009 | child | has tail statistic | count | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
-F0010 | child | has tail statistic | spread | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0006 | looking changes it | attracts | child | somewhat | assertion | the motivational component of the image, as a proportion of the Field's pull
+F0007 | both at once until you look | attracts | child | somewhat | assertion | the motivational component of the image, as a proportion of the Field's pull
+F0008 | you cannot know which until you look | attracts | child | somewhat | assertion | the motivational component of the image, as a proportion of the Field's pull
+F0009 | looking at it | attracts | child | somewhat | assertion | the motivational component of the image, as a proportion of the Field's pull
+F0010 | tiny things | attracts | child | somewhat | assertion | the motivational component of the image, as a proportion of the Field's pull
+F0011 | child | wants more | looking changes it than both at once until you look | somewhat | assertion | the comparison the reader can actually make
+F0012 | child | has consciousness components | 1 | - | assertion | how many pieces the field is in; which needs is the analyst's to say
+F0013 | child | wants | tiny things, looking at it, both at once until you look | - | assertion | retrospective: what pulled over the last steps, named by the images
+F0014 | child | is surprised by itself | 0 | - | assertion | how far I differ from what I expected of myself: a mass, no names
+F0015 | child | has tail statistic | intensity | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0016 | child | has tail statistic | valence | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0017 | child | has tail statistic | count | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
+F0018 | child | has tail statistic | spread | 0.00 | assertion | the field of mind, as it reaches consciousness: mass, no names
 
 # --- motor field: the one continuation
-F0011 | child | does | reads on | - | assertion | the program that has the channel
-F0012 | child | attends to | reality | 0.35 | assertion | the interface in use; value = reality yield so far; fantasy yield 0.10
+F0019 | child | does | reads on | - | assertion | the program that has the channel
+F0020 | child | attends to | reality | 0.35 | assertion | the interface in use; value = reality yield so far; fantasy yield 0.10
+
 
 # --- long-term memory
-F0013 | looking changes it | is in memory of | child | 0.36 | assertion | cost 3
-F0014 | both at once until you look | is in memory of | child | 0.36 | assertion | cost 3
-F0015 | you cannot know which until you look | is in memory of | child | 0.29 | assertion | cost 7
-F0016 | looking at it | is in memory of | child | 0.29 | assertion | cost 3
-F0017 | tiny things | is in memory of | child | 0.23 | assertion | cost 2
+F0021 | looking changes it | is in memory of | child | 0.36 | assertion | cost 3
+F0022 | both at once until you look | is in memory of | child | 0.36 | assertion | cost 3
+F0023 | you cannot know which until you look | is in memory of | child | 0.29 | assertion | cost 7
+F0024 | looking at it | is in memory of | child | 0.29 | assertion | cost 3
+F0025 | tiny things | is in memory of | child | 0.23 | assertion | cost 2
+F0026 | tiny things | has pulled | child | 0.68 | assertion | what the retrospective 'wants' is made of
+F0027 | looking at it | has pulled | child | 0.68 | assertion | what the retrospective 'wants' is made of
+F0028 | both at once until you look | has pulled | child | 0.63 | assertion | what the retrospective 'wants' is made of
+F0029 | you cannot know which until you look | has pulled | child | 0.54 | assertion | what the retrospective 'wants' is made of
+F0030 | looking changes it | has pulled | child | 0.36 | assertion | what the retrospective 'wants' is made of
 
-# --- need portrait
-F0018 | tiny things | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0019 | looking at it | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0020 | both at once until you look | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0021 | you cannot know which until you look | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0022 | looking changes it | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0023 | child | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
-F0024 | child | has conflict level | 0.00 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
+# --- need portrait (objective: its own vocabulary, not the reader's)
+#   components by need: understanding 5
+#   pull of each image: looking changes it +0.36, both at once until you look +0.36, you cannot know which until you look +0.36, looking at it +0.36, tiny things +0.36
+#   the reader's 'wants' resolves to understanding; the program is understanding
+F0031 | tiny things | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0032 | looking at it | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0033 | both at once until you look | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0034 | you cannot know which until you look | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0035 | looking changes it | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0036 | child | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
+F0037 | child | has conflict level | 0.00 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
 
 # --- field of mind (blackboard): represented, not conscious — the analyst's view, not the reader's
 #   peeking (0.20): no room: 1 words, 0.0 left
@@ -45,3 +62,4 @@ F0024 | child | has conflict level | 0.00 | - | assertion | runner-up program's 
 #   felt wavefunction: 0.22
 #   felt probability amplitude: 0.09
 #   felt collapse: 0.25
+#   self-model: predicted both at once until you look, you cannot know which until you look, looking at it, tiny things; program understanding
