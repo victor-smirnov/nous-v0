@@ -63,6 +63,33 @@ recall, name, relate, generate — 0 to 6) are in place as a measurement, and th
 extension will use; level 3, recall without a name, is the one the engine cannot yet represent. Two properties are kept so the levels can be added without rebuilding: the cost of holding is a
 column of its own, separate from what the text spent in words; and the response aggregates upward by sum.
 
+## Emotion as closure, and the relation to artificial curiosity
+
+First, what distortion is not. The content of the field of consciousness at each step is the iteration toward
+the fixpoint itself, mapped as it is: what was derived, in what order, with what relations. Any reasonable run
+of rounds maps into consciousness this way without appreciable distortion, and that is a complete
+phenomenology of higher-order states — levels 4–5 on the scale of control, faithful. Distortion adds two things
+on top: the difference from the ideal trajectory, from which the vocabulary about oneself and the causal gap
+grow, and the failure to close, from which emotion grows. Without them consciousness is not empty; it is
+accurate. The state files are the faithful mapping; curvature and residue are quantities over it.
+
+Needs curve the *direction* of reasoning: what is near, what is attended to. Emotion curves its *closure*:
+whether a batch reaches its fixpoint without residue. Open branches — deficits with no closing path, searches
+with no plan, derivations truncated by depth — are the residue, and emotion is what the residue does to the
+process. Value is expected closure; interest is closure in progress; anxiety is an open branch nothing can
+close; satisfaction is the event of closing; conflict is two branches closable only by incompatible actions.
+The reasoner's `unfinished` relation is this residue at the level of derivations, and the Observer appears
+exactly where a batch fails to close. This is a hypothesis, not a result; it is written down because it says
+what gets named when an emotion gets a name.
+
+Schmidhuber's compression progress is closure by learning over one stream with uniform weights. Ours is closure
+over branches weighted by the active deficits of the portrait, with two ways to close a branch: understand it,
+or act. Set the weights equal and forbid action, and his theory comes back — the enactive part is exactly the
+prior over which residues matter and the second way of closing. What his account lacks is the ladder between
+the quantity (progress, a level-1–2 event on the scale of control) and the name he gives it ("curiosity", a
+level-4–5 feeling); the levels of control are that ladder, and the self-model is his self-symbol shown growing
+from the sorted errors of self-prediction rather than postulated.
+
 ## The contract
 
 Input, per step:
@@ -151,6 +178,7 @@ instrument. See algo-8's README.
 processor/
   README.md          this
   PROCESSOR.md       the full instructions, all seven stages, for running a model end to end
+  MAPPING.md         every state relation: how it reaches the reader in language, and what it unloads to in Datalog
   STAGE1.md          the instructions for the two stages only a model can do
   EVALUATOR.md       the instructions the evaluating sub-agent runs
   engine.py          stages 2–6 as a program
