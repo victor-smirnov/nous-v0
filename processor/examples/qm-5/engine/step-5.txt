@@ -23,32 +23,33 @@ F0017 | child | does | reads on | - | assertion | the program that has the chann
 F0018 | child | attends to | reality | 0.35 | assertion | the interface in use; value = reality yield so far; fantasy yield 0.00
 
 F0019 | child | has met self-surprise | forgot | 1 | assertion | objective: how often this kind has occurred
+F0020 | child | has items at control levels | L1 5, L2 1, L5 4 | - | assertion | 1 reacted only; 2 conscious as something, gone; 4 named; 5 related; 6 generative. L3 not representable yet
 
 # --- long-term memory
-F0020 | you cannot know which until you look | is in memory of | child | 0.36 | assertion | cost 7
-F0021 | the pattern from many tries | is in memory of | child | 0.36 | assertion | cost 3
-F0022 | looking changes it | is in memory of | child | 0.29 | assertion | cost 3
-F0023 | both at once until you look | is in memory of | child | 0.29 | assertion | cost 3
-F0024 | looking at it | is in memory of | child | 0.20 | assertion | cost 3
-F0025 | tiny things | has pulled | child | 0.68 | assertion | what the retrospective 'wants' is made of
-F0026 | looking at it | has pulled | child | 0.68 | assertion | what the retrospective 'wants' is made of
-F0027 | both at once until you look | has pulled | child | 0.68 | assertion | what the retrospective 'wants' is made of
-F0028 | you cannot know which until you look | has pulled | child | 0.63 | assertion | what the retrospective 'wants' is made of
-F0029 | looking changes it | has pulled | child | 0.54 | assertion | what the retrospective 'wants' is made of
-F0030 | the pattern from many tries | has pulled | child | 0.36 | assertion | what the retrospective 'wants' is made of
+F0021 | you cannot know which until you look | is in memory of | child | 0.36 | assertion | cost 7
+F0022 | the pattern from many tries | is in memory of | child | 0.36 | assertion | cost 3
+F0023 | looking changes it | is in memory of | child | 0.29 | assertion | cost 3
+F0024 | both at once until you look | is in memory of | child | 0.29 | assertion | cost 3
+F0025 | looking at it | is in memory of | child | 0.20 | assertion | cost 3
+F0026 | tiny things | has pulled | child | 0.68 | assertion | what the retrospective 'wants' is made of
+F0027 | looking at it | has pulled | child | 0.68 | assertion | what the retrospective 'wants' is made of
+F0028 | both at once until you look | has pulled | child | 0.68 | assertion | what the retrospective 'wants' is made of
+F0029 | you cannot know which until you look | has pulled | child | 0.63 | assertion | what the retrospective 'wants' is made of
+F0030 | looking changes it | has pulled | child | 0.54 | assertion | what the retrospective 'wants' is made of
+F0031 | the pattern from many tries | has pulled | child | 0.36 | assertion | what the retrospective 'wants' is made of
 
 # --- need portrait (objective: its own vocabulary, not the reader's)
 #   components by need: understanding 4
 #   pull of each image: you cannot know which until you look +0.36, the pattern from many tries +0.36, looking changes it +0.36, both at once until you look +0.36
 #   the reader's 'wants' resolves to understanding; the program is understanding
-F0031 | tiny things | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0032 | looking at it | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0033 | both at once until you look | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0034 | you cannot know which until you look | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0035 | looking changes it | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0036 | the pattern from many tries | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0037 | child | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
-F0038 | child | has conflict level | 0.00 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
+F0032 | tiny things | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0033 | looking at it | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0034 | both at once until you look | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0035 | you cannot know which until you look | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0036 | looking changes it | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0037 | the pattern from many tries | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0038 | child | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
+F0039 | child | has conflict level | 0.00 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
 
 # --- field of mind (blackboard): represented, not conscious — the analyst's view, not the reader's
 #   looking at it (0.23): no room: 3 words, 2.0 left
@@ -67,3 +68,4 @@ F0038 | child | has conflict level | 0.00 | - | assertion | runner-up program's 
 #   felt collapse: 0.20
 #   self-model: predicted looking changes it, both at once until you look, you cannot know which until you look, looking at it; program understanding
 #   self-surprise forgot: looking at it
+#   control levels: you cannot know which until you look L5, the pattern from many tries L5, looking changes it L5, both at once until you look L5, looking at it L2, tiny things L1, a spinning coin L1, you cannot tell yet L1, heads or tails L1, ants L1

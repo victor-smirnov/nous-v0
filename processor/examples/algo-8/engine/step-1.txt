@@ -15,25 +15,26 @@ F0009 | child | has tail statistic | spread | 0.00 | assertion | the field of mi
 F0010 | child | does | reads on | - | assertion | the program that has the channel
 F0011 | child | attends to | reality | 0.36 | assertion | the interface in use; value = reality yield so far; fantasy yield 0.00
 
+F0012 | child | has items at control levels | L4 7, L5 1 | - | assertion | 1 reacted only; 2 conscious as something, gone; 4 named; 5 related; 6 generative. L3 not representable yet
 
 # --- long-term memory
-F0012 | steps done one after another | is in memory of | child | 0.36 | assertion | cost 5
-F0013 | following instructions | is in memory of | child | 0.40 | assertion | cost 2
-F0014 | a recipe | is in memory of | child | 0.40 | assertion | cost 2
-F0015 | the rules of a game | is in memory of | child | 0.50 | assertion | cost 4
-F0016 | a robot | is in memory of | child | 0.40 | assertion | cost 2
-F0017 | a computer | is in memory of | child | 0.40 | assertion | cost 2
-F0018 | brushing your teeth | is in memory of | child | 0.50 | assertion | cost 3
-F0019 | making a sandwich | is in memory of | child | 0.40 | assertion | cost 3
-F0020 | steps done one after another | has pulled | child | 0.36 | assertion | what the retrospective 'wants' is made of
+F0013 | steps done one after another | is in memory of | child | 0.36 | assertion | cost 5
+F0014 | following instructions | is in memory of | child | 0.40 | assertion | cost 2
+F0015 | a recipe | is in memory of | child | 0.40 | assertion | cost 2
+F0016 | the rules of a game | is in memory of | child | 0.50 | assertion | cost 4
+F0017 | a robot | is in memory of | child | 0.40 | assertion | cost 2
+F0018 | a computer | is in memory of | child | 0.40 | assertion | cost 2
+F0019 | brushing your teeth | is in memory of | child | 0.50 | assertion | cost 3
+F0020 | making a sandwich | is in memory of | child | 0.40 | assertion | cost 3
+F0021 | steps done one after another | has pulled | child | 0.36 | assertion | what the retrospective 'wants' is made of
 
 # --- need portrait (objective: its own vocabulary, not the reader's)
 #   components by need: understanding 1
 #   pull of each image: steps done one after another +0.36
 #   the reader's 'wants' resolves to understanding; the program is understanding
-F0021 | steps done one after another | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0022 | child | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
-F0023 | child | has conflict level | 0.00 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
+F0022 | steps done one after another | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0023 | child | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
+F0024 | child | has conflict level | 0.00 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
 
 # --- field of mind (blackboard): represented, not conscious — the analyst's view, not the reader's
 
@@ -45,3 +46,4 @@ F0023 | child | has conflict level | 0.00 | - | assertion | runner-up program's 
 #   felt the halting problem: 0.00
 #   felt formal semantics: 0.00
 #   self-model: predicted nothing; program -
+#   control levels: steps done one after another L5, following instructions L4, a recipe L4, the rules of a game L4, a robot L4, a computer L4, brushing your teeth L4, making a sandwich L4

@@ -58,7 +58,9 @@ simply the response at the root. Filling the Field would then coarsen and merge 
 resolution required would be set by what the leading program has to decide.
 
 There is no effective formula yet for the cost of a representation at a given detail, so the engine stays at
-two levels. Two properties are kept so the levels can be added without rebuilding: the cost of holding is a
+two levels of *representation*. The levels of *control* (what the reader can do with an item: react, report,
+recall, name, relate, generate — 0 to 6) are in place as a measurement, and they are the layer structure the
+extension will use; level 3, recall without a name, is the one the engine cannot yet represent. Two properties are kept so the levels can be added without rebuilding: the cost of holding is a
 column of its own, separate from what the text spent in words; and the response aggregates upward by sum.
 
 ## The contract

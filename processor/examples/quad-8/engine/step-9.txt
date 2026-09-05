@@ -38,48 +38,49 @@ F0032 | student | attends to | reality | 0.33 | assertion | the interface in use
 
 F0033 | student | has met self-surprise | came to mind | 2 | assertion | objective: how often this kind has occurred
 F0034 | student | has met self-surprise | forgot | 1 | assertion | objective: how often this kind has occurred
+F0035 | student | has items at control levels | L1 4, L4 6, L5 8, L6 1 | - | assertion | 1 reacted only; 2 conscious as something, gone; 4 named; 5 related; 6 generative. L3 not representable yet
 
 # --- long-term memory
-F0035 | a quadratic equation | is in memory of | student | 0.36 | assertion | cost 3
-F0036 | a root of the equation | is in memory of | student | 0.36 | assertion | cost 2
-F0037 | checking a root by substitution | is in memory of | student | 0.36 | assertion | cost 3
-F0038 | two roots, one root, or none | is in memory of | student | 0.36 | assertion | cost 5
-F0039 | the discriminant | is in memory of | student | 0.36 | assertion | cost 2
-F0040 | the sign of the discriminant tells how many roots | is in memory of | student | 0.36 | assertion | cost 9
-F0041 | the quadratic formula | is in memory of | student | 0.36 | assertion | cost 2
-F0042 | why the formula works | is in memory of | student | 0.36 | assertion | cost 4
-F0043 | the unknown x | is in memory of | student | 0.26 | assertion | cost 1
-F0044 | a formula to memorise | is in memory of | student | 0.26 | assertion | cost 2
-F0045 | the square root | is in memory of | student | 0.21 | assertion | cost 1
-F0046 | a formula | is in memory of | student | 0.20 | assertion | cost 1
-F0047 | why | is in memory of | student | 0.20 | assertion | cost 1
-F0048 | expanding brackets | is in memory of | student | 0.40 | assertion | cost 2
-F0049 | a linear equation | is in memory of | student | 0.50 | assertion | cost 3
-F0050 | the area of a square | is in memory of | student | 0.30 | assertion | cost 4
-F0051 | a worked example | has pulled | student | 1.17 | assertion | what the retrospective 'wants' is made of
-F0052 | a quadratic equation | has pulled | student | 0.72 | assertion | what the retrospective 'wants' is made of
-F0053 | a root of the equation | has pulled | student | 0.72 | assertion | what the retrospective 'wants' is made of
-F0054 | checking a root by substitution | has pulled | student | 0.72 | assertion | what the retrospective 'wants' is made of
-F0055 | two roots, one root, or none | has pulled | student | 0.72 | assertion | what the retrospective 'wants' is made of
-F0056 | the discriminant | has pulled | student | 0.71 | assertion | what the retrospective 'wants' is made of
-F0057 | the sign of the discriminant tells how many roots | has pulled | student | 0.70 | assertion | what the retrospective 'wants' is made of
-F0058 | the quadratic formula | has pulled | student | 0.68 | assertion | what the retrospective 'wants' is made of
-F0059 | why the formula works | has pulled | student | 0.63 | assertion | what the retrospective 'wants' is made of
+F0036 | a quadratic equation | is in memory of | student | 0.36 | assertion | cost 3
+F0037 | a root of the equation | is in memory of | student | 0.36 | assertion | cost 2
+F0038 | checking a root by substitution | is in memory of | student | 0.36 | assertion | cost 3
+F0039 | two roots, one root, or none | is in memory of | student | 0.36 | assertion | cost 5
+F0040 | the discriminant | is in memory of | student | 0.36 | assertion | cost 2
+F0041 | the sign of the discriminant tells how many roots | is in memory of | student | 0.36 | assertion | cost 9
+F0042 | the quadratic formula | is in memory of | student | 0.36 | assertion | cost 2
+F0043 | why the formula works | is in memory of | student | 0.36 | assertion | cost 4
+F0044 | the unknown x | is in memory of | student | 0.26 | assertion | cost 1
+F0045 | a formula to memorise | is in memory of | student | 0.26 | assertion | cost 2
+F0046 | the square root | is in memory of | student | 0.21 | assertion | cost 1
+F0047 | a formula | is in memory of | student | 0.20 | assertion | cost 1
+F0048 | why | is in memory of | student | 0.20 | assertion | cost 1
+F0049 | expanding brackets | is in memory of | student | 0.40 | assertion | cost 2
+F0050 | a linear equation | is in memory of | student | 0.50 | assertion | cost 3
+F0051 | the area of a square | is in memory of | student | 0.30 | assertion | cost 4
+F0052 | a worked example | has pulled | student | 1.17 | assertion | what the retrospective 'wants' is made of
+F0053 | a quadratic equation | has pulled | student | 0.72 | assertion | what the retrospective 'wants' is made of
+F0054 | a root of the equation | has pulled | student | 0.72 | assertion | what the retrospective 'wants' is made of
+F0055 | checking a root by substitution | has pulled | student | 0.72 | assertion | what the retrospective 'wants' is made of
+F0056 | two roots, one root, or none | has pulled | student | 0.72 | assertion | what the retrospective 'wants' is made of
+F0057 | the discriminant | has pulled | student | 0.71 | assertion | what the retrospective 'wants' is made of
+F0058 | the sign of the discriminant tells how many roots | has pulled | student | 0.70 | assertion | what the retrospective 'wants' is made of
+F0059 | the quadratic formula | has pulled | student | 0.68 | assertion | what the retrospective 'wants' is made of
+F0060 | why the formula works | has pulled | student | 0.63 | assertion | what the retrospective 'wants' is made of
 
 # --- need portrait (objective: its own vocabulary, not the reader's)
 #   components by need: understanding 8, none 4, getting the answer right 1
 #   pull of each image: a quadratic equation +0.36, a root of the equation +0.36, checking a root by substitution +0.36, two roots, one root, or none +0.36, the discriminant +0.36, the sign of the discriminant tells how many roots +0.36, the quadratic formula +0.36, why the formula works +0.36
 #   the reader's 'wants' resolves to understanding; the program is understanding
-F0060 | a quadratic equation | has satisfaction delta | understanding | 0.45 | assertion | understood
-F0061 | a root of the equation | has satisfaction delta | understanding | 0.45 | assertion | understood
-F0062 | checking a root by substitution | has satisfaction delta | understanding | 0.45 | assertion | understood
-F0063 | two roots, one root, or none | has satisfaction delta | understanding | 0.45 | assertion | understood
-F0064 | the discriminant | has satisfaction delta | understanding | 0.45 | assertion | understood
-F0065 | the sign of the discriminant tells how many roots | has satisfaction delta | understanding | 0.45 | assertion | understood
-F0066 | the quadratic formula | has satisfaction delta | understanding | 0.45 | assertion | understood
-F0067 | why the formula works | has satisfaction delta | understanding | 0.45 | assertion | understood
-F0068 | student | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
-F0069 | student | has conflict level | 0.07 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
+F0061 | a quadratic equation | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0062 | a root of the equation | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0063 | checking a root by substitution | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0064 | two roots, one root, or none | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0065 | the discriminant | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0066 | the sign of the discriminant tells how many roots | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0067 | the quadratic formula | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0068 | why the formula works | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0069 | student | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
+F0070 | student | has conflict level | 0.07 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
 
 # --- field of mind (blackboard): represented, not conscious — the analyst's view, not the reader's
 #   expanding brackets (0.18): below k
@@ -94,3 +95,4 @@ F0069 | student | has conflict level | 0.07 | - | assertion | runner-up program'
 #   felt the fundamental theorem of algebra: 0.25
 #   felt Vieta's theorem: 0.25
 #   self-model: predicted checking a root by substitution, a root of the equation, the unknown x, why the formula works, the quadratic formula, the discriminant, a formula to memorise, the square root; program understanding
+#   control levels: [came to mind] L6, a quadratic equation L5, a root of the equation L5, checking a root by substitution L5, two roots, one root, or none L5, the discriminant L5, the sign of the discriminant tells how many roots L5, the quadratic formula L5, why the formula works L5, the unknown x L4, a formula to memorise L4, the square root L4, a formula L4, why L4, the area of a square L4, expanding brackets L1, a linear equation L1, a test L1, a long derivation L1

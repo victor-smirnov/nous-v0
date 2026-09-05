@@ -18,28 +18,29 @@ F0012 | child | has tail statistic | spread | 0.00 | assertion | the field of mi
 F0013 | child | does | reads on | - | assertion | the program that has the channel
 F0014 | child | attends to | reality | 0.36 | assertion | the interface in use; value = reality yield so far; fantasy yield 0.00
 
+F0015 | child | has items at control levels | L4 7, L5 2 | - | assertion | 1 reacted only; 2 conscious as something, gone; 4 named; 5 related; 6 generative. L3 not representable yet
 
 # --- long-term memory
-F0015 | every step must be exact | is in memory of | child | 0.36 | assertion | cost 5
-F0016 | steps done one after another | is in memory of | child | 0.29 | assertion | cost 5
-F0017 | following instructions | is in memory of | child | 0.40 | assertion | cost 2
-F0018 | a recipe | is in memory of | child | 0.40 | assertion | cost 2
-F0019 | the rules of a game | is in memory of | child | 0.50 | assertion | cost 4
-F0020 | a robot | is in memory of | child | 0.40 | assertion | cost 2
-F0021 | a computer | is in memory of | child | 0.40 | assertion | cost 2
-F0022 | brushing your teeth | is in memory of | child | 0.50 | assertion | cost 3
-F0023 | making a sandwich | is in memory of | child | 0.40 | assertion | cost 3
-F0024 | steps done one after another | has pulled | child | 0.54 | assertion | what the retrospective 'wants' is made of
-F0025 | every step must be exact | has pulled | child | 0.36 | assertion | what the retrospective 'wants' is made of
+F0016 | every step must be exact | is in memory of | child | 0.36 | assertion | cost 5
+F0017 | steps done one after another | is in memory of | child | 0.29 | assertion | cost 5
+F0018 | following instructions | is in memory of | child | 0.40 | assertion | cost 2
+F0019 | a recipe | is in memory of | child | 0.40 | assertion | cost 2
+F0020 | the rules of a game | is in memory of | child | 0.50 | assertion | cost 4
+F0021 | a robot | is in memory of | child | 0.40 | assertion | cost 2
+F0022 | a computer | is in memory of | child | 0.40 | assertion | cost 2
+F0023 | brushing your teeth | is in memory of | child | 0.50 | assertion | cost 3
+F0024 | making a sandwich | is in memory of | child | 0.40 | assertion | cost 3
+F0025 | steps done one after another | has pulled | child | 0.54 | assertion | what the retrospective 'wants' is made of
+F0026 | every step must be exact | has pulled | child | 0.36 | assertion | what the retrospective 'wants' is made of
 
 # --- need portrait (objective: its own vocabulary, not the reader's)
 #   components by need: understanding 2
 #   pull of each image: every step must be exact +0.36, steps done one after another +0.36
 #   the reader's 'wants' resolves to understanding; the program is understanding
-F0026 | steps done one after another | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0027 | every step must be exact | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0028 | child | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
-F0029 | child | has conflict level | 0.00 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
+F0027 | steps done one after another | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0028 | every step must be exact | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0029 | child | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
+F0030 | child | has conflict level | 0.00 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
 
 # --- field of mind (blackboard): represented, not conscious — the analyst's view, not the reader's
 
@@ -51,3 +52,4 @@ F0029 | child | has conflict level | 0.00 | - | assertion | runner-up program's 
 #   felt the halting problem: 0.00
 #   felt formal semantics: 0.22
 #   self-model: predicted steps done one after another; program understanding
+#   control levels: every step must be exact L5, steps done one after another L5, following instructions L4, a recipe L4, the rules of a game L4, a robot L4, a computer L4, brushing your teeth L4, making a sandwich L4

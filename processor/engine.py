@@ -289,8 +289,8 @@ def step(p, prior_field, memory, sensory, new_paths, t=None):
     return field, evicted, stats, new_memory, spent, notes
 
 
-def render(reader, n, field, evicted, stats, memory, spent, new_paths, notes=(), levels=None, grasped=(), comprehension=0.0, program="-", switches=0, conflict=0.0, motor="reads on", components=None, received=True, mode="reality", ry=0.0, fy=0.0, pull=None, wants="-", wants_need=None, recent=None, self_surprise=0, self_names=(), self_kinds=None):
-    levels = levels or {}; components = components or {}; pull = pull or {}; recent = recent or {}; self_kinds = self_kinds or {}
+def render(reader, n, field, evicted, stats, memory, spent, new_paths, notes=(), levels=None, grasped=(), comprehension=0.0, program="-", switches=0, conflict=0.0, motor="reads on", components=None, received=True, mode="reality", ry=0.0, fy=0.0, pull=None, wants="-", wants_need=None, recent=None, self_surprise=0, self_names=(), self_kinds=None, levels_summary=None):
+    levels = levels or {}; components = components or {}; pull = pull or {}; recent = recent or {}; self_kinds = self_kinds or {}; levels_summary = levels_summary or {}
     out = [f"# state after step {n}   (field {spent} words)", "",
            "# --- field of consciousness: what the reader can report" + ("" if received else "   [chunk not received: the motor field was elsewhere]")]
     i = 1
@@ -322,6 +322,8 @@ def render(reader, n, field, evicted, stats, memory, spent, new_paths, notes=(),
     out.append("")
     for k, c in self_kinds.items():
         out.append(f"F{i:04d} | {reader} | has met self-surprise | {k} | {c} | assertion | objective: how often this kind has occurred"); i += 1
+    if levels_summary:
+        out.append(f"F{i:04d} | {reader} | has items at control levels | " + ", ".join(f"L{l} {n}" for l, n in sorted(levels_summary.items())) + " | - | assertion | 1 reacted only; 2 conscious as something, gone; 4 named; 5 related; 6 generative. L3 not representable yet"); i += 1
     out.append("")
     out.append("# --- long-term memory")
     for item, (c, cost) in memory.items():
@@ -463,13 +465,27 @@ def main(argv):
         notes.append(f"self-surprise {k}: " + ", ".join(xs))
     p["self surprise"] = sum(len(xs) for xs in kinds.values())
     p["self names"] = sorted(k for k, c in seen.items() if c >= 2)      # a kind seen twice has a name
+    # the level of control: what the reader can do with each item — react, report, recall, name, relate, generate
+    level = {}
+    for x, c, why in e:
+        level[x] = 1 if why == "below k" else 2                         # reacted only / conscious as "something", gone
+    for x, (c, cost, src) in f.items():
+        level[x] = 5 if (x, "understanding") in p["paths"] and x in t["reach"] else 4
+    for x in m:
+        if x not in f and x not in level:
+            level[x] = 4                                                # recallable and named; level 3 (recall without a name) is not representable yet
+    for k in p["self names"]:
+        level[f"[{k}]"] = 6
+    p["levels"] = level
+    notes.append("control levels: " + ", ".join(f"{x} L{l}" for x, l in sorted(level.items(), key=lambda kv: -kv[1])))
     notes += [f"short form of {x} with {x} not in memory: an unknown token, ignored" for x in short_dropped]
     grasped = [x for (x, nd) in p["paths"] if nd == "understanding" and x in t["reach"]]
     pathlib.Path(out).write_text(render(p["reader"], n, f, e, s, m, spent, new_paths, notes, p["level"],
                                         grasped, p["params"].get("comprehension", 0.0), p.get("program", "-"), p.get("switches", 0), p.get("conflict", 0.0),
                                         p.get("motor", "reads on"), p.get("components"), p.get("received", True), p.get("mode", "reality"), p.get("reality yield", 0.0), p.get("fantasy yield", 0.0),
                                         p.get("pull"), p.get("wants", "-"), p.get("wants need"), p.get("recent pull", {}),
-                                        p.get("self surprise", 0), p.get("self names", []), p.get("self kinds", {})))
+                                        p.get("self surprise", 0), p.get("self names", []), p.get("self kinds", {}),
+                                        {l: sum(1 for v in p.get("levels", {}).values() if v == l) for l in set(p.get("levels", {}).values())}))
     print(pathlib.Path(out).read_text())
 
 

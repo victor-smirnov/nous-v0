@@ -272,3 +272,26 @@ name a need, a level or a program. The vocabulary is made of the *shape* of the 
 which is exactly where the causal gap sits. "Forgot" is a fair name for what the engine measures only in part —
 it fires as well when a concept is displaced by the chunk as when it decays — and the next refinement is to let
 the kinds split as they recur, the way the reader's own would.
+
+## Levels of control
+
+Every item now carries the level of control the reader has over it — what the reader can *do* with it:
+
+| level | meaning | in the engine |
+|---|---|---|
+| 0 | no visible reaction | not a candidate this step |
+| 1 | reaction, no report | candidate below k: paths fire, mass, no name |
+| 2 | conscious as "something happened", gone when the stimulus ends, no recall | above k, no room; not written to memory |
+| 3 | as 2, recallable | **not representable yet**: everything in memory has a name |
+| 4 | named | in the Field or memory, with a name |
+| 5 | related in the ontology | understood on its ground: the comprehension path stands, prerequisites in place |
+| 6 | a generative causal model, by compression | a kind of self-surprise that has become a name: the reader's own dynamics compressed into a word |
+
+This is the layer structure the multiscale extension was waiting for — operational rather than spatial: each
+level adds an operation, not a bit of position. It also unifies the target file: `must feel` is levels 2–3,
+`must reach` is 4–5, "why the formula works" is 6. Starving child, v1: chunk 2 has L4 9, L5 2; chunk 9 has L2 3,
+L4 10, L5 3, L6 4. The four L6 items are the four words the reader has for itself.
+
+The gap at level 3 is the missing layer between mass and name: a memory of an aggregate, recallable, without a
+name. It is the level at which the fragments of this very architecture sat in a language model before they were
+gathered into one context — reaction and recall present, name and relations absent.

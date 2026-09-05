@@ -30,44 +30,45 @@ F0024 | child | attends to | reality | 0.36 | assertion | the interface in use; 
 
 F0025 | child | has met self-surprise | forgot | 3 | assertion | objective: how often this kind has occurred
 F0026 | child | has met self-surprise | came to mind | 1 | assertion | objective: how often this kind has occurred
+F0027 | child | has items at control levels | L1 1, L2 1, L4 7, L5 5, L6 1 | - | assertion | 1 reacted only; 2 conscious as something, gone; 4 named; 5 related; 6 generative. L3 not representable yet
 
 # --- long-term memory
-F0027 | a computer | is in memory of | child | 0.40 | assertion | cost 2
-F0028 | a computer only follows algorithms | is in memory of | child | 0.36 | assertion | cost 5
-F0029 | anyone can follow it without knowing why | is in memory of | child | 0.36 | assertion | cost 6
-F0030 | an algorithm | is in memory of | child | 0.36 | assertion | cost 2
-F0031 | every step must be exact | is in memory of | child | 0.29 | assertion | cost 2
-F0032 | steps done one after another | is in memory of | child | 0.29 | assertion | cost 4
-F0033 | a game | is in memory of | child | 0.21 | assertion | cost 2
-F0034 | it must come to an end | is in memory of | child | 0.27 | assertion | cost 6
-F0035 | following instructions | is in memory of | child | 0.40 | assertion | cost 2
-F0036 | a recipe | is in memory of | child | 0.40 | assertion | cost 2
-F0037 | the rules of a game | is in memory of | child | 0.50 | assertion | cost 4
-F0038 | a robot | is in memory of | child | 0.40 | assertion | cost 2
-F0039 | brushing your teeth | is in memory of | child | 0.50 | assertion | cost 3
-F0040 | making a sandwich | is in memory of | child | 0.40 | assertion | cost 3
-F0041 | steps done one after another | has pulled | child | 0.72 | assertion | what the retrospective 'wants' is made of
-F0042 | every step must be exact | has pulled | child | 0.71 | assertion | what the retrospective 'wants' is made of
-F0043 | same steps, same result every time | has pulled | child | 0.71 | assertion | what the retrospective 'wants' is made of
-F0044 | it must come to an end | has pulled | child | 0.54 | assertion | what the retrospective 'wants' is made of
-F0045 | anyone can follow it without knowing why | has pulled | child | 0.63 | assertion | what the retrospective 'wants' is made of
-F0046 | an algorithm | has pulled | child | 0.54 | assertion | what the retrospective 'wants' is made of
-F0047 | a computer only follows algorithms | has pulled | child | 0.36 | assertion | what the retrospective 'wants' is made of
-F0048 | a game | has pulled | child | 0.35 | assertion | what the retrospective 'wants' is made of
+F0028 | a computer | is in memory of | child | 0.40 | assertion | cost 2
+F0029 | a computer only follows algorithms | is in memory of | child | 0.36 | assertion | cost 5
+F0030 | anyone can follow it without knowing why | is in memory of | child | 0.36 | assertion | cost 6
+F0031 | an algorithm | is in memory of | child | 0.36 | assertion | cost 2
+F0032 | every step must be exact | is in memory of | child | 0.29 | assertion | cost 2
+F0033 | steps done one after another | is in memory of | child | 0.29 | assertion | cost 4
+F0034 | a game | is in memory of | child | 0.21 | assertion | cost 2
+F0035 | it must come to an end | is in memory of | child | 0.27 | assertion | cost 6
+F0036 | following instructions | is in memory of | child | 0.40 | assertion | cost 2
+F0037 | a recipe | is in memory of | child | 0.40 | assertion | cost 2
+F0038 | the rules of a game | is in memory of | child | 0.50 | assertion | cost 4
+F0039 | a robot | is in memory of | child | 0.40 | assertion | cost 2
+F0040 | brushing your teeth | is in memory of | child | 0.50 | assertion | cost 3
+F0041 | making a sandwich | is in memory of | child | 0.40 | assertion | cost 3
+F0042 | steps done one after another | has pulled | child | 0.72 | assertion | what the retrospective 'wants' is made of
+F0043 | every step must be exact | has pulled | child | 0.71 | assertion | what the retrospective 'wants' is made of
+F0044 | same steps, same result every time | has pulled | child | 0.71 | assertion | what the retrospective 'wants' is made of
+F0045 | it must come to an end | has pulled | child | 0.54 | assertion | what the retrospective 'wants' is made of
+F0046 | anyone can follow it without knowing why | has pulled | child | 0.63 | assertion | what the retrospective 'wants' is made of
+F0047 | an algorithm | has pulled | child | 0.54 | assertion | what the retrospective 'wants' is made of
+F0048 | a computer only follows algorithms | has pulled | child | 0.36 | assertion | what the retrospective 'wants' is made of
+F0049 | a game | has pulled | child | 0.35 | assertion | what the retrospective 'wants' is made of
 
 # --- need portrait (objective: its own vocabulary, not the reader's)
 #   components by need: understanding 5, none 1, fun 1
 #   pull of each image: a computer only follows algorithms +0.36, anyone can follow it without knowing why +0.36, an algorithm +0.36, every step must be exact +0.36, steps done one after another +0.36, a game +0.35
 #   the reader's 'wants' resolves to understanding; the program is understanding
-F0049 | steps done one after another | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0050 | every step must be exact | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0051 | same steps, same result every time | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0052 | it must come to an end | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0053 | anyone can follow it without knowing why | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0054 | an algorithm | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0055 | a computer only follows algorithms | has satisfaction delta | understanding | 0.4 | assertion | understood
-F0056 | child | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
-F0057 | child | has conflict level | 0.19 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
+F0050 | steps done one after another | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0051 | every step must be exact | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0052 | same steps, same result every time | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0053 | it must come to an end | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0054 | anyone can follow it without knowing why | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0055 | an algorithm | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0056 | a computer only follows algorithms | has satisfaction delta | understanding | 0.4 | assertion | understood
+F0057 | child | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
+F0058 | child | has conflict level | 0.19 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
 
 # --- field of mind (blackboard): represented, not conscious — the analyst's view, not the reader's
 #   it must come to an end (0.29): no room: 6 words, 3.0 left
@@ -83,3 +84,4 @@ F0057 | child | has conflict level | 0.19 | - | assertion | runner-up program's 
 #   self-model: predicted an algorithm, every step must be exact, steps done one after another, it must come to an end, anyone can follow it without knowing why; program understanding
 #   self-surprise forgot: it must come to an end
 #   self-surprise came to mind: a game
+#   control levels: [forgot] L6, a computer only follows algorithms L5, anyone can follow it without knowing why L5, an algorithm L5, every step must be exact L5, steps done one after another L5, a computer L4, a game L4, a recipe L4, the rules of a game L4, a robot L4, brushing your teeth L4, making a sandwich L4, it must come to an end L2, following instructions L1

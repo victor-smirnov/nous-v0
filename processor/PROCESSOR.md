@@ -144,6 +144,14 @@ itself`). The counts per kind are objective and travel in the state. This is whe
 consciousness comes from in this model: names for the recurring shapes of one's own prediction errors, with the
 mechanism that produced them absent from every one of them.
 
+## Levels of control
+
+Every item is at a level of control: 0 not a candidate; 1 reacted to but below k; 2 above k with no room —
+conscious as "something", gone, not remembered; 3 recallable without a name (not representable yet); 4 named;
+5 related — understood on its ground; 6 generative — a kind of self-surprise that has become a name. The
+summary per step is in the objective block, the level of each item in the trace. `must feel` in a target is
+levels 2–3, `must reach` is 4–5.
+
 ## Output: the state by component, then the trace
 
 The state is written in the six parts of the architecture — field of consciousness (what the reader can

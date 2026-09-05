@@ -29,35 +29,36 @@ F0023 | student | does | reads on | - | assertion | the program that has the cha
 F0024 | student | attends to | reality | 0.37 | assertion | the interface in use; value = reality yield so far; fantasy yield 0.00
 
 F0025 | student | has met self-surprise | came to mind | 1 | assertion | objective: how often this kind has occurred
+F0026 | student | has items at control levels | L4 7, L5 4 | - | assertion | 1 reacted only; 2 conscious as something, gone; 4 named; 5 related; 6 generative. L3 not representable yet
 
 # --- long-term memory
-F0026 | the unknown x | is in memory of | student | 0.60 | assertion | cost 1
-F0027 | expanding brackets | is in memory of | student | 0.40 | assertion | cost 2
-F0028 | a worked example | is in memory of | student | 0.40 | assertion | cost 2
-F0029 | checking a root by substitution | is in memory of | student | 0.36 | assertion | cost 5
-F0030 | a root of the equation | is in memory of | student | 0.36 | assertion | cost 5
-F0031 | two roots, one root, or none | is in memory of | student | 0.36 | assertion | cost 6
-F0032 | a linear equation | is in memory of | student | 0.36 | assertion | cost 3
-F0033 | a quadratic equation | is in memory of | student | 0.26 | assertion | cost 3
-F0034 | the example equation | is in memory of | student | 0.20 | assertion | cost 5
-F0035 | the square root | is in memory of | student | 0.40 | assertion | cost 3
-F0036 | the area of a square | is in memory of | student | 0.30 | assertion | cost 4
-F0037 | a worked example | has pulled | student | 1.03 | assertion | what the retrospective 'wants' is made of
-F0038 | a quadratic equation | has pulled | student | 0.63 | assertion | what the retrospective 'wants' is made of
-F0039 | a root of the equation | has pulled | student | 0.54 | assertion | what the retrospective 'wants' is made of
-F0040 | checking a root by substitution | has pulled | student | 0.54 | assertion | what the retrospective 'wants' is made of
-F0041 | two roots, one root, or none | has pulled | student | 0.36 | assertion | what the retrospective 'wants' is made of
+F0027 | the unknown x | is in memory of | student | 0.60 | assertion | cost 1
+F0028 | expanding brackets | is in memory of | student | 0.40 | assertion | cost 2
+F0029 | a worked example | is in memory of | student | 0.40 | assertion | cost 2
+F0030 | checking a root by substitution | is in memory of | student | 0.36 | assertion | cost 5
+F0031 | a root of the equation | is in memory of | student | 0.36 | assertion | cost 5
+F0032 | two roots, one root, or none | is in memory of | student | 0.36 | assertion | cost 6
+F0033 | a linear equation | is in memory of | student | 0.36 | assertion | cost 3
+F0034 | a quadratic equation | is in memory of | student | 0.26 | assertion | cost 3
+F0035 | the example equation | is in memory of | student | 0.20 | assertion | cost 5
+F0036 | the square root | is in memory of | student | 0.40 | assertion | cost 3
+F0037 | the area of a square | is in memory of | student | 0.30 | assertion | cost 4
+F0038 | a worked example | has pulled | student | 1.03 | assertion | what the retrospective 'wants' is made of
+F0039 | a quadratic equation | has pulled | student | 0.63 | assertion | what the retrospective 'wants' is made of
+F0040 | a root of the equation | has pulled | student | 0.54 | assertion | what the retrospective 'wants' is made of
+F0041 | checking a root by substitution | has pulled | student | 0.54 | assertion | what the retrospective 'wants' is made of
+F0042 | two roots, one root, or none | has pulled | student | 0.36 | assertion | what the retrospective 'wants' is made of
 
 # --- need portrait (objective: its own vocabulary, not the reader's)
 #   components by need: none 4, understanding 4, getting the answer right 1
 #   pull of each image: a worked example +0.59, checking a root by substitution +0.36, a root of the equation +0.36, two roots, one root, or none +0.36, a quadratic equation +0.36
 #   the reader's 'wants' resolves to understanding; the program is understanding
-F0042 | a quadratic equation | has satisfaction delta | understanding | 0.45 | assertion | understood
-F0043 | a root of the equation | has satisfaction delta | understanding | 0.45 | assertion | understood
-F0044 | checking a root by substitution | has satisfaction delta | understanding | 0.45 | assertion | understood
-F0045 | two roots, one root, or none | has satisfaction delta | understanding | 0.45 | assertion | understood
-F0046 | student | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
-F0047 | student | has conflict level | 0.21 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
+F0043 | a quadratic equation | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0044 | a root of the equation | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0045 | checking a root by substitution | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0046 | two roots, one root, or none | has satisfaction delta | understanding | 0.45 | assertion | understood
+F0047 | student | has dominant need | understanding | 0 | assertion | the program: an aggregate, no keys; value = switches so far
+F0048 | student | has conflict level | 0.21 | - | assertion | runner-up program's mass over the leader's: competition for the one motor channel
 
 # --- field of mind (blackboard): represented, not conscious — the analyst's view, not the reader's
 
@@ -69,3 +70,4 @@ F0047 | student | has conflict level | 0.21 | - | assertion | runner-up program'
 #   felt the fundamental theorem of algebra: 0.14
 #   felt Vieta's theorem: 0.25
 #   self-model: predicted the unknown x, a worked example, a linear equation, a root of the equation, checking a root by substitution, a quadratic equation; program understanding
+#   control levels: checking a root by substitution L5, a root of the equation L5, two roots, one root, or none L5, a quadratic equation L5, the unknown x L4, expanding brackets L4, a worked example L4, a linear equation L4, the example equation L4, the square root L4, the area of a square L4
