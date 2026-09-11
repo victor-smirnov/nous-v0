@@ -1,0 +1,4 @@
+PMID 9522683
+Situation models in language comprehension and memory.
+
+This article reviews research on the use of situation models in language comprehension and memory retrieval over the past 15 years. Situation models are integrated mental representations of a described state of affairs. Significant progress has been made in the scientific understanding of how situation models are involved in language comprehension and memory retrieval. Much of this research focuses on establishing the existence of situation models, often by using tasks that assess one dimension of a situation model. However, the authors argue that the time has now come for researchers to begin to take the multidimensionality of situation models seriously. The authors offer a theoretical framework and some methodological observations that may help researchers to tackle this issue.

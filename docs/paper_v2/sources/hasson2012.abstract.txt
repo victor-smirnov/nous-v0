@@ -1,0 +1,4 @@
+PMID 22221820
+Brain-to-brain coupling: a mechanism for creating and sharing a social world.
+
+Cognition materializes in an interpersonal space. The emergence of complex behaviors requires the coordination of actions among individuals according to a shared set of rules. Despite the central role of other individuals in shaping one's mind, most cognitive studies focus on processes that occur within a single individual. We call for a shift from a single-brain to a multi-brain frame of reference. We argue that in many cases the neural processes in one brain are coupled to the neural processes in another brain via the transmission of a signal through the environment. Brain-to-brain coupling constrains and shapes the actions of each individual in a social network, leading to complex joint behaviors that could not have emerged in isolation.

@@ -12,4 +12,4 @@
 - `refs.bib` — the bibliography, keyed by surname and year.
 
 Build: `tectonic -X compile main.tex` (tectonic 0.17 in `~/.local/bin`, no system TeX needed).
-Current draft: 30 pages, 90 references.
+Current draft: 31 pages, 91 references; 85 of them verified against the source (see `SOURCES.md`).

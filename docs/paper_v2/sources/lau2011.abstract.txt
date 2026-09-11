@@ -1,0 +1,4 @@
+PMID 21737339
+Empirical support for higher-order theories of conscious awareness.
+
+Higher-order theories of consciousness argue that conscious awareness crucially depends on higher-order mental representations that represent oneself as being in particular mental states. These theories have featured prominently in recent debates on conscious awareness. We provide new leverage on these debates by reviewing the empirical evidence in support of the higher-order view. We focus on evidence that distinguishes the higher-order view from its alternatives, such as the first-order, global workspace and recurrent visual processing theories. We defend the higher-order view against several major criticisms, such as prefrontal activity reflects attention but not awareness, and prefrontal lesion does not abolish awareness. Although the higher-order approach originated in philosophical discussions, we show that it is testable and has received substantial empirical support.

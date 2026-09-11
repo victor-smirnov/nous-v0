@@ -1,0 +1,4 @@
+PMID 12757822
+Is perception discrete or continuous?
+
+How does conscious perception evolve following stimulus presentation? The idea that perception relies on discrete processing epochs has been often considered, but never widely accepted. The alternative, a continuous translation of the external world into explicit perception, although more intuitive and subjectively appealing, cannot satisfactorily account for a large body of psychophysical data. Cortical and thalamocortical oscillations in different frequency bands could provide a neuronal basis for such discrete processes, but are rarely analyzed in this context. This article reconciles the unduly abandoned topic of discrete perception with current views and advances in neuroscience.
