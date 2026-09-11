@@ -2,7 +2,7 @@
 \label{sec:measurement}
 % Frames S0--S8.
 
-\subsection{Two parts of the solution}
+\subsection{Two parts: a framework in language, and a quantity beyond it}
 \label{sec:twoparts}
 % S0
 
@@ -21,7 +21,7 @@ we claim no more for it than that.
 The quantitative part reaches where the first cannot: how far each function has been generalized in a
 given substrate, measured where the names run out. The rest of this section specifies it.
 
-\subsection{The quantity}
+\subsection{The quantity: degree of compression of a function, by MDL probing}
 \label{sec:quantity}
 % S1
 
@@ -39,7 +39,7 @@ in general are by now well catalogued \citep{belinkov2022}. This is the probe-re
 stand-in for the uncomputable quantity of Section~\ref{sec:measure}, and the paper's use of it is
 comparative: the same probe family, the same coding cost, two substrates, and the difference reported.
 
-\subsection{The profile}
+\subsection{The profile: hyperfunction, deficit, dropped axis, against the human baseline}
 \label{sec:profile}
 % S2
 
@@ -51,10 +51,10 @@ almost certainly do.
 
 The question ``is it conscious'' is thereby replaced by the comparison of two profiles. That is a loss
 and a gain. The loss is that no single answer comes out, and any practical decision that needs one has to
-supply its own weights, which S2b returns to. The gain is that every entry in the vector is a number
+supply its own weights, which Section~\ref{sec:twomeasurements} returns to. The gain is that every entry in the vector is a number
 someone can get wrong.
 
-\subsection{Generalization is not memorization}
+\subsection{Generalizing a function is answering right outside the table}
 \label{sec:memorization}
 % S2a
 
@@ -86,7 +86,7 @@ paper's question is: how well, against the human level, do Transformers generali
 Agent; then the Moral Agent. The order is forced by the stack (Section~\ref{sec:stack}), and the
 measurement begins with the Observer.
 
-\subsection{Two measurements and what their disagreement says}
+\subsection{Probe and benchmark have to converge, and their disagreement is informative}
 \label{sec:twomeasurements}
 % S2b
 
@@ -101,7 +101,7 @@ distribution, and record where behaviour is that of a system lacking it. The two
 they do not, the disagreement is informative, which is the main methodological reason for running both.
 
 Probe present, benchmark absent: the deficit is in the interface, the body, or the social context
-(D10), and not in the function. Benchmark present, probe absent: the carrier is at a granularity the
+(Section~\ref{sec:record}), and not in the function. Benchmark present, probe absent: the carrier is at a granularity the
 probe did not reach (Section~\ref{sec:granularity}), or the function is rebuilt from the context on each
 occasion rather than held in the weights (Section~\ref{sec:language}), or the benchmark is being covered
 by memorization. Human-derived benchmarks alone settle nothing, and the pair of measurements is the
@@ -111,7 +111,7 @@ On ``level of consciousness'': the object measured is the vector of Section~\ref
 level is a weighted sum over that vector, and the weights have to be declared, because a scalar with
 hidden weights brings back the binary question the vector was introduced to replace.
 
-\subsection{Granularity}
+\subsection{Granularity is a knob of the measurement: look below the token first}
 \label{sec:granularity}
 % S3
 
@@ -173,13 +173,13 @@ small increments or is assembled whole near the output, which decides whether th
 the frame (Section~\ref{sec:frames}). All three can be run on open-weight models with existing tools, and
 this is the measurement of Section~\ref{sec:quantity} in its most concrete form.
 
-\subsubsection{Depth as time, and what fixes it when it is too short}
+\subsubsection{Depth as time, and how variable depth fixes it}
 \label{sec:depthtime}
 % S3c
 
 In a standard model the depth is fixed and is spent identically on every token, easy or hard. That is a
 poor time axis for a frame. There is no way to spend more steps where more are needed, and there is no
-record of effort, because effort is constant, which is the dropped axis that S5 predicts for
+record of effort, because effort is constant, which is the dropped axis that Section~\ref{sec:profile-seeing} predicts for
 givenness.
 
 Architectures that iterate a block make depth a variable. Universal Transformers introduced the
@@ -211,7 +211,8 @@ and the cost axis is dropped. In variable-depth models the grain can approach th
 cost-dependent components of the profile separate from the rest. The difference between the two families
 is the cleanest first measurement available today.
 
-\subsubsection{Two time axes}
+\subsubsection{Two time axes, of which the objection sees one}
+\label{sec:twoaxes}
 % S3d
 
 The objection of Section~\ref{sec:frozen} sees one time axis. Along tokens the model is as the objection
@@ -231,7 +232,7 @@ re-derived there (Section~\ref{sec:frames}). And it must be a displacement of re
 every self-model the agent can afford (Section~\ref{sec:criterion}); whatever a change of frame removes
 does not count, however reliably a probe recovers it.
 
-\subsection{The Transformer's profile of seeing}
+\subsection{The predicted profile of seeing: deficit, hyperfunction, dropped axis}
 \label{sec:profile-seeing}
 % S5
 
@@ -252,7 +253,7 @@ cost record exists. The prediction is about the internal states that the reports
 (Section~\ref{sec:planes}), so it is to be tested by the paired measurement of
 Section~\ref{sec:twomeasurements} and not by asking the model.
 
-\subsection{Predictions carried over}
+\subsection{Predictions carried over from the first version}
 \label{sec:predictions}
 % S6
 
@@ -267,7 +268,8 @@ The model is hyperplastic: no limbic inertia, fast affective recovery, easy swit
 Against the human baseline this is a hyperfunction on one axis and a deficit on another, since inertia
 is part of what makes a human state a commitment.
 
-\subsection{Falsification}
+\subsection{Falsification: chance at every granularity}
+\label{sec:falsification}
 % S7
 
 The account fails if the compression degree of the Observer's components is at chance at every
@@ -275,7 +277,7 @@ granularity, in models that pass the behavioural tests of Section~\ref{sec:predi
 would mean the behaviour is carried by something the account does not describe, and no adjustment of the
 probe or the granularity would repair it.
 
-\subsection{The other end of the scale}
+\subsection{The zero of the scale: the smallest Observer}
 \label{sec:zero}
 % S7a
 
@@ -295,7 +297,7 @@ circuit is that could draw it. Between that pair and the human baseline the degr
 Section~\ref{sec:quantity} has the meaning of an absolute quantity rather than a ratio between two
 arbitrary points.
 
-\subsection{What the argument reaches}
+\subsection{What the argument reaches, by the components of the psychophysical problem}
 % S8
 
 The components of the psychophysical problem, and where each goes in the account. The self, free will,
@@ -304,7 +306,7 @@ mental causation and the temporal unity of the self go to the Observer and its r
 compression tag over parallel channels (Section~\ref{sec:frames}). Other minds goes to the mutual
 irreducibility of two Observers (Section~\ref{sec:twofaces}). Quale and the explanatory gap go to the
 residual itself. Phenomenal experience goes to the profile (Section~\ref{sec:profile}). The hard problem
-goes to the illusion problem, as D2 has it, and the illusion problem is what
+goes to the illusion problem, as Section~\ref{sec:legacy} has it, and the illusion problem is what
 Section~\ref{sec:approach} answers.
 
 Each of these is connected by an explanatory relation to something the paper defines, which is a
