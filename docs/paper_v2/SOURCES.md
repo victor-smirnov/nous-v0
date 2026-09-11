@@ -1,71 +1,70 @@
 # Sources ledger for paper v2
 
-One row per key in `refs.bib`. A source counts as **verified** only when the copy has been obtained, opened, and the
-claim the paper makes located in it. Statuses:
+One row per key in `refs.bib`. A source counts as **verified** only when the copy was obtained, opened, and the claim
+the paper makes located in it; the locus says where. Statuses:
 
-- `verified` — read against the claim, with the locus noted;
-- `obtained` — a copy is in `sources/`, not yet read against the claim;
-- `substitute` — the copy in `sources/` is a précis, chapter or later edition rather than the cited item; usable, and
-  the citation may need to change to what was actually read;
+- `verified` — read against the claim, locus given;
+- `verified (secondary)` — the copy has no usable text layer and the claim was read in a source that states it;
+- `substitute` — the copy is a précis, chapter, or web version rather than the cited item; the citation may have to
+  change to what was actually read;
+- `obtained` — a copy is in `sources/`, and the claim could not be located in it yet (poor OCR, wrong page range);
 - `unverified` — no copy obtained yet.
 
-The batch verification started on 2026-09-11 with three agents was stopped after the download stage, so most rows
-are `obtained` rather than `verified`. Files marked `-` still need a copy. Verification continues per section as the
-text is revised; the claim column is what has to be checked, and nothing else.
+The verification pass of 2026-09-11 went through every file in `sources/`. Three claims were corrected against what
+the sources actually say, and one source was dropped; see the bottom of this file.
 
-| key | what it must support | status | file |
+| key | what it must support | status | locus and file |
 |---|---|---|---|
 | nagel1974 | the bat question marks a limit on description from outside | obtained | nagel1974.pdf |
-| chalmers1995 | the easy/hard split; the hard problem asks why processing is accompanied by experience | obtained | chalmers1995.pdf |
-| frankish2016 | illusionism; the illusion problem as successor of the hard problem | obtained | frankish2016.pdf |
+| chalmers1995 | the easy/hard split; the hard problem asks why processing is accompanied by experience | verified | §"The Easy Problems and the Hard Problem"; chalmers1995.pdf |
+| frankish2016 | illusionism; the illusion problem as successor of the hard problem | verified | p. 1 and §4 "Facing up to the illusion problem"; frankish2016.pdf |
 | dennett1991 | user illusion; the regress objection; self-report as misrepresentation | unverified | - |
 | ryle1949 | the regress objection against inner observation | unverified | - |
-| rosenthal2005 | higher-order thought structure; a frame as a thought within a previous one | substitute | rosenthal2009.pdf (Oxford Handbook chapter) |
+| rosenthal2005 | higher-order thought structure; a frame as a thought within a previous one | substitute, read | "differing in how we are conscious of our conscious states"; rosenthal2009.pdf (Oxford Handbook chapter) |
 | lau2011 | empirical support for higher-order theories | unverified | - |
-| tononi2015 | differences of experience follow differences of cause-effect structure | obtained | tononi2015.xml |
-| metzinger2003 | phenomenal transparency: the self-model cannot be seen as a model | substitute | metzinger2005.pdf (Précis of Being No One) |
-| graziano2011 | attention schema as the system's model of its own attention | obtained | graziano2011.pdf |
-| graziano2013 | the same, book-length | unverified | - |
+| tononi2015 | differences of experience follow differences of cause-effect structure | verified | §"The central identity: experience as a conceptual structure"; tononi2015.xml |
+| metzinger2003 | phenomenal transparency: the self-model cannot be seen as a model | substitute, read | §1.1.3 "Transparency"; metzinger2005.pdf (Précis of Being No One) |
+| graziano2011 | awareness as the system's model of its own attention | verified | "awareness is a perceptual reconstruction of attention", p. 1; graziano2011.pdf. The term "attention schema" is from the 2013 book, not this paper |
+| graziano2013 | the same, book-length, and the term | unverified | - |
 | varela1991 | constraints as the body of a computation (embodied cognition) | unverified | - |
-| ayer1936 | emotivism: moral terms express attitude | obtained | ayer1936.pdf |
-| locke1690 | the inverted spectrum, Essay II.xxxii.15, and Locke's closing it as idle | verified | - (Gutenberg text, locus checked) |
+| ayer1936 | emotivism: moral terms express attitude | obtained | ayer1936.pdf; OCR too poor to pin the passage in ch. VI |
+| locke1690 | the inverted spectrum, Essay II.xxxii.15, and Locke's closing it as idle | verified | II.xxxii.15 (Gutenberg text) |
 | fodor1987 | the word "psychosemantics" is taken for a different project | unverified | - |
 | gardner1983 | intrapersonal intelligence as a distinct ability | unverified | - |
-| solomonoff1964a | universal prediction with feedback; program induction; algorithmic probability | obtained | solomonoff1964a.pdf |
-| solomonoff1964b | the same, Part II | obtained | solomonoff1964b.pdf |
-| levin1974 | the coding theorem K(x) = -log m(x) + O(1) | obtained | levin1974.pdf (Russian original) |
-| livitanyi2019 | uncomputability of K; machine-relativity up to a constant | unverified | - |
-| turing1936 | a computable function has unboundedly many implementations | obtained | turing1936.pdf |
-| siegelmann1995 | recurrent networks are Turing complete under idealized assumptions | obtained | siegelmann1995.pdf |
-| perez2021 | attention is Turing complete | obtained | perez2021.pdf |
-| forgy1982 | RETE caches matches incrementally, which a Transformer does not | obtained | forgy1982.pdf |
+| solomonoff1964a | universal prediction with feedback; program induction; algorithmic probability | obtained | solomonoff1964a.pdf; no usable text layer, claim read in Part II |
+| solomonoff1964b | the same, Part II | verified | §"Use of the Codes for Prediction"; universal decoding instructions, p. 225; solomonoff1964b.pdf |
+| levin1974 | the coding theorem K(x) = -log m(x) + O(1) | verified | p. 32: a priori probability defined as 2^(-KP(x)); the equality with the universal semimeasure is quoted from Li & Vitányi, as the paper does; levin1974.pdf |
+| livitanyi2019 | uncomputability of K; machine-relativity up to a constant; the coding theorem as stated | unverified | - |
+| turing1936 | a universal machine carries out what any other machine computes | verified | §§6--7; turing1936.pdf. The paper's sentence was reworded: Turing gives universality, the multiplicity of implementations is the corollary |
+| siegelmann1995 | recurrent networks are Turing complete under idealized assumptions | verified (secondary) | siegelmann1995.pdf has no text layer; the claim is stated in Pérez et al. 2021, §1 |
+| perez2021 | attention is Turing complete | verified | title, abstract, keywords (arbitrary precision); perez2021.pdf |
+| forgy1982 | RETE caches matches between cycles, which a Transformer does not | verified | §2.1 "How to avoid iterating over working memory"; forgy1982.pdf |
 | muggleton1994 | program induction has a history independent of this paper | unverified | - |
-| willems1995 | context-tree weighting: universality within a class of tree sources | obtained | willems1995.pdf |
-| schmidhuber2010 | compression progress as intrinsic reward | obtained | schmidhuber2010.pdf |
-| dingle2018 | input-output maps are biased toward simple outputs, with a bound | obtained | dingle2018.pdf |
-| valleperez2019 | the parameter-function map of deep networks is biased toward simple functions | obtained | valleperez2018.pdf |
-| mingard2021 | SGD lands on functions with near-Bayesian probabilities | obtained | mingard2021.pdf |
-| wolfram2002 | computational irreducibility follows from bounded computation | obtained | wolfram2002.html |
-| wolfram2020 | the Ruliad observer: bounded, coarse-graining, concluding nothing about itself | obtained | wolfram2020.html |
-| wolfram2023 | a bounded observer sees a lawful world because of its bounds; the second law | obtained | wolfram2023.html |
-| simon1955 | bounded rationality: limits deform choice systematically | obtained | simon1955.pdf |
-| lieder2020 | resource-rational analysis: biases as optimal use of a limited budget | obtained | lieder2020.pdf |
+| willems1995 | context-tree weighting: universality within a class of tree sources | verified | abstract: all bounded memory tree sources, redundancy bound for individual sequences; willems1995.pdf |
+| schmidhuber2010 | compression progress as intrinsic reward | verified | items 1--3 of §1, intrinsic reward measuring the model's improvements; schmidhuber2010.pdf |
+| dingle2018 | input-output maps are biased toward simple outputs, with a bound | verified | Eq. (3) and §"simplicity bias"; dingle2018.pdf |
+| valleperez2019 | the parameter-function map of deep networks is biased toward simple functions | verified | abstract: "exponentially biased towards simple functions"; valleperez2018.pdf |
+| mingard2021 | SGD lands on functions with near-Bayesian probabilities | verified | abstract and §1: the Bayesian posterior is the first-order determinant of P_SGD, with second-order differences; mingard2021.pdf |
+| wolfram2002 | computational irreducibility follows from bounded computation | verified | p. 737 "Computational Irreducibility"; wolfram2002.html |
+| wolfram2020 | the Ruliad observer: bounded, coarse-graining, concluding nothing about itself | substitute | wolfram2020.html is the project introduction page, not the Complex Systems article; the claim is carried by wolfram2023 |
+| wolfram2023 | a bounded observer sees a lawful world because of its bounds; the second law | verified | §§"Observers Construct Their Perceived Reality", "The Cost of Observation"; "the fundamental origin of the Second Law of thermodynamics"; wolfram2023.html |
+| simon1955 | bounded rationality: limits deform choice systematically | verified | §II "The essential simplifications"; simon1955.pdf. The phrase "bounded rationality" is from Simon 1957, the content is here |
+| lieder2020 | resource-rational analysis: biases as optimal use of a limited budget | verified | title and abstract; lieder2020.pdf |
 | griffiths2015 | levels of analysis for rational use of cognitive resources | unverified | - |
 | riemann1873 | the geometric idea voiced before a theory carried it | unverified | - |
-| clifford1876 | space-theory of matter as a precursor of geometrized gravity | obtained | clifford1876.html |
+| clifford1876 | space-theory of matter as a precursor of geometrized gravity | verified | the ridges-and-furrows passage on curvature; clifford1876.html (Wikisource) |
 | norton1992 | Nordström's scalar theory and where it failed | unverified | - |
-| perky1910 | imagery is dimmer and less detailed than perception | obtained | perky1910.pdf |
+| perky1910 | the Perky effect: a faint projected picture taken for one's own imagery | obtained | perky1910.pdf; the scan's text layer is the table of contents only, so the wording follows the standard account and the locus is pending |
 | weiskrantz1986 | blindsight: source attribution without a manifold of elements | unverified | - |
-| damasio1996 | somatic markers as an ensemble of bodily signals used in decision | obtained | damasio1996.pdf |
+| damasio1996 | somatic markers as an ensemble of bodily signals used in decision | verified | p. 1413, statement of the hypothesis; damasio1996.pdf |
 | cahill1998 | emotional arousal modulates lasting declarative memory | unverified | - |
 | mcgaugh2000 | consolidation runs on minutes to hours and is modulated | unverified | - |
-| schultz1997 | the reward signal has the form of a prediction error | obtained | schultz1997.pdf |
-| scoville1957 | H.M.: real-time consciousness without accumulation | obtained | scoville1957.pdf |
-| corkin2002 | the later characterization of H.M.'s deficit | unverified | - |
-| miller1956 | capacity for material passing through speech, about seven items | obtained | miller1956.pdf |
+| schultz1997 | the reward signal has the form of a prediction error | verified | §"Do dopamine neurons report an error in the prediction of reward?" and Fig. 2; schultz1997.pdf |
+| scoville1957 | H.M.: real-time consciousness without accumulation | verified | "a grave loss of recent memory"; scoville1957.pdf |
+| miller1956 | capacity of about seven items | verified | §on one-dimensional absolute judgments, and the span of immediate memory; miller1956.pdf. The paper's restriction to material passing through speech is ours, not Miller's |
 | cowan2001 | the reconsidered capacity, about four | unverified | - |
 | vanrullen2003 | perception is discrete and has a rate | unverified | - |
-| nisbett1977 | humans misreport the causes of their own behaviour | obtained | nisbett1977.pdf |
+| nisbett1977 | humans misreport the causes of their own behaviour | verified | abstract: "little or no direct introspective access to higher order cognitive processes"; nisbett1977.pdf |
 | zwaan1998 | readers build situation models rather than storing sentences | unverified | - |
 | tausczik2010 | function words and style predict psychological state | unverified | - |
 | pennebaker2011 | the same, book-length | unverified | - |
@@ -78,41 +77,55 @@ text is revised; the claim column is what has to be checked, and nothing else.
 | barsalou1999 | grounded cognition: concepts rebuilt from perceptual states | unverified | - |
 | fedorenko2024 | the language network is dissociable from thought | unverified | - |
 | mahowald2024 | the same distinction applied to language models | unverified | - |
-| deletang2024 | prediction is compression, demonstrated with language models | obtained | deletang2023.pdf |
-| nogueira2021 | Transformers do arithmetic approximately; tokenization and digit count matter | obtained | nogueira2021.pdf |
+| deletang2024 | prediction is compression, demonstrated with language models | verified | abstract: Chinchilla 70B compresses ImageNet patches to 43.4% and speech to 16.4%; deletang2023.pdf |
+| nogueira2021 | Transformers do arithmetic approximately; representation matters; scale does not fix extrapolation | verified | abstract and §5: a 3B model still fails to extrapolate past the trained digit range; nogueira2021.pdf. The paper's sentence was rewritten to this |
 | dziri2023 | compositional tasks are solved by shortcut and degrade with depth | unverified | - |
 | xie2022 | in-context learning as inference of a latent variable | unverified | - |
-| vonoswald2023 | a self-attention layer can perform a gradient step on context examples | obtained | vonoswald2023.pdf |
-| todd2024 | a function vector at middle depth carries an in-context mapping | obtained | todd2024.pdf |
-| jastrzebski2018 | residual blocks make a network perform iterative inference | obtained | jastrzebski2018.pdf |
-| nostalgebraist2020 | the logit lens decodes the residual stream at each block | obtained | nostalgebraist2020.html |
+| vonoswald2023 | a self-attention layer can perform a gradient step on context examples | verified | abstract: explicit weight construction for one linear self-attention layer, plus trained-model evidence; vonoswald2023.pdf |
+| todd2024 | a function vector at middle depth carries an in-context mapping | verified | abstract and Fig. 2c: adding the vector at layer 12 of GPT-J produces the task in a zero-shot prompt; todd2024.pdf |
+| jastrzebski2018 | residual blocks make a network perform iterative inference | verified | §2: a residual block moves representations along the negative gradient of the loss; jastrzebski2018.pdf |
+| nostalgebraist2020 | the logit lens decodes the residual stream at each block | verified | the post itself; nostalgebraist2020.html |
 | belrose2023 | the tuned lens corrects the bias of that decoding | unverified | - |
-| lad2024 | stages of inference recur across models; layers inside a stage are robust | obtained | lad2024.pdf |
-| tenney2019 | a language model rediscovers the classical pipeline layer by layer | obtained | tenney2019.pdf |
-| skean2025 | intermediate layers transfer best; compression against signal preservation | obtained | skean2025.pdf |
-| dehghani2019 | recurrence in depth with per-position halting | obtained | dehghani2019.pdf |
+| lad2024 | four stages of inference across model families; middle layers robust to deletion and swapping, first and last not | verified | abstract (72--95% of top-1 accuracy retained) and §4: "in contrast to the first and last layer interventions, the middle layers are remarkably robust"; lad2024.pdf. The paper's sentence was corrected to this |
+| tenney2019 | a language model rediscovers the classical pipeline layer by layer | verified | abstract: expected order POS, parsing, NER, semantic roles, with dynamic revision; tenney2019.pdf |
+| skean2025 | intermediate layers transfer best; compression against signal preservation | verified | abstract and §1: intermediate layers surpass the final layer by up to 16% on MTEB; skean2025.pdf |
+| dehghani2019 | recurrence in depth with per-position halting | verified | §2.2 dynamic per-position halting; variable per-symbol depth; dehghani2019.pdf |
 | giannou2023 | looped Transformers with shared parameters | unverified | - |
 | geiping2025 | a recurrent-depth model improves as it unrolls at test time, without more tokens | unverified | - |
-| kohli2026 | depth extrapolation by scaling inference-time recurrence; dynamic recurrence extrapolates further; overthinking degrades predictions | verified | kohli2026.pdf (abstract; §on training strategies; overthinking in the abstract and §5) |
-| hao2024 | continuous chain of thought: last hidden state fed back as input | obtained | hao2024.pdf |
-| voita2020 | MDL probing charges for probe complexity; per-layer form | obtained | voita2020.pdf |
-| alain2016 | linear probes on intermediate layers | obtained | alain2016.pdf |
+| kohli2026 | depth extrapolation by scaling inference-time recurrence; dynamic recurrence extrapolates further; overthinking degrades predictions | verified | abstract; §6 on training strategies ("dynamic recurrence achieving the best extrapolation"); overthinking in the abstract and §6; kohli2026.pdf |
+| hao2024 | continuous chain of thought: last hidden state fed back as input | verified | abstract and Fig. 1; "rather than prematurely committing to a single" next step; hao2024.pdf |
+| voita2020 | MDL probing charges for probe complexity; per-layer form | verified | §2.3 on total codelength; per-layer results for ELMo layers 0--2 in §4; voita2020.pdf |
+| alain2016 | linear probes on intermediate layers | verified | abstract and §1; alain2016.pdf |
 | belinkov2022 | the methodological problems of probing | unverified | - |
 | zou2023 | internal states are readable top-down | unverified | - |
 | park2024 | representations of many features are linear | unverified | - |
-| lanham2023 | episodes where chain of thought does not match the process | obtained | lanham2023.pdf |
+| lanham2023 | episodes where chain of thought does not match the process | verified | abstract: early answering and adding mistakes; larger models less faithful on most tasks; lanham2023.pdf |
 | turpin2023 | unfaithful explanations in chain-of-thought prompting | unverified | - |
 | roger2023 | models can hide information in generated text | unverified | - |
 | schrimpf2021 | model states predict human brain responses to the same text | unverified | - |
 | goldstein2022 | shared computational principles between humans and deep language models | unverified | - |
 | caucheteux2022 | brains and algorithms partially converge | unverified | - |
 
-Counts: 90 keys, 2 verified, 46 obtained, 2 substitutes, 40 unverified.
+Counts: 90 keys. 43 verified (one of them secondary), 2 substitutes that were read, 3 obtained without a locus,
+43 unverified for want of a copy.
 
-Procedure for the remaining rows: (1) find an open copy (author page, arXiv, PhilPapers, Internet Archive, publisher
-OA); (2) save it as `sources/<key>.pdf` or `.html`; (3) read the passage that carries the claim in the column above;
-(4) set the status and note the locus; (5) if the source does not support the claim, mark `not-supporting` and change
-the sentence in the section file that cites it. A `substitute` row has to end either as a citation of what was read or
-as a copy of the original.
+## What the verification changed
 
-`sources/webb2015.pdf` was downloaded by the verification agents and is not cited by the current text.
+1. Lad et al.: the draft said adjacent layers inside a stage are robust to deletion and swapping. The paper says the
+   middle layers are robust and the first and last are not, with deletion in the detokenization stage catastrophic.
+   The sentence in S3a now says that.
+2. Nogueira et al.: the draft said scaling improves arithmetic slowly. The paper says larger models do better and
+   that even a 3B model fails to extrapolate beyond the trained digit range. The sentence in S2a now says that.
+3. Turing 1936 was cited for "any computable function has unboundedly many implementations", which is not a claim of
+   that paper. A24a now cites it for universality and states the multiplicity as the corollary.
+4. Perky 1910 is now cited for the Perky effect itself rather than for "imagery is dimmer than sight".
+5. `arXiv:2603.21676`, in the frames as a silent-objective result for deep recurrence, was dropped from both the
+   frames and the text: no copy was found and its content could not be confirmed.
+
+## Procedure for the rest
+
+(1) find an open copy (author page, arXiv, PhilPapers, Internet Archive, publisher OA); (2) save it as
+`sources/<key>.pdf` or `.html`; (3) read the passage that carries the claim in the column above; (4) set the status
+and the locus; (5) if the source does not support the claim, mark `not-supporting` and change the sentence in the
+section file that cites it. A `substitute` row has to end either as a citation of what was read or as a copy of the
+original. `sources/webb2015.pdf` was downloaded by the verification agents and is not cited by the current text.

@@ -73,9 +73,10 @@ given how sparse the space of well-formed texts is inside the space of token seq
 principle is known that explains why what they do suffices.
 
 The open question is how well they generalize the more complex functions that text expresses.
-Arithmetic is the clean case, because the target function is known exactly. They do it, approximately,
-with errors that depend on the tokenization and the number of digits, and scaling improves it slowly
-\citep{nogueira2021}; on compositional tasks they approach the answer by shortcut and break down
+Arithmetic is the clean case, because the target function is known exactly. They do it approximately,
+with an accuracy that depends on how the numbers are written and on how many digits they have; larger
+models do better and even a three-billion-parameter model fails to extrapolate beyond the digit range it
+was trained on \citep{nogueira2021}; on compositional tasks they approach the answer by shortcut and break down
 predictably as depth grows \citep{dziri2023}. Unloading the computation into written steps helps and
 leaves them unreliable executors of their own stated algorithm.
 
@@ -138,8 +139,9 @@ iterative inference rather than a single mapping \citep{jastrzebski2018}. The st
 read as a prediction: the logit lens decodes the residual stream at each block into a distribution over
 next tokens, and its tuned version corrects the bias of that decoding, so the trajectory of predictions
 across depth becomes visible \citep{nostalgebraist2020,belrose2023}. That trajectory has stages which
-recur across models, with adjacent layers inside a stage robust to deletion and to swapping
-\citep{lad2024}; the older finding that a language model rediscovers the classical processing pipeline
+recur across model families and sizes, four of them, and the middle ones are robust in a way the first
+and the last are not: deleting or swapping middle layers at inference leaves most of the top-1 accuracy
+in place, while the same intervention on the first layers is catastrophic \citep{lad2024}; the older finding that a language model rediscovers the classical processing pipeline
 layer by layer is the same fact seen through probes \citep{tenney2019}. Intermediate layers, rather than
 the last, carry the representations that transfer best to other tasks, and the proposed reason is that
 each layer trades compression of the input against preservation of signal, with the best trade in the
