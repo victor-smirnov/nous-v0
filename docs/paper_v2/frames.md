@@ -491,9 +491,8 @@ a block make depth a variable. Universal Transformers [Dehghani et al. 2019] and
 al. 2023] began it; a recurrent-depth model trained from scratch at 3.5 billion parameters improves on reasoning
 benchmarks as it unrolls further at test time, without producing more tokens, and captures reasoning that is not
 easily put into words [Geiping et al. 2025]. Recurrent depth extrapolates: models generalize to reasoning depths
-beyond those seen in training as iterations increase, dynamic recurrence generalizes best, and past a point they
-overthink and degrade [arXiv:2604.07822], while a silent objective that supervises only the final output forces
-genuine multi-step computation and stabilizes twenty and more iterations [arXiv:2603.21676]. Reasoning can also be
+beyond those seen in training as iterations increase, dynamic recurrence extrapolates further than a fixed
+schedule, and past a point they overthink and degrade [Kohli et al. 2026, verified]. Reasoning can also be
 moved off the tokens altogether: feeding the last hidden state back as the next input yields a continuous chain of
 thought that keeps several candidate next steps in superposition where a written chain commits to one [Hao et al.
 2024]. For the argument these results mean three things. The sub-token axis can be made as long as the task

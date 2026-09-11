@@ -1,0 +1,10 @@
+sources/*.pdf
+sources/*.html
+sources/*.xml
+main.aux
+main.log
+main.out
+main.toc
+main.bbl
+main.blg
+main.pdf
