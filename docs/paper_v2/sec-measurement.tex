@@ -189,10 +189,15 @@ scratch at 3.5 billion parameters improves on reasoning benchmarks as it unrolls
 without producing more tokens, and its authors argue that this captures reasoning which is not easily
 put into words \citep{geiping2025}. Such models extrapolate in depth: generalization to reasoning depths
 beyond those seen in training improves as iterations increase, dynamic recurrence generalizes better
-than a fixed schedule, and past a point the models overthink and degrade \citep{kohli2026}. Reasoning can
-also be moved off the tokens altogether by feeding the last hidden state back as the next input, which
-yields a continuous chain of thought that can keep several candidate next steps in superposition where a
-written chain has to commit to one \citep{hao2024}.
+than a fixed schedule, and past a point the models overthink and degrade \citep{kohli2026}. At a much
+smaller scale, under a megabyte of parameters, recurrence over twenty and more steps can be made stable
+by supervising only the final step, and supervising the intermediate steps is actively harmful because it
+lets the model learn shortcuts instead of a multi-step path; the accuracy of such a model against task
+complexity shows a frontier, with performance moving from chance to near-perfect as the number of
+thinking steps grows with the complexity of the task \citep{chen2026}. Reasoning can also be moved off
+the tokens altogether by feeding the last hidden state back as the next input, which yields a continuous
+chain of thought that can keep several candidate next steps in superposition where a written chain has to
+commit to one \citep{hao2024}.
 
 For the argument these results mean three things. The sub-token axis can be made as long as the task
 demands, so a frame rate per word comparable to the human one is architecturally available. Iterations

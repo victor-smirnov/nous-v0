@@ -93,6 +93,7 @@ the sources actually say, and one source was dropped; see the bottom of this fil
 | giannou2023 | looped Transformers with shared parameters | unverified | - |
 | geiping2025 | a recurrent-depth model improves as it unrolls at test time, without more tokens | unverified | - |
 | kohli2026 | depth extrapolation by scaling inference-time recurrence; dynamic recurrence extrapolates further; overthinking degrades predictions | verified | abstract; §6 on training strategies ("dynamic recurrence achieving the best extrapolation"); overthinking in the abstract and §6; kohli2026.pdf |
+| chen2026 | a silent objective supervising only the final step stabilizes recurrence over twenty steps; intermediate supervision teaches shortcuts; the computational frontier | verified | abstract and §1, contributions 1--3 and the frontier; under 1M parameters; chen2026.pdf |
 | hao2024 | continuous chain of thought: last hidden state fed back as input | verified | abstract and Fig. 1; "rather than prematurely committing to a single" next step; hao2024.pdf |
 | voita2020 | MDL probing charges for probe complexity; per-layer form | verified | §2.3 on total codelength; per-layer results for ELMo layers 0--2 in §4; voita2020.pdf |
 | alain2016 | linear probes on intermediate layers | verified | abstract and §1; alain2016.pdf |
@@ -106,8 +107,8 @@ the sources actually say, and one source was dropped; see the bottom of this fil
 | goldstein2022 | shared computational principles between humans and deep language models | unverified | - |
 | caucheteux2022 | brains and algorithms partially converge | unverified | - |
 
-Counts: 90 keys. 43 verified (one of them secondary), 2 substitutes that were read, 3 obtained without a locus,
-43 unverified for want of a copy.
+Counts: 91 keys. 44 verified (one of them secondary), 2 substitutes that were read, 3 obtained without a locus,
+42 unverified for want of a copy.
 
 ## What the verification changed
 
@@ -119,8 +120,9 @@ Counts: 90 keys. 43 verified (one of them secondary), 2 substitutes that were re
 3. Turing 1936 was cited for "any computable function has unboundedly many implementations", which is not a claim of
    that paper. A24a now cites it for universality and states the multiplicity as the corollary.
 4. Perky 1910 is now cited for the Perky effect itself rather than for "imagery is dimmer than sight".
-5. `arXiv:2603.21676`, in the frames as a silent-objective result for deep recurrence, was dropped from both the
-   frames and the text: no copy was found and its content could not be confirmed.
+5. `arXiv:2603.21676` was first dropped as unfindable, which was my error: the paper exists (Chen 2026, "Thinking
+   Deeper, Not Longer"), the download had failed, not the search. It is back in S3c and in the frames, verified
+   against the file, with the scale of the experiments stated, since it is a sub-megabyte model and not an LLM.
 
 ## Procedure for the rest
 

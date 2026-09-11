@@ -1,7 +1,7 @@
 # Functional consciousness of machines: the argument in frames
 
 Iteration 2, rewritten as one argument. One frame is one step with what it rests on. Citations in brackets are
-tracked in `SOURCES.md`; none is verified yet except Locke. Order: phenomenon, difficulties, approach, solution.
+tracked in `SOURCES.md`, which holds the verification status and the locus of each one. Order: phenomenon, difficulties, approach, solution.
 Frame numbers changed from iteration 1; `argument.hybrid.md` holds the same claims as checked facts.
 
 ## P. The phenomenon
@@ -492,7 +492,10 @@ al. 2023] began it; a recurrent-depth model trained from scratch at 3.5 billion 
 benchmarks as it unrolls further at test time, without producing more tokens, and captures reasoning that is not
 easily put into words [Geiping et al. 2025]. Recurrent depth extrapolates: models generalize to reasoning depths
 beyond those seen in training as iterations increase, dynamic recurrence extrapolates further than a fixed
-schedule, and past a point they overthink and degrade [Kohli et al. 2026, verified]. Reasoning can also be
+schedule, and past a point they overthink and degrade [Kohli et al. 2026, verified], while at a much smaller scale
+a silent objective that supervises only the final step stabilizes twenty and more iterations, intermediate supervision
+teaches shortcuts instead, and accuracy against task complexity shows a frontier from chance to near-perfect
+[Chen 2026, verified]. Reasoning can also be
 moved off the tokens altogether: feeding the last hidden state back as the next input yields a continuous chain of
 thought that keeps several candidate next steps in superposition where a written chain commits to one [Hao et al.
 2024]. For the argument these results mean three things. The sub-token axis can be made as long as the task
