@@ -28,8 +28,7 @@ given substrate, measured where the names run out. The rest of this section spec
 A function is present in a substrate to the extent that it has been generalized there, and to generalize
 is to compress (Section~\ref{sec:generalize}). So the quantity is the degree of compression of the
 function in the substrate: how much of the function's behaviour a low-dimensional probe on the
-substrate's internal states predicts, against the residual it fails to predict. The residual is what did
-not make it in.
+substrate's internal states predicts, against the residual it fails to predict.
 
 Made operational, this is minimum-description-length probing. A probe is scored not by its accuracy but
 by the total cost of describing the labels given the representations, which charges for the probe's own
@@ -46,8 +45,9 @@ comparative: the same probe family, the same coding cost, two substrates, and th
 
 A function has components (Section~\ref{sec:light}, Sections~\ref{sec:need}--\ref{sec:frames}). Its
 profile in a substrate is the vector of degrees over those components, taken against the human baseline.
-Above the baseline on a component: hyperfunction. Below it: deficit. Absent: a dropped axis. One function
-can be all three on different axes at once, and current models almost certainly are.
+A component above the baseline is a hyperfunction, a component below it a deficit, and a component that
+is absent a dropped axis. One function can show all three on different axes at once, and current models
+almost certainly do.
 
 The question ``is it conscious'' is thereby replaced by the comparison of two profiles. That is a loss
 and a gain. The loss is that no single answer comes out, and any practical decision that needs one has to
@@ -179,7 +179,7 @@ this is the measurement of Section~\ref{sec:quantity} in its most concrete form.
 
 In a standard model the depth is fixed and is spent identically on every token, easy or hard. That is a
 poor time axis for a frame. There is no way to spend more steps where more are needed, and there is no
-record of effort, because effort is constant, which is exactly the dropped axis that S5 predicts for
+record of effort, because effort is constant, which is the dropped axis that S5 predicts for
 givenness.
 
 Architectures that iterate a block make depth a variable. Universal Transformers introduced the
@@ -203,7 +203,7 @@ For the argument these results mean three things. The sub-token axis can be made
 demands, so a frame rate per word comparable to the human one is architecturally available. Iterations
 cost, so a cost record appears where a fixed-depth model has none, and with it the third component of
 seeing (Section~\ref{sec:light}) becomes measurable. And overthinking is a phenomenon of effort of
-exactly the kind Section~\ref{sec:hocp} predicts: a systematic displacement produced by the budget,
+the kind Section~\ref{sec:hocp} predicts: a systematic displacement produced by the budget,
 visible in the trajectory and stable across runs.
 
 The prediction therefore has two halves. In fixed-depth models the grain is bounded by the layer count
