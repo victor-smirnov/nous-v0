@@ -19,6 +19,8 @@ search inside scanned books. Four claims were corrected against what the sources
 | nagel1974 | the bat question marks a limit on description from outside | verified | "only if there is something that it is like to be that organism", p. 436; the sonar passage and the point of view, pp. 438--439; nagel1974.pdf |
 | chalmers1995 | the easy/hard split; the hard problem asks why processing is accompanied by experience | verified | §"The Easy Problems and the Hard Problem"; chalmers1995.pdf |
 | frankish2016 | illusionism; the illusion problem as successor of the hard problem | verified | p. 1 and §4 "Facing up to the illusion problem"; frankish2016.pdf |
+| chalmers2023 | the applied assessment: the list senses/embodiment, world and self models, recurrent processing, global workspace, unified agency; credence under ten percent for current models | verified | the "X = ..." sections and the closing estimate ("confidence somewhere under 10 percent"); chalmers2023.pdf |
+| butlin2023 | computational functionalism as working assumption; indicator properties derived from RPT, GWT, computational HOT, AST, predictive processing, agency and embodiment | verified | §1 tenets and §2 theory list; butlin2023.pdf |
 | dennett1991 | user illusion; the regress objection; self-report as misrepresentation | verified (search inside) | "the benign user illusion of its own", Consciousness Explained, located by full-text search of the scanned edition on Open Library |
 | ryle1949 | the regress objection against inner observation | verified (search inside) | "Their theory was a para-mechanical hypothesis", The Concept of Mind, ch. I; Open Library full-text search |
 | rosenthal2005 | higher-order thought structure; a frame as a thought within a previous one | substitute, read | "differing in how we are conscious of our conscious states"; rosenthal2009.pdf (Oxford Handbook chapter) |
@@ -108,7 +110,7 @@ search inside scanned books. Four claims were corrected against what the sources
 | goldstein2022 | shared computational principles between humans and deep language models | verified | abstract: three shared principles, including continuous next-word prediction before word onset; goldstein2022.pdf |
 | caucheteux2022 | brains and algorithms partially converge | verified | abstract: language algorithms partially converge toward brain-like representations; caucheteux2022.pdf |
 
-Counts: 91 keys. 85 verified (52 against the full text, 6 against the PubMed abstract, 8 by full-text search
+Counts: 93 keys. 87 verified (52 against the full text, 6 against the PubMed abstract, 8 by full-text search
 inside the scanned book, 1 by metadata, 1 secondary), 2 substitutes that were read, 4 obtained without a
 locus (Ayer, Perky, Solomonoff I, Muggleton), 2 without any copy (Gardner 1983, Clark 1998).
 
