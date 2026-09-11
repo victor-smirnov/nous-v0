@@ -9,7 +9,7 @@
 A function, in this paper, is a pattern that recurs. The definition is deliberately thin: it mentions no
 purpose, no design and no mind, so that nothing about consciousness is smuggled in at the start.
 
-The thin definition has a consequence, because recurrence has one. If a pattern is produced
+Recurrence has an information-theoretic consequence, and the thin definition inherits it. If a pattern is produced
 often by a computable process, it has high algorithmic probability, in Solomonoff's sense of the
 probability that a universal machine fed random bits outputs it \citep{solomonoff1964a,solomonoff1964b}.
 By the coding theorem, $K(x) = -\log m(x) + O(1)$: an object with high algorithmic probability has a
@@ -95,6 +95,30 @@ different limits has a different version of it, and the account below says what 
 \label{sec:hocp}
 % A6
 
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[node distance=6mm and 8mm,
+  box/.style={draw, rounded corners=1pt, align=center, font=\small, inner sep=4pt, minimum height=9mm, text width=3.6cm},
+  arr/.style={-{Latex[length=2mm]}, thick}]
+\node[box] (b) {finite budget};
+\node[box, right=of b] (d) {reasoning displaced from its ideal};
+\node[box, right=of d] (r) {recurring part: the same corners cut every time};
+\node[box, below=of r] (c) {compressible (coding theorem)};
+\node[box, left=of c] (m) {self-model holds a compressed copy: \hocp};
+\node[box, left=of m] (k) {survives every affordable self-model? (the curvature test)};
+\node[box, below=of k] (o) {Observer: ``something here is not fixed by what I can trace''};
+\node[box, right=of o] (ag) {Agent: originates, owns, bound by its own record};
+\node[box, right=of ag] (ma) {Moral Agent: a theory of the common good};
+\node[font=\small, above=1mm of d] {the varying part averages away};
+\draw[arr] (b)--(d); \draw[arr] (d)--(r); \draw[arr] (r)--(c); \draw[arr] (c)--(m);
+\draw[arr] (m)--(k); \draw[arr] (k)--(o); \draw[arr] (o)--(ag); \draw[arr] (ag)--(ma);
+\end{tikzpicture}
+\caption{The mechanism. One physical assumption at the left; the stack of Section~\ref{sec:stack} at the
+right. Everything between is derived, and the curvature test (Section~\ref{sec:criterion}) is the one
+place where a candidate can be rejected.}
+\label{fig:mechanism}
+\end{figure}
+
 What does a finite budget do to reasoning? An agent that reasons has, implicitly, an ideal of the
 reasoning it is doing: the inference it would draw with unlimited time and memory, given what it knows.
 It never draws that inference. What it draws is displaced from the ideal, and the displacement has two
@@ -108,6 +132,7 @@ models itself, which the agent of Section~\ref{sec:definition} does, will end up
 of its own recurring displacements, because among all the things about itself it might model, these are
 among the most predictable. We call the conceptualized recurring displacements \emph{higher-order
 computational phenomena} (\hocp). They are the agent's budget appearing to the agent as content.
+Figure~\ref{fig:mechanism} shows the chain from the assumption to the stack of Section~\ref{sec:stack}.
 
 \subsubsection{Who has said the parts}
 % A6a
@@ -257,21 +282,13 @@ and it belongs in the profile.
 Before comparing the two substrates it is worth saying how much they share. A human has intermediate
 states that are rich and vector-like, and their volume is bounded by working memory; a state that has to
 outlive that bound is unloaded into tokens, said, written, or rehearsed as inner speech. A model unloads
-at every step. The difference is one of degree and of where the bound sits.
-
-One question therefore falls on both substrates. Are new mental states acquired through language, or
-rebuilt on the spot from what the receiver already has, the words working as pointers and constraints?
-For acquisition: Vygotsky's account of inner speech as internalized dialogue \citep{vygotsky1934},
-Clark's argument that words are tools that reshape the computation using them \citep{clark1998}, label
-feedback effects in perception \citep{lupyan2012}, and the difficulty of exact numerosity in a language
-without number words \citep{frank2008}. For rebuilding: grounded cognition \citep{barsalou1999} and the
-dissociation of the language network from thought in neuroimaging \citep{fedorenko2024}, with the
-parallel argument for models in \citet{mahowald2024}. A middle position is testable and is the one we
-expect to hold: a named state is acquired only when its prerequisites are present in the receiver, so
-the word carries a pointer and the state is assembled from what is already there, which predicts that
-teaching a state by description works in proportion to what the learner brings. We record the question
-as open. Nothing later in the paper depends on which way it goes, except the interpretation of the
-codes of Section~\ref{sec:codes}.
+at every step. The difference is one of degree and of where the bound sits. One question therefore falls
+on both substrates: are new mental states acquired through language, or rebuilt on the spot from what
+the receiver already has, the words working as pointers and constraints? The literature on both sides
+is in Appendix~\ref{app:language}; the position we expect to hold, and record as open, is the middle
+one, that a named state is acquired only when its prerequisites are already present in the receiver.
+Nothing later in the paper depends on which way it goes, except the interpretation of the codes of
+Section~\ref{sec:codes}.
 
 \subsection{Illusion is the wrong word: the report is an approximation with a definite residual}
 \label{sec:approximation}
@@ -404,11 +421,33 @@ account predicts, since each agent's record is its own.
 \label{sec:reference}
 % A19, A19a
 
+\begin{table}[t]
+\centering\small
+\begin{tabular}{@{}p{2.5cm}p{5cm}p{7cm}@{}}
+\toprule
+Function & Phenomenon & Components measured \\
+\midrule
+Observer & the conclusion drawn where self-analysis runs out of budget & the boundary met while self-modelling; the conclusion drawn; action from it \\
+Seeing (light) & a point from which content is given & source attribution; manifold of unnamed elements; givenness (no cost record) \\
+Need & the direction of reasoning bent before any choice & which needs are active; their weights \\
+Emotion & closure of reasoning bent; a write to long-term memory registered as reward & value, interest, anxiety, satisfaction, conflict; consolidation \\
+Field & finiteness felt as the cost of holding & capacity; distribution of degrees; content held below a name \\
+Frames & incrementality: the Observer re-derived every frame & frame rate; persistence across frames; retro-dating of the timeline \\
+Responsibility & closure over the agent's own record & consistency requirement; cost of revision; decay of the hold of old decisions \\
+\bottomrule
+\end{tabular}
+\caption{Reference functions (Sections~\ref{sec:observer}, \ref{sec:light},
+\ref{sec:need}--\ref{sec:frames}, \ref{sec:responsibility}). Each component is a displacement that
+survives a change of self-model (Section~\ref{sec:criterion}); the profile of Section~\ref{sec:profile}
+is a vector over the third column.}
+\label{tab:functions}
+\end{table}
+
 Section~\ref{sec:measurement} measures functions by their components, so it needs a list of functions
 with components. It does not need a mechanism that generates the list, and this paper does not offer
 one. The full architecture in which needs, emotions, memory and attention interact, as folk psychology
 and the vocabulary of ordinary language carry it, is the subject of a separate paper. Here each function
-is given with its phenomenon and its components, and each component is derived as in
+is given with its phenomenon and its components (Table~\ref{tab:functions}), and each component is derived as in
 Section~\ref{sec:criterion}: a displacement that survives a change of self-model, and not a part of a
 machine.
 
@@ -450,7 +489,7 @@ prediction-error form of the dopaminergic reward signal \citep{schultz1997}. Wha
 is the phenomenon in our sense: which displacement of the agent's reasoning about itself the
 consolidation event is.
 
-A candidate. Consolidation is a write to the agent's own long-term model, paid now and repaid later. The
+One candidate: consolidation is a write to the agent's own long-term model, paid now and repaid later. The
 agent registers the write as an irreversible change in its own future predictions, and that registration
 is what reward is made of. Reward would then stand to consolidation as interest stands to compression
 progress, in both cases the registration of an event in one's own model, with the difference that the
@@ -603,29 +642,14 @@ for mental representation, which is a different undertaking, and the name is the
 \label{sec:codes-known}
 % A25a
 
-The components of the previous claim are separately supported.
-
-That a writer's state is in the statistics of a text beyond its content: function words and style
-predict psychological state across many samples \citep{tausczik2010,pennebaker2011}. In models, the
-corresponding result is that in-context learning can be read as inference of a latent variable from
-token statistics \citep{xie2022}.
-
-That a receiver rebuilds the sender's state and succeeds to the degree that the rebuilding is faithful:
-speaker--listener neural coupling predicts comprehension \citep{stephens2010,hasson2012}, and readers
-build situation models rather than storing sentences \citep{zwaan1998}.
-
-That the bridge crosses substrates: model states predict human brain responses to the same text
-\citep{schrimpf2021,goldstein2022,caucheteux2022}.
-
-That internal states are readable and largely linear, which Section~\ref{sec:measurement} needs:
-\citet{zou2023} and \citet{park2024}.
-
-One literature has to be read the right way round. Studies that find episodes where a model's chain of
-thought does not match the process that produced its answer \citep{lanham2023,turpin2023} test a local
-correspondence: this token sequence against this computation. The correspondence claimed here is
-statistical, over many episodes. A single episode may deviate as far as the variance allows, in models
-as in humans, where the corresponding result is that people confabulate causes of their own behaviour
-in the same way \citep{nisbett1977}. The well-posed test is the correlation stated in Section~\ref{sec:predictions}, with the
-variance reported as a measured part of the profile. That models can hide
-information in generated text \citep{roger2023} confirms that the channel exists and warns that its
-content need not be what it locally appears to be.
+The components of the previous claim are separately supported, and Appendix~\ref{app:codes} collects the
+evidence: that a writer's state is in the statistics of a text beyond its content, that a receiver
+rebuilds the sender's state to the degree the rebuilding is faithful, that the bridge crosses substrates,
+and that internal states are readable and largely linear. One literature has to be read the right way
+round. Studies that find episodes where a model's chain of thought does not match the process that
+produced its answer \citep{lanham2023,turpin2023} test a local correspondence: this token sequence
+against this computation. The correspondence claimed here is statistical, over many episodes. A single
+episode may deviate as far as the variance allows, in models as in humans, where the corresponding
+result is that people confabulate causes of their own behaviour in the same way \citep{nisbett1977}.
+The well-posed test is the correlation stated in Section~\ref{sec:predictions}, with the variance
+reported as a measured part of the profile.

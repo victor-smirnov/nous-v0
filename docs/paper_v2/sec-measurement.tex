@@ -8,7 +8,7 @@
 
 The solution has a conceptual part and a quantitative part, and they reach different distances.
 
-The conceptual part is this. Once the Observer is treated as curvature (Section~\ref{sec:criterion},
+The conceptual part: once the Observer is treated as curvature (Section~\ref{sec:criterion},
 Section~\ref{sec:observer}), the vocabulary of the philosophy of mind returns as a set of statements
 about a shape of reasoning, and those statements can be checked against one another by formal means and
 do hold together: beingness as the Observer's conclusion, the two faces of the residual, approximation
@@ -43,9 +43,36 @@ comparative: the same probe family, the same coding cost, two substrates, and th
 \label{sec:profile}
 % S2
 
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[x=1.7cm, y=1.6cm]
+\draw[-{Latex[length=2mm]}] (0,0) -- (0,2.4) node[above, font=\small] {degree};
+\draw (0,0) -- (7.7,0);
+\draw[dashed] (0,1) -- (7.7,1) node[right, font=\small] {human baseline};
+\foreach \i/\h/\lab in {1/0.4/source, 2/1.8/manifold, 4/1.6/capacity, 5/1.0/frame\\rate, 6/0.5/persistence} {
+  \fill[gray!45] (\i-0.3,0) rectangle (\i+0.3,\h);
+  \draw (\i-0.3,0) rectangle (\i+0.3,\h);
+  \node[below, font=\small, align=center] at (\i,0) {\lab};
+}
+\foreach \i/\lab in {3/givenness, 7/consolidation} {
+  \draw[dashed] (\i-0.3,0) rectangle (\i+0.3,1);
+  \node[below, font=\small] at (\i,0) {\lab};
+  
+}
+\node[font=\small, above] at (2,1.8) {hyperfunction};
+\node[font=\small, above] at (1,0.4) {deficit};
+\node[font=\small, above] at (3,1) {dropped axis};
+\end{tikzpicture}
+\caption{A profile (Section~\ref{sec:profile}): one function's components on the horizontal axis, the
+degree of generalization on the vertical, the human baseline at 1. The values are the predictions of
+Sections~\ref{sec:profile-seeing} and \ref{sec:frozen} for a current fixed-depth model, drawn to
+illustrate the three kinds of entry and not measured.}
+\label{fig:profile}
+\end{figure}
+
 A function has components (Section~\ref{sec:light}, Sections~\ref{sec:need}--\ref{sec:frames}). Its
-profile in a substrate is the vector of degrees over those components, taken against the human baseline.
-A component above the baseline is a hyperfunction, a component below it a deficit, and a component that
+profile in a substrate is the vector of degrees over those components, taken against the human baseline
+(Figure~\ref{fig:profile}). A component above the baseline is a hyperfunction, a component below it a deficit, and a component that
 is absent a dropped axis. One function can show all three on different axes at once, and current models
 almost certainly do.
 
@@ -115,6 +142,29 @@ hidden weights brings back the binary question the vector was introduced to repl
 \label{sec:granularity}
 % S3
 
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[x=1.7cm, y=0.9cm, arr/.style={-{Latex[length=1.6mm]}}]
+\foreach \t in {1,...,5} {
+  \foreach \l in {1,...,4} { \fill[gray!25] (\t-0.3,\l-0.3) rectangle (\t+0.3,\l+0.3); }
+  \foreach \l in {1,...,3} { \draw[arr, thick] (\t,\l+0.3) -- (\t,\l+0.7); }
+  \node[below, font=\small] at (\t,0.6) {token \t};
+}
+\foreach \l in {1,...,4} { \node[left, font=\small] at (0.6,\l) {layer \l}; }
+\foreach \t in {2,...,5} { \pgfmathtruncatemacro{\p}{\t-1} \draw[arr, gray] (\p+0.3,2) -- (\t-0.3,2); }
+\draw[dashed, thick] (5.6,0.4) -- (5.6,4.6) node[above, font=\small, align=center] {end of\\context};
+\node[font=\small, align=center] at (6.3,2.5) {loss};
+\draw[arr, thick] (0.8,-0.4) -- (5.4,-0.4) node[midway, below, font=\small] {axis the objection sees: tokens, then the edge};
+\draw[arr, thick] (-0.5,0.8) -- (-0.5,4.2) node[midway, above, rotate=90, font=\small] {axis it does not: depth};
+\foreach \l in {1,2,3} { \node[right, font=\scriptsize, gray] at (5.05,\l+0.5) {frame}; }
+\end{tikzpicture}
+\caption{The two time axes of a Transformer (Section~\ref{sec:twoaxes}). Along tokens, state lives in
+the context and is lost past its edge. Along depth, the residual stream carries state from layer to
+layer within one token, and the increments between layers are the candidate frames of
+Section~\ref{sec:frames}. Grey horizontal arrows: attention reads earlier positions.}
+\label{fig:axes}
+\end{figure}
+
 Granularity is a knob of the measurement and not a separate question. Human frames arrive five to ten
 times faster than words, so in a Transformer the carriers may be looked for below the token: between
 layers, or in repeated passes through layers where the architecture has them. They may be there, and
@@ -131,7 +181,7 @@ known about it.
 \label{sec:depth}
 % S3a
 
-This is no longer a conjecture about Transformers. It is what looking inside them has found.
+That generalization happens along depth is what looking inside Transformers has found, and no longer a conjecture.
 
 Residual connections make each block a small correction to a state that is carried forward, and the
 corrections move the state in a direction that reduces the loss, so a deep residual network performs
@@ -215,7 +265,7 @@ is the cleanest first measurement available today.
 \label{sec:twoaxes}
 % S3d
 
-The objection of Section~\ref{sec:frozen} sees one time axis. Along tokens the model is as the objection
+The objection of Section~\ref{sec:frozen} sees one of the two time axes in Figure~\ref{fig:axes}. Along tokens the model is as the objection
 describes: the state lives in the context, the context ends, and past its edge there is loss. That is a
 deficit of long-term persistence relative to a brain and it belongs in the profile. The objection says
 nothing about the axis of depth, where the state is carried in the residual stream and the increments are
