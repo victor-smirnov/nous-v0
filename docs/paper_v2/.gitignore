@@ -1,6 +1,7 @@
 sources/*.pdf
 sources/*.html
 sources/*.xml
+sources/*.txt
 main.aux
 main.log
 main.out
