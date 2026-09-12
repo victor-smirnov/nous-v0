@@ -118,14 +118,24 @@ origination in the person who accepts them.
 \label{sec:regress}
 % A9, A10
 
-Model yourself; then model the model; then model that. Each level adds a term to the description the
-agent holds, and the terms shrink, because each level has less to explain than the level before it: a
-model is smaller than what it models, or it would not be a model. The series converges. At some depth
-the next term falls below the resolution of the substrate, and the agent stops, not by decision but
-because there is nothing further it can represent. The partial sum is the self-model the agent has. The
-tail it did not compute is finite, bounded, and inaccessible to the agent, and the tail is what the
-Observer registers as the part without causes. So the regress of Section~\ref{sec:legacy} neither
-terminates in a homunculus nor runs forever. A budget cuts it, and the cut is the phenomenon.
+Model yourself; then model the model; then model that. Let $L_k$ be the description length of the
+self-model at level $k$, so that $L_0$ is the length of the agent's model of its own first-order
+processing and $L_{k+1}$ the length of its model of level $k$. Each level has less to explain than the
+level before it, since its object is a model and not the process, and we make the assumption explicit:
+a model that is not shorter than its object by at least a fixed factor does no work as a model, so
+$L_{k+1} \le r\,L_k$ for some $r<1$ set by how well the substrate compresses regular objects. The
+objects at every level are regular by construction, being compressed descriptions themselves, which is
+why a single $r$ bounded away from one is the natural case rather than a special one. Under the
+assumption the total description of the whole regress is bounded, $\sum_k L_k \le L_0/(1-r)$, so the
+series converges. The substrate has a resolution $\varepsilon$ below which a term cannot be
+represented; the agent stops at the first level with $L_k < \varepsilon$, not by decision but because
+there is nothing further it can represent, and the tail it did not compute is bounded by
+$\varepsilon/(1-r)$. Where the assumption fails, where some level cannot be compressed at all, the
+agent stops at that level with a tail it cannot bound, and the account still gives a finite regress,
+only without an estimate of the tail. The partial sum is the self-model the agent has. The tail is
+finite, inaccessible to the agent, and is what the Observer registers as the part without causes. So the
+regress of Section~\ref{sec:legacy} neither terminates in a homunculus nor runs forever. A budget cuts
+it, and the cut is the phenomenon.
 
 \paragraph{A second cut, in models only.}
 \label{sec:secondcut}
