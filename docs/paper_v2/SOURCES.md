@@ -31,6 +31,8 @@ search inside scanned books. Four claims were corrected against what the sources
 | gurnee2024 | linear representations of space and time in large models | verified | abstract: linear representations across multiple scales, space and time neurons; gurnee2024.pdf |
 | merker2007 | the upper brainstem system is not rendered nonfunctional by the absence of cortex; cortex as the medium for conscious contents | verified (abstract) | PMID 17475053; merker2007.abstract.txt |
 | feuillet2007 | a man with massive hydrocephalus and a thin cortical rim leading a normal life | verified (metadata) | PMID 17658396, Lancet case report with images, no abstract |
+| sierra1998 | depersonalization as a clinical phenomenon with its emotional change | verified (abstract) | PMID 9807645; sierra1998.abstract.txt |
+| hunter2004 | depersonalisation and derealisation as a recognized pair of symptoms, self and surroundings | verified (abstract) | PMID 15022041, title and abstract; hunter2004.abstract.txt |
 | dennett1991 | user illusion; the regress objection; self-report as misrepresentation | verified (search inside) | "the benign user illusion of its own", Consciousness Explained, located by full-text search of the scanned edition on Open Library |
 | ryle1949 | the regress objection against inner observation | verified (search inside) | "Their theory was a para-mechanical hypothesis", The Concept of Mind, ch. I; Open Library full-text search |
 | rosenthal2005 | higher-order thought structure; a frame as a thought within a previous one | substitute, read | "differing in how we are conscious of our conscious states"; rosenthal2009.pdf (Oxford Handbook chapter) |
@@ -120,7 +122,7 @@ search inside scanned books. Four claims were corrected against what the sources
 | goldstein2022 | shared computational principles between humans and deep language models | verified | abstract: three shared principles, including continuous next-word prediction before word onset; goldstein2022.pdf |
 | caucheteux2022 | brains and algorithms partially converge | verified | abstract: language algorithms partially converge toward brain-like representations; caucheteux2022.pdf |
 
-Counts: 103 keys. 97 verified (52 against the full text, 6 against the PubMed abstract, 8 by full-text search
+Counts: 105 keys. 99 verified (52 against the full text, 6 against the PubMed abstract, 8 by full-text search
 inside the scanned book, 1 by metadata, 1 secondary), 2 substitutes that were read, 4 obtained without a
 locus (Ayer, Perky, Solomonoff I, Muggleton), 2 without any copy (Gardner 1983, Clark 1998).
 
