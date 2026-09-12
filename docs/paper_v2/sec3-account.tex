@@ -17,6 +17,22 @@ question ``how much'' is well formed. It says nothing about substrates, on purpo
 criterion one can apply by inspection: whether a given system's self-reasoning has this part, and how
 much of it, is what the rest of the paper is about.
 
+\paragraph{Batch and incremental forms.}
+\label{sec:incremental}
+The definitions of this section, and the derivations of Section~\ref{sec:model}, are stated in batch
+form: a function takes an input and returns a result, and the Observer will be derived as a
+conclusion, a discrete output. Human consciousness presents itself as continuous, and the Observer in a
+human is stretched over time rather than delivered once. The difference is one of form and not of
+content. Any computation stated in batch form has an incremental form, in which the result is
+maintained under changes to the input from the previous result and the change, instead of being
+recomputed from the whole input; the RETE algorithm is the incremental form of rule matching
+\citep{forgy1982}, and the same transformation applies to any function of this paper. The batch form is
+used below because it is the one in which the derivations are shortest. The incremental form is the
+one in which the functions run, in a brain by frames and in a Transformer by layers and tokens, and
+Section~\ref{sec:constructions} states what the transformation has to deliver: the conclusion
+re-derived every frame at low cost from the previous conclusion and what the frame adds, so that
+continuity is the run of re-derivations and nothing else.
+
 \subsection{A function is what recurs, and what recurs is compressible}
 \label{sec:function}
 % A1, A2
