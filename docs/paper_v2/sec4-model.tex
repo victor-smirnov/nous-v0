@@ -52,6 +52,16 @@ fixed budget cuts the same corners in the same places: the same branch of the se
 does not fit, the same distinction is the one too fine to keep, the same horizon is the one beyond
 which nothing is traced.
 
+The picture has a plain computational form. An anytime algorithm returns an approximate result whenever
+it is stopped, and the quality of the result is a function of the time and memory it was allowed
+\citep{dean1988}; Markov chain Monte Carlo is the familiar case, where the error of an estimate falls
+with the number of samples drawn and carries the correlations that a chain stopped early has not yet
+mixed away. Not every algorithm has this form, and many of practical importance do: search, inference
+by sampling, iterative optimization. For such an algorithm the displacement at a fixed budget is a
+point on its performance profile, and the error at that point is a function of the budget and of the
+problem, not of the occasion. That is all ``the same places every time'' means: run the same bounded
+procedure on the same kind of input and it stops short in the same way.
+
 The second part recurs. By Section~\ref{sec:function} it is therefore compressible. And an agent that
 models itself, which the agent of Section~\ref{sec:definition} does, will end up with a compressed
 model of its own recurring displacements, because among all the things about itself it might model,
