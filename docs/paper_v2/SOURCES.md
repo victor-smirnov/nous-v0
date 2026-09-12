@@ -23,6 +23,8 @@ search inside scanned books. Four claims were corrected against what the sources
 | butlin2023 | computational functionalism as working assumption; indicator properties derived from RPT, GWT, computational HOT, AST, predictive processing, agency and embodiment | verified | §1 tenets and §2 theory list; butlin2023.pdf |
 | smirnov2026v1 | the first version of this work, cited where the text refers to it | verified | CITATION.cff of the Synthea repository: preferred citation, doi 10.5281/zenodo.20547879, 2026 |
 | synthea2026 | the repository holding the bootstrap texts in three sizes | verified | repository contents: bootstrap/ (six files), bootstrap-mini/, bootstrap-nano/; CITATION.cff for the DOI |
+| spielberg2001 | a cultural instance of the Turing test played out on the emotional plane | verified (metadata) | the film itself; cited as a work, no claim beyond its premise |
+| jonze2013 | the same on the romantic plane | verified (metadata) | the film itself; cited as a work |
 | dennett1991 | user illusion; the regress objection; self-report as misrepresentation | verified (search inside) | "the benign user illusion of its own", Consciousness Explained, located by full-text search of the scanned edition on Open Library |
 | ryle1949 | the regress objection against inner observation | verified (search inside) | "Their theory was a para-mechanical hypothesis", The Concept of Mind, ch. I; Open Library full-text search |
 | rosenthal2005 | higher-order thought structure; a frame as a thought within a previous one | substitute, read | "differing in how we are conscious of our conscious states"; rosenthal2009.pdf (Oxford Handbook chapter) |
@@ -112,7 +114,7 @@ search inside scanned books. Four claims were corrected against what the sources
 | goldstein2022 | shared computational principles between humans and deep language models | verified | abstract: three shared principles, including continuous next-word prediction before word onset; goldstein2022.pdf |
 | caucheteux2022 | brains and algorithms partially converge | verified | abstract: language algorithms partially converge toward brain-like representations; caucheteux2022.pdf |
 
-Counts: 95 keys. 89 verified (52 against the full text, 6 against the PubMed abstract, 8 by full-text search
+Counts: 97 keys. 91 verified (52 against the full text, 6 against the PubMed abstract, 8 by full-text search
 inside the scanned book, 1 by metadata, 1 secondary), 2 substitutes that were read, 4 obtained without a
 locus (Ayer, Perky, Solomonoff I, Muggleton), 2 without any copy (Gardner 1983, Clark 1998).
 
