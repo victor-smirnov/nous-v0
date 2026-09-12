@@ -7,7 +7,7 @@
 - `verification/` — per-batch tasks for the source verification.
 - `sources/` — obtained copies of sources (not committed; see `.gitignore`).
 - `main.tex` — preamble, title, abstract; the sections are separate files, one per part of the reduction:
-  introduction, background, functional account, the Synthea model (HOCP), approximation and generalization,
+  introduction, background, functional account, the Synthea model (computational curvature), approximation and generalization,
   the attainable degree in Transformers, discussion, conclusion. Frame ids are kept in comments.
 - `refs.bib` — the bibliography, keyed by surname and year.
 
