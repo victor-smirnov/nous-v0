@@ -76,7 +76,8 @@ search inside scanned books. Four claims were corrected against what the sources
 | riemann1873 | the geometric idea voiced before a theory carried it | verified | Clifford's translation, Nature VIII, pp. 14--17, 36--37; "space is only a particular case of a triply extended magnitude", the closing on measure-relations and binding forces; riemann1873.pdf |
 | clifford1876 | space-theory of matter as a precursor of geometrized gravity | verified | the ridges-and-furrows passage on curvature; clifford1876.html (Wikisource) |
 | norton1992 | Nordström's scalar theory and where it failed | verified | "does not predict any deflection of a light ray by a gravitational field", and the Einstein--Fokker 1914 dénouement; norton1992.pdf |
-| perky1910 | the Perky effect: a faint projected picture taken for one's own imagery | obtained | perky1910.pdf; the scan's text layer is the table of contents only, so the wording follows the standard account and the locus is pending |
+| perky1910 | the Perky effect: a faint projected picture taken for one's own imagery | verified (secondary) | perky1910.pdf has a text layer of the table of contents only; the phenomenon as described is stated in Okada & Matsuoka 1992: "the assimilation of the signal tone into imagery, i.e., the effect described by Perky in 1910" |
+| okada1992 | the Perky effect reproduced in the auditory modality; statement of the effect as assimilation of a real signal into imagery | verified (abstract) | PMID 1594403; okada1992.abstract.txt |
 | weiskrantz1986 | blindsight: source attribution without a manifold of elements | verified (search inside) | "orientation discrimination, in the absence of acknowledged awareness (Table 23)", Blindsight; Open Library full-text search |
 | damasio1996 | somatic markers as an ensemble of bodily signals used in decision | verified | p. 1413, statement of the hypothesis; damasio1996.pdf |
 | cahill1998 | emotional arousal modulates lasting declarative memory | verified (abstract) | PMID 9683321: stress hormones and the amygdala as modulators of consolidation for emotional events; cahill1998.abstract.txt |
@@ -129,9 +130,9 @@ search inside scanned books. Four claims were corrected against what the sources
 | goldstein2022 | shared computational principles between humans and deep language models | verified | abstract: three shared principles, including continuous next-word prediction before word onset; goldstein2022.pdf |
 | caucheteux2022 | brains and algorithms partially converge | verified | abstract: language algorithms partially converge toward brain-like representations; caucheteux2022.pdf |
 
-Counts: 112 keys. 106 verified (52 against the full text, 6 against the PubMed abstract, 8 by full-text search
-inside the scanned book, 1 by metadata, 1 secondary), 2 substitutes that were read, 4 obtained without a
-locus (Ayer, Perky, Solomonoff I, Muggleton), 2 without any copy (Gardner 1983, Clark 1998).
+Counts: 113 keys. 108 verified (52 against the full text, 6 against the PubMed abstract, 8 by full-text search
+inside the scanned book, 1 by metadata, 1 secondary), 2 substitutes that were read, 3 obtained without a
+locus (Ayer, Solomonoff I, Muggleton), 2 without any copy (Gardner 1983, Clark 1998).
 
 ## What the verification changed
 
