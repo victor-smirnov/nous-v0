@@ -44,7 +44,7 @@ search inside scanned books. Four claims were corrected against what the sources
 | forgy1982 | RETE caches matches between cycles, which a Transformer does not | verified | §2.1 "How to avoid iterating over working memory"; forgy1982.pdf |
 | muggleton1994 | program induction has a history independent of this paper | obtained | muggleton1994.pdf, 46 pp., Type 3 fonts, no extractable text; the claim is only that the field exists |
 | willems1995 | context-tree weighting: universality within a class of tree sources | verified | abstract: all bounded memory tree sources, redundancy bound for individual sequences; willems1995.pdf |
-| schmidhuber2010 | compression progress as intrinsic reward | verified | items 1--3 of §1, intrinsic reward measuring the model's improvements; schmidhuber2010.pdf |
+| schmidhuber2010 | compression progress as intrinsic reward; consciousness as a by-product of compression (a self-symbol because the agent is in all its data) | verified | items 1--3 of §1 for intrinsic reward; §on abstraction as a by-product of compression: "Consciousness may be viewed as a by-product of this ... creating some sort of internal symbol or code representing itself"; schmidhuber2010.pdf |
 | dingle2018 | input-output maps are biased toward simple outputs, with a bound | verified | Eq. (3) and §"simplicity bias"; dingle2018.pdf |
 | valleperez2019 | the parameter-function map of deep networks is biased toward simple functions | verified | abstract: "exponentially biased towards simple functions"; valleperez2018.pdf |
 | mingard2021 | SGD lands on functions with near-Bayesian probabilities | verified | abstract and §1: the Bayesian posterior is the first-order determinant of P_SGD, with second-order differences; mingard2021.pdf |
