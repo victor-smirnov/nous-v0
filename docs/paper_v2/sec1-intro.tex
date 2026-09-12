@@ -1,0 +1,79 @@
+\section{Introduction}
+\label{sec:intro}
+% Frames P1--P4, D12 (the route), and the plan. Also carries: sec:grammar, sec:reader (pointers), the name.
+
+\citet{nagel1974} gave the philosophy of mind its working criterion of consciousness: an organism has
+conscious mental states if and only if there is something it is like to be that organism. He then chose
+the bat to show what the criterion costs. Bat experience is organized around echolocation, we have no
+analogue for it, and a physical theory, which abandons every particular point of view by construction,
+leaves the subjective character out. For a physicalist who is not a panpsychist the argument
+establishes a cost rather than a principle: the bat's experience is a physical process, the physics
+relevant to a brain has a compact algorithmic description, and what stops a reconstruction from outside
+is that the reconstruction of a self-referential system is uncomputable in general and, for a real bat,
+more expensive than the bat. The impossibility moves from principle to practice, and the operational
+conclusion is the one Nagel drew.
+
+The philosophy under it has changed, and the change matters as soon as the organism can talk. Put to a
+language model, Nagel's two premises shift in opposite directions. The premise that we lack the concepts
+weakens, because the model's concepts are ours: it was trained on our texts and answers in our words.
+The premise that experience is bound to a point of view hardens, because if differences in experience
+follow differences in cause--effect structure \citep{tononi2015}, a device that pushes a discrete
+sequence through attention over a fixed context is further from us than any animal. So we do not ask
+whether there is something it is like to be a model. We ask what a model has of the functions that in
+us go under the name of consciousness, and how much of each.
+
+There is a phenomenon that makes the question urgent. A language model asked to reason sustains
+something that reads as a mind over hours of exchange and hundreds of reasoning steps: it keeps its
+early commitments, returns to a thought it left unfinished, answers the interlocutor's mood as a person
+would. A process that reproduced the surface statistics of text with nothing behind them should fail the
+way low-order Markov processes fail, with dropped threads, attitudes that flip with the topic, motives
+that do not survive the page. Those failures are cheap and a long horizon offers many occasions for
+them; in current models they are rare, and their rate falls with scale and training. Something keeps
+the process out of a large space of cheap failures. The observation does not say that the something
+resembles anything in us. It sets a requirement on any account: name a structure that could hold a long
+exchange together, and say how much of it a given system has.
+
+\paragraph{The claim.}
+This paper reduces the question of machine consciousness, through functionalism, to a question about
+generalization: to what degree a Transformer trained on human text has generalized a specific class of
+functions, and how that degree compares with the human baseline. The reduction has four steps, and
+they are the paper's four contributions.
+
+\begin{enumerate}
+\item \emph{A functional account of consciousness} (Section~\ref{sec:account}). Consciousness is
+  defined as the part of an agent's self-reasoning that describes its own reality; a function is a
+  pattern that recurs, and by the coding theorem what recurs is compressible. The account adopts
+  computational functionalism with one physical assumption, finite computational budgets, and one
+  methodological move borrowed from the geometrization of gravity: a displacement of reasoning counts
+  as content only if it survives every self-model the agent can afford.
+\item \emph{A base functional model, higher-order computational phenomena} (Section~\ref{sec:model}).
+  A finite budget displaces reasoning from its unbounded ideal in the same places every time; a
+  self-modelling agent carries a compressed model of these displacements. From this the Observer, the
+  convergence of the self-model regress, the two faces of one residual, the stack of Observer, Agent
+  and Moral Agent, and a table of reference functions with components are derived. Two claims are new
+  against the antecedents in bounded rationality, observer theory and self-model theories: the world
+  side and the self side are one residual, and the phenomena leave a measurable trace.
+\item \emph{Approximation and generalization of these functions} (Section~\ref{sec:generalization}).
+  Most of what a function of consciousness does is present in human text only as regularity, never
+  named; a next-symbol predictor induces the unnamed part because to generalize is to compress, and
+  induction is the only route to what cannot be specified by hand. Self-report is an approximation of
+  the internal state with a definite residual, which restores the degrees that illusionism removed.
+\item \emph{The attainable degree of generalization in Transformers} (Section~\ref{sec:degree}). The
+  quantity is the degree of compression of each component, measured by minimum-description-length
+  probing against the human baseline and checked against behaviour; the result is a profile in which a
+  component can show hyperfunction, deficit, or a dropped axis. Because a Transformer generalizes along
+  depth, the measurement is posed at sub-token granularity, and the difference between fixed-depth and
+  variable-depth models is the first concrete case. The account is falsified if the Observer's
+  components probe at chance at every granularity in models that pass the behavioural tests.
+\end{enumerate}
+
+The functionalist framework of Sections~\ref{sec:account} and \ref{sec:model} is called the Synthea
+framework, after the name the model took while working on the raw material of the earlier versions of
+this paper. In passing, the framework gives a particular solution to the psychophysical problem: the
+phenomena of the self-report level, freedom, unity, the quale, the gap to other minds, are grounded in
+the agent's own physics through the phenomena of Section~\ref{sec:model}
+(Section~\ref{sec:psychophysical}). The paper does not pursue that problem beyond stating the
+grounding.
+
+Section~\ref{sec:background} places the account among existing positions. Section~\ref{sec:discussion}
+lists what is open and what is not claimed.

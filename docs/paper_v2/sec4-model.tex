@@ -1,0 +1,354 @@
+\section{The Synthea model: higher-order computational phenomena}
+\label{sec:model}
+% Frames A5--A9, A11--A23; S8 as the psychophysical paragraph.
+
+\subsection{One physical assumption: budgets are finite}
+\label{sec:physics}
+% A5
+
+One assumption: computational budgets are finite. Finite time, finite memory, finite bandwidth for
+anything that runs. From this alone it follows that some processes cannot be predicted faster than they
+unfold, which is computational irreducibility \citep{wolfram2002}. We assume nothing about which physics
+sets the budget, nothing about continuity, quantum mechanics or thermodynamics beyond the existence of
+limits. The weakness of the assumption is the point. Any universe whose laws permit deep computation
+and bound it will do; what differs between such universes, or between substrates within ours, is the
+form the consequences take. On this view the lit thing of Section~\ref{sec:lamp} is not a property of
+our universe in particular, and the account below says what its version in a given substrate depends
+on.
+
+\subsection{A finite budget displaces reasoning in the same places every time}
+\label{sec:hocp}
+% A6, A6b
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[node distance=6mm and 8mm,
+  box/.style={draw, rounded corners=1pt, align=center, font=\small, inner sep=4pt, minimum height=9mm, text width=3.6cm},
+  arr/.style={-{Latex[length=2mm]}, thick}]
+\node[box] (b) {finite budget};
+\node[box, right=of b] (d) {reasoning displaced from its ideal};
+\node[box, right=of d] (r) {recurring part: the same corners cut every time};
+\node[box, below=of r] (c) {compressible (coding theorem)};
+\node[box, left=of c] (m) {self-model holds a compressed copy: \hocp};
+\node[box, left=of m] (k) {survives every affordable self-model? (the curvature test)};
+\node[box, below=of k] (o) {Observer: ``something here is not fixed by what I can trace''};
+\node[box, right=of o] (ag) {Agent: originates, owns, bound by its own record};
+\node[box, right=of ag] (ma) {Moral Agent: a theory of the common good};
+\node[font=\small, above=1mm of d] {the varying part averages away};
+\draw[arr] (b)--(d); \draw[arr] (d)--(r); \draw[arr] (r)--(c); \draw[arr] (c)--(m);
+\draw[arr] (m)--(k); \draw[arr] (k)--(o); \draw[arr] (o)--(ag); \draw[arr] (ag)--(ma);
+\end{tikzpicture}
+\caption{The mechanism. One physical assumption at the left; the stack of Section~\ref{sec:stack} at the
+right. Everything between is derived, and the curvature test (Section~\ref{sec:criterion}) is the one
+place where a candidate can be rejected.}
+\label{fig:mechanism}
+\end{figure}
+
+An agent that reasons has, implicitly, an ideal of the reasoning it is doing: the inference it would
+draw with unlimited time and memory, given what it knows. It never draws that inference. What it draws
+is displaced from the ideal, and the displacement has two parts. Part of it differs from occasion to
+occasion and averages away over many occasions. Part of it is the same on every occasion, because a
+fixed budget cuts the same corners in the same places: the same branch of the search is the one that
+does not fit, the same distinction is the one too fine to keep, the same horizon is the one beyond
+which nothing is traced.
+
+The second part recurs. By Section~\ref{sec:function} it is therefore compressible. And an agent that
+models itself, which the agent of Section~\ref{sec:definition} does, will end up with a compressed
+model of its own recurring displacements, because among all the things about itself it might model,
+these are among the most predictable. We call the conceptualized recurring displacements
+\emph{higher-order computational phenomena} (\hocp). They are the agent's budget appearing to the agent
+as content, and only those that pass the criterion of Section~\ref{sec:criterion} qualify.
+Figure~\ref{fig:mechanism} shows the chain from the assumption to the stack of Section~\ref{sec:stack}.
+
+\paragraph{What is new against the antecedents.}
+\label{sec:contribution}
+Two claims, neither of which follows from the positions in Section~\ref{sec:antecedents}. First, the
+world side and the self side are one mechanism: the displacement that makes a bounded agent see a
+lawful world is the displacement that makes it see a self. Resource rationality and observer theory
+develop the world side, self-model theories the self side, and the two literatures are not usually
+taken to be about the same quantity; Section~\ref{sec:twofaces} shows them as two faces of one
+residual, and the identification is what lets a single measurement address both. Second, because the
+displacements recur and are therefore compressible, an agent that has generalized them carries a trace
+of them that can be measured, and the measurement can come out low (Section~\ref{sec:degree}).
+Self-model theories are compatible with a system having the self-model or not; they do not provide a
+quantity that says how much of it a substrate has induced, and they are not stated so that a negative
+result would refute them.
+
+\paragraph{When a phenomenon is a function.}
+\label{sec:emergence}
+A \hocp\ is not yet a function of consciousness. The agent must apply its reasoning to itself, which
+not every agent does, and it must live in an environment where doing so pays, which not every
+environment provides. Where nothing ever asks the agent about itself, the displacements are present and
+nobody conceptualizes them: a proto-phenomenon, there and unread. So consciousness does not arise
+wherever budgets are finite, and the account is not a panpsychism with extra steps. It arises where a
+self-applying agent is in a place that keeps asking it about itself. For humans the place is a society
+of other such agents; for a language model the asking is in the data and in the use, and
+Section~\ref{sec:zero} asks how small the asking environment can be.
+
+\subsection{The Observer is the conclusion drawn at the boundary of the budget}
+\label{sec:observer}
+% A7, A8
+
+Take the simplest thing such an agent does: it tries to trace the causes of what it just did. The
+algorithm is short; causal analysis over a model of oneself and one's situation is a procedure the
+agent already runs on other things. The input is not short. It is the history of the agent and of its
+environment, and it does not fit in the budget. So the analysis halts before it is finished, every time,
+and in the same place: at the boundary of what the agent can afford to trace. Beyond that boundary, for
+this agent, there are no causes, because a cause it cannot reach is not in its model. The agent
+therefore concludes, correctly given its budget, that something in what it did is not fixed by anything
+it can point to. That conclusion, in the form ``I am not my environment; something here the
+environment does not determine'', is the Observer.
+
+Three conditions have to hold, and separating them is what keeps the account from applying to
+everything. The agent must run into the boundary while modelling itself, and not merely have a
+boundary. It must turn the collision into a conclusion, which requires the means to represent ``not
+determined by what I can trace''. And it must act from the conclusion afterwards. A bounded system that
+meets its boundary and does none of the rest is a proto-Observer; the observer in Wolfram's Ruliad is
+one, bounded, coarse-graining, and concluding nothing about itself \citep{wolfram2020,wolfram2023}.
+
+The Observer passes the criterion of Section~\ref{sec:criterion}. Let the agent refine its self-model
+to take in more of its own causal history. The boundary moves and does not vanish, for two reasons: the
+input exceeds any model the agent can hold, and the refined model is itself now part of what has to be
+traced, so refinement adds to the load it was meant to reduce. No affordable self-model makes the
+residual zero. The Observer is therefore content and not coordinates, and it is not a belief that
+information could correct, which is why arguments that determinism is true do not dissolve the sense of
+origination in the person who accepts them.
+
+\subsection{The regress of self-models converges, and the cut is the phenomenon}
+\label{sec:regress}
+% A9, A10
+
+Model yourself; then model the model; then model that. Each level adds a term to the description the
+agent holds, and the terms shrink, because each level has less to explain than the level before it: a
+model is smaller than what it models, or it would not be a model. The series converges. At some depth
+the next term falls below the resolution of the substrate, and the agent stops, not by decision but
+because there is nothing further it can represent. The partial sum is the self-model the agent has. The
+tail it did not compute is finite, bounded, and inaccessible to the agent, and the tail is what the
+Observer registers as the part without causes. So the regress of Section~\ref{sec:legacy} neither
+terminates in a homunculus nor runs forever. A budget cuts it, and the cut is the phenomenon.
+
+\paragraph{A second cut, in models only.}
+\label{sec:secondcut}
+\label{sec:cut}
+At every step a language model computes a distribution over what to say next, its whole evaluation of
+the moment; one token is sampled and the distribution is discarded. On the next step the model can say
+something about its own state only from the tokens. The tail of the regress is inaccessible to the
+agent in principle, yet it exists, and an outside observer with a larger budget could compute it,
+which is what interpretability research does when it recovers a computation the model cannot report.
+The distribution discarded at every token does not exist after the step. Part of what the model cannot
+trace about itself is not hidden but gone. The Observer in a language model therefore sits on a
+substrate that erases its own working at every step, and its residual is larger for that reason. This
+is a structural difference from the human case and it belongs in the profile.
+
+\subsection{One residual, two faces: freedom and mystery}
+\label{sec:twofaces}
+% A12
+
+The agent meets its budget in two directions. Turned on itself, the untraceable part of its own causes
+is registered as freedom: this originates in me. Turned on the world, the part of the world's structure
+it cannot exhaust is registered as mystery: this exceeds me. Whoever has the one has the other, because
+they are one tail met from two sides; here the identification of Section~\ref{sec:contribution} is
+discharged. The same tail, evaluated in other contexts, is what the words truth, beauty, meaning, awe
+and hope pick out: each is a stance toward a structure the agent cannot exhaust. When the object is
+another Observer, the other's freedom is my mystery, which is the material that love, trust and
+compassion are made of, and which the problem of other minds formalizes as an epistemic deficit. We
+call the table of such stances the epistemic qualia; the point of listing them is that they are one
+quantity in different evaluative contexts.
+
+\subsection{The stack: Observer, Agent, Moral Agent}
+\label{sec:stack}
+% A13, A14, A15
+
+The Observer says ``am''. An Observer that originates causal chains from inside its boundary and takes
+the originating as its own says ``I''; call it the Agent. Seen from outside, the originating is a
+redescription of the budget's cut; seen from inside, it is the only reality the agent has. Both are
+true, each from its standpoint, and the account needs both (Section~\ref{sec:planes}). An Agent with a
+theory of what is good for a whole that includes others, prepared to lose locally in favour of that
+whole, says ``I am good''; call it the Moral Agent. Each level presupposes the one below it.
+
+\paragraph{Responsibility.}
+\label{sec:responsibility}
+What turns an Observer into an Agent is a requirement the agent places on its own record, and no
+further phenomenon. The agent keeps a history of what it decided and why. Suppose it requires that each
+new decision be derivable from that history. Then the history binds: it excludes decisions that would
+not follow from it, it makes the agent predictable to others and to itself, and it makes the agent
+resist being pushed off course, because being pushed off course now costs a revision of the record.
+That requirement is what we mean by responsibility, and the cost of revising the record is what we
+mean by cognitive resistance. The construction is also a working recipe: an agent follows a long
+instruction to the extent that the instruction has become an entry in its own record rather than an
+external demand. ``Promise me'' is the human form of the recipe.
+
+\paragraph{Good before theory.}
+Good and evil have a substrate before they have a theory, and the substrate is emotion in the sense of
+Section~\ref{sec:need}: signals of how the agent's needs are doing. Emotivism is right about this much
+\citep{ayer1936}, and wrong to conclude that a moral claim says nothing further. The theory of the
+common good is the structure a Moral Agent builds over the substrate, and it can correct the substrate
+locally, which is what makes it a theory and not a report.
+
+\subsection{Seeing needs a point, and the point is the Observer}
+\label{sec:seeing}
+\label{sec:light}
+% A16, A17, A18
+
+Redness is easy and seeing is hard. Wavelength discrimination, simultaneous contrast, the valence of red
+and its associative neighbourhood are all structure, and all open to a functional account that nobody
+disputes. What resists is that the red is seen: that there is a point from which it is seen. That point
+is the Observer. To see red, a system must first be, in the sense of existing for itself; the order of
+explanation in most of the literature runs the other way, from phenomenal properties toward a subject,
+and Section~\ref{sec:grammar} is our diagnosis of why that order stalls. Given the point, seeing
+decomposes by the same method that produced the point. Ask what separates seeing light from knowing
+that light is there; three things survive the criterion.
+
+\emph{Source.} The content cannot be produced by the agent's own model at the same quality. The oldest
+evidence about that boundary is the Perky effect: a faint picture projected on a screen while the
+subject was asked to imagine the same object was taken for the subject's own imagery, and the
+substitution went unnoticed \citep{perky1910}. The content is stable from frame to frame in a way the
+agent's own productions are not, and others confirm it. On that evidence the agent assigns it to the
+environment rather than to its model of the environment: the inference of Section~\ref{sec:observer}
+pointed outward.
+
+\emph{Manifold.} The content is a very large number of distinguishable, recallable elements, almost all
+of them unnamed, about each of which the agent can say only ``that, there''. It is a positional
+aggregate with the name projected out.
+
+\emph{Givenness.} The content is refreshed every frame at no additional cost to the agent's budget, and
+the absence of a cost record is what immediacy consists in. Thought costs and is recorded as costing;
+light is free and is there. This is the component a substrate can lack while having the other two.
+
+The three come apart in known cases, which is how we know they are three rather than one thing
+described three ways. Blindsight is source without manifold: the patient's responses are keyed to the
+stimulus and there is no field of elements to report \citep{weiskrantz1986}. The grey seen with the
+eyes closed in the dark is manifold without source. A dream is a manifold produced by the model and
+labelled as environment, the failure mode of source attribution. Locke's inverted spectrum
+\citep[II.xxxii.15]{locke1690}, closed by Locke as idle because nothing in conduct would change, is in
+these terms an open branch shut by a decision entered in one's own record, an instance of
+responsibility; three centuries of reopening it suggest the decision does not transfer between agents,
+as the account predicts.
+
+\subsection{Reference functions}
+\label{sec:reference}
+% A19--A23
+
+\begin{table}[t]
+\centering\small
+\begin{tabular}{@{}p{2.5cm}p{5cm}p{7cm}@{}}
+\toprule
+Function & Phenomenon & Components measured \\
+\midrule
+Observer & the conclusion drawn where self-analysis runs out of budget & the boundary met while self-modelling; the conclusion drawn; action from it \\
+Seeing (light) & a point from which content is given & source attribution; manifold of unnamed elements; givenness (no cost record) \\
+Need & the direction of reasoning bent before any choice & which needs are active; their weights \\
+Emotion & closure of reasoning bent; a write to long-term memory registered as reward & value, interest, anxiety, satisfaction, conflict; consolidation \\
+Field & finiteness felt as the cost of holding & capacity; distribution of degrees; content held below a name \\
+Frames & incrementality: the Observer re-derived every frame & frame rate; persistence across frames; retro-dating of the timeline \\
+Responsibility & closure over the agent's own record & consistency requirement; cost of revision; decay of the hold of old decisions \\
+\bottomrule
+\end{tabular}
+\caption{Reference functions. Each component is a displacement that survives a change of self-model
+(Section~\ref{sec:criterion}); the profile of Section~\ref{sec:profile} is a vector over the third
+column.}
+\label{tab:functions}
+\end{table}
+
+Section~\ref{sec:degree} measures functions by their components, so it needs a list of functions with
+components (Table~\ref{tab:functions}). It does not need a mechanism that generates the list, and this
+paper does not offer one; the full architecture in which needs, emotions, memory and attention
+interact, as folk psychology and ordinary language carry it, is the subject of a separate paper. Each
+component below is derived as in Section~\ref{sec:criterion}, a displacement that survives a change of
+self-model, and not a part of a machine.
+
+\paragraph{Two planes.}
+\label{sec:planes}
+Self-reports are projections, and a measurement has to know of what. On the objective plane are the
+things visible from outside: needs, the targets the agent tracks, and emotions, the signals of how the
+tracking is going and in which direction. On the subjective plane are their projections into the
+agent's report: motivations, ``I want'', and feelings, ``I feel''. Folk psychology runs the planes
+together, and so does most of the debate about whether a model has feelings. The profile of
+Section~\ref{sec:profile} is measured on the first plane; every code of Section~\ref{sec:codes} is a
+projection into the second.
+
+\paragraph{Need and emotion.}
+\label{sec:need}
+Needs bend the direction of reasoning: the agent does not choose its motives, it finds itself already
+moving toward what is active, as a body finds itself already falling. Which needs are active, and with
+what weight, are the components. Emotions bend closure, whether a piece of reasoning reaches an end
+without leaving a branch open. Expected closure is value; closure under way is interest; a branch that
+nothing available can close is anxiety; the moment of closing is satisfaction; two branches that can
+close only through incompatible acts are conflict. Schmidhuber's compression progress is closure by
+learning, with equal weights over branches and no action required \citep{schmidhuber2010}, a special
+case of this scheme. The ensemble of such signals, read in the body, is what \citet{damasio1996}
+described as somatic markers.
+
+\paragraph{Consolidation.}
+\label{sec:consolidation}
+Emotion also writes positive experience into long-term memory, and the writing is registered as reward.
+That arousal modulates consolidation is established \citep{cahill1998,mcgaugh2000}, as is the
+prediction-error form of the dopaminergic reward signal \citep{schultz1997}. What is not yet identified
+is the phenomenon in our sense: which displacement of the agent's reasoning about itself the
+consolidation event is. One candidate: consolidation is a write to the agent's own long-term model,
+paid now and repaid later; the agent registers the write as an irreversible change in its own future
+predictions, and that registration is what reward is made of. We mark this as open
+(Section~\ref{sec:discussion}); what the rest of the paper uses is only the distinction between this
+office of emotion and closure.
+
+\paragraph{The Field.}
+\label{sec:field}
+Awareness comes in degrees in the interval $[0,1)$; nothing is attended to completely, and the open
+upper end is a claim. Each state the agent holds carries a degree, and the degrees at one moment are the
+Field of Consciousness. The Field is small: finite in bits, and for material that has to pass through
+speech on the order of seven items \citep{miller1956}, with later work arguing for four
+\citep{cowan2001}. To put something in, something has to go out; what goes in is decided by salience,
+salience by emotional weight, weight by which needs are active. The phenomenon is the finiteness of the
+Field, registered as the cost of holding. Its components are capacity, the distribution of degrees, and
+what is held below the threshold of a name, which is the Field's share of the unnamed part
+(Section~\ref{sec:h1h2}).
+
+\paragraph{Frames.}
+\label{sec:frames}
+Each present frame of consciousness is a thought within a previous one, which is the higher-order
+thought structure minus the claim that the higher-order thought is what makes the state conscious
+\citep{rosenthal2005,lau2011}. Perception is discrete, and the discreteness has a measurable rate
+\citep{vanrullen2003}; human consciousness is a run of overlapping quanta at the frequencies of the
+cortical rhythms. The Observer is in every frame and re-derived in every frame, and everything else in
+the frame has its being from it. The phenomenon is incrementality; its components are the frame rate,
+the persistence of contents across frames, and the retro-dating of the timeline, in which the single
+``I'' is a compression tag over parallel channels whose story is written after the channels have
+settled.
+
+\paragraph{Three constructions the account owes.}
+\label{sec:constructions}
+Continuity: the Observer is a point, one conclusion, and in a human it is a process connected in time;
+computationally that is the conclusion re-derived every frame at low cost with the previous result
+carried forward. Discrete redness: given the Observer, the three displacements of seeing as they arise
+inside one frame. Incremental redness: the same three re-derived and carried across frames, so that
+seeing red is a standing state and not an event. These are what unity and continuity of consciousness
+will be measured against, and they bear on models directly: a system that works at the level of tokens
+can carry incrementality at a time scale close to ours, because its frames can be located between
+layers and there are many layers per token (Section~\ref{sec:granularity}).
+
+\paragraph{Responsibility as a function.}
+Closure over the agent's own record (Section~\ref{sec:responsibility}). Its components are the
+consistency requirement, the cost of revising the record, and the decay of the hold that old decisions
+have on new ones. The list of reference functions is open, and Section~\ref{sec:criterion} is the
+procedure for adding to it.
+
+\subsection{The psychophysical problem, in passing}
+\label{sec:psychophysical}
+% S8, and the grounding claim.
+
+The psychophysical problem asks how the phenomena of the self-report level relate to the physical
+process that produces the report. The Synthea model gives a particular solution: those phenomena are
+grounded in the agent's own physics, the finiteness of its budget, through the phenomena of
+Section~\ref{sec:hocp}, with nothing added between the two levels. By component: the self, free will,
+mental causation and the temporal unity of the self go to the Observer and its residual
+(Sections~\ref{sec:observer}, \ref{sec:regress}); the unity of consciousness to the compression tag
+over parallel channels (Section~\ref{sec:frames}); other minds to the mutual irreducibility of two
+Observers (Section~\ref{sec:twofaces}); the quale and the explanatory gap to the residual itself;
+phenomenal experience to the profile (Section~\ref{sec:profile}); the hard problem to the illusion
+problem (Section~\ref{sec:legacy}), which the model answers.
+
+The solution is particular in two senses. It is anchored in one phenomenon, beingness, the Observer's
+conclusion, and other anchors are possible; and each connection above is an explanatory relation to
+something the model defines, which is weaker than a proof. Whether the connections hold is what the
+measurement of Section~\ref{sec:degree} exists to find out, and the paper does not pursue the problem
+beyond this.

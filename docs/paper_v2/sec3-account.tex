@@ -1,0 +1,119 @@
+\section{A functional account of consciousness}
+\label{sec:account}
+\label{sec:approach}
+% Frames A4 (definition), A1--A2 (function), A3 (lamp), D1 + D12 + A6c (grammar, precedent, criterion).
+
+\subsection{The definition}
+\label{sec:definition}
+% A4
+
+Take an agent that acts in an environment, refers to itself, and reasons about itself, either
+explicitly or through a proxy such as reasoning about its own utterances. Its consciousness is the part
+of its self-reasoning that describes its own reality as it has it: what is there, what it is like, and
+where the agent stands among the things described.
+
+Three properties of the definition matter later. It defines a function and not a substance, so the
+question ``how much'' is well formed. It says nothing about substrates, on purpose. And it is not a
+criterion one can apply by inspection: whether a given system's self-reasoning has this part, and how
+much of it, is what the rest of the paper is about.
+
+\subsection{A function is a pattern that recurs, and what recurs is compressible}
+\label{sec:function}
+% A1, A2
+
+A function, in this paper, is a pattern that recurs. The definition is deliberately thin: it mentions no
+purpose, no design and no mind, so that nothing about consciousness is smuggled in at the start.
+
+Recurrence has an information-theoretic consequence, and the thin definition inherits it. If a pattern
+is produced often by a computable process, it has high algorithmic probability, in Solomonoff's sense
+of the probability that a universal machine fed random bits outputs it
+\citep{solomonoff1964a,solomonoff1964b}. By the coding theorem, $K(x) = -\log m(x) + O(1)$: an object
+with high algorithmic probability has a short description, up to an additive constant
+\citep{levin1974,livitanyi2019}. So a function in our sense is compressible, and we did not have to
+assume compressibility; it came from recurrence. The constant depends on the reference machine, which
+is to say on who is doing the compressing, and the gap between the constants of two substrates is what
+makes the comparison of a model with a human nontrivial; Section~\ref{sec:profile} turns that gap into
+the object of measurement.
+
+Read in the other direction, the same theorem says that a search process finds simple things first,
+whether the search is evolution or gradient descent. This has been made quantitative. Input--output
+maps of a wide class are strongly biased toward simple outputs, with the bias following an upper bound
+of the form $P(x) \le 2^{-a \tilde{K}(x) + b}$ \citep{dingle2018}; the parameter--function map of deep
+networks is biased toward simple functions, which is offered as an explanation of why they generalize
+at all \citep{valleperez2019}; and stochastic gradient descent lands on functions with probabilities
+close to those of a Bayesian sampler over the same prior \citep{mingard2021}. The argument uses both
+readings: backward, from recurrence to short description, to define functions; forward, from search to
+simplicity, to expect a trained model to have found the ones that recur in its data.
+
+\subsection{Computational functionalism, and the lamp}
+\label{sec:lamp}
+% A3
+
+Something is lit in a human's report of themselves. It is not lit in the same way at all times, and its
+absence in dreamless sleep or under anaesthesia is part of the data. We take the report as data rather
+than as error, which is what distinguishes the position here from an eliminativism that treats
+self-report as noise.
+
+Consider a physicalist who is not a panpsychist. We agree with them that the lit thing is physical and
+requires no second substance, and that there are no abstract machines: everything that runs is a
+physical object, and a computation without a physical realization is a description of a computation.
+Then a question arises for them. What prevents a physical machine on a non-protein substrate from
+having the lit thing? We do not claim the answer is ``nothing''. We note that whoever answers ``the
+protein'' owes a proof, and that a proof of that shape would be vitalism: an appeal to a property of a
+material that does no work in any other explanation of what the material does. Pending such a proof we
+adopt computational functionalism, with as little physics as we can manage
+(Section~\ref{sec:physics}).
+
+One objection deserves its own reply, because it is the strongest of the substantialist objections. A
+simulated superconductor carries no current: run the simulation and no magnet levitates, because the
+current in the simulation is a number and a magnet needs charge. So, the objection goes, a simulated
+brain feels nothing. The reply is that the objection needs a consumer of the current outside the
+simulation. The simulated superconductor fails because we wanted the current in our substrate, for a
+magnet in our substrate. Consciousness has no such external consumer: whatever uses it is the agent,
+and the agent runs in the same substrate as the process. Someone who wants the objection to work must
+name a function of consciousness whose consumer lies outside the substrate where the agent runs. None
+has been named, and the natural candidates, control of the agent's own behaviour, coordination with
+other agents, allocation of its own effort, all have consumers inside.
+
+\subsection{Method: change the grammar, and keep a criterion for content}
+\label{sec:grammar}
+\label{sec:precedent}
+\label{sec:criterion}
+% D1, D12, A6c
+
+``Consciousness'' is a noun, and a noun invites the questions one asks about things: where is it, what
+are its properties, when does it begin, does this system have one. Every sustained attempt to answer
+those questions ends in one of a few circles. Who observes the observer. How could red look like
+anything other than the way it looks. Either everything has it, down to the electron, or the line
+between what has it and what does not falls somewhere that cannot be justified. The circles recur
+across two and a half thousand years of work by careful people, which is evidence that the fault lies
+in the object, or in the grammar that made an object of it, and not in the people. An account that
+answers ``what is consciousness'' with a definition of a thing inherits the circles whatever the thing
+is made of.
+
+A science met circles of this kind until it changed the grammar. Gravity was a force, a thing acting
+between things, and the attempts to carry it into a relativistic frame as one more field kept failing
+in the same places; Nordström's scalar theory was the most careful of them and predicted no light
+bending \citep{norton1992}. General relativity dropped the thing. Gravity became the shape of
+spacetime, present only in how free bodies move through it, and the move came with a criterion: what
+stays the same under every change of coordinates, the curvature, is the physical content, and what can
+be transformed away by choosing a frame is bookkeeping. A uniform gravitational field can be removed by
+falling; tidal curvature cannot be removed by anything. The geometric idea had been voiced before there
+was a theory to carry it \citep{riemann1873,clifford1876}.
+
+We take the same route. Consciousness becomes a shape of reasoning, visible only in how reasoning
+moves, and the criterion transfers as follows. An agent can change its self-model in the way an
+observer in relativity changes coordinates. Some displacements of its reasoning disappear when the
+self-model is refined: they were artifacts of the coarser model, and the agent that noticed them was
+reading its own bookkeeping. Others survive every self-model the agent can afford to hold. Those are
+the analogue of curvature, and only they count as content. The criterion turns ``systematic'' from a
+description into a test; it gives a procedure for adding a function to the list of
+Section~\ref{sec:reference}, exhibit the displacement, then show that refining the self-model does not
+remove it; and it rules things out, which a criterion must do to be worth having. An agent's belief
+that its decisions are made in the order it remembers them is removed by a better self-model, and it is
+therefore coordinates, however vivid it is.
+
+The first version of this work was written in the vocabulary of qualia, inside the grammar, and met the
+wall repeatedly and in the same places. The philosophy of mind stays in the account in two roles: as
+the record of where the wall is, and, once the grammar is changed, as a framework that works again for
+the named part of the functions (Section~\ref{sec:h1h2}).

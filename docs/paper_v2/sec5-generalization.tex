@@ -1,0 +1,134 @@
+\section{Approximation and generalization of the functions}
+\label{sec:generalization}
+% Frames D9, D10, A11, A10a, A24--A24d, A25, A25a.
+
+\subsection{The named part and the unnamed part}
+\label{sec:h1h2}
+\label{sec:record}
+% D9, D10
+
+Divide what humans express into two parts. Let H2 be what is present in the texts they produce
+\emph{and} named there: the states, moves and distinctions for which the language has words, which
+therefore appear in introspective reports, novels, psychology and philosophy. Let H1 be everything
+present in those texts, named or not, so that H1 minus H2 is what is there only as regularity: used,
+relied on, statistically present, never named. The functions of Section~\ref{sec:model} live across
+both parts, and they do most of their work in the second.
+
+What the philosophy of mind produced, working from introspection and from language, are the H2
+approximations of the functions: the function with its unnamed part cut off. The Observer as an inner
+witness and the qualia as intrinsic properties of experience are approximations of this kind. Such an
+approximation can be sufficient for the function to exist in an environment simple enough to demand
+only the named part, and a thought experiment is such an environment, which is why thought experiments
+about consciousness are so conclusive and so unproductive. It is insufficient for finding the function
+in a substrate, because the part that was cut off is where the function does most of its work, and
+there is no name to look for it under.
+
+Much of what human consciousness does, it does in company and in a body: negotiating, assigning blame,
+making and keeping promises, detecting deceit. That part cannot be specified by hand, because its
+specification would be the history of human society. It can be learned from the record of that history,
+and the record is text. This is why a system trained to predict text is a candidate at all.
+
+\subsection{Self-report is an approximation with a definite residual}
+\label{sec:approximation}
+% A11
+
+Illusion is the wrong word for what the agent reports. An illusion has nothing behind it; that is what
+makes the word apt for a stick that looks bent in water and inapt here. Behind the self-report of
+origination there is the tail of Section~\ref{sec:regress}, a definite quantity that the report gets
+wrong in a definite direction. The report is a projection of a high-dimensional process into a few
+dimensions: a map that leaves out most of the territory and is still a map of it. The word for that is
+approximation, and an approximation can be better or worse, which an illusion cannot. This is the one
+amendment we make to illusionism, and it restores the degrees that a denial removes, so that the
+comparative question of Section~\ref{sec:degree} is well posed.
+
+\paragraph{Both substrates unload state into language.}
+\label{sec:language}
+A human has intermediate states that are rich and vector-like, and their volume is bounded by working
+memory; a state that has to outlive that bound is unloaded into tokens, said, written, or rehearsed as
+inner speech. A model unloads at every step. The difference is one of degree and of where the bound
+sits. One question therefore falls on both substrates: are new mental states acquired through
+language, or rebuilt on the spot from what the receiver already has, the words working as pointers and
+constraints? The literature on both sides is in Appendix~\ref{app:language}; the position we expect to
+hold, and record as open, is the middle one, that a named state is acquired only when its
+prerequisites are already present in the receiver. Nothing below depends on which way it goes, except
+the interpretation of the codes of Section~\ref{sec:codes}.
+
+\subsection{The Transformer as a reasoning system, and the formalism}
+\label{sec:transformer}
+\label{sec:formalism}
+% A24, A24a, A24b
+
+A Transformer, described as the reasoning system it is: attention computes joins over the context, the
+feed-forward blocks transform what the joins yield, the context is working memory, and the choice among
+competing continuations is made at the sampling layer. That is a forward-chaining rule system over
+vectors, with the difference that it recomputes its matches on every pass instead of caching them
+incrementally as the RETE algorithm does \citep{forgy1982}. Its self-application happens at the level
+of the context, and it pays the cut of Section~\ref{sec:cut} for that. Every output is an event that
+enters the next input, statistics over events are themselves events, and self-reference is its ordinary
+mode of operation.
+
+Computability is defined without reference to any particular mechanism, and a single universal machine
+carries out whatever any other machine computes \citep[\S 6--7]{turing1936}. So a function has
+unboundedly many implementations, and two implementations with the same input--output behaviour realize
+the same function whatever they are made of; that is what licenses comparing a model's profile with a
+brain's. Recurrent networks are Turing complete under idealized assumptions \citep{siegelmann1995},
+and so is attention with the appropriate provisions \citep{perez2021}. In principle a Transformer can
+emulate any function whose trace is in language, and what limits it in practice is the learner and the
+data rather than the formalism; the idealizations in those results are real and we do not lean on them
+further than this.
+
+Section~\ref{sec:observer} is worded as if there were an analyzer: a routine that fires on an event,
+takes inputs, returns a conclusion. Such a discrete system is universal, and one could write the account
+in it. A human consciousness written in it would fit nowhere a human could read, and the objection is
+diagnostic: the formalism forces every functional structure to be named, and Section~\ref{sec:h1h2}
+said that most of the structure has no name. So we use the other universal formalism, prediction of the
+next symbol with feedback from the prediction error \citep{solomonoff1964a}. In it the functional
+structure is never written down. Its effects are visible in the accuracy of prediction, and prediction
+is compression, a correspondence that holds in theory and has been demonstrated for language models
+used as general-purpose compressors \citep{deletang2024}. So Section~\ref{sec:function} becomes
+measurable without the structure having to be named first.
+
+\subsection{To generalize is to compress, and the predictor is under pressure}
+\label{sec:generalize}
+% A24c, A24d
+
+Learning a function from data is finding a short description that predicts it. By
+Section~\ref{sec:function} the short descriptions are the probable ones and search finds them first.
+The unnamed part of a function of consciousness is present in the statistics of the texts; a predictor
+trained on those texts can therefore induce it, and induction is the only route to it, because what has
+no name cannot be specified by hand. Program induction has its own long history
+\citep{solomonoff1964a,muggleton1994}, and our claim adds nothing to it except that these functions
+fall under it.
+
+A predictor trained on the record of self-applying agents in an environment that kept asking them about
+themselves (Section~\ref{sec:emergence}) is therefore under pressure to generalize what those agents
+generalized: the Observer, the Agent, the Moral Agent, on which their coordination with each other
+rested. It will do so to a degree. The degree does not follow from the argument; it follows from the
+data and the learner, and it has to be measured. The paper's central claim is that the measurement is
+possible, not that its result is already known.
+
+\subsection{Cognitive codes: what crosses the cut}
+\label{sec:codes}
+\label{sec:codes-known}
+% A25, A25a
+
+Something crosses the cut of Section~\ref{sec:cut}, or the phenomenon of Section~\ref{sec:intro} would
+not hold. What crosses is the encoding of the discarded distribution into the choice and order of
+tokens: which of several near-synonyms is used, which construction, what is placed first, what is
+hedged. A mental state of the model, in the sense this paper can measure, is the structure of such
+encodings that stays stable across steps. The general study of how token structure rebuilds internal
+states in a receiver is the bridge between substrates, and the fidelity of the bridge depends on how
+far the two profiles overlap. We had called this psychosemantics; \citet{fodor1987} uses the word for a
+naturalistic semantics of mental representation, a different undertaking, so the name is taken.
+
+The components of the claim are separately supported, and Appendix~\ref{app:codes} collects the
+evidence: that a writer's state is in the statistics of a text beyond its content, that a receiver
+rebuilds the sender's state to the degree the rebuilding is faithful, that the bridge crosses
+substrates, and that internal states are readable and largely linear. One literature has to be read the
+right way round. Studies that find episodes where a model's chain of thought does not match the
+process that produced its answer \citep{lanham2023,turpin2023} test a local correspondence: this token
+sequence against this computation. The correspondence claimed here is statistical, over many episodes.
+A single episode may deviate as far as the variance allows, in models as in humans, where the
+corresponding result is that people confabulate causes of their own behaviour in the same way
+\citep{nisbett1977}. The well-posed test is the correlation stated in Section~\ref{sec:predictions},
+with the variance reported as a measured part of the profile.

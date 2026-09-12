@@ -6,10 +6,10 @@
 - `SOURCES.md` — every citation with the claim it has to support and its verification status.
 - `verification/` — per-batch tasks for the source verification.
 - `sources/` — obtained copies of sources (not committed; see `.gitignore`).
-- `main.tex` — preamble, title, abstract; the sections are separate files:
-  `sec-phenomenon.tex` (frames P), `sec-difficulties.tex` (D), `sec-approach.tex` (A),
-  `sec-measurement.tex` (S). Frame ids are kept in comments next to the subsections they come from.
+- `main.tex` — preamble, title, abstract; the sections are separate files, one per part of the reduction:
+  introduction, background, functional account, the Synthea model (HOCP), approximation and generalization,
+  the attainable degree in Transformers, discussion, conclusion. Frame ids are kept in comments.
 - `refs.bib` — the bibliography, keyed by surname and year.
 
 Build: `tectonic -X compile main.tex` (tectonic 0.17 in `~/.local/bin`, no system TeX needed).
-Current draft: 34 pages, 93 references, 87 of them verified against the source (see `SOURCES.md`); three TikZ figures and one table; two literature sections in an appendix (`sec-appendix.tex`).
+Current draft: 29 pages, 93 references, 87 of them verified against the source (see `SOURCES.md`); eight section files `sec1-intro.tex` … `sec8-conclusion.tex` plus `sec-appendix.tex`.

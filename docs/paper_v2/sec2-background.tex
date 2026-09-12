@@ -1,0 +1,79 @@
+\section{Background}
+\label{sec:background}
+% Frames D2, D3, D6 (positions); A6a (antecedents); the applied turn; tools.
+
+\subsection{Positions in the philosophy of mind}
+\label{sec:legacy}
+
+\citet{chalmers1995} separates the easy problems, which ask how a system discriminates, integrates,
+reports and controls, from the hard problem, which asks why any of that is accompanied by experience;
+the hard problem is the modern form of Nagel's residue. Illusionism replies that experience as the hard
+problem conceives it does not exist, and that what exists is a robust misrepresentation the brain
+produces of its own working, so that the hard problem gives way to the illusion problem: why the
+misrepresentation has the shape it has \citep{dennett1991,frankish2016}. Higher-order theories locate
+consciousness in representations of one's own mental states and have accumulated empirical support of
+their own \citep{rosenthal2005,lau2011}; they are then asked why a thought about a state should make
+the state conscious, and an account in which the mind observes its own states owes an account of what
+observes that \citep{ryle1949,dennett1991}. The self-model theory makes the self a transparent model
+the system cannot recognize as a model \citep{metzinger2003}; the attention schema theory makes
+awareness the brain's simplified model of its own attention \citep{graziano2011,graziano2013}.
+Integrated information theory ties experience to a substrate's cause--effect structure directly and
+therefore has something definite to say about a substrate unlike ours \citep{tononi2015}.
+
+This paper is closest to illusionism and to the self-model theories. From illusionism it takes the
+exchange of the hard problem for the illusion problem, and amends one word: the self-report is an
+approximation with a definite residual, not an illusion with nothing behind it
+(Section~\ref{sec:approximation}), because a denial is a poor instrument for a comparative question.
+From the self-model theories it takes the transparent self-model and adds the mechanism that produces
+it and a quantity that says how much of it a substrate has (Section~\ref{sec:contribution}). To the
+regress it gives an answer that involves no observer (Section~\ref{sec:regress}).
+
+\subsection{The question put to actual models}
+
+\citet{chalmers2023} runs the question for current language models by listing what a conscious system
+might require and asking whether these models have it: senses and embodiment, world models and self
+models, recurrent processing, a global workspace, unified agency. He finds each requirement disputable
+and each currently unmet or unclear, and arrives at a credence under ten percent that current models
+are conscious, with the expectation that successors will remove the obstacles one by one.
+\citet{butlin2023} adopt computational functionalism as a working assumption, take the leading
+neuroscientific theories, recurrent processing theory, global workspace theory, computational
+higher-order theories, attention schema theory, predictive processing, and the claims about agency and
+embodiment, derive from them a list of indicator properties stated in computational terms, and assess
+systems against the list.
+
+We share the working assumption and the analytic stance of both papers, and differ in the form of the
+answer. Both treat the question as a checklist of properties, with the result a credence or a count of
+indicators met. We treat it as a quantity per function, obtained by measurement, in which a model can
+fall below the human baseline, match it, or exceed it, and we derive the functions to be measured from
+a single mechanism rather than from a survey of theories. A checklist asks which parts of the thing are
+present; a measurement of degree asks how much of a function was captured, and can be wrong by a
+number.
+
+\subsection{Antecedents of the mechanism}
+\label{sec:antecedents}
+% A6a
+
+Each part of the mechanism in Section~\ref{sec:model} exists in the literature, and saying where is the
+way to locate what is new. That a bounded computation deforms reasoning in a systematic direction
+rather than at random is Simon's bounded rationality \citep{simon1955}, in its modern form the claim
+that the classic cognitive biases are what the optimal use of a limited budget looks like
+\citep{lieder2020,griffiths2015}. That a bounded observer sees a lawful world because of its bounds is
+the core of Wolfram's observer theory: an observer that cannot track microstates has to coarse-grain
+them, and the second law of thermodynamics is what such an observer sees in a dynamics that is
+reversible underneath \citep{wolfram2023}; we take this example and not the programme of deriving
+relativity and quantum mechanics from observer properties \citep{wolfram2020}. That a simplified model
+of one's own processing, which the system cannot see past and therefore takes for reality, is what the
+system reports as its self, is Metzinger's phenomenal transparency, Graziano's attention schema and
+Dennett's user illusion. That the constraints on a computation can be the body of that computation
+rather than an external limitation on it is the frame of embodied and enacted cognition
+\citep{varela1991}.
+
+\subsection{Tools}
+
+The measurement of Section~\ref{sec:degree} uses instruments that exist. Probing classifiers read
+properties from intermediate representations \citep{alain2016}; their methodological problems are
+catalogued \citep{belinkov2022}; the minimum-description-length form scores a probe by the total cost
+of describing the labels given the representations, which charges for the probe's own complexity
+\citep{voita2020}. What is known about how a Transformer distributes its work across depth is reviewed
+where it is used (Section~\ref{sec:depth}), and the evidence that a text carries its writer's state and
+that a reader rebuilds it is collected in Appendix~\ref{app:codes}.
