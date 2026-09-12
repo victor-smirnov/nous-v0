@@ -36,6 +36,9 @@ search inside scanned books. Four claims were corrected against what the sources
 | apa2013 | the diagnostic definitions: derealization as unreality or detachment with respect to surroundings; depersonalization with respect to one's own thoughts, feelings, body or actions | verified (search inside) | Open Library full-text search of the Desk Reference to the Diagnostic Criteria from DSM-5: "Derealization: Experiences of unreality or detachment with respect to surroundings" |
 | spiegel2011 | derealization symptoms included in depersonalization disorder in DSM-5, i.e. the two classified together | verified (abstract) | PMID 22134959; spiegel2011.abstract.txt |
 | liu2025 | incremental computation as a systematic transformation of batch computation: the result maintained under input changes | verified | §2 three categories of studies, §3 essence of incremental computation; liu2025.pdf |
+| friston2010 | the brain as minimization of prediction error under the free-energy principle | verified (abstract) | PMID 20068583; friston2010.abstract.txt |
+| clark2013 | hierarchical generative models matching input with top-down predictions, minimizing prediction error | verified (abstract) | PMID 23663408; clark2013.abstract.txt |
+| blakemore1998 | a self-produced (predicted) tactile stimulus is perceived as less than the same stimulus produced externally | verified (abstract) | PMID 10196573; blakemore1998.abstract.txt |
 | dennett1991 | user illusion; the regress objection; self-report as misrepresentation | verified (search inside) | "the benign user illusion of its own", Consciousness Explained, located by full-text search of the scanned edition on Open Library |
 | ryle1949 | the regress objection against inner observation | verified (search inside) | "Their theory was a para-mechanical hypothesis", The Concept of Mind, ch. I; Open Library full-text search |
 | rosenthal2005 | higher-order thought structure; a frame as a thought within a previous one | substitute, read | "differing in how we are conscious of our conscious states"; rosenthal2009.pdf (Oxford Handbook chapter) |
@@ -125,7 +128,7 @@ search inside scanned books. Four claims were corrected against what the sources
 | goldstein2022 | shared computational principles between humans and deep language models | verified | abstract: three shared principles, including continuous next-word prediction before word onset; goldstein2022.pdf |
 | caucheteux2022 | brains and algorithms partially converge | verified | abstract: language algorithms partially converge toward brain-like representations; caucheteux2022.pdf |
 
-Counts: 108 keys. 102 verified (52 against the full text, 6 against the PubMed abstract, 8 by full-text search
+Counts: 111 keys. 105 verified (52 against the full text, 6 against the PubMed abstract, 8 by full-text search
 inside the scanned book, 1 by metadata, 1 secondary), 2 substitutes that were read, 4 obtained without a
 locus (Ayer, Perky, Solomonoff I, Muggleton), 2 without any copy (Gardner 1983, Clark 1998).
 

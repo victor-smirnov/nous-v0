@@ -1,0 +1,5 @@
+PMID 10196573
+Central cancellation of self-produced tickle sensation.
+Nature neuroscience 1998 1 635-40
+
+A self-produced tactile stimulus is perceived as less ticklish than the same stimulus generated externally. We used fMRI to examine neural responses when subjects experienced a tactile stimulus that was either self-produced or externally produced. More activity was found in somatosensory cortex when the stimulus was externally produced. In the cerebellum, less activity was associated with a movement that generated a tactile stimulus than with a movement that did not. This difference suggests that the cerebellum is involved in predicting the specific sensory consequences of movements, providing the signal that is used to cancel the sensory response to self-generated stimulation.
