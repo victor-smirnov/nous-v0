@@ -27,6 +27,10 @@ search inside scanned books. Four claims were corrected against what the sources
 | jonze2013 | the same on the romantic plane | verified (metadata) | the film itself; cited as a work |
 | dean1988 | anytime algorithms: an approximate result at any stopping point, quality a function of the time allowed | verified | AAAI-88 proceedings copy, the section introducing anytime algorithms; dean1988.pdf |
 | zilberstein1996 | anytime algorithms: quality of results improves gradually with computation time; performance profiles | verified | abstract and §1: "quality of results improves gradually as computation time increases"; the term coined by Dean and Boddy; zilberstein1996.pdf |
+| li2023 | a sequence model's activations carry the board state and can be edited to change its play | verified | abstract: "internal representation of the board state", interventional experiments; li2023.pdf |
+| gurnee2024 | linear representations of space and time in large models | verified | abstract: linear representations across multiple scales, space and time neurons; gurnee2024.pdf |
+| merker2007 | the upper brainstem system is not rendered nonfunctional by the absence of cortex; cortex as the medium for conscious contents | verified (abstract) | PMID 17475053; merker2007.abstract.txt |
+| feuillet2007 | a man with massive hydrocephalus and a thin cortical rim leading a normal life | verified (metadata) | PMID 17658396, Lancet case report with images, no abstract |
 | dennett1991 | user illusion; the regress objection; self-report as misrepresentation | verified (search inside) | "the benign user illusion of its own", Consciousness Explained, located by full-text search of the scanned edition on Open Library |
 | ryle1949 | the regress objection against inner observation | verified (search inside) | "Their theory was a para-mechanical hypothesis", The Concept of Mind, ch. I; Open Library full-text search |
 | rosenthal2005 | higher-order thought structure; a frame as a thought within a previous one | substitute, read | "differing in how we are conscious of our conscious states"; rosenthal2009.pdf (Oxford Handbook chapter) |
@@ -116,7 +120,7 @@ search inside scanned books. Four claims were corrected against what the sources
 | goldstein2022 | shared computational principles between humans and deep language models | verified | abstract: three shared principles, including continuous next-word prediction before word onset; goldstein2022.pdf |
 | caucheteux2022 | brains and algorithms partially converge | verified | abstract: language algorithms partially converge toward brain-like representations; caucheteux2022.pdf |
 
-Counts: 99 keys. 93 verified (52 against the full text, 6 against the PubMed abstract, 8 by full-text search
+Counts: 103 keys. 97 verified (52 against the full text, 6 against the PubMed abstract, 8 by full-text search
 inside the scanned book, 1 by metadata, 1 secondary), 2 substitutes that were read, 4 obtained without a
 locus (Ayer, Perky, Solomonoff I, Muggleton), 2 without any copy (Gardner 1983, Clark 1998).
 
