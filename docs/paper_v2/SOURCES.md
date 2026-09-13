@@ -40,6 +40,11 @@ search inside scanned books. Four claims were corrected against what the sources
 | clark2013 | hierarchical generative models matching input with top-down predictions, minimizing prediction error | verified (abstract) | PMID 23663408; clark2013.abstract.txt |
 | blakemore1998 | a self-produced (predicted) tactile stimulus is perceived as less than the same stimulus produced externally | verified (abstract) | PMID 10196573; blakemore1998.abstract.txt |
 | vanroojen2023 | the cognitivism / non-cognitivism distinction; emotivism as a non-cognitivist variant | verified | SEP entry, revised Dec 2023, opening and the emotivism section; vanroojen-sep.html |
+| gallagher2000 | minimal self (no temporal extension) vs narrative self (identity and continuity across time) | verified (abstract) | PMID 10637618; gallagher2000.abstract.txt |
+| haggard2017 | sense of agency as the experience of controlling one's own actions, produced by specific brain mechanisms | verified (abstract) | PMID 28251993; haggard2017.abstract.txt |
+| haidt2001 | moral judgment reached first, moral reasoning a post hoc construction | verified (abstract) | PMID 11699120; haidt2001.abstract.txt |
+| hart1961 | law as the union of primary and secondary rules | verified (search inside) | Open Library full-text search of The Concept of Law: chapter V "Law as the Union of Primary and Secondary Rules" |
+| dostoevsky1866 | the novel cited as the specimen of Appendix C; the horse dream is Part 1, Chapter 5 | verified (metadata) | public-domain text; the quotations are the standard ones |
 | dennett1991 | user illusion; the regress objection; self-report as misrepresentation | verified (search inside) | "the benign user illusion of its own", Consciousness Explained, located by full-text search of the scanned edition on Open Library |
 | ryle1949 | the regress objection against inner observation | verified (search inside) | "Their theory was a para-mechanical hypothesis", The Concept of Mind, ch. I; Open Library full-text search |
 | rosenthal2005 | higher-order thought structure; a frame as a thought within a previous one | substitute, read | "differing in how we are conscious of our conscious states"; rosenthal2009.pdf (Oxford Handbook chapter) |
@@ -130,7 +135,7 @@ search inside scanned books. Four claims were corrected against what the sources
 | goldstein2022 | shared computational principles between humans and deep language models | verified | abstract: three shared principles, including continuous next-word prediction before word onset; goldstein2022.pdf |
 | caucheteux2022 | brains and algorithms partially converge | verified | abstract: language algorithms partially converge toward brain-like representations; caucheteux2022.pdf |
 
-Counts: 113 keys. 108 verified (52 against the full text, 6 against the PubMed abstract, 8 by full-text search
+Counts: 118 keys. 113 verified (52 against the full text, 6 against the PubMed abstract, 8 by full-text search
 inside the scanned book, 1 by metadata, 1 secondary), 2 substitutes that were read, 3 obtained without a
 locus (Ayer, Solomonoff I, Muggleton), 2 without any copy (Gardner 1983, Clark 1998).
 
