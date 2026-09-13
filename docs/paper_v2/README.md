@@ -4,7 +4,8 @@
 - `frames.md` — the argument in frames (iteration 2); the text of the paper is written from it.
 - `argument.hybrid.md` — the same claims as Gellish facts, checked by the reasoner (`nous gellish check`).
 - `SOURCES.md` — every citation with the claim it has to support and its verification status.
-- `verification/` — per-batch tasks for the source verification.
+- `verification/` — per-batch tasks for the source verification; `remaining.md` lists what is left.
+- `removed-for-ka-paper.tex` — paragraphs cut from Section 4.8 (need, emotion, consolidation, the Field), material for the separate paper on the cognitive architecture.
 - `sources/` — obtained copies of sources (not committed; see `.gitignore`).
 - `main.tex` — preamble, title, abstract; the sections are separate files, one per part of the reduction:
   introduction, background, functional account, the Synthea framework (computational curvature), approximation and generalization,
