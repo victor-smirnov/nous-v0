@@ -8,9 +8,9 @@
 - `removed-for-ka-paper.tex` — paragraphs cut from Section 4.8 (need, emotion, consolidation, the Field), material for the separate paper on the cognitive architecture.
 - `sources/` — obtained copies of sources (not committed; see `.gitignore`).
 - `main.tex` — preamble, title, abstract; the sections are separate files, one per part of the reduction:
-  introduction, background, functional account, the Synthea framework (computational curvature), approximation and generalization,
-  the attainable degree in Transformers, discussion, conclusion. Frame ids are kept in comments.
+  introduction, background, functional account, the Synthea framework (computational curvature),
+  generalization of the functions in Transformers (the learner, the machine, the frame, localization, the mechanisms of generalization, the profile, falsification), discussion, conclusion. Frame ids are kept in comments.
 - `refs.bib` — the bibliography, keyed by surname and year.
 
 Build: `tectonic -X compile main.tex` (tectonic 0.17 in `~/.local/bin`, no system TeX needed).
-Current draft: 29 pages, 93 references, 87 of them verified against the source (see `SOURCES.md`); eight section files `sec1-intro.tex` … `sec8-conclusion.tex` plus `sec-appendix.tex`.
+Current draft: 29 pages, 93 references, 87 of them verified against the source (see `SOURCES.md`); seven section files `sec1-intro.tex` … `sec8-conclusion.tex` (no sec6) plus `sec-appendix.tex`.

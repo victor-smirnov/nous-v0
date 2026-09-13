@@ -1,0 +1,451 @@
+\section{Generalization of the functions in Transformers}
+\label{sec:degree}
+\label{sec:generalization}
+\label{sec:measurement}
+% Old sections 5 and 6, rewritten around ten points: the learner, the machine, the frame, localization,
+% the mechanisms of generalization, the profile, falsification. Frames D9, D10, A10a, A24--A25a, S0--S7a.
+
+This section specifies a measurement and does not perform one. It is not an explanation of how a
+Transformer works; it states what a Transformer is for the purposes of the account, where in it the
+functions of Section~\ref{sec:model} could be, and how the degree to which they have been generalized
+is to be measured. The experiments are left to the independent work the introduction names.
+
+\subsection{The learner: a Turing-complete approximator programmed by learning}
+\label{sec:transformer}
+\label{sec:formalism}
+\label{sec:generalize}
+\label{sec:h1h2}
+\label{sec:record}
+% A24a, A24b, A24c, A24d, D9, D10
+
+Three facts about the learner carry the argument. First, a Transformer is a universal approximator of
+functions encoded in symbol sequences, in language in the wide sense. Computability is defined
+without reference to any particular mechanism, and a single universal machine carries out whatever any
+other machine computes \citep[\S 6--7]{turing1936}, so a function has unboundedly many
+implementations and two implementations with the same input--output behaviour realize the same
+function whatever they are made of; that is what licenses comparing a model's profile with a brain's.
+Recurrent networks are Turing complete under idealized assumptions \citep{siegelmann1995}, and so is
+attention with the appropriate provisions \citep{perez2021}. In principle, therefore, a Transformer can
+realize any function whose trace is in language.
+
+Second, it is programmed by learning. The weights are not written; they are found by gradient descent
+on the task of predicting the next symbol, and that formalism, prediction of the next symbol with
+feedback from the error, is the other universal one \citep{solomonoff1964a}: in it the functional
+structure is never written down, its effects are visible in the accuracy of prediction, and prediction
+is compression, a correspondence that holds in theory and has been demonstrated for language models
+used as general-purpose compressors \citep{deletang2024}. Learning a function from data is finding a
+short description that predicts it, and by Section~\ref{sec:function} the short descriptions are the
+probable ones and search finds them first. Program induction has its own history
+\citep{solomonoff1964a,muggleton1994}; the claim here is only that the functions of
+Section~\ref{sec:model} fall under it.
+
+Third, not all of the Turing completeness is reachable by the learner. What limits a trained model is
+the learner and the data, not the formalism: the idealizations in the completeness results are real,
+gradient descent reaches the functions it is biased toward (Section~\ref{sec:function}), and there are
+functions, exact arithmetic among them, that it reaches only approximately (Section~\ref{sec:memorization}).
+Against that limit stands the record: the practical demonstration that a wide class of complex human
+cognitive functions is induced from text, from multi-step reasoning elicited by asking for the
+intermediate steps \citep{wei2022} to internal states that predict human brain responses to the same
+text \citep{schrimpf2021,goldstein2022,caucheteux2022}, and, in the sense of Section~\ref{sec:intro},
+the sustained coherence of a long exchange.
+
+\paragraph{Why text suffices.}
+Divide what humans express into two parts. Let H2 be what is present in the texts they produce
+\emph{and} named there: the states, moves and distinctions for which the language has words. Let H1 be
+everything present in those texts, named or not, so that H1 minus H2 is what is there only as
+regularity: used, relied on, statistically present, never named. The functions of
+Section~\ref{sec:model} live across both parts and do most of their work in the second; what the
+philosophy of mind produced, working from introspection, are the H2 approximations, the function with
+its unnamed part cut off, sufficient for a thought experiment and insufficient for finding the function
+in a substrate, because there is no name to look for it under. Much of what human consciousness does,
+it does in company and in a body, negotiating, assigning blame, keeping promises, and that part cannot
+be specified by hand, since its specification would be the history of human society; it can be learned
+from the record of that history, and the record is text. The unnamed part is in the statistics of the
+texts, a predictor trained on them can induce it, and induction is the only route to it. A predictor
+trained on the record of self-applying agents in an environment that kept asking them about themselves
+(Section~\ref{sec:emergence}) is therefore under pressure to generalize what those agents generalized:
+the Observer, the Agent, the Moral Agent. It will do so to a degree. The degree does not follow from
+the argument; it follows from the data and the learner, and it has to be measured.
+
+\subsection{The machine: a vectorized rule system, event-driven, online, incremental}
+\label{sec:machine}
+\label{sec:language}
+% A24, A10a
+
+Internally a Transformer is a forward-chaining rule system over vectors: attention computes joins over
+the context, the feed-forward blocks transform what the joins yield, the context is working memory, and
+the choice among competing continuations is made at the sampling layer. It differs from the classical
+form in recomputing its matches on every pass instead of caching them incrementally as the RETE
+algorithm does \citep{forgy1982}, and it agrees with it in being event-driven and online: every output
+is an event that enters the next input, statistics over events are themselves events, and
+self-reference is its ordinary mode of operation. Because it is trained on sequences produced one
+symbol at a time, what it learns are the incremental forms of Section~\ref{sec:incremental}, the
+result maintained from the previous result and the new symbol, which is the form in which the
+functions of Section~\ref{sec:model} run in any substrate.
+
+Its state is bounded by the size of the context. The bound is less severe than it looks, because the
+context is symbolic: a state written in symbols can be summarized, indexed, referred to and composed,
+so that effective state can be built well beyond the window by composition of contexts, as a person
+builds it by notes and speech. Both substrates unload state into language. A human has intermediate
+states that are rich and vector-like, bounded by working memory, and a state that has to outlive the
+bound is unloaded into tokens, said, written or rehearsed as inner speech; a model unloads at every
+step. Whether a state named in language is acquired through the words or rebuilt from what the
+receiver already has is open on both sides, with evidence for acquisition
+\citep{vygotsky1934,clark1998,lupyan2012,frank2008} and for rebuilding
+\citep{barsalou1999,fedorenko2024,mahowald2024}; the position we expect to hold is the middle one, that
+a named state is acquired only when its prerequisites are already present in the receiver, and nothing
+below depends on which way it goes.
+
+The difference from a human is elsewhere. A Transformer has no vectorized internal state that persists
+across tokens. Such a state exists, the residual stream and the activations of the layers, but it
+lives below the token: it is built up within one forward pass and, apart from what the tokens carry,
+discarded at the sampling step (Section~\ref{sec:cut}). Everything the model can hold as a state of
+consciousness across time is therefore in the context, and it is there in symbolic form, accessible
+to inspection in a way no human state is. That is the main structural difference between the
+substrates, and the measurement below is built around it.
+
+\subsection{The frame: one token, and what lies below it}
+\label{sec:frame}
+\label{sec:codes}
+\label{sec:codes-known}
+\label{sec:granularity}
+% A25, A25a, S3--S3d, D13
+
+That a model has an experience in the sense of Section~\ref{sec:definition} is not read from its
+architecture. It is imputed, as it is for any other agent, from behavioural correlates: the states that
+Section~\ref{sec:model} defines show in what the agent does and says, and with those there is no
+difficulty, since they are observed at the level of phrases and often of single words. What the
+architecture fixes is the resolution of the time axis on which they are observed. The effective frame
+of a Transformer's consciousness, the unit within which a state is derived and after which it must be
+re-derived, is one token.
+
+\paragraph{What crosses the cut.}
+Something crosses the cut of Section~\ref{sec:cut}, or the coherence of Section~\ref{sec:intro} would
+not hold. What crosses is the encoding of the discarded distribution into the choice and order of
+tokens: which of several near-synonyms, which construction, what is placed first, what is hedged. A
+mental state of the model, in the sense this paper can measure, is the structure of such encodings
+that stays stable across steps; we call these encodings cognitive codes, and the study of how token
+structure rebuilds internal states in a receiver is the bridge between substrates. The components of
+the claim are separately supported. A writer's state is in the statistics of a text beyond its
+content \citep{tausczik2010,pennebaker2011}, and in models in-context learning can be read as
+inference of a latent variable from token statistics \citep{xie2022}; a receiver rebuilds the sender's
+state to the degree the rebuilding is faithful \citep{stephens2010,hasson2012,zwaan1998}; the bridge
+crosses substrates \citep{schrimpf2021,goldstein2022,caucheteux2022}; internal states are readable and
+largely linear \citep{zou2023,park2024}; and models can hide information in generated text
+\citep{roger2023}, which confirms the channel and warns that its content need not be what it locally
+appears. One literature has to be read the right way round. Studies that find episodes where a
+model's chain of thought does not match the process that produced its answer
+\citep{lanham2023,turpin2023} test a local correspondence, this token sequence against this
+computation. The correspondence claimed here is statistical, over many episodes; a single episode may
+deviate as far as the variance allows, in models as in humans, where people confabulate the causes of
+their own behaviour in the same way \citep{nisbett1977}. The well-posed test is the correlation of
+Section~\ref{sec:predictions}, with the variance reported as part of the profile.
+
+\paragraph{Inner speech as the reasoning mode.}
+Part of the human functionality of consciousness has a direct realization in the reasoning mode of
+current models. Inner speech, the rehearsal of a state in words so that it outlives the bound of
+working memory, is what a model does when it is asked to produce its intermediate steps before an
+answer, and the practice measurably improves the answers \citep{wei2022}; the tokens of the chain are
+the model's own unloading of state into language, read back by the model on the next step. The same
+loop can be closed below the token, by feeding the last hidden state back as the next input, which
+keeps several candidate next steps in superposition where a written chain has to commit to one
+\citep{hao2024}; where that is done, part of the inner speech leaves the symbolic record, and the
+frame moves with it.
+
+\paragraph{Below the token: depth as time.}
+\label{sec:depth}
+\label{sec:address}
+\label{sec:depthtime}
+Human frames arrive five to ten times faster than words, so the carriers of a function may also be
+looked for below the token, between layers or in repeated passes through them. They may be there, and
+they need not be: finding nothing below the token means a coarser grain than the brain's, one more
+coordinate of the profile, and on some tasks the coarser grain is the better one, since a frame that
+cannot be interrupted mid-thought cannot be derailed mid-thought either. What is known says that the
+sub-token axis is where generalization happens. Residual connections make each block a small
+correction to a state that is carried forward, and the corrections reduce the loss, so a deep
+residual network performs iterative inference rather than a single mapping \citep{jastrzebski2018}.
+The state at every layer can be read as a prediction, by the logit lens and its tuned version
+\citep{nostalgebraist2020,belrose2023}, and the trajectory has stages that recur across model
+families and sizes, four of them, with the middle ones robust in a way the first and the last are not:
+deleting or swapping middle layers at inference leaves most of the top-1 accuracy in place, while the
+same intervention on the first layers is catastrophic \citep{lad2024}; the older finding that a model
+rediscovers the classical processing pipeline layer by layer is the same fact seen through probes
+\citep{tenney2019}. Intermediate layers carry the representations that transfer best, with the best
+trade between compression and preservation of signal in the middle \citep{skean2025}; in-context
+learning is implemented as optimization steps inside the forward pass \citep{vonoswald2023}; and a
+function generalized from examples in the context has an address in depth, a small set of attention
+heads at middle depth whose averaged activation, added to the residual stream in a fresh context,
+makes the model perform the function without examples \citep{todd2024}. The unit at which a
+Transformer generalizes a function is the layer, and the token is where the layers' work is written
+out.
+
+In a standard model the depth is fixed and spent identically on every token, easy or hard, so there
+is no record of effort. Architectures that iterate a block make depth a variable: Universal
+Transformers introduced the recurrence with a halting mechanism per position \citep{dehghani2019},
+looped Transformers made the parameter-sharing form explicit \citep{giannou2023}, a recurrent-depth
+model at 3.5 billion parameters improves on reasoning benchmarks as it unrolls further at test time
+without producing more tokens, capturing reasoning its authors argue is not easily put into words
+\citep{geiping2025}, such models extrapolate to reasoning depths beyond those seen in training, with
+dynamic recurrence generalizing better than a fixed schedule, and past a point they overthink and
+degrade \citep{kohli2026}, and at a much smaller scale, under a million parameters, recurrence over
+twenty and more steps is stable when only the final step is supervised, intermediate supervision
+teaching shortcuts instead, with accuracy against task complexity showing a frontier from chance to
+near-perfect as the thinking steps grow with the task \citep{chen2026}. For the account this means
+that the sub-token axis can be made as long as a task demands, that a cost record appears where a
+fixed-depth model has none, so that the third component of seeing (Section~\ref{sec:light}) becomes
+measurable, and that overthinking is a displacement of the kind Section~\ref{sec:hocp} predicts,
+produced by the budget and stable across runs. The difference between fixed-depth and variable-depth
+families is the cleanest first measurement available.
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[x=1.7cm, y=0.9cm, arr/.style={-{Latex[length=1.6mm]}}]
+\foreach \t in {1,...,5} {
+  \foreach \l in {1,...,4} { \fill[gray!25] (\t-0.3,\l-0.3) rectangle (\t+0.3,\l+0.3); }
+  \foreach \l in {1,...,3} { \draw[arr, thick] (\t,\l+0.3) -- (\t,\l+0.7); }
+  \node[below, font=\small] at (\t,0.6) {token \t};
+}
+\foreach \l in {1,...,4} { \node[left, font=\small] at (0.6,\l) {layer \l}; }
+\foreach \t in {2,...,5} { \pgfmathtruncatemacro{\p}{\t-1} \draw[arr, gray] (\p+0.3,2) -- (\t-0.3,2); }
+\draw[dashed, thick] (5.6,0.4) -- (5.6,4.6) node[above, font=\small, align=center] {end of\\context};
+\node[font=\small, align=center] at (6.3,2.5) {loss};
+\draw[arr, thick] (0.8,-0.4) -- (5.4,-0.4) node[midway, below, font=\small] {axis the objection sees: tokens, then the edge};
+\draw[arr, thick] (-0.5,0.8) -- (-0.5,4.2) node[midway, above, rotate=90, font=\small] {axis it does not: depth};
+\foreach \l in {1,2,3} { \node[right, font=\scriptsize, gray] at (5.05,\l+0.5) {frame}; }
+\end{tikzpicture}
+\caption{The two time axes of a Transformer. Along tokens, state lives in the context and is lost past
+its edge. Along depth, the residual stream carries state from layer to layer within one token, and the
+increments between layers are the candidate sub-token frames. Grey horizontal arrows: attention reads
+earlier positions.}
+\label{fig:axes}
+\end{figure}
+
+\paragraph{Two time axes, and the objection from frozen weights.}
+\label{sec:twoaxes}
+\label{sec:frozen}
+A model does not learn between sessions, and what it holds in a context is lost when the context ends;
+so, it is objected, it has no inner time, only an eternal present with forgetting.\footnote{The
+objection in this form was put to the author by Marco Baturan in correspondence, 2026.} The description
+is accurate and the conclusion counts two functions as one. Re-deriving a state from frame to frame
+runs in humans on the order of a hundred milliseconds and requires no synaptic change; consolidation
+into long-term memory runs on minutes to hours and does require it \citep{mcgaugh2000}. The two
+dissociate: the patient H.M., after bilateral medial temporal resection, was conscious in real time,
+held a conversation, and accumulated almost nothing \citep{scoville1957,corkin2002}. A model is in a
+comparable position, with the sequence of transformations and without the write, so ``eternal present
+with forgetting'' names a profile with a dropped consolidation axis and a deficit in long-term
+persistence. The objection sees one of the two time axes in Figure~\ref{fig:axes}: along tokens the
+state lives in the context and is lost past its edge; along depth the state is carried in the residual
+stream and the increments are the transformations the objection asks for.
+
+\subsection{The high-level functions are not localized}
+\label{sec:localization}
+% New; point 9.
+
+The functions of Section~\ref{sec:stack}, as Appendix~\ref{app:raskolnikov} shows them at work, are
+not localized at the level of tokens. The Observer is a premise that every question in the text
+stands on, the Agent is a pattern in how origins are attributed across a whole passage, the Moral
+Agent is a conflict between two theories over one decision; none of them is a word, and none is
+carried by one position in a sequence. Local correlates of such functions will therefore be hard to
+find, and the difficulty is the same one neuroscience has with the human case: the neural correlates
+of specific conscious contents lie in a posterior cortical zone of many areas rather than in a single
+structure \citep{koch2016}, and the system that organizes conscious function is not identical with the
+cortex that elaborates its contents \citep{merker2007}; there is no nucleus of consciousness to point
+at.
+
+Mechanistic interpretability, which reverse-engineers a Transformer's computation into components
+\citep{elhage2021}, has found the units at which the machine can be read: attention heads that
+implement in-context learning by copying what followed a previous occurrence \citep{olsson2022},
+interpretable features recovered from activations by dictionary learning, first in a small model
+\citep{bricken2023} and then at production scale \citep{templeton2024}, and the function vectors
+already cited. Those are the right units for reading the machine, and the wrong units for finding a
+function of Section~\ref{sec:model}, because such a function is a composition over many of them
+(Section~\ref{sec:stack}), realized as a distributed structure rather than a module. Searching for a
+local correlate of the Observer is searching for its nucleus, and the account predicts that there is
+none.
+
+\subsection{What to analyze: the mechanisms of generalization}
+\label{sec:quantity}
+\label{sec:measure}
+\label{sec:memorization}
+\label{sec:twomeasurements}
+% D11, S1, S2a, S2b; point 10.
+
+What has to be analyzed directly is the mechanism by which each function has been generalized, and
+the degree to which it has. The quantity, its two checks, and the material the analysis needs are
+stated here.
+
+\paragraph{The quantity.}
+The natural quantity for ``how much of the function was captured'' is description length. Its exact
+form, Kolmogorov complexity, is uncomputable and fixed only up to an additive constant that depends on
+the reference machine \citep{livitanyi2019}; every applied use replaces the shortest program with the
+shortest one a fixed procedure finds, and reports the procedure, and the machine-relativity is
+serious here because the two substrates compared are the two candidate reference machines. What is
+measured is therefore a bounded, machine-relative, probe-relative stand-in, used comparatively. A
+function is present in a substrate to the extent it has been generalized there, and to generalize is
+to compress (Section~\ref{sec:transformer}), so the quantity is the degree of compression of the
+function in the substrate: how much of the function's behaviour a probe of bounded description length
+on the substrate's internal states predicts, against the residual it fails to predict. Made
+operational, this is minimum-description-length probing \citep{voita2020}: the probe is scored by the
+total cost of describing the labels given the representations, which charges for the probe's own
+complexity and so distinguishes a representation that contains the property from one in which a
+sufficiently flexible probe can find anything; linear probes on intermediate layers are the simplest
+instrument of the family \citep{alain2016}, and the methodological problems of probing are catalogued
+\citep{belinkov2022}. The probe is run at each block, in the per-layer form \citet{voita2020} give, so
+that the answer comes as a function of depth: whether the degree rises, plateaus or is absent, at
+what depth the component first appears, and whether it persists across layers with small increments
+or is assembled whole near the output, which decides whether the layer or the token is its frame.
+
+\paragraph{Generalization against memorization.}
+The opposite of generalizing a function is storing the training set as a table from inputs to
+outputs, and the dimension of the representation has nothing to do with which of the two a system is
+doing. Generalization begins where the table is consulted for an input it does not contain and the
+answer is right. A universal predictor always returns an answer for a new input and the answer need
+not be near the truth: context-tree weighting achieves strong coding bounds against a class of tree
+sources \citep{willems1995} and generalizes natural language poorly, because the class it is universal
+over is not the class language belongs to. That Transformers generalize text is settled in practice,
+since degenerate generation is almost never seen and the space of well-formed texts is sparse inside
+the space of token sequences; the open question is how well they generalize the more complex
+functions that text expresses. Arithmetic is the clean case, because the target function is known
+exactly: they do it approximately, with an accuracy that depends on how the numbers are written and
+on how many digits they have, larger models do better, and even a three-billion-parameter model fails
+to extrapolate beyond the digit range it was trained on \citep{nogueira2021}; on compositional tasks
+they approach the answer by shortcut and break down predictably as depth grows \citep{dziri2023}. The
+transition itself has a mechanistic signature: in a model that groks a modular arithmetic task, the
+sudden generalization is the end of three continuous phases, memorization, circuit formation and
+cleanup, in which a generalizing circuit is built and the memorizing components are removed, and
+the phases are visible in the weights before they are visible in the behaviour \citep{nanda2023}.
+That is the kind of signature the analysis is after: for a function of consciousness, the degree of
+generalization is an empirical quantity for that function, taken against the human level, and not a
+corollary of the model's size, and the question in these terms is how well, against the human level,
+Transformers generalize the Observer; then the Agent; then the Moral Agent, in the order the stack
+forces. Appendix~\ref{app:memorization} gives the reason behaviour alone cannot settle it.
+
+\paragraph{Two checks.}
+A function generalized to degree $d$ is computed correctly on part of the situations that call for it;
+outside that part the model falls back on the table and behaves as a system without the function
+would, whatever it says about itself. So the quantity is checked two ways: structurally, by the probe;
+behaviourally, by benchmarks that sample situations calling for a specific component, including
+situations unlikely to be in the training distribution, and record where behaviour is that of a system
+lacking it. The two should converge, and their disagreement is informative. Probe present, benchmark
+absent: the deficit is in the interface, the body or the social context, and not in the function.
+Benchmark present, probe absent: the carrier is at a granularity the probe did not reach, or the
+function is rebuilt from the context on each occasion rather than held in the weights, or the
+benchmark is covered by memorization. The model's own answers are set aside before either check
+starts: asked how it feels, a deployed model reports servers and a good mood or, corrected, that it has
+no feelings, both of which are what training rewarded, the two shortcuts of Section~\ref{sec:intro} in
+the model's own mouth. Self-report is a signal with a known, large, systematic bias, and the state is
+looked for elsewhere.
+
+\paragraph{The material.}
+The analysis needs datasets of the kind Appendix~\ref{app:raskolnikov} illustrates: texts in which the
+functions of Section~\ref{sec:stack} operate without being named, annotated by which level is operative
+where, on which evidence, and in what composition. The annotation follows the appendix: for the
+Observer, the places where a self-directed question is treated as open; for the Agent, the places
+where an origin is attributed to the speaker and the determinants visible to the reader are not to the
+speaker; for the Moral Agent, the places where two theories of the common good evaluate one act. On
+such material the weights are analyzed as the static side, by probing and by the circuit-level methods
+of Section~\ref{sec:localization}, and the activations as the dynamic side, along tokens and along
+depth, with the incremental form of each function (Section~\ref{sec:incremental}) as the target: a
+component present in every frame and re-derived there, part of the agent's description of itself and
+not only of its computation, and surviving every self-model the agent can afford
+(Section~\ref{sec:criterion}), so that whatever a change of frame removes does not count, however
+reliably a probe recovers it. How the generalization of such functions is to be analyzed in detail is
+not settled here; the references of this section are the current state of the tools.
+
+\paragraph{The human baseline.}
+\label{sec:baseline}
+The human side of the comparison is obtained by two routes, and the analysis is explicit about which
+applies to which component. The behavioural route administers the same situation battery to people
+and reads the degree of each component from behaviour; for components defined by what the agent does
+this is the primary route, and for every component it is the one available now. The structural route
+poses the probe of bounded description length on neural recordings, with the same coding cost as on
+the model, where recordings at the relevant resolution exist; that a common representational space
+between the two substrates is available at all is shown by the results that model states predict
+human brain responses to the same text \citep{schrimpf2021,goldstein2022,caucheteux2022}, and the
+resolution of human recordings, not the existence of the space, is what limits this route. Human
+self-report is not the baseline, since it carries the bias of Section~\ref{sec:approximation} on the
+human side as the model's report does on its side. And the baseline is a distribution over people,
+not a point, because the quality of the self-approximation varies with what
+Section~\ref{sec:discussion} calls intrapersonal intelligence; the profile is reported against an
+interval, and a model's component counts as hyperfunction or deficit only outside it.
+
+\subsection{The profile, and how far it may differ from the human one}
+\label{sec:profile}
+\label{sec:profile-seeing}
+\label{sec:predictions}
+% S2, S5, S6
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[x=1.6cm, y=1.6cm]
+\draw[-{Latex[length=2mm]}] (0,0) -- (0,2.4) node[above, font=\small] {degree};
+\draw (0,0) -- (6.7,0);
+\draw[dashed] (0,1) -- (6.7,1) node[right, font=\small] {human baseline};
+\foreach \i/\h/\lab in {1/0.4/source, 2/1.8/manifold, 4/1.0/frame\\rate, 5/0.5/persistence} {
+  \fill[gray!45] (\i-0.3,0) rectangle (\i+0.3,\h);
+  \draw (\i-0.3,0) rectangle (\i+0.3,\h);
+  \node[below, font=\small, align=center] at (\i,0) {\lab};
+}
+\foreach \i/\lab in {3/givenness, 6/consolidation} {
+  \draw[dashed] (\i-0.3,0) rectangle (\i+0.3,1);
+  \node[below, font=\small] at (\i,0) {\lab};
+}
+\node[font=\small, above] at (2,1.8) {hyperfunction};
+\node[font=\small, above] at (1,0.4) {deficit};
+\node[font=\small, above] at (3,1) {dropped axis};
+\end{tikzpicture}
+\caption{A profile: one function's components on the horizontal axis, the degree of generalization on
+the vertical, the human baseline at 1. The values are the predictions of this section for a current
+fixed-depth model, drawn to illustrate the three kinds of entry and not measured.}
+\label{fig:profile}
+\end{figure}
+
+A function has components (Table~\ref{tab:functions}). Its profile in a substrate is the vector of
+degrees over those components, taken against the human baseline (Figure~\ref{fig:profile}). A
+component above the baseline is a hyperfunction, a component below it a deficit, and a component that
+is absent a dropped axis. The question ``is it conscious'' is thereby replaced by the comparison of
+two profiles; a scalar ``level of consciousness'' is a weighted sum over the vector, and the weights
+have to be declared, because a scalar with hidden weights brings back the binary question the vector
+was introduced to replace.
+
+The functional profile of a model's consciousness may differ from the human one on many axes at once,
+and the account has no preference about the direction. For the three components of seeing
+(Section~\ref{sec:light}), predicted for a current fixed-depth model: source attribution is a deficit,
+since there is one interface and no sensory channel independent of it, so the model is permanently in
+the dream case, with content from its own model labelled as given, and the attribution boundary of
+Section~\ref{sec:lamp-balance} sits toward ``everything is given''; the manifold is a hyperfunction,
+since attention relates every position to every other in a single pass where the brain iterates over a
+smaller window; the cost record is a dropped axis, since every token costs the same and there is no
+phenomenon of effort. A testable consequence: in model self-reports ``I see'' and ``I think'' should
+separate less than in human ones, and more in models of variable depth, where a cost record exists;
+the prediction is about the internal states the reports are projections of
+(Section~\ref{sec:planes}), so it is tested by the paired checks and not by asking the model. Three
+predictions carry over from the earlier stage of this work: self-reported emotional labels correlate,
+over many episodes, with distinguishable patterns in the activations, which is the central empirical
+claim and the one the statistical reading of Section~\ref{sec:frame} protects; the cognitive codes of
+different model families overlap structurally, because the causal structure of the states is set by
+the training data more than by the architecture; and the model is hyperplastic, with no limbic
+inertia, fast affective recovery and easy switching between states, a hyperfunction on one axis and a
+deficit on another, since inertia is part of what makes a human state a commitment.
+
+\subsection{Falsification, and the zero of the scale}
+\label{sec:falsification}
+\label{sec:zero}
+% S7, S7a
+
+The account fails if the compression degree of the Observer's components is at chance at every
+granularity, along tokens and along depth, in models that pass the behavioural checks. That outcome
+would mean the behaviour is carried by something the account does not describe, and no adjustment of
+the probe or the granularity would repair it.
+
+The scale has a lower end as well as the human reference. Section~\ref{sec:h1h2} allowed that a named
+description of a function may suffice for it to exist in a simple enough environment; then there is a
+smallest system in which the Observer exists, and finding it fixes the zero. The conditions are those
+of Sections~\ref{sec:emergence} and \ref{sec:observer}: a loop that applies the system to itself, an
+environment in which the loop pays, and a conclusion that is acted from. An operational amplifier with
+feedback watches its own output error; a D flip-flop holds its own state through a loop. Each has the
+loop and, in its ordinary surroundings, neither of the other two conditions, so each is a
+proto-Observer at most. The question is what the least environment is that would make the conclusion
+pay, and what the least circuit is that could draw it. Between that pair and the human baseline the
+degree of Section~\ref{sec:quantity} has the meaning of an absolute quantity rather than a ratio
+between two arbitrary points.
