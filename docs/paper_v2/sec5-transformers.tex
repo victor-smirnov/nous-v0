@@ -130,7 +130,12 @@ Section~\ref{sec:model} defines show in what the agent does and says, and with t
 difficulty, since they are observed at the level of phrases and often of single words. What the
 architecture fixes is the resolution of the time axis on which they are observed. The effective frame
 of a Transformer's consciousness, the unit within which a state is derived and after which it must be
-re-derived, is one token.
+re-derived, is bounded from below by one token. A finer resolution is possible in principle, since the
+layers within a token are a sequence of states, but tokenization at the input and at the output cuts
+the record at token boundaries, so that whatever finer structure the frames have is lost from what the
+model can say and from what the context carries forward; whether it is also lost from what a probe can
+read below the token is a question for the analysis of Section~\ref{sec:quantity}, and the rest of this
+subsection says what is known about that axis.
 
 \paragraph{What crosses the cut.}
 Something crosses the cut of Section~\ref{sec:cut}, or the coherence of Section~\ref{sec:intro} would
