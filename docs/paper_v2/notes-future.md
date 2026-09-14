@@ -67,8 +67,21 @@ sequence of states and starts being represented as a property of one state. The 
 the picture: beats below roughly 15--20 Hz are heard as a fluctuation of loudness, a sequence; above
 that they fuse, first into roughness, then into a tone, a quality. The fusion boundary is the frame
 length, of the order of 50 ms, which agrees with the frame-rate estimates from cortical rhythms in
-4.8. Flicker fusion is the visual analogue. (Sources to verify before use: textbook psychoacoustics on
-beats and roughness, e.g. Zwicker & Fastl; flicker fusion literature.)
+4.8. Flicker fusion is the visual analogue.
+
+Sources, checked 2026-09-14 by full-text search of the scanned books (Open Library) and PubMed:
+- Zwicker & Fastl, Psychoacoustics: Facts and Models, ch. 10 "Fluctuation Strength", ch. 11
+  "Roughness": fluctuation strength most intense at 4 Hz and decreasing toward higher modulation
+  frequencies; "a smooth transition rather than a strong" boundary between the sensation of
+  fluctuation strength and that of roughness; maximum roughness at 70 Hz (Fig. 11.6 normalized to it).
+- Moore (ed.), Hearing (Handbook of Perception and Cognition): fluctuation strength bandpass with a
+  maximum around 4 Hz; "sounds with modulation frequencies around 20 Hz may elicit" both sensations.
+- Plomp & Levelt 1965, JASA, "Tonal consonance and critical bandwidth" (PMID 5831012): roughness of
+  beats and the critical band.
+- Joris, Schreiner & Rees 2004, Physiol. Rev. 84:541-577, "Neural processing of amplitude-modulated
+  sounds" (PMID 15044682): AM perception over a range of time scales; the neural side.
+The roughness-to-pitch transition (order of 100--300 Hz) was not pinned in these scans; the criterion
+needs only the first transition. Flicker fusion still to be sourced.
 
 Procedure for a substrate. Present an input varying at increasing rate and find the scale at which
 the internal representation switches from "sequence" to "quality". This is a probe question of the
