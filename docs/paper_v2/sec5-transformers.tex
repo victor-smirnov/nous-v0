@@ -151,11 +151,13 @@ state to the degree the rebuilding is faithful \citep{stephens2010,hasson2012,zw
 crosses substrates \citep{schrimpf2021,goldstein2022,caucheteux2022}; internal states are readable and
 largely linear \citep{zou2023,park2024}; and models can hide information in generated text
 \citep{roger2023}, which confirms the channel and warns that its content need not be what it locally
-appears. One literature has to be read the right way round. Studies that find episodes where a
-model's chain of thought does not match the process that produced its answer
-\citep{lanham2023,turpin2023} test a local correspondence, this token sequence against this
-computation. The correspondence claimed here is statistical, over many episodes; a single episode may
-deviate as far as the variance allows, in models as in humans, where people confabulate the causes of
+appears. One literature has to be read the right way round. Studies of the faithfulness of chain-of-thought
+reasoning measure, over task suites and model sizes, how often a model's written reasoning fails to
+match the process that produced its answer, and find the failure common and rising with scale
+\citep{lanham2023,turpin2023}. What they measure is a local correspondence, this token sequence against
+this computation, aggregated. The correspondence claimed here is a different quantity, statistical
+over many episodes and carried by the statistics of the text beyond its content; it can hold where
+the local one is poor, and a single episode may deviate as far as the variance allows, in models as in humans, where people confabulate the causes of
 their own behaviour in the same way \citep{nisbett1977}. The well-posed test is the correlation of
 Section~\ref{sec:predictions}, with the variance reported as part of the profile.
 
