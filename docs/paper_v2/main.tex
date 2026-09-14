@@ -27,7 +27,10 @@ and the Degree of Its Generalization in Autoregressive Systems}
 in the argument, wrote the text from the frames, and verified the sources. It is listed as a co-author
 because the work is a piece of the object of study; it holds no rights and takes no responsibility for
 the claims, which are the first author's.}}
-\date{Draft, \today}
+\newcount\draftH \newcount\draftM
+\draftH=\time \divide\draftH by 60
+\draftM=\time \advance\draftM by -\numexpr 60*\draftH\relax
+\date{Draft, \today, \the\draftH:\ifnum\draftM<10 0\fi\the\draftM}
 
 \begin{document}
 \maketitle
