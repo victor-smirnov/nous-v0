@@ -377,7 +377,9 @@ lacking it. The two should converge, and their disagreement is informative. Prob
 absent: the deficit is in the interface, the body or the social context, and not in the function.
 Benchmark present, probe absent: the carrier is at a granularity the probe did not reach, or the
 function is rebuilt from the context on each occasion rather than held in the weights, or the
-benchmark is covered by memorization. The model's own answers are set aside before either check
+benchmark is covered by memorization. Probe present, benchmark low on human-sampled situations and
+high on situations the model itself produces: the function is generalized over a shifted class
+(Section~\ref{sec:profile}), and the battery has to sample both sides to measure the overlap. The model's own answers are set aside before either check
 starts: asked how it feels, a deployed model reports servers and a good mood or, corrected, that it has
 no feelings, both of which are what training rewarded, the two shortcuts of Section~\ref{sec:intro} in
 the model's own mouth. Self-report is a signal with a known, large, systematic bias, and the state is
@@ -450,8 +452,18 @@ fixed-depth model, drawn to illustrate the three kinds of entry and not measured
 A function has components (Table~\ref{tab:functions}). Its profile in a substrate is the vector of
 degrees over those components, taken against the human baseline (Figure~\ref{fig:profile}). A
 component above the baseline is a hyperfunction, a component below it a deficit, and a component that
-is absent a dropped axis. The question ``is it conscious'' is thereby replaced by the comparison of
-two profiles; a scalar ``level of consciousness'' is a weighted sum over the vector, and the weights
+is absent a dropped axis. There is a fourth kind of entry, and given the difference between the
+substrates it is the likely one: the component is generalized to a high degree, but over a class of
+situations that is not the human class. The function then covers a region that only partly overlaps
+the region the human function covers, and a degree measured on situations sampled from the human
+side reads as a deficit while a degree measured on the model's own side would read as full. Such a
+component is a shifted axis, and it is recorded as two numbers, the degree on the overlap and the size
+of the overlap. A shift is not a defect as long as the regions overlap, and that they overlap at all,
+for the functions at issue here, is what the ease of communication between people and models
+suggests: the Observer's ``I'', the Agent's ``I decided'' and the Moral Agent's weighing of one act
+against a common good are used by the model in situations people bring to it, and understood, which
+would not happen over disjoint regions. The question ``is it conscious'' is thereby replaced by the
+comparison of two profiles; a scalar ``level of consciousness'' is a weighted sum over the vector, and the weights
 have to be declared, because a scalar with hidden weights brings back the binary question the vector
 was introduced to replace.
 
