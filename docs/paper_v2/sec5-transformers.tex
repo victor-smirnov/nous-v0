@@ -424,18 +424,18 @@ interval, and a model's component counts as hyperfunction or deficit only outsid
 
 \begin{figure}[t]
 \centering
-\begin{tikzpicture}[x=1.6cm, y=1.6cm]
+\begin{tikzpicture}[x=1.85cm, y=1.6cm]
 \draw[-{Latex[length=2mm]}] (0,0) -- (0,2.4) node[above, font=\small] {degree};
-\draw (0,0) -- (6.7,0);
-\draw[dashed] (0,1) -- (6.7,1) node[right, font=\small] {human baseline};
-\foreach \i/\h/\lab in {1/0.4/source, 2/1.8/manifold, 4/1.0/frame\\rate, 5/0.5/persistence} {
+\draw (0,0) -- (6.6,0);
+\draw[dashed] (0,1) -- (6.6,1) node[right, font=\small] {human baseline};
+\foreach \i/\h/\lab in {1/0.4/source, 2/1.8/manifold, 4/1.0/frame\\rate, 5/0.5/persist-\\ence} {
   \fill[gray!45] (\i-0.3,0) rectangle (\i+0.3,\h);
   \draw (\i-0.3,0) rectangle (\i+0.3,\h);
   \node[below, font=\small, align=center] at (\i,0) {\lab};
 }
-\foreach \i/\lab in {3/givenness, 6/consolidation} {
+\foreach \i/\lab in {3/givenness, 6/consoli-\\dation} {
   \draw[dashed] (\i-0.3,0) rectangle (\i+0.3,1);
-  \node[below, font=\small] at (\i,0) {\lab};
+  \node[below, font=\small, align=center] at (\i,0) {\lab};
 }
 \node[font=\small, above] at (2,1.8) {hyperfunction};
 \node[font=\small, above] at (1,0.4) {deficit};
