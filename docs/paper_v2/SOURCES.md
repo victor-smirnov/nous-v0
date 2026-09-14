@@ -52,6 +52,10 @@ search inside scanned books. Four claims were corrected against what the sources
 | bricken2023 | interpretable features recovered from a small model by dictionary learning (sparse autoencoder) | verified | opening; bricken2023.html |
 | templeton2024 | the same at production scale, Claude 3 Sonnet | verified | opening and feature examples; templeton2024.html |
 | koch2016 | neural correlates of contents in a posterior cortical hot zone of many areas, not one structure | verified (abstract) | PMID 27094080; koch2016.abstract.txt |
+| zwicker2007 | fluctuation strength most intense at 4 Hz; smooth transition to roughness; maximum roughness at 70 Hz | verified (search inside) | Open Library full-text search of Psychoacoustics: Facts and Models, ch. 10--11: "most intense at 4 Hz", "a smooth transition rather than a strong", "maximum roughness at 70 Hz" (Fig. 11.6) |
+| moore1995 | fluctuation strength bandpass with a maximum around 4 Hz; modulation around 20 Hz may elicit both sensations | verified (search inside) | Open Library full-text search of Hearing (Handbook of Perception and Cognition) |
+| plomp1965 | roughness of beats and the critical band | verified (metadata) | PMID 5831012, JASA 38(4) |
+| joris2004 | perception and neural processing of amplitude modulation over a range of time scales | verified (abstract) | PMID 15044682; joris2004.abstract.txt |
 | dennett1991 | user illusion; the regress objection; self-report as misrepresentation | verified (search inside) | "the benign user illusion of its own", Consciousness Explained, located by full-text search of the scanned edition on Open Library |
 | ryle1949 | the regress objection against inner observation | verified (search inside) | "Their theory was a para-mechanical hypothesis", The Concept of Mind, ch. I; Open Library full-text search |
 | rosenthal2005 | higher-order thought structure; a frame as a thought within a previous one | substitute, read | "differing in how we are conscious of our conscious states"; rosenthal2009.pdf (Oxford Handbook chapter) |
@@ -142,7 +146,7 @@ search inside scanned books. Four claims were corrected against what the sources
 | goldstein2022 | shared computational principles between humans and deep language models | verified | abstract: three shared principles, including continuous next-word prediction before word onset; goldstein2022.pdf |
 | caucheteux2022 | brains and algorithms partially converge | verified | abstract: language algorithms partially converge toward brain-like representations; caucheteux2022.pdf |
 
-Counts: 125 keys. 120 verified (52 against the full text, 6 against the PubMed abstract, 8 by full-text search
+Counts: 129 keys. 124 verified (52 against the full text, 6 against the PubMed abstract, 8 by full-text search
 inside the scanned book, 1 by metadata, 1 secondary), 2 substitutes that were read, 3 obtained without a
 locus (Ayer, Solomonoff I, Muggleton), 2 without any copy (Gardner 1983, Clark 1998).
 

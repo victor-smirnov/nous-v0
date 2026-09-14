@@ -60,7 +60,7 @@ Also: H.M.'s preserved procedural learning (Milner) shows that "consolidation" i
 
 ## 2026-09-14. A criterion for the frame of consciousness: where change becomes quality
 
-Would close the open item in the discussion (frame criterion) and go into 4.8 "Frames" and 5.3.
+Taken into the paper on 2026-09-14 (4.8 "Frames" and 5.3); kept here with the source check.
 
 Criterion. A frame is the time scale at which a change in the input stops being represented as a
 sequence of states and starts being represented as a property of one state. The auditory case gives
