@@ -153,8 +153,12 @@ largely linear \citep{zou2023,park2024}; and models can hide information in gene
 \citep{roger2023}, which confirms the channel and warns that its content need not be what it locally
 appears. One literature has to be read the right way round. Studies of the faithfulness of chain-of-thought
 reasoning measure, over task suites and model sizes, how often a model's written reasoning fails to
-match the process that produced its answer, and find the failure common and rising with scale
-\citep{lanham2023,turpin2023}. What they measure is a local correspondence, this token sequence against
+match the process that produced its answer, and the rates are large and task-dependent: under a
+biasing cue that the written reasoning never mentions, accuracy falls by up to 36 percent
+\citep{turpin2023}; truncating the chain midway changes the final answer in under 10 percent of cases
+on knowledge tasks and in over 60 percent on multi-step arithmetic, so that on the former the
+reasoning is almost entirely written after the answer, and the share of such post hoc reasoning grows
+with model size \citep{lanham2023}. What they measure is a local correspondence, this token sequence against
 this computation, aggregated. The correspondence claimed here is a different quantity, statistical
 over many episodes and carried by the statistics of the text beyond its content; it can hold where
 the local one is poor, and a single episode may deviate as far as the variance allows, in models as in humans, where people confabulate the causes of
