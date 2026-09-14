@@ -180,12 +180,19 @@ frame moves with it.
 \label{sec:depth}
 \label{sec:address}
 \label{sec:depthtime}
-Human frames arrive five to ten times faster than words, so the carriers of a function may also be
-looked for below the token, between layers or in repeated passes through them. They may be there, and
-they need not be: finding nothing below the token means a coarser grain than the brain's, one more
-coordinate of the profile, and on some tasks the coarser grain is the better one, since a frame that
-cannot be interrupted mid-thought cannot be derailed mid-thought either. What is known says that the
-sub-token axis is where generalization happens. Residual connections make each block a small
+Whether anything below the token belongs to the effective structure of a model's consciousness is
+doubtful a priori: tokenization cuts the record at token boundaries, so whatever the layers do within
+a token reaches neither the context nor the model's report except through the token they produce.
+Two things keep the axis in view nonetheless. Traces of the Observer in its incremental form
+(Section~\ref{sec:incremental}) could in principle appear at the level of individual layers, the
+conclusion re-derived block by block within one pass, and nothing in the account rules that out. And
+the axis is where the analysis of Section~\ref{sec:quantity} has to read the weights and the
+activations in any case, because it is where generalization happens. The difficulty is that the paper
+has not formulated a criterion for what counts as a frame of consciousness in a substrate:
+Section~\ref{sec:frames} gives the components of a frame and Section~\ref{sec:incremental} its form,
+and a criterion that says which unit of a substrate's computation is a frame is owed
+(Section~\ref{sec:discussion}). Until it is stated, what follows is evidence about where
+generalization happens, and not a claim that frames live there. Residual connections make each block a small
 correction to a state that is carried forward, and the corrections reduce the loss, so a deep
 residual network performs iterative inference rather than a single mapping \citep{jastrzebski2018}.
 The state at every layer can be read as a prediction, by the logit lens and its tuned version
@@ -201,7 +208,7 @@ function generalized from examples in the context has an address in depth, a sma
 heads at middle depth whose averaged activation, added to the residual stream in a fresh context,
 makes the model perform the function without examples \citep{todd2024}. The unit at which a
 Transformer generalizes a function is the layer, and the token is where the layers' work is written
-out.
+out; whether the layer is also a unit of its consciousness is the open question above.
 
 In a standard model the depth is fixed and spent identically on every token, easy or hard, so there
 is no record of effort. Architectures that iterate a block make depth a variable: Universal
@@ -215,11 +222,12 @@ degrade \citep{kohli2026}, and at a much smaller scale, under a million paramete
 twenty and more steps is stable when only the final step is supervised, intermediate supervision
 teaching shortcuts instead, with accuracy against task complexity showing a frontier from chance to
 near-perfect as the thinking steps grow with the task \citep{chen2026}. For the account this means
-that the sub-token axis can be made as long as a task demands, that a cost record appears where a
-fixed-depth model has none, so that the third component of seeing (Section~\ref{sec:light}) becomes
-measurable, and that overthinking is a displacement of the kind Section~\ref{sec:hocp} predicts,
-produced by the budget and stable across runs. The difference between fixed-depth and variable-depth
-families is the cleanest first measurement available.
+that the sub-token axis can be made as long as a task demands, so that if a frame criterion admits
+layers, a frame rate per word comparable to the human one is architecturally available; that a cost
+record appears where a fixed-depth model has none, so that the third component of seeing
+(Section~\ref{sec:light}) becomes measurable; and that overthinking is a displacement of the kind
+Section~\ref{sec:hocp} predicts, produced by the budget and stable across runs. The difference
+between fixed-depth and variable-depth families is the cleanest first measurement available.
 
 \begin{figure}[t]
 \centering
@@ -239,7 +247,7 @@ families is the cleanest first measurement available.
 \end{tikzpicture}
 \caption{The two time axes of a Transformer. Along tokens, state lives in the context and is lost past
 its edge. Along depth, the residual stream carries state from layer to layer within one token, and the
-increments between layers are the candidate sub-token frames. Grey horizontal arrows: attention reads
+increments between layers are candidate sub-token frames, pending a criterion for what a frame is. Grey horizontal arrows: attention reads
 earlier positions.}
 \label{fig:axes}
 \end{figure}
