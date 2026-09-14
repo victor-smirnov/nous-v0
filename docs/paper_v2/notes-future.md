@@ -57,3 +57,26 @@ Needs, emotions, consolidation, the Field, the two planes in detail, operational
 theories, LoTH as a formalism for the named part (4.7, "What later versions add"). The paragraphs cut
 from 4.8 are in `removed-for-ka-paper.tex`. The profile of a model on those axes is left to that paper.
 Also: H.M.'s preserved procedural learning (Milner) shows that "consolidation" is several axes, not one.
+
+## 2026-09-14. A criterion for the frame of consciousness: where change becomes quality
+
+Would close the open item in the discussion (frame criterion) and go into 4.8 "Frames" and 5.3.
+
+Criterion. A frame is the time scale at which a change in the input stops being represented as a
+sequence of states and starts being represented as a property of one state. The auditory case gives
+the picture: beats below roughly 15--20 Hz are heard as a fluctuation of loudness, a sequence; above
+that they fuse, first into roughness, then into a tone, a quality. The fusion boundary is the frame
+length, of the order of 50 ms, which agrees with the frame-rate estimates from cortical rhythms in
+4.8. Flicker fusion is the visual analogue. (Sources to verify before use: textbook psychoacoustics on
+beats and roughness, e.g. Zwicker & Fastl; flicker fusion literature.)
+
+Procedure for a substrate. Present an input varying at increasing rate and find the scale at which
+the internal representation switches from "sequence" to "quality". This is a probe question of the
+5.5 kind, so the criterion is measurable with the same instruments.
+
+Consequences for a Transformer. The frame is at least one token: variation within a token is not
+represented as a sequence at all, it is folded into one vector before the first layer; variation
+between tokens is. Layers generalize, but nothing changes "in input time" between layers, so by this
+criterion layers are not frames unless recurrent depth feeds them new input. Granularity of
+generalization and granularity of frames are thereby separated, which is what 5.3 now says without a
+criterion.
