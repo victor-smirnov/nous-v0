@@ -338,6 +338,32 @@ well, against the human level, Transformers generalize the Observer, then the Ag
 Agent, in the order the stack forces. Appendix~\ref{app:memorization} gives the reason behaviour alone
 cannot settle it.
 
+\paragraph{The order of the search.}
+Seen from far enough away, the Observer is a point, the place where a conclusion is formed. Seen from
+inside, it is a process, the conclusion in its incremental form, re-derived at every frame from the
+previous state and the new input, and through composition with the Agent's record it is a machine with
+memory (Section~\ref{sec:stack}). A Transformer that has generalized the Observer has therefore
+generalized, at the least, an automaton, and with the record a machine with a tape, running in
+incremental form along the tokens. That fixes the order in which to look. Before a formed Observer can
+be found in a trained model, one has to be able to find an automaton in it; then a memory; then both in
+incremental form; and each step has its own literature. On the first, a low-depth Transformer can
+represent the computation of any finite-state automaton, and trained Transformers converge to such
+shortcut solutions, replicating an automaton on a sequence of length $T$ with far fewer than $T$
+layers \citep{liu2023auto}. On the second, grouping tasks by the Chomsky hierarchy shows where the
+learner's reach ends: Transformers and plain recurrent networks fail to generalize on non-regular
+tasks, and only networks with structured memory, a stack or a tape, generalize on context-free and
+context-sensitive ones \citep{deletang2022}; a standard Transformer that answers immediately after
+reading its input is bounded by a shallow circuit class and cannot recognize some regular languages
+\citep{merrill2023}. On the third, intermediate generation changes the machine: a logarithmic number
+of decoding steps in the input length already lets a decoder recognize all regular languages, a linear
+number keeps it within the context-sensitive languages, and a polynomial number reaches the
+polynomial-time decidable class \citep{merrill2024}. In the terms of this paper, the chain of thought
+is the tape, and the incremental form of a function is what the tape carries from step to step. The
+consequence for the analysis is that the degree of generalization of the Observer is bounded above by
+the degree to which the model has generalized the automaton and the memory it is composed of, and
+those two are measurable with methods that exist, on synthetic tables where the target machine is
+known exactly, before any annotated text is needed.
+
 \paragraph{Is there a basic method?}
 The question of the section is whether the degree of compression can be probed selectively, for the
 rows that carry one function. Three families of existing methods bear on it, and each measures part of

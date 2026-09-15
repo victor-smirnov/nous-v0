@@ -81,6 +81,10 @@ search inside scanned books. Four claims were corrected against what the sources
 | feldman2020 | per-example memorization and influence estimation; the long tail whose storage helps rare test examples | verified | abstract and §1; feldman2020.pdf |
 | zhang2017 | deep networks easily fit random labels | verified | abstract and §1 "central finding"; zhang2017.pdf |
 | carlini2023 | memorization in language models grows log-linearly with model scale, duplication and prompt length | verified | abstract and §1; carlini2023.pdf |
+| deletang2022 | Transformers and RNNs fail to generalize on non-regular tasks; only structured memory (stack, tape) generalizes on context-free and context-sensitive ones | verified | abstract; deletang2022.pdf |
+| liu2023auto | a low-depth Transformer represents any finite automaton; trained models converge to shortcut solutions with o(T) layers | verified | abstract; liu2023auto.pdf |
+| merrill2023 | log-precision Transformers simulated by constant-depth uniform threshold circuits (TC0); the parallelism tradeoff | verified | abstract; merrill2023.pdf. The claim "cannot recognize some regular languages" follows from the TC0 bound and is stated in the paper's discussion |
+| merrill2024 | intermediate decoding steps extend the recognized class: logarithmic steps give all regular languages, linear steps stay within context-sensitive, polynomial steps reach P | verified | abstract; merrill2024.pdf |
 | dennett1991 | user illusion; the regress objection; self-report as misrepresentation | verified (search inside) | "the benign user illusion of its own", Consciousness Explained, located by full-text search of the scanned edition on Open Library |
 | ryle1949 | the regress objection against inner observation | verified (search inside) | "Their theory was a para-mechanical hypothesis", The Concept of Mind, ch. I; Open Library full-text search |
 | rosenthal2005 | higher-order thought structure; a frame as a thought within a previous one | substitute, read | "differing in how we are conscious of our conscious states"; rosenthal2009.pdf (Oxford Handbook chapter) |
@@ -171,7 +175,7 @@ search inside scanned books. Four claims were corrected against what the sources
 | goldstein2022 | shared computational principles between humans and deep language models | verified | abstract: three shared principles, including continuous next-word prediction before word onset; goldstein2022.pdf |
 | caucheteux2022 | brains and algorithms partially converge | verified | abstract: language algorithms partially converge toward brain-like representations; caucheteux2022.pdf |
 
-Counts: 154 keys. 149 verified (52 against the full text, 6 against the PubMed abstract, 8 by full-text search
+Counts: 158 keys. 153 verified (52 against the full text, 6 against the PubMed abstract, 8 by full-text search
 inside the scanned book, 1 by metadata, 1 secondary), 2 substitutes that were read, 3 obtained without a
 locus (Ayer, Solomonoff I, Muggleton), 2 without any copy (Gardner 1983, Clark 1998).
 
