@@ -69,6 +69,11 @@ search inside scanned books. Four claims were corrected against what the sources
 | schwitzgebel2008 | naive introspection unreliable about current experience | verified (metadata) | CrossRef, Phil. Review 117(2) 245--273 |
 | wegner2002 | the sense of conscious will as a construction | verified (metadata) | CrossRef, MIT Press 2002 |
 | bender2021 | "stochastic parrots" as the deflationary reading of language models | verified (metadata) | CrossRef, FAccT 2021, 610--623, doi 10.1145/3442188.3445922 |
+| morris2024 | AGI defined by levels of performance and generality against skilled humans | verified | title and §1--2 of the position paper; morris2024.pdf |
+| ji2023 | alignment objectives stated as robustness, interpretability, controllability, ethicality (RICE); consciousness mentioned once in the survey | verified | §1.2.2 and a full-text count; ji2023.pdf |
+| long2024 | AI welfare and moral patienthood as a realistic possibility | verified | abstract; long2024.pdf |
+| iasr2026 | yearly international scientific assessment of general-purpose AI capabilities and risks, chaired by Bengio, nominees of 30+ countries | verified (web) | internationalaisafetyreport.org publication page and press summaries, 2026-09-14 |
+| euaiact2024 | obligations on providers of general-purpose AI models with systemic risk, applicable from Aug 2025, enforced from Aug 2026 | verified (web) | artificialintelligenceact.eu (Article 55, high-level summary) and Commission Q&A, 2026-09-14 |
 | dennett1991 | user illusion; the regress objection; self-report as misrepresentation | verified (search inside) | "the benign user illusion of its own", Consciousness Explained, located by full-text search of the scanned edition on Open Library |
 | ryle1949 | the regress objection against inner observation | verified (search inside) | "Their theory was a para-mechanical hypothesis", The Concept of Mind, ch. I; Open Library full-text search |
 | rosenthal2005 | higher-order thought structure; a frame as a thought within a previous one | substitute, read | "differing in how we are conscious of our conscious states"; rosenthal2009.pdf (Oxford Handbook chapter) |
@@ -159,7 +164,7 @@ search inside scanned books. Four claims were corrected against what the sources
 | goldstein2022 | shared computational principles between humans and deep language models | verified | abstract: three shared principles, including continuous next-word prediction before word onset; goldstein2022.pdf |
 | caucheteux2022 | brains and algorithms partially converge | verified | abstract: language algorithms partially converge toward brain-like representations; caucheteux2022.pdf |
 
-Counts: 142 keys. 137 verified (52 against the full text, 6 against the PubMed abstract, 8 by full-text search
+Counts: 147 keys. 142 verified (52 against the full text, 6 against the PubMed abstract, 8 by full-text search
 inside the scanned book, 1 by metadata, 1 secondary), 2 substitutes that were read, 3 obtained without a
 locus (Ayer, Solomonoff I, Muggleton), 2 without any copy (Gardner 1983, Clark 1998).
 
