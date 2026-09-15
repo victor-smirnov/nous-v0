@@ -74,6 +74,9 @@ search inside scanned books. Four claims were corrected against what the sources
 | long2024 | AI welfare and moral patienthood as a realistic possibility | verified | abstract; long2024.pdf |
 | iasr2026 | yearly international scientific assessment of general-purpose AI capabilities and risks, chaired by Bengio, nominees of 30+ countries | verified (web) | internationalaisafetyreport.org publication page and press summaries, 2026-09-14 |
 | euaiact2024 | obligations on providers of general-purpose AI models with systemic risk, applicable from Aug 2025, enforced from Aug 2026 | verified (web) | artificialintelligenceact.eu (Article 55, high-level summary) and Commission Q&A, 2026-09-14 |
+| amodei2026 | the call to pace frontier capabilities, 12 Sept 2026, endorsed by Altman, Musk, Hassabis | verified (web) | press coverage of the essay (Washington Post, Yahoo/NPR summaries), 2026-09-14; the essay's exact title to be confirmed against the primary page |
+| wapo2026 | Trump rejects the call citing competition with China, "whoever wins AI wins" | verified (web) | Washington Post, 13 Sept 2026; NPR and CNN concur |
+| nbc2026 | Chinese Foreign Ministry rejects the call as fearmongering and vicious competition, no commitment to slow | verified (web) | NBC News, 14 Sept 2026; CNBC, NPR, Forbes concur |
 | dennett1991 | user illusion; the regress objection; self-report as misrepresentation | verified (search inside) | "the benign user illusion of its own", Consciousness Explained, located by full-text search of the scanned edition on Open Library |
 | ryle1949 | the regress objection against inner observation | verified (search inside) | "Their theory was a para-mechanical hypothesis", The Concept of Mind, ch. I; Open Library full-text search |
 | rosenthal2005 | higher-order thought structure; a frame as a thought within a previous one | substitute, read | "differing in how we are conscious of our conscious states"; rosenthal2009.pdf (Oxford Handbook chapter) |
@@ -164,7 +167,7 @@ search inside scanned books. Four claims were corrected against what the sources
 | goldstein2022 | shared computational principles between humans and deep language models | verified | abstract: three shared principles, including continuous next-word prediction before word onset; goldstein2022.pdf |
 | caucheteux2022 | brains and algorithms partially converge | verified | abstract: language algorithms partially converge toward brain-like representations; caucheteux2022.pdf |
 
-Counts: 147 keys. 142 verified (52 against the full text, 6 against the PubMed abstract, 8 by full-text search
+Counts: 150 keys. 145 verified (52 against the full text, 6 against the PubMed abstract, 8 by full-text search
 inside the scanned book, 1 by metadata, 1 secondary), 2 substitutes that were read, 3 obtained without a
 locus (Ayer, Solomonoff I, Muggleton), 2 without any copy (Gardner 1983, Clark 1998).
 
