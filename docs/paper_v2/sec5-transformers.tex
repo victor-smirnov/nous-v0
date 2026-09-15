@@ -353,8 +353,9 @@ layers \citep{liu2023auto}. On the second, grouping tasks by the Chomsky hierarc
 learner's reach ends: Transformers and plain recurrent networks fail to generalize on non-regular
 tasks, and only networks with structured memory, a stack or a tape, generalize on context-free and
 context-sensitive ones \citep{deletang2022}; a standard Transformer that answers immediately after
-reading its input is bounded by a shallow circuit class and cannot recognize some regular languages
-\citep{merrill2023}. On the third, intermediate generation changes the machine: a logarithmic number
+reading its input is bounded by a shallow circuit class, and under the standard assumptions of
+complexity theory it cannot simulate arbitrary finite-state machines or check membership in an
+arbitrary context-free grammar \citep{merrill2023,merrill2024}. On the third, intermediate generation changes the machine: a logarithmic number
 of decoding steps in the input length already lets a decoder recognize all regular languages, a linear
 number keeps it within the context-sensitive languages, and a polynomial number reaches the
 polynomial-time decidable class \citep{merrill2024}. In the terms of this paper, the chain of thought
