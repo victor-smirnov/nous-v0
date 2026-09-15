@@ -77,6 +77,10 @@ search inside scanned books. Four claims were corrected against what the sources
 | amodei2026 | the call to pace frontier capabilities, 12 Sept 2026, endorsed by Altman, Musk, Hassabis | verified (web) | press coverage of the essay (Washington Post, Yahoo/NPR summaries), 2026-09-14; the essay's exact title to be confirmed against the primary page |
 | wapo2026 | Trump rejects the call citing competition with China, "whoever wins AI wins" | verified (web) | Washington Post, 13 Sept 2026; NPR and CNN concur |
 | nbc2026 | Chinese Foreign Ministry rejects the call as fearmongering and vicious competition, no commitment to slow | verified (web) | NBC News, 14 Sept 2026; CNBC, NPR, Forbes concur |
+| blier2018 | prequential description length: deep networks compress their training data including the model's cost; variational bounds poor, incremental encoding excellent | verified | abstract; blier2018.pdf |
+| feldman2020 | per-example memorization and influence estimation; the long tail whose storage helps rare test examples | verified | abstract and §1; feldman2020.pdf |
+| zhang2017 | deep networks easily fit random labels | verified | abstract and §1 "central finding"; zhang2017.pdf |
+| carlini2023 | memorization in language models grows log-linearly with model scale, duplication and prompt length | verified | abstract and §1; carlini2023.pdf |
 | dennett1991 | user illusion; the regress objection; self-report as misrepresentation | verified (search inside) | "the benign user illusion of its own", Consciousness Explained, located by full-text search of the scanned edition on Open Library |
 | ryle1949 | the regress objection against inner observation | verified (search inside) | "Their theory was a para-mechanical hypothesis", The Concept of Mind, ch. I; Open Library full-text search |
 | rosenthal2005 | higher-order thought structure; a frame as a thought within a previous one | substitute, read | "differing in how we are conscious of our conscious states"; rosenthal2009.pdf (Oxford Handbook chapter) |
@@ -167,7 +171,7 @@ search inside scanned books. Four claims were corrected against what the sources
 | goldstein2022 | shared computational principles between humans and deep language models | verified | abstract: three shared principles, including continuous next-word prediction before word onset; goldstein2022.pdf |
 | caucheteux2022 | brains and algorithms partially converge | verified | abstract: language algorithms partially converge toward brain-like representations; caucheteux2022.pdf |
 
-Counts: 150 keys. 145 verified (52 against the full text, 6 against the PubMed abstract, 8 by full-text search
+Counts: 154 keys. 149 verified (52 against the full text, 6 against the PubMed abstract, 8 by full-text search
 inside the scanned book, 1 by metadata, 1 secondary), 2 substitutes that were read, 3 obtained without a
 locus (Ayer, Solomonoff I, Muggleton), 2 without any copy (Gardner 1983, Clark 1998).
 
